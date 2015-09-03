@@ -2,14 +2,13 @@
 layout: base
 ---
 <div class="col-md-12">
-  {% assign products_list = (site.categories.products | reversed sort: 'date') %}
-  {% for post in products_list %}
+  {% for product in site.categories.products %}
       <div class="row" style="background:rgb(252, 252, 252);">
         <div class="col-md-4">
-          <img src="{{ post.thumbnails.300}}" width="300" height="300"/>
+          <img src="{{ product.thumbnails.300}}" width="300" height="300"/>
         </div>
         <div class="col-md-4">
-            {{ post.title }} | {{ post.content }}
+            {{ product.title }} | {{ product.content }}
         </div>
       </div>
   {% endfor %}
