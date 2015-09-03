@@ -9,6 +9,8 @@ layout: base
         </div>
         <div class="col-md-4">
             {{ product.title }} | {{ product.content }}
+            <br>
+            <a href="https://s3.amazonaws.com/hiu-products/{{ product.pdf }}">Download</a>
         </div>
       </div>
   {% endfor %}
