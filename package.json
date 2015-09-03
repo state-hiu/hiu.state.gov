@@ -1,0 +1,27 @@
+{
+  "name": "hiu.state.gov",
+  "version": "0.0.1",
+  "author": "U.S. Department of State, Humanitarian Information Unit",
+  "description": "Prototype for new hiu.state.gov.",
+  "contributors": [
+    {
+      "name": "U.S. Department of State, Humanitarian Information Unit"
+    }
+  ],
+  "scripts": {
+    "test": "jshint **.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/state-hiu/hiu.state.gov"
+  },
+  "license": "MIT",
+  "private": "false",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-uglify": "*"
+  }
+}

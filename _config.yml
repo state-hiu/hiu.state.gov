@@ -1,0 +1,12 @@
+name: New hiu.state.gov
+timezone: America/New_York
+permalink: none
+#baseurl: http://localhost:8000
+#url: http://localhost:8000
+#destination: /var/www
+baseurl: http://state-hiu.github.io/hiu.state.gov/
+url: http://state-hiu.github.io/hiu.state.gov/
+destination: _site
+
+# Explicit excludes, including dotfiles to be safe
+exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
