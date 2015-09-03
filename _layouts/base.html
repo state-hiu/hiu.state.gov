@@ -7,8 +7,16 @@ layout: default
     <meta name="google" content="notranslate" />
     <meta http-equiv="Content-Language" content="en_US" />
     <!-- CSS / External-->
+    <link href="{{ site.baseurl }}/lib/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
     <!-- CSS / Internal -->
     <!-- JavaScript / External -->	
+    <script src="{{ site.baseurl }}/lib/jquery/1.7.2/jquery-1.7.2.js"></script>
+    <script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui-1.8.14.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular-route.js"></script>
+    <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.js"></script>
     <!-- JavaScript / Internal -->		
     <script type="text/javascript" language="Javascript">
       var now = new Date();
@@ -16,6 +24,54 @@ layout: default
     </script>
   </head>
   <body>
-  {{ content }}
+    <div class="container-fluid">
+      <div class="row" style="height:51px;">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">HIU</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li id="nav_dashboard">
+                  <a href="{{ site.baseurl }}/products">Products</a>
+                </li>
+                <li id="nav_dashboard">
+                  <a href="http://geonode.state.gov">Data</a>
+                </li>
+                <li id="nav_dashboard">
+                  <a href="http://mapgive.state.gov">MapGive</a>
+                </li>
+                <li id="nav_dashboard">
+                  <a href="{{ site.baseurl }}/about">About</a>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right" style="min-width:380px">
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+      </div>
+      <div class="row" style="">
+        {{ content }}
+      </div>
+      <div class="row" style="background:rgb(252, 252, 252);">
+        <div class="col-md-12">
+            <a href="/">Home</a> |
+            <a href="{{ site.baseurl }}/products">Products</a> |
+            <a href="{{ site.baseurl }}/data">Data</a> |
+            <a href="{{ site.baseurl }}/about">About</a>
+        </div>
+      </div>
+      <div class="row" style="background:rgb(252, 252, 252);">
+        <div class="col-md-12"><h6><span style="margin-right:4px;font-weight:bold;">Disclaimer:</span>This site is produced and maintained by the U.S. Department of State, Humanitarian Information Unit.  For more information see <a href="{{ site.baseurl }}/about">About</a>.</h6></div>
+      </div>
+    <div>
   </body>
 </html>
