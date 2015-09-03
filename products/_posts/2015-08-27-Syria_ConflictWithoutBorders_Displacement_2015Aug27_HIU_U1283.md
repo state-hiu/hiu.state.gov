@@ -5,9 +5,8 @@ title: Syria: Conflict Without Borders – Numbers and Locations of Refugees and
 region: Middle East
 date_published: 20150827
 pdf: Syria_ConflictWithoutBorders_Displacement_2015Aug27_HIU_U1283.pdf
-thumbnails:
-  150: Syria_ConflictWithoutBorders_Displacement_2015Aug27_HIU_U1283_150px.JPG
-  300: Syria_ConflictWithoutBorders_Displacement_2015Aug27_HIU_U1283_300px.JPG
+thumbnail_150: Syria_ConflictWithoutBorders_Displacement_2015Aug27_HIU_U1283_150px.JPG
+thumbnail_300: Syria_ConflictWithoutBorders_Displacement_2015Aug27_HIU_U1283_300px.JPG
 keywords:
   - Syria
   - Turkey
