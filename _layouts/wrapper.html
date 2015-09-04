@@ -2,7 +2,7 @@
 layout: base
 ---
    <div class="container-fluid">
-      {% include header %}
+      {% include header.html %}
       <div class="row" style="">
         {{ content }}
       </div>
@@ -14,7 +14,5 @@ layout: base
             <a href="{{ site.baseurl }}/about">About</a>
         </div>
       </div>
-      <div class="row" style="background:rgb(252, 252, 252);">
-        <div class="col-md-12"><h6><span style="margin-right:4px;font-weight:bold;">Disclaimer:</span>This site is produced and maintained by the U.S. Department of State, Humanitarian Information Unit.  For more information see <a href="{{ site.baseurl }}/about">About</a>.</h6></div>
-      </div>
+      {% include footer.html %}
     <div>
