@@ -35,7 +35,7 @@ layout: map
                 onEachFeature: function(feature, layer) {
                     var popupOptions = {maxWidth: 200};
                     //layer.setIcon(productIcon);
-                    var popupContent = "<h4><a href="+feature.properties.url+">"+feature.properties.title+"</a></h4><br>Date Published: "+feature.properties.date_published+"<br>Region: <a href={{ site.baseurl }}/regions/"+feature.properties.region_id+">"+feature.properties.region_title+"</a>";
+                    var popupContent = "<h4><a href="+feature.properties.url+">"+feature.properties.title+"</a></h4><br>Date Published: "+feature.properties.date_published+"<br>Region: <a href={{ site.baseurl }}/regions/"+feature.properties.region_id+">"+feature.properties.region_title+"</a><br><img src="+feature.properties.thumbnail_150+" />";
                     layer.bindPopup(popupContent, popupOptions);
                 }
             });

@@ -13,7 +13,9 @@ layout: default
         "region_id": "{{ product.region_id }}",
         "region_title": "{{ product.region_title }}",
         "featured": "{{ product.featured }}",
-        "url": "{{site.url}}{{story.url}}",
+        "url": "{{ site.url }}{{ product.url }}",
+        "thumbnail_150": "https://s3.amazonaws.com/hiu-thumbnails/products/{{ product.thumbnail_150 }}",
+        "thumbnail_300": "https://s3.amazonaws.com/hiu-thumbnails/products/{{ product.thumbnail_300 }}",
         "marker-color": "#8cc250"
       },
       "geometry": {
