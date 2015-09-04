@@ -9,6 +9,8 @@ pdf: "Syria_ConflictWithoutBorders_Displacement_2015Aug27_HIU_U1283.pdf"
 thumbnail_150: "Syria_ConflictWithoutBorders_Displacement_2015Aug27_HIU_U1283_150px.JPG"
 thumbnail_300: "Syria_ConflictWithoutBorders_Displacement_2015Aug27_HIU_U1283_300px.JPG"
 featured: false
+lat: 35.210
+lon: 38.864
 keywords:
   - Syria
   - Turkey
