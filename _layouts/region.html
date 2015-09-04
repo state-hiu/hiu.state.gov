@@ -2,7 +2,15 @@
 layout: base
 ---
 <div class="col-md-12">
+  <div class="row" style="background:rgb(252, 252, 252);">
+    <div class="col-md-12">
+      {{ page.title }}
+      <img src="https://s3.amazonaws.com/hiu-thumbnails/regions/{{ product.thumbnail }}"/>
+      <hr>
+    </div>
+  </div>
   {% for product in site.categories.products %}
+    {% if product.region == page.name %}
       <div class="row" style="background:rgb(252, 252, 252);">
         <div class="col-md-4">
           <img src="https://s3.amazonaws.com/hiu-thumbnails/products/{{ product.thumbnail_300 }}" width="300" height="300"/>
@@ -16,5 +24,7 @@ layout: base
             <a href="https://s3.amazonaws.com/hiu-products/{{ product.pdf }}">Download</a>
         </div>
       </div>
+    {% endfor %}
   {% endfor %}
 </div>
+
