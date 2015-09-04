@@ -9,7 +9,7 @@ layout: wrapper
   <div class="tab-content">
     <div id="featured" class="tab-pane active">
       {% for product in site.categories.products %}
-        {% if product.featured %}
+        {% if product.featured == true %}
           {% include listitem_product.html %}
         {% endif %}
       {% endfor %}
