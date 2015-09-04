@@ -3,7 +3,7 @@ layout: product
 category: products
 title: "World Humanitarian Day 2015: Limited Aid Access/Security Due to Conflict"
 region: "Global & Transnational Products"
-date_published: 20150818
+date_published: 2015-08-18
 pdf: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277.pdf"
 thumbnail_150: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277_150px.jpg"
 thumbnail_300: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277_300px.jpg"
