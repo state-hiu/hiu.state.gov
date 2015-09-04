@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{
+  "type": "FeatureCollection",
+  "features": [{% for product in site.categories.products %}
+    {% if product.lon and product.lat %}
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "{{ product.title }}",
+        "region": "{{ product.region_id }}",
+        "featured": "{{ product.featured }}",
+        "url": "{{site.url}}{{story.url}}",
+        "marker-color": "#8cc250"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [{{ product.lon }}, {{ product.lat }}]
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endif %}{% endfor %}
+  ]
+}

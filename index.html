@@ -19,4 +19,14 @@ layout: map
       tms: true,
       attribution: 'Names and boundary representation are not necessarily authoritative.'
     }).addTo(map);
+
+    // Products GeoJSON
+    $.ajax({
+        dataType: "json",
+        url: "{{ site.baseurl}}/products/products.json",
+        success: function(response) {
+            var products = L.geoJson(response);
+            products.addTo(map);
+        }
+    });
 </script>
