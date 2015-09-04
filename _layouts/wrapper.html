@@ -1,0 +1,52 @@
+---
+layout: base
+---
+   <div class="container-fluid">
+      <div class="row" style="height:51px;">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="{{ site.baseurl }}">HIU</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li id="nav_products">
+                  <a href="{{ site.baseurl }}/products">Products</a>
+                </li>
+                <li id="nav_data">
+                  <a href="http://geonode.state.gov">Data</a>
+                </li>
+                <li id="nav_mapgive">
+                  <a href="http://mapgive.state.gov">MapGive</a>
+                </li>
+                <li id="nav_about">
+                  <a href="{{ site.baseurl }}/about">About</a>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right" style="min-width:380px">
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </nav>
+      </div>
+      <div class="row" style="">
+        {{ content }}
+      </div>
+      <div class="row" style="background:rgb(252, 252, 252);">
+        <div class="col-md-12">
+            <a href="{{ site.baseurl }}">Home</a> |
+            <a href="{{ site.baseurl }}/products">Products</a> |
+            <a href="{{ site.baseurl }}/data">Data</a> |
+            <a href="{{ site.baseurl }}/about">About</a>
+        </div>
+      </div>
+      <div class="row" style="background:rgb(252, 252, 252);">
+        <div class="col-md-12"><h6><span style="margin-right:4px;font-weight:bold;">Disclaimer:</span>This site is produced and maintained by the U.S. Department of State, Humanitarian Information Unit.  For more information see <a href="{{ site.baseurl }}/about">About</a>.</h6></div>
+      </div>
+    <div>
