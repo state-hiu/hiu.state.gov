@@ -2,7 +2,22 @@
 layout: wrapper
 ---
 <div class="col-md-12">
-  {% for product in site.categories.products %}
-    {% include listitem_product.html %}
-  {% endfor %}
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#">Featured</a></li>
+    <li><a href="#">All</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="featured" class="tab-pane active">
+      {% for product in site.categories.products %}
+        {% if product.featured %}
+          {% include listitem_product.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div id="all" class="tab-pane active">
+      {% for product in site.categories.products %}
+        {% include listitem_product.html %}
+      {% endfor %}
+    </div>
+  </div>
 </div>
