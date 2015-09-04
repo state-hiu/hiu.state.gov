@@ -9,6 +9,7 @@ layout: default
       "type": "Feature",
       "properties": {
         "title": "{{ product.title }}",
+        "date_published": "{{ product.date_published | date: '%B %d, %Y' }}",
         "region": "{{ product.region_id }}",
         "featured": "{{ product.featured }}",
         "url": "{{site.url}}{{story.url}}",

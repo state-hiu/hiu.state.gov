@@ -21,11 +21,24 @@ layout: map
     }).addTo(map);
 
     // Products GeoJSON
+    var productIcon = L.icon({
+        iconUrl: "{{ site.baseurl }}/assets/img/icon_product.svg",
+        iconSize: [30, 45],
+        iconAnchor: [15, 40],
+        popupAnchor: [0, 0]
+    });
     $.ajax({
         dataType: "json",
         url: "{{ site.baseurl}}/products/products.json",
         success: function(response) {
-            var products = L.geoJson(response);
+            var products = L.geoJson(response, {
+                onEachFeature: function(feature, layer) {
+                    var popupOptions = {maxWidth: 200};
+                    //layer.setIcon(productIcon);
+                    var popupContent = "<h4><a href="+feature.properties.title+">"+feature.properties.url+"</a></h4><br>Date Published: "+feature.properties.date_published;
+                    layer.bindPopup(popupContent, popupOptions);
+                }
+            });
             products.addTo(map);
         }
     });
