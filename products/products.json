@@ -10,7 +10,8 @@ layout: default
       "properties": {
         "title": "{{ product.title }}",
         "date_published": "{{ product.date_published | date: '%B %d, %Y' }}",
-        "region": "{{ product.region_id }}",
+        "region_id": "{{ product.region_id }}",
+        "region_title": "{{ product.region_title }}",
         "featured": "{{ product.featured }}",
         "url": "{{site.url}}{{story.url}}",
         "marker-color": "#8cc250"
