@@ -6,7 +6,7 @@ layout: map
     var accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
     var map = L.map('map').setView([0, 0], 4);
     var tileUrl = 'https://api.mapbox.com/v4/hiu.nbk3c19e/{z}/{x}/{y}.png?access_token=' + accessToken
-    L.tileLayer(url, {
+    L.tileLayer(tileUrl, {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 </script>
