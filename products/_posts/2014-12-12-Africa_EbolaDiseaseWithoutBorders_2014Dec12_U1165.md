@@ -3,7 +3,7 @@ layout: product
 category: products
 title: "Disease Without Borders: Ebola in West Africa"
 region: "Africa"
-date_published: 20141212
+date_published: 2014-12-12
 pdf: "Africa_EbolaDiseaseWithoutBorders_2014Dec12_U1165.pdf"
 thumbnail_150: "Africa_EbolaDiseaseWithoutBorders_SBU_2014Dec12_150px.jpg"
 thumbnail_300: "Africa_EbolaDiseaseWithoutBorders_SBU_2014Dec12_300px.jpg"
