@@ -12,6 +12,7 @@ layout: base
   {% for product in site.categories.products %}
     {% if product.region == page.name %}
       <div class="row" style="background:rgb(252, 252, 252);">
+        <div class="col-md-2"></div>
         <div class="col-md-4">
           <img src="https://s3.amazonaws.com/hiu-thumbnails/products/{{ product.thumbnail_300 }}" width="300" height="300"/>
         </div>
@@ -23,6 +24,7 @@ layout: base
             <br>
             <a href="https://s3.amazonaws.com/hiu-products/{{ product.pdf }}">Download</a>
         </div>
+        <div class="col-md-2"></div>
       </div>
     {% endfor %}
   {% endfor %}
