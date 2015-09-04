@@ -2,7 +2,8 @@
 layout: product
 category: products
 title: "Syria: Conflict Without Borders – Numbers and Locations of Refugees and IDPs"
-region: Middle East
+region_id: middle_east
+region_title: Middle East
 date_published: 2015-08-27
 pdf: "Syria_ConflictWithoutBorders_Displacement_2015Aug27_HIU_U1283.pdf"
 thumbnail_150: "Syria_ConflictWithoutBorders_Displacement_2015Aug27_HIU_U1283_150px.JPG"

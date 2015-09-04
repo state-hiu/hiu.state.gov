@@ -3,10 +3,14 @@ layout: wrapper
 ---
 <div class="col-md-12">
   <div class="row" style="background:rgb(252, 252, 252);">
-    <div class="col-md-12">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
       {{ page.title }}
-      <img src="https://s3.amazonaws.com/hiu-thumbnails/regions/{{ product.thumbnail }}"/>
+      <img src="https://s3.amazonaws.com/hiu-thumbnails/regions/{{ page.thumbnail }}"/>
       <hr>
+    </div>
+    <div class="col-md-2">
     </div>
   </div>
   {% for product in site.categories.products %}

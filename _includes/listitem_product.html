@@ -6,7 +6,7 @@
     <div class="col-md-4">
       <a href="{{ site.baseurl }}{{ product.url }}">{{ product.title }}</a>
       <br>
-      {{ product.region }} | {{ product.date_published | date: '%B %d, %Y' }}
+      <a href="{{ site.baseurl }}/regions/{{ product.region_id }}">{{ product.region_title }</a> | {{ product.date_published | date: '%B %d, %Y' }}
       <br>
       <br>
       {{ product.content }}
