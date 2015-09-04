@@ -14,7 +14,7 @@ layout: wrapper
     </div>
   </div>
   {% for product in site.categories.products %}
-    {% if product.region_id == page.id %}
+    {% if product.region_id == page.region_id %}
       {% include listitem_product.html %}
     {% endif %}
   {% endfor %}
