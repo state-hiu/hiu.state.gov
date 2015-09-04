@@ -5,8 +5,8 @@ layout: wrapper
 </div>
 <div class="col-md-8">
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#">Featured</a></li>
-    <li><a href="#">All</a></li>
+    <li class="active"><a href="#featured" data-toggle="tab">Featured</a></li>
+    <li><a href="#all" data-toggle="tab">All</a></li>
   </ul>
   <div class="tab-content">
     <div id="featured" class="tab-pane active">
@@ -16,7 +16,7 @@ layout: wrapper
         {% endif %}
       {% endfor %}
     </div>
-    <div id="all" class="tab-pane active">
+    <div id="all" class="tab-pane">
       {% for product in site.categories.products %}
         {% include listitem_product.html %}
       {% endfor %}
