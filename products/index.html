@@ -8,7 +8,7 @@ layout: wrapper
     <li class="active"><a href="#featured" data-toggle="tab">Featured</a></li>
     <li><a href="#all" data-toggle="tab">All</a></li>
   </ul>
-  <div class="tab-content">
+  <div class="tab-content" style="padding:10px">
     <div id="featured" class="tab-pane active">
       {% for product in site.categories.products %}
         {% if product.featured == true %}
