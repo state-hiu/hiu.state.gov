@@ -1,6 +1,6 @@
 ---
 layout: wrapper
-title: Products
+title: Programs
 ---
 <div class="col-md-2">
 </div>
@@ -12,18 +12,19 @@ title: Products
   </ul>
   <div class="tab-content" style="padding: 10px;">
     <div id="featured" class="tab-pane active">
-      {% for product in site.categories.products %}
-        {% if product.featured == true %}
-          {% include listitem_product.html %}
+      {% for program in site.categories.programs %}
+        {% if program.featured == true %}
+          {% include listitem_program.html %}
         {% endif %}
       {% endfor %}
     </div>
     <div id="all" class="tab-pane">
-      {% for product in site.categories.products %}
-        {% include listitem_product.html %}
+      {% for program in site.categories.program %}
+        {% include listitem_program.html %}
       {% endfor %}
     </div>
   </div>
 </div>
 <div class="col-md-2">
 </div>
+
