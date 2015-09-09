@@ -50,24 +50,24 @@ layout: map
             console.log("Response:", response);
             var geonode_features = [];
             var geonode_layers = $(response).find('Layer').each(function(){
-                var b = $(this).find('EX_GeographicBoundingBox');
+                var b = $(this).children('EX_GeographicBoundingBox:first');
                 if(b.length > 0)
                 {
                     var g =
                     [
-                        b.find('westBoundLongitude').text(),
-                        b.find('southBoundLatitude').text(),
-                        b.find('eastBoundLongitude').text(),
-                        b.find('northBoundLatitude').text()
+                        b.children('westBoundLongitude').text(),
+                        b.children('southBoundLatitude').text(),
+                        b.children('eastBoundLongitude').text(),
+                        b.children('northBoundLatitude').text()
                     ];
                     var f =
                     {
                         "type": "Feature",
                         "properties":
                         {
-                            "name": $(this).find('Name').text(),
-                            "title": $(this).find('Title').text(),
-                            "abstract": $(this).find('Abstract').text()
+                            "name": $(this).children('Name').text(),
+                            "title": $(this).children('Title').text(),
+                            "abstract": $(this).children('Abstract').text()
                         },
                         "geometry":
                         {
