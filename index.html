@@ -106,11 +106,17 @@ layout: map
                 "type": "FeatureCollection",
                 "features": geonode_features
             };
+            var geonode_style = {
+               "color": "#0000FF",
+               "fill-opacity": 0.3,
+               "stroke-opacity": 1.0
+            };
             var datasets = L.geoJson(geonode_geojson, {
+                style: geonode_style,
                 onEachFeature: function(feature, layer) {
                     var popupOptions = {maxWidth: 200};
                     //layer.setIcon(productIcon);
-                    var popupContent = '<h4><a href="{{ site.geonode_layers }}/'+feature.properties.name+'">'+feature.properties.title+"</a></h4><hr>Abstract<br>"+feature.properties.abstract;
+                    var popupContent = '<h4 style="word-wrap:break-word;"><a href="{{ site.geonode_layers }}/'+feature.properties.name+'">'+feature.properties.title+"</a></h4><hr>Abstract<br>"+feature.properties.abstract;
                     layer.bindPopup(popupContent, popupOptions);
                 }
             });
