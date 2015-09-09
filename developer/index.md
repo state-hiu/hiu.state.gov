@@ -32,38 +32,17 @@ HIU has a distributed infrastucture so there is no one domain for APIs.  GeoNode
 
 If you are starting off, we'd suggest you take a look at State GeoNode's API ([http://geonode.state.gov/about/api/](http://geonode.state.gov/about/api/)).
 
-## Science and Technology (S&T) Programs
+## [Science and Technology (S&T) Programs]({{ site.baseurl }}/programs)
 
-{% for program in site.categories.programs %}
+{% for program in site.categories.programs reversed %}
   {% include listitem_program.html %}
 {% endfor %}
 
-## Websites
+## [Websites]({{ site.baseurl }}/websites)
 
-### State GeoNode
-
-Primary open geographic data platform of the U.S. Department of State. The State GeoNode is a digital service provided by the U.S. Department of State for publishing open geographic data produced by or compiled by the U.S. Government to the public, U.S. Government decision-makers, and partners on complex emergencies, natural disasters, and diplomatic activities world-wide.
-
-[http://geonode.state.gov](http://geonode.state.gov)
-
-### Ebola GeoNode
-
-This is a partnership platform for sharing geospatial data, analysis and maps related to the Ebola emergency response. The platform is intended to minimize the time that GIS analysts spend locating up-to-date data. Users are able to make maps on the fly, view metadata, and access the reports behind GIS layers. Curators are working to ensure that the layers are recent, clean, useful, and legally and technically open.
-
-[http://ebolageonode.org](http://ebolageonode.org)
-
-### Cusco GeoNode
-
-The Cusco GeoNode is a geospatial platform provided by the U.S. Department of State, Humanitarian Information Unit as part of the Secondary Cities project. The Cusco GeoNode is used for collaborating on and sharing geospatial data among the US Government and partners in Peru. Learn more on the about page.
-
-[http://cuscogeonode.state.gov](http://cuscogeonode.state.gov)
-
-### OSMGeoWeek
-
-Website for OpenStreetMap events for National Geography Awareness week.
-
-[http://osmgeoweek.org](http://osmgeoweek.org)
-
+{% for website in site.categories.websites reversed %}
+  {% include listitem_website.html %}
+{% endfor %}
 
 ## Contact
 

@@ -1,6 +1,6 @@
 ---
 layout: wrapper
-title: "Science & Technology Programs"
+title: "Websites"
 ---
 <div class="col-md-2">
 </div>
@@ -12,15 +12,15 @@ title: "Science & Technology Programs"
   </ul>
   <div class="tab-content" style="padding: 10px;">
     <div id="featured" class="tab-pane active">
-      {% for program in site.categories.programs reversed %}
-        {% if program.featured == true %}
-          {% include listitem_program.html %}
+      {% for website in site.categories.websites reversed %}
+        {% if website.featured == true %}
+          {% include listitem_website.html %}
         {% endif %}
       {% endfor %}
     </div>
     <div id="all" class="tab-pane">
-      {% for program in site.categories.programs reversed %}
-        {% include listitem_program.html %}
+      {% for website in site.categories.websites reversed %}
+        {% include listitem_website.html %}
       {% endfor %}
     </div>
   </div>
