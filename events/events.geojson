@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{
+  "type": "FeatureCollection",
+  "features": [{% for event in site.categories.events %}
+    {% if event.lon and event.lat %}
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "{{ event.title }}",
+        "featured": "{{ event.featured }}",
+        "archived": "{{ event.archived }}",
+        "url": "{{ site.url }}{{ event.url }}",
+        "marker-color": "#FF8C00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [{{ event.lon }}, {{ event.lat }}]
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endif %}{% endfor %}
+  ]
+}

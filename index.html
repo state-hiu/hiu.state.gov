@@ -153,4 +153,20 @@ layout: map
             layerswitcher.appendChild(createLink(map, datasets, 'Datasets'));
         }
     });
+    $.ajax({
+        dataType: "json",
+        url: "{{ site.baseurl}}/events/events.json",
+        success: function(response) {
+            var events = L.geoJson(response, {
+                onEachFeature: function(feature, layer) {
+                    var popupOptions = {maxWidth: 200};
+                    //layer.setIcon(productIcon);
+                    var popupContent = '<h4><a href="'+feature.properties.url+'">'+feature.properties.title+'</a></h4>';
+                    layer.bindPopup(popupContent, popupOptions);
+                }
+            });
+            events.addTo(map);
+            layerswitcher.appendChild(createLink(map, events, 'Events'));
+        }
+    });
 </script>

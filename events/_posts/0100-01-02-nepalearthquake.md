@@ -4,6 +4,8 @@ category: events
 title: "Nepal Earthquake"
 featured: true
 archived: false
+lat: 28.087
+lon: 86.092
 keywords:
 refurl:
 ---
