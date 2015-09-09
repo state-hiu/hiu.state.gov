@@ -13,7 +13,7 @@ layout: map
         $(link).data('layer', layer)
         $(link).click(function(e){
             e.preventDefault();
-            e.stopPropogation();
+            e.stopPropagation();
             var map = $(this).data('map');
             var layer = $(this).data('layer');
             if(map.hasLayer(layer))
