@@ -45,7 +45,7 @@ layout: map
     // Data GeoJSON
     $.ajax({
         dataType: "json",
-        url: "{{ geonode_wms }}",
+        url: "{{ site.geonode_wms }}",
         success: function(response) {
             var geonode_features = [];
             var geonode_layers = $(response).find('Layer').each(function(){
@@ -89,7 +89,7 @@ layout: map
                 onEachFeature: function(feature, layer) {
                     var popupOptions = {maxWidth: 200};
                     //layer.setIcon(productIcon);
-                    var popupContent = '<h4><a href="{{ geonode_layers }}/'+feature.properties.name+'">'+feature.properties.title+"</a></h4><hr>Abstract<br>"+feature.properties.abstract;
+                    var popupContent = '<h4><a href="{{ site.geonode_layers }}/'+feature.properties.name+'">'+feature.properties.title+"</a></h4><hr>Abstract<br>"+feature.properties.abstract;
                     layer.bindPopup(popupContent, popupOptions);
                 }
             });
