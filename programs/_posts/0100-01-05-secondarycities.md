@@ -4,7 +4,7 @@ category: programs
 title: "Secondary Cities"
 featured: true
 keywords:
-url: "http://secondarycities.state.gov"
+refurl: "http://secondarycities.state.gov"
 ---
 Mapping Secondary Cities for Resiliency, Human Security, and Emergency Preparedness is the flagship, field-based initiative of the Office of the Geographer.
 
