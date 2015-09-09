@@ -44,11 +44,12 @@ layout: map
     });
     // Data GeoJSON
     $.ajax({
-        dataType: "json",
+        dataType: "xml",
         url: "{{ site.geonode_wms }}",
         success: function(response) {
+            console.log("Response:", response);
             var geonode_features = [];
-            var geonode_layers = $(response).find('Layer').each(function(){
+            /*var geonode_layers = $(response).find('Layer').each(function(){
                 var b = $(this).find('EX_GeographicBoundingBox');
                 var g =
                 [
@@ -79,13 +80,13 @@ layout: map
                     }
                 };
                 geonode_features.push(f);
-            });
+            });*/
             var geonode_geojson =
             {
                 "type": "FeatureCollection",
                 "features": geonode_features
             };
-            var products = L.geoJson(geonode_geojson, {
+            var datasets = L.geoJson(geonode_geojson, {
                 onEachFeature: function(feature, layer) {
                     var popupOptions = {maxWidth: 200};
                     //layer.setIcon(productIcon);
@@ -93,7 +94,7 @@ layout: map
                     layer.bindPopup(popupContent, popupOptions);
                 }
             });
-            products.addTo(map);
+            datasets.addTo(map);
         }
     });
 
