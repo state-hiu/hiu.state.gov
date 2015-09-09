@@ -42,6 +42,20 @@ layout: map
             products.addTo(map);
         }
     });
+    var buildBoundingBox = function(b)
+    {
+        var g = [0,0,0,0];
+        try{
+            g =
+            [
+                parseFloat(parseFloat(b.children('westBoundLongitude').text()).toFixed(4)),
+                parseFloat(parseFloat(b.children('southBoundLatitude').text()).toFixed(4)),
+                parseFloat(parseFloat(b.children('eastBoundLongitude').text()).toFixed(4)),
+                parseFloat(parseFloat(b.children('northBoundLatitude').text()).toFixed(4))
+            ];
+        }catch(err){g = [0,0,0,0];}
+        return g;
+    };
     // Data GeoJSON
     $.ajax({
         dataType: "xml",
@@ -53,13 +67,7 @@ layout: map
                 var b = $(this).children('EX_GeographicBoundingBox:first');
                 if(b.length > 0)
                 {
-                    var g =
-                    [
-                        parseFloat(b.children('westBoundLongitude').text()),
-                        parseFloat(b.children('southBoundLatitude').text()),
-                        parseFloat(b.children('eastBoundLongitude').text()),
-                        parseFloat(b.children('northBoundLatitude').text())
-                    ];
+                    var g = buildBoundingBox(b);
                     var f =
                     {
                         "type": "Feature",
@@ -67,7 +75,7 @@ layout: map
                         {
                             "name": $(this).children('Name').text(),
                             "title": $(this).children('Title').text(),
-                            "abstract": $(this).children('Abstract').text()
+                            "abstract": $(this).children('Abstract').text().replace('\n','')
                         },
                         "geometry":
                         {
@@ -87,7 +95,7 @@ layout: map
             var geonode_geojson =
             {
                 "type": "FeatureCollection",
-                "features": geonode_features
+                "features": geonode_features.slice(0,2)
             };
             var datasets = L.geoJson(geonode_geojson, {
                 onEachFeature: function(feature, layer) {
