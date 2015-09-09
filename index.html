@@ -82,10 +82,12 @@ layout: map
                             "type": "Polygon",
                             "coordinates":
                             [
-                              [g[0], g[1]],
-                              [g[2], g[1]],
-                              [g[2], g[3]],
-                              [g[0], g[3]]
+                              [
+                                  [g[0], g[1]],
+                                  [g[2], g[1]],
+                                  [g[2], g[3]],
+                                  [g[0], g[3]]
+                              ]
                             ]                        
                         }
                     };
@@ -95,7 +97,7 @@ layout: map
             var geonode_geojson =
             {
                 "type": "FeatureCollection",
-                "features": geonode_features.slice(0,2)
+                "features": geonode_features
             };
             var datasets = L.geoJson(geonode_geojson, {
                 onEachFeature: function(feature, layer) {
