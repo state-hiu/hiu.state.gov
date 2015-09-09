@@ -56,6 +56,13 @@ layout: map
         }catch(err){g = [0,0,0,0];}
         return g;
     };
+    var ellipsis = function(text,len)
+    {
+        if(len==-1)
+            return text;
+        else
+            return (text.length>len)?(text.substring(0,len-3)+'...'):text;
+    };
     // Data GeoJSON
     $.ajax({
         dataType: "xml",
@@ -75,7 +82,7 @@ layout: map
                         {
                             "name": $(this).children('Name').text(),
                             "title": $(this).children('Title').text(),
-                            "abstract": $(this).children('Abstract').text().replace('\n','')
+                            "abstract": ellipsis($(this).children('Abstract').text().replace('\n',''), 100)
                         },
                         "geometry":
                         {
