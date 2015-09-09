@@ -55,10 +55,10 @@ layout: map
                 {
                     var g =
                     [
-                        b.children('westBoundLongitude').text(),
-                        b.children('southBoundLatitude').text(),
-                        b.children('eastBoundLongitude').text(),
-                        b.children('northBoundLatitude').text()
+                        parseFloat(b.children('westBoundLongitude').text()),
+                        parseFloat(b.children('southBoundLatitude').text()),
+                        parseFloat(b.children('eastBoundLongitude').text()),
+                        parseFloat(b.children('northBoundLatitude').text())
                     ];
                     var f =
                     {
