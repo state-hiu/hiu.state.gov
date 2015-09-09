@@ -11,7 +11,7 @@ layout: map
         link.innerHTML = label;
         $(link).data('map', map)
         $(link).data('layer', layer)
-        link.onClick = function(e) {
+        $(link).click(function(e){
             e.preventDefault();
             e.stopPropogation();
             var map = $(this).data('map');
@@ -26,7 +26,7 @@ layout: map
                 map.addLayer(layer);
                 this.className = 'active';
             }
-        }
+        });
         return link;
     };
     var layerswitcher = document.getElementById('menu-ui');
