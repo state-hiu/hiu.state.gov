@@ -1,22 +1,32 @@
 ---
 layout: wrapper
 ---
-<div class="col-md-12">
-  <div class="row" style="background:rgb(252, 252, 252);">
-    <div class="col-md-2">
+<div class="col-md-2">
+</div>
+<div class="col-md-8">
+  <ul class="nav nav-tabs" style="padding: 10px 10px 0px 10px;">
+    <li class="active"><a href="#featured" data-toggle="tab">Featured</a></li>
+    <li><a href="#all" data-toggle="tab">All</a></li>
+  </ul>
+  <div class="tab-content" style="padding: 10px;">
+    <div id="featured" class="tab-pane active">
+      {% for product in site.categories.products %}
+        {% if product.region_id == page.region_id %}
+          {% if product.featured == true %}
+            {% include listitem_product.html %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
     </div>
-    <div class="col-md-8">
-      {{ page.title }}
-      <img src="https://s3.amazonaws.com/hiu-thumbnails/regions/{{ page.thumbnail }}"/>
-      <hr>
-    </div>
-    <div class="col-md-2">
+    <div id="all" class="tab-pane">
+      {% for product in site.categories.products %}
+        {% if product.region_id == page.region_id %}
+          {% include listitem_product.html %}
+        {% endif %}
+      {% endfor %}
     </div>
   </div>
-  {% for product in site.categories.products %}
-    {% if product.region_id == page.region_id %}
-      {% include listitem_product.html %}
-    {% endif %}
-  {% endfor %}
+</div>
+<div class="col-md-2">
 </div>
 

@@ -3,7 +3,7 @@ layout: product
 category: products
 title: "Yemen: Humanitarian Overview"
 region_id: "middle-east"
-region_title: "middle-east"
+region_title: "Middle East"
 date_published: 20145-07-07
 pdf: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.pdf"
 thumbnail_150: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254_150px.jpg"
