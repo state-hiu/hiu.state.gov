@@ -42,4 +42,59 @@ layout: map
             products.addTo(map);
         }
     });
+    // Data GeoJSON
+    $.ajax({
+        dataType: "json",
+        url: "{{ geonode_wms }}",
+        success: function(response) {
+            var geonode_features = [];
+            var geonode_layers = $(response).find('Layer').each(function(){
+                var b = $(this).find('EX_GeographicBoundingBox');
+                var g =
+                [
+                    b.find('westBoundLongitude').text(),
+                    b.find('southBoundLatitude').text(),
+                    b.find('eastBoundLongitude').text(),
+                    b.find('northBoundLatitude').text()
+                ];
+                var f =
+                {
+                    "type": "Feature",
+                    "properties":
+                    {
+                        "name": $(this).find('Name').text(),
+                        "title": $(this).find('Title').text(),
+                        "abstract": $(this).find('Abstract').text()
+                    },
+                    "geometry":
+                    {
+                        "type": "Polygon",
+                        "coordinates":
+                        [
+                          [g[0], g[1]],
+                          [g[2], g[1]],
+                          [g[2], g[3]],
+                          [g[0], g[3]]
+                        ]                        
+                    }
+                };
+                geonode_features.push(f);
+            });
+            var geonode_geojson =
+            {
+                "type": "FeatureCollection",
+                "features": geonode_features
+            };
+            var products = L.geoJson(geonode_geojson, {
+                onEachFeature: function(feature, layer) {
+                    var popupOptions = {maxWidth: 200};
+                    //layer.setIcon(productIcon);
+                    var popupContent = '<h4><a href="{{ geonode_layers }}/'+feature.properties.name+'">'+feature.properties.title+"</a></h4><hr>Abstract<br>"+feature.properties.abstract;
+                    layer.bindPopup(popupContent, popupOptions);
+                }
+            });
+            products.addTo(map);
+        }
+    });
+
 </script>
