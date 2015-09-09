@@ -1,11 +1,12 @@
 ---
 layout: wrapper
 ---
+{% assign primary_product = page %}
 <div class="col-md-2">
 </div>
 <div class="col-md-8">
   <div><h2 class="page-title">{{ page.title }}</h2></div>
-  {% assign product = page %}
+  {% assign product = primary_product %}
   {% include listitem_product.html %}
   <hr>
   <div><h4 class="page-title">Related Products & Data</h2></div>
@@ -16,8 +17,11 @@ layout: wrapper
   <div class="tab-content" style="padding: 10px;">
     <div id="related-products" class="tab-pane active">
       {% for related_product in site.categories.products %}
-        {% if related_product.region_id == product.region_id %}
-          {% include listitem_product.html %}
+        {% if related_product.id != primary_product.id %}
+          {% if related_product.region_id == primary_product.region_id %}
+            {% assign product = related_product %}
+            {% include listitem_product.html %}
+          {% endif %}
         {% endif %}
       {% endfor %}
     </div>
