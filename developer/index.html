@@ -8,13 +8,13 @@ layout: wrapper_text
 <h3>CyberGIS</h3>
 {% for repo in site.categories.repos reversed %}
   {% if repo.keywords contains 'cybergis' %}
-    {% include listitem_repo.html %}
+    <p>{% include listitem_repo.html %}</p>
   {% endif %}
 {% endfor %}
 <h3>Imagery to the Crowd</h3>
 {% for repo in site.categories.repos reversed %}
   {% if repo.keywords contains 'ittc' %}
-    {% include listitem_repo.html %}
+    <p>{% include listitem_repo.html %}</p>
   {% endif %}
 {% endfor %}
 
@@ -24,12 +24,12 @@ HIU has a distributed infrastucture so there is no one domain for APIs.  GeoNode
 If you are starting off, we'd suggest you take a look at State GeoNode's API (<a href="http://geonode.state.gov/about/api/">http://geonode.state.gov/about/api/</a>).
 <br>
 
-<h2><a href="{{ site.baseurl}}/programs">Science and Technology (S&T) Programs</h2>
+<h2><a href="{{ site.baseurl}}/programs">Science and Technology (S&T) Programs</a></h2>
 {% for program in site.categories.programs reversed %}
   {% include listitem_program.html %}
 {% endfor %}
 
-<h2><a href="{{ site.baseurl}}/websites">Websites</h2>
+<h2><a href="{{ site.baseurl}}/websites">Websites</a></h2>
 {% for website in site.categories.websites reversed %}
   {% include listitem_website.html %}
 {% endfor %}
