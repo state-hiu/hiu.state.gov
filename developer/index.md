@@ -8,15 +8,11 @@ layout: wrapper_text
 
 ### CyberGIS
 
-[CyberGIS Guides](https://github.com/state-hiu/cybergis-guides) - Guides for enterprise deployment of open source Web GIS systems
-
-[CyberGIS Client](https://github.com/state-hiu/cybergis-client) - Client side code for CyberGIS (abstraction layer for OpenLayers, OL3, and Leaflet). Includes source code and examples.
-
-[CyberGIS Scripts](https://github.com/state-hiu/cybergis-scripts) - Scripts used in the CyberGIS
-
-[CyberGIS OSM Mappings](https://github.com/state-hiu/cybergis-osm-mappings) - Mappings from OSM Key-Value structure to table/shapefile schema. Used in GeoGig and GeoSHAPE.
-
-[CyberGIS Commons](https://github.com/state-hiu/cybergis-osm-mappings) - This repository contains a set of Java classes and methods commonly used in the CyberGIS.
+{% for repo in site.categories.repos reversed %}
+  {% if repo.keywords contains 'cybergis' %}
+    [{{repo.title }}]({{ repo.refurl }}) - {{ repo.description }}
+  {% endif %}
+{% endfor %}
 
 ### Imagery to the Crowd
 
