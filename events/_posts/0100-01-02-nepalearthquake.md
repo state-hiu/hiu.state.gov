@@ -1,4 +1,4 @@
---
+---
 layout: event
 category: events
 title: "Nepal Earthquake"
