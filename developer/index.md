@@ -8,11 +8,14 @@ layout: wrapper_text
 
 ### CyberGIS
 
+{% capture cybergis_repos %}
 {% for repo in site.categories.repos reversed %}
   {% if repo.keywords contains 'cybergis' %}
     [{{repo.title }}]({{ repo.refurl }}) - {{ repo.description }}
   {% endif %}
 {% endfor %}
+{% endcapture %}
+{{ cybergis_repos | markdownify }}
 
 ### Imagery to the Crowd
 
