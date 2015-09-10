@@ -15,3 +15,8 @@ exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, pack
 # Integration
 geonode_layers: "http://geonode.state.gov/layers"
 geonode_wms: "http://geonode.state.gov/cors/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities"
+
+# Document & Media Storage
+storage_thumbnails_products: "https://s3.amazonaws.com/hiu-thumbnails/products"
+storage_thumbnails_regions: "https://s3.amazonaws.com/hiu-thumbnails/regions"
+storage_products: "https://s3.amazonaws.com/hiu-products"
