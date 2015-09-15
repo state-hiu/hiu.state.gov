@@ -59,7 +59,7 @@ layout: map
     });
     countries.on('click', function (e) {
         if (e.data) {
-            alert('click: ' + e.data);
+            alert('click: ' + JSON.stringify(e.data));
         } else {
             alert('click: nothing');
         }
