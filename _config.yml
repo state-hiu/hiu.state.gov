@@ -5,7 +5,7 @@ permalink: none
 #baseurl: http://localhost:8000
 #url: http://localhost:8000
 #destination: /var/www
-baseurl: http://state-hiu.github.io/hiu.state.gov
+baseurl: /hiu.state.gov
 url: http://state-hiu.github.io/hiu.state.gov
 destination: _site
 

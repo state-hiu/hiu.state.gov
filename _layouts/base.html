@@ -6,10 +6,14 @@ layout: default
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="google" content="notranslate" />
     <meta http-equiv="Content-Language" content="en_US" />
+    <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/favicon.ico" />
     <!-- CSS / External-->
-    <link href="{{ site.baseurl }}/lib/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+    <!--<link href="{{ site.baseurl }}/lib/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="{{ site.baseurl }}/lib/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet"/>-->
+    <link href="{{ site.baseurl }}/assets/css/bootstrap.less.css" rel="stylesheet"/>
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
     <!-- CSS / Internal -->
+    <link href='{{site.baseurl}}/site.css' rel='stylesheet' />
     <!-- JavaScript / External -->	
     <!--<script src="{{ site.baseurl }}/lib/jquery/1.7.2/jquery-1.7.2.js"></script>-->
     <script src="{{ site.baseurl }}/lib/jquery/1.9.1/jquery-1.9.1.js"></script>
@@ -23,45 +27,6 @@ layout: default
       var now = new Date();
       var today = new Date(now.getFullYear(),now.getMonth(),now.getDate());
     </script>
-    <style>
-    .menu-ui {
-      background:#fff;
-      position:absolute;
-      top:10px;right:10px;
-      z-index:9999;
-      border-radius:3px;
-      width:120px;
-      border:1px solid rgba(0,0,0,0.4);
-      }
-      .menu-ui a {
-        font-size:13px;
-        color:#404040;
-        display:block;
-        margin:0;padding:0;
-        padding:10px;
-        text-decoration:none;
-        border-bottom:1px solid rgba(0,0,0,0.25);
-        text-align:center;
-        }
-        .menu-ui a:first-child {
-          border-radius:3px 3px 0 0;
-          }
-        .menu-ui a:last-child {
-          border:none;
-          border-radius:0 0 3px 3px;
-          }
-        .menu-ui a:hover {
-          background:#f8f8f8;
-          color:#404040;
-          }
-        .menu-ui a.active {
-          background:#3887BE;
-          color:#FFF;
-          }
-          .menu-ui a.active:hover {
-            background:#3074a4;
-            }
-  </style>
   </head>
   <body>
     {{ content }}
