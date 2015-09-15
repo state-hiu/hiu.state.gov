@@ -51,6 +51,7 @@ layout: map
     */
 
     // LSIB Countries UTFGrid
+    // Resolution is server dependent.  MapBox.com uses resolution=4.
     var countries = new L.UtfGrid(
         'http://{s}.tiles.mapbox.com/v3/hiu.lp5bfbt9/{z}/{x}/{y}.grid.json?callback={cb}&access_token='+ accessToken,
     {
