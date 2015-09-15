@@ -52,10 +52,9 @@ layout: map
 
     // LSIB Countries UTFGrid
     var countries = new L.UtfGrid(
-        'http://{s}.tiles.mapbox.com/v4/hiu.lp5bfbt9/{z}/{x}/{y}.grid.json?access_token='+ accessToken,
+        'http://{s}.tiles.mapbox.com/v3/hiu.lp5bfbt9/{z}/{x}/{y}.grid.json?callback={cb}&access_token='+ accessToken,
     {
-        resolution: 2,
-        useJsonP: false
+        resolution: 2
     });
     countries.on('click', function (e) {
         if (e.data) {
