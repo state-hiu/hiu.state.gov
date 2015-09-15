@@ -54,7 +54,7 @@ layout: map
     var countries = new L.UtfGrid(
         'http://{s}.tiles.mapbox.com/v3/hiu.lp5bfbt9/{z}/{x}/{y}.grid.json?callback={cb}&access_token='+ accessToken,
     {
-        resolution: 2
+        resolution: 1
     });
     countries.on('click', function (e) {
         if (e.data) {
