@@ -51,17 +51,20 @@ layout: map
     */
 
     // LSIB Countries UTFGrid
-    var utfGrid = new L.UtfGrid('http://{s}.tiles.mapbox.com/v4/hiu.lp5bfbt9/{z}/{x}/{y}.grid.json?callback={cb}&access_token='+ accessToken, {
-        resolution: 2
+    var countries = new L.UtfGrid(
+        'http://{s}.tiles.mapbox.com/v4/hiu.lp5bfbt9/{z}/{x}/{y}.grid.json?access_token='+ accessToken,
+    {
+        resolution: 2,
+        useJsonP: false
     });
-    utfGrid.on('click', function (e) {
+    countries.on('click', function (e) {
         if (e.data) {
             alert('click: ' + e.data.CNTRY_NAME);
         } else {
             alert('click: nothing');
         }
     });
-
+    countries.addTo(map);
     // Products GeoJSON
     var productIcon = L.icon({
         iconUrl: "{{ site.baseurl }}/assets/img/icon_product.svg",
