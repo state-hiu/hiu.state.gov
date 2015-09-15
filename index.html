@@ -35,18 +35,20 @@ layout: map
     var map = L.map('map').setView([0, 30], 3);
 
     // Imagery Basemap
-    var url_imagery = 'https://api.mapbox.com/v4/hiu.nbk3c19e/{z}/{x}/{y}.png?access_token=' + accessToken;
-    //var tileUrl = 'https://api.mapbox.com/v4/hiu.nbk3c19e,hiu.lsib-dark/{z}/{x}/{y}.png?access_token=' + accessToken
+    //var url_imagery = 'https://api.mapbox.com/v4/hiu.nbk3c19e/{z}/{x}/{y}.png?access_token=' + accessToken;
+    // Compositing imagery with LSIB boundaries on the fly.
+    var tileUrl = 'https://api.mapbox.com/v4/hiu.nbk3c19e,hiu.lp5bfbt9/{z}/{x}/{y}.png?access_token=' + accessToken
     L.tileLayer(url_imagery, {
       attribution: ''
     }).addTo(map);
 
-    // LSIB Boundaries
+    /* LSIB Boundaries
     var url_boundaries = 'http://geonode.state.gov/geoserver/gwc/service/tms/1.0.0/geonode%3AGlobal_LSIB_Lines_Simplified_2015Jan23_USG@EPSG%3A900913@png/{z}/{x}/{y}.png';
     L.tileLayer(url_boundaries, {
       tms: true,
       attribution: 'Names and boundary representation are not necessarily authoritative.'
     }).addTo(map);
+    */
 
     // Products GeoJSON
     var productIcon = L.icon({
