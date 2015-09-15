@@ -1,0 +1,34 @@
+.mapgive-font {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 18px;
+}
+.float-right {
+  float: right;
+}
+.header-container {
+  width: auto;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.hiu-logo {
+  display: inline-block;
+  opacity: 1;
+  height: 45px;
+}
+.navbar-brand {
+  float: left;
+  padding: 4px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 50px;
+}
+.logo {
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+}
+.mapgive-logo {
+  height: 27px;
+}
+#mapgive-logo-padding {
+  padding-top: 10px;
+}
