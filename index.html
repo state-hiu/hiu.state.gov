@@ -37,8 +37,8 @@ layout: map
     // Imagery Basemap
     //var url_imagery = 'https://api.mapbox.com/v4/hiu.nbk3c19e/{z}/{x}/{y}.png?access_token=' + accessToken;
     // Compositing imagery with LSIB boundaries on the fly.
-    var tileUrl = 'https://api.mapbox.com/v4/hiu.nbk3c19e,hiu.lp5bfbt9/{z}/{x}/{y}.png?access_token=' + accessToken
-    L.tileLayer(url_imagery, {
+    var url_basemap = 'https://api.mapbox.com/v4/hiu.nbk3c19e,hiu.lp5bfbt9/{z}/{x}/{y}.png?access_token=' + accessToken
+    L.tileLayer(url_basemap, {
       attribution: ''
     }).addTo(map);
 
