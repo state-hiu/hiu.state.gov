@@ -53,7 +53,7 @@ layout: map
             weight: 5,
             color: '#0000FF',
             fillOpacity: 0.4,
-            strokeOpacity: 0.8
+            opacity: 0.8
         });
         if (!L.Browser.ie && !L.Browser.opera) {
             layer.bringToFront();
@@ -62,19 +62,20 @@ layout: map
     var regions_style = {
         "color": "#0000FF",
         "fillOpacity": 0,
-        "strokeOpacity": 0.0
+        "opacity": 0.0
     };
+    var regions = undefined;
     $.ajax({
         dataType: "json",
         url: "{{ site.baseurl}}/localdata/Global_HIUWebsiteRegions_Version1.geojson",
         success: function(response) {
-            var regions = L.geoJson(response, {
+            regions = L.geoJson(response, {
                 style: regions_style,
                 onEachFeature: function(feature, layer) {
                     layer.on({
                         mouseover: highlightFeature,
                         mouseout: function(e){
-                            layer.resetStyle(e.target);
+                            regions.resetStyle(e.target);
                         },
                         click: function(e){openRegionPopup(map, feature, e.latlng);}
                     });
@@ -156,7 +157,7 @@ layout: map
             var geonode_style = {
                "color": "#0000FF",
                "fillOpacity": 0,
-               "strokeOpacity": 1.0
+               "opacity": 1.0
             };
             var datasets = L.geoJson(geonode_geojson, {
                 style: geonode_style,
