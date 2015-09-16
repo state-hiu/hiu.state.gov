@@ -20,14 +20,27 @@ layout: default
     <script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui-1.8.14.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.4/angular-route.js"></script>
+    {% if site.debug_bootstrap == true %}
+    <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.js"></script>
+    {% else %}
     <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.min.js"></script>
-    <script src="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.js"></script>
-    <!--<script src="{{ site.baseurl }}/lib/Leaflet.utfgrid/dist/leaflet.utfgrid.js"></script>-->
+    {% endif %}
+    {% if site.debug_leaflet == true %}
+    <script src="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet-src.js"></script>
     <script src="{{ site.baseurl }}/lib/Leaflet.utfgrid/dist/leaflet.utfgrid-src.js"></script>
+    {% else %}
+    <script src="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.js"></script>
+    <script src="{{ site.baseurl }}/lib/Leaflet.utfgrid/dist/leaflet.utfgrid.js"></script>
+    {% endif %}
     <!-- JavaScript / Internal -->		
     <script type="text/javascript" language="Javascript">
-      var now = new Date();
-      var today = new Date(now.getFullYear(),now.getMonth(),now.getDate());
+        var now = new Date();
+        var today = new Date(now.getFullYear(),now.getMonth(),now.getDate());
+    </script>
+    <script type="text/javascript" language="Javascript">
+        var mb_access_token = '{{ site.mapbox_access_token }}';
+        var mb_url_tiles = '{{ site.mapbox_url_tiles }}' + mb_access_token
+        var mb_url_utfgrid = '{{ site.mapbox_url_utfgrid }}'+ mb_access_token
     </script>
   </head>
   <body>

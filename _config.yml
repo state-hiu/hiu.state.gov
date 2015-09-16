@@ -12,6 +12,10 @@ destination: _site
 # Explicit excludes, including dotfiles to be safe
 exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
 
+# Testing
+debug_bootstrap: false
+debug_leaflet: true
+
 # GeoNode
 geonode_layers: "http://geonode.state.gov/layers"
 geonode_wms: "http://geonode.state.gov/cors/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities"

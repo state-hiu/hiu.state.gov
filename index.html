@@ -31,9 +31,6 @@ layout: map
     };
     var layerswitcher = document.getElementById('menu-ui');
 
-    var accessToken = '{{ site.mapbox_access_token }}';
-    var mb_url_tiles = '{{ site.mapbox_url_tiles }}' + accessToken
-    var mb_url_utfgrid = '{{ site.mapbox_url_utfgrid }}'+ accessToken
     var map = L.map('map').setView([0, 30], 3);
 
     // Imagery Basemap
