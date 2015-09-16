@@ -22,7 +22,7 @@ layout: map
     }).addTo(map);
     */
 
-    // LSIB Countries UTFGrid
+    /* LSIB Countries UTFGrid
     // Resolution is server dependent.  MapBox.com uses resolution=4.
     var countries = new L.UtfGrid(mb_url_utfgrid, {
         id: 'hiu.lp5bfbt9',
@@ -38,6 +38,23 @@ layout: map
         }
     });
     countries.addTo(map);
+    */
+    // Regions
+    $.ajax({
+        dataType: "json",
+        url: "{{ site.baseurl}}/localdata/Global_HIUWebsiteRegions_Version1.geojson",
+        success: function(response) {
+            var regions = L.geoJson(response, {
+                onEachFeature: function(feature, layer) {
+                    var popupOptions = {maxWidth: 200};
+                    var popupContent = '<h4><a href="{{ site.baseurl }}/regions/'+feature.properties.id+'">'+regions[feature.properties.id]+"</a></h4>';
+                    layer.bindPopup(popupContent, popupOptions);
+                }
+            });
+            regions.addTo(map);
+            layerswitcher.appendChild(createLink(map, regions, 'Regions'));
+        }
+    });
     // Products GeoJSON
     var productIcon = L.icon({
         iconUrl: "{{ site.baseurl }}/assets/img/icon_product.svg",
