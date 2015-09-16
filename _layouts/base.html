@@ -39,8 +39,58 @@ layout: default
     </script>
     <script type="text/javascript" language="Javascript">
         var mb_access_token = '{{ site.mapbox_access_token }}';
-        var mb_url_tiles = '{{ site.mapbox_url_tiles }}' + mb_access_token
-        var mb_url_utfgrid = '{{ site.mapbox_url_utfgrid }}'+ mb_access_token
+        var mb_url_tiles = '{{ site.mapbox_url_tiles }}' + mb_access_token;
+        var mb_url_utfgrid = '{{ site.mapbox_url_utfgrid }}'+ mb_access_token;
+        var gn_url_tiles = '{{ site.geonode_url_tiles }}';
+    </script>
+    <script type="text/javascript" language="Javascript">
+        var buildBoundingBox = function(b)
+        {
+            var g = [0,0,0,0];
+            try{
+                g =
+                [
+                    parseFloat(parseFloat(b.children('westBoundLongitude').text()).toFixed(4)),
+                    parseFloat(parseFloat(b.children('southBoundLatitude').text()).toFixed(4)),
+                    parseFloat(parseFloat(b.children('eastBoundLongitude').text()).toFixed(4)),
+                    parseFloat(parseFloat(b.children('northBoundLatitude').text()).toFixed(4))
+                ];
+            }catch(err){g = [0,0,0,0];}
+            return g;
+        };
+        var ellipsis = function(text,len)
+        {
+            if(len==-1)
+                return text;
+            else
+                return (text.length>len)?(text.substring(0,len-3)+'...'):text;
+        };
+        var createLink = function(map, layer, label)
+        {
+            var link = document.createElement('a');
+            link.href = '#';
+            link.className = 'active';
+            link.innerHTML = label;
+            $(link).data('map', map)
+            $(link).data('layer', layer)
+            $(link).click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                var map = $(this).data('map');
+                var layer = $(this).data('layer');
+                if(map.hasLayer(layer))
+                {
+                    map.removeLayer(layer);
+                    this.className = ''
+                }
+                else
+                {
+                    map.addLayer(layer);
+                    this.className = 'active';
+                }
+            });
+            return link;
+        };
     </script>
   </head>
   <body>

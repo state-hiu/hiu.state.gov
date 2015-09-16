@@ -4,46 +4,19 @@ layout: map
 <nav id='menu-ui' class='menu-ui'></nav>
 <div id="map" style="top:0px;left:0px;width:100%;height:100%;"></div>
 <script>
-    var createLink = function(map, layer, label){
-        var link = document.createElement('a');
-        link.href = '#';
-        link.className = 'active';
-        link.innerHTML = label;
-        $(link).data('map', map)
-        $(link).data('layer', layer)
-        $(link).click(function(e){
-            e.preventDefault();
-            e.stopPropagation();
-            var map = $(this).data('map');
-            var layer = $(this).data('layer');
-            if(map.hasLayer(layer))
-            {
-                map.removeLayer(layer);
-                this.className = ''
-            }
-            else
-            {
-                map.addLayer(layer);
-                this.className = 'active';
-            }
-        });
-        return link;
-    };
     var layerswitcher = document.getElementById('menu-ui');
-
     var map = L.map('map').setView([0, 30], 3);
 
     // Imagery Basemap
-    //var url_imagery = 'https://api.mapbox.com/v4/hiu.nbk3c19e/{z}/{x}/{y}.png?access_token=' + accessToken;
     // Compositing imagery with LSIB boundaries on the fly.
     L.tileLayer(mb_url_tiles, {
-        'id': 'hiu.nbk3c19e,hiu.lp5bfbt9',
+        id: 'hiu.nbk3c19e,hiu.lp5bfbt9',
         attribution: ''
     }).addTo(map);
 
     /* LSIB Boundaries
-    var url_boundaries = 'http://geonode.state.gov/geoserver/gwc/service/tms/1.0.0/geonode%3AGlobal_LSIB_Lines_Simplified_2015Jan23_USG@EPSG%3A900913@png/{z}/{x}/{y}.png';
-    L.tileLayer(url_boundaries, {
+    L.tileLayer(gn_url_tiles, {
+      id: 'Global_LSIB_Lines_Simplified_2015Jan23_USG',
       tms: true,
       attribution: 'Names and boundary representation are not necessarily authoritative.'
     }).addTo(map);
@@ -59,8 +32,9 @@ layout: map
     countries.on('click', function (e) {
         if (e.data) {
             alert('click: ' + JSON.stringify(e.data));
+            console.log('click: ' + JSON.stringify(e.data));
         } else {
-            alert('click: nothing');
+            console.log('click: nothing');
         }
     });
     countries.addTo(map);
@@ -87,27 +61,6 @@ layout: map
             layerswitcher.appendChild(createLink(map, products, 'Products'));
         }
     });
-    var buildBoundingBox = function(b)
-    {
-        var g = [0,0,0,0];
-        try{
-            g =
-            [
-                parseFloat(parseFloat(b.children('westBoundLongitude').text()).toFixed(4)),
-                parseFloat(parseFloat(b.children('southBoundLatitude').text()).toFixed(4)),
-                parseFloat(parseFloat(b.children('eastBoundLongitude').text()).toFixed(4)),
-                parseFloat(parseFloat(b.children('northBoundLatitude').text()).toFixed(4))
-            ];
-        }catch(err){g = [0,0,0,0];}
-        return g;
-    };
-    var ellipsis = function(text,len)
-    {
-        if(len==-1)
-            return text;
-        else
-            return (text.length>len)?(text.substring(0,len-3)+'...'):text;
-    };
     // Data GeoJSON
     $.ajax({
         dataType: "xml",

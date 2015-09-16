@@ -19,6 +19,7 @@ debug_leaflet: true
 # GeoNode
 geonode_layers: "http://geonode.state.gov/layers"
 geonode_wms: "http://geonode.state.gov/cors/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities"
+geonode_url_tiles: "http://geonode.state.gov/geoserver/gwc/service/tms/1.0.0/geonode%3A{id}@EPSG%3A900913@png/{z}/{x}/{y}.png"
 
 # Document & Media Storage
 storage_thumbnails_products: "https://s3.amazonaws.com/hiu-thumbnails/products"
