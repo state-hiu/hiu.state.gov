@@ -41,7 +41,7 @@ layout: map
     //var url_imagery = 'https://api.mapbox.com/v4/hiu.nbk3c19e/{z}/{x}/{y}.png?access_token=' + accessToken;
     // Compositing imagery with LSIB boundaries on the fly.
     L.tileLayer(url_mapbox, {
-        'id': 'hiu.nbk3c19e,hiu.lp5bfbt9'
+        'id': 'hiu.nbk3c19e,hiu.lp5bfbt9',
         attribution: ''
     }).addTo(map);
 
@@ -57,7 +57,8 @@ layout: map
     // Resolution is server dependent.  MapBox.com uses resolution=4.
     var countries = new L.UtfGrid(url_mapbox_utfgrid, {
         id: 'hiu.lp5bfbt9',
-        resolution: 4
+        resolution: 4,
+        attribution: ''
     });
     countries.on('click', function (e) {
         if (e.data) {
