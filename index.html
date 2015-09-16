@@ -73,7 +73,9 @@ layout: map
                 onEachFeature: function(feature, layer) {
                     layer.on({
                         mouseover: highlightFeature,
-                        mouseout: function(e){layer.resetStyle(e.target);},
+                        mouseout: function(e){
+                            layer.resetStyle(e.target);
+                        },
                         click: function(e){openRegionPopup(map, feature, e.latlng);}
                     });
                     //layer.on('click', function (e) {
