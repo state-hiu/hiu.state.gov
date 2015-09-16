@@ -31,15 +31,15 @@ layout: map
     };
     var layerswitcher = document.getElementById('menu-ui');
 
-    var accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
-    var url_mapbox = 'https://api.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + accessToken
-    var url_mapbox_utfgrid = 'http://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.grid.json?callback={cb}&access_token='+ accessToken
+    var accessToken = '{{ site.mapbox_access_token }}';
+    var mb_url_tiles = '{{ site.mapbox_url_tiles }}' + accessToken
+    var mb_url_utfgrid = '{{ site.mapbox_url_utfgrid }}'+ accessToken
     var map = L.map('map').setView([0, 30], 3);
 
     // Imagery Basemap
     //var url_imagery = 'https://api.mapbox.com/v4/hiu.nbk3c19e/{z}/{x}/{y}.png?access_token=' + accessToken;
     // Compositing imagery with LSIB boundaries on the fly.
-    L.tileLayer(url_mapbox, {
+    L.tileLayer(mb_url_tiles, {
         'id': 'hiu.nbk3c19e,hiu.lp5bfbt9',
         attribution: ''
     }).addTo(map);
@@ -54,7 +54,7 @@ layout: map
 
     // LSIB Countries UTFGrid
     // Resolution is server dependent.  MapBox.com uses resolution=4.
-    var countries = new L.UtfGrid(url_mapbox_utfgrid, {
+    var countries = new L.UtfGrid(mb_url_utfgrid, {
         id: 'hiu.lp5bfbt9',
         resolution: 4,
         attribution: ''

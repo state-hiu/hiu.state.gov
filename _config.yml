@@ -12,7 +12,7 @@ destination: _site
 # Explicit excludes, including dotfiles to be safe
 exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
 
-# Integration
+# GeoNode
 geonode_layers: "http://geonode.state.gov/layers"
 geonode_wms: "http://geonode.state.gov/cors/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities"
 
@@ -20,3 +20,8 @@ geonode_wms: "http://geonode.state.gov/cors/geoserver/wms?SERVICE=WMS&REQUEST=Ge
 storage_thumbnails_products: "https://s3.amazonaws.com/hiu-thumbnails/products"
 storage_thumbnails_regions: "https://s3.amazonaws.com/hiu-thumbnails/regions"
 storage_products: "https://s3.amazonaws.com/hiu-products"
+
+# MapBox
+mapbox_access_token: "pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ"
+mapbox_url_tiles: "https://api.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token="
+mapbox_url_utfgrid: "http://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.grid.json?callback={cb}&access_token="
