@@ -54,7 +54,7 @@ layout: map
         success: function(response) {
             var regions = L.geoJson(response, {
                 onEachFeature: function(feature, layer) {
-                    regions.on('click', function (e) {
+                    layer.on('click', function (e) {
                         openRegionPopup(map, feature, e.latlng);
                     });
                 }
