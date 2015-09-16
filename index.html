@@ -39,6 +39,14 @@ layout: map
     });
     countries.addTo(map);
     */
+    var openRegionPopup function (m,f,latlng) {
+        var popupContent = '<h4><a href="{{ site.baseurl }}/regions/'+f.properties.id+'">'+site.regions[f.properties.id]+'</a></h4>';
+        var popup = new L.Popup({maxWidth: 200}, undefined);
+        popup.setLatLng(latlng);
+        popup.setContent(popupContent);
+        m.openPopup(popup);
+    });
+
     // Regions
     $.ajax({
         dataType: "json",
@@ -46,18 +54,13 @@ layout: map
         success: function(response) {
             var regions = L.geoJson(response, {
                 onEachFeature: function(feature, layer) {
+                    regions.on('click', function (e) {
+                        openRegionPopup(map, feature, e.latlng);
+                    });
                 }
             });
             regions.addTo(map);
             layerswitcher.appendChild(createLink(map, regions, 'Regions'));
-
-            regions.on('click', function (e) {
-                var popupContent = '<h4><a href="{{ site.baseurl }}/regions/'+feature.properties.id+'">'+site.regions[feature.properties.id]+'</a></h4>';
-                var popup = new L.Popup({maxWidth: 200}, undefined);
-                popup.setLatLng(e.latlng);
-                popup.setContent(popupContent);
-                map.openPopup(popup);
-            });
         }
     });
     // Products GeoJSON
