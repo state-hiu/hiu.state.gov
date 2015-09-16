@@ -39,7 +39,7 @@ layout: map
     });
     countries.addTo(map);
     */
-    var openRegionPopup function (m,f,latlng) {
+    var openRegionPopup = function (m,f,latlng) {
         var popupContent = '<h4><a href="{{ site.baseurl }}/regions/'+f.properties.id+'">'+site.regions[f.properties.id]+'</a></h4>';
         var popup = new L.Popup({maxWidth: 200}, undefined);
         popup.setLatLng(latlng);
