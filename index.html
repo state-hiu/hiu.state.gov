@@ -47,7 +47,7 @@ layout: map
             var regions = L.geoJson(response, {
                 onEachFeature: function(feature, layer) {
                     var popupOptions = {maxWidth: 200};
-                    var popupContent = '<h4><a href="{{ site.baseurl }}/regions/'+feature.properties.id+'">'+regions[feature.properties.id]+"</a></h4>';
+                    var popupContent = '<h4><a href="{{ site.baseurl }}/regions/'+feature.properties.id+'">'+regions[feature.properties.id]+'</a></h4>';
                     layer.bindPopup(popupContent, popupOptions);
                 }
             });
