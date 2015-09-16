@@ -39,6 +39,7 @@ layout: map
     });
     countries.addTo(map);
     */
+    // Regions
     var openRegionPopup = function (m,f,latlng) {
         var popupContent = '<h4><a href="{{ site.baseurl }}/regions/'+f.properties.id+'">'+site.regions[f.properties.id]+'</a></h4>';
         var popup = new L.Popup({maxWidth: 200}, undefined);
@@ -46,17 +47,38 @@ layout: map
         popup.setContent(popupContent);
         m.openPopup(popup);
     };
-
-    // Regions
+    var highlightFeature = function(e) {
+        var layer = e.target;
+        layer.setStyle({
+            weight: 5,
+            color: '#0000FF',
+            fillOpacity: 0.4
+            strokeOpacity: 0.8
+        });
+        if (!L.Browser.ie && !L.Browser.opera) {
+            layer.bringToFront();
+        }
+    };
+    var regions_style = {
+        "color": "#0000FF",
+        "fillOpacity": 0,
+        "strokeOpacity": 0.0
+    };
     $.ajax({
         dataType: "json",
         url: "{{ site.baseurl}}/localdata/Global_HIUWebsiteRegions_Version1.geojson",
         success: function(response) {
             var regions = L.geoJson(response, {
+                style: regions_style,
                 onEachFeature: function(feature, layer) {
-                    layer.on('click', function (e) {
-                        openRegionPopup(map, feature, e.latlng);
+                    layer.on({
+                        mouseover: highlightFeature,
+                        mouseout: function(e){layer.resetStyle(e.target);},
+                        click: function(e){openRegionPopup(map, feature, e.latlng);}
                     });
+                    //layer.on('click', function (e) {
+                    //    openRegionPopup(map, feature, e.latlng);
+                    //});
                 }
             });
             regions.addTo(map);
