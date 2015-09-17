@@ -23,7 +23,7 @@ layout: default
         "products": {{ site.categories.products | size }},
         "repos": {{ site.categories.repos | size }},
         "programs": {{ site.categories.programs | size }}
-    ],
+    },
     "geonode":
     {
         "layers":"{{ site.geonode_layers }}",
