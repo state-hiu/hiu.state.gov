@@ -16,10 +16,28 @@ layout: default
         {"id":"{{ r.id }}","title":"{{ r.title }}","description":"{{ r.description }}","url":"{{ r.refurl }}"}{% unless forloop.last %},{% endunless %}
         {% endfor %}
     ],
+    "count":
+    {
+        "regions": {{ site.categories.regions | size }},
+        "events": {{ site.categories.events | size }},
+        "products": {{ site.categories.products | size }},
+        "repos": {{ site.categories.repos | size }},
+        "programs": {{ site.categories.programs | size }}
+    ],
     "geonode":
     {
         "layers":"{{ site.geonode_layers }}",
         "wms":"{{ site.geonode_wms }}",
-        "tiles":"{{ site.genode_url_tiles }}"
+        "tiles":"{{ site.geonode_url_tiles }}"
+    }
+    "storage":
+    {
+        "products":"{{ site.storage_products }}",
+        "thumbnails_products":"{{ site.storage_thumbnails_products }}",
+    },
+    "apis":
+    {
+        "events":"{{ site.baseurl }}/events/events.json",
+        "products":"{{ site.baseurl }}/products/products.json"
     }
 }
