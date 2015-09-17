@@ -1,0 +1,22 @@
+{
+    "title": "{{ site.name }}",
+    "url": "{{ site.url }}",
+    "regions": 
+    {
+        {% for r in site.categories.regions %}
+        "{{ r.region_id }}":"{{ r.title }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    },
+    "repos":
+    [
+        {% for r in site.categories.repos %}
+        {"id":"{{ r.id }}","title":"{{ r.title }}","description":"{{ r.description }}","url":"{{ r.refurl }}"}{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ],
+    "geonode":
+    {
+        "layers":"{{ site.geonode_layers }}",
+        "wms":"{{ site.geonode_wms }}",
+        "tiles":"{{ site.genode_url_tiles }}"
+    }
+}
