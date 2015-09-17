@@ -33,7 +33,7 @@ layout: default
     "storage":
     {
         "products":"{{ site.storage_products }}",
-        "thumbnails_products":"{{ site.storage_thumbnails_products }}",
+        "thumbnails_products":"{{ site.storage_thumbnails_products }}"
     },
     "api":
     {
