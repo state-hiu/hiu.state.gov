@@ -18,7 +18,7 @@ The HIU is part of the Bureau of Intelligence and Research, U.S. Department of S
 
 ## Developer
 
-You can more about about our open source software, developer resources, APIs, and websites on our developer [here]({{ site.baseurl }}/programs).
+You can more about about our open source software, developer resources, APIs, and websites on our developer [here]({{ site.baseurl }}/developer).
 
 ## Science & Technology Programs
 
