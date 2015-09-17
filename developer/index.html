@@ -19,16 +19,11 @@ layout: wrapper_text
 {% endfor %}
 
 <h2>APIs</h2>
-HIU has a distributed infrastucture so there is no one domain for APIs.  GeoNode, a core part of HIU's infrastructure, supports 3 APIs: (1) CSW, (2) OGC, and (3) internal GeoNode API.  Each HIU instance of GeoNode can be interfaced using all of those APIs.
+You can learn more about our APIs, [here]({{ site.baseurl }}/apis).
 <br>
-If you are starting off, we'd suggest you take a look at State GeoNode's API (<a href="http://geonode.state.gov/about/api/">http://geonode.state.gov/about/api/</a>).
+<h2>Science and Technology (S&T) Programs</h2>
+You can learn more about our science and technology programs, such as [MapGive](http://mapgive.state.gov) and [Secondary Cities](http://secondarycities.state.gov), [here]({{ site.baseurl }}/programs).
 <br>
-
-<h2><a href="{{ site.baseurl}}/programs">Science and Technology (S&T) Programs</a></h2>
-{% for program in site.categories.programs reversed %}
-  {% include listitem_program.html %}
-{% endfor %}
-
 <h2><a href="{{ site.baseurl}}/websites">Websites</a></h2>
 {% for website in site.categories.websites reversed %}
   {% include listitem_website.html %}
