@@ -12,6 +12,13 @@ destination: _site
 # Explicit excludes, including dotfiles to be safe
 exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
 
+# Twitter
+twittercard_enabled: true
+twitter_site: "@StateHIU"
+
+# Open Graph
+opengraph_enabled: true
+
 # Testing
 debug_bootstrap: false
 debug_leaflet: true

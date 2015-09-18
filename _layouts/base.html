@@ -6,6 +6,11 @@ layout: default
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="google" content="notranslate" />
     <meta http-equiv="Content-Language" content="en_US" />
+    {% if site.twittercard_enabled == "true" %}
+      {% if page.category == "products" %}
+        {% include twittercard_product.html %}
+      {% endif %}
+    {% endif %}
     <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/favicon.ico" />
     <!-- CSS / External-->
     <!--<link href="{{ site.baseurl }}/lib/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
