@@ -6,8 +6,8 @@ layout: default
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="google" content="notranslate" />
     <meta http-equiv="Content-Language" content="en_US" />
-    {% if site.twittercard_enabled == "true" %}
-      {% if page.category == "products" %}
+    {% if site.twittercard_enabled == true %}
+      {% if page.categories contains "products" %}
         {% include twittercard_product.html %}
       {% endif %}
     {% endif %}
