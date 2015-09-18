@@ -11,6 +11,11 @@ layout: default
         {% include twittercard_product.html %}
       {% endif %}
     {% endif %}
+    {% if site.opengraph_enabled == true %}
+      {% if page.categories contains "products" %}
+        {% include opengraph_product.html %}
+      {% endif %}
+    {% endif %}
     <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/favicon.ico" />
     <!-- CSS / External-->
     <!--<link href="{{ site.baseurl }}/lib/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>

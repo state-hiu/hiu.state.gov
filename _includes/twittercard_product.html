@@ -3,5 +3,5 @@
 <!-- Twitter truncates twitter:title to 70 characters. -->
 <meta name="twitter:title" content="{{ page.title|truncatechars:70 }}" />
 <!-- Twitter truncates twitter:description at the word to 200 characters. -->
-<meta name="twitter:description" content="{{ page.description|truncatechars:200 }}" />
-<meta name="twitter:image" content="{{ page.thumbnail_150 }}" />
+<meta name="twitter:description" content="{{ page.content|truncatechars:200 }}" />
+<meta name="twitter:image" content="{{ site.storage_thumbnails_products }}/{{ page.thumbnail_150 }}" />
