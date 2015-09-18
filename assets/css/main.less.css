@@ -2,6 +2,11 @@
   font-family: "Trebuchet MS", Arial, sans-serif;
   font-size: 18px;
 }
+.logo-font {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 10px;
+  color: #ffffff;
+}
 .float-right {
   float: right;
 }
@@ -26,14 +31,14 @@
 .hiu-logo {
   display: inline-block;
   opacity: 1;
-  height: 45px;
+  height: 35px;
 }
 .navbar-brand {
   float: left;
-  padding: 4px 15px;
+  padding: 5px 9px 0px 13px;
   font-size: 18px;
   line-height: 20px;
-  height: 50px;
+  height: 42px;
 }
 .logo {
   background-image: url(../img/logo.png);
