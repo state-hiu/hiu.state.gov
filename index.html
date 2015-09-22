@@ -114,7 +114,7 @@ layout: map
     // Data GeoJSON
     $.ajax({
         dataType: "xml",
-        url: "{{ site.geonode_wms }}",
+        url: "{{ site.geonodes[0].wms }}",
         success: function(response) {
             console.log("Response:", response);
             var geonode_features = [];
@@ -164,7 +164,7 @@ layout: map
                 onEachFeature: function(feature, layer) {
                     var popupOptions = {maxWidth: 200};
                     //layer.setIcon(productIcon);
-                    var popupContent = '<h4 style="word-wrap:break-word;"><a href="{{ site.geonode_layers }}/'+feature.properties.name+'">'+feature.properties.title+"</a></h4><hr>Abstract<br>"+feature.properties.abstract;
+                    var popupContent = '<h4 style="word-wrap:break-word;"><a href="{{ site.geonodes[0].layers }}/'+feature.properties.name+'">'+feature.properties.title+"</a></h4><hr>Abstract<br>"+feature.properties.abstract;
                     layer.bindPopup(popupContent, popupOptions);
                 }
             });

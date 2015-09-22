@@ -51,7 +51,7 @@ layout: default
         var mb_access_token = '{{ site.mapbox_access_token }}';
         var mb_url_tiles = '{{ site.mapbox_url_tiles }}' + mb_access_token;
         var mb_url_utfgrid = '{{ site.mapbox_url_utfgrid }}'+ mb_access_token;
-        var gn_url_tiles = '{{ site.geonode_url_tiles }}';
+        var gn_url_tiles = '{{ site.geonodes[0].tiles }}';
     </script>
     <script type="text/javascript" language="Javascript">
         var site = 
