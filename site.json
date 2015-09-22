@@ -26,6 +26,7 @@ layout: default
     [
         {% for gn in site.geonodes %}
         {
+            "name":"{{ gn.name }}",
             "layers":"{{ gn.layers }}",
             "wms":"{{ gn.wms }}",
             "tiles":"{{ gn.tiles }}"

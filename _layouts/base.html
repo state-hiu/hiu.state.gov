@@ -9,11 +9,15 @@ layout: default
     {% if site.twittercard_enabled == true %}
       {% if page.categories contains "products" %}
         {% include twittercard_product.html %}
+      {% else %}
+        {% include twittercard_default.html %}
       {% endif %}
     {% endif %}
     {% if site.opengraph_enabled == true %}
       {% if page.categories contains "products" %}
         {% include opengraph_product.html %}
+      {% else %}
+        {% include opengraph_default.html %}
       {% endif %}
     {% endif %}
     <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/favicon.ico" />

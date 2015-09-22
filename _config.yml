@@ -1,4 +1,6 @@
 name: New hiu.state.gov
+description: "Main webstie of the U.S. Department of State, Humanitarian Information Unit"
+logo: "/assets/img/hiu_logo.png"
 markdown: redcarpet
 timezone: America/New_York
 permalink: none
