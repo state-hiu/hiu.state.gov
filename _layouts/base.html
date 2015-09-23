@@ -72,7 +72,7 @@ layout: default
         var tilelayers =
         [
                 {% for tilelayer in page.tilelayers %}
-                {"id":"{{ tilelayer.id }}"}{% unless forloop.last %},{% endunless %}
+                {"id":"{{ tilelayer.id }}","attribution":"{{ tilelayer.attribution }}"}{% unless forloop.last %},{% endunless %}
                 {% endfor %}
         ];
     </script>
