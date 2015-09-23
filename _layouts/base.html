@@ -71,7 +71,7 @@ layout: default
     <script type="text/javascript" language="Javascript">
         var tilelayers =
         [
-                {% for tilelayer in tilelayers %}
+                {% for tilelayer in page.tilelayers %}
                 {"id":"{{ tilelayer.id }}"}{% unless forloop.last %},{% endunless %}
                 {% endfor %}
         ];
