@@ -137,7 +137,7 @@ layerswitcher:
             geojsonLayers.push(products);
             geojsonLayers = sortLayers(geojsonLayers)
             updateRenderOrder(geojsonLayers);
-            layerswitcher.appendChild(createLink(map, products, 'Products'));
+            layerswitcher.append(createLink(map, products, 'Products', products.options.zIndex));
         }
     });
     // Data GeoJSON
