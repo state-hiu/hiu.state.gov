@@ -1,5 +1,8 @@
 ---
 layout: default
+
+dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','//mapgive.state.gov','//geonode.state.gov','//secondarycities.state.gov']
+
 ---
 <html>
   <head>
@@ -20,6 +23,10 @@ layout: default
         {% include opengraph_default.html %}
       {% endif %}
     {% endif %}
+    {% for dns in page.dns_prefetch %}
+    <link rel="dns-prefetch" href="{{ dns }}">
+    {% endif %}
+    <title>{{ page.title }}</title>
     <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/favicon.ico" />
     <!-- CSS / External-->
     <!--<link href="{{ site.baseurl }}/lib/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
@@ -125,6 +132,10 @@ layout: default
             return link;
         };
     </script>
+    <!--Digital Analytics Program roll-up, see https://analytics.usa.gov for data-->
+    {% if site.dap.enabled %}
+    <script id="_fed_an_ua_tag" src="{{ site.baseurl }}/lib/dap/1.02/Universal-Federated-Analytics-Min.1.0.js?agency={{ site.dap.agency }}&amp;subagency={{ site.dap.subagency }}"></script>
+    {% endif %}
   </head>
   <body>
     {{ content }}
