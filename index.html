@@ -7,15 +7,20 @@ tilelayers:
     type: "mapbox"
     attribution: "Names and boundary representation are not necessarily authoritative."
     description: "On the fly composite of MapBox satellite with LSIB boundaries"
-    zindex: 18
+    zIndex: 18
+
+layerswitcher:
+  
 
 ---
 <nav id='menu-ui' class='menu-ui'></nav>
 <div id="map" style="top:0px;left:0px;width:100%;height:100%;"></div>
 <script>
-    var layerswitcher = document.getElementById('menu-ui');
+    var layerswitcher = $('#menu-ui');
     var map = L.map('map').setView([0, 30], 3);
 
+    var geojsonLayers = []; // ordered by options.zIndex
+    ///////////////////////////////
     for(var i = 0; i < tilelayers.length; i++)
     {
         var tl = tilelayers[i];
@@ -36,14 +41,6 @@ tilelayers:
             }
         }catch(err){console.log("Could not add tilelayer "+i)};
     }
-
-    /* LSIB Boundaries
-    L.tileLayer(gn_url_tiles, {
-      id: 'Global_LSIB_Lines_Simplified_2015Jan23_USG',
-      tms: true,
-      attribution: 'Names and boundary representation are not necessarily authoritative.'
-    }).addTo(map);
-    */
 
     /* LSIB Countries UTFGrid
     // Resolution is server dependent.  MapBox.com uses resolution=4.
@@ -93,6 +90,7 @@ tilelayers:
         url: "{{ site.baseurl}}/localdata/Global_HIUWebsiteRegions_Version1.geojson",
         success: function(response) {
             regions = L.geoJson(response, {
+                zIndex: 98,
                 style: regions_style,
                 onEachFeature: function(feature, layer) {
                     layer.on({
@@ -108,7 +106,11 @@ tilelayers:
                 }
             });
             regions.addTo(map);
-            layerswitcher.appendChild(createLink(map, regions, 'Regions'));
+            geojsonLayers.push(regions);
+            geojsonLayers = sortLayers(geojsonLayers)
+            updateRenderOrder(geojsonLayers);
+            //layerswitcher.children().filter(function(){return $(this).data("zIndex") < regions.options.zIndex;});
+            layerswitcher.append(createLink(map, regions, 'Regions', regions.options.zIndex));
         }
     });
     // Products GeoJSON
@@ -123,6 +125,7 @@ tilelayers:
         url: "{{ site.baseurl}}/products/products.json",
         success: function(response) {
             var products = L.geoJson(response, {
+                zIndex: 99,
                 onEachFeature: function(feature, layer) {
                     var popupOptions = {maxWidth: 200};
                     //layer.setIcon(productIcon);
@@ -131,6 +134,9 @@ tilelayers:
                 }
             });
             products.addTo(map);
+            geojsonLayers.push(products);
+            geojsonLayers = sortLayers(geojsonLayers)
+            updateRenderOrder(geojsonLayers);
             layerswitcher.appendChild(createLink(map, products, 'Products'));
         }
     });
@@ -183,6 +189,7 @@ tilelayers:
                "opacity": 1.0
             };
             var datasets = L.geoJson(geonode_geojson, {
+                zIndex: 97,
                 style: geonode_style,
                 onEachFeature: function(feature, layer) {
                     var popupOptions = {maxWidth: 200};
@@ -192,6 +199,9 @@ tilelayers:
                 }
             });
             datasets.addTo(map);
+            geojsonLayers.push(datasets);
+            geojsonLayers = sortLayers(geojsonLayers)
+            updateRenderOrder(geojsonLayers);
             layerswitcher.appendChild(createLink(map, datasets, 'Datasets'));
         }
     });
@@ -200,6 +210,7 @@ tilelayers:
         url: "{{ site.baseurl}}/events/events.json",
         success: function(response) {
             var events = L.geoJson(response, {
+                zIndex: 100,
                 onEachFeature: function(feature, layer) {
                     var popupOptions = {maxWidth: 200};
                     //layer.setIcon(productIcon);
@@ -208,6 +219,9 @@ tilelayers:
                 }
             });
             events.addTo(map);
+            geojsonLayers.push(datasets);
+            geojsonLayers = sortLayers(geojsonLayers)
+            updateRenderOrder(geojsonLayers);
             layerswitcher.appendChild(createLink(map, events, 'Events'));
         }
     });

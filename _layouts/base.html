@@ -116,7 +116,7 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
             else
                 return (text.length>len)?(text.substring(0,len-3)+'...'):text;
         };
-        var createLink = function(map, layer, label)
+        var createLink = function(map, layer, label, zIndex)
         {
             var link = document.createElement('a');
             link.href = '#';
@@ -124,6 +124,7 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
             link.innerHTML = label;
             $(link).data('map', map)
             $(link).data('layer', layer)
+            $(link).data('zIndex', zIndex)
             $(link).click(function(e){
                 e.preventDefault();
                 e.stopPropagation();
@@ -142,6 +143,19 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
             });
             return link;
         };
+        var sortLayers = function(layers)
+        {
+            return layers.sort(function(a, b){
+                return a.options.zIndex - b.options.zIndex;
+            });
+        };
+        var updateRenderOrder = function(layers)
+        {
+            for(var i = 0; i < layers.length; i++)
+            {
+                layers[i].bringToFront();
+            }
+        }
     </script>
     <!--Digital Analytics Program roll-up, see https://analytics.usa.gov for data-->
     {% if site.dap.enabled == true %}
