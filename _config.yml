@@ -15,8 +15,12 @@ destination: _site
 exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
 
 # Analytics
+ga:
+  enabled: false
+  code: "UA-XXXXXX-1"
+
 dap:
-  enabled: true
+  enabled: false
   agency: DOS
   subagency: HIU
 
