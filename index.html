@@ -4,6 +4,7 @@ title: "HIU"
 
 tilelayers:
   - id: "hiu.nbk3c19e,hiu.lp5bfbt9"
+    type: "mapbox"
     attribution: "Names and boundary representation are not necessarily authoritative."
     description: "On the fly composite of MapBox satellite with LSIB boundaries"
     zindex: 18
@@ -17,11 +18,22 @@ tilelayers:
 
     for(var i = 0; i < tilelayers.length; i++)
     {
+        var tl = tilelayers[i];
         try{ 
-            L.tileLayer(mb_url_tiles, {
-                id: tilelayers[i].id,
-                attribution: tilelayers[i].attribution
-            }).addTo(map);
+            if(tl.type=="mapbox"||tl.type=="mb")
+            {
+                L.tileLayer(mb_url_tiles, {
+                    id: tl.id,
+                    attribution: tl.attribution
+                }).addTo(map);
+            }
+            else if(tl.type=="geonode"||tl.type=="gn")
+            {
+                L.tileLayer(site.geonodes[tl.geonode].tiles, {
+                    id: tl.id,
+                    attribution: tl.attribution
+                }).addTo(map);
+            }
         }catch(err){console.log("Could not add tilelayer "+i)};
     }
 

@@ -38,12 +38,14 @@ debug_leaflet: true
 # GeoNode
 # The first GeoNode is the primary one that is loaded on the homepage.
 geonodes:
-  - name: "State GeoNode"
+  - id: "state"
+    name: "State GeoNode"
     layers: "http://geonode.state.gov/layers"
     wms: "http://geonode.state.gov/cors/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities"
     tiles: "http://geonode.state.gov/geoserver/gwc/service/tms/1.0.0/geonode%3A{id}@EPSG%3A900913@png/{z}/{x}/{y}.png"
 
-  - name: "Cusco GeoNode"
+  - id: "cusco"
+    name: "Cusco GeoNode"
     layers: "http://cuscogeonode.state.gov/layers"
     wms: "http://cuscogeonode.state.gov/cors/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities"
     tiles: "http://cuscogeonode.state.gov/geoserver/gwc/service/tms/1.0.0/geonode%3A{id}@EPSG%3A900913@png/{z}/{x}/{y}.png"
