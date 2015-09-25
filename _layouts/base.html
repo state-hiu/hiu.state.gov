@@ -25,7 +25,7 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     {% endif %}
     {% for dns in page.dns_prefetch %}
     <link rel="dns-prefetch" href="{{ dns }}">
-    {% endif %}
+    {% endfor %}
     <title>{{ page.title }}</title>
     <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/favicon.ico" />
     <!-- CSS / External-->
