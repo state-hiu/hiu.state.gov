@@ -7032,7 +7032,7 @@ fieldset[disabled] .btn-danger.active {
 }
 .logo-font {
   font-family: "Trebuchet MS", Arial, sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   color: #ffffff;
 }
 .float-right {
@@ -7059,7 +7059,7 @@ fieldset[disabled] .btn-danger.active {
 .hiu-logo {
   display: inline-block;
   opacity: 1;
-  height: 35px;
+  height: 50px;
 }
 .navbar-brand {
   float: left;
@@ -7076,11 +7076,20 @@ fieldset[disabled] .btn-danger.active {
   height: 27px;
 }
 #mapgive-logo-padding {
-  padding-top: 10px;
+  padding-top: 15px;
 }
 .navbar-inverse {
   border-bottom: 2px #667764;
   border-style: solid;
+}
+.navbar {
+  min-height: 61px;
+}
+.navbar-right-text {
+  padding-top: 5px;
+}
+.sameline {
+  display: inline-block;
 }
 .clearfix:before,
 .clearfix:after,
