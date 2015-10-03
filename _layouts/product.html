@@ -24,6 +24,7 @@ layout: wrapper
         {% if related_product.id != primary_product.id %}
           {% if related_product.region_id == primary_product.region_id %}
             {% assign product = related_product %}
+            {% assign showProductTitle = true %}
             {% include listitem_related_product.html %}
           {% endif %}
         {% endif %}

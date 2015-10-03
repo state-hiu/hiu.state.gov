@@ -35,3 +35,41 @@
 .menu-ui a.active:hover {
   background:#3074a4;
   }
+
+.social {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .social {
+    margin: 70px 0 0;
+  }
+}
+
+.social li {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.social .share {
+  border-right: 1px solid #51504d;
+  padding-right: 10px;
+  width: auto;
+  height: auto;
+}
+
+.opera-mini .social .share,
+.no-svg .social .share,
+.svg .social .share {
+  background: none;
+}
+
+.social a {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
