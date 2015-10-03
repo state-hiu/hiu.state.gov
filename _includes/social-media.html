@@ -1,0 +1,19 @@
+<ul class="social">
+  <li class="share">Share</li>
+  <li class="mail">
+    <h6 class="sr-only">Email this page</h6>
+    <a href="mailto:?subject={{ page.emailSubject }}&amp;body={{ page.emailDescription }}%0D%0D{{ site.url }}{{ page.url }}" title="Share by Email"></a>
+  </li>
+  <li class="facebook">
+    <h6 class="sr-only">Share this page on Facebook</h6>
+    <a href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" title="Share on Facebook"></a>
+  </li>
+  <li class="twitter">
+    <h6 class="sr-only">Share this page on Twitter</h6>
+    <a href="https://twitter.com/intent/tweet?text={{ page.twitterDescription }}&url={{ site.url }}{{ page.url }}&hashtags={{ site.twitter_username }}" target="_blank" title="Share on Twitter"></a>
+  </li>
+  <li class="plus">
+    <h6 class="sr-only">Share this page on Google+</h6>
+    <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank" title="Share on Google Plus"></a>
+  </li>
+</ul>
