@@ -36,6 +36,10 @@
   background:#3074a4;
   }
 
+#hidden-sprite {
+  display: none;
+}
+
 .social {
   list-style-type: none;
   padding: 0;
@@ -72,4 +76,41 @@
   width: 20px;
   height: 20px;
   display: inline-block;
+}
+
+.svg .globe,
+.svg .marker,
+.svg .map,
+.svg .hot,
+.svg .dos,
+.svg .logo,
+.svg .play-button,
+.svg .steps .estimate .clock,
+.svg .social li {
+  background-image: url("assets/img/mapgive_sprite.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 366px 208px;
+}
+
+.svg .social .mail {
+  background-position: -256px -177px;
+  margin-top: 3px;
+}
+
+.svg .social .facebook {
+  background-position: -277px -177px;
+}
+
+.svg .social .twitter {
+  background-position: -298px -177px;
+  margin-top: 2px;
+}
+
+.svg #footer .twitter {
+  margin: 0;
+}
+
+.svg .social .plus {
+  background-position: -319px -177px;
 }
