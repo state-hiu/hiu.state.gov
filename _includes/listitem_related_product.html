@@ -1,11 +1,18 @@
 <div class="row" style="background:rgb(252, 252, 252);">
   <!--<div class="col-md-2"></div>-->
-    <div class="col-md-5">
-      <img src="{{ site.storage_thumbnails_products }}/{{ product.thumbnail_150 }}" width="150" height="150"/>
+    <div class="col-md-4">
+      {% if download == true %}
+      <a href="{{ site.storage_products }}/{{ product.pdf }}"><img src="{{ site.storage_thumbnails_products }}/{{ product.thumbnail_150 }}" width="150" height="150"/></a>
+      {% else %}
+      <a href="{{ site.baseurl }}{{ product.url }}"><img src="{{ site.storage_thumbnails_products }}/{{ product.thumbnail_150 }}" width="150" height="150"/></a>
+      {% endif %}
     </div>
-    <div class="col-md-7">
+    <div class="col-md-8">
+      {% if showProductTitle == false %}
+      {% else %}
       <a href="{{ site.baseurl }}{{ product.url }}">{{ product.title }}</a>
       <br>
+      {% endif %}
       <a href="{{ site.baseurl }}/regions/{{ product.region_id }}">{{ product.region_title }}</a> | {{ product.date_published | date: '%B %d, %Y' }}
       <br>
       <br>

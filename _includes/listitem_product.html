@@ -8,8 +8,11 @@
       {% endif %}
     </div>
     <div class="col-md-7">
+      {% if showProductTitle == false %}
+      {% else %}
       <a href="{{ site.baseurl }}{{ product.url }}">{{ product.title }}</a>
       <br>
+      {% endif %}
       <a href="{{ site.baseurl }}/regions/{{ product.region_id }}">{{ product.region_title }}</a> | {{ product.date_published | date: '%B %d, %Y' }}
       <br>
       <br>
