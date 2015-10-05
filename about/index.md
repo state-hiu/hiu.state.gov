@@ -1,7 +1,7 @@
 ---
 layout: wrapper_text
 ---
-# About
+# [About]({{ site.baseurl }}/about)
 
 ## Mission Statement
 
@@ -30,7 +30,7 @@ You can learn more about our science and technology programs, such as [MapGive](
 
 ## Careers
 
-If you are interested in a career or internship with HIU, please visit our [careers page]({{ site.baseurl }}/careers).
+If you are interested in a career or internship with HIU, please visit our [careers page]({{ site.baseurl }}/about/careers).
 
 ## Contact
 
