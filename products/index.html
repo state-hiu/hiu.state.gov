@@ -2,12 +2,18 @@
 layout: wrapper
 title: Products
 ---
+{% assign count_featured = 0 %}
+{% for product in site.categories.products %}
+  {% if product.featured == true %}
+    {% assign count_featured = count_featured | plus: 1 %}
+  {% endif %}
+{% endfor %}
 <div class="col-md-2">
 </div>
 <div class="col-md-8">
   <div><h2 class="page-title">{{ page.title }}</h2></div>
   <ul class="nav nav-tabs" style="padding: 10px 10px 0px 10px;">
-    <li class="active"><a href="#featured" data-toggle="tab">Featured</a></li>
+    <li class="active"><a href="#featured" data-toggle="tab">Featured ({{ count_featured }})</a></li>
     <li><a href="#all" data-toggle="tab">All ({{ site.categories.products | size }}) </a></li>
   </ul>
   <div class="tab-content" style="padding: 10px;">
