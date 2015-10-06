@@ -2,6 +2,14 @@
 layout: wrapper
 ---
 {% assign primary_product = page %}
+{% assign count_region = 0 %}
+{% for related_product in site.categories.products %}
+  {% if related_product.id != primary_product.id %}
+    {% if related_product.region_id == primary_product.region_id %}
+      {% assign count_region = count_region | plus: 1 %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 <div class="col-md-2">
 </div>
 <div class="col-md-8">
@@ -13,7 +21,7 @@ layout: wrapper
   <hr>
   <div><h4 class="page-title">Related Products & Data</h2></div>
   <ul class="nav nav-tabs" style="padding: 10px 10px 0px 10px;">
-    <li class="active"><a href="#related-products" data-toggle="tab">{{ product.region_title }} Products</a></li>
+    <li class="active"><a href="#related-products" data-toggle="tab">{{ product.region_title }} Products ({{ count_region }})</a></li>
     <li><a href="#related-data" data-toggle="tab">{{ product.region_title }} Data</a></li>
     <li><a href="#all" data-toggle="tab">All</a></li>
   </ul>
