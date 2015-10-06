@@ -1,0 +1,8 @@
+<script type="text/javascript" language="Javascript">
+    var tilelayers =
+    [
+            {% for tl in page.tilelayers %}
+            {"id":"{{ tl.id }}","type":"{{ tl.type }}","geonode":"{{ tl.geonode }}","attribution":"{{ tl.attribution }}"}{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+    ];
+</script>

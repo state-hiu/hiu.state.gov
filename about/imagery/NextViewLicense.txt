@@ -1,0 +1,82 @@
+NEXTVIEW IMAGERY END USER LICENSE AGREEMENT
+
+
+
+1.      Introduction.  This End User License Agreement ("EULA") 
+    is between DigitalGlobe, Inc., a Delaware Corporation 
+    ("DigitalGlobe" or "Seller") and National Geospatial-
+    Intelligence Agency ("NGA"), the purchaser of this EULA, 
+    which governs the use of the data products or documentation 
+    ("Products") accompanying this EULA in accordance with 
+    Contract NMA 301-03-3-0001 (the "Contract").
+
+2.     Applicability. This license applies to imagery and products 
+    licensed under the Contract, including data downlinked to 
+    domestic and foreign ground stations.
+
+3.     License Granted and Permitted Uses.  
+
+a.     General Terms
+
+1.      This clause applies to all unprocessed sensor data and 
+    requirements-compliant processed imagery, imagery services, 
+    imagery-derived    products and imagery support data licensed 
+    under this Contract. No other clauses related to 
+    intellectual property or data rights of any sort shall 
+    have any effect related to the unprocessed sensor data and 
+    requirements-compliant processed imagery, imagery services, 
+    imagery-derived products and imagery support data delivered 
+    under this Contract.
+
+2.      All license rights for use of the unprocessed sensor data 
+    and requirements-compliant processed imagery, imagery 
+    services, imagery-derived products and imagery support 
+    data provided to the U.S. Government purchased under this 
+    NGA contract are in perpetuity. 
+
+3.      Licensed users may generate an unlimited number of 
+    hardcopies and softcopies of the unprocessed sensor data 
+    and requirements-compliant processed imagery, imagery 
+    services, imagery-derived products and imagery support 
+    data for their use.
+
+4.     (i)     Licensed users may generate any derived 
+        product from the licensed unprocessed sensor 
+        data; and requirements-compliant processed 
+        imagery, imagery services, imagery-derived 
+        products and imagery support data.
+
+    (ii)     Unprocessed sensor data and requirements-compliant 
+        processed imagery, imagery services, imagery-derived 
+        products and imagery support data licensed under this 
+        NGA contract have no restrictions on use and 
+        distribution, but shall contain the copyright markings.
+
+b.     Licensed Users
+
+1.      The imagery may be used by the U.S. Government (including, 
+    all branches,departments, agencies, and offices).  
+
+
+
+2.      The U.S. Government may provide the imagery to the following 
+    organizations: 
+    State Governments
+    Local Governments
+    Foreign Governments and inter-governmental organizations
+    NGO's and other non-profit organizations
+    
+3.      In consideration for the flexibility afforded to the U.S. 
+    Government by allowing unprocessed sensor data and 
+    requirements-compliant processed imagery, imagery services, 
+    imagery-derived products and imagery support data to be 
+    shared, the United States Government shall use its reasonable 
+    best efforts to minimize the effects on commercial sales.  
+    Acquisition and dissemination of imagery and imagery products 
+    collected within the United States shall be restricted in 
+    accordance with law and regulation.
+
+
+DigitalGlobe, Inc.  
+NextView EULA_5749 Rev 1.0 
+08/10/05

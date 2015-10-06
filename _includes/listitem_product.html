@@ -2,9 +2,9 @@
   <!--<div class="col-md-2"></div>-->
     <div class="col-md-5">
       {% if download == true %}
-      <a href="{{ site.storage_products }}/{{ product.pdf }}"><img src="{{ site.storage_thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300"/></a>
+      <a href="{{ site.storage.products }}/{{ product.pdf }}"><img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300"/></a>
       {% else %}
-      <a href="{{ site.baseurl }}{{ product.url }}"><img src="{{ site.storage_thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300"/></a>
+      <a href="{{ site.baseurl }}{{ product.url }}"><img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300"/></a>
       {% endif %}
     </div>
     <div class="col-md-7">
@@ -17,7 +17,7 @@
       <br>
       {{ product.content }}
       <br>
-      <a href="{{ site.storage_products }}/{{ product.pdf }}">Download</a>
+      <a href="{{ site.storage.products }}/{{ product.pdf }}">Download</a>
     </div>
   <!--<div class="col-md-2"></div>-->
 </div>
