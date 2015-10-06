@@ -33,11 +33,19 @@ twittercard:
 opengraph:
   enabled: true
 
-# Testing
+# Debugging & Testing
 debug:
   angular: false
   bootstrap: false
+  jquery: false
   leaflet: true
+
+# Dependencies Management
+deps:
+  angular:
+    version: "1.4.0-beta.4"
+  jquery:
+    version: "1.9.1"
 
 # GeoNode
 # The first GeoNode is the primary one that is loaded on the homepage.
@@ -45,12 +53,14 @@ geonodes:
   - id: "state"
     name: "State GeoNode"
     layers: "http://geonode.state.gov/layers"
+    csw: "http://geonode.state.gov/catalogue/csw?request=GetRecords&service=CSW&version=2.0.2&resultType=results&maxRecords=1000&elementsetname=full&typenames=csw:Record&outputschema=http://www.isotc211.org/2005/gmd"
     wms: "http://geonode.state.gov/cors/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities"
     tiles: "http://geonode.state.gov/geoserver/gwc/service/tms/1.0.0/geonode%3A{id}@EPSG%3A900913@png/{z}/{x}/{y}.png"
 
   - id: "cusco"
     name: "Cusco GeoNode"
     layers: "http://cuscogeonode.state.gov/layers"
+    csw: "http://cuscogeonode.state.gov/catalogue/csw?request=GetRecords&service=CSW&version=2.0.2&resultType=results&maxRecords=1000&elementsetname=full&typenames=csw:Record&outputschema=http://www.isotc211.org/2005/gmd"
     wms: "http://cuscogeonode.state.gov/cors/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities"
     tiles: "http://cuscogeonode.state.gov/geoserver/gwc/service/tms/1.0.0/geonode%3A{id}@EPSG%3A900913@png/{z}/{x}/{y}.png"
 

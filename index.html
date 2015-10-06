@@ -143,12 +143,14 @@ layerswitcher:
     // Data GeoJSON
     $.ajax({
         dataType: "xml",
-        url: "{{ site.geonodes[0].wms }}",
+        url: "{{ site.geonodes[0].csw }}",
         success: function(response) {
             console.log("Response:", response);
             var geonode_features = [];
-            var geonode_layers = $(response).find('Layer').each(function(){
-                var b = $(this).children('EX_GeographicBoundingBox:first');
+            var geonode_layers = $(response).find('csw:SearchResults').children('gmd:MD_Metadata').each(function(){
+                var i = $(this).children("gmd:identificationInfo").children("gmd:MD_DataIdentification");
+                var distro = $(this).children("gmd:distributionInfo").children("gmd:MD_Distribution");
+                var b = i.find('EX_GeographicBoundingBox:first');
                 if(b.length > 0)
                 {
                     var g = buildBoundingBox(b);
@@ -158,8 +160,10 @@ layerswitcher:
                         "properties":
                         {
                             "name": $(this).children('Name').text(),
-                            "title": $(this).children('Title').text(),
-                            "abstract": ellipsis($(this).children('Abstract').text().replace('\n',''), 100)
+                            "title": i.find('gmd:title gco:CharacterString').text(),
+                            "date": i.find('gmd:date gco:DateTime').text(),
+                            "abstract": ellipsis(i.find('gmd:abstract gco:CharacterString').text().replace('\n',''), 100)
+                            "url": distro.find('gmd:onLine').has('gmd:protocol gco:CharacterString').contains('WWW:LINK-1.0-http--link').find('gmd:URL').text()
                         },
                         "geometry":
                         {
