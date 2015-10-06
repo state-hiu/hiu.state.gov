@@ -147,9 +147,9 @@ layerswitcher:
         success: function(response) {
             console.log("Response:", response);
             var geonode_features = [];
-            var geonode_layers = $(response).find('[nodeName=csw:SearchResults]').children('[nodeName=gmd:MD_Metadata]').each(function(){
-                var i = $(this).children("[nodeName=gmd:identificationInfo]").children("[nodeName=gmd:MD_DataIdentification]");
-                var distro = $(this).children("[nodeName=gmd:distributionInfo]").children("[nodeName=gmd:MD_Distribution]");
+            var geonode_layers = $(response).find('SearchResults').children('MD_Metadata').each(function(){
+                var i = $(this).children("identificationInfo").children("MD_DataIdentification");
+                var distro = $(this).children("distributionInfo").children("MD_Distribution");
                 var b = i.find('EX_GeographicBoundingBox:first');
                 if(b.length > 0)
                 {
@@ -160,10 +160,10 @@ layerswitcher:
                         "properties":
                         {
                             "name": $(this).children('Name').text(),
-                            "title": i.find('[nodeName=gmd:title] [nodeName=gco:CharacterString]').text(),
-                            "date": i.find('[nodeName=gmd:date] [nodeName=gco:DateTime]').text(),
-                            "abstract": ellipsis(i.find('[nodeName=gmd:abstract] [nodeName=gco:CharacterString]').text().replace('\n',''), 100),
-                            "url": distro.find('[nodeName=gmd:onLine]').has('[nodeName=gmd:protocol] [nodeName=gco:CharacterString]').contains('WWW:LINK-1.0-http--link').find('[nodeName=gmd:URL]').text()
+                            "title": i.find('title CharacterString').text(),
+                            "date": i.find('date DateTime').text(),
+                            "abstract": ellipsis(i.find('abstract CharacterString').text().replace('\n',''), 100),
+                            "url": distro.find('onLine').has('protocol CharacterString').contains('WWW:LINK-1.0-http--link').find('URL').text()
                         },
                         "geometry":
                         {
