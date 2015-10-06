@@ -162,7 +162,7 @@ layerswitcher:
                             "name": $(this).children('Name').text(),
                             "title": i.find('gmd:title gco:CharacterString').text(),
                             "date": i.find('gmd:date gco:DateTime').text(),
-                            "abstract": ellipsis(i.find('gmd:abstract gco:CharacterString').text().replace('\n',''), 100)
+                            "abstract": ellipsis(i.find('gmd:abstract gco:CharacterString').text().replace('\n',''), 100),
                             "url": distro.find('gmd:onLine').has('gmd:protocol gco:CharacterString').contains('WWW:LINK-1.0-http--link').find('gmd:URL').text()
                         },
                         "geometry":
@@ -198,7 +198,7 @@ layerswitcher:
                 onEachFeature: function(feature, layer) {
                     var popupOptions = {maxWidth: 200};
                     //layer.setIcon(productIcon);
-                    var popupContent = '<h4 style="word-wrap:break-word;"><a href="{{ site.geonodes[0].layers }}/'+feature.properties.name+'">'+feature.properties.title+"</a></h4><hr>Abstract<br>"+feature.properties.abstract;
+                    var popupContent = '<h4 style="word-wrap:break-word;"><a href="'+feature.properties.url+'">'+feature.properties.title+"</a></h4><hr>Abstract<br>"+feature.properties.abstract;
                     layer.bindPopup(popupContent, popupOptions);
                 }
             });
