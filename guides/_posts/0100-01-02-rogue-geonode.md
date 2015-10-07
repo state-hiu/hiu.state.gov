@@ -9,7 +9,7 @@ keywords:
 ---
 # [CyberGIS Guides]({{ site.baseurl }}/guides) / [{{ page.title }} ({{ page.version }})]({{ site.baseurl }}{{ page.url }})
 
-## Descriptions
+## Description
 
 This guide provides instructions for installing and managing a ROGUE GeoNode instance in a production environment.  You can find information about installing a vanilla GeoNode without the advanced data editing and sharing technology at [http://geonode.org/](http://geonode.org/).  You can find more information about ROGUE below and at [http://geoshape.org/](http://geoshape.org/).  Use the directions found at [http://geoshape.org/](http://geoshape.org/) for deploying a ROGUE GeoNode in a development environment.
 
