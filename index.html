@@ -160,10 +160,10 @@ layerswitcher:
                         "properties":
                         {
                             "name": $(this).find('Name').text(),
-                            "title": i.find('title CharacterString').text(),
-                            "date": i.find('date DateTime').text(),
-                            "abstract": ellipsis(i.find('abstract CharacterString').text().replace('\n',''), 100),
-                            "url": distro.find('onLine').has('protocol CharacterString').contains('WWW:LINK-1.0-http--link').find('URL').text()
+                            "title": i.find('title').find('CharacterString').text(),
+                            "date": i.find('date').find('DateTime').text(),
+                            "abstract": ellipsis(i.find('abstract').find('CharacterString').text().replace('\n',''), 100),
+                            "url": distro.find('onLine').filter(function(){return $(this).find('protocol').find('CharacterString').text()=="WWW:LINK-1.0-http--link"}).find('URL').text()
                         },
                         "geometry":
                         {
