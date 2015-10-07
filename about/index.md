@@ -20,6 +20,10 @@ The HIU is part of the Bureau of Intelligence and Research, U.S. Department of S
 
 For commercial satellite imagery requests, see [Imagery]({{ site.baseurl }}/about/imagery).
 
+## Guides
+
+We've also published some open guides at [Guides]({{ site.baseurl }}/guides).
+
 ## Developer
 
 You can more about about our open source software, developer resources, APIs, and websites on our developer [here]({{ site.baseurl }}/developer).

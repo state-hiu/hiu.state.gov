@@ -1,0 +1,23 @@
+<div class="row" style="background:rgb(252, 252, 252); margin-bottom: 15px;">
+  <!--<div class="col-md-2"></div>-->
+    <div class="col-md-5">
+      {% if guide.thumbnail_300 %}
+      <a href="{{ site.baseurl }}{{ guide.url }}"><img src="{{ site.storage.thumbnails_guides }}/{{ guide.thumbnail_300 }}" width="300" height="300"/></a>
+      {% endif %}
+    </div>
+    <div class="col-md-7">
+      {% if showGuideTitle == false %}
+      {% else %}
+      <a href="{{ site.baseurl }}{{ guide.url }}"><h4>{{ guide.title }}</h4></a>
+      {% endif %}
+      {{ guide.date_published | date: '%B %d, %Y' }}
+      <br>
+      <br>
+      {% if guide.description %}
+      {{ guide.description | markdownify }}
+      {% endif %}
+      <br>
+      <a href="{{ site.baseurl }}{{ guide.url }}">View</a>
+    </div>
+  <!--<div class="col-md-2"></div>-->
+</div>
