@@ -14,7 +14,7 @@
       <br>
       <br>
       {% if guide.description %}
-      {{ guide.description }}
+      {{ guide.description | markdownify }}
       {% endif %}
       <br>
       <a href="{{ site.baseurl }}{{ guide.url }}">View</a>
