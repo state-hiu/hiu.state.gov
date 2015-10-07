@@ -142,7 +142,7 @@ layerswitcher:
     });
     // Data GeoJSON
     $.ajax({
-        dataType: "xml",
+        dataType: "json",
         url: "{{ site.geonodes[0].csw.json }}",
         success: function(response) {
             console.log("Response:", response);
