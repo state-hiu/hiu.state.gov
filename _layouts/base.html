@@ -81,10 +81,10 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
             try{
                 g =
                 [
-                    parseFloat(parseFloat(b.children('westBoundLongitude').text()).toFixed(4)),
-                    parseFloat(parseFloat(b.children('southBoundLatitude').text()).toFixed(4)),
-                    parseFloat(parseFloat(b.children('eastBoundLongitude').text()).toFixed(4)),
-                    parseFloat(parseFloat(b.children('northBoundLatitude').text()).toFixed(4))
+                    parseFloat(parseFloat(b.find('westBoundLongitude').text().trim()).toFixed(4)),
+                    parseFloat(parseFloat(b.find('southBoundLatitude').text().trim()).toFixed(4)),
+                    parseFloat(parseFloat(b.find('eastBoundLongitude').text().trim()).toFixed(4)),
+                    parseFloat(parseFloat(b.find('northBoundLatitude').text().trim()).toFixed(4))
                 ];
             }catch(err){g = [0,0,0,0];}
             return g;
