@@ -53,14 +53,18 @@ geonodes:
   - id: "state"
     name: "State GeoNode"
     layers: "http://geonode.state.gov/layers"
-    csw: "http://geonode.state.gov/catalogue/csw?request=GetRecords&service=CSW&version=2.0.2&resultType=results&maxRecords=1000&elementsetname=full&typenames=csw:Record&outputschema=http://www.isotc211.org/2005/gmd"
+    csw:
+      xml: "http://geonode.state.gov/catalogue/csw?request=GetRecords&service=CSW&version=2.0.2&resultType=results&maxRecords=1000&elementsetname=full&typenames=csw:Record&outputschema=http://www.isotc211.org/2005/gmd"
+      json: "http://geonode.state.gov/catalogue/csw?request=GetRecords&service=CSW&version=2.0.2&resultType=results&maxRecords=1000&elementsetname=full&typenames=csw:Record&outputschema=http://www.isotc211.org/2005/gmd&outputFormat=application/json"
     wms: "http://geonode.state.gov/cors/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities"
     tiles: "http://geonode.state.gov/geoserver/gwc/service/tms/1.0.0/geonode%3A{id}@EPSG%3A900913@png/{z}/{x}/{y}.png"
 
   - id: "cusco"
     name: "Cusco GeoNode"
     layers: "http://cuscogeonode.state.gov/layers"
-    csw: "http://cuscogeonode.state.gov/catalogue/csw?request=GetRecords&service=CSW&version=2.0.2&resultType=results&maxRecords=1000&elementsetname=full&typenames=csw:Record&outputschema=http://www.isotc211.org/2005/gmd"
+    csw:
+      xml: "http://cuscogeonode.state.gov/catalogue/csw?request=GetRecords&service=CSW&version=2.0.2&resultType=results&maxRecords=1000&elementsetname=full&typenames=csw:Record&outputschema=http://www.isotc211.org/2005/gmd"
+      json: "http://cuscogeonode.state.gov/catalogue/csw?request=GetRecords&service=CSW&version=2.0.2&resultType=results&maxRecords=1000&elementsetname=full&typenames=csw:Record&outputschema=http://www.isotc211.org/2005/gmd&outputFormat=application/json"
     wms: "http://cuscogeonode.state.gov/cors/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities"
     tiles: "http://cuscogeonode.state.gov/geoserver/gwc/service/tms/1.0.0/geonode%3A{id}@EPSG%3A900913@png/{z}/{x}/{y}.png"
 

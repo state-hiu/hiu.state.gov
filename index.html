@@ -143,11 +143,11 @@ layerswitcher:
     // Data GeoJSON
     $.ajax({
         dataType: "xml",
-        url: "{{ site.geonodes[0].csw }}",
+        url: "{{ site.geonodes[0].csw.json }}",
         success: function(response) {
             console.log("Response:", response);
             var geonode_features = [];
-            var geonode_layers = $(response).find('SearchResults').children('MD_Metadata').each(function(){
+            var geonode_layers = $(response).find("[tag='SearchResults']").children('MD_Metadata').each(function(){
                 var i = $(this).children("identificationInfo").children("MD_DataIdentification");
                 var distro = $(this).children("distributionInfo").children("MD_Distribution");
                 var b = i.find('EX_GeographicBoundingBox:first');
