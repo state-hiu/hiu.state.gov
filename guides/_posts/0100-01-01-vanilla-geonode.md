@@ -1,13 +1,13 @@
 ---
 layout: wrapper_text
 category: guides
-title: "Vanilla GeoNode Guide, Version 1.0"
+title: "Vanilla GeoNode"
 version: 1.0
 date_published: 2015-10-07
 featured: true
 keywords:
 ---
-# Vanilla GeoNode Guide, Version 1.0
+# [CyberGIS Guides]({{ site.baseurl }}/guides) / [{{ page.title }} ({{ page.version }})]({{ page. url}})
 
 ## Description
 
