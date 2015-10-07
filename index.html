@@ -142,14 +142,14 @@ layerswitcher:
     });
     // Data GeoJSON
     $.ajax({
-        dataType: "json",
-        url: "{{ site.geonodes[0].csw.json }}",
+        dataType: "xml",
+        url: "{{ site.geonodes[0].csw.xml }}",
         success: function(response) {
             console.log("Response:", response);
             var geonode_features = [];
-            var geonode_layers = $(response).find("[tag='SearchResults']").children('MD_Metadata').each(function(){
-                var i = $(this).children("identificationInfo").children("MD_DataIdentification");
-                var distro = $(this).children("distributionInfo").children("MD_Distribution");
+            var geonode_layers = $(response).find("SearchResults").find('MD_Metadata').each(function(){
+                var i = $(this).find("identificationInfo").find("MD_DataIdentification");
+                var distro = $(this).find("distributionInfo").find("MD_Distribution");
                 var b = i.find('EX_GeographicBoundingBox:first');
                 if(b.length > 0)
                 {
@@ -159,7 +159,7 @@ layerswitcher:
                         "type": "Feature",
                         "properties":
                         {
-                            "name": $(this).children('Name').text(),
+                            "name": $(this).find('Name').text(),
                             "title": i.find('title CharacterString').text(),
                             "date": i.find('date DateTime').text(),
                             "abstract": ellipsis(i.find('abstract CharacterString').text().replace('\n',''), 100),
