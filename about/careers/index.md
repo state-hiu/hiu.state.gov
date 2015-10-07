@@ -6,7 +6,9 @@ title: "Careers"
 
 For general job opportunities, consult the USA Jobs website [http://usajobs.gov/](http://usajobs.gov).
 
-The Humanitarian Information Unit also participates in a variety of other internship and fellowship programs that may interest you.
+For non-USG jobs in the humanitarian space, check out the United Nation's ReliefWeb Jobs site at [http://reliefweb.int/jobs](http://reliefweb.int/jobs).
+
+The Humanitarian Information Unit also participates in a variety of other internship and fellowship programs as follow that may interest you.
 
 ## Student Internship
 
