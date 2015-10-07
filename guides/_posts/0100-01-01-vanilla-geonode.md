@@ -2,6 +2,7 @@
 layout: guide
 category: guides
 title: "Vanilla GeoNode"
+description: "This guide provides instructions for installing and managing a vanilla GeoNode instance in a production environment.  You can find basic information about installing a vanilla GeoNode at [http://geonode.org/](http://geonode.org/).  Use the ROGUE GeoNode guide for deployment of a Rogue GeoNode in a production environment [https://github.com/state-hiu/cybergis-guides/blob/master/1.0/cybergis-guides-roguegeonode-1.0.md](https://github.com/state-hiu/cybergis-guides/blob/master/1.0/cybergis-guides-roguegeonode-1.0.md)."
 version: 1.0
 date_published: 2015-10-07
 featured: true
