@@ -13,7 +13,9 @@
       {{ guide.date_published | date: '%B %d, %Y' }}
       <br>
       <br>
-      {{ guide.content }}
+      {% if guide.description %}
+      {{ guide.description }}
+      {% endif %}
       <br>
       <a href="{{ site.baseurl }}{{ guide.url }}">View</a>
     </div>
