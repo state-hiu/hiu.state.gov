@@ -1,5 +1,5 @@
 ---
-layout: guide
+layout: wrapper_text
 category: guides
 title: "Vanilla GeoNode Guide, Version 1.0"
 version: 1.0
