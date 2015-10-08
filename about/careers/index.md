@@ -22,15 +22,15 @@ The Humanitarian Information Unit's [MapGive Team](http://mapgive.state.gov) acc
 
 ## Jefferson Science Fellowship
 
-http://sites.nationalacademies.org/PGA/Jefferson/
+[http://sites.nationalacademies.org/PGA/Jefferson/](http://sites.nationalacademies.org/PGA/Jefferson/)
 
 ## AAAS Fellowship
 
-http://www.aaas.org/general-process
+[http://www.aaas.org/general-process](http://www.aaas.org/general-process)
 
 ## Presidential Innovation Fellows
 
-https://www.whitehouse.gov/innovationfellows
+[https://www.whitehouse.gov/innovationfellows](https://www.whitehouse.gov/innovationfellows)
 
 ## Contact
 
