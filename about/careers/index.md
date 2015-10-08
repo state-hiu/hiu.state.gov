@@ -4,11 +4,13 @@ title: "Careers"
 ---
 # [About]({{ site.baseurl }}/about) / [Careers]({{ site.baseurl }}/about/careers)
 
-For general job opportunities, consult the USA Jobs website [http://usajobs.gov/](http://usajobs.gov).
+For general job opportunities, consult the USA Jobs website [http://usajobs.gov/](http://usajobs.gov).  The Humanitarian Information Unit (HIU) has a staff of cartographers, geographers, analysts, and web GIS developers.
 
-For non-USG jobs in the humanitarian space, check out the United Nation's ReliefWeb Jobs site at [http://reliefweb.int/jobs](http://reliefweb.int/jobs).
+HIU also typically has a State Department Foreign Service Officer on its staff; for information on Foreign Service careers, please visit [http://careers.state.gov/work/foreign-service/officer](http://careers.state.gov/work/foreign-service/officer).
 
 The Humanitarian Information Unit also participates in a variety of other internship and fellowship programs as follow that may interest you.
+
+For non-USG jobs in the humanitarian space, check out the United Nation's ReliefWeb Jobs site at [http://reliefweb.int/jobs](http://reliefweb.int/jobs).
 
 ## Student Internship
 
@@ -18,22 +20,18 @@ If you are interested in possible student internships with the Humanitarian Info
 
 The Humanitarian Information Unit's [MapGive Team](http://mapgive.state.gov) accepts a few [Virtual Student Foreign Service](http://www.state.gov/vsfs/) interns each semester.  If interested, email MapGive at [mapgive@state.gov](mailto:mapgive@state.gov?subject=VSFS+Internship).
 
-## Presidential Innovation Fellows
-
-Lastly, the Humanitarian Information Unit has also housed a [Presidential Innovation Fellow](https://www.whitehouse.gov/innovationfellows).  However, we do not have an open position at this time.
-
 ## Jefferson Science Fellowship
-
-TBD
 
 http://sites.nationalacademies.org/PGA/Jefferson/
 
 ## AAAS Fellowship
 
-TBD
-
 http://www.aaas.org/general-process
+
+## Presidential Innovation Fellows
+
+https://www.whitehouse.gov/innovationfellows
 
 ## Contact
 
-If you have any questions about opportunities at HIU not answered from the above links, please contact us at **[HIU_INFO@state.gov](mailto:HIU_INFO@state.gov)**.
+If you have any questions about opportunities at HIU not answered from the above links, please contact us at **[HIU_INFO@state.gov](mailto:HIU_INFO@state.gov?subject=HIU+Careers)**.
