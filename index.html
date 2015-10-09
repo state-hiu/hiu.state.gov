@@ -151,7 +151,8 @@ layerswitcher:
                 var i = $(this).find("identificationInfo").find("MD_DataIdentification");
                 var distro = $(this).find("distributionInfo").find("MD_Distribution");
                 var b = i.find('EX_GeographicBoundingBox:first');
-                if(b.length > 0)
+                var u = distro.find('onLine').filter(function(){return $(this).find('protocol').find('CharacterString').text()=="WWW:LINK-1.0-http--link"}).find('URL').text();
+                if(u.startswith("{{ site.geonodes[0].layers}}") && b.length > 0)
                 {
                     var g = buildBoundingBox(b);
                     var f =
@@ -163,7 +164,7 @@ layerswitcher:
                             "title": i.find('title').find('CharacterString').text(),
                             "date": i.find('date').find('DateTime').text(),
                             "abstract": ellipsis(i.find('abstract').find('CharacterString').text().replace('\n',''), 100),
-                            "url": distro.find('onLine').filter(function(){return $(this).find('protocol').find('CharacterString').text()=="WWW:LINK-1.0-http--link"}).find('URL').text()
+                            "url": u
                         },
                         "geometry":
                         {
