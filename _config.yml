@@ -4,12 +4,12 @@ logo: "/assets/img/hiu_logo.png"
 markdown: redcarpet
 timezone: America/New_York
 permalink: none
-baseurl: 
-url: http://localhost:8000
-destination: /var/www
-#baseurl: /hiu.state.gov
-#url: http://state-hiu.github.io/hiu.state.gov
-#destination: _site
+#baseurl: 
+#url: http://localhost:8000
+#destination: /var/www
+baseurl: /hiu.state.gov
+url: http://state-hiu.github.io/hiu.state.gov
+destination: _site
 
 # Explicit excludes, including dotfiles to be safe
 exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
