@@ -71,7 +71,17 @@ gulp.task('clean', function () {
 });
 
 gulp.task('test', function(){
-  // gulp.src(scriptFiles).pipe(jshint());
+    var scripts =
+    [
+        "./src/js/main/*.js",
+        "./src/css/main/*.css"
+    ];
+    for(var i = 0; i < scripts.length; i++)
+    {
+        gulp.src(scripts[i])
+            .pipe(jshint()).
+            pipe(jshint.reporter('default'));
+    }
 });
 
-gulp.task('default', ['clean','copy','compile']);
+gulp.task('default', ['clean', 'copy','compile']);

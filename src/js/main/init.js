@@ -1,4 +1,4 @@
-var init_main = function(appName, prefixFilter)
+/*var init_main = function(appName, prefixFilter)
 {
     var mainApp = angular.module(appName, []);
     $('.site-controller').each(function({
@@ -14,6 +14,7 @@ var init_main = function(appName, prefixFilter)
     angular.bootstrap(document, [appName]);
 };
 
+
 var init_controller_data = function(app, element, controllerName, prefixFilter, url)
 {
     app.controller(controllerName, function($scope, $http) {
@@ -23,4 +24,4 @@ var init_controller_data = function(app, element, controllerName, prefixFilter, 
                 $scope.datasets = parseCSW(response, prefixFilter);
             });
     });
-};
+};*/
