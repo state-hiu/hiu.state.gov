@@ -13,6 +13,9 @@
             "{{ gn.id }}":
             {
                 "name": "{{ gn.name }}",
+                "layers": "{{ gn.layers }}",
+                "csw_xml": "{{ gn.csw.xml }}",
+                "csw_json": "{{ gn.csw.json }}",
                 "wms": "{{ gn.name }}",
                 "tiles": "{{ gn.tiles }}"
             }{% unless forloop.last %},{% endunless %}

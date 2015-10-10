@@ -35,6 +35,7 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
     <!-- CSS / Internal -->
     <link href='{{site.baseurl}}/build/css/main.css' rel='stylesheet' />
+    <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}</style>
     <!-- JavaScript / External -->	
     <!--<script src="{{ site.baseurl }}/lib/jquery/1.7.2/jquery-1.7.2.js"></script>-->
     {% if site.debug.jquery == true %}
@@ -107,6 +108,11 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
             });
             return link;
         };
+    </script>
+    <script type="text/javascript" language="Javascript">
+        $(function(){
+            init_main("mainApp","{{ site.geonodes[0].layers }}");
+        });
     </script>
     <!--Digital Analytics Program roll-up, see https://analytics.usa.gov for data-->
     {% if site.dap.enabled == true %}

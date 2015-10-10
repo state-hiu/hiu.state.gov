@@ -1,0 +1,16 @@
+{% raw %}
+<div class="row" ng-repeat="dataset in datasets" style="background:rgb(252, 252, 252); margin-bottom:15px;">
+    <div class="col-md-4">
+      <a href="{{ dataset.url_detail }}"><img src="{{ dataset.url_thumbnail_200x150 }}" width="200" height="150"/></a>
+    </div>
+    <div class="col-md-8">
+      <a href="{{ dataset.url_detail }}"><h4>{{ dataset.title }}</h4></a>
+      <a href="{{ dataset.url_region }}">{{ dataset.region }}</a> | {{ dataset.date_published }}
+      <br>
+      <br>
+      {{ dataset.abstract }}
+      <br>
+      <a href="{{ dataset.url_detail }}">View Dataset</a>
+    </div>
+</div>
+{% endraw %}

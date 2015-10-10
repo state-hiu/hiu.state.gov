@@ -152,7 +152,7 @@ layerswitcher:
                 var distro = $(this).find("distributionInfo").find("MD_Distribution");
                 var b = i.find('EX_GeographicBoundingBox:first');
                 var u = distro.find('onLine').filter(function(){return $(this).find('protocol').find('CharacterString').text()=="WWW:LINK-1.0-http--link"}).find('URL').text();
-                if(u.startsWith("{{ site.geonodes[0].layers}}") && b.length > 0)
+                if(u.startsWith("{{ site.geonodes[0].layers }}") && b.length > 0)
                 {
                     var g = buildBoundingBox(b);
                     var f =

@@ -37,7 +37,8 @@ layout: wrapper
         {% endif %}
       {% endfor %}
     </div>
-    <div id="data" class="tab-pane">
+    <div id="data" class="tab-pane site-controller" ng-controller="data" data-site-controller-name="data" data-site-controller-type="data" data-site-controller-url="{{ site.geonodes[0].csw.xml }}">
+      {% include ng_listitem_related_dataset.html %}
     </div>
   </div>
 </div>
