@@ -34,7 +34,7 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     <link href="{{ site.baseurl }}/assets/css/bootstrap.less.css" rel="stylesheet"/>
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
     <!-- CSS / Internal -->
-    <link href='{{site.baseurl}}/site.css' rel='stylesheet' />
+    <link href='{{site.baseurl}}/build/css/main.css' rel='stylesheet' />
     <!-- JavaScript / External -->	
     <!--<script src="{{ site.baseurl }}/lib/jquery/1.7.2/jquery-1.7.2.js"></script>-->
     {% if site.debug.jquery == true %}
@@ -64,6 +64,7 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     <script src="{{ site.baseurl }}/lib/Leaflet.utfgrid/dist/leaflet.utfgrid.js"></script>
     {% endif %}
     <!-- JavaScript / Internal -->		
+    <script src="{{ site.baseurl }}/build/js/main.js"></script>
     {% include const_snippet.html %}
     <script type="text/javascript" language="Javascript">
         var mb_access_token = '{{ site.mapbox.access_token }}';
@@ -75,27 +76,6 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     {% include tilelayers_snippet.html %}
     </script>
     <script type="text/javascript" language="Javascript">
-        var buildBoundingBox = function(b)
-        {
-            var g = [0,0,0,0];
-            try{
-                g =
-                [
-                    parseFloat(parseFloat(b.find('westBoundLongitude').text().trim()).toFixed(4)),
-                    parseFloat(parseFloat(b.find('southBoundLatitude').text().trim()).toFixed(4)),
-                    parseFloat(parseFloat(b.find('eastBoundLongitude').text().trim()).toFixed(4)),
-                    parseFloat(parseFloat(b.find('northBoundLatitude').text().trim()).toFixed(4))
-                ];
-            }catch(err){g = [0,0,0,0];}
-            return g;
-        };
-        var ellipsis = function(text,len)
-        {
-            if(len==-1)
-                return text;
-            else
-                return (text.length>len)?(text.substring(0,len-3)+'...'):text;
-        };
         var createLink = function(map, layer, label, zIndex)
         {
             var link = document.createElement('a');
@@ -123,19 +103,6 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
             });
             return link;
         };
-        var sortLayers = function(layers)
-        {
-            return layers.sort(function(a, b){
-                return a.options.zIndex - b.options.zIndex;
-            });
-        };
-        var updateRenderOrder = function(layers)
-        {
-            for(var i = 0; i < layers.length; i++)
-            {
-                layers[i].bringToFront();
-            }
-        }
     </script>
     <!--Digital Analytics Program roll-up, see https://analytics.usa.gov for data-->
     {% if site.dap.enabled == true %}

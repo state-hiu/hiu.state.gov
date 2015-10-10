@@ -18,10 +18,12 @@
   "license": "MIT",
   "private": "false",
   "devDependencies": {
-    "grunt": "*",
-    "grunt-contrib-clean": "*",
-    "grunt-contrib-concat": "*",
-    "grunt-contrib-copy": "*",
-    "grunt-contrib-uglify": "*"
+    "del": "*",
+    "gulp": "^3.9.0",
+    "gulp-concat": "*",
+    "gulp-jshint": "*",
+    "gulp-minify": "*",
+    "gulp-uglify": "*",
+    "gulp-rename": "*"
   }
 }

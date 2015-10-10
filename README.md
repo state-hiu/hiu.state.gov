@@ -13,7 +13,33 @@ The Rapid Opensource Geospatial User-Driven Enterprise (ROGUE) Joint Capabilitie
 
 ## Installation
 
-TBD
+Installation instructions for Ubuntu 14.04.
+
+```Shell
+sudo apt-get install nginx
+sudo mkdir /var/www
+sudo chown -R vagrant:vagrant /var/www
+# Edit /etc/nginx/sites-availble/default to listen to :8000 and point to /var/www
+sudo /etc/init.d/nginx restart
+###############
+sudo su -
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+\curl -sSL https://get.rvm.io | bash -s stable
+source /usr/local/rvm/scripts/rvm
+rvm get stable
+rvm list known
+rvm install ruby-2.0.0-p353
+rvm --default use ruby-2.0.0-p353
+gem install jekyll
+###############
+sudo apt-get install npm
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+cd ~/hiu.state.gov
+npm install
+sudo npm install -g gulp
+###############
+gulp
+```
 
 ## Usage
 
