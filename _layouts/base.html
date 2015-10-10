@@ -63,8 +63,12 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     <script src="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.js"></script>
     <script src="{{ site.baseurl }}/lib/Leaflet.utfgrid/dist/leaflet.utfgrid.js"></script>
     {% endif %}
-    <!-- JavaScript / Internal -->		
+    <!-- JavaScript / Internal -->
+    {% if site.debug.main == true %}
     <script src="{{ site.baseurl }}/build/js/main.js"></script>
+    {% else %}
+    <script src="{{ site.baseurl }}/build/js/main.min.js"></script>
+    {% endif %}
     {% include const_snippet.html %}
     <script type="text/javascript" language="Javascript">
         var mb_access_token = '{{ site.mapbox.access_token }}';

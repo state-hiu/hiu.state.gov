@@ -39,6 +39,7 @@ opengraph:
 
 # Debugging & Testing
 debug:
+  main: true
   angular: false
   bootstrap: false
   jquery: false
