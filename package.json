@@ -19,11 +19,13 @@
   "private": "false",
   "devDependencies": {
     "del": "*",
+    "path": "*",
     "gulp": "^3.9.0",
     "gulp-concat": "*",
     "gulp-jshint": "*",
     "gulp-minify": "*",
     "gulp-uglify": "*",
-    "gulp-rename": "*"
+    "gulp-rename": "*",
+    "gulp-less": "*"
   }
 }

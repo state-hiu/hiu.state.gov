@@ -5,7 +5,9 @@ var minify = require('gulp-minify');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
+var less = require('gulp-less');
 var del = require('del');
+var path = require('path');
 var spawn = require('child_process').spawn;
 
 var compilelist =
@@ -18,9 +20,9 @@ var compilelist =
         "dest":"./build/js/"
     },
     {
-        "name": "main_css",
-        "type": "css",
-        "src": "./src/css/main/*.css",
+        "name": "main_less",
+        "type": "less",
+        "src": "./src/less/main/*.less",
         "outfile":"main.css",
         "dest":"./build/css/"
     }
@@ -51,6 +53,13 @@ gulp.task('compile', function(){
                 .pipe(concat(t.outfile))
                 .pipe(gulp.dest(t.dest));
         }
+        else if(t.type=="less")
+        {
+            gulp.src(t.src)
+                .pipe(less())
+                .pipe(concat(t.outfile))
+                .pipe(gulp.dest(t.dest));
+        }
     }
 });
 
@@ -73,8 +82,7 @@ gulp.task('clean', function () {
 gulp.task('test', function(){
     var scripts =
     [
-        "./src/js/main/*.js",
-        "./src/css/main/*.css"
+        "./src/js/main/*.js"
     ];
     for(var i = 0; i < scripts.length; i++)
     {
