@@ -38,6 +38,7 @@ Region_Name_Date_Organization.shp
 This naming convention is similar to the naming convention for final products, but not exactly the same.  For `Region`, if just one country, use the country's short name.  If two countries, use both country names, such as `SyriaTurkey_`.  If more than two countries, use a sub-region name that makes sense and follows some standard understanding, such as `WestAfrica_`, `Global_`, or `EurasiaOceania_`.  Stay away from complex concepts, such as `TheLevant_`.  
 
 For example:
+
 ```
 Syria_IDPSites_2015LateJun_HIU_DoS.shp
 EurasiaOceania_LSIB_Lines_Detailed_2015.shp
