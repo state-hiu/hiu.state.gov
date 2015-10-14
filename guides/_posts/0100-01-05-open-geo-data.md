@@ -2,7 +2,7 @@
 layout: guide
 category: guides
 title: "Publishing Open Geospatial Data"
-description: "This guide provides instructions for how to publish open geospatial data to [data.gov](http://www.data.gov/) and HDX(https://data.hdx.rwlabs.org/) using [GeoNode](http://geonode.org/), specifically [State GeoNode](http://geonode.state.gov/)."
+description: "This guide provides instructions for how to publish open geospatial data to [Data.gov](http://www.data.gov/) and [Humanitarian Data Exchange](https://data.hdx.rwlabs.org/) (HDX) using [GeoNode](http://geonode.org/), specifically [State GeoNode](http://geonode.state.gov/).  State GeoNode is a digital service provided by the U.S. Department of State for publishing open geographic data produced by or compiled by the U.S. Government to the public, U.S. Government decision-makers, and partners on complex emergencies, natural disasters, and diplomatic activities world-wide."
 version: 1.0
 date_published: 2015-10-13
 featured: false
@@ -15,7 +15,7 @@ keywords:
 
 ## Description
 
-This guide provides instructions for how to publish open geospatial data to [data.gov](http://www.data.gov/) and HDX(https://data.hdx.rwlabs.org/) using [GeoNode](http://geonode.org/).
+his guide provides instructions for how to publish open geospatial data to [Data.gov](http://www.data.gov/) and [Humanitarian Data Exchange](https://data.hdx.rwlabs.org/) (HDX) using [GeoNode](http://geonode.org/), specifically [State GeoNode](http://geonode.state.gov/).  State GeoNode is a digital service provided by the U.S. Department of State for publishing open geographic data produced by or compiled by the U.S. Government to the public, U.S. Government decision-makers, and partners on complex emergencies, natural disasters, and diplomatic activities world-wide.
 
 ### Cheatsheet
 
@@ -55,7 +55,7 @@ Once you have a good filename zip the shapefile components into one `.zip` file 
 
 ### Step 3: Upload Shapefile
 
-Once a file has been zipped properly, upload the `.zip` file to a GeoNode.  GeoNode will automatically unzip the file and parse each component.  Start at [http://geonode.state.gov/layers/upload](http://geonode.state.gov/layers/upload) or relevant url.  Once uploaded, click the "Edit Metadata" once it is visible.
+Once a file has been zipped properly, upload the `.zip` file to GeoNode.  GeoNode will automatically unzip the file and parse each component.  Start at [http://geonode.state.gov/layers/upload](http://geonode.state.gov/layers/upload) or relevant url.  Once uploaded, click the "Edit Metadata" once it is visible.
 
 ### Step 4: Edit Metadata
 
@@ -69,10 +69,10 @@ GeoNode has an easy to use metadata editor.  The key metadata fields to focus on
 
 ### Step 5: Update Data.Gov
 
-Just kidding.  Data.Gov automatically harvests from GeoNode every 24 hours, so no additional work is required.
+Just kidding.  Data.Gov automatically harvests from GeoNode every 24 hours, so no additional work is required.  The harvest description is at [http://catalog.data.gov/harvest/geonode-state-csw](http://catalog.data.gov/harvest/geonode-state-csw).
 
 ### Step 6: Update HDX
 
-Humanitarian Data Exchange (HDX) contains a strict subset of the datasets on State GeoNode.  The datasets are curated and only include the most recent datasets, instead of the full take.
+[Humanitarian Data Exchange](https://data.hdx.rwlabs.org/) (HDX) contains a strict subset of the datasets on State GeoNode under the [us-state-hiu](https://data.hdx.rwlabs.org/organization/us-state-hiu) organization.  The datasets are curated and only include the most recent datasets, instead of the full take.
 
-Once data has been uploaded to State GeoNode, update the API links for resources.  **DO NOT** delete any datsets on HDX, except in very unique circumstances.  Simply click update on a resource and paste in the new download url for shapefile, KML, GeoJSON, etc.
+Once data has been uploaded to [State GeoNode](http://geonode.state.gov/), update the API links for resources.  **DO NOT** delete any datsets on HDX, except in very unique circumstances.  Simply click update on a resource and paste in the new download url for shapefile, KML, GeoJSON, etc.
