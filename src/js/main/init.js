@@ -8,9 +8,17 @@ var init_main = function(appName, prefixFilter)
         if(controllerType.toLowerCase()=="data")
         {
             var url = that.data('siteControllerUrl');
-            var regionFilter = that.data('siteControllerRegionFilter').split(";");
+            var sRegionFilter = that.data('siteControllerRegionFilter');
+            var aRegionFilter = undefined;
+            if(sRegionFilter !== undefined)
+            {
+                if(sRegionFilter.length > 0)
+                {
+                    aRegionFilter = sRegionFilter.split(";");
+                }
+            }
             var regionName = that.data('siteControllerRegionName');
-            init_controller_data(mainApp, that, controllerName, prefixFilter, regionFilter, regionName, url);
+            init_controller_data(mainApp, that, controllerName, prefixFilter, aRegionFilter, regionName, url);
         }
     });
     angular.bootstrap(document, [appName]);
@@ -25,6 +33,7 @@ var init_controller_data = function(app, element, controllerName, prefixFilter, 
             url: url,
             success: function(response) {
                 $scope.datasets = parseCSW(response, prefixFilter, regionFilter, regionName);
+                $("#tab-data a span.count").html(" ("+$scope.datasets.length+")");
                 $scope.$apply();
             }
         });

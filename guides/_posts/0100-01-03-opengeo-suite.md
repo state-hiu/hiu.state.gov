@@ -9,7 +9,7 @@ featured: false
 keywords:
   - cybergis
 ---
-# [CyberGIS Guides]({{ site.baseurl }}/guides) / [{{ page.title }} ({{ page.version }})]({{ site.baseurl }}{{ page.url }})
+# [Guides]({{ site.baseurl }}/guides) / [{{ page.title }} ({{ page.version }})]({{ site.baseurl }}{{ page.url }})
 
 ## Description
 

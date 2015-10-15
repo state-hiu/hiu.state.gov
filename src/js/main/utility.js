@@ -80,9 +80,16 @@ var parseCSW = function(xml, prefixFilter, regionFilter, regionName)
                 "url_region": "",
                 "url_thumbnail_200x150": url_thumbnail_200x150
             };
-            if($(layer_regions).filter(regionFilter).length > 0)
+            if(regionFilter !== undefined)
             {
-                layers.push(layer);
+                if($(layer_regions).filter(regionFilter).length > 0)
+                {
+                    layers.push(layer);
+                }
+            }
+            else
+            {
+                layers.push(layer)
             }
         }
     });
