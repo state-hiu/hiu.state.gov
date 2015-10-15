@@ -48,7 +48,7 @@ var formatDate = function(d)
     }
 };
 
-var parseCSW = function(xml, prefixFilter)
+var parseCSW = function(xml, prefixFilter, regionFilter, regionName)
 {
     var layers = [];
     $(xml).find("SearchResults").find('MD_Metadata').each(function(){
@@ -57,24 +57,29 @@ var parseCSW = function(xml, prefixFilter)
         var distro = that.find("distributionInfo").find("MD_Distribution");
         /////////////
         var b = i.find('EX_GeographicBoundingBox:first');
-        var url_detail = distro.find('onLine').filter(function(){return that.find('protocol').find('CharacterString').text()=="WWW:LINK-1.0-http--link";}).find('URL').text().trim();
+        var url_detail = distro.find('onLine').filter(function(){return $(this).find('protocol').find('CharacterString').text()=="WWW:LINK-1.0-http--link";}).find('URL').text().trim();
         /////////////
         if(url_detail.startsWith(prefixFilter) && b.length > 0)
         {
             var title = i.find('title').find('CharacterString').text();
             var date_published = i.find('date').find('DateTime').text();
             var url_thumbnail_200x150 = i.find('graphicOverview').find('fileName').text().trim();
-            var abstract_text = ellipsis(i.find('abstract').find('CharacterString').text().replace('\n',''), 100);
+            var abstract_text = ellipsis(i.find('abstract').find('CharacterString').text().replace('\n',''), 200);
+            var layer_regions = i.find('descriptiveKeywords').filter(function(){return $(this).find('type').text().trim()=="place";}).find('keyword').map(function(){return $(this).text().trim();}).get();
+            var keywords = [];
             var layer = {
                 "title": title,
-                "date_published": date_published,
-                "region": "",
+                "date_published": formatDate(new Date(Date.parse(date_published))),
+                "region": regionName,
                 "abstract": abstract_text,
                 "url_detail": url_detail,
                 "url_region": "",
                 "url_thumbnail_200x150": url_thumbnail_200x150
             };
-            layers.push(layer);
+            if($(layer_regions).filter(regionFilter).length > 0)
+            {
+                layers.push(layer);
+            }
         }
     });
     return layers;

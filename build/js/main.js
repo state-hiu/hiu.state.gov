@@ -1,30 +1,36 @@
-/*var init_main = function(appName, prefixFilter)
+var init_main = function(appName, prefixFilter)
 {
     var mainApp = angular.module(appName, []);
-    $('.site-controller').each(function({
+    $('.site-controller').each(function(){
         var that = $(this);
         var controllerName = that.data('siteControllerName');
         var controllerType = that.data('siteControllerType');
         if(controllerType.toLowerCase()=="data")
         {
             var url = that.data('siteControllerUrl');
-            init_controller_data(app, that, controllerName, prefixFilter, url);
+            //var regionFilter = that.data('siteControllerRegionFilter');
+            var regionFilter = ['Syrian Arab Republic','Turkey'];
+            var regionName = that.data('siteControllerRegionName');
+            init_controller_data(mainApp, that, controllerName, prefixFilter, regionFilter, regionName, url);
         }
     });
     angular.bootstrap(document, [appName]);
 };
 
-
-var init_controller_data = function(app, element, controllerName, prefixFilter, url)
+var init_controller_data = function(app, element, controllerName, prefixFilter, regionFilter, regionName, url)
 {
     app.controller(controllerName, function($scope, $http) {
-        $http.get(url)
-            .success(function(response)
-            {
-                $scope.datasets = parseCSW(response, prefixFilter);
-            });
+        $scope.datasets = [];
+        $.ajax({
+            dataType: "xml",
+            url: url,
+            success: function(response) {
+                $scope.datasets = parseCSW(response, prefixFilter, regionFilter, regionName);
+                $scope.$apply();
+            }
+        });
     });
-};*/
+};
 
 var buildBoundingBox = function(b)
 {
@@ -76,7 +82,7 @@ var formatDate = function(d)
     }
 };
 
-var parseCSW = function(xml, prefixFilter)
+var parseCSW = function(xml, prefixFilter, regionFilter, regionName)
 {
     var layers = [];
     $(xml).find("SearchResults").find('MD_Metadata').each(function(){
@@ -85,24 +91,29 @@ var parseCSW = function(xml, prefixFilter)
         var distro = that.find("distributionInfo").find("MD_Distribution");
         /////////////
         var b = i.find('EX_GeographicBoundingBox:first');
-        var url_detail = distro.find('onLine').filter(function(){return that.find('protocol').find('CharacterString').text()=="WWW:LINK-1.0-http--link";}).find('URL').text().trim();
+        var url_detail = distro.find('onLine').filter(function(){return $(this).find('protocol').find('CharacterString').text()=="WWW:LINK-1.0-http--link";}).find('URL').text().trim();
         /////////////
         if(url_detail.startsWith(prefixFilter) && b.length > 0)
         {
             var title = i.find('title').find('CharacterString').text();
             var date_published = i.find('date').find('DateTime').text();
             var url_thumbnail_200x150 = i.find('graphicOverview').find('fileName').text().trim();
-            var abstract_text = ellipsis(i.find('abstract').find('CharacterString').text().replace('\n',''), 100);
+            var abstract_text = ellipsis(i.find('abstract').find('CharacterString').text().replace('\n',''), 200);
+            var layer_regions = i.find('descriptiveKeywords').filter(function(){return $(this).find('type').text().trim()=="place";}).find('keyword').map(function(){return $(this).text().trim();}).get();
+            var keywords = [];
             var layer = {
                 "title": title,
-                "date_published": date_published,
-                "region": "",
+                "date_published": formatDate(new Date(Date.parse(date_published))),
+                "region": regionName,
                 "abstract": abstract_text,
                 "url_detail": url_detail,
                 "url_region": "",
                 "url_thumbnail_200x150": url_thumbnail_200x150
             };
-            layers.push(layer);
+            if($(layer_regions).filter(regionFilter).length > 0)
+            {
+                layers.push(layer);
+            }
         }
     });
     return layers;
