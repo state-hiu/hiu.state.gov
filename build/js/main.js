@@ -8,8 +8,7 @@ var init_main = function(appName, prefixFilter)
         if(controllerType.toLowerCase()=="data")
         {
             var url = that.data('siteControllerUrl');
-            //var regionFilter = that.data('siteControllerRegionFilter');
-            var regionFilter = ['Syrian Arab Republic','Turkey'];
+            var regionFilter = that.data('siteControllerRegionFilter').split(";");
             var regionName = that.data('siteControllerRegionName');
             init_controller_data(mainApp, that, controllerName, prefixFilter, regionFilter, regionName, url);
         }
@@ -101,12 +100,16 @@ var parseCSW = function(xml, prefixFilter, regionFilter, regionName)
             var abstract_text = ellipsis(i.find('abstract').find('CharacterString').text().replace('\n',''), 200);
             var layer_regions = i.find('descriptiveKeywords').filter(function(){return $(this).find('type').text().trim()=="place";}).find('keyword').map(function(){return $(this).text().trim();}).get();
             var keywords = [];
+            var url_shapefile = distro.find('onLine').filter(function(){return $(this).find('protocol').text().trim()=="WWW:DOWNLOAD-1.0-http--download";}).filter(function(){return $(this).find('name').text().trim().endsWith(".zip");}).find('URL').text().trim();
+            var url_geojson = distro.find('onLine').filter(function(){return $(this).find('protocol').text().trim()=="WWW:DOWNLOAD-1.0-http--download";}).filter(function(){return $(this).find('name').text().trim().endsWith(".json");}).find('URL').text().trim();
             var layer = {
                 "title": title,
                 "date_published": formatDate(new Date(Date.parse(date_published))),
                 "region": regionName,
                 "abstract": abstract_text,
                 "url_detail": url_detail,
+                "url_shapefile": url_shapefile,
+                "url_geojson": url_geojson,
                 "url_region": "",
                 "url_thumbnail_200x150": url_thumbnail_200x150
             };

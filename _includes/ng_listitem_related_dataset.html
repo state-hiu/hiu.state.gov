@@ -9,8 +9,10 @@
       <br>
       <br>
       {{ dataset.abstract }}
-      <br>
-      <a href="{{ dataset.url_detail }}">View Dataset</a>
+      <hr>
+      <a href="{{ dataset.url_detail }}">View</a> |
+      <a href="{{ dataset.url_shapefile }}">Shapefile</a> |
+      <a href="{{ dataset.url_geojson }}">GeoJSON</a>
     </div>
 </div>
 {% endraw %}

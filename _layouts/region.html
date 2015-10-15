@@ -37,7 +37,7 @@ layout: wrapper
         {% endif %}
       {% endfor %}
     </div>
-    <div id="data" class="tab-pane site-controller" ng-controller="data" data-site-controller-name="data" data-site-controller-type="data" data-site-controller-url="{{ site.geonodes[0].csw.xml }}" site-controller-region-name="{{ page.title }}" site-controller-region-filter="{{ page.region_filter }}">
+    <div id="data" class="tab-pane site-controller" ng-controller="data" data-site-controller-name="data" data-site-controller-type="data" data-site-controller-url="{{ site.geonodes[0].csw.xml }}" data-site-controller-region-name="{{ page.title }}" data-site-controller-region-filter="{{ page.region_filter | join: ';' }}">
       {% include ng_listitem_related_dataset.html %}
     </div>
   </div>

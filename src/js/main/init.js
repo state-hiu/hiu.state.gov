@@ -8,8 +8,7 @@ var init_main = function(appName, prefixFilter)
         if(controllerType.toLowerCase()=="data")
         {
             var url = that.data('siteControllerUrl');
-            //var regionFilter = that.data('siteControllerRegionFilter');
-            var regionFilter = ['Syrian Arab Republic','Turkey'];
+            var regionFilter = that.data('siteControllerRegionFilter').split(";");
             var regionName = that.data('siteControllerRegionName');
             init_controller_data(mainApp, that, controllerName, prefixFilter, regionFilter, regionName, url);
         }
