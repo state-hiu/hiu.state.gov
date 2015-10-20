@@ -39,6 +39,7 @@ opengraph:
 
 # Debugging & Testing
 debug:
+  polyfill: false
   main: true
   angular: false
   bootstrap: false

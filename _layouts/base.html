@@ -4,6 +4,7 @@ layout: default
 dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','//mapgive.state.gov','//geonode.state.gov','//secondarycities.state.gov']
 
 ---
+{% capture v %}{{ site.time | date: '%Y-%m-%dT%H:%M' }}{% endcapture %}
 <html class="svg">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -34,8 +35,14 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     <link href="{{ site.baseurl }}/assets/css/bootstrap.less.css" rel="stylesheet"/>
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
     <!-- CSS / Internal -->
-    <link href='{{site.baseurl}}/build/css/main.css' rel='stylesheet' />
+    <link href='{{site.baseurl}}/build/css/main.css?v={{ v }}' rel='stylesheet' />
     <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}</style>
+    <!-- JavaScript / Polyfill -->	
+    {% if site.debug.polyfill == true %}
+    <script src="{{ site.baseurl }}/build/js/polyfill.js?v={{ v }}"></script>
+    {% else %}
+    <script src="{{ site.baseurl }}/build/js/polyfill.min.js?v={{ v }}"></script>
+    {% endif %}
     <!-- JavaScript / External -->	
     <!--<script src="{{ site.baseurl }}/lib/jquery/1.7.2/jquery-1.7.2.js"></script>-->
     {% if site.debug.jquery == true %}
@@ -66,9 +73,9 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     {% endif %}
     <!-- JavaScript / Internal -->
     {% if site.debug.main == true %}
-    <script src="{{ site.baseurl }}/build/js/main.js"></script>
+    <script src="{{ site.baseurl }}/build/js/main.js?v={{ v }}"></script>
     {% else %}
-    <script src="{{ site.baseurl }}/build/js/main.min.js"></script>
+    <script src="{{ site.baseurl }}/build/js/main.min.js?v={{ v }}"></script>
     {% endif %}
     {% include const_snippet.html %}
     <script type="text/javascript" language="Javascript">

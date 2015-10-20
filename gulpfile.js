@@ -25,6 +25,13 @@ var compilelist =
         "src": "./src/less/main/*.less",
         "outfile":"main.css",
         "dest":"./build/css/"
+    },
+    {
+        "name": "polyfill_js",
+        "type": "js",
+        "src": "./src/js/polyfill/*.js",
+        "outfile":"polyfill.js",
+        "dest":"./build/js/"
     }
 ];
 
@@ -82,7 +89,8 @@ gulp.task('clean', function () {
 gulp.task('test', function(){
     var scripts =
     [
-        "./src/js/main/*.js"
+        "./src/js/main/*.js",
+        "./src/js/polyfill/*.js"
     ];
     for(var i = 0; i < scripts.length; i++)
     {
