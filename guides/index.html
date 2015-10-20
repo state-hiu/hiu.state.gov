@@ -20,6 +20,12 @@ title: Guides
     {% assign count_ittc = count_ittc | plus: 1 %}
   {% endif %}
 {% endfor %}
+{% assign count_site = 0 %}
+{% for guide in site.categories.guides %}
+  {% if guide.keywords contains 'site' %}
+    {% assign count_site = count_site | plus: 1 %}
+  {% endif %}
+{% endfor %}
 <div class="col-md-2">
 </div>
 <div class="col-md-8">
@@ -28,6 +34,7 @@ title: Guides
     <li class="active"><a href="#featured" data-toggle="tab">Featured ({{ count_featured }})</a></li>
     <li><a href="#cybergis" data-toggle="tab">CyberGIS ({{ count_cybergis }})</a></li>
     <li><a href="#ittc" data-toggle="tab">ITTC ({{ count_ittc }})</a></li>
+    <li><a href="#site" data-toggle="tab">Site ({{ count_site }})</a></li>
     <li><a href="#all" data-toggle="tab">All ({{ site.categories.guides | size }}) </a></li>
   </ul>
   <div class="tab-content" style="padding: 10px;">
@@ -48,6 +55,13 @@ title: Guides
     <div id="ittc" class="tab-pane active">
       {% for guide in site.categories.guides %}
         {% if guide.keywords contains 'ittc' %}
+          {% include listitem_guide.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div id="site" class="tab-pane active">
+      {% for guide in site.categories.guides %}
+        {% if guide.keywords contains 'site' %}
           {% include listitem_guide.html %}
         {% endif %}
       {% endfor %}
