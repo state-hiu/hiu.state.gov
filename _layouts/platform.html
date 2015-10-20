@@ -1,0 +1,14 @@
+---
+layout: wrapper
+---
+<div class="col-md-2">
+</div>
+<div class="col-md-8">
+  <div><h2 class="page-title">{{ page.title }}</h2></div>
+  {% assign platform = page %}
+  {% include listitem_platform.html %}
+</div>
+<div class="col-md-2">
+  {% include social-media.html %}
+</div>
+

@@ -80,6 +80,7 @@ storage:
   thumbnails_products: "https://s3.amazonaws.com/hiu-thumbnails/products"
   thumbnails_regions: "https://s3.amazonaws.com/hiu-thumbnails/regions"
   thumbnails_guides: "https://s3.amazonaws.com/hiu-thumbnails/guides"
+  thumbnails_platforms: "https://s3.amazonaws.com/hiu-thumbnails/platforms"
   products: "https://s3.amazonaws.com/hiu-products"
 
 # MapBox

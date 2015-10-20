@@ -69,6 +69,7 @@ var parseCSW = function(xml, prefixFilter, regionFilter, regionName)
             var keywords = [];
             var url_shapefile = distro.find('onLine').filter(function(){return $(this).find('protocol').text().trim()=="WWW:DOWNLOAD-1.0-http--download";}).filter(function(){return $(this).find('name').text().trim().endsWith(".zip");}).find('URL').text().trim();
             var url_geojson = distro.find('onLine').filter(function(){return $(this).find('protocol').text().trim()=="WWW:DOWNLOAD-1.0-http--download";}).filter(function(){return $(this).find('name').text().trim().endsWith(".json");}).find('URL').text().trim();
+            var url_kml = distro.find('onLine').filter(function(){return $(this).find('protocol').text().trim()=="WWW:DOWNLOAD-1.0-http--download";}).filter(function(){return $(this).find('description').text().trim().endsWith("(KML Format)");}).find('URL').text().trim();
             var layer = {
                 "title": title,
                 "date_published": formatDate(new Date(Date.parse(date_published))),
@@ -77,6 +78,7 @@ var parseCSW = function(xml, prefixFilter, regionFilter, regionName)
                 "url_detail": url_detail,
                 "url_shapefile": url_shapefile,
                 "url_geojson": url_geojson,
+                "url_kml": url_kml,
                 "url_region": "",
                 "url_thumbnail_200x150": url_thumbnail_200x150
             };
