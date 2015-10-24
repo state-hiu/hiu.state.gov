@@ -39,11 +39,23 @@ npm install
 sudo npm install -g gulp
 ###############
 gulp
+gulp bootstrap:compile
 ```
 
 ## Usage
 
-TBD
+
+If updated less (`src/less`) or javascript (`src/js/`), run gulp to update:
+
+```
+gulp
+```
+
+If you updated bootstrap variables (`src/less/bootstrap/variables.less`), re-compile the bootstrap.css with:
+
+```
+gulp bootstrap:compile
+```
 
 ## Examples
 

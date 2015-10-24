@@ -78,9 +78,9 @@ gulp.task('copy', function(){
     }
 });
 
-
 gulp.task('clean', function () {
   return del([
+    './temp/**/*',
     './build/js/**/*',
     './build/css/**/*'
   ]);
@@ -101,3 +101,25 @@ gulp.task('test', function(){
 });
 
 gulp.task('default', ['clean', 'copy','compile']);
+
+
+gulp.task('bootstrap:clean', function() {
+    return del([
+        './temp/**/*',
+        './build/bootstrap/**/*'
+    ]);
+});
+gulp.task('bootstrap:prepareLess', ['bootstrap:clean'], function() {
+    var base = "./lib/bootstrap/3.3.5/less/";
+    return gulp.src([base+'/**', '!'+base+'/{variables.less}'])
+        .pipe(gulp.dest('./temp'));
+});
+gulp.task('bootstrap:prepareVariables', ['bootstrap:prepareLess'], function() {
+    return gulp.src('./src/less/bootstrap/variables.less')
+        .pipe(gulp.dest('./temp'));
+});
+gulp.task('bootstrap:compile', ['bootstrap:prepareVariables'], function() {
+    return gulp.src('./temp/bootstrap.less')
+        .pipe(less())
+        .pipe(gulp.dest('./build/bootstrap'));
+});
