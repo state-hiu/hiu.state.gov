@@ -172,6 +172,10 @@
 #mapgive-logo-padding {
   padding-top: 15px;
 }
+.sameline {
+  display: inline-block;
+}
+
 .navbar-inverse {
   border-bottom: 2px #667764;
   border-style: solid;
@@ -182,10 +186,11 @@
 .navbar-right-text {
   padding-top: 5px;
 }
-.sameline {
-  display: inline-block;
-}
 .navbar-nav > li > a {
   padding-bottom: 0px;
   line-height: initial;
+}
+#nav_mapgive a {
+  padding-top: 6px;
+  font-size: 20px;
 }
