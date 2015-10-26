@@ -163,7 +163,11 @@
   background-repeat: no-repeat;
 }
 .mapgive-logo {
-  height: 27px;
+  height: 24px;
+  margin: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  vertical-align: bottom;
 }
 #mapgive-logo-padding {
   padding-top: 15px;
@@ -180,4 +184,8 @@
 }
 .sameline {
   display: inline-block;
+}
+.navbar-nav > li > a {
+  padding-bottom: 0px;
+  line-height: initial;
 }
