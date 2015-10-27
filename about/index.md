@@ -1,7 +1,7 @@
 ---
 layout: wrapper_text
 ---
-# [About]({{ site.baseurl }}/about)
+# About
 
 ## Mission Statement
 
