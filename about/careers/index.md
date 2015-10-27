@@ -18,7 +18,7 @@ If you are interested in possible student internships with the Humanitarian Info
 
 ## Virtual Student Foreign Service (VSFS)
 
-The Humanitarian Information Unit's [MapGive Team](http://mapgive.state.gov) accepts a few [Virtual Student Foreign Service](http://www.state.gov/vsfs/) interns each school year.  If interested, email MapGive at [mapgive@state.gov](mailto:mapgive@state.gov?subject=VSFS+Internship). U.S. students apply to VSFS once a year in July.
+The Humanitarian Information Unit's [MapGive](http://mapgive.state.gov) team accepts a few [Virtual Student Foreign Service](http://www.state.gov/vsfs/) interns each school year.  If interested, email MapGive at [mapgive@state.gov](mailto:mapgive@state.gov?subject=VSFS+Internship). U.S. students apply to VSFS once a year in July.
 
 ## Jefferson Science Fellowship
 
