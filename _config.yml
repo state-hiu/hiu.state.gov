@@ -20,7 +20,7 @@ redcarpet:
 
 # General
 code: "https://github.com/state-hiu/hiu.state.gov"
-disclaimer: "This site is produced and maintained by the U.S. Department of State, Humanitarian Information Unit.  For more information see the [About Us]({{ site.baseurl }}/about) page."
+disclaimer: "This site is produced and maintained by the U.S. Department of State, Humanitarian Information Unit.  For more information see the [About Us](/hiu.state.gov/about) page."
 
 # Analytics
 ga:
