@@ -1,7 +1,7 @@
 ---
 layout: wrapper_text
 ---
-# About
+# About Us
 
 ## Mission Statement
 
