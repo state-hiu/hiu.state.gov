@@ -16,6 +16,10 @@ To accomplish this mission, the HIU performs the following tasks:
 
 The HIU is part of the Bureau of Intelligence and Research, U.S. Department of State. Its staff  is composed of personnel from the U.S. Department of State, U.S. Agency for International Development (USAID), U.S. Department of Defense (DOD), National Geospatial-Intelligence Agency (NGA), and other technical and specialist personnel.
 
+## Science & Technology Programs
+
+You can learn more about our science and technology programs, such as [MapGive](http://mapgive.state.gov) and [Secondary Cities](http://secondarycities.state.gov), [here]({{ site.baseurl }}/programs).
+
 ## Satellite Imagery
 
 For commercial satellite imagery requests, see [Imagery]({{ site.baseurl }}/about/imagery).
@@ -27,10 +31,6 @@ We've also published some open guides at [Guides]({{ site.baseurl }}/guides).
 ## Developer
 
 You can more about about our open source software, developer resources, APIs, and websites on our developer [here]({{ site.baseurl }}/developer).
-
-## Science & Technology Programs
-
-You can learn more about our science and technology programs, such as [MapGive](http://mapgive.state.gov) and [Secondary Cities](http://secondarycities.state.gov), [here]({{ site.baseurl }}/programs).
 
 ## Careers
 
