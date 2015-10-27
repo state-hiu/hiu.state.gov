@@ -1,19 +1,12 @@
 ---
-layout: wrapper
-title: "Discover Data!"
+layout: wrapper_text
+title: "Data"
 ---
-<div class="col-md-2">
+
+<div><h1 class="page-title" style="text-align:center;">{{ page.title }}</h1></div>
+<div>
+  {% for platform in site.categories.platforms %}
+    {% include listitem_platform.html %}
+  {% endfor %}
 </div>
-<div class="col-md-8">
-  <div><h1 class="page-title" style="text-align:center;">{{ page.title }}</h1></div>
-  <div>
-      {% for platform in site.categories.platforms %}
-        {% include listitem_platform.html %}
-      {% endfor %}
-  </div>
-</div>
-<div class="col-md-2">
-</div>
-<div class="footer">
-    {% include footer.html %}
-</div>
+
