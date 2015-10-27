@@ -7,7 +7,7 @@ layout: wrapper_text
 
 The U.S. State Department can share U.S. government (USG) [licensed]({{ site.baseurl }}/about/imagery/NextViewLicense.txt) commercial satellite imagery with approved recipients under certain conditions and Departmental clearance on an individual case-by-case basis. The Department’s ability to facilitate commercial imagery requests is subject to Departmental determination that it is in the interest of the USG to share the requested imagery, as well as staffing and resource constraints.
 
-Imagery can be requested in two ways. First, in the native imagery format (NITF or GeoTiff) if the organization has the capacity to receive, process, and work with raw high-resolution imagery data. Second, the Humanitarian Information Unit can host imagery web services that can be used for crowdsource mapping into the OpenStreetMap database. This option, referred to as Imagery to the Crowd or MapGive, works in conjunction with the Humanitarian OpenStreetMap Team (HOT) and the Tasking Manager application they maintain. See the webpage for [Imagery to the Crowd](http://mapgive.state.gov/ittc) for more information.
+Imagery can be requested in two ways. First, in the native imagery format (NITF or GeoTiff) if the organization has the capacity to receive, process, and work with raw high-resolution imagery data. Second, the Humanitarian Information Unit can host imagery web services that can be used for crowdsourced mapping into the OpenStreetMap database. This option, referred to as Imagery to the Crowd or MapGive, works in conjunction with the Humanitarian OpenStreetMap Team (HOT) and the Tasking Manager application they maintain. See the webpage for [Imagery to the Crowd](http://mapgive.state.gov/ittc) for more information.
 
 The request process is similar for either option, the key is a clear justification for why the imagery is needed. Beyond the justification, the requesting organization should be able to provide specific answers to the questions below. In dialogue with the Department, it may be determined that further refinement of the requirements or narrowing of the requested scope is necessary.
 
@@ -31,10 +31,9 @@ The request process is similar for either option, the key is a clear justificati
 **Imagery Specifications**
 
 - Do you require panchromatic, multispectral, or both?
-- Do you require geo-rectified or ortho-rectified coverage?
-- What file format is required for receipt of the imagery? (NITF, GeoTiff, Erdas Imagine .img, etc)
-- How do you wish to receive the imagery, and if applicable, what is your ftp information? (Note that at present imagery data can only be sent directly to a requesting organization’s ftp site, or DVDs can be sent via mail.)
-- How quickly do you need to receive the requested data?
+- Do you require ortho-rectified imagery?
+- What file format is required for receipt of the imagery? (NITF, GeoTiff, Erdas Imagine, .img, etc)
+- How do you wish to receive the imagery, and if applicable, what is your FTP information? (Note that at present imagery data can only be sent directly to a requesting organization’s ftp site, or DVDs can be sent via mail.)
 
 ## Contact
 
