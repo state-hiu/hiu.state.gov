@@ -1,7 +1,7 @@
 ---
 layout: wrapper_text
 ---
-# [About]({{ site.baseurl }}/about) / [Imagery]({{ site.baseurl }}/about/imagery)
+# [About Us]({{ site.baseurl }}/about) / [Imagery]({{ site.baseurl }}/about/imagery)
 
 ## Commercial Satellite Imagery Request Process
 
