@@ -15,7 +15,7 @@
           </div>
       </div>
       <div class="row">
-        <div class="col-md-12" id="footer-disclaimer"><h6><span style="margin-right:4px;font-weight:bold;">Disclaimer:</span>{{ site.disclaimer | markdownify }}</h6></div>
+        <div class="col-md-12" id="footer-disclaimer"><h6><span style="margin-right:4px;font-weight:bold;">Disclaimer:</span>{{ site.disclaimer | markdownify | remove: '<p>' | remove: '</p>' }}</h6></div>
       </div>
     </div>
 </footer>
