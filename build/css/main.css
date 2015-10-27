@@ -164,6 +164,11 @@
 .sameline {
   display: inline-block;
 }
+.odd {
+  background: #f5f5f5;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
 
 .navbar-brand {
   float: left;

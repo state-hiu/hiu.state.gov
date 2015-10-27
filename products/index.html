@@ -20,7 +20,12 @@ title: Products
     <div id="featured" class="tab-pane active">
       {% for product in site.categories.products %}
         {% if product.featured == true %}
-          {% include listitem_product.html %}
+          {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+          {% if thecycle == 'odd' %}
+            {% include listitem_product.html param='odd' %}
+          {% else %}
+            {% include listitem_product.html param='even' %}
+          {% endif %}
         {% endif %}
       {% endfor %}
     </div>

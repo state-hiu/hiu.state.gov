@@ -1,10 +1,12 @@
-<div class="row" style="background:rgb(252, 252, 252); margin-bottom: 15px;">
+{% if include.param == 'odd' %}
+
+<div class="row odd" style="margin-bottom: 15px;">
   <!--<div class="col-md-2"></div>-->
     <div class="col-md-5">
-      {% if download == true %}
-      <a href="{{ site.storage.products }}/{{ product.pdf }}"><img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300"/></a>
+      {% if download == true %} 
+      <a href="{{ site.storage.products }}/{{ product.pdf }}"><img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300" class="img-responsive"/></a>
       {% else %}
-      <a href="{{ site.baseurl }}{{ product.url }}"><img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300"/></a>
+      <a href="{{ site.baseurl }}{{ product.url }}"><img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300" class="img-responsive"/></a>
       {% endif %}
     </div>
     <div class="col-md-7">
@@ -21,3 +23,32 @@
     </div>
   <!--<div class="col-md-2"></div>-->
 </div>
+
+{% else %}
+
+
+<div class="row" style="margin-bottom: 15px;">
+  <!--<div class="col-md-2"></div>-->
+    <div class="col-md-5">
+      {% if download == true %} 
+      <a href="{{ site.storage.products }}/{{ product.pdf }}"><img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300" class="img-responsive"/></a>
+      {% else %}
+      <a href="{{ site.baseurl }}{{ product.url }}"><img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300" class="img-responsive"/></a>
+      {% endif %}
+    </div>
+    <div class="col-md-7">
+      {% if showProductTitle == false %}
+      {% else %}
+      <a href="{{ site.baseurl }}{{ product.url }}"><h4>{{ product.title }}</h4></a>
+      {% endif %}
+      <a href="{{ site.baseurl }}/regions/{{ product.region_id }}">{{ product.region_title }}</a> | {{ product.date_published | date: '%B %d, %Y' }}
+      <br>
+      <br>
+      {{ product.content }}
+      <hr>
+      <a href="{{ site.storage.products }}/{{ product.pdf }}">Download</a>
+    </div>
+  <!--<div class="col-md-2"></div>-->
+</div>
+
+{% endif %}
