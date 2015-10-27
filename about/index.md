@@ -18,7 +18,7 @@ The HIU is part of the Bureau of Intelligence and Research, U.S. Department of S
 
 ## Science & Technology Programs
 
-Click [here]({{ site.baseurl }}/programs) to learn more about our science and technology programs, such as [MapGive](http://mapgive.state.gov) and [Secondary Cities](http://secondarycities.state.gov).
+[Click here]({{ site.baseurl }}/programs) to learn more about our science and technology programs, such as [MapGive](http://mapgive.state.gov) and [Secondary Cities](http://secondarycities.state.gov).
 
 ## Satellite Imagery
 
