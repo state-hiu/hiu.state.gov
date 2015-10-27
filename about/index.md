@@ -30,7 +30,7 @@ We've also published some open guides at [Guides]({{ site.baseurl }}/guides).
 
 ## Developer
 
-You can more about about our open source software, developer resources, APIs, and websites on our developer [page]({{ site.baseurl }}/developer).
+You can more about about our open source software, developer resources, APIs, and websites on our [developer page]({{ site.baseurl }}/developer).
 
 ## Careers
 
