@@ -4,11 +4,11 @@ title: "Careers"
 ---
 # [About]({{ site.baseurl }}/about) / [Careers]({{ site.baseurl }}/about/careers)
 
-For general job opportunities, consult the USA Jobs website [https://usajobs.gov/](https://usajobs.gov).  The Humanitarian Information Unit (HIU) has a staff of cartographers, geographers, analysts, and web GIS developers.
+For general job opportunities, consult the [USA Jobs website](https://usajobs.gov).  The Humanitarian Information Unit (HIU) has a staff of cartographers, geographers, analysts, and web GIS developers.
 
 HIU also typically has a State Department Foreign Service Officer on its staff; for information on Foreign Service careers, please visit [http://careers.state.gov/work/foreign-service/officer](http://careers.state.gov/work/foreign-service/officer).
 
-The Humanitarian Information Unit also participates in a variety of other internship and fellowship programs as follow that may interest you.
+The Humanitarian Information Unit also participates in a variety of other internship and fellowship programs that may interest you.
 
 For non-USG jobs in the humanitarian space, check out the United Nation's ReliefWeb Jobs site at [http://reliefweb.int/jobs](http://reliefweb.int/jobs).
 
@@ -18,7 +18,7 @@ If you are interested in possible student internships with the Humanitarian Info
 
 ## Virtual Student Foreign Service (VSFS)
 
-The Humanitarian Information Unit's [MapGive Team](http://mapgive.state.gov) accepts a few [Virtual Student Foreign Service](http://www.state.gov/vsfs/) interns each semester.  If interested, email MapGive at [mapgive@state.gov](mailto:mapgive@state.gov?subject=VSFS+Internship).
+The Humanitarian Information Unit's [MapGive Team](http://mapgive.state.gov) accepts a few [Virtual Student Foreign Service](http://www.state.gov/vsfs/) interns each school year.  If interested, email MapGive at [mapgive@state.gov](mailto:mapgive@state.gov?subject=VSFS+Internship). U.S. students apply to VSFS once a year in July.
 
 ## Jefferson Science Fellowship
 
