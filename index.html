@@ -115,7 +115,7 @@ layerswitcher:
     });
     // Products GeoJSON
     var productIcon = L.icon({
-        iconUrl: "{{ site.baseurl }}/assets/img/icon_product.svg",
+        iconUrl: "{{ site.baseurl }}/assets/img/logo.png",
         iconSize: [30, 45],
         iconAnchor: [15, 40],
         popupAnchor: [0, 0]
@@ -128,7 +128,7 @@ layerswitcher:
                 zIndex: 99,
                 onEachFeature: function(feature, layer) {
                     var popupOptions = {maxWidth: 200};
-                    //layer.setIcon(productIcon);
+                    layer.setIcon(productIcon);
                     var popupContent = '<h4><a href="'+feature.properties.url+'">'+feature.properties.title+"</a></h4><br>Date Published: "+feature.properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+feature.properties.region_id+'">'+feature.properties.region_title+'</a><br><a href="'+feature.properties.pdf+'">Download</a>';
                     layer.bindPopup(popupContent, popupOptions);
                 }
@@ -210,6 +210,14 @@ layerswitcher:
             layerswitcher.append(createLink(map, datasets, 'Datasets', datasets.options.zIndex));
         }
     });
+    //events
+    // Products GeoJSON
+    var eventIcon = L.icon({
+        iconUrl: "{{ site.baseurl }}/assets/img/mapgive_red_pt.svg",
+        iconSize: [30, 45],
+        iconAnchor: [15, 40],
+        popupAnchor: [0, 0]
+    });
     $.ajax({
         dataType: "json",
         url: "{{ site.baseurl}}/events/events.json",
@@ -218,7 +226,7 @@ layerswitcher:
                 zIndex: 100,
                 onEachFeature: function(feature, layer) {
                     var popupOptions = {maxWidth: 200};
-                    //layer.setIcon(productIcon);
+                    layer.setIcon(eventIcon);
                     var popupContent = '<h4><a href="'+feature.properties.url+'">'+feature.properties.title+'</a></h4>';
                     layer.bindPopup(popupContent, popupOptions);
                 }
