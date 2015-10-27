@@ -18,6 +18,10 @@ exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, pack
 redcarpet:
   extensions: [with_toc_data]
 
+# General
+code: "https://github.com/state-hiu/hiu.state.gov"
+disclaimer: "This site is produced and maintained by the U.S. Department of State, Humanitarian Information Unit.  For more information see the [About Us]({{ site.baseurl }}/about) page."
+
 # Analytics
 ga:
   enabled: false
