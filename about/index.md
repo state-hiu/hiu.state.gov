@@ -26,7 +26,7 @@ For commercial satellite imagery requests, see [Imagery]({{ site.baseurl }}/abou
 
 ## Guides
 
-We've also published some open guides at [Guides]({{ site.baseurl }}/guides).
+Browse through our [open guide collection]({{ site.baseurl }}/guides), including guides on GeoNode and our Imagery to the Crowd workflow.
 
 ## Developer
 
