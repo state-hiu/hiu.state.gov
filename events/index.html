@@ -30,7 +30,7 @@ title: Events
       {% endif %}
     {% endfor %}
   </div>
-  <div id="archived" class="tab-pane active">
+  <div id="archived" class="tab-pane">
     {% for event in site.categories.events %}
       {% if event.archived == true %}
         {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
