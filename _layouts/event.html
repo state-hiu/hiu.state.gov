@@ -16,20 +16,19 @@ layout: wrapper
   <hr>
   <div><h4 class="page-title">Products & Data</h2></div>
   <ul class="nav nav-tabs" style="padding: 10px 10px 0px 10px;">
-    <li class="active"><a href="#related-products" data-toggle="tab">Products ({{ count_products }})</a></li>
-    <li id="tab-data"><a href="#related-data" data-toggle="tab">Data<span class="count"></span></a></a></li>
+    <li class="active"><a href="#products" data-toggle="tab">Products ({{ count_products }})</a></li>
+    <li id="tab-data"><a href="#data" data-toggle="tab">Data<span class="count"></span></a></a></li>
   </ul>
   <div class="tab-content" style="padding: 10px;">
-    <div id="related-products" class="tab-pane active">
-      {% for related_product in site.categories.products %}
+    <div id="products" class="tab-pane active">
+      {% for product in site.categories.products %}
         {% if product.events contains event.event_id %}
-            {% assign product = related_product %}
             {% assign showProductTitle = true %}
             {% include listitem_related_product.html %}
         {% endif %}
       {% endfor %}
     </div>
-    <div id="related-data" class="tab-pane site-controller" ng-controller="data" data-site-controller-name="data" data-site-controller-type="data" data-site-controller-url="{{ site.geonodes[0].csw.xml }}" data-site-controller-keyword-filter="{{ event.keyword_filter | join: ';' }}">
+    <div id="data" class="tab-pane site-controller" ng-controller="data" data-site-controller-name="data" data-site-controller-type="data" data-site-controller-url="{{ site.geonodes[0].csw.xml }}" data-site-controller-keyword-filter="{{ event.keyword_filter | join: ';' }}">
       {% include ng_listitem_related_dataset.html %}
     </div>
   </div>
