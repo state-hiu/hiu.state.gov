@@ -11,4 +11,4 @@ keywords:
 refurl:
   hdx: "https://data.hdx.rwlabs.org/group/nepal-earthquake"
 ---
-For the Nepal Earthquake, the Humanitarain Information faciliated the sharing of high-resolution commercial satellite imagery, provided imagery services under the Imagery to the Crowd Initiative, and facilitated on-boarding of organizations into HDX.
+For the Nepal Earthquake, the Humanitarain Information Unit faciliated the sharing of high-resolution commercial satellite imagery, provided imagery services under the Imagery to the Crowd Initiative, and facilitated on-boarding of organizations into HDX.
