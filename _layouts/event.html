@@ -14,7 +14,6 @@ layout: wrapper
   <div><h2 class="page-title">{{ event.title }}</h2></div>
   {{ event.content | markdownify }}
   <hr>
-  <div><h4 class="page-title">Products & Data</h2></div>
   <h4>External Event Pages: </h4>
   {% if event.refurl.hdx %}<a href="{{ event.refurl.hdx }}">HDX</a>{% endif %}
   <hr>
