@@ -14,7 +14,9 @@ layout: wrapper
   <div><h2 class="page-title">{{ event.title }}</h2></div>
   {{ event.content | markdownify }}
   <hr>
-  HDX Event Page: <a href="{{ event.refurl.hdx }}">Go</a>
+  <div><h4 class="page-title">Products & Data</h2></div>
+  <h4>External Event Pages: </h4>
+  {% if event.refurl.hdx %}<a href="{{ event.refurl.hdx }}">HDX</a>{% endif %}
   <hr>
   <div><h4 class="page-title">Products & Data</h2></div>
   <ul class="nav nav-tabs" style="padding: 10px 10px 0px 10px;">
