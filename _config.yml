@@ -19,6 +19,7 @@ redcarpet:
   extensions: [with_toc_data]
 
 # General
+edit: true
 code: "https://github.com/state-hiu/hiu.state.gov"
 branch: "gh-pages"
 disclaimer: "This site is produced and maintained by the U.S. Department of State, Humanitarian Information Unit.  For more information see the [About Us](/hiu.state.gov/about) page."

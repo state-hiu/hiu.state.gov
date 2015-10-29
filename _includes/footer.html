@@ -2,6 +2,7 @@
       <div class="footer-container">
         <div class="row">
           <div class="col-md-8" id="left-footer-menu">
+              {% if site.edit %}<a href="{{ site.code }}/blob/{{ site.branch }}{{ page.url }}" style="color:purple;text-decoration:underline;font-weight:bold;">Edit this Page</a> | {% endif %}
               <a href="{{ site.baseurl }}/">Home</a> |
               <a href="{{ site.baseurl }}/products">Products</a> |
               <a target="_blank" href="{{ site.baseurl }}/data">Data</a> |
