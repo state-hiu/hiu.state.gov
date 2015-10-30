@@ -3,5 +3,5 @@ layout: region
 category: Regions
 region_id: "south-asia"
 title: "South Asia"
-thumbnail: "Region_MiddleEast.jpg"
+thumbnail: "Region_SouthAsia.jpg"
 ---
