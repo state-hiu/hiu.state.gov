@@ -31,9 +31,14 @@ rvm list known
 rvm install ruby-2.0.0-p353
 rvm --default use ruby-2.0.0-p353
 gem install jekyll
+gem install redcarpet
 ###############
-sudo apt-get install npm
-sudo ln -s /usr/bin/nodejs /usr/bin/node
+# Still as root (sudo su -)
+apt-get install npm
+ln -s /usr/bin/nodejs /usr/bin/node
+exit
+###############
+# Back to regular user
 cd ~/hiu.state.gov
 npm install
 sudo npm install -g gulp
