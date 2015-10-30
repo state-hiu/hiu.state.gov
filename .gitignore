@@ -8,3 +8,4 @@ backups
 temp
 .temp
 *~
+.jekyll-metadata
