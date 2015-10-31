@@ -11,7 +11,7 @@ layout: wrapper
 <div class="col-md-2">
 </div>
 <div class="col-md-8">
-  <div><h2 class="page-title">{{ event.title }}</h2></div>
+  <div><h2 class="page-title"><a href="{{ site.baseurl }}/events">Events</a> / <a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2></div>
   {{ event.content | markdownify }}
   <span style="font-weight:bold;"> -- External Event Pages: </span>
   {% if event.refurl.hdx %}<a href="{{ event.refurl.hdx }}">HDX</a>{% endif %}

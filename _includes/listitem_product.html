@@ -4,9 +4,15 @@
   <!--<div class="col-md-2"></div>-->
     <div class="col-md-5">
       {% if download == true %} 
-      <a href="{{ site.storage.products }}/{{ product.pdf }}"><img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300" class="img-responsive"/></a>
+      <a href="{{ site.storage.products }}/{{ product.pdf }}" style="position:relative;display:block;width:300px;">
+        <img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300" class="img-responsive"/>
+        <div style="position:absolute;background:rgba(0,0,0,.8);line-height:30px;font-size:24px;left:0;text-align:center;bottom:0px;width:100%;color:white;">Download</div>
+      </a>
       {% else %}
-      <a href="{{ site.baseurl }}{{ product.url }}"><img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300" class="img-responsive"/></a>
+      <a href="{{ site.baseurl }}{{ product.url }}" style="position:relative;display:block;width:300px;">
+        <img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300" class="img-responsive"/>
+        <div style="position:absolute;background:rgba(0,0,0,.8);line-height:30px;font-size:24px;left:0;text-align:center;bottom:0px;width:100%;color:white;">View</div>
+      </a>
       {% endif %}
     </div>
     <div class="col-md-7">
