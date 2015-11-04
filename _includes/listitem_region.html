@@ -1,8 +1,8 @@
 <div class="row" style="background:rgb(252, 252, 252); margin-bottom: 15px;">
     <div class="col-md-5">
-      <a href="{{ site.baseurl }}{{ region.url }}"><img src="{{ site.storage.thumbnails_regions }}/{{ region.thumbnail }}" style="max-width:150; max-height:150px;"/></a>
+      <a href="{{ site.baseurl }}{{ region.url | remove: '.html' }}"><img src="{{ site.storage.thumbnails_regions }}/{{ region.thumbnail }}" style="max-width:150; max-height:150px;"/></a>
     </div>
     <div class="col-md-7">
-      <a href="{{ site.baseurl }}{{ region.url }}"><h2>{{ region.title }}</h2></a>
+      <a href="{{ site.baseurl }}{{ region.url | remove: '.html' }}"><h2>{{ region.title }}</h2></a>
     </div>
 </div>

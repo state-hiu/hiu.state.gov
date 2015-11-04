@@ -2,13 +2,13 @@
   <!--<div class="col-md-2"></div>-->
     <div class="col-md-4">
       {% if guide.thumbnail_150 %}
-      <a href="{{ site.baseurl }}{{ guide.url }}"><img src="{{ site.storage.thumbnails_guides }}/{{ guide.thumbnail_150 }}" width="150" height="150"/></a>
+      <a href="{{ site.baseurl }}{{ guide.url | remove: '.html' }}"><img src="{{ site.storage.thumbnails_guides }}/{{ guide.thumbnail_150 }}" width="150" height="150"/></a>
       {% endif %}
     </div>
     <div class="col-md-8">
       {% if showGuideTitle == false %}
       {% else %}
-      <a href="{{ site.baseurl }}{{ guide.url }}"><h4>{{ guide.title }}</h4></a>
+      <a href="{{ site.baseurl }}{{ guide.url | remove: '.html' }}"><h4>{{ guide.title }}</h4></a>
       {% endif %}
       {{ guide.date_published | date: '%B %d, %Y' }}
       <br>
@@ -17,7 +17,7 @@
       {{ guide.description | markdownify }}
       {% endif %}
       <br>
-      <a href="{{ site.baseurl }}{{ guide.url }}">View</a>
+      <a href="{{ site.baseurl }}{{ guide.url | remove: '.html' }}">View</a>
     </div>
   <!--<div class="col-md-2"></div>-->
 </div>

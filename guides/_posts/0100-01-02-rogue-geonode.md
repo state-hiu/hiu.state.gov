@@ -10,7 +10,7 @@ keywords:
   - cybergis
   - geonode
 ---
-# [Guides]({{ site.baseurl }}/guides) / [{{ page.title }} ({{ page.version }})]({{ site.baseurl }}{{ page.url }})
+# [Guides]({{ site.baseurl }}/guides) / [{{ page.title }} ({{ page.version }})]({{ site.baseurl }}{{ page.url | remove: '.html' }})
 
 ## Description
 

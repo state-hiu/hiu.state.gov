@@ -1,3 +1,3 @@
 <h3>{{ event.title }}</h3>
 <p>{{ event.content }}</p>
-<a href="{{ site.baseurl}}{{ event.url }}"><h4>View &gt;&gt;&gt;&gt;</h4></a>
+<a href="{{ site.baseurl}}{{ event.url | remove: '.html' }}"><h4>View &gt;&gt;&gt;&gt;</h4></a>
