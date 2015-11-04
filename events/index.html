@@ -23,9 +23,9 @@ title: Events
       {% if event.archived == false %}
         {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
         {% if thecycle == 'odd' %}
-          {% include listitem_event.html param='odd' %}
+          {% include main/listitem_event.html param='odd' %}
         {% else %}
-          {% include listitem_event.html param='even' %}
+          {% include main/listitem_event.html param='even' %}
         {% endif %}
       {% endif %}
     {% endfor %}
@@ -35,9 +35,9 @@ title: Events
       {% if event.archived == true %}
         {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
         {% if thecycle == 'odd' %}
-          {% include listitem_event.html param='odd' %}
+          {% include main/listitem_event.html param='odd' %}
         {% else %}
-          {% include listitem_event.html param='even' %}
+          {% include main/listitem_event.html param='even' %}
         {% endif %}
       {% endif %}
     {% endfor %}
@@ -46,9 +46,9 @@ title: Events
     {% for event in site.categories.events %}
       {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
       {% if thecycle == 'odd' %}
-        {% include listitem_event.html param='odd' %}
+        {% include main/listitem_event.html param='odd' %}
       {% else %}
-        {% include listitem_event.html param='even' %}
+        {% include main/listitem_event.html param='even' %}
       {% endif %}
     {% endfor %}
   </div>

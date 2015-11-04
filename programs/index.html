@@ -14,13 +14,13 @@ title: "Science & Technology Programs"
   <div id="featured" class="tab-pane active">
     {% for program in site.categories.programs reversed %}
       {% if program.featured == true %}
-        {% include listitem_program.html %}
+        {% include main/listitem_program.html %}
       {% endif %}
     {% endfor %}
   </div>
   <div id="all" class="tab-pane">
     {% for program in site.categories.programs reversed %}
-      {% include listitem_program.html %}
+      {% include main/listitem_program.html %}
     {% endfor %}
   </div>
 </div>

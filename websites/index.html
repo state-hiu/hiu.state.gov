@@ -14,13 +14,13 @@ title: "Websites"
     <div id="featured" class="tab-pane active">
       {% for website in site.categories.websites reversed %}
         {% if website.featured == true %}
-          {% include listitem_website.html %}
+          {% include main/listitem_website.html %}
         {% endif %}
       {% endfor %}
     </div>
     <div id="all" class="tab-pane">
       {% for website in site.categories.websites reversed %}
-        {% include listitem_website.html %}
+        {% include main/listitem_website.html %}
       {% endfor %}
     </div>
   </div>

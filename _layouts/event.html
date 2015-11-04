@@ -26,12 +26,12 @@ layout: wrapper
       {% for product in site.categories.products %}
         {% if product.events contains event.event_id %}
             {% assign showProductTitle = true %}
-            {% include listitem_related_product.html %}
+            {% include main/listitem_related_product.html %}
         {% endif %}
       {% endfor %}
     </div>
     <div id="data" class="tab-pane site-controller" ng-controller="data" data-site-controller-name="data" data-site-controller-type="data" data-site-controller-url="{{ site.geonodes[0].csw.xml }}" data-site-controller-keyword-filter="{{ event.keyword_filter | join: ';' }}">
-      {% include ng_listitem_related_dataset.html %}
+      {% include main/ng_listitem_related_dataset.html %}
     </div>
   </div>
 </div>

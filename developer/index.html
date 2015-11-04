@@ -8,13 +8,13 @@ layout: wrapper_text
 <h3>CyberGIS</h3>
 {% for repo in site.categories.repos reversed %}
   {% if repo.keywords contains 'cybergis' %}
-    <p>{% include listitem_repo.html %}</p>
+    <p>{% include main/listitem_repo.html %}</p>
   {% endif %}
 {% endfor %}
 <h3>Imagery to the Crowd</h3>
 {% for repo in site.categories.repos reversed %}
   {% if repo.keywords contains 'ittc' %}
-    <p>{% include listitem_repo.html %}</p>
+    <p>{% include main/listitem_repo.html %}</p>
   {% endif %}
 {% endfor %}
 
@@ -26,7 +26,7 @@ You can learn more about our APIs, <a href="{{ site.baseurl }}/api">[here]</a>.
 <br>
 <h2><a href="{{ site.baseurl}}/websites">Websites</a></h2>
 {% for website in site.categories.websites reversed %}
-  {% include listitem_website.html %}
+  {% include main/listitem_website.html %}
 {% endfor %}
 
 <h2>Contact</h2>

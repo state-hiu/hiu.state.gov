@@ -20,16 +20,16 @@ title: Products
       {% if product.featured == true %}
         {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
         {% if thecycle == 'odd' %}
-          {% include listitem_product.html param='odd' %}
+          {% include main/listitem_product.html param='odd' %}
         {% else %}
-          {% include listitem_product.html param='even' %}
+          {% include main/listitem_product.html param='even' %}
         {% endif %}
       {% endif %}
     {% endfor %}
   </div>
   <div id="all" class="tab-pane">
     {% for product in site.categories.products %}
-      {% include listitem_related_product.html %}
+      {% include main/listitem_related_product.html %}
     {% endfor %}
   </div>
 </div>

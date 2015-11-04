@@ -40,34 +40,34 @@ title: Guides
     <div id="featured" class="tab-pane active">
       {% for guide in site.categories.guides %}
         {% if guide.featured == true %}
-          {% include listitem_guide.html %}
+          {% include main/listitem_guide.html %}
         {% endif %}
       {% endfor %}
     </div>
     <div id="cybergis" class="tab-pane active">
       {% for guide in site.categories.guides %}
         {% if guide.keywords contains 'cybergis' %}
-          {% include listitem_guide.html %}
+          {% include main/listitem_guide.html %}
         {% endif %}
       {% endfor %}
     </div>
     <div id="ittc" class="tab-pane active">
       {% for guide in site.categories.guides %}
         {% if guide.keywords contains 'ittc' %}
-          {% include listitem_guide.html %}
+          {% include main/listitem_guide.html %}
         {% endif %}
       {% endfor %}
     </div>
     <div id="site" class="tab-pane active">
       {% for guide in site.categories.guides %}
         {% if guide.keywords contains 'site' %}
-          {% include listitem_guide.html %}
+          {% include main/listitem_guide.html %}
         {% endif %}
       {% endfor %}
     </div>
     <div id="all" class="tab-pane">
       {% for guide in site.categories.guides %}
-        {% include listitem_related_guide.html %}
+        {% include main/listitem_related_guide.html %}
       {% endfor %}
     </div>
   </div>

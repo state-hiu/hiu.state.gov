@@ -25,7 +25,7 @@ layout: wrapper
       {% for product in site.categories.products %}
         {% if product.region_id == page.region_id %}
           {% if product.featured == true %}
-            {% include listitem_product.html %}
+            {% include main/listitem_product.html %}
           {% endif %}
         {% endif %}
       {% endfor %}
@@ -33,12 +33,12 @@ layout: wrapper
     <div id="all" class="tab-pane">
       {% for product in site.categories.products %}
         {% if product.region_id == page.region_id %}
-          {% include listitem_related_product.html %}
+          {% include main/listitem_related_product.html %}
         {% endif %}
       {% endfor %}
     </div>
     <div id="data" class="tab-pane site-controller" ng-controller="data" data-site-controller-name="data" data-site-controller-type="data" data-site-controller-url="{{ site.geonodes[0].csw.xml }}" data-site-controller-region-name="{{ page.title }}" data-site-controller-region-filter="{{ page.region_filter | join: ';' }}">
-      {% include ng_listitem_related_dataset.html %}
+      {% include main/ng_listitem_related_dataset.html %}
     </div>
   </div>
 </div>

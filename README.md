@@ -47,11 +47,14 @@ gulp
 gulp bootstrap:compile
 ```
 
+**Extensionless Permalinks**
+
 ```
-# Extensionless permalinks
 # http://jekyllrb.com/docs/permalinks/#extensionless-permalinks
 try_files $uri $uri.html $uri/ =404;
 ```
+
+Also, see [http://rickharrison.me/how-to-remove-trailing-slashes-from-jekyll-urls-using-nginx](http://rickharrison.me/how-to-remove-trailing-slashes-from-jekyll-urls-using-nginx).
 
 ## Usage
 

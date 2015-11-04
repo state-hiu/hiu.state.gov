@@ -12,16 +12,16 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     <meta http-equiv="Content-Language" content="en_US" />
     {% if site.twittercard.enabled == true %}
       {% if page.categories contains "products" %}
-        {% include twittercard_product.html %}
+        {% include main/seo/twittercard_product.html %}
       {% else %}
-        {% include twittercard_default.html %}
+        {% include main/seo/twittercard_default.html %}
       {% endif %}
     {% endif %}
     {% if site.opengraph.enabled == true %}
       {% if page.categories contains "products" %}
-        {% include opengraph_product.html %}
+        {% include main/seo/opengraph_product.html %}
       {% else %}
-        {% include opengraph_default.html %}
+        {% include main/seo/opengraph_default.html %}
       {% endif %}
     {% endif %}
     {% for dns in page.dns_prefetch %}
@@ -78,15 +78,15 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     {% else %}
     <script src="{{ site.baseurl }}/build/js/main.min.js?v={{ v }}"></script>
     {% endif %}
-    {% include const_snippet.html %}
+    {% include main/const_snippet.html %}
     <script type="text/javascript" language="Javascript">
         var mb_access_token = '{{ site.mapbox.access_token }}';
         var mb_url_tiles = '{{ site.mapbox.url_tiles }}' + mb_access_token;
         var mb_url_utfgrid = '{{ site.mapbox.url_utfgrid }}'+ mb_access_token;
         var gn_url_tiles = '{{ site.geonodes[0].tiles }}';
     </script>
-    {% include site_snippet.html %}
-    {% include tilelayers_snippet.html %}
+    {% include main/site_snippet.html %}
+    {% include main/tilelayers_snippet.html %}
     </script>
     <script type="text/javascript" language="Javascript">
         var createLink = function(map, layer, label, zIndex)
@@ -124,11 +124,11 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     </script>
     <!--Digital Analytics Program roll-up, see https://analytics.usa.gov for data-->
     {% if site.dap.enabled == true %}
-      {% include analytics_dap_snippet.html %}
+      {% include main/analytics/analytics_dap_snippet.html %}
     {% endif %}
     <!-- Google Analytics -->
     {% if site.ga.enabled == true %}
-      {% include analytics_ga_snippet.html %}
+      {% include main/analytics/analytics_ga_snippet.html %}
     {% endif %}
   </head>
   <body>
