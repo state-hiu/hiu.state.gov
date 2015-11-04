@@ -47,6 +47,12 @@ gulp
 gulp bootstrap:compile
 ```
 
+```
+# Extensionless permalinks
+# http://jekyllrb.com/docs/permalinks/#extensionless-permalinks
+try_files $uri $uri.html $uri/ =404;
+```
+
 ## Usage
 
 
