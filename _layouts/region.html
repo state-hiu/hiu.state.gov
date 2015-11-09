@@ -33,7 +33,7 @@ layout: wrapper
     <div id="all" class="tab-pane">
       {% for product in site.categories.products %}
         {% if product.region_id == page.region_id %}
-          {% include main/listitem_related_product.html %}
+          {% include main/listitem_product_150.html %}
         {% endif %}
       {% endfor %}
     </div>

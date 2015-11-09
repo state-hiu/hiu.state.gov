@@ -1,51 +1,35 @@
-{% if include.param == 'odd' %}
-
-<div class="row odd" style="margin-bottom: 15px;">
-  <!--<div class="col-md-2"></div>-->
-    <div class="col-md-5">
-      {% if download == true %} 
-      <a href="{{ site.storage.products }}/{{ product.pdf }}" style="position:relative;display:block;width:300px;">
-        <img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300" class="img-responsive"/>
-        <div style="position:absolute;background:rgba(0,0,0,.8);line-height:30px;font-size:24px;left:0;text-align:center;bottom:0px;width:100%;color:white;">Download</div>
-      </a>
-      {% else %}
-      <a href="{{ site.baseurl }}{{ product.url }}" style="position:relative;display:block;width:300px;">
-        <img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300" class="img-responsive"/>
-        <div style="position:absolute;background:rgba(0,0,0,.8);line-height:30px;font-size:24px;left:0;text-align:center;bottom:0px;width:100%;color:white;">View</div>
-      </a>
-      {% endif %}
-    </div>
-    <div class="col-md-7">
-      {% if showProductTitle == false %}
-      {% else %}
-      <a href="{{ site.baseurl }}{{ product.url }}"><h4>{{ product.title }}</h4></a>
-      {% endif %}
-      <a href="{{ site.baseurl }}/regions/{{ product.region_id }}">{{ product.region_title }}</a> | {{ product.date_published | date: '%B %d, %Y' }}
-      <br>
-      <br>
-      {{ product.content }}
-      <hr>
-      <a href="{{ site.storage.products }}/{{ product.pdf }}">Download</a>
-    </div>
-  <!--<div class="col-md-2"></div>-->
-</div>
-
+{% assign odd = false %}{% if include.odd %}{% assign odd = include.odd %}{% endif %}
+{% assign li_left_cols = 5 %}{% if include.li_left_cols %}{% assign li_left_cols = include.li_left_cols %}{% endif %}
+{% assign li_right_cols = 7 %}{% if include.li_right_cols %}{% assign li_right_cols = include.li_right_cols %}{% endif %}
+{% assign li_thumbnail_width = 300 %}{% if include.li_thumbnail_width %}{% assign li_thumbnail_width = include.li_thumbnail_width %}{% endif %}
+{% assign li_thumbnail_height = 300 %}{% if include.li_thumbnail_height %}{% assign li_thumbnail_height = include.li_thumbnail_height %}{% endif %}
+{% if odd == true %}
+    {% assign li_class = 'listitem row odd' %}
 {% else %}
-
-
-<div class="row" style="margin-bottom: 15px;">
-  <!--<div class="col-md-2"></div>-->
-    <div class="col-md-5">
+    {% assign li_class = 'listitem row' %}
+{% endif %}
+<div class="{{ li_class }}" style="margin-bottom: 15px;">
+    <div class="col-md-{{ li_left_cols }}">
       {% if download == true %} 
-      <a href="{{ site.storage.products }}/{{ product.pdf }}"><img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300" class="img-responsive"/></a>
+      <a class="listitem-thumbnail" href="{{ site.storage.products }}/{{ product.pdf }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
+        {% if li_thumbnail_width == 150 %}
+        <img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_150 }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive"/>
+        {% else %}
+        <img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive"/>
+        {% endif %}
+        <div><span style="line-height: {{ li_thumbnail_height }}px;">Download</span></div>
+      </a>
       {% else %}
-      <a href="{{ site.baseurl }}{{ product.url }}"><img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="300" height="300" class="img-responsive"/></a>
+      <a class="listitem-thumbnail" href="{{ site.baseurl }}{{ product.url | remove: '.html' }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
+        <img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive"/>
+        <div><span style="line-height: {{ li_thumbnail_height }}px;">View</span></div>
+      </a>
       {% endif %}
     </div>
-    <div class="col-md-7">
+    <div class="col-md-{{ li_right_cols }}">
       {% if showProductTitle == false %}
       {% else %}
-      <a href="{{ site.baseurl }}{{ product.url }}"><h4>{{ product.title }}</h4></a>
+      <a href="{{ site.baseurl }}{{ product.url | remove: '.html' }}"><h4>{{ product.title }}</h4></a>
       {% endif %}
       <a href="{{ site.baseurl }}/regions/{{ product.region_id }}">{{ product.region_title }}</a> | {{ product.date_published | date: '%B %d, %Y' }}
       <br>
@@ -54,7 +38,4 @@
       <hr>
       <a href="{{ site.storage.products }}/{{ product.pdf }}">Download</a>
     </div>
-  <!--<div class="col-md-2"></div>-->
 </div>
-
-{% endif %}

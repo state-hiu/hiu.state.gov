@@ -26,7 +26,12 @@ layout: wrapper
       {% for product in site.categories.products %}
         {% if product.events contains event.event_id %}
             {% assign showProductTitle = true %}
-            {% include main/listitem_related_product.html %}
+            {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+            {% if thecycle == 'odd' %}
+              {% include main/listitem_product_150.html odd=true %}
+            {% else %}
+              {% include main/listitem_product_150.html odd=false %}
+            {% endif %}
         {% endif %}
       {% endfor %}
     </div>

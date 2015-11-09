@@ -1,0 +1,6 @@
+{% assign odd = false %}{% if include.odd %}{% assign odd = include.odd %}{% endif %}
+{% assign li_left_cols = 4 %}{% if include.li_left_cols %}{% assign li_left_cols = include.li_left_cols %}{% endif %}
+{% assign li_right_cols = 8  %}{% if include.li_right_cols %}{% assign li_right_cols = include.li_right_cols %}{% endif %}
+{% assign li_thumbnail_width = 150 %}{% if include.li_thumbnail_width %}{% assign li_thumbnail_width = include.li_thumbnail_width %}{% endif %}
+{% assign li_thumbnail_height = 150 %}{% if include.li_thumbnail_height %}{% assign li_thumbnail_height = include.li_thumbnail_height %}{% endif %}
+{% include main/listitem_product.html odd=odd li_left_cols=li_left_cols li_right_cols=li_right_cols li_thumbnail_width=li_thumbnail_width li_thumbnail_height=li_thumbnail_height %}

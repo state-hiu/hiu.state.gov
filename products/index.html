@@ -20,16 +20,21 @@ title: Products
       {% if product.featured == true %}
         {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
         {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html param='odd' %}
+          {% include main/listitem_product.html odd=true %}
         {% else %}
-          {% include main/listitem_product.html param='even' %}
+          {% include main/listitem_product.html odd=false %}
         {% endif %}
       {% endif %}
     {% endfor %}
   </div>
   <div id="all" class="tab-pane">
     {% for product in site.categories.products %}
-      {% include main/listitem_related_product.html %}
+      {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+      {% if thecycle == 'odd' %}
+        {% include main/listitem_product_150.html odd=true %}
+      {% else %}
+        {% include main/listitem_product_150.html odd=false %}
+      {% endif %}
     {% endfor %}
   </div>
 </div>

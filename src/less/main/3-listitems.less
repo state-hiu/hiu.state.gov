@@ -1,0 +1,26 @@
+.listitem .listitem-thumbnail {
+    position: relative;
+    display: block;
+    /* max-width, max-height done set by template */
+}
+.listitem .listitem-thumbnail div {
+    display: block;
+    position: absolute;
+    background: rgb(0,0,0);
+    opacity: 0.0;
+    left:0;
+    bottom: 0;
+    width:100%;
+    height: 100%;
+    text-align:center;
+}
+.listitem .listitem-thumbnail:hover div {
+    opacity: 0.8;
+    transition: opacity 0.4s ease-in-out;
+}
+.listitem .listitem-thumbnail div span {
+    display: inline-block;
+    color:white;
+    font-size: 24px;
+    /* line height set by template */
+}
