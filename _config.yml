@@ -4,12 +4,18 @@ logo: "/assets/img/hiu_logo.png"
 markdown: redcarpet
 timezone: America/New_York
 permalink: none
+# Local Dev
 #baseurl: 
 #url: http://localhost:8000
 #destination: /var/www
+# GitHub Pages
 baseurl: /hiu.state.gov
 url: http://state-hiu.github.io/hiu.state.gov
 destination: _site
+# Production
+#baseurl: 
+#url: http://hiu-beta.state.gov
+#destination: /var/www
 
 # Explicit excludes, including dotfiles to be safe
 exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
