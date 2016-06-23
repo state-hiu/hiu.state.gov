@@ -15,12 +15,36 @@ layerswitcher:
 ---
 <nav id='menu-ui' class='menu-ui'></nav>
 <div id="map" style="top:0px;left:0px;width:100%;height:100%;"></div>
+
 <script>
     var layerswitcher = $('#menu-ui');
-    var map = L.map('map').setView([0, 30], 3);
+
+    //var map = L.map('map').setView([0, 30], 3);
+
+    L.mapbox.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
+
+
+    var map = L.mapbox.map('map', '', {
+        attributionControl: false
+      }).setView([10, 30], 3);;
+
+/*
+    var map = L.mapbox.map('map')
+    .setView([38.97416, -95.23252], 15);
+    */
+
+    // Use styleLayer to add a Mapbox style created in Mapbox Studio
+      var baseLayer = L.mapbox.styleLayer('mapbox://styles/hiu/ciprlds860017bakwf6yfa6f7',{
+        minZoom: 1,
+        maxZoom: 16,
+        scrollWheelZoom: true,
+        zoomControl: false // we'll add later
+      }).addTo(map);
 
     var geojsonLayers = []; // ordered by options.zIndex
     ///////////////////////////////
+
+/*
     for(var i = 0; i < tilelayers.length; i++)
     {
         var tl = tilelayers[i];
@@ -41,6 +65,8 @@ layerswitcher:
             }
         }catch(err){console.log("Could not add tilelayer "+i)};
     }
+*/
+
 
     /* LSIB Countries UTFGrid
     // Resolution is server dependent.  MapBox.com uses resolution=4.
@@ -59,6 +85,7 @@ layerswitcher:
     });
     countries.addTo(map);
     */
+
     // Regions
     var openRegionPopup = function (m,f,latlng) {
         var popupContent = '<h4><a href="{{ site.baseurl }}/regions/'+f.properties.id+'">'+site.regions[f.properties.id]+'</a></h4>';
@@ -113,6 +140,7 @@ layerswitcher:
             layerswitcher.append(createLink(map, regions, 'Regions', regions.options.zIndex));
         }
     });
+
     // Products GeoJSON
     var productIcon = L.icon({
         iconUrl: "{{ site.baseurl }}/assets/img/mapgive_blue_pt.png",
@@ -140,6 +168,7 @@ layerswitcher:
             layerswitcher.append(createLink(map, products, 'Products', products.options.zIndex));
         }
     });
+
     // Data GeoJSON
     $.ajax({
         dataType: "xml",
@@ -210,8 +239,8 @@ layerswitcher:
             layerswitcher.append(createLink(map, datasets, 'Datasets', datasets.options.zIndex));
         }
     });
+
     //events
-    // Products GeoJSON
     var eventIcon = L.icon({
         iconUrl: "{{ site.baseurl }}/assets/img/mapgive_red_pt.png",
         iconSize: [30, 45],

@@ -33,7 +33,11 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     <!--<link href="{{ site.baseurl }}/lib/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="{{ site.baseurl }}/lib/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet"/>-->
     <!--<link href="{{ site.baseurl }}/assets/css/bootstrap.less.css" rel="stylesheet"/>-->
-    <link href="{{ site.baseurl }}/build/bootstrap/bootstrap.css" rel="stylesheet"/>
+
+    <!--<link href="{{ site.baseurl }}/build/bootstrap/bootstrap.css" rel="stylesheet"/>-->
+
+    <link href="{{ site.baseurl }}/css/main.css" rel="stylesheet"/>
+
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
     <!-- CSS / Internal -->
     <link href='{{site.baseurl}}/build/css/main.css?v={{ v }}' rel='stylesheet' />
@@ -65,13 +69,13 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     {% else %}
     <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.min.js"></script>
     {% endif %}
-    {% if site.debug.leaflet == true %}
-    <script src="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet-src.js"></script>
-    <script src="{{ site.baseurl }}/lib/Leaflet.utfgrid/dist/leaflet.utfgrid-src.js"></script>
-    {% else %}
-    <script src="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.js"></script>
-    <script src="{{ site.baseurl }}/lib/Leaflet.utfgrid/dist/leaflet.utfgrid.js"></script>
-    {% endif %}
+
+    <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet'/>
+
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.18.0/mapbox-gl.css' rel='stylesheet' />
+
     <!-- JavaScript / Internal -->
     {% if site.debug.main == true %}
     <script src="{{ site.baseurl }}/build/js/main.js?v={{ v }}"></script>
