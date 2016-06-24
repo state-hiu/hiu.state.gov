@@ -20,12 +20,7 @@ layerswitcher:
 
 <div id="map" style="top:0px;left:0px;width:100%;height:100%;"></div>
 
-<script src="//d3js.org/d3.v3.min.js"></script>
-<script src="//d3js.org/topojson.v1.min.js"></script>
-<script src="http://d3js.org/queue.v1.min.js"></script>
-
 <script>
-
     var layerswitcher = $('#menu-ui');
 
     //var map = L.map('map').setView([0, 30], 3);
@@ -35,7 +30,7 @@ layerswitcher:
 
     var map = L.mapbox.map('map', '', {
         attributionControl: false
-      }).setView([14, 29], 3);
+      }).setView([10, 30], 3);;
 
 /*
     var map = L.mapbox.map('map')
@@ -52,17 +47,6 @@ layerswitcher:
 
     var geojsonLayers = []; // ordered by options.zIndex
     ///////////////////////////////
-
-
-queue()
-        .defer(d3.json, "us.geojson")
-        .await(ready);
-    function ready(error, data){
-        L.geoJson(data).addTo(map);
-        }
-
-
-
 
 /*
     for(var i = 0; i < tilelayers.length; i++)
