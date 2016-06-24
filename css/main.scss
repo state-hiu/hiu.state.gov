@@ -4,7 +4,7 @@
 // you should override bootstrap variables before you import bootstrap
 // override the bootstrap brand-primary colour
 
-$brand-primary: red;
+//$brand-primary: red;
 
 $state-blue: #0A2E52;
 
@@ -307,4 +307,15 @@ $navbar-inverse-color:                      #333 !default;
     /* line height set by template */
 }
 
+img.thumb150 {
+    vertical-align: middle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.listitem a.thumb150 {
+    display: initial;
+}
 

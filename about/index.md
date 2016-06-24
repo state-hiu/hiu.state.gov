@@ -32,13 +32,13 @@ For commercial satellite imagery requests, see [Imagery]({{ site.baseurl }}/abou
 
 Browse through our [open guide collection]({{ site.baseurl }}/guides), including guides on GeoNode and our Imagery to the Crowd workflow.
 
-## Developer
-
-You can more about about our open source software, developer resources, APIs, and websites on our [developer page]({{ site.baseurl }}/developer).
-
 ## Careers
 
 If you are interested in a career or internship with HIU, please visit our [careers page]({{ site.baseurl }}/about/careers).
+
+## Developer
+
+You can more about about our open source software, developer resources, APIs, and websites on our [developer page]({{ site.baseurl }}/developer).
 
 ## Contact
 

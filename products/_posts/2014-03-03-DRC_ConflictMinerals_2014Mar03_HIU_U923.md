@@ -2,7 +2,7 @@
 layout: product
 category: products
 title: "Democratic Republic of Congo: Presence at Mine Sites of Armed Groups and other Entities"
-region_id: "africa"
+region_id: "AF"
 region_title: "Africa"
 date_published: 2014-03-03
 pdf: "DRC_ConflictMinerals_2014Mar03_HIU_U923.pdf"

@@ -9,11 +9,69 @@ title: Products
   {% endif %}
 {% endfor %}
 
+{% assign count_AF = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "AF" %}
+    {% assign count_AF = count_AF | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign count_EAP = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "EAP" %}
+    {% assign count_EAP = count_EAP | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign count_EUR = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "EUR" %}
+    {% assign count_EUR = count_EUR | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign count_NEA = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "NEA" %}
+    {% assign count_NEA = count_NEA | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign count_SCA = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "SCA" %}
+    {% assign count_SCA = count_SCA | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign count_WHA = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "WHA" %}
+    {% assign count_WHA = count_WHA | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% assign count_global = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "global" %}
+    {% assign count_global = count_global | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
 <div><h2 class="page-title">{{ page.title }}</h2></div>
+
 <ul class="nav nav-tabs" style="padding: 10px 10px 0px 10px;">
   <li class="active"><a href="#featured" data-toggle="tab">Featured ({{ count_featured }})</a></li>
+  <li><a href="#AF" data-toggle="tab">Africa ({{ count_AF }})</a></li>
+  <li><a href="#EAP" data-toggle="tab">East Asia and the Pacific ({{ count_EAP }})</a></li>
+  <li><a href="#EUR" data-toggle="tab">Europe and Eurasia ({{ count_EUR }})</a></li>
+  <li><a href="#NEA" data-toggle="tab">Near East ({{ count_NEA}})</a></li>
+  <li><a href="#SCA" data-toggle="tab">South and Central Asia ({{ count_SCA }})</a></li>
+  <li><a href="#WHA" data-toggle="tab">Western Hemisphere ({{ count_WHA }})</a></li>
+  <li><a href="#global" data-toggle="tab">Global ({{ count_global }})</a></li>
   <li><a href="#all" data-toggle="tab">All ({{ site.categories.products | size }}) </a></li>
 </ul>
+
 <div class="tab-content" style="padding: 10px;">
   <div id="featured" class="tab-pane active">
     {% for product in site.categories.products %}
@@ -27,6 +85,98 @@ title: Products
       {% endif %}
     {% endfor %}
   </div>
+
+    <div id="AF" class="tab-pane active">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "AF" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div id="EAP" class="tab-pane active">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "EAP" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div id="EUR" class="tab-pane active">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "EUR" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+    <div id="NEA" class="tab-pane active">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "NEA" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div id="SCA" class="tab-pane active">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "SCA" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div id="WHA" class="tab-pane active">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "WHA" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div id="global" class="tab-pane active">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "global" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
   <div id="all" class="tab-pane">
     {% for product in site.categories.products %}
       {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
