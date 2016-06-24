@@ -182,11 +182,6 @@ $navbar-inverse-color:                      #333 !default;
     text-align: right;
 }
 
-.container-fluid {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
 .mapgive-font {
     font-family: "Trebuchet MS",Arial,sans-serif;
     font-size: 18px;
@@ -317,5 +312,12 @@ img.thumb150 {
 
 .listitem a.thumb150 {
     display: initial;
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+    min-height: 100%;
+    margin-bottom: -58px;
 }
 
