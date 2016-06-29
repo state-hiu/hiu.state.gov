@@ -39,8 +39,11 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     <link href="{{ site.baseurl }}/css/main.css" rel="stylesheet"/>
 
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
-    <!-- CSS / Internal -->
+
+    <!-- CSS / Internal: Not using LESS anymore
     <link href='{{site.baseurl}}/build/css/main.css?v={{ v }}' rel='stylesheet' />
+    -->
+
     <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}</style>
     <!-- JavaScript / Polyfill -->	
     {% if site.debug.polyfill == true %}
