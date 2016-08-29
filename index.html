@@ -25,14 +25,19 @@ body {
 }
 </style>
 
-<div id="map" style="top:0px;left:0px;width:100%;height:100%;"></div>
-<div class="bureau-name"></div>
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="https://d3js.org/topojson.v1.min.js"></script>
-<script src="http://d3js.org/queue.v1.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>-->
 
+<script src="{{ site.baseurl }}/lib/d3/d3.v3.min.js"></script>
+<script src="{{ site.baseurl }}/lib/d3/topojson.v1.min.js"></script>
+<script src="{{ site.baseurl }}/lib/queue/queue.v1.min.js"></script>
+
+<div id="map" style="top:0px;left:0px;width:100%;height:100%;"></div>
+<div class="bureau-name"></div>
 
 <script>
     L.TopoJSON = L.GeoJSON.extend({  
@@ -56,7 +61,6 @@ body {
     (function(){
 
 
-
             var layerswitcher = $('#menu-ui');
 
             //var map = L.map('map').setView([0, 30], 3);
@@ -68,10 +72,10 @@ body {
                 attributionControl: false
               }).setView([14, 29], 3);
 
-        /*
-            var map = L.mapbox.map('map')
-            .setView([38.97416, -95.23252], 15);
-        */
+            /*
+                var map = L.mapbox.map('map')
+                .setView([38.97416, -95.23252], 15);
+            */
 
             // Use styleLayer to add a Mapbox style created in Mapbox Studio
               var baseLayer = L.mapbox.styleLayer('mapbox://styles/hiu/cipse716l000lcbnk2l6sgbz8',{
@@ -81,10 +85,9 @@ body {
                 zoomControl: false // we'll add later
               }).addTo(map);
 
-
             var topoLayer = new L.TopoJSON()
 
-            $.getJSON('bureau_outline_topojson5.json')
+            $.getJSON('{{ site.baseurl }}/localdata/bureau_outline_topojson5.json')
               .done(addTopoData);
 
             function addTopoData(topoData){  
@@ -95,104 +98,104 @@ body {
 
 
             function handleLayer(layer){  
-          //var randomValue = Math.random(),
-            //fillColor = colorScale(randomValue).hex();
-          var fillColor;
+                //var randomValue = Math.random(),
+                //fillColor = colorScale(randomValue).hex();
+                var fillColor;
 
-          console.log(layer.feature.properties.RegBureau);
+                console.log(layer.feature.properties.RegBureau);
 
-          switch (layer.feature.properties.RegBureau) {
-             case "AF":
-                fillColor = "#0A2E52";
-                break;
-             case "EAP":
-                fillColor = "#0A2E52";
-                break;
-             case "EUR":
-                fillColor = "#0A2E52";
-                break;
-             case "NEA":
-                fillColor = "#0A2E52";
-                break;
-             case "SCA":
-                fillColor = "#0A2E52";
-                break;
-             case "WHA":
-                fillColor = "#0A2E52";
-                break;
-             default:
-                fillColor = "#b3b3b3";
-          }
+                switch (layer.feature.properties.RegBureau) {
+                 case "AF":
+                    fillColor = "#0A2E52";
+                    break;
+                 case "EAP":
+                    fillColor = "#0A2E52";
+                    break;
+                 case "EUR":
+                    fillColor = "#0A2E52";
+                    break;
+                 case "NEA":
+                    fillColor = "#0A2E52";
+                    break;
+                 case "SCA":
+                    fillColor = "#0A2E52";
+                    break;
+                 case "WHA":
+                    fillColor = "#0A2E52";
+                    break;
+                 default:
+                    fillColor = "#b3b3b3";
+                }
 
-          layer.setStyle({
-            fillColor : fillColor,
-            fillOpacity:0,
-            color:fillColor,
-            weight:1.5,
-            opacity:1
-          });
+                layer.setStyle({
+                    fillColor : fillColor,
+                    fillOpacity:0,
+                    color:fillColor,
+                    weight:1.5,
+                    opacity:1
+                    });
 
-          layer.on({
-            mouseover: enterLayer,
-            mouseout: leaveLayer
-          });
-        }
+                  layer.on({
+                    mouseover: enterLayer,
+                    mouseout: leaveLayer
+                  });
+                }
 
-        var $tooltip = $('.country-name');
+                var $tooltip = $('.country-name');
 
-        function enterLayer(){  
-          var countryName = this.feature.properties.RegBureau;
-          $tooltip.text(countryName).show();
+                function enterLayer(){  
+                  var countryName = this.feature.properties.RegBureau;
+                  $tooltip.text(countryName).show();
 
-          this.bringToFront();
+                  this.bringToFront();
 
-          switch (this.feature.properties.RegBureau) {
-             case "AF":
-                fillColor = "#ff6600";
-                break;
-             case "EAP":
-                fillColor = "#ffff00";
-                break;
-             case "EUR":
-                fillColor = "#ff66cc";
-                break;
-             case "NEA":
-                fillColor = "#66ff66";
-                break;
-             case "SCA":
-                fillColor = "#9900ff";
-                break;
-             case "WHA":
-                fillColor = "#3399ff";
-                break;
-             default:
-                fillColor = "#b3b3b3";
-          }
+                  switch (this.feature.properties.RegBureau) {
+                     case "AF":
+                        fillColor = "#ff6600";
+                        break;
+                     case "EAP":
+                        fillColor = "#ffff00";
+                        break;
+                     case "EUR":
+                        fillColor = "#ff66cc";
+                        break;
+                     case "NEA":
+                        fillColor = "#66ff66";
+                        break;
+                     case "SCA":
+                        fillColor = "#9900ff";
+                        break;
+                     case "WHA":
+                        fillColor = "#3399ff";
+                        break;
+                     default:
+                        fillColor = "#b3b3b3";
+                  }
 
-          this.setStyle({
-            color:fillColor,
-            weight:3,
-            opacity: 1
-          });
-        }
+                  this.setStyle({
+                    color:fillColor,
+                    weight:3,
+                    opacity: 1
+                  });
+                }
 
-        function leaveLayer(){  
-          $tooltip.hide();
+                function leaveLayer(){  
+                  $tooltip.hide();
 
-          this.bringToBack();
-          this.setStyle({
-            color: '#0A2E52',
-            weight:2,
-            opacity:1
-          });
-        }
+                  this.bringToBack();
+                  this.setStyle({
+                    color: '#0A2E52',
+                    weight:2,
+                    opacity:1
+                  });
+            }
 
 
-        topoLayer.on("click", function (event) {
-            // Assuming the clicked feature is a shape, not a point marker.
-            map.fitBounds(event.layer.getBounds());
-            //map.setView(event.latlng, 5);
-        });
+            topoLayer.on("click", function (event) {
+                // Assuming the clicked feature is a shape, not a point marker.
+                map.fitBounds(event.layer.getBounds());
+                //map.setView(event.latlng, 5);
+            });
 
             // Products GeoJSON
             var productIcon = L.icon({

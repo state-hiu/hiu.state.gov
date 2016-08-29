@@ -25,7 +25,7 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
       {% endif %}
     {% endif %}
     {% for dns in page.dns_prefetch %}
-    <link rel="dns-prefetch" href="{{ dns }}">
+        <link rel="dns-prefetch" href="{{ dns }}">
     {% endfor %}
     <title>{{ page.title }}</title>
     <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/favicon.ico" />
@@ -38,7 +38,6 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
 
     <link href="{{ site.baseurl }}/css/main.css" rel="stylesheet"/>
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
 
     <!-- CSS / Internal: Not using LESS anymore
     <link href='{{site.baseurl}}/build/css/main.css?v={{ v }}' rel='stylesheet' />
@@ -47,30 +46,30 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}</style>
     <!-- JavaScript / Polyfill -->	
     {% if site.debug.polyfill == true %}
-    <script src="{{ site.baseurl }}/build/js/polyfill.js?v={{ v }}"></script>
+        <script src="{{ site.baseurl }}/build/js/polyfill.js?v={{ v }}"></script>
     {% else %}
-    <script src="{{ site.baseurl }}/build/js/polyfill.min.js?v={{ v }}"></script>
+        <script src="{{ site.baseurl }}/build/js/polyfill.min.js?v={{ v }}"></script>
     {% endif %}
     <!-- JavaScript / External -->	
     <!--<script src="{{ site.baseurl }}/lib/jquery/1.7.2/jquery-1.7.2.js"></script>-->
     {% if site.debug.jquery == true %}
-    <script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.js"></script>
-    <script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui-1.8.14.js"></script>
+        <script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.js"></script>
+        <script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui-1.8.14.js"></script>
     {% else %}
-    <script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.min.js"></script>
-    <script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui-1.8.14.min.js"></script>
+        <script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.min.js"></script>
+        <script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui-1.8.14.min.js"></script>
     {% endif %}
     {% if site.debug.angular == true %}
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular-route.js"></script>
     {% else %}
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular-route.min.js"></script>
     {% endif %}
     {% if site.debug.bootstrap == true %}
-    <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.js"></script>
+        <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.js"></script>
     {% else %}
-    <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.min.js"></script>
+        <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.min.js"></script>
     {% endif %}
 
     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>

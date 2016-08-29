@@ -65,7 +65,7 @@ deps:
   angular:
     version: "1.4.0-beta.4"
   jquery:
-    version: "1.9.1"
+    version: "1.11.3"
 
 # GeoNode
 # The first GeoNode is the primary one that is loaded on the homepage.
