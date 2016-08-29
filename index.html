@@ -84,7 +84,7 @@ body {
 
             var topoLayer = new L.TopoJSON()
 
-            $.getJSON('bureau_outline_topojson3.json')
+            $.getJSON('bureau_outline_topojson5.json')
               .done(addTopoData);
 
             function addTopoData(topoData){  
@@ -102,6 +102,51 @@ body {
           console.log(layer.feature.properties.RegBureau);
 
           switch (layer.feature.properties.RegBureau) {
+             case "AF":
+                fillColor = "#0A2E52";
+                break;
+             case "EAP":
+                fillColor = "#0A2E52";
+                break;
+             case "EUR":
+                fillColor = "#0A2E52";
+                break;
+             case "NEA":
+                fillColor = "#0A2E52";
+                break;
+             case "SCA":
+                fillColor = "#0A2E52";
+                break;
+             case "WHA":
+                fillColor = "#0A2E52";
+                break;
+             default:
+                fillColor = "#b3b3b3";
+          }
+
+          layer.setStyle({
+            fillColor : fillColor,
+            fillOpacity:0,
+            color:fillColor,
+            weight:1.5,
+            opacity:1
+          });
+
+          layer.on({
+            mouseover: enterLayer,
+            mouseout: leaveLayer
+          });
+        }
+
+        var $tooltip = $('.country-name');
+
+        function enterLayer(){  
+          var countryName = this.feature.properties.RegBureau;
+          $tooltip.text(countryName).show();
+
+          this.bringToFront();
+
+          switch (this.feature.properties.RegBureau) {
              case "AF":
                 fillColor = "#ff6600";
                 break;
@@ -124,29 +169,9 @@ body {
                 fillColor = "#b3b3b3";
           }
 
-          layer.setStyle({
-            fillColor : fillColor,
-            fillOpacity:0,
-            color:fillColor,
-            weight:1,
-            opacity:0.5
-          });
-
-          layer.on({
-            mouseover: enterLayer,
-            mouseout: leaveLayer
-          });
-        }
-
-        var $tooltip = $('.country-name');
-
-        function enterLayer(){  
-          var countryName = this.feature.properties.RegBureau;
-          $tooltip.text(countryName).show();
-
-          this.bringToFront();
           this.setStyle({
-            weight:2,
+            color:fillColor,
+            weight:3,
             opacity: 1
           });
         }
@@ -156,16 +181,17 @@ body {
 
           this.bringToBack();
           this.setStyle({
-            weight:1,
-            opacity:.5
+            color: '#0A2E52',
+            weight:2,
+            opacity:1
           });
         }
 
 
         topoLayer.on("click", function (event) {
             // Assuming the clicked feature is a shape, not a point marker.
-            //map.fitBounds(event.layer.getBounds());
-            map.setView(event.latlng, 5);
+            map.fitBounds(event.layer.getBounds());
+            //map.setView(event.latlng, 5);
         });
 
             // Products GeoJSON
