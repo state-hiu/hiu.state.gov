@@ -11,7 +11,6 @@ tilelayers:
 
 layerswitcher:
   
-
 ---
 
 <!--
@@ -137,7 +136,8 @@ body {
 
                   layer.on({
                     mouseover: enterLayer,
-                    mouseout: leaveLayer
+                    mouseout: leaveLayer,
+                    click: clickLayer,
                   });
                 }
 
@@ -173,6 +173,8 @@ body {
                   }
 
                   this.setStyle({
+                    fillColor : fillColor,
+                    fillOpacity:0.5,
                     color:fillColor,
                     weight:3,
                     opacity: 1
@@ -182,20 +184,24 @@ body {
                 function leaveLayer(){  
                   $tooltip.hide();
 
+                  switch (this.feature.properties.RegBureau) {
+                     case "USA":
+                        fillColor = "#b3b3b3";
+                        break;
+                     default:
+                        fillColor = "#0A2E52";
+                  }
+
                   this.bringToBack();
+
                   this.setStyle({
-                    color: '#0A2E52',
+                    fillColor : fillColor,
+                    fillOpacity:0,
+                    color: fillColor,
                     weight:2,
                     opacity:1
                   });
             }
-
-
-            topoLayer.on("click", function (event) {
-                // Assuming the clicked feature is a shape, not a point marker.
-                map.fitBounds(event.layer.getBounds());
-                //map.setView(event.latlng, 5);
-            });
 
             // Products GeoJSON
             var productIcon = L.icon({
@@ -204,27 +210,65 @@ body {
                 iconAnchor: [15, 40],
                 popupAnchor: [0, 0]
             });
+
+            //need to declare outside function so it can be made into a layer and later deleted whenever a 
+            //different region is clicked on
+            var products;
+
+            function getProducts(region_id) {
             $.ajax({
                 dataType: "json",
                 url: "{{ site.baseurl}}/products/products.json",
                 success: function(response) {
-                    var products = L.geoJson(response, {
+                        products = L.geoJson(response, {
                         zIndex: 99,
                         onEachFeature: function(feature, layer) {
                             var popupOptions = {maxWidth: 200};
                             layer.setIcon(productIcon);
                             var popupContent = '<h4><a href="'+feature.properties.url+'">'+feature.properties.title+"</a></h4><br>Date Published: "+feature.properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+feature.properties.region_id+'">'+feature.properties.region_title+'</a><br><a href="'+feature.properties.pdf+'">Download</a>';
                             layer.bindPopup(popupContent, popupOptions);
+                        },
+                        filter: function (feature) {
+
+                          if (feature.properties.region_id === region_id) return true
                         }
                     });
-                    products.addTo(map);
-                    geojsonLayers.push(products);
-                    geojsonLayers = sortLayers(geojsonLayers)
-                    updateRenderOrder(geojsonLayers);
-                    layerswitcher.append(createLink(map, products, 'Products', products.options.zIndex));
+
+                    map.addLayer(products);
+
+                    //products.addTo(map);
+
+                    //geojsonLayers.push(products);
+                    //geojsonLayers = sortLayers(geojsonLayers)
+                    //updateRenderOrder(geojsonLayers);
+                    //layerswitcher.append(createLink(map, products, 'Products', products.options.zIndex));
                 }
             });
+}
 
+            function clickLayer() {
+                // Assuming the clicked feature is a shape, not a point marker.
+                if (typeof(products) != "undefined") {
+                  console.log("products are defined");
+                  products.clearLayers();
+                }
+                
+                map.fitBounds(this.getBounds());
+                console.log(this.feature);
+                console.log(this.feature.properties.RegBureau);
+                getProducts(this.feature.properties.RegBureau);
+                //map.setView(event.latlng, 5);
+            }
+
+/*
+            topoLayer.on("click", function (event) {
+                // Assuming the clicked feature is a shape, not a point marker.
+                map.fitBounds(event.layer.getBounds());
+                //console.log(event.layer);
+                //getProducts(event.layer.feature.properties.RegBureau);
+                //map.setView(event.latlng, 5);
+            });
+*/
 
             //events
             var eventIcon = L.icon({
@@ -248,10 +292,10 @@ body {
                         }
                     });
                     events.addTo(map);
-                    geojsonLayers.push(events);
-                    geojsonLayers = sortLayers(geojsonLayers)
-                    updateRenderOrder(geojsonLayers);
-                    layerswitcher.append(createLink(map, events, 'Events', events.options.zIndex));
+                    //geojsonLayers.push(events);
+                    //geojsonLayers = sortLayers(geojsonLayers)
+                    //updateRenderOrder(geojsonLayers);
+                    //layerswitcher.append(createLink(map, events, 'Events', events.options.zIndex));
                 }
             });
 
