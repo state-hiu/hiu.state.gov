@@ -17,14 +17,22 @@ layerswitcher:
 <nav id='menu-ui' class='menu-ui'></nav>
 -->
 
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
+
 <!--disables scroll bar-->
 <style type="text/css">
 body {
     overflow:hidden;
 }
+.region_label {
+  color: #0A2E52;
+  background: #fff;
+  border: 1.5px solid #0A2E52;
+  padding: 0px 3px 0px 3px;
+  display: inline-block
+}
 </style>
 
-<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
 
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js"></script>
@@ -243,8 +251,47 @@ body {
                     //updateRenderOrder(geojsonLayers);
                     //layerswitcher.append(createLink(map, products, 'Products', products.options.zIndex));
                 }
+              });
+            }
+
+            var AFIcon = L.divIcon({  
+              className: "my-div-icon",
+              html: "<div class='mapgive-font region_label' id='af_label' >Africa</div>"
             });
-}
+
+            var EAPIcon = L.divIcon({ 
+              className: "my-div-icon", 
+              html: "<div class='mapgive-font region_label' id='eap_label' ><center>East&nbsp;Asia and&nbsp;the Pacific</center></div>"
+            });
+
+            var EURIcon = L.divIcon({ 
+              className: "my-div-icon", 
+              html: "<div class='mapgive-font region_label' id='eur_label' ><center>Europe</center></div>"
+            });
+
+            var NEAIcon = L.divIcon({  
+              className: "my-div-icon",
+              html: "<div class='mapgive-font region_label' id='nea_label' >Near&nbsp;East</div>"
+            });
+
+            var SCAIcon = L.divIcon({  
+              className: "my-div-icon",
+              html: "<div class='mapgive-font region_label' id='sca_label' ><center>South&nbsp;and Central&nbsp;Asia</center></div>"
+            });
+
+            var WHAIcon = L.divIcon({  
+              className: "my-div-icon",
+              html: "<div class='mapgive-font region_label' id='wha_label' ><center>Western Hemisphere</center></div>"
+            });
+
+
+            // you can set .my-div-icon styles in CSS
+            L.marker([8, 23], {icon: AFIcon}).addTo(map);
+            L.marker([43, 96], {icon: EAPIcon}).addTo(map);
+            L.marker([51, 22], {icon: EURIcon}).addTo(map);
+            L.marker([29, 8], {icon: NEAIcon}).addTo(map);
+            L.marker([32, 65], {icon: SCAIcon}).addTo(map);
+            L.marker([-10, -63], {icon: WHAIcon}).addTo(map);
 
             function clickLayer() {
                 // Assuming the clicked feature is a shape, not a point marker.
