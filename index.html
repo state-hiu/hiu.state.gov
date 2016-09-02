@@ -224,13 +224,17 @@ body {
             var products;
 
             function getProducts(region_id) {
-            $.ajax({
+
+              var counter = 0;
+
+              $.ajax({
                 dataType: "json",
                 url: "{{ site.baseurl}}/products/products.json",
                 success: function(response) {
                         products = L.geoJson(response, {
                         zIndex: 99,
                         onEachFeature: function(feature, layer) {
+                            counter++;
                             var popupOptions = {maxWidth: 200};
                             layer.setIcon(productIcon);
                             var popupContent = '<h4><a href="'+feature.properties.url+'">'+feature.properties.title+"</a></h4><br>Date Published: "+feature.properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+feature.properties.region_id+'">'+feature.properties.region_title+'</a><br><a href="'+feature.properties.pdf+'">Download</a>';
@@ -243,6 +247,18 @@ body {
                     });
 
                     map.addLayer(products);
+
+                    console.log("1st counter: ");
+                    console.log(counter);
+
+                    //return counter;
+
+                    console.log("region id: ");
+                    console.log(region_id);
+
+                    $( '.product').remove();
+
+                    $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + counter + "&nbspProducts</p></center>" );
 
                     //products.addTo(map);
 
@@ -287,11 +303,12 @@ body {
 
             // you can set .my-div-icon styles in CSS
             L.marker([8, 23], {icon: AFIcon}).addTo(map);
-            L.marker([43, 96], {icon: EAPIcon}).addTo(map);
+            L.marker([35, 105], {icon: EAPIcon}).addTo(map);
             L.marker([51, 22], {icon: EURIcon}).addTo(map);
             L.marker([29, 8], {icon: NEAIcon}).addTo(map);
-            L.marker([32, 65], {icon: SCAIcon}).addTo(map);
+            L.marker([46, 57], {icon: SCAIcon}).addTo(map);
             L.marker([-10, -63], {icon: WHAIcon}).addTo(map);
+
 
             function clickLayer() {
                 // Assuming the clicked feature is a shape, not a point marker.
@@ -305,6 +322,7 @@ body {
                 console.log(this.feature.properties.RegBureau);
                 getProducts(this.feature.properties.RegBureau);
                 //map.setView(event.latlng, 5);
+
             }
 
 /*
