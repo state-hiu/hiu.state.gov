@@ -14,7 +14,7 @@ permalink: none
 destination: _site
 # Production
 #baseurl: 
-url: http://hiu-beta.state.gov
+#url: http://hiu-beta.state.gov
 #destination: /var/www
 
 # Explicit excludes, including dotfiles to be safe
