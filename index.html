@@ -31,6 +31,47 @@ body {
   padding: 0px 3px 0px 3px;
   display: inline-block
 }
+
+
+body {
+  background-color: black;
+}
+
+#earth {
+  width: 80px;
+  height: 80px;
+  background: url(http://www.noirextreme.com/digital/Earth-Color4096.jpg);
+  border-radius: 50%;
+  background-size: 210px;
+  box-shadow: inset 16px 0 40px 6px rgb(0, 0, 0),
+    inset -3px 0 6px 2px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes rotate {
+  from { background-position-x: 0px; }
+  to { background-position-x: 210px; }
+}
+
+#earth:hover{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+    -moz-box-shadow:    0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+    box-shadow:         0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+}
+
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #d73f3f;
+}
+
 </style>
 
 
@@ -43,7 +84,12 @@ body {
 <script src="{{ site.baseurl }}/lib/d3/topojson.v1.min.js"></script>
 <script src="{{ site.baseurl }}/lib/queue/queue.v1.min.js"></script>
 
+
+
 <div id="map" style="top:0px;left:0px;width:100%;height:100%;"></div>
+
+
+
 <div class="bureau-name"></div>
 
 <script>
@@ -96,6 +142,21 @@ body {
 
             $.getJSON('{{ site.baseurl }}/localdata/bureau_outline_topojson5.json')
               .done(addTopoData);
+
+
+            //taken from: http://leafletjs.com/examples/choropleth-example.html
+            //info box that contains title
+            var info = L.control({position: 'bottomright'});
+
+            info.onAdd = function (map) {
+              this._div = L.DomUtil.create('div', 'info');
+              this._div.innerHTML = '<div id="earth" data-toggle="tooltip" data-placement="left" title="Hello This Will Have Some Value"></div>';
+              return this._div;
+            };
+
+            info.addTo(map);
+
+
 
             function addTopoData(topoData){  
               topoLayer.addData(topoData);
