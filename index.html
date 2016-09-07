@@ -11,231 +11,421 @@ tilelayers:
 
 layerswitcher:
   
-
 ---
+
+<!--
 <nav id='menu-ui' class='menu-ui'></nav>
+-->
+
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
+
+<!--disables scroll bar-->
+<style type="text/css">
+body {
+    overflow:hidden;
+}
+.region_label {
+  color: #0A2E52;
+  background: #fff;
+  border: 1.5px solid #0A2E52;
+  padding: 0px 3px 0px 3px;
+  display: inline-block
+}
+
+
+body {
+  background-color: black;
+}
+
+#earth {
+  width: 80px;
+  height: 80px;
+  background: url(http://www.noirextreme.com/digital/Earth-Color4096.jpg);
+  border-radius: 50%;
+  background-size: 210px;
+  box-shadow: inset 16px 0 40px 6px rgb(0, 0, 0),
+    inset -3px 0 6px 2px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes rotate {
+  from { background-position-x: 0px; }
+  to { background-position-x: 210px; }
+}
+
+#earth:hover{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+    -moz-box-shadow:    0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+    box-shadow:         0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+}
+
+
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #d73f3f;
+}
+
+</style>
+
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>-->
+
+<script src="{{ site.baseurl }}/lib/d3/d3.v3.min.js"></script>
+<script src="{{ site.baseurl }}/lib/d3/topojson.v1.min.js"></script>
+<script src="{{ site.baseurl }}/lib/queue/queue.v1.min.js"></script>
+
+
+
 <div id="map" style="top:0px;left:0px;width:100%;height:100%;"></div>
+
+
+
+<div class="bureau-name"></div>
+
 <script>
-    var layerswitcher = $('#menu-ui');
-    var map = L.map('map').setView([0, 30], 3);
-
-    var geojsonLayers = []; // ordered by options.zIndex
-    ///////////////////////////////
-    for(var i = 0; i < tilelayers.length; i++)
-    {
-        var tl = tilelayers[i];
-        try{ 
-            if(tl.type=="mapbox"||tl.type=="mb")
-            {
-                L.tileLayer(mb_url_tiles, {
-                    id: tl.id,
-                    attribution: tl.attribution
-                }).addTo(map);
-            }
-            else if(tl.type=="geonode"||tl.type=="gn")
-            {
-                L.tileLayer(site.geonodes[tl.geonode].tiles, {
-                    id: tl.id,
-                    attribution: tl.attribution
-                }).addTo(map);
-            }
-        }catch(err){console.log("Could not add tilelayer "+i)};
-    }
-
-    /* LSIB Countries UTFGrid
-    // Resolution is server dependent.  MapBox.com uses resolution=4.
-    var countries = new L.UtfGrid(mb_url_utfgrid, {
-        id: 'hiu.lp5bfbt9',
-        resolution: 4,
-        attribution: ''
-    });
-    countries.on('click', function (e) {
-        if (e.data) {
-            alert('click: ' + JSON.stringify(e.data));
-            console.log('click: ' + JSON.stringify(e.data));
-        } else {
-            console.log('click: nothing');
+    L.TopoJSON = L.GeoJSON.extend({  
+      addData: function(jsonData) {    
+        if (jsonData.type === "Topology") {
+          for (key in jsonData.objects) {
+            geojson = topojson.feature(jsonData, jsonData.objects[key]);
+            L.GeoJSON.prototype.addData.call(this, geojson);
+          }
+        }    
+        else {
+          L.GeoJSON.prototype.addData.call(this, jsonData);
         }
+      }  
     });
-    countries.addTo(map);
-    */
-    // Regions
-    var openRegionPopup = function (m,f,latlng) {
-        var popupContent = '<h4><a href="{{ site.baseurl }}/regions/'+f.properties.id+'">'+site.regions[f.properties.id]+'</a></h4>';
-        var popup = new L.Popup({maxWidth: 200}, undefined);
-        popup.setLatLng(latlng);
-        popup.setContent(popupContent);
-        m.openPopup(popup);
-    };
-    var highlightFeature = function(e) {
-        var layer = e.target;
-        layer.setStyle({
-            weight: 2,
-            color: '#0000FF',
-            fillOpacity: 0.3,
-            opacity: 0.8
-        });
-        if (!L.Browser.ie && !L.Browser.opera) {
-            layer.bringToFront();
-        }
-    };
-    var regions_style = {
-        "color": "#0000FF",
-        "fillOpacity": 0,
-        "opacity": 0.0
-    };
-    var regions = undefined;
-    $.ajax({
-        dataType: "json",
-        url: "{{ site.baseurl}}/localdata/Global_HIUWebsiteRegions_Version1.geojson",
-        success: function(response) {
-            regions = L.geoJson(response, {
-                zIndex: 98,
-                style: regions_style,
-                onEachFeature: function(feature, layer) {
-                    layer.on({
-                        mouseover: highlightFeature,
-                        mouseout: function(e){
-                            regions.resetStyle(e.target);
-                        },
-                        click: function(e){openRegionPopup(map, feature, e.latlng);}
+</script>
+
+
+<script>
+
+    (function(){
+
+
+            var layerswitcher = $('#menu-ui');
+
+            //var map = L.map('map').setView([0, 30], 3);
+
+            L.mapbox.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
+
+
+            var map = L.mapbox.map('map', '', {
+                attributionControl: false
+              }).setView([14, 29], 3);
+
+            /*
+                var map = L.mapbox.map('map')
+                .setView([38.97416, -95.23252], 15);
+            */
+
+            // Use styleLayer to add a Mapbox style created in Mapbox Studio
+              var baseLayer = L.mapbox.styleLayer('mapbox://styles/hiu/cipse716l000lcbnk2l6sgbz8',{
+                minZoom: 1,
+                maxZoom: 16,
+                scrollWheelZoom: true,
+                zoomControl: false // we'll add later
+              }).addTo(map);
+
+            var topoLayer = new L.TopoJSON()
+
+            $.getJSON('{{ site.baseurl }}/localdata/bureau_outline_topojson5.json')
+              .done(addTopoData);
+
+
+            //taken from: http://leafletjs.com/examples/choropleth-example.html
+            //info box that contains title
+            var info = L.control({position: 'bottomright'});
+
+            info.onAdd = function (map) {
+              this._div = L.DomUtil.create('div', 'info');
+              this._div.innerHTML = '<div id="earth" data-toggle="tooltip" data-placement="left" title="Hello This Will Have Some Value"></div>';
+              return this._div;
+            };
+
+            info.addTo(map);
+
+
+
+            function addTopoData(topoData){  
+              topoLayer.addData(topoData);
+              topoLayer.addTo(map);
+              topoLayer.eachLayer(handleLayer);
+            }
+
+
+            function handleLayer(layer){  
+                //var randomValue = Math.random(),
+                //fillColor = colorScale(randomValue).hex();
+                var fillColor;
+
+                console.log(layer.feature.properties.RegBureau);
+
+                switch (layer.feature.properties.RegBureau) {
+                 case "AF":
+                    fillColor = "#0A2E52";
+                    break;
+                 case "EAP":
+                    fillColor = "#0A2E52";
+                    break;
+                 case "EUR":
+                    fillColor = "#0A2E52";
+                    break;
+                 case "NEA":
+                    fillColor = "#0A2E52";
+                    break;
+                 case "SCA":
+                    fillColor = "#0A2E52";
+                    break;
+                 case "WHA":
+                    fillColor = "#0A2E52";
+                    break;
+                 default:
+                    fillColor = "#b3b3b3";
+                }
+
+                layer.setStyle({
+                    fillColor : fillColor,
+                    fillOpacity:0,
+                    color:fillColor,
+                    weight:1.5,
+                    opacity:1
                     });
-                    //layer.on('click', function (e) {
-                    //    openRegionPopup(map, feature, e.latlng);
-                    //});
+
+                  layer.on({
+                    mouseover: enterLayer,
+                    mouseout: leaveLayer,
+                    click: clickLayer,
+                  });
                 }
-            });
-            regions.addTo(map);
-            geojsonLayers.push(regions);
-            geojsonLayers = sortLayers(geojsonLayers)
-            updateRenderOrder(geojsonLayers);
-            //layerswitcher.children().filter(function(){return $(this).data("zIndex") < regions.options.zIndex;});
-            layerswitcher.append(createLink(map, regions, 'Regions', regions.options.zIndex));
-        }
-    });
-    // Products GeoJSON
-    var productIcon = L.icon({
-        iconUrl: "{{ site.baseurl }}/assets/img/mapgive_blue_pt.png",
-        iconSize: [30, 45],
-        iconAnchor: [15, 40],
-        popupAnchor: [0, 0]
-    });
-    $.ajax({
-        dataType: "json",
-        url: "{{ site.baseurl}}/products/products.json",
-        success: function(response) {
-            var products = L.geoJson(response, {
-                zIndex: 99,
-                onEachFeature: function(feature, layer) {
-                    var popupOptions = {maxWidth: 200};
-                    layer.setIcon(productIcon);
-                    var popupContent = '<h4><a href="'+feature.properties.url+'">'+feature.properties.title+"</a></h4><br>Date Published: "+feature.properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+feature.properties.region_id+'">'+feature.properties.region_title+'</a><br><a href="'+feature.properties.pdf+'">Download</a>';
-                    layer.bindPopup(popupContent, popupOptions);
+
+                var $tooltip = $('.country-name');
+
+                function enterLayer(){  
+                  var countryName = this.feature.properties.RegBureau;
+                  $tooltip.text(countryName).show();
+
+                  this.bringToFront();
+
+                  switch (this.feature.properties.RegBureau) {
+                     case "AF":
+                        fillColor = "#ff6600";
+                        break;
+                     case "EAP":
+                        fillColor = "#ffff00";
+                        break;
+                     case "EUR":
+                        fillColor = "#ff66cc";
+                        break;
+                     case "NEA":
+                        fillColor = "#66ff66";
+                        break;
+                     case "SCA":
+                        fillColor = "#9900ff";
+                        break;
+                     case "WHA":
+                        fillColor = "#3399ff";
+                        break;
+                     default:
+                        fillColor = "#b3b3b3";
+                  }
+
+                  this.setStyle({
+                    fillColor : fillColor,
+                    fillOpacity:0.5,
+                    color:fillColor,
+                    weight:3,
+                    opacity: 1
+                  });
                 }
+
+                function leaveLayer(){  
+                  $tooltip.hide();
+
+                  switch (this.feature.properties.RegBureau) {
+                     case "USA":
+                        fillColor = "#b3b3b3";
+                        break;
+                     default:
+                        fillColor = "#0A2E52";
+                  }
+
+                  this.bringToBack();
+
+                  this.setStyle({
+                    fillColor : fillColor,
+                    fillOpacity:0,
+                    color: fillColor,
+                    weight:2,
+                    opacity:1
+                  });
+            }
+
+            // Products GeoJSON
+            var productIcon = L.icon({
+                iconUrl: "{{ site.baseurl }}/assets/img/mapgive_blue_pt.png",
+                iconSize: [30, 45],
+                iconAnchor: [15, 40],
+                popupAnchor: [0, 0]
             });
-            products.addTo(map);
-            geojsonLayers.push(products);
-            geojsonLayers = sortLayers(geojsonLayers)
-            updateRenderOrder(geojsonLayers);
-            layerswitcher.append(createLink(map, products, 'Products', products.options.zIndex));
-        }
-    });
-    // Data GeoJSON
-    $.ajax({
-        dataType: "xml",
-        url: "{{ site.geonodes[0].csw.xml }}",
-        success: function(response) {
-            console.log("Response:", response);
-            var geonode_features = [];
-            var geonode_layers = $(response).find("SearchResults").find('MD_Metadata').each(function(){
-                var i = $(this).find("identificationInfo").find("MD_DataIdentification");
-                var distro = $(this).find("distributionInfo").find("MD_Distribution");
-                var b = i.find('EX_GeographicBoundingBox:first');
-                var u = distro.find('onLine').filter(function(){return $(this).find('protocol').find('CharacterString').text()=="WWW:LINK-1.0-http--link"}).find('URL').text();
-                if(u.startsWith("{{ site.geonodes[0].layers }}") && b.length > 0)
-                {
-                    var g = buildBoundingBox(b);
-                    var f =
-                    {
-                        "type": "Feature",
-                        "properties":
-                        {
-                            "name": $(this).find('Name').text(),
-                            "title": i.find('title').find('CharacterString').text(),
-                            "date": i.find('date').find('DateTime').text(),
-                            "abstract": ellipsis(i.find('abstract').find('CharacterString').text().replace('\n',''), 100),
-                            "url": u
+
+            //need to declare outside function so it can be made into a layer and later deleted whenever a 
+            //different region is clicked on
+            var products;
+
+            function getProducts(region_id) {
+
+              var counter = 0;
+
+              $.ajax({
+                dataType: "json",
+                url: "{{ site.baseurl}}/products/products.json",
+                success: function(response) {
+                        products = L.geoJson(response, {
+                        zIndex: 99,
+                        onEachFeature: function(feature, layer) {
+                            counter++;
+                            var popupOptions = {maxWidth: 200};
+                            layer.setIcon(productIcon);
+                            var popupContent = '<h4><a href="'+feature.properties.url+'">'+feature.properties.title+"</a></h4><br>Date Published: "+feature.properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+feature.properties.region_id+'">'+feature.properties.region_title+'</a><br><a href="'+feature.properties.pdf+'">Download</a>';
+                            layer.bindPopup(popupContent, popupOptions);
                         },
-                        "geometry":
-                        {
-                            "type": "Polygon",
-                            "coordinates":
-                            [
-                              [
-                                  [g[0], g[1]],
-                                  [g[2], g[1]],
-                                  [g[2], g[3]],
-                                  [g[0], g[3]]
-                              ]
-                            ]                        
+                        filter: function (feature) {
+
+                          if (feature.properties.region_id === region_id) return true
                         }
-                    };
-                    geonode_features.push(f);
+                    });
+
+                    map.addLayer(products);
+
+                    console.log("1st counter: ");
+                    console.log(counter);
+
+                    //return counter;
+
+                    console.log("region id: ");
+                    console.log(region_id);
+
+                    $( '.product').remove();
+
+                    $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + counter + "&nbspProducts</p></center>" );
+
+                    //products.addTo(map);
+
+                    //geojsonLayers.push(products);
+                    //geojsonLayers = sortLayers(geojsonLayers)
+                    //updateRenderOrder(geojsonLayers);
+                    //layerswitcher.append(createLink(map, products, 'Products', products.options.zIndex));
+                }
+              });
+            }
+
+            var AFIcon = L.divIcon({  
+              className: "my-div-icon",
+              html: "<div class='mapgive-font region_label' id='af_label' >Africa</div>"
+            });
+
+            var EAPIcon = L.divIcon({ 
+              className: "my-div-icon", 
+              html: "<div class='mapgive-font region_label' id='eap_label' ><center>East&nbsp;Asia and&nbsp;the Pacific</center></div>"
+            });
+
+            var EURIcon = L.divIcon({ 
+              className: "my-div-icon", 
+              html: "<div class='mapgive-font region_label' id='eur_label' ><center>Europe</center></div>"
+            });
+
+            var NEAIcon = L.divIcon({  
+              className: "my-div-icon",
+              html: "<div class='mapgive-font region_label' id='nea_label' >Near&nbsp;East</div>"
+            });
+
+            var SCAIcon = L.divIcon({  
+              className: "my-div-icon",
+              html: "<div class='mapgive-font region_label' id='sca_label' ><center>South&nbsp;and Central&nbsp;Asia</center></div>"
+            });
+
+            var WHAIcon = L.divIcon({  
+              className: "my-div-icon",
+              html: "<div class='mapgive-font region_label' id='wha_label' ><center>Western Hemisphere</center></div>"
+            });
+
+
+            // you can set .my-div-icon styles in CSS
+            L.marker([8, 23], {icon: AFIcon}).addTo(map);
+            L.marker([35, 105], {icon: EAPIcon}).addTo(map);
+            L.marker([51, 22], {icon: EURIcon}).addTo(map);
+            L.marker([29, 8], {icon: NEAIcon}).addTo(map);
+            L.marker([46, 57], {icon: SCAIcon}).addTo(map);
+            L.marker([-10, -63], {icon: WHAIcon}).addTo(map);
+
+
+            function clickLayer() {
+                // Assuming the clicked feature is a shape, not a point marker.
+                if (typeof(products) != "undefined") {
+                  console.log("products are defined");
+                  products.clearLayers();
+                }
+                
+                map.fitBounds(this.getBounds());
+                console.log(this.feature);
+                console.log(this.feature.properties.RegBureau);
+                getProducts(this.feature.properties.RegBureau);
+                //map.setView(event.latlng, 5);
+
+            }
+
+/*
+            topoLayer.on("click", function (event) {
+                // Assuming the clicked feature is a shape, not a point marker.
+                map.fitBounds(event.layer.getBounds());
+                //console.log(event.layer);
+                //getProducts(event.layer.feature.properties.RegBureau);
+                //map.setView(event.latlng, 5);
+            });
+*/
+
+            //events
+            var eventIcon = L.icon({
+                iconUrl: "{{ site.baseurl }}/assets/img/mapgive_red_pt.png",
+                iconSize: [30, 45],
+                iconAnchor: [15, 40],
+                popupAnchor: [0, 0]
+            });
+
+            $.ajax({
+                dataType: "json",
+                url: "{{ site.baseurl}}/events/events.json",
+                success: function(response) {
+                    var events = L.geoJson(response, {
+                        zIndex: 100,
+                        onEachFeature: function(feature, layer) {
+                            var popupOptions = {maxWidth: 200};
+                            layer.setIcon(eventIcon);
+                            var popupContent = '<h4><a href="'+feature.properties.url+'">'+feature.properties.title+'</a></h4>';
+                            layer.bindPopup(popupContent, popupOptions);
+                        }
+                    });
+                    events.addTo(map);
+                    //geojsonLayers.push(events);
+                    //geojsonLayers = sortLayers(geojsonLayers)
+                    //updateRenderOrder(geojsonLayers);
+                    //layerswitcher.append(createLink(map, events, 'Events', events.options.zIndex));
                 }
             });
-            var geonode_geojson =
-            {
-                "type": "FeatureCollection",
-                "features": geonode_features
-            };
-            var geonode_style = {
-               "color": "#0000FF",
-               "fillOpacity": 0,
-               "opacity": 1.0
-            };
-            var datasets = L.geoJson(geonode_geojson, {
-                zIndex: 97,
-                style: geonode_style,
-                onEachFeature: function(feature, layer) {
-                    var popupOptions = {maxWidth: 200};
-                    //layer.setIcon(productIcon);
-                    var popupContent = '<h4 style="word-wrap:break-word;"><a href="'+feature.properties.url+'">'+feature.properties.title+"</a></h4><hr>Abstract<br>"+feature.properties.abstract;
-                    layer.bindPopup(popupContent, popupOptions);
-                }
-            });
-            datasets.addTo(map);
-            geojsonLayers.push(datasets);
-            geojsonLayers = sortLayers(geojsonLayers)
-            updateRenderOrder(geojsonLayers);
-            layerswitcher.append(createLink(map, datasets, 'Datasets', datasets.options.zIndex));
-        }
-    });
-    //events
-    // Products GeoJSON
-    var eventIcon = L.icon({
-        iconUrl: "{{ site.baseurl }}/assets/img/mapgive_red_pt.png",
-        iconSize: [30, 45],
-        iconAnchor: [15, 40],
-        popupAnchor: [0, 0]
-    });
-    $.ajax({
-        dataType: "json",
-        url: "{{ site.baseurl}}/events/events.json",
-        success: function(response) {
-            var events = L.geoJson(response, {
-                zIndex: 100,
-                onEachFeature: function(feature, layer) {
-                    var popupOptions = {maxWidth: 200};
-                    layer.setIcon(eventIcon);
-                    var popupContent = '<h4><a href="'+feature.properties.url+'">'+feature.properties.title+'</a></h4>';
-                    layer.bindPopup(popupContent, popupOptions);
-                }
-            });
-            events.addTo(map);
-            geojsonLayers.push(events);
-            geojsonLayers = sortLayers(geojsonLayers)
-            updateRenderOrder(geojsonLayers);
-            layerswitcher.append(createLink(map, events, 'Events', events.options.zIndex));
-        }
-    });
+
+
+
+   }());
 </script>

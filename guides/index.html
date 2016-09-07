@@ -33,7 +33,7 @@ title: Guides
     <li class="active"><a href="#featured" data-toggle="tab">Featured ({{ count_featured }})</a></li>
     <li><a href="#cybergis" data-toggle="tab">CyberGIS ({{ count_cybergis }})</a></li>
     <li><a href="#ittc" data-toggle="tab">ITTC ({{ count_ittc }})</a></li>
-    <li><a href="#site" data-toggle="tab">Site ({{ count_site }})</a></li>
+    <li><a href="#site" data-toggle="tab">HIU Website ({{ count_site }})</a></li>
     <li><a href="#all" data-toggle="tab">All ({{ site.categories.guides | size }}) </a></li>
   </ul>
   <div class="tab-content" style="padding: 10px;">
@@ -67,7 +67,7 @@ title: Guides
     </div>
     <div id="all" class="tab-pane">
       {% for guide in site.categories.guides %}
-        {% include main/listitem_related_guide.html %}
+        {% include main/listitem_guide.html %}
       {% endfor %}
     </div>
   </div>

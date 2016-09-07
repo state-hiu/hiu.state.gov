@@ -1,7 +1,7 @@
 name: HIU
 description: "Main website of the U.S. Department of State, Humanitarian Information Unit"
 logo: "/assets/img/hiu_logo.png"
-markdown: redcarpet
+#markdown: redcarpet
 timezone: America/New_York
 permalink: none
 # Local Dev
@@ -21,8 +21,8 @@ destination: _site
 exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
 
 # Markdown Configuration
-redcarpet:
-  extensions: [with_toc_data]
+#redcarpet:
+#  extensions: [with_toc_data]
 
 # General
 edit: true
@@ -65,7 +65,7 @@ deps:
   angular:
     version: "1.4.0-beta.4"
   jquery:
-    version: "1.9.1"
+    version: "1.11.3"
 
 # GeoNode
 # The first GeoNode is the primary one that is loaded on the homepage.

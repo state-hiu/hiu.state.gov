@@ -1,0 +1,244 @@
+.menu-ui {
+  background: #fff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
+  border-radius: 3px;
+  width: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.menu-ui a {
+  font-size: 13px;
+  color: #404040;
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+.menu-ui a:first-child {
+  border-radius: 3px 3px 0 0;
+}
+.menu-ui a:last-child {
+  border: none;
+  border-radius: 0 0 3px 3px;
+}
+.menu-ui a:hover {
+  background: #f8f8f8;
+  color: #404040;
+}
+.menu-ui a.active {
+  background: #3887BE;
+  color: #FFF;
+}
+.menu-ui a.active:hover {
+  background: #3074a4;
+}
+#hidden-sprite {
+  display: none;
+}
+.social {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .social {
+    margin: 70px 0 0;
+  }
+}
+.social li {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.social .share {
+  border-right: 1px solid #51504d;
+  padding-right: 10px;
+  width: auto;
+  height: auto;
+}
+.opera-mini .social .share,
+.no-svg .social .share,
+.svg .social .share {
+  background: none;
+}
+.social a {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.svg .globe,
+.svg .marker,
+.svg .map,
+.svg .hot,
+.svg .dos,
+.svg .logo,
+.svg .play-button,
+.svg .steps .estimate .clock,
+.svg .social li {
+  background-image: url("assets/img/mapgive_sprite.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 366px 208px;
+}
+.svg .social .mail {
+  background-position: -256px -177px;
+  margin-top: 3px;
+}
+.svg .social .facebook {
+  background-position: -277px -177px;
+}
+.svg .social .twitter {
+  background-position: -298px -177px;
+  margin-top: 2px;
+}
+.svg #footer .twitter {
+  margin: 0;
+}
+.svg .social .plus {
+  background-position: -319px -177px;
+}
+
+.html {
+  height: 100%;
+}
+.body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  position: relative;
+}
+.footer {
+  bottom: 0;
+  width: 100%;
+  clear: both;
+  position: relative;
+}
+.footer,
+.push {
+  background-color: #f5f5f5;
+}
+.footer-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+}
+#left-footer-menu,
+#footer-disclaimer {
+  padding-left: 56px;
+}
+#right-footer-menu {
+  padding-right: 75px;
+  text-align: right;
+}
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.mapgive-font {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 18px;
+}
+.logo-font {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+.float-right {
+  float: right;
+}
+.header-container {
+  width: auto;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.hiu-logo {
+  display: inline-block;
+  opacity: 1;
+  height: 50px;
+}
+.logo {
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+}
+.mapgive-logo {
+  height: 24px;
+  margin: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  vertical-align: bottom;
+}
+#mapgive-logo-padding {
+  padding-top: 15px;
+}
+.sameline {
+  display: inline-block;
+}
+.odd {
+  background: #f5f5f5;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.navbar-brand {
+  float: left;
+  padding: 5px 9px 0px 13px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 42px;
+}
+.navbar-inverse {
+  border-bottom: 2px #667764;
+  border-style: solid;
+}
+.navbar {
+  min-height: 61px;
+}
+.navbar-right-text {
+  padding-top: 5px;
+}
+.navbar-nav > li > a {
+  padding-bottom: 0px;
+  line-height: initial;
+}
+#nav_mapgive a {
+  padding-top: 7px;
+  font-size: 20px;
+}
+
+.listitem .listitem-thumbnail {
+  position: relative;
+  display: block;
+  /* max-width, max-height done set by template */
+}
+.listitem .listitem-thumbnail div {
+  display: block;
+  position: absolute;
+  background: #000000;
+  opacity: 0.0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.listitem .listitem-thumbnail:hover div {
+  opacity: 0.8;
+  transition: opacity 0.4s ease-in-out;
+}
+.listitem .listitem-thumbnail div span {
+  display: inline-block;
+  color: white;
+  font-size: 24px;
+  /* line height set by template */
+}

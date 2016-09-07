@@ -2,7 +2,7 @@
 layout: product
 category: products
 title: "Disease Without Borders: Ebola in West Africa"
-region_id: "africa"
+region_id: "AF"
 region_title: "Africa"
 date_published: 2014-10-22
 pdf: "Africa_EbolaDiseaseWithoutBorders_2014Oct22_HIU_U1106.pdf"

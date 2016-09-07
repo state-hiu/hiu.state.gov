@@ -1,10 +1,6 @@
 <div class="row" style="background:rgb(252, 252, 252); margin-bottom: 15px;">
   <!--<div class="col-md-2"></div>-->
-    <div class="col-md-5">
-      {% if guide.thumbnail_300 %}
-      <a href="{{ site.baseurl }}{{ guide.url | remove: '.html' }}"><img src="{{ site.storage.thumbnails_guides }}/{{ guide.thumbnail_300 }}" width="300" height="300"/></a>
-      {% endif %}
-    </div>
+    
     <div class="col-md-7">
       {% if showGuideTitle == false %}
       {% else %}
@@ -18,6 +14,12 @@
       {% endif %}
       <br>
       <a href="{{ site.baseurl }}{{ guide.url | remove: '.html' }}">View</a>
+    </div>
+
+    <div class="col-md-5">
+      {% if guide.thumbnail_300 %}
+      <a href="{{ site.baseurl }}{{ guide.url | remove: '.html' }}"><img src="{{ site.storage.thumbnails_guides }}/{{ guide.thumbnail_300 }}" width="300" height="300"/></a>
+      {% endif %}
     </div>
   <!--<div class="col-md-2"></div>-->
 </div>
