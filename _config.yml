@@ -5,11 +5,11 @@ logo: "/assets/img/hiu_logo.png"
 timezone: America/New_York
 permalink: none
 # Local Dev
-baseurl: 
+#baseurl: 
 #url: http://localhost:8000
 #destination: /var/www
 # GitHub Pages
-#baseurl: /hiu.state.gov
+baseurl: /hiu.state.gov
 url: http://state-hiu.github.io/hiu.state.gov
 destination: _site
 # Production
