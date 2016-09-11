@@ -6,8 +6,7 @@ region_id: "AF"
 region_title: "Africa"
 date_published: 2014-08-11
 pdf: "Africa_EbolaDiseaseWithoutBorders_2014Aug11_HIU_U1064.pdf"
-thumbnail_150: "Africa_EbolaDiseaseWithoutBorders_2014Aug11_HIU_U1064_150px.jpg"
-thumbnail_300: "Africa_EbolaDiseaseWithoutBorders_2014Aug11_HIU_U1064_300px.jpg"
+thumbnail: "Africa_EbolaDiseaseWithoutBorders_2014Aug11_HIU_U1064.jpg"
 featured: false
 lat: 8.4496546 
 lon: -11.7870578

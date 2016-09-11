@@ -6,8 +6,7 @@ region_id: "global"
 region_title: "Global & Transnational Products"
 date_published: 2015-08-18
 pdf: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277.pdf"
-thumbnail_150: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277_150px.jpg"
-thumbnail_300: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277_300px.jpg"
+thumbnail: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277.jpg"
 featured: false
 lat: 0
 lon: 0

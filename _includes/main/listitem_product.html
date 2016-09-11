@@ -13,16 +13,16 @@
       {% if download == true %} 
         {% if li_thumbnail_width == 150 %}
         <a class="listitem-thumbnail" href="{{ site.storage.products }}/{{ product.pdf }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
-        <img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_150 }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive"/>
+        <img src="{{ site.storage.thumbnails_products }}/resized/small/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive"/>
         {% else %}
         <a class="listitem-thumbnail" href="{{ site.storage.products }}/{{ product.pdf }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
-        <img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive"/>
+        <img src="{{ site.storage.thumbnails_products }}/resized/middle/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive"/>
         {% endif %}
         <div><span style="line-height: {{ li_thumbnail_height }}px;">Download</span></div>
       </a>
       {% else %}
       <a class="listitem-thumbnail thumb150" href="{{ site.baseurl }}{{ product.url | remove: '.html' }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
-        <img src="{{ site.storage.thumbnails_products }}/{{ product.thumbnail_300 }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive thumb150"/>
+        <img src="{{ site.storage.thumbnails_products }}/resized/middle/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive thumb150"/>
         <div><span style="line-height: {{ li_thumbnail_height }}px;">View</span></div>
       </a>
       {% endif %}
