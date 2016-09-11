@@ -27,9 +27,7 @@ thumbnail: in qoutes insert the thumbnail image file name that was uploaded
 - lon: (longitude where the post will show up on the web map)
 keywords:
 
-- below the keys and after the three dashes you insert the abstract text.
-
-- You can now save the product post by committing it
+Below the keys and after the three dashes you insert the abstract text. You can now save the product post by committing it.
 
 ### Step 2: Upload Product thumbnail and pdf
 
