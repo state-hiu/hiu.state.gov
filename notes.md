@@ -4,7 +4,7 @@
 
 ### Step 1: Create Product abstract
 
-<img src="{{ site.baseurl }}/assets/img/repo_location.png">
+<img src="https://github.com/d3netxer/hiu.state.gov/blob/gh-pages/assets/img/repo_location.png">
 
 log into github and navigate into the _post directory inside products https://github.com/state-hiu/hiu.state.gov/tree/gh-pages/products/_posts
 
