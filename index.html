@@ -158,14 +158,18 @@ body {
 
             info.addTo(map);
 
-
+            //This enables when a user clicks on part of the map that
+            //is not part of a layer, it will zoom back into the 
+            //original extent
+            map.on('click', function(e) {        
+                map.setView([14, 29], 3);      
+            });
 
             function addTopoData(topoData){  
               topoLayer.addData(topoData);
               topoLayer.addTo(map);
               topoLayer.eachLayer(handleLayer);
             }
-
 
             function handleLayer(layer){  
                 //var randomValue = Math.random(),
@@ -375,14 +379,55 @@ body {
 
             function clickLayer() {
                 // Assuming the clicked feature is a shape, not a point marker.
+
+                console.log('click layer');
+                console.log(this.feature.properties.RegBureau);
+
+                var regionCoord;
+                var regionZoom;
+
+                switch (this.feature.properties.RegBureau) {
+                 case "AF":
+                    regionCoord = [-1, 23];
+                    regionZoom = 4;
+                    break;
+                 case "EAP":
+                    regionCoord = [28, 110];
+                    regionZoom = 4;
+                    break;
+                 case "EUR":
+                    regionCoord = [51, 22];
+                    regionZoom = 4;
+                    break;
+                 case "NEA":
+                    regionCoord = [28, 20];
+                    regionZoom = 4;
+                    break;
+                 case "SCA":
+                    regionCoord = [35, 57.5];
+                    regionZoom = 4;
+                    break;
+                 case "WHA":
+                    regionCoord = [-9, -63];
+                    regionZoom = 4;
+                    break;
+                 default:
+                    regionCoord = [15, 0];
+                    regionZoom = 3;
+                }
+
+
                 if (typeof(products) != "undefined") {
                   console.log("products are defined");
                   products.clearLayers();
                 }
                 
-                map.fitBounds(this.getBounds());
-                console.log(this.feature);
-                console.log(this.feature.properties.RegBureau);
+
+                //map.fitBounds(this.getBounds());
+                map.setView(regionCoord,regionZoom);
+
+                //console.log(this.feature);
+                //console.log(this.feature.properties.RegBureau);
                 getProducts(this.feature.properties.RegBureau);
                 //map.setView(event.latlng, 5);
 
