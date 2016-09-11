@@ -17,8 +17,8 @@ log into github and navigate into the _post directory inside products https://gi
 layout: product
 category: products
 title: insert title of product in qoutes
-region_id: choices include - AF,
-region_title: choices include - Africa,
+region_id: choices include - AF, EAP, EUR, NEA, SCA, WHA
+region_title: choices include - Africa, East Asia and the Pacific, Europe, Near East, South and Central Asia, Western Hemisphere
 date_published: yyyy-mm-dd
 pdf: in qoutes insert the thumbnail image file name that was uploaded
 thumbnail: in qoutes insert the thumbnail image file name that was uploaded
