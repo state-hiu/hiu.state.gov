@@ -27,7 +27,9 @@ body {
 .region_label {
   color: #0A2E52;
   background: #fff;
-  border: 1.5px solid #0A2E52;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
   padding: 0px 3px 0px 3px;
   display: inline-block
 }
@@ -363,12 +365,12 @@ body {
 
 
             // you can set .my-div-icon styles in CSS
-            L.marker([8, 23], {icon: AFIcon}).addTo(map);
-            L.marker([35, 105], {icon: EAPIcon}).addTo(map);
-            L.marker([51, 22], {icon: EURIcon}).addTo(map);
-            L.marker([29, 8], {icon: NEAIcon}).addTo(map);
-            L.marker([46, 57], {icon: SCAIcon}).addTo(map);
-            L.marker([-10, -63], {icon: WHAIcon}).addTo(map);
+            L.marker([7, 23], {icon: AFIcon}).addTo(map);
+            L.marker([39, 102], {icon: EAPIcon}).addTo(map);
+            L.marker([51, 18], {icon: EURIcon}).addTo(map);
+            L.marker([28, 8], {icon: NEAIcon}).addTo(map);
+            L.marker([47.5, 57.5], {icon: SCAIcon}).addTo(map);
+            L.marker([-9, -63], {icon: WHAIcon}).addTo(map);
 
 
             function clickLayer() {
