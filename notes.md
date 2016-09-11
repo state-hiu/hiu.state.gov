@@ -14,17 +14,17 @@ log into github and navigate into the _post directory inside products https://gi
 
 #### keys
 
-layout: product
-category: products
-title: insert title of product in qoutes
-region_id: choices include - AF, EAP, EUR, NEA, SCA, WHA
-region_title: choices include - Africa, East Asia and the Pacific, Europe, Near East, South and Central Asia, Western Hemisphere
-date_published: yyyy-mm-dd
-pdf: in qoutes insert the thumbnail image file name that was uploaded
+- layout: product
+- category: products
+- title: insert title of product in qoutes
+- region_id: choices include - AF, EAP, EUR, NEA, SCA, WHA
+- region_title: choices include - Africa, East Asia and the Pacific, Europe, Near East, South and Central Asia, Western Hemisphere
+- date_published: yyyy-mm-dd
+- pdf: in qoutes insert the thumbnail image file name that was uploaded
 thumbnail: in qoutes insert the thumbnail image file name that was uploaded
-featured: true or false 
-lat: (longitude where the post will show up on the web map)
-lon: (longitude where the post will show up on the web map)
+- featured: true or false 
+- lat: (longitude where the post will show up on the web map)
+- lon: (longitude where the post will show up on the web map)
 keywords:
 
 - below the keys and after the three dashes you insert the abstract text.
