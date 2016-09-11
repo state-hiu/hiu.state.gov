@@ -124,7 +124,9 @@ body {
 
 
             var map = L.mapbox.map('map', '', {
-                attributionControl: false
+                attributionControl: false,
+                maxBounds:[ [-90, -180], [90, 180] ],
+                minZoom: 3
               }).setView([14, 29], 3);
 
             /*
@@ -162,7 +164,7 @@ body {
             //is not part of a layer, it will zoom back into the 
             //original extent
             map.on('click', function(e) {        
-                map.setView([14, 29], 3);      
+                map.setView([14, 29], 3, {animation: true});      
             });
 
             function addTopoData(topoData){  
