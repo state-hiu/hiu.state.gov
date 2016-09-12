@@ -6,8 +6,7 @@ region_id: "NEA"
 region_title: "Middle East"
 date_published: 2015-06-23
 pdf: "Turkey_SyrianRefugeeLocations_2015Jun23_HIU_U1246.pdf"
-thumbnail_150: "Turkey_SyrianRefugeeLocations_2015Jun23_HIU_U1246_150px.jpg"
-thumbnail_300: "Turkey_SyrianRefugeeLocations_2015Jun23_HIU_U1246_300px.jpg"
+thumbnail: "Turkey_SyrianRefugeeLocations_2015Jun23_HIU_U1246.jpg"
 featured: true
 lat: 38.152
 lon: 39.644

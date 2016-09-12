@@ -6,11 +6,10 @@ region_id: "AF"
 region_title: "Africa"
 date_published: 2014-08-28
 pdf: "Africa_EbolaDiseaseWithoutBorders_2014Aug28_HIU_U1078.pdf"
-thumbnail_150: "Africa_EbolaDiseaseWithoutBorders_2014Aug28_HIU_U1078_150px.jpg"
-thumbnail_300: "Africa_EbolaDiseaseWithoutBorders_2014Aug28_HIU_U1078_300px.jpg"
+thumbnail: "Africa_EbolaDiseaseWithoutBorders_2014Aug28_HIU_U1078.jpg"
 featured: true
 lat: 8.4496546 
-lon: -11.7870578
+lon: -11.6870578
 events:
   - ebola
 keywords:

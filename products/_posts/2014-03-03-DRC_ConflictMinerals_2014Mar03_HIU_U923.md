@@ -6,8 +6,7 @@ region_id: "AF"
 region_title: "Africa"
 date_published: 2014-03-03
 pdf: "DRC_ConflictMinerals_2014Mar03_HIU_U923.pdf"
-thumbnail_150: "DRC_ConflictMinerals_2014Mar03_HIU_U923_150px.jpg"
-thumbnail_300: "DRC_ConflictMinerals_2014Mar03_HIU_U923_300px.jpg"
+thumbnail: "DRC_ConflictMinerals_2014Mar03_HIU_U923.jpg"
 featured: false
 lat: -2.032
 lon: 23.615

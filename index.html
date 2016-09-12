@@ -27,7 +27,9 @@ body {
 .region_label {
   color: #0A2E52;
   background: #fff;
-  border: 1.5px solid #0A2E52;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
   padding: 0px 3px 0px 3px;
   display: inline-block
 }
@@ -122,7 +124,9 @@ body {
 
 
             var map = L.mapbox.map('map', '', {
-                attributionControl: false
+                attributionControl: false,
+                maxBounds:[ [-90, -180], [90, 180] ],
+                minZoom: 3
               }).setView([14, 29], 3);
 
             /*
@@ -131,7 +135,7 @@ body {
             */
 
             // Use styleLayer to add a Mapbox style created in Mapbox Studio
-              var baseLayer = L.mapbox.styleLayer('mapbox://styles/hiu/cipse716l000lcbnk2l6sgbz8',{
+              var baseLayer = L.mapbox.styleLayer('mapbox://styles/hiu/cit0gm97500012ypfwnzijj6o',{
                 minZoom: 1,
                 maxZoom: 16,
                 scrollWheelZoom: true,
@@ -156,14 +160,18 @@ body {
 
             info.addTo(map);
 
-
+            //This enables when a user clicks on part of the map that
+            //is not part of a layer, it will zoom back into the 
+            //original extent
+            map.on('click', function(e) {        
+                map.setView([14, 29], 3, {animation: true});      
+            });
 
             function addTopoData(topoData){  
               topoLayer.addData(topoData);
               topoLayer.addTo(map);
               topoLayer.eachLayer(handleLayer);
             }
-
 
             function handleLayer(layer){  
                 //var randomValue = Math.random(),
@@ -199,8 +207,8 @@ body {
                     fillColor : fillColor,
                     fillOpacity:0,
                     color:fillColor,
-                    weight:1.5,
-                    opacity:1
+                    weight:0,
+                    opacity:0
                     });
 
                   layer.on({
@@ -220,22 +228,22 @@ body {
 
                   switch (this.feature.properties.RegBureau) {
                      case "AF":
-                        fillColor = "#ff6600";
+                        fillColor = "#fc944f";
                         break;
                      case "EAP":
-                        fillColor = "#ffff00";
+                        fillColor = "#fced8d";
                         break;
                      case "EUR":
-                        fillColor = "#ff66cc";
+                        fillColor = "#eeb3cb";
                         break;
                      case "NEA":
-                        fillColor = "#66ff66";
+                        fillColor = "#b8d773";
                         break;
                      case "SCA":
-                        fillColor = "#9900ff";
+                        fillColor = "#b5aed6";
                         break;
                      case "WHA":
-                        fillColor = "#3399ff";
+                        fillColor = "#a8c8e9";
                         break;
                      default:
                         fillColor = "#b3b3b3";
@@ -245,8 +253,8 @@ body {
                     fillColor : fillColor,
                     fillOpacity:0.5,
                     color:fillColor,
-                    weight:3,
-                    opacity: 1
+                    weight:0,
+                    opacity: 0
                   });
                 }
 
@@ -267,8 +275,8 @@ body {
                     fillColor : fillColor,
                     fillOpacity:0,
                     color: fillColor,
-                    weight:2,
-                    opacity:1
+                    weight:0,
+                    opacity:0
                   });
             }
 
@@ -363,24 +371,65 @@ body {
 
 
             // you can set .my-div-icon styles in CSS
-            L.marker([8, 23], {icon: AFIcon}).addTo(map);
-            L.marker([35, 105], {icon: EAPIcon}).addTo(map);
-            L.marker([51, 22], {icon: EURIcon}).addTo(map);
-            L.marker([29, 8], {icon: NEAIcon}).addTo(map);
-            L.marker([46, 57], {icon: SCAIcon}).addTo(map);
-            L.marker([-10, -63], {icon: WHAIcon}).addTo(map);
+            L.marker([7, 23], {icon: AFIcon}).addTo(map);
+            L.marker([39, 102], {icon: EAPIcon}).addTo(map);
+            L.marker([51, 18], {icon: EURIcon}).addTo(map);
+            L.marker([28, 8], {icon: NEAIcon}).addTo(map);
+            L.marker([47.5, 57.5], {icon: SCAIcon}).addTo(map);
+            L.marker([-9, -63], {icon: WHAIcon}).addTo(map);
 
 
             function clickLayer() {
                 // Assuming the clicked feature is a shape, not a point marker.
+
+                console.log('click layer');
+                console.log(this.feature.properties.RegBureau);
+
+                var regionCoord;
+                var regionZoom;
+
+                switch (this.feature.properties.RegBureau) {
+                 case "AF":
+                    regionCoord = [-1, 23];
+                    regionZoom = 4;
+                    break;
+                 case "EAP":
+                    regionCoord = [28, 110];
+                    regionZoom = 4;
+                    break;
+                 case "EUR":
+                    regionCoord = [51, 22];
+                    regionZoom = 4;
+                    break;
+                 case "NEA":
+                    regionCoord = [28, 20];
+                    regionZoom = 4;
+                    break;
+                 case "SCA":
+                    regionCoord = [35, 57.5];
+                    regionZoom = 4;
+                    break;
+                 case "WHA":
+                    regionCoord = [-9, -63];
+                    regionZoom = 4;
+                    break;
+                 default:
+                    regionCoord = [14, -20];
+                    regionZoom = 3;
+                }
+
+
                 if (typeof(products) != "undefined") {
                   console.log("products are defined");
                   products.clearLayers();
                 }
                 
-                map.fitBounds(this.getBounds());
-                console.log(this.feature);
-                console.log(this.feature.properties.RegBureau);
+
+                //map.fitBounds(this.getBounds());
+                map.setView(regionCoord,regionZoom);
+
+                //console.log(this.feature);
+                //console.log(this.feature.properties.RegBureau);
                 getProducts(this.feature.properties.RegBureau);
                 //map.setView(event.latlng, 5);
 

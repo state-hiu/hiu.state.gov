@@ -6,8 +6,7 @@ region_id: "NEA"
 region_title: "Middle East"
 date_published: 2015-07-07
 pdf: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.pdf"
-thumbnail_150: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254_150px.jpg"
-thumbnail_300: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254_300px.jpg"
+thumbnail: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.jpg"
 featured: true
 lat: 15.342
 lon: 44.201
