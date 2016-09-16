@@ -19,6 +19,8 @@ layerswitcher:
 
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
 
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-sidebar/L.Control.Sidebar.css" type="text/css" media="all" />
+
 <!--disables scroll bar-->
 <style type="text/css">
 body {
@@ -87,10 +89,29 @@ body {
 <script src="{{ site.baseurl }}/lib/queue/queue.v1.min.js"></script>
 
 
+<div id="sidebar">
+    <h1>leaflet-sidebar</h1>
+
+    <p>A responsive sidebar plugin for for <a href="http://leafletjs.com/">Leaflet</a>, a JS library for interactive maps.</p>
+
+    <p><b>Click on the marker to show the sidebar again when you've closed it.</b></p>
+
+    <p>Other examples:</p>
+
+    <ul>
+        <li><a href="listing-markers.html">listing-markers example</a></li>
+        <li><a href="two-sidebars.html">two-sidebars example</a></li>
+    </ul>
+
+    <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+
+</div>
+
 
 <div id="map" style="top:0px;left:0px;width:100%;height:100%;"></div>
 
-
+<script src="{{ site.baseurl }}/lib/leaflet-sidebar/L.Control.Sidebar.js"></script>
 
 <div class="bureau-name"></div>
 
@@ -127,7 +148,7 @@ body {
                 attributionControl: false,
                 maxBounds:[ [-90, -180], [90, 180] ],
                 minZoom: 3
-              }).setView([14, 29], 3);
+              }).setView([14, 45], 3);
 
             /*
                 var map = L.mapbox.map('map')
@@ -135,12 +156,14 @@ body {
             */
 
             // Use styleLayer to add a Mapbox style created in Mapbox Studio
-              var baseLayer = L.mapbox.styleLayer('mapbox://styles/hiu/cit0gm97500012ypfwnzijj6o',{
-                minZoom: 1,
-                maxZoom: 16,
-                scrollWheelZoom: true,
-                zoomControl: false // we'll add later
-              }).addTo(map);
+            var baseLayer = L.mapbox.styleLayer('mapbox://styles/hiu/cit0gm97500012ypfwnzijj6o',{
+              minZoom: 1,
+              maxZoom: 16,
+              scrollWheelZoom: true,
+              zoomControl: false // we'll add later
+            }).addTo(map);
+
+            map.zoomControl.setPosition('topright');
 
             var topoLayer = new L.TopoJSON()
 
@@ -151,6 +174,19 @@ body {
             //taken from: http://leafletjs.com/examples/choropleth-example.html
             //info box that contains title
             var info = L.control({position: 'bottomright'});
+
+
+
+            var sidebar = L.control.sidebar('sidebar', {
+                closeButton: true,
+                position: 'left'
+            });
+            map.addControl(sidebar);
+            setTimeout(function () {
+                sidebar.show();
+            }, 500);
+
+
 
             info.onAdd = function (map) {
               this._div = L.DomUtil.create('div', 'info');
