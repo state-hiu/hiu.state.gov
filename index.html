@@ -15,9 +15,12 @@ layerswitcher:
 
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" media="all" />
 
-<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
 
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.css" type="text/css" media="all" />
+
+<script src="{{ site.baseurl }}/lib/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/v0.4.0/MarkerCluster.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css"  />
 
 <!--disables scroll bar-->
 <style type="text/css">
@@ -72,10 +75,6 @@ body {
 .info h4 {
   margin: 0 0 5px;
   color: #d73f3f;
-}
-
-.leaflet-top .leaflet-control {
-    margin-top: 65px;
 }
 
 </style>
@@ -147,7 +146,7 @@ body {
 
 
 
-<div id="map" class="sidebar-map" style="top:0px;left:0px;width:100%;height:100%;margin-top: -55px;"></div>
+<div id="map" class="sidebar-map" style="top:0px;left:0px;width:100%;height:100%;height: 93%;"></div>
 
 <script src="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.js"></script>
 
@@ -174,7 +173,6 @@ body {
 
     (function(){
 
-
             var layerswitcher = $('#menu-ui');
 
             //var map = L.map('map').setView([0, 30], 3);
@@ -184,14 +182,9 @@ body {
 
             var map = L.mapbox.map('map', '', {
                 attributionControl: false,
-                maxBounds:[ [-90, -180], [90, 180] ],
+                maxBounds:[ [-90, -180], [100, 180] ],
                 minZoom: 3
-              }).setView([20, 35], 3);
-
-            /*
-                var map = L.mapbox.map('map')
-                .setView([38.97416, -95.23252], 15);
-            */
+              }).setView([18, 25], 3);
 
             // Use styleLayer to add a Mapbox style created in Mapbox Studio
             var baseLayer = L.mapbox.styleLayer('mapbox://styles/hiu/cit0gm97500012ypfwnzijj6o',{
@@ -213,11 +206,7 @@ body {
             //info box that contains title
             var info = L.control({position: 'bottomright'});
 
-
-
             var sidebar = L.control.sidebar('sidebar').addTo(map);
-
-
 
             info.onAdd = function (map) {
               this._div = L.DomUtil.create('div', 'info');
@@ -227,14 +216,37 @@ body {
 
             info.addTo(map);
 
+
+            var AFmarkers = new L.MarkerClusterGroup();
+            var EAPmarkers = new L.MarkerClusterGroup();
+            var EURmarkers = new L.MarkerClusterGroup();
+            var NEAmarkers = new L.MarkerClusterGroup();
+            var SCAmarkers = new L.MarkerClusterGroup();
+            var WHAmarkers = new L.MarkerClusterGroup();
+
+            var markers2 = new L.MarkerClusterGroup();
+
+            var AFcount = 1;
+            var EAPcount = 1;
+            var EURcount = 1;
+            var NEAcount = 1;
+            var SCAcount = 1;
+            var WHAcount = 1;
+
             //This enables when a user clicks on part of the map that
             //is not part of a layer, it will zoom back into the 
             //original extent
             map.on('click', function(e) {        
-                map.setView([14, 29], 3, {animation: true});
-                map.removeLayer(products);
+                map.setView([18, 25], 3, {animation: false});
                 $( '.product').remove();
+                map.removeLayer(AFmarkers);
+                map.removeLayer(EAPmarkers);
+                map.removeLayer(EURmarkers);
+                map.removeLayer(NEAmarkers);
+                map.removeLayer(SCAmarkers);
+                map.removeLayer(WHAmarkers);
             });
+
 
             function addTopoData(topoData){  
               topoLayer.addData(topoData);
@@ -357,54 +369,157 @@ body {
                 popupAnchor: [0, 0]
             });
 
-            //need to declare outside function so it can be made into a layer and later deleted whenever a 
-            //different region is clicked on
-            var products;
 
             function getProducts(region_id) {
 
-              var counter = 0;
+              //http://lyzidiamond.com/posts/external-geojson-mapbox
+              var myLayer = L.mapbox.featureLayer()
+              .loadURL("{{ site.baseurl}}/products/products.json")
+              .on('ready', function() {
+                myLayer.eachLayer(function(layer) {
+                  var popupOptions = {keepInView: true,maxWidth: 200};
+                  layer.setIcon(productIcon);
+                  var popupContent = '<img src="'+layer.feature.properties.thumbnail_150+'">'+'<h4><a href="'+layer.feature.properties.url+'"></br>'+layer.feature.properties.title+'</a></h4>Date Published: '+layer.feature.properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+layer.feature.properties.region_id+'">'+layer.feature.properties.region_title+'</a><br><a href="'+layer.feature.properties.pdf+'">Download</a>';
+                  layer.bindPopup(popupContent, popupOptions);
+                });
 
-              $.ajax({
-                dataType: "json",
-                url: "{{ site.baseurl}}/products/products.json",
-                success: function(response) {
-                        products = L.geoJson(response, {
-                        zIndex: 99,
-                        onEachFeature: function(feature, layer) {
-                            counter++;
-                            var popupOptions = {maxWidth: 200};
-                            layer.setIcon(productIcon);
-                            var popupContent = '<h4><a href="'+feature.properties.url+'">'+feature.properties.title+"</a></h4><br>Date Published: "+feature.properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+feature.properties.region_id+'">'+feature.properties.region_title+'</a><br><a href="'+feature.properties.pdf+'">Download</a>';
-                            layer.bindPopup(popupContent, popupOptions);
-                        },
-                        filter: function (feature) {
+                var enabled = {};
+                var featureCollection = myLayer.getGeoJSON();
 
-                          if (feature.properties.region_id === region_id) return true
-                        }
-                    });
+                //console.log('features:');
+                //console.log(featureCollection);
+                //console.log(featureCollection.features.length);
 
-                    map.addLayer(products);
+                for (var i = 0; i < featureCollection.features.length; i++) {
+                  //console.log('feature:');
+                  //console.log(featureCollection.features[i].properties.region_id);
 
-                    console.log("1st counter: ");
-                    console.log(counter);
+                  if (featureCollection.features[i].properties.region_id === region_id) {
 
-                    //return counter;
+                      enabled[featureCollection.features[i].properties.title] = true;
 
-                    console.log("region id: ");
-                    console.log(region_id);
+                      var popupContent = '<img src="'+featureCollection.features[i].properties.thumbnail_150+'">'+'<h4><a href="'+featureCollection.features[i].properties.url+'"></br>'+featureCollection.features[i].properties.title+'</a></h4>Date Published: '+featureCollection.features[i].properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+featureCollection.features[i].properties.region_id+'">'+featureCollection.features[i].properties.region_title+'</a><br><a href="'+featureCollection.features[i].properties.pdf+'">Download</a>';
 
-                    $( '.product').remove();
+                      var popupOptions = {keepInView: true,maxWidth: 200};
 
-                    $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + counter + "&nbspProducts</p></center>" );
+                      var marker = L.marker(new L.LatLng(featureCollection.features[i].geometry.coordinates[1],featureCollection.features[i].geometry.coordinates[0]), {
+                                                  icon: productIcon
+                                              });
+                                              marker.bindPopup(popupContent,popupOptions);
 
-                    //products.addTo(map);
+                      switch (region_id) {
+                                     case "AF":
+                                      if (AFcount == 1) {
+                                        AFmarkers.addLayer(marker);
+                                      }
+                                        break;
+                                     case "EAP":
+                                      if (EAPcount == 1) {
+                                        EAPmarkers.addLayer(marker);
+                                      }
+                                        break;
+                                     case "EUR":
+                                      if (EURcount == 1) {
+                                        EURmarkers.addLayer(marker);
+                                      }
+                                        break;
+                                     case "NEA":
+                                      if (NEAcount == 1) {
+                                        NEAmarkers.addLayer(marker);
+                                      }
+                                        break;
+                                     case "SCA":
+                                      if (SCAcount == 1) {
+                                        SCAmarkers.addLayer(marker);
+                                      }
+                                        break;
+                                     case "WHA":
+                                      if (WHAcount == 1) {
+                                        WHAmarkers.addLayer(marker);
+                                      }
+                                        break;
+                                     default:
+                                    }
+                      }                      
+                    }
 
-                    //geojsonLayers.push(products);
-                    //geojsonLayers = sortLayers(geojsonLayers)
-                    //updateRenderOrder(geojsonLayers);
-                    //layerswitcher.append(createLink(map, products, 'Products', products.options.zIndex));
-                }
+                    //console.log('enabled: ');
+                    //console.log(enabled);
+
+                    console.log("AF length ");
+                    console.log(AFmarkers.getLayers().length);
+
+                    switch (region_id) {
+                                   case "AF":
+                                      map.removeLayer(EAPmarkers);
+                                      map.removeLayer(EURmarkers);
+                                      map.removeLayer(NEAmarkers);
+                                      map.removeLayer(SCAmarkers);
+                                      map.removeLayer(WHAmarkers);
+                                      map.addLayer(AFmarkers);
+                                      $( '.product').remove();
+                                      $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + AFmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                                      
+                                      AFcount++;
+                                      break;
+                                   case "EAP":
+                                      map.removeLayer(AFmarkers);
+                                      map.removeLayer(EURmarkers);
+                                      map.removeLayer(NEAmarkers);
+                                      map.removeLayer(SCAmarkers);
+                                      map.removeLayer(WHAmarkers);
+                                      map.addLayer(EAPmarkers);
+                                      $( '.product').remove();
+                                      $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + EAPmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                                      EAPcount++;
+                                      break;
+                                   case "EUR":
+                                      map.removeLayer(AFmarkers);
+                                      map.removeLayer(EAPmarkers);
+                                      map.removeLayer(NEAmarkers);
+                                      map.removeLayer(SCAmarkers);
+                                      map.removeLayer(WHAmarkers);
+                                      map.addLayer(EURmarkers);
+                                      $( '.product').remove();
+                                      $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + EURmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                                      EURcount++;
+                                      break;
+                                   case "NEA":
+                                      map.removeLayer(AFmarkers);
+                                      map.removeLayer(EAPmarkers);
+                                      map.removeLayer(EURmarkers);
+                                      map.removeLayer(SCAmarkers);
+                                      map.removeLayer(WHAmarkers);
+                                      map.addLayer(NEAmarkers);
+                                      $( '.product').remove();
+                                      $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + NEAmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                                      NEAcount++;
+                                      break;
+                                   case "SCA":
+                                      map.removeLayer(AFmarkers);
+                                      map.removeLayer(EAPmarkers);
+                                      map.removeLayer(EURmarkers);
+                                      map.removeLayer(NEAmarkers);
+                                      map.removeLayer(WHAmarkers);
+                                      map.addLayer(SCAmarkers);
+                                      $( '.product').remove();
+                                      $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + SCAmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                                      SCAcount++;
+                                      break;
+                                   case "WHA":
+                                      map.removeLayer(AFmarkers);
+                                      map.removeLayer(EAPmarkers);
+                                      map.removeLayer(EURmarkers);
+                                      map.removeLayer(NEAmarkers);
+                                      map.removeLayer(SCAmarkers);
+                                      map.addLayer(WHAmarkers);
+                                      $( '.product').remove();
+                                      $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + WHAmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                                      WHAcount++;
+                                      break;
+                                   default:
+                                  }
+                    
               });
             }
 
@@ -448,18 +563,15 @@ body {
             L.marker([-9, -63], {icon: WHAIcon}).addTo(map);
 
 
-            function clickLayer() {
+            function clickLayer(e) {
                 // Assuming the clicked feature is a shape, not a point marker.
-
-                console.log('click layer');
-                console.log(this.feature.properties.RegBureau);
 
                 var regionCoord;
                 var regionZoom;
 
                 switch (this.feature.properties.RegBureau) {
                  case "AF":
-                    regionCoord = [-1, 23];
+                    regionCoord = [-1, 0];
                     regionZoom = 4;
                     break;
                  case "EAP":
@@ -501,6 +613,8 @@ body {
                 //console.log(this.feature.properties.RegBureau);
                 getProducts(this.feature.properties.RegBureau);
                 //map.setView(event.latlng, 5);
+
+
 
             }
 

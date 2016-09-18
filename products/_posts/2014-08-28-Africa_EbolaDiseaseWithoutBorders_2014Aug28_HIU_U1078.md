@@ -9,7 +9,7 @@ pdf: "Africa_EbolaDiseaseWithoutBorders_2014Aug28_HIU_U1078.pdf"
 thumbnail: "Africa_EbolaDiseaseWithoutBorders_2014Aug28_HIU_U1078.jpg"
 featured: true
 lat: 8.4496546 
-lon: -11.6870578
+lon: -11.4870578
 events:
   - ebola
 keywords:
