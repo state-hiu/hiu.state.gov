@@ -233,6 +233,7 @@ body {
             map.on('click', function(e) {        
                 map.setView([14, 29], 3, {animation: true});
                 map.removeLayer(products);
+                $( '.product').remove();
             });
 
             function addTopoData(topoData){  
