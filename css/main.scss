@@ -333,6 +333,8 @@ img.thumb150 {
     border-color: #204d74;
 }
 
-
-
-
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 1200px;
+    }
+}

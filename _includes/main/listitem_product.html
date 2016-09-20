@@ -10,19 +10,14 @@
 {% endif %}
 <div class="{{ li_class }}" style="margin-bottom: 15px;">
     <div class="col-md-{{ li_left_cols }}">
-
-        {% if li_thumbnail_width == 150 %}
-
-          <img src="{{ site.storage.thumbnails_products }}/resized/small/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive"/>
-        {% else %}
-          <a class="listitem-thumbnail" href="{{ site.storage.products }}/{{ product.pdf }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
-
-          <img src="{{ site.storage.thumbnails_products }}/resized/middle/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive "/>
-        
+          <a class="listitem-thumbnail" data-toggle="modal" data-target="#myModal" data-title="{{ product.title }}" data-img="{{ site.storage.thumbnails_products }}/resized/middle/{{ product.thumbnail }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
+          {% if li_thumbnail_width == 150 %}
+            <img src="{{ site.storage.thumbnails_products }}/resized/small/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive"/>
+          {% else %}
+            <img src="{{ site.storage.thumbnails_products }}/resized/middle/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive "/>
+          {% endif %}
           <div><span style="line-height: {{ li_thumbnail_height }}px;">Preview</span></div>
           </a>
-          {% endif %}
-
     </div>
     <div class="col-md-{{ li_right_cols }}">
       {% if showProductTitle == false %}
@@ -34,7 +29,6 @@
       <br>
       {{ product.content }}
       <hr>
-
 
       <div class="dropdown" style="display: inline-block;">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Download
