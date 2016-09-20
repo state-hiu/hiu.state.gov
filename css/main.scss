@@ -187,12 +187,52 @@ $navbar-inverse-color:                      #333 !default;
     font-size: 18px;
 }
 
-.region-font {
+.nea-region-font {
     font-family: "Merriweather-serif";
-    text-transform: uppercase;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     font-style: italic;
+    letter-spacing: 5px;
+}
+
+.eur-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 5px;
+}
+
+.sca-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.eap-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 3px;
+}
+
+.af-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.wha-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
 }
 
 .logo-font {
