@@ -18,6 +18,10 @@ layerswitcher:
 
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.css" type="text/css" media="all" />
 
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.min.css" type="text/css" media="all" />
+
+<script src="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.min.js"></script>
+
 <script src="{{ site.baseurl }}/lib/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/v0.4.0/MarkerCluster.css" />
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css"  />
@@ -654,6 +658,9 @@ body {
                     //geojsonLayers = sortLayers(geojsonLayers)
                     //updateRenderOrder(geojsonLayers);
                     //layerswitcher.append(createLink(map, events, 'Events', events.options.zIndex));
+
+                    map.addControl( new L.Control.ListMarkers({layer: events}) );
+                    //markersLayer is a L.LayerGroup contains listing markers
                 }
             });
 

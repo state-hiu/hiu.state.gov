@@ -11,5 +11,6 @@ featured: true
 lat: 15.342
 lon: 44.201
 keywords:
+tweet: "The humanitarian crisis in Yemen continues to deteriorate with an estimated 21.1 million in need of assistance."
 ---
 The humanitarian crisis in Yemen continues to deteriorate with an estimated 21.1 million, 80% of the population, in need of assistance. This map depicts key humanitarian issues in Yemen, specifically providing an overview for population in need, food security, health, water and sanitation, and displacement.
