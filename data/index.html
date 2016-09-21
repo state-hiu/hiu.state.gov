@@ -3,10 +3,19 @@ layout: wrapper_text
 title: "Data"
 ---
 
-<div><h1 class="page-title" style="text-align:center;">{{ page.title }}</h1></div>
+<div><h2 class="page-title">{{ page.title }}</h2></div>
+<hr>
+
 <div>
+
   {% for platform in site.categories.platforms %}
-    {% include main/listitem_platform.html %}
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_platform.html odd=true %}
+        {% else %}
+          {% include main/listitem_platform.html odd=false %}
+        {% endif %}
   {% endfor %}
+
 </div>
 

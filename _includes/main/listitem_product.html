@@ -12,9 +12,9 @@
     <div class="col-md-{{ li_left_cols }}">
           <a class="listitem-thumbnail" data-toggle="modal" data-target="#myModal" data-title="{{ product.title }}" data-img="{{ site.storage.products }}/resized/{{ product.product_jpg }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
           {% if li_thumbnail_width == 150 %}
-            <img src="{{ site.storage.thumbnails_products }}/resized/small/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive"/>
+            <img src="{{ site.storage.thumbnails_products }}/resized/middle/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" style="border:1px solid #021a40;" class="img-responsive"/>
           {% else %}
-            <img src="{{ site.storage.thumbnails_products }}/resized/middle/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive "/>
+            <img src="{{ site.storage.thumbnails_products }}/resized/large/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" style="border:1px solid #021a40;" class="img-responsive "/>
           {% endif %}
           <div><span style="line-height: {{ li_thumbnail_height }}px;">Preview</span></div>
           </a>
