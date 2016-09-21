@@ -1,6 +1,6 @@
 {% assign odd = false %}{% if include.odd %}{% assign odd = include.odd %}{% endif %}
-{% assign li_left_cols = 5 %}{% if include.li_left_cols %}{% assign li_left_cols = include.li_left_cols %}{% endif %}
-{% assign li_right_cols = 7 %}{% if include.li_right_cols %}{% assign li_right_cols = include.li_right_cols %}{% endif %}
+{% assign li_left_cols = 4 %}{% if include.li_left_cols %}{% assign li_left_cols = include.li_left_cols %}{% endif %}
+{% assign li_right_cols = 8 %}{% if include.li_right_cols %}{% assign li_right_cols = include.li_right_cols %}{% endif %}
 {% assign li_thumbnail_width = 300 %}{% if include.li_thumbnail_width %}{% assign li_thumbnail_width = include.li_thumbnail_width %}{% endif %}
 {% assign li_thumbnail_height = 300 %}{% if include.li_thumbnail_height %}{% assign li_thumbnail_height = include.li_thumbnail_height %}{% endif %}
 {% if odd == true %}
@@ -10,33 +10,41 @@
 {% endif %}
 <div class="{{ li_class }}" style="margin-bottom: 15px;">
     <div class="col-md-{{ li_left_cols }}">
-      {% if download == true %} 
-        {% if li_thumbnail_width == 150 %}
-        <a class="listitem-thumbnail" href="{{ site.storage.products }}/{{ product.pdf }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
-        <img src="{{ site.storage.thumbnails_products }}/resized/small/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive"/>
-        {% else %}
-        <a class="listitem-thumbnail" href="{{ site.storage.products }}/{{ product.pdf }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
-        <img src="{{ site.storage.thumbnails_products }}/resized/middle/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive"/>
-        {% endif %}
-        <div><span style="line-height: {{ li_thumbnail_height }}px;">Download</span></div>
-      </a>
-      {% else %}
-      <a class="listitem-thumbnail thumb150" href="{{ site.baseurl }}{{ product.url | remove: '.html' }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
-        <img src="{{ site.storage.thumbnails_products }}/resized/middle/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive thumb150"/>
-        <div><span style="line-height: {{ li_thumbnail_height }}px;">View</span></div>
-      </a>
-      {% endif %}
+          <a class="listitem-thumbnail" data-toggle="modal" data-target="#myModal" data-title="{{ product.title }}" data-img="{{ site.storage.products }}/resized/{{ product.product_jpg }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
+          {% if li_thumbnail_width == 150 %}
+            <img src="{{ site.storage.thumbnails_products }}/resized/middle/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" style="border:1px solid #021a40;" class="img-responsive"/>
+          {% else %}
+            <img src="{{ site.storage.thumbnails_products }}/resized/large/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" style="border:1px solid #021a40;" class="img-responsive "/>
+          {% endif %}
+          <div><span style="line-height: {{ li_thumbnail_height }}px;">Preview</span></div>
+          </a>
     </div>
     <div class="col-md-{{ li_right_cols }}">
       {% if showProductTitle == false %}
       {% else %}
-      <a href="{{ site.baseurl }}{{ product.url | remove: '.html' }}"><h4>{{ product.title }}</h4></a>
+        <h4>{{ product.title }}</h4>
       {% endif %}
       <a href="{{ site.baseurl }}/regions/{{ product.region_id }}">{{ product.region_title }}</a> | {{ product.date_published | date: '%B %d, %Y' }}
       <br>
       <br>
       {{ product.content }}
       <hr>
-      <a href="{{ site.storage.products }}/{{ product.pdf }}">Download</a>
+
+      <div class="dropdown" style="display: inline-block;">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Download
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="{{ site.storage.products }}/{{ product.product_pdf }}">PDF</a></li>
+          <li><a href="{{ site.storage.products }}/{{ product.product_jpg }}">JPG</a></li>
+        </ul>
+      </div>
+
+      <a href="https://twitter.com/intent/tweet?text={{ product.tweet }}&url={{ site.baseurl }}{{ product.url }}"><img src="{{ site.baseurl }}/assets/img/Twitter_Logo_Blue.png" style="width: 45px;margin-left:20px"></a>
+
+
     </div>
+
+    
+
+
 </div>

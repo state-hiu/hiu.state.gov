@@ -5,7 +5,8 @@ title: "North Korea: Chronic Food Shortage Coping Mechanisms Hillside Farming"
 region_id: "EAP"
 region_title: "East & Southeast Asia"
 date_published: 2014-09-22
-pdf: "NKorea_FoodShortage_2014Sep22_HIU_U1057.pdf"
+product_pdf: "NKorea_FoodShortage_2014Sep22_HIU_U1057.pdf"
+product_jpg: "NKorea_FoodShortage_2014Sep22_HIU_U1057.jpg"
 thumbnail: "NKorea_FoodShortage_2014Sep22_HIU_U1057.jpg"
 featured: false
 lat: 39.7537

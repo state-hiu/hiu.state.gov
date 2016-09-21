@@ -5,11 +5,12 @@ title: "Disease Without Borders: Ebola in West Africa"
 region_id: "AF"
 region_title: "Africa"
 date_published: 2014-08-11
-pdf: "Africa_EbolaDiseaseWithoutBorders_2014Aug11_HIU_U1064.pdf"
+product_pdf: "Africa_EbolaDiseaseWithoutBorders_2014Aug11_HIU_U1064.pdf"
+product_jpg: "Africa_EbolaDiseaseWithoutBorders_2014Aug11_HIU_U1064.jpg"
 thumbnail: "Africa_EbolaDiseaseWithoutBorders_2014Aug11_HIU_U1064.jpg"
 featured: false
 lat: 8.4496546 
-lon: -11.9870578
+lon: -11.4870578
 events:
   - ebola
 keywords:

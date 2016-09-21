@@ -187,6 +187,54 @@ $navbar-inverse-color:                      #333 !default;
     font-size: 18px;
 }
 
+.nea-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 5px;
+}
+
+.eur-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 5px;
+}
+
+.sca-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.eap-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 3px;
+}
+
+.af-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.wha-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
 .logo-font {
     font-family: "Trebuchet MS",Arial,sans-serif;
     font-size: 16px;
@@ -321,3 +369,20 @@ img.thumb150 {
     margin-bottom: -58px;
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #204d74;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0A2E52;
+    border-color: #204d74;
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 1200px;
+    }
+}

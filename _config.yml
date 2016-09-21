@@ -28,7 +28,7 @@ exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, pack
 edit: true
 code: "https://github.com/state-hiu/hiu.state.gov"
 branch: "gh-pages"
-disclaimer: "This site is produced and maintained by the U.S. Department of State, Humanitarian Information Unit.  For more information see the [About Us](/hiu.state.gov/about) page."
+disclaimer: "The Humanitarian Information Unit, manages this site as a portal for information from the U.S. State Department. External links to other Internet sites should not be construed as an endorsement of the views or privacy policies contained therein."
 privacy: "http://www.state.gov/misc/415.htm"
 copyright: "http://www.state.gov/misc/87529.htm"
 

@@ -5,7 +5,8 @@ title: "Turkey: Numbers and Locations of Externally Displaced Syrians"
 region_id: "NEA"
 region_title: "Middle East"
 date_published: 2015-06-23
-pdf: "Turkey_SyrianRefugeeLocations_2015Jun23_HIU_U1246.pdf"
+product_pdf: "Turkey_SyrianRefugeeLocations_2015Jun23_HIU_U1246.pdf"
+product_jpg: "Turkey_SyrianRefugeeLocations_2015Jun23_HIU_U1246.jpg"
 thumbnail: "Turkey_SyrianRefugeeLocations_2015Jun23_HIU_U1246.jpg"
 featured: true
 lat: 38.152

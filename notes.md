@@ -1,46 +1,5 @@
 # Notes
 
-## Uploading Products
-
-### Step 1: Create Product abstract
-
-<img src="https://github.com/d3netxer/hiu.state.gov/blob/gh-pages/assets/img/repo_location.png" style="width:500px">
-
-log into github and navigate into the _post directory inside products https://github.com/state-hiu/hiu.state.gov/tree/gh-pages/products/_posts
-
-- create a new product post (tip copy the text of an existing post then edit). The format for the filename of the post is YYYY-MM-DD-title.
-
-- In the post there are keys that need to be filled inbetween the three dashes:
-
-#### keys
-
-- layout: product
-- category: products
-- title: insert title of product in qoutes
-- region_id: choices include - AF, EAP, EUR, NEA, SCA, WHA
-- region_title: choices include - Africa, East Asia and the Pacific, Europe, Near East, South and Central Asia, Western Hemisphere
-- date_published: yyyy-mm-dd
-- pdf: in qoutes insert the thumbnail image file name that was uploaded
-thumbnail: in qoutes insert the thumbnail image file name that was uploaded
-- featured: true or false 
-- lat: (longitude where the post will show up on the web map)
-- lon: (longitude where the post will show up on the web map)
-keywords:
-
-Below the keys and after the three dashes you insert the abstract text. You can now save the product post by committing it.
-
-### Step 2: Upload Product thumbnail and pdf
-
-log into the Amazon Web Services (AWS) console as hiu-website-user. One you are logged in go inside S3.
-
-#### Upload thumbnail
-
-go inside the hiu-thumbnails S3 bucket, then go inside the products directory. Here are where all of the images are stored upload a .jpg or .png file. It can be any size, just make sure it has the same width as height. thumbnails of 300px and 150px will automatically be created and saved inside the resized directory.
-
-#### Upload pdf
-
-go inside the hiu-products S3 bucket. Here are where all of the product pdfs are stored. Upload your product pdf here.
-
 ## Parsing Metadata Services
 
 ### CSW
