@@ -10,7 +10,7 @@
 {% endif %}
 <div class="{{ li_class }}" style="margin-bottom: 15px;">
     <div class="col-md-{{ li_left_cols }}">
-          <a class="listitem-thumbnail" data-toggle="modal" data-target="#myModal" data-title="{{ product.title }}" data-img="{{ site.storage.thumbnails_products }}/resized/middle/{{ product.thumbnail }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
+          <a class="listitem-thumbnail" data-toggle="modal" data-target="#myModal" data-title="{{ product.title }}" data-img="{{ site.storage.products }}/resized/{{ product.product_jpg }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
           {% if li_thumbnail_width == 150 %}
             <img src="{{ site.storage.thumbnails_products }}/resized/small/{{ product.thumbnail }}" width="{{ li_thumbnail_width }}" height="{{ li_thumbnail_height }}" class="img-responsive"/>
           {% else %}
@@ -34,8 +34,8 @@
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Download
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
-          <li><a href="{{ site.storage.products }}/{{ product.pdf }}">PDF</a></li>
-          <li><a href="{{ site.storage.products }}/{{ product.jpg }}">JPG</a></li>
+          <li><a href="{{ site.storage.products }}/{{ product.product_pdf }}">PDF</a></li>
+          <li><a href="{{ site.storage.products }}/{{ product.product_jpg }}">JPG</a></li>
         </ul>
       </div>
 

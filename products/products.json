@@ -14,7 +14,8 @@ layout: default
         "region_title": "{{ product.region_title }}",
         "featured": "{{ product.featured }}",
         "url": "{{ site.url }}{{ product.url | remove: '.html' }}",
-        "pdf": "https://s3.amazonaws.com/hiu-products/{{ product.pdf }}",
+        "product_pdf": "https://s3.amazonaws.com/hiu-products/{{ product.product_pdf }}",
+        "product_jpg": "https://s3.amazonaws.com/hiu-products/{{ product.product_jpg }}",
         "thumbnail_150": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/small/{{ product.thumbnail }}",
         "thumbnail_300": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/middle/{{ product.thumbnail }}",
         "marker-color": "#8cc250"

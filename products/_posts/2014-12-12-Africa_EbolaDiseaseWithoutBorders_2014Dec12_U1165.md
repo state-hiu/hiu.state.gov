@@ -5,7 +5,8 @@ title: "Disease Without Borders: Ebola in West Africa"
 region_id: "AF"
 region_title: "Africa"
 date_published: 2014-12-12
-pdf: "Africa_EbolaDiseaseWithoutBorders_2014Dec12_U1165.pdf"
+product_pdf: "Africa_EbolaDiseaseWithoutBorders_2014Dec12_U1165.pdf"
+product_jpg: "Africa_EbolaDiseaseWithoutBorders_2014Dec12_U1165.jpg"
 thumbnail: "Africa_EbolaDiseaseWithoutBorders_2014Dec12.jpg"
 featured: true
 lat: 8.4496546 
