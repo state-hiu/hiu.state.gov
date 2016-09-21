@@ -406,7 +406,7 @@ body {
 
                       enabled[featureCollection.features[i].properties.title] = true;
 
-                      var popupContent = '<img src="'+featureCollection.features[i].properties.thumbnail_150+'">'+'<h4><a href="'+featureCollection.features[i].properties.url+'"></br>'+featureCollection.features[i].properties.title+'</a></h4>Date Published: '+featureCollection.features[i].properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+featureCollection.features[i].properties.region_id+'">'+featureCollection.features[i].properties.region_title+'</a><br><a href="'+featureCollection.features[i].properties.pdf+'">Download</a>';
+                      var popupContent = '<img src="'+featureCollection.features[i].properties.thumbnail_300+'" width="150" height="150" style="border:1px solid #021a40;">'+'<h4><a href="'+featureCollection.features[i].properties.url+'"></br>'+featureCollection.features[i].properties.title+'</a></h4>Date Published: '+featureCollection.features[i].properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+featureCollection.features[i].properties.region_id+'">'+featureCollection.features[i].properties.region_title+'</a><br><a href="'+featureCollection.features[i].properties.pdf+'">Download</a>';
 
                       var popupOptions = {keepInView: true,maxWidth: 200};
 
