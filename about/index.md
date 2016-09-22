@@ -2,7 +2,7 @@
 layout: wrapper_text
 ---
 # About Us
-
+<hr>
 ## Mission Statement
 
 The mission of the Humanitarian Information Unit (HIU) is to serve as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.
