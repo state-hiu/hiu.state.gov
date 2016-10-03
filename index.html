@@ -203,6 +203,7 @@ body {
               zoomControl: false
             }).addTo(map);
 
+            //http://leafletjs.com/examples/map-panes/
             map.createPane('labels');
             map.getPane('labels').style.zIndex = 550;
             map.getPane('labels').style.pointerEvents = 'none';
@@ -225,6 +226,8 @@ body {
 
             var sidebar = L.control.sidebar('sidebar').addTo(map);
 
+
+/*
             info.onAdd = function (map) {
               this._div = L.DomUtil.create('div', 'info');
               this._div.innerHTML = '<div id="earth" data-toggle="tooltip" data-placement="left" title="Hello This Will Have Some Value"></div>';
@@ -232,7 +235,7 @@ body {
             };
 
             info.addTo(map);
-
+*/
 
             var AFmarkers = new L.MarkerClusterGroup();
             var EAPmarkers = new L.MarkerClusterGroup();
