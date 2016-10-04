@@ -188,10 +188,9 @@ body {
 
             //L.mapbox.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
 
-
-            var map = L.map('map', '', {
+            var map = L.map('map', {
                 attributionControl: false,
-                maxBounds:[ [-90, -180], [100, 180] ],
+                maxBounds:[ [-90, -140], [100, 180] ],
                 minZoom: 3
               }).setView([20, 25], 3);
 
@@ -258,6 +257,9 @@ body {
             //original extent
             map.on('click', function(e) {        
                 map.setView([20, 25], 3, {animation: false});
+                console.log('what clicked');
+                console.log(e);
+                $('.sidebar').css({ "height": "43%"});
                 $( '.product').remove();
                 map.removeLayer(AFmarkers);
                 map.removeLayer(EAPmarkers);
@@ -265,6 +267,7 @@ body {
                 map.removeLayer(NEAmarkers);
                 map.removeLayer(SCAmarkers);
                 map.removeLayer(WHAmarkers);
+                
             });
 
 
@@ -407,6 +410,8 @@ body {
                             layer.bindPopup(popupContent, popupOptions);
                         }
                     });
+
+                    map.addControl( new L.Control.ListMarkers({layer: products}) );
 
                     var enabled = {};
 
@@ -596,10 +601,14 @@ body {
                 var regionCoord;
                 var regionZoom;
 
+                console.log('bur prop');
+                console.log(this.feature.properties.RegBureau);
+
                 switch (this.feature.properties.RegBureau) {
                  case "AF":
                     regionCoord = [-1, 0];
                     regionZoom = 4;
+                    $('.sidebar').css({ "height": "89%"});
                     break;
                  case "EAP":
                     regionCoord = [28, 110];
@@ -645,6 +654,7 @@ body {
 
                 //map.setView(event.latlng, 5);
 
+                
 
 
             }
@@ -686,7 +696,7 @@ body {
                     //updateRenderOrder(geojsonLayers);
                     //layerswitcher.append(createLink(map, events, 'Events', events.options.zIndex));
 
-                    map.addControl( new L.Control.ListMarkers({layer: events}) );
+                    //map.addControl( new L.Control.ListMarkers({layer: events}) );
                     //markersLayer is a L.LayerGroup contains listing markers
                 }
             });
