@@ -84,6 +84,10 @@ body {
   color: #d73f3f;
 }
 
+.sidebar-tall {
+  height: 89%; 
+}
+
 </style>
 
 
@@ -280,7 +284,8 @@ body {
                 console.log(layerClicked);
 
                 if(layerClicked !== true){
-                  $('.sidebar').css({ "height": "33%"});
+                  //$('.sidebar').css({ "height": "33%"});
+                  $('.sidebar').removeClass("sidebar-tall");
                   activeLayer = 'none';
                 }
 
@@ -713,7 +718,8 @@ body {
                 getProducts(this.feature.properties.RegBureau);
 
 
-                $('.sidebar').css({ "height": "89%"});
+                //$('.sidebar').css({ "height": "89%"});
+                $('.sidebar').addClass("sidebar-tall");
 
                 layerClicked = true;
 
