@@ -97,7 +97,7 @@ body {
 <script src="{{ site.baseurl }}/lib/queue/queue.v1.min.js"></script>
 
 <!--style="height: calc(100% - 61px); position:relative;"-->
-    <div id="sidebar" class="sidebar" style="margin-top: 61px;">
+    <div id="sidebar" class="sidebar" style="margin-top: 80px;">
           <!-- Nav tabs -->
           <div class="sidebar-tabs">
               <ul role="tablist">
@@ -127,6 +127,10 @@ body {
 
                   <p><b>Select different regions on the map to view our products</b></p>
 
+                  <div id='region' class='region'></div>
+
+                  <div id='product-listings' class='product-listings'></div>
+
 <!--
                   <p>
                     <img src="{{ site.baseurl }}/assets/img/mapgive_red_pt.png" style="width: 30px;height: 45px;"><b>&nbsp&nbsp&nbsp sudden-onset disaster</b>
@@ -153,9 +157,7 @@ body {
       </div>
 
 
-
-
-<div id="map" class="sidebar-map" style="top:0px;left:0px;width:100%;height:100%;height: 95%;"></div>
+<div id="map" class="sidebar-map" style="top:23px;left:0px;width:100%;height:100%;height: 95%;"></div>
 
 <script src="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.js"></script>
 
@@ -252,14 +254,38 @@ body {
             var SCAcount = 1;
             var WHAcount = 1;
 
+            var layerClicked = false;
+
+            window.activeLayer = 'none';
+
+            var firstClick = true;
+
+            console.log('active layer: ');
+            console.log(activeLayer);
+
+            console.log('layerClicked val 1st');
+            console.log(layerClicked);
+
             //This enables when a user clicks on part of the map that
             //is not part of a layer, it will zoom back into the 
             //original extent
             map.on('click', function(e) {        
+                //The TopoJson layer click function always fires first
+
                 map.setView([20, 25], 3, {animation: false});
-                console.log('what clicked');
+                console.log('map clicked');
                 console.log(e);
-                $('.sidebar').css({ "height": "43%"});
+
+                console.log('layerClicked val 2nd');
+                console.log(layerClicked);
+
+                if(layerClicked !== true){
+                  $('.sidebar').css({ "height": "33%"});
+                  activeLayer = 'none';
+                }
+
+                layerClicked = false;
+
                 $( '.product').remove();
                 map.removeLayer(AFmarkers);
                 map.removeLayer(EAPmarkers);
@@ -269,6 +295,7 @@ body {
                 map.removeLayer(WHAmarkers);
                 
             });
+
 
 
             function addTopoData(topoData){  
@@ -282,7 +309,7 @@ body {
                 //fillColor = colorScale(randomValue).hex();
                 var fillColor;
 
-                console.log(layer.feature.properties.RegBureau);
+                //console.log(layer.feature.properties.RegBureau);
 
                 switch (layer.feature.properties.RegBureau) {
                  case "AF":
@@ -411,18 +438,27 @@ body {
                         }
                     });
 
-                    map.addControl( new L.Control.ListMarkers({layer: products}) );
+
+                    $( '.product-listings').empty();
+
+                    console.log('first click');
+                    console.log(firstClick);
+
+                    if(firstClick == true){
+                      map.addControl( new L.Control.ListMarkers({layer: products}) );
+                      firstClick = false;
+                    }
 
                     var enabled = {};
 
                     var featureCollection = products;
 
-                    console.log('features:');
-                    console.log(featureCollection._layers);
+                    //console.log('features:');
+                    //console.log(featureCollection._layers);
 
                     for (var i in featureCollection._layers) {
-                      console.log('feature:');
-                      console.log(featureCollection._layers[i].feature);
+                      //console.log('feature:');
+                      //console.log(featureCollection._layers[i].feature);
 
                       if (featureCollection._layers[i].feature.properties.region_id === region_id) {
 
@@ -476,8 +512,25 @@ body {
                         //console.log('enabled: ');
                         //console.log(enabled);
 
+                        /*
+
                         console.log("AF length ");
                         console.log(AFmarkers.getLayers().length);
+                        console.log(AFmarkers.getLayers());
+
+                        templayerGroup = L.LayerGroup();
+
+                        for (var i = 0; i < AFmarkers.getLayers().length; i++) {
+                          console.log(AFmarkers.getLayers()[i]);
+                          tempLayer = AFmarkers.getLayers()[i];
+                          templayerGroup.addLayer(tempLayer);
+                        }
+                        */
+
+                        //console.log('templayerGroup val:');
+                        //console.log(templayerGroup);
+
+                        
 
                         switch (region_id) {
                                        case "AF":
@@ -489,8 +542,8 @@ body {
                                           map.addLayer(AFmarkers);
                                           $( '.product').remove();
                                           $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + AFmarkers.getLayers().length + "&nbspProducts</p></center>" );
-                                          
                                           AFcount++;
+
                                           break;
                                        case "EAP":
                                           map.removeLayer(AFmarkers);
@@ -598,37 +651,47 @@ body {
             function clickLayer(e) {
                 // Assuming the clicked feature is a shape, not a point marker.
 
+                console.log('layer clicked');
+                console.log(e);
+
                 var regionCoord;
                 var regionZoom;
 
-                console.log('bur prop');
-                console.log(this.feature.properties.RegBureau);
+                //console.log('bur prop');
+                //console.log(this.feature.properties.RegBureau);
 
                 switch (this.feature.properties.RegBureau) {
                  case "AF":
                     regionCoord = [-1, 0];
                     regionZoom = 4;
-                    $('.sidebar').css({ "height": "89%"});
+                    activeLayer = "AF";
+                    console.log('active layerAF: ');
+                    console.log(activeLayer);
                     break;
                  case "EAP":
                     regionCoord = [28, 110];
                     regionZoom = 4;
+                    activeLayer = "EAP";
                     break;
                  case "EUR":
                     regionCoord = [51, 22];
                     regionZoom = 4;
+                    activeLayer = "EUR";
                     break;
                  case "NEA":
                     regionCoord = [28, 20];
                     regionZoom = 4;
+                    activeLayer = "NEA";
                     break;
                  case "SCA":
                     regionCoord = [35, 57.5];
                     regionZoom = 4;
+                    activeLayer = "SCA";
                     break;
                  case "WHA":
                     regionCoord = [-9, -63];
                     regionZoom = 4;
+                    activeLayer = "WHA";
                     break;
                  default:
                     regionCoord = [14, -20];
@@ -637,8 +700,8 @@ body {
 
 
                 if (typeof(products) != "undefined") {
-                  console.log("products are defined");
-                  products.clearLayers();
+                  //console.log("products are defined");
+                  //products.clearLayers();
                 }
                 
 
@@ -652,9 +715,11 @@ body {
                 getProducts(this.feature.properties.RegBureau);
 
 
-                //map.setView(event.latlng, 5);
+                $('.sidebar').css({ "height": "89%"});
 
-                
+                layerClicked = true;
+
+                //map.setView(event.latlng, 5);
 
 
             }
@@ -690,7 +755,7 @@ body {
                             layer.bindPopup(popupContent, popupOptions);
                         }
                     });
-                    events.addTo(map);
+                    //events.addTo(map);
                     //geojsonLayers.push(events);
                     //geojsonLayers = sortLayers(geojsonLayers)
                     //updateRenderOrder(geojsonLayers);
@@ -705,3 +770,5 @@ body {
 
    }());
 </script>
+
+
