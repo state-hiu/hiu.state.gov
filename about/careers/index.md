@@ -2,8 +2,8 @@
 layout: wrapper_text
 title: "Careers"
 ---
-# [About]({{ site.baseurl }}/about) / [Careers]({{ site.baseurl }}/about/careers)
-
+# [About Us]({{ site.baseurl }}/about) / Careers
+<hr>
 For general job opportunities, consult the [USA Jobs website](https://usajobs.gov).  The Humanitarian Information Unit (HIU) has a staff of cartographers, geographers, analysts, and web GIS developers.
 
 HIU also typically has a State Department Foreign Service Officer on its staff; for information on Foreign Service careers, please visit [http://careers.state.gov/work/foreign-service/officer](http://careers.state.gov/work/foreign-service/officer).

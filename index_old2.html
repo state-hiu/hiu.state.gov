@@ -15,16 +15,16 @@ layerswitcher:
 
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" media="all" />
 
+
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.css" type="text/css" media="all" />
 
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.src.css" type="text/css" media="all" />
 
 <script src="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.src.js"></script>
 
-
-<script src="{{ site.baseurl }}/lib/leaflet-markercluster/leaflet.markercluster.js"></script>
-<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/MarkerCluster.css" />
-<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/MarkerCluster.Default.css"  />
+<script src="{{ site.baseurl }}/lib/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/v0.4.0/MarkerCluster.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css"  />
 
 <!--disables scroll bar-->
 <style type="text/css">
@@ -84,10 +84,6 @@ body {
   color: #d73f3f;
 }
 
-.sidebar-tall {
-  height: 89%; 
-}
-
 </style>
 
 
@@ -101,7 +97,7 @@ body {
 <script src="{{ site.baseurl }}/lib/queue/queue.v1.min.js"></script>
 
 <!--style="height: calc(100% - 61px); position:relative;"-->
-    <div id="sidebar" class="sidebar" style="margin-top: 60px;">
+    <div id="sidebar" class="sidebar" style="margin-top: 61px;">
           <!-- Nav tabs -->
           <div class="sidebar-tabs">
               <ul role="tablist">
@@ -131,10 +127,6 @@ body {
 
                   <p><b>Select different regions on the map to view our products</b></p>
 
-                  <div id='region' class='region'></div>
-
-                  <div id='product-listings' class='product-listings'></div>
-
 <!--
                   <p>
                     <img src="{{ site.baseurl }}/assets/img/mapgive_red_pt.png" style="width: 30px;height: 45px;"><b>&nbsp&nbsp&nbsp sudden-onset disaster</b>
@@ -159,6 +151,8 @@ body {
 -->
           </div>
       </div>
+
+
 
 
 <div id="map" class="sidebar-map" style="top:0px;left:0px;width:100%;height:100%;height: 95%;"></div>
@@ -192,29 +186,21 @@ body {
 
             //var map = L.map('map').setView([0, 30], 3);
 
-            //L.mapbox.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
+            L.mapbox.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
 
-            var map = L.map('map', {
+
+            var map = L.mapbox.map('map', '', {
                 attributionControl: false,
-                maxBounds:[ [-90, -140], [100, 180] ],
+                maxBounds:[ [-90, -180], [100, 180] ],
                 minZoom: 3
               }).setView([20, 25], 3);
 
             // Use styleLayer to add a Mapbox style created in Mapbox Studio
-            var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/cit0gm97500012ypfwnzijj6o/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ',{
+            var baseLayer = L.mapbox.styleLayer('mapbox://styles/hiu/cit0gm97500012ypfwnzijj6o',{
               minZoom: 1,
               maxZoom: 16,
               scrollWheelZoom: true,
-              zoomControl: false
-            }).addTo(map);
-
-            //http://leafletjs.com/examples/map-panes/
-            map.createPane('labels');
-            map.getPane('labels').style.zIndex = 550;
-            map.getPane('labels').style.pointerEvents = 'none';
-
-            var Labels = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/cittl946w000q2inzyqzdlzs6/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ', {
-              pane: 'labels'
+              zoomControl: false // we'll add later
             }).addTo(map);
 
             map.zoomControl.setPosition('topright');
@@ -231,8 +217,6 @@ body {
 
             var sidebar = L.control.sidebar('sidebar').addTo(map);
 
-
-/*
             info.onAdd = function (map) {
               this._div = L.DomUtil.create('div', 'info');
               this._div.innerHTML = '<div id="earth" data-toggle="tooltip" data-placement="left" title="Hello This Will Have Some Value"></div>';
@@ -240,7 +224,7 @@ body {
             };
 
             info.addTo(map);
-*/
+
 
             var AFmarkers = new L.MarkerClusterGroup();
             var EAPmarkers = new L.MarkerClusterGroup();
@@ -258,39 +242,11 @@ body {
             var SCAcount = 1;
             var WHAcount = 1;
 
-            var layerClicked = false;
-
-            window.activeLayer = 'none';
-
-            var firstClick = true;
-
-            console.log('active layer: ');
-            console.log(activeLayer);
-
-            console.log('layerClicked val 1st');
-            console.log(layerClicked);
-
             //This enables when a user clicks on part of the map that
             //is not part of a layer, it will zoom back into the 
             //original extent
             map.on('click', function(e) {        
-                //The TopoJson layer click function always fires first
-
                 map.setView([20, 25], 3, {animation: false});
-                console.log('map clicked');
-                console.log(e);
-
-                console.log('layerClicked val 2nd');
-                console.log(layerClicked);
-
-                if(layerClicked !== true){
-                  //$('.sidebar').css({ "height": "33%"});
-                  $('.sidebar').removeClass("sidebar-tall");
-                  activeLayer = 'none';
-                }
-
-                layerClicked = false;
-
                 $( '.product').remove();
                 map.removeLayer(AFmarkers);
                 map.removeLayer(EAPmarkers);
@@ -298,8 +254,8 @@ body {
                 map.removeLayer(NEAmarkers);
                 map.removeLayer(SCAmarkers);
                 map.removeLayer(WHAmarkers);
-                
             });
+
 
             function addTopoData(topoData){  
               topoLayer.addData(topoData);
@@ -312,7 +268,7 @@ body {
                 //fillColor = colorScale(randomValue).hex();
                 var fillColor;
 
-                //console.log(layer.feature.properties.RegBureau);
+                console.log(layer.feature.properties.RegBureau);
 
                 switch (layer.feature.properties.RegBureau) {
                  case "AF":
@@ -425,190 +381,155 @@ body {
 
             function getProducts(region_id) {
 
-              var myLayer = L.featureGroup()
+              //http://lyzidiamond.com/posts/external-geojson-mapbox
+              var myLayer = L.mapbox.featureLayer()
+              .loadURL("{{ site.baseurl}}/products/products.json")
+              .on('ready', function() {
+                myLayer.eachLayer(function(layer) {
+                  var popupOptions = {keepInView: true,maxWidth: 200};
+                  layer.setIcon(productIcon);
+                  var popupContent = '<img src="'+layer.feature.properties.thumbnail_150+'">'+'<h4><a href="'+layer.feature.properties.url+'"></br>'+layer.feature.properties.title+'</a></h4>Date Published: '+layer.feature.properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+layer.feature.properties.region_id+'">'+layer.feature.properties.region_title+'</a><br><a href="'+layer.feature.properties.pdf+'">Download</a>';
+                  layer.bindPopup(popupContent, popupOptions);
+                });
 
-              $.ajax({
-                dataType: "json",
-                url: "{{ site.baseurl}}/products/products.json",
-                success: function(response) {
-                    var products = L.geoJson(response, {
-                        zIndex: 100,
-                        onEachFeature: function(feature, layer) {
-                            var popupOptions = {keepInView: true,maxWidth: 200};
-                            layer.setIcon(productIcon);
-                            var popupContent = '<img src="'+layer.feature.properties.thumbnail_150+'">'+'<h4><a href="'+layer.feature.properties.url+'"></br>'+layer.feature.properties.title+'</a></h4>Date Published: '+layer.feature.properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+layer.feature.properties.region_id+'">'+layer.feature.properties.region_title+'</a><br><a href="'+layer.feature.properties.pdf+'">Download</a>';
-                            layer.bindPopup(popupContent, popupOptions);
-                        }
-                    });
+                var enabled = {};
+                var featureCollection = myLayer.getGeoJSON();
 
+                //console.log('features:');
+                //console.log(featureCollection);
+                //console.log(featureCollection.features.length);
 
-                    $( '.product-listings').empty();
+                for (var i = 0; i < featureCollection.features.length; i++) {
+                  //console.log('feature:');
+                  //console.log(featureCollection.features[i].properties.region_id);
 
-                    console.log('first click');
-                    console.log(firstClick);
+                  if (featureCollection.features[i].properties.region_id === region_id) {
 
-                    if(firstClick == true){
-                      map.addControl( new L.Control.ListMarkers({layer: products}) );
-                      firstClick = false;
+                      enabled[featureCollection.features[i].properties.title] = true;
+
+                      var popupContent = '<img src="'+featureCollection.features[i].properties.thumbnail_300+'" width="150" height="150" style="border:1px solid #021a40;">'+'<h4><a href="'+featureCollection.features[i].properties.url+'"></br>'+featureCollection.features[i].properties.title+'</a></h4>Date Published: '+featureCollection.features[i].properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+featureCollection.features[i].properties.region_id+'">'+featureCollection.features[i].properties.region_title+'</a><br><a href="'+featureCollection.features[i].properties.pdf+'">Download</a>';
+
+                      var popupOptions = {keepInView: true,maxWidth: 200};
+
+                      var marker = L.marker(new L.LatLng(featureCollection.features[i].geometry.coordinates[1],featureCollection.features[i].geometry.coordinates[0]), {
+                                                  icon: productIcon
+                                              });
+                                              marker.bindPopup(popupContent,popupOptions);
+
+                      switch (region_id) {
+                                     case "AF":
+                                      if (AFcount == 1) {
+                                        AFmarkers.addLayer(marker);
+                                      }
+                                        break;
+                                     case "EAP":
+                                      if (EAPcount == 1) {
+                                        EAPmarkers.addLayer(marker);
+                                      }
+                                        break;
+                                     case "EUR":
+                                      if (EURcount == 1) {
+                                        EURmarkers.addLayer(marker);
+                                      }
+                                        break;
+                                     case "NEA":
+                                      if (NEAcount == 1) {
+                                        NEAmarkers.addLayer(marker);
+                                      }
+                                        break;
+                                     case "SCA":
+                                      if (SCAcount == 1) {
+                                        SCAmarkers.addLayer(marker);
+                                      }
+                                        break;
+                                     case "WHA":
+                                      if (WHAcount == 1) {
+                                        WHAmarkers.addLayer(marker);
+                                      }
+                                        break;
+                                     default:
+                                    }
+                      }                      
                     }
 
-                    var enabled = {};
+                    //console.log('enabled: ');
+                    //console.log(enabled);
 
-                    var featureCollection = products;
+                    console.log("AF length ");
+                    console.log(AFmarkers.getLayers().length);
 
-                    //console.log('features:');
-                    //console.log(featureCollection._layers);
-
-                    for (var i in featureCollection._layers) {
-                      //console.log('feature:');
-                      //console.log(featureCollection._layers[i].feature);
-
-                      if (featureCollection._layers[i].feature.properties.region_id === region_id) {
-
-                          //enabled[featureCollection._layers[i].feature.properties.title] = true;
-
-                          var popupContent = '<img src="'+featureCollection._layers[i].feature.properties.thumbnail_300+'" width="150" height="150" style="border:1px solid #021a40;">'+'<h4><a href="'+featureCollection._layers[i].feature.properties.url+'"></br>'+featureCollection._layers[i].feature.properties.title+'</a></h4>Date Published: '+featureCollection._layers[i].feature.properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+featureCollection._layers[i].feature.properties.region_id+'">'+featureCollection._layers[i].feature.properties.region_title+'</a><br><a href="'+featureCollection._layers[i].feature.properties.pdf+'">Download</a>';
-
-                          var popupOptions = {keepInView: true,maxWidth: 200};
-
-                          var marker = L.marker(new L.LatLng(featureCollection._layers[i].feature.geometry.coordinates[1],featureCollection._layers[i].feature.geometry.coordinates[0]), {
-                                                      icon: productIcon
-                                                  });
-                                                  marker.bindPopup(popupContent,popupOptions);
-
-                          switch (region_id) {
-                                         case "AF":
-                                          if (AFcount == 1) {
-                                            AFmarkers.addLayer(marker);
-                                          }
-                                            break;
-                                         case "EAP":
-                                          if (EAPcount == 1) {
-                                            EAPmarkers.addLayer(marker);
-                                          }
-                                            break;
-                                         case "EUR":
-                                          if (EURcount == 1) {
-                                            EURmarkers.addLayer(marker);
-                                          }
-                                            break;
-                                         case "NEA":
-                                          if (NEAcount == 1) {
-                                            NEAmarkers.addLayer(marker);
-                                          }
-                                            break;
-                                         case "SCA":
-                                          if (SCAcount == 1) {
-                                            SCAmarkers.addLayer(marker);
-                                          }
-                                            break;
-                                         case "WHA":
-                                          if (WHAcount == 1) {
-                                            WHAmarkers.addLayer(marker);
-                                          }
-                                            break;
-                                         default:
-                                        }
-                          }                      
-                        }
-
-                        //console.log('enabled: ');
-                        //console.log(enabled);
-
-                        /*
-
-                        console.log("AF length ");
-                        console.log(AFmarkers.getLayers().length);
-                        console.log(AFmarkers.getLayers());
-
-                        templayerGroup = L.LayerGroup();
-
-                        for (var i = 0; i < AFmarkers.getLayers().length; i++) {
-                          console.log(AFmarkers.getLayers()[i]);
-                          tempLayer = AFmarkers.getLayers()[i];
-                          templayerGroup.addLayer(tempLayer);
-                        }
-                        */
-
-                        //console.log('templayerGroup val:');
-                        //console.log(templayerGroup);
-
-                        
-
-                        switch (region_id) {
-                                       case "AF":
-                                          map.removeLayer(EAPmarkers);
-                                          map.removeLayer(EURmarkers);
-                                          map.removeLayer(NEAmarkers);
-                                          map.removeLayer(SCAmarkers);
-                                          map.removeLayer(WHAmarkers);
-                                          map.addLayer(AFmarkers);
-                                          $( '.product').remove();
-                                          $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + AFmarkers.getLayers().length + "&nbspProducts</p></center>" );
-                                          AFcount++;
-
-                                          break;
-                                       case "EAP":
-                                          map.removeLayer(AFmarkers);
-                                          map.removeLayer(EURmarkers);
-                                          map.removeLayer(NEAmarkers);
-                                          map.removeLayer(SCAmarkers);
-                                          map.removeLayer(WHAmarkers);
-                                          map.addLayer(EAPmarkers);
-                                          $( '.product').remove();
-                                          $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + EAPmarkers.getLayers().length + "&nbspProducts</p></center>" );
-                                          EAPcount++;
-                                          break;
-                                       case "EUR":
-                                          map.removeLayer(AFmarkers);
-                                          map.removeLayer(EAPmarkers);
-                                          map.removeLayer(NEAmarkers);
-                                          map.removeLayer(SCAmarkers);
-                                          map.removeLayer(WHAmarkers);
-                                          map.addLayer(EURmarkers);
-                                          $( '.product').remove();
-                                          $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + EURmarkers.getLayers().length + "&nbspProducts</p></center>" );
-                                          EURcount++;
-                                          break;
-                                       case "NEA":
-                                          map.removeLayer(AFmarkers);
-                                          map.removeLayer(EAPmarkers);
-                                          map.removeLayer(EURmarkers);
-                                          map.removeLayer(SCAmarkers);
-                                          map.removeLayer(WHAmarkers);
-                                          map.addLayer(NEAmarkers);
-                                          $( '.product').remove();
-                                          $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + NEAmarkers.getLayers().length + "&nbspProducts</p></center>" );
-                                          NEAcount++;
-                                          break;
-                                       case "SCA":
-                                          map.removeLayer(AFmarkers);
-                                          map.removeLayer(EAPmarkers);
-                                          map.removeLayer(EURmarkers);
-                                          map.removeLayer(NEAmarkers);
-                                          map.removeLayer(WHAmarkers);
-                                          map.addLayer(SCAmarkers);
-                                          $( '.product').remove();
-                                          $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + SCAmarkers.getLayers().length + "&nbspProducts</p></center>" );
-                                          SCAcount++;
-                                          break;
-                                       case "WHA":
-                                          map.removeLayer(AFmarkers);
-                                          map.removeLayer(EAPmarkers);
-                                          map.removeLayer(EURmarkers);
-                                          map.removeLayer(NEAmarkers);
-                                          map.removeLayer(SCAmarkers);
-                                          map.addLayer(WHAmarkers);
-                                          $( '.product').remove();
-                                          $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + WHAmarkers.getLayers().length + "&nbspProducts</p></center>" );
-                                          WHAcount++;
-                                          break;
-                                       default:
-                                      }
+                    switch (region_id) {
+                                   case "AF":
+                                      map.removeLayer(EAPmarkers);
+                                      map.removeLayer(EURmarkers);
+                                      map.removeLayer(NEAmarkers);
+                                      map.removeLayer(SCAmarkers);
+                                      map.removeLayer(WHAmarkers);
+                                      map.addLayer(AFmarkers);
+                                      $( '.product').remove();
+                                      $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + AFmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                                      
+                                      AFcount++;
+                                      break;
+                                   case "EAP":
+                                      map.removeLayer(AFmarkers);
+                                      map.removeLayer(EURmarkers);
+                                      map.removeLayer(NEAmarkers);
+                                      map.removeLayer(SCAmarkers);
+                                      map.removeLayer(WHAmarkers);
+                                      map.addLayer(EAPmarkers);
+                                      $( '.product').remove();
+                                      $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + EAPmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                                      EAPcount++;
+                                      break;
+                                   case "EUR":
+                                      map.removeLayer(AFmarkers);
+                                      map.removeLayer(EAPmarkers);
+                                      map.removeLayer(NEAmarkers);
+                                      map.removeLayer(SCAmarkers);
+                                      map.removeLayer(WHAmarkers);
+                                      map.addLayer(EURmarkers);
+                                      $( '.product').remove();
+                                      $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + EURmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                                      EURcount++;
+                                      break;
+                                   case "NEA":
+                                      map.removeLayer(AFmarkers);
+                                      map.removeLayer(EAPmarkers);
+                                      map.removeLayer(EURmarkers);
+                                      map.removeLayer(SCAmarkers);
+                                      map.removeLayer(WHAmarkers);
+                                      map.addLayer(NEAmarkers);
+                                      $( '.product').remove();
+                                      $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + NEAmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                                      NEAcount++;
+                                      break;
+                                   case "SCA":
+                                      map.removeLayer(AFmarkers);
+                                      map.removeLayer(EAPmarkers);
+                                      map.removeLayer(EURmarkers);
+                                      map.removeLayer(NEAmarkers);
+                                      map.removeLayer(WHAmarkers);
+                                      map.addLayer(SCAmarkers);
+                                      $( '.product').remove();
+                                      $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + SCAmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                                      SCAcount++;
+                                      break;
+                                   case "WHA":
+                                      map.removeLayer(AFmarkers);
+                                      map.removeLayer(EAPmarkers);
+                                      map.removeLayer(EURmarkers);
+                                      map.removeLayer(NEAmarkers);
+                                      map.removeLayer(SCAmarkers);
+                                      map.addLayer(WHAmarkers);
+                                      $( '.product').remove();
+                                      $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + WHAmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                                      WHAcount++;
+                                      break;
+                                   default:
+                                  }
                     
-                }
               });
-
             }
 
             var AFIcon = L.divIcon({  
@@ -654,47 +575,33 @@ body {
             function clickLayer(e) {
                 // Assuming the clicked feature is a shape, not a point marker.
 
-                console.log('layer clicked');
-                console.log(e);
-
                 var regionCoord;
                 var regionZoom;
-
-                //console.log('bur prop');
-                //console.log(this.feature.properties.RegBureau);
 
                 switch (this.feature.properties.RegBureau) {
                  case "AF":
                     regionCoord = [-1, 0];
                     regionZoom = 4;
-                    activeLayer = "AF";
-                    console.log('active layerAF: ');
-                    console.log(activeLayer);
                     break;
                  case "EAP":
                     regionCoord = [28, 110];
                     regionZoom = 4;
-                    activeLayer = "EAP";
                     break;
                  case "EUR":
                     regionCoord = [51, 22];
                     regionZoom = 4;
-                    activeLayer = "EUR";
                     break;
                  case "NEA":
                     regionCoord = [28, 20];
                     regionZoom = 4;
-                    activeLayer = "NEA";
                     break;
                  case "SCA":
                     regionCoord = [35, 57.5];
                     regionZoom = 4;
-                    activeLayer = "SCA";
                     break;
                  case "WHA":
                     regionCoord = [-9, -63];
                     regionZoom = 4;
-                    activeLayer = "WHA";
                     break;
                  default:
                     regionCoord = [14, -20];
@@ -703,8 +610,8 @@ body {
 
 
                 if (typeof(products) != "undefined") {
-                  //console.log("products are defined");
-                  //products.clearLayers();
+                  console.log("products are defined");
+                  products.clearLayers();
                 }
                 
 
@@ -713,17 +620,9 @@ body {
 
                 //console.log(this.feature);
                 //console.log(this.feature.properties.RegBureau);
-
-
                 getProducts(this.feature.properties.RegBureau);
-
-
-                //$('.sidebar').css({ "height": "89%"});
-                $('.sidebar').addClass("sidebar-tall");
-
-                layerClicked = true;
-
                 //map.setView(event.latlng, 5);
+
 
 
             }
@@ -759,13 +658,13 @@ body {
                             layer.bindPopup(popupContent, popupOptions);
                         }
                     });
-                    //events.addTo(map);
+                    events.addTo(map);
                     //geojsonLayers.push(events);
                     //geojsonLayers = sortLayers(geojsonLayers)
                     //updateRenderOrder(geojsonLayers);
                     //layerswitcher.append(createLink(map, events, 'Events', events.options.zIndex));
 
-                    //map.addControl( new L.Control.ListMarkers({layer: events}) );
+                    map.addControl( new L.Control.ListMarkers({layer: events}) );
                     //markersLayer is a L.LayerGroup contains listing markers
                 }
             });
@@ -774,5 +673,3 @@ body {
 
    }());
 </script>
-
-

@@ -1,8 +1,8 @@
 ---
 layout: wrapper_text
 ---
-# [About Us]({{ site.baseurl }}/about) / [Imagery]({{ site.baseurl }}/about/imagery)
-
+# [About Us]({{ site.baseurl }}/about) / Imagery
+<hr>
 ## Commercial Satellite Imagery Request Process
 
 The U.S. State Department can share U.S. government (USG) [licensed]({{ site.baseurl }}/about/imagery/NextViewLicense.txt) commercial satellite imagery with approved recipients under certain conditions and Departmental clearance on an individual case-by-case basis. The Department’s ability to facilitate commercial imagery requests is subject to Departmental determination that it is in the interest of the USG to share the requested imagery, as well as staffing and resource constraints.

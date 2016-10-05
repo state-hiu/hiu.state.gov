@@ -11,7 +11,7 @@ title: Events
     {% assign count_current = count_current | plus: 1 %}
   {% endif %}
 {% endfor %}
-<div><h2 class="page-title">{{ page.title }}</h2></div>
+<div><h1 class="page-title">{{ page.title }}</h1></div>
 <ul class="nav nav-tabs" style="padding: 10px 10px 0px 10px;">
   <li class="active"><a href="#current" data-toggle="tab">Current ({{ count_current }})</a></li>
   <li><a href="#archived" data-toggle="tab">Archived ({{ count_archived }})</a></li>
