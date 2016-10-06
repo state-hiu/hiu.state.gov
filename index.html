@@ -88,6 +88,10 @@ body {
   height: 89%; 
 }
 
+.leaflet-container .list-markers {
+  visibility: hidden;
+}
+
 </style>
 
 
@@ -121,25 +125,34 @@ body {
 
               <!-- Tab panes -->
           <div class="sidebar-content">
-              <div class="sidebar-pane active" id="home">
-                  <h1 class="sidebar-header">
-                      Humanitarian Information Unit (HIU)
-                      <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
-                  </h1>
+
+            <div class="header-contain-div">
+              <h1 class="sidebar-header">
+                  Humanitarian Information Unit (HIU)
+                  <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+              </h1>
+            </div>
+
+              <div class="sidebar-pane active" id="home" style="overflow-y: scroll;height: 100%;">
+
+                  
                   <br>
 
-                  <div id='hiu-tab' class='hiu-tab'>
+                  <div class="scroll">
 
-                    <p>The HIU serves as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.</p>
+                    <div id='hiu-tab' class='hiu-tab'>
 
-                    <p><b>Select different regions on the map to view our products</b></p>
+                      <p>The HIU serves as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.</p>
 
-                  </div>
+                      <p><b>Select different regions on the map to view our products</b></p>
 
-                  <div id='region' class='region'></div>
+                    </div>
 
-                  <div id='product-listings' class='product-listings'></div>
+                    <div id='region' class='region'></div>
 
+                    <div id='product-listings' class='product-listings'></div>
+
+                </div>
 <!--
                   <p>
                     <img src="{{ site.baseurl }}/assets/img/mapgive_red_pt.png" style="width: 30px;height: 45px;"><b>&nbsp&nbsp&nbsp sudden-onset disaster</b>
