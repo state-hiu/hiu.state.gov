@@ -127,9 +127,14 @@ body {
                       <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
                   </h1>
                   <br>
-                  <p>The HIU serves as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.</p>
 
-                  <p><b>Select different regions on the map to view our products</b></p>
+                  <div id='hiu-tab' class='hiu-tab'>
+
+                    <p>The HIU serves as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.</p>
+
+                    <p><b>Select different regions on the map to view our products</b></p>
+
+                  </div>
 
                   <div id='region' class='region'></div>
 
@@ -194,7 +199,9 @@ body {
 
             //L.mapbox.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
 
-            var map = L.map('map', {
+            //need to make map a window variable to make it seen in leaflet-list-markers.src.js
+            //probably because all of this in inside of its own contained function
+            window.map = L.map('map', {
                 attributionControl: false,
                 maxBounds:[ [-90, -140], [100, 180] ],
                 minZoom: 3
@@ -241,6 +248,7 @@ body {
 
             info.addTo(map);
 */
+
 
             var AFmarkers = new L.MarkerClusterGroup();
             var EAPmarkers = new L.MarkerClusterGroup();
@@ -292,12 +300,15 @@ body {
                 layerClicked = false;
 
                 $( '.product').remove();
+
                 map.removeLayer(AFmarkers);
                 map.removeLayer(EAPmarkers);
                 map.removeLayer(EURmarkers);
                 map.removeLayer(NEAmarkers);
                 map.removeLayer(SCAmarkers);
                 map.removeLayer(WHAmarkers);
+
+                $('.hiu-tab').show();
                 
             });
 
@@ -442,7 +453,9 @@ body {
                     });
 
 
-                    $( '.product-listings').empty();
+                    $('.product-listings').empty();
+
+                    $('.hiu-tab').hide();
 
                     console.log('first click');
                     console.log(firstClick);
@@ -451,6 +464,8 @@ body {
                       map.addControl( new L.Control.ListMarkers({layer: products}) );
                       firstClick = false;
                     }
+
+
 
                     var enabled = {};
 
@@ -728,6 +743,11 @@ body {
 
             }
 
+
+            
+
+
+
 /*
             topoLayer.on("click", function (event) {
                 // Assuming the clicked feature is a shape, not a point marker.
@@ -759,7 +779,7 @@ body {
                             layer.bindPopup(popupContent, popupOptions);
                         }
                     });
-                    events.addTo(map);
+                    //events.addTo(map);
                     //geojsonLayers.push(events);
                     //geojsonLayers = sortLayers(geojsonLayers)
                     //updateRenderOrder(geojsonLayers);
