@@ -145,6 +145,31 @@
   .sidebar-right .sidebar-header {
     padding-left: 40px; }
 
+#AF.sidebar-header {
+  background-color: #fc944f;
+  color: black;
+}
+#EAP.sidebar-header {
+  background-color: #fced8d;
+  color: black;
+}
+#EUR.sidebar-header {
+  background-color: #eeb3cb;
+  color: black;
+}
+#NEA.sidebar-header {
+  background-color: #b8d773;
+  color: black;
+}
+#SCA.sidebar-header {
+  background-color: #b5aed6;
+  color: black;
+}
+#WHA.sidebar-header {
+  background-color: #a8c8e9;
+  color: black;
+}
+
 .sidebar-close {
   position: absolute;
   top: 0;

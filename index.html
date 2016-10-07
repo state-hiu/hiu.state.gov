@@ -110,28 +110,28 @@ body {
           <div class="sidebar-tabs">
               <ul role="tablist">
                   <li class="active">
-                    <a href="#home" role="tab"><i class="fa fa-bars"></i></a>
+                    <a href="#home" id="home" role="tab"><i class="fa fa-bars"></i></a>
                   </li>
                   <li>
-                    <a href="#AF" role="tab">AF</a>
+                    <a href="#AF" id="AF" role="tab">AF</a>
                   </li>
                   <li>
-                    <a href="#EAP" role="tab">EAP</a>
+                    <a href="#EAP" id="EAP" role="tab">EAP</a>
                   </li>
                   <li>
-                    <a href="#EUR" role="tab">EUR</a>
+                    <a href="#EUR" id="EUR" role="tab">EUR</a>
                   </li>
                   <li>
-                    <a href="#NEA" role="tab">NEA</a>
+                    <a href="#NEA" id="NEA" role="tab">NEA</a>
                   </li>
                   <li>
-                    <a href="#SCA" role="tab">SCA</a>
+                    <a href="#SCA" id="SCA" role="tab">SCA</a>
                   </li>
                   <li>
-                    <a href="#WHA" role="tab">WHA</a>
+                    <a href="#WHA" id="WHA" role="tab">WHA</a>
                   </li>
                   <li>
-                    <a href="#global" role="tab"><i class="fa fa-globe" style="font-size: 20px;"></i></a>
+                    <a href="#global" id="global" role="tab"><i class="fa fa-globe" style="font-size: 20px;"></i></a>
                   </li>
                   <!-- potentially can have an e-mail symbol,search, or twitter symbol
                   <li class="disabled">
@@ -161,8 +161,6 @@ body {
 
               <div class="sidebar-pane active" id="home" style="overflow-y: scroll;height: 100%;">
 
-                    
-
                     <div class="scroll">
 
                       <div id='hiu-tab' class='hiu-tab'>
@@ -186,13 +184,16 @@ body {
             <div class="sidebar-container" id="AF">
 
               <div class="header-contain-div">
-                <h1 class="sidebar-header">Africa<span class="sidebar-close">
+                <h1 class="sidebar-header" id="AF">Africa<span class="sidebar-close">
                     <i class="fa fa-caret-left"></i></span>
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="body">
+              <div class="sidebar-pane active" id="AF" style="overflow-y: scroll;height: 100%;">
                   AF
+
+                  <div id='AF-listings' class='AF-listings'></div>
+
               </div>
 
             </div>
@@ -200,13 +201,16 @@ body {
             <div class="sidebar-container" id="EAP">
 
               <div class="header-contain-div">
-                <h1 class="sidebar-header">East Asia and the Pacific<span class="sidebar-close">
+                <h1 class="sidebar-header" id="EAP">East Asia and the Pacific<span class="sidebar-close">
                     <i class="fa fa-caret-left"></i></span>
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="body">
+              <div class="sidebar-pane active" id="EAP" style="overflow-y: scroll;height: 100%;">
                   EAP
+
+                  <div id='EAP-listings' class='EAP-listings'></div>
+
               </div>
 
             </div>
@@ -214,13 +218,16 @@ body {
             <div class="sidebar-container" id="EUR">
 
               <div class="header-contain-div">
-                <h1 class="sidebar-header">Europe<span class="sidebar-close">
+                <h1 class="sidebar-header" id="EUR">Europe<span class="sidebar-close">
                     <i class="fa fa-caret-left"></i></span>
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="body">
+              <div class="sidebar-pane active" id="EUR" style="overflow-y: scroll;height: 100%;">
                   EUR
+
+                  <div id='EUR-listings' class='EUR-listings'></div>
+
               </div>
 
             </div>
@@ -228,13 +235,16 @@ body {
             <div class="sidebar-container" id="NEA">
 
               <div class="header-contain-div">
-                <h1 class="sidebar-header">Near East<span class="sidebar-close">
+                <h1 class="sidebar-header" id="NEA">Near East<span class="sidebar-close">
                     <i class="fa fa-caret-left"></i></span>
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="body">
+              <div class="sidebar-pane active" id="NEA" style="overflow-y: scroll;height: 100%;">
                   NEA
+
+                  <div id='NEA-listings' class='NEA-listings'></div>
+
               </div>
 
             </div>
@@ -242,13 +252,16 @@ body {
             <div class="sidebar-container" id="SCA">
 
               <div class="header-contain-div">
-                <h1 class="sidebar-header">South and Central Asia<span class="sidebar-close">
+                <h1 class="sidebar-header" id="SCA">South and Central Asia<span class="sidebar-close">
                     <i class="fa fa-caret-left"></i></span>
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="body">
+              <div class="sidebar-pane active" id="SCA" style="overflow-y: scroll;height: 100%;">
                   SCA
+
+                  <div id='SCA-listings' class='SCA-listings'></div>
+
               </div>
 
             </div>
@@ -256,13 +269,16 @@ body {
             <div class="sidebar-container" id="WHA">
 
               <div class="header-contain-div">
-                <h1 class="sidebar-header">Western Hemisphere<span class="sidebar-close">
+                <h1 class="sidebar-header" id="WHA">Western Hemisphere<span class="sidebar-close">
                     <i class="fa fa-caret-left"></i></span>
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="body">
+              <div class="sidebar-pane active" id="WHA" style="overflow-y: scroll;height: 100%;">
                   WHA
+
+                  <div id='WHA-listings' class='WHA-listings'></div>
+
               </div>
 
             </div>
@@ -270,13 +286,16 @@ body {
             <div class="sidebar-container" id="global">
 
               <div class="header-contain-div">
-                <h1 class="sidebar-header">Global Products<span class="sidebar-close">
+                <h1 class="sidebar-header" id="global">Global Products<span class="sidebar-close">
                     <i class="fa fa-caret-left"></i></span>
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="body">
+              <div class="sidebar-pane active" id="global" style="overflow-y: scroll;height: 100%;">
                   global
+
+                  <div id='global-listings' class='global-listings'></div>
+
               </div>
 
             </div>
@@ -349,9 +368,11 @@ body {
             map.getPane('labels').style.zIndex = 550;
             map.getPane('labels').style.pointerEvents = 'none';
 
+/*
             var Labels = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/cittl946w000q2inzyqzdlzs6/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ', {
               pane: 'labels'
             }).addTo(map);
+*/
 
             map.zoomControl.setPosition('topright');
 
@@ -365,7 +386,7 @@ body {
             //info box that contains title
             var info = L.control({position: 'bottomright'});
 
-            var sidebar = L.control.sidebar('sidebar').addTo(map);
+            window.sidebar = L.control.sidebar('sidebar').addTo(map);
 
 
 /*
@@ -424,6 +445,8 @@ body {
                   //$('.sidebar').css({ "height": "33%"});
                   $('.sidebar').removeClass("sidebar-tall");
                   activeLayer = 'none';
+
+                  sidebar.open('home');
                 }
 
                 layerClicked = false;
@@ -584,7 +607,6 @@ body {
 
                     $('.product-listings').empty();
 
-                    $('.hiu-tab').hide();
 
                     console.log('first click');
                     console.log(firstClick);
@@ -795,19 +817,14 @@ body {
             L.marker([-0.749253, -64.904349], {icon: WHAIcon}).addTo(map);
 
 
-            function clickLayer(e) {
-                // Assuming the clicked feature is a shape, not a point marker.
+            function clickTab(region) {
+              console.log('hi');
+              console.log(region);
 
-                console.log('layer clicked');
-                console.log(e);
+              var regionCoord;
+              var regionZoom;
 
-                var regionCoord;
-                var regionZoom;
-
-                //console.log('bur prop');
-                //console.log(this.feature.properties.RegBureau);
-
-                switch (this.feature.properties.RegBureau) {
+              switch (region) {
                  case "AF":
                     regionCoord = [-1, 0];
                     regionZoom = 4;
@@ -839,6 +856,87 @@ body {
                     regionCoord = [-9, -63];
                     regionZoom = 4;
                     activeLayer = "WHA";
+                    break;
+                 default:
+                    regionCoord = [14, -20];
+                    regionZoom = 3;
+                }
+
+                if (typeof(products) != "undefined") {
+                  //console.log("products are defined");
+                  //products.clearLayers();
+                }
+
+                map.setView(regionCoord,regionZoom);
+
+                getProducts(region);
+
+                $('.sidebar').addClass("sidebar-tall");
+
+                if ( region == 'home' ) {
+                  $('.sidebar').removeClass("sidebar-tall");
+                }
+
+                layerClicked = true;
+            }
+
+            $('a[role="tab"]').click(function () {
+              console.log('hi2');
+              console.log($(this).attr('id'));
+              var region = $(this).attr('id');
+              clickTab(region);
+            })
+
+            function clickLayer(e) {
+                // Assuming the clicked feature is a shape, not a point marker.
+
+                console.log('layer clicked');
+                console.log(e);
+
+                var regionCoord;
+                var regionZoom;
+
+                //console.log('bur prop');
+                //console.log(this.feature.properties.RegBureau);
+
+                switch (this.feature.properties.RegBureau) {
+                 case "AF":
+                    regionCoord = [-1, 0];
+                    regionZoom = 4;
+                    activeLayer = "AF";
+                    sidebar.open('AF');
+                    console.log('active layerAF: ');
+                    console.log(activeLayer);
+                    break;
+                 case "EAP":
+                    regionCoord = [28, 110];
+                    regionZoom = 4;
+                    activeLayer = "EAP";
+                    sidebar.open('EAP');
+                    break;
+                 case "EUR":
+                    regionCoord = [51, 22];
+                    regionZoom = 4;
+                    activeLayer = "EUR";
+                    sidebar.open('EUR');
+                    break;
+                 case "NEA":
+                    regionCoord = [28, 20];
+                    regionZoom = 4;
+                    activeLayer = "NEA";
+                    sidebar.open('NEA');
+                    break;
+                 case "SCA":
+                    regionCoord = [35, 57.5];
+                    regionZoom = 4;
+                    activeLayer = "SCA";
+                    sidebar.open('SCA');
+                    break;
+                 case "WHA":
+                    regionCoord = [-9, -63];
+                    regionZoom = 4;
+                    activeLayer = "WHA";
+                    sidebar.open('WHA');
                     break;
                  default:
                     regionCoord = [14, -20];
