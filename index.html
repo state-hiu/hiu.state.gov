@@ -109,72 +109,188 @@ body {
           <!-- Nav tabs -->
           <div class="sidebar-tabs">
               <ul role="tablist">
-                  <li class="active"><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
-<!--
-                  <li><a href="#profile" role="tab"><i class="fa fa-user"></i></a></li>
-                  <li class="disabled"><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>
--->
-
+                  <li class="active">
+                    <a href="#home" role="tab"><i class="fa fa-bars"></i></a>
+                  </li>
+                  <li>
+                    <a href="#AF" role="tab">AF</a>
+                  </li>
+                  <li>
+                    <a href="#EAP" role="tab">EAP</a>
+                  </li>
+                  <li>
+                    <a href="#EUR" role="tab">EUR</a>
+                  </li>
+                  <li>
+                    <a href="#NEA" role="tab">NEA</a>
+                  </li>
+                  <li>
+                    <a href="#SCA" role="tab">SCA</a>
+                  </li>
+                  <li>
+                    <a href="#WHA" role="tab">WHA</a>
+                  </li>
+                  <li>
+                    <a href="#global" role="tab"><i class="fa fa-globe" style="font-size: 20px;"></i></a>
+                  </li>
+                  <!-- potentially can have an e-mail symbol,search, or twitter symbol
+                  <li class="disabled">
+                    <a href="#messages" role="tab"><i class="fa fa-envelope"></i></a>
+                  </li>
+                  -->
               </ul>
-<!--
+              <!--
               <ul role="tablist">
                   <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
               </ul>
--->
+              -->
           </div>
 
               <!-- Tab panes -->
           <div class="sidebar-content">
 
-            <div class="header-contain-div">
-              <h1 class="sidebar-header">
-                  Humanitarian Information Unit (HIU)
-                  <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
-              </h1>
-            </div>
+
+            <div class="sidebar-container active" id="home">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header">
+                    Humanitarian Information Unit (HIU)
+                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+              </div>
 
               <div class="sidebar-pane active" id="home" style="overflow-y: scroll;height: 100%;">
 
-                  
-                  <br>
+                    
 
-                  <div class="scroll">
+                    <div class="scroll">
 
-                    <div id='hiu-tab' class='hiu-tab'>
+                      <div id='hiu-tab' class='hiu-tab'>
 
-                      <p>The HIU serves as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.</p>
+                        <p>The HIU serves as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.</p>
 
-                      <p><b>Select different regions on the map to view our products</b></p>
+                        <p><b>Select different regions on the map to view our products</b></p>
 
-                    </div>
+                      </div>
 
-                    <div id='region' class='region'></div>
+                      <div id='region' class='region'></div>
 
-                    <div id='product-listings' class='product-listings'></div>
+                      <div id='product-listings' class='product-listings'></div>
+
+                     </div>
 
                 </div>
-<!--
-                  <p>
-                    <img src="{{ site.baseurl }}/assets/img/mapgive_red_pt.png" style="width: 30px;height: 45px;"><b>&nbsp&nbsp&nbsp sudden-onset disaster</b>
-                    &nbsp&nbsp&nbsp<img src="{{ site.baseurl }}/assets/img/mapgive_blue_pt.png" style="width: 30px;height: 45px;"><b>&nbsp&nbsp&nbsp products</b>
-                  </p>
--->
 
+            </div>
+
+            <div class="sidebar-container" id="AF">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header">Africa<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
               </div>
 
-<!--
-              <div class="sidebar-pane" id="profile">
-                  <h1 class="sidebar-header">Profile<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+              <div class="sidebar-pane active" id="body">
+                  AF
               </div>
 
-              <div class="sidebar-pane" id="messages">
-                  <h1 class="sidebar-header">Messages<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+            </div>
+
+            <div class="sidebar-container" id="EAP">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header">East Asia and the Pacific<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
               </div>
 
+              <div class="sidebar-pane active" id="body">
+                  EAP
+              </div>
+
+            </div>
+
+            <div class="sidebar-container" id="EUR">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header">Europe<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
+              </div>
+
+              <div class="sidebar-pane active" id="body">
+                  EUR
+              </div>
+
+            </div>
+
+            <div class="sidebar-container" id="NEA">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header">Near East<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
+              </div>
+
+              <div class="sidebar-pane active" id="body">
+                  NEA
+              </div>
+
+            </div>
+
+            <div class="sidebar-container" id="SCA">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header">South and Central Asia<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
+              </div>
+
+              <div class="sidebar-pane active" id="body">
+                  SCA
+              </div>
+
+            </div>
+
+            <div class="sidebar-container" id="WHA">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header">Western Hemisphere<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
+              </div>
+
+              <div class="sidebar-pane active" id="body">
+                  WHA
+              </div>
+
+            </div>
+
+            <div class="sidebar-container" id="global">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header">Global Products<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
+              </div>
+
+              <div class="sidebar-pane active" id="body">
+                  global
+              </div>
+
+            </div>
+
+
+
+              <!--
               <div class="sidebar-pane" id="settings">
-                  <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                  <h1 class="sidebar-header">Settings<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
               </div>
--->
+              -->
+
           </div>
       </div>
 
