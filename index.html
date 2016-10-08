@@ -103,6 +103,12 @@ body {
     background-color: #f8f8f8;
 }
 
+.title {
+    display: block;
+    color: #0A2E52;
+    font-weight: 700;
+}
+
 .item > .title {
     display: block;
     color: #0A2E52;
@@ -680,7 +686,7 @@ a.title:hover {
 
                           //enabled[featureCollection._layers[i].feature.properties.title] = true;
 
-                          var popupContent = '<img src="'+featureCollection._layers[i].feature.properties.thumbnail_300+'" width="150" height="150" style="border:1px solid #021a40;">'+'<h4><a href="'+featureCollection._layers[i].feature.properties.url+'"></br>'+featureCollection._layers[i].feature.properties.title+'</a></h4>Date Published: '+featureCollection._layers[i].feature.properties.date_published+'<br><a href="'+featureCollection._layers[i].feature.properties.pdf+'">Download</a>';
+                          var popupContent = '<div class="title">'+featureCollection._layers[i].feature.properties.title+'</div>';
 
                           var popupOptions = {keepInView: true,maxWidth: 200};
 
@@ -873,14 +879,14 @@ a.title:hover {
 
               switch (region) {
                  case "AF":
-                    regionCoord = [-1, 0];
+                    regionCoord = [-1, -3];
                     regionZoom = 4;
                     activeLayer = "AF";
                     console.log('active layerAF: ');
                     console.log(activeLayer);
                     break;
                  case "EAP":
-                    regionCoord = [28, 110];
+                    regionCoord = [18, 100];
                     regionZoom = 4;
                     activeLayer = "EAP";
                     break;
@@ -890,17 +896,17 @@ a.title:hover {
                     activeLayer = "EUR";
                     break;
                  case "NEA":
-                    regionCoord = [28, 20];
+                    regionCoord = [28, 10];
                     regionZoom = 4;
                     activeLayer = "NEA";
                     break;
                  case "SCA":
-                    regionCoord = [35, 57.5];
+                    regionCoord = [35, 52.5];
                     regionZoom = 4;
                     activeLayer = "SCA";
                     break;
                  case "WHA":
-                    regionCoord = [-9, -63];
+                    regionCoord = [-4, -72];
                     regionZoom = 4;
                     activeLayer = "WHA";
                     break;
@@ -948,7 +954,7 @@ a.title:hover {
 
                 switch (this.feature.properties.RegBureau) {
                  case "AF":
-                    regionCoord = [-1, 0];
+                    regionCoord = [-1, -3];
                     regionZoom = 4;
                     activeLayer = "AF";
                     sidebar.open('AF');
@@ -956,7 +962,7 @@ a.title:hover {
                     console.log(activeLayer);
                     break;
                  case "EAP":
-                    regionCoord = [28, 110];
+                    regionCoord = [18, 100];
                     regionZoom = 4;
                     activeLayer = "EAP";
                     sidebar.open('EAP');
@@ -968,19 +974,19 @@ a.title:hover {
                     sidebar.open('EUR');
                     break;
                  case "NEA":
-                    regionCoord = [28, 20];
+                    regionCoord = [28, 10];
                     regionZoom = 4;
                     activeLayer = "NEA";
                     sidebar.open('NEA');
                     break;
                  case "SCA":
-                    regionCoord = [35, 57.5];
+                    regionCoord = [35, 52.5];
                     regionZoom = 4;
                     activeLayer = "SCA";
                     sidebar.open('SCA');
                     break;
                  case "WHA":
-                    regionCoord = [-9, -63];
+                    regionCoord = [-4, -72];
                     regionZoom = 4;
                     activeLayer = "WHA";
                     sidebar.open('WHA');
