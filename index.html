@@ -92,6 +92,58 @@ body {
   visibility: hidden;
 }
 
+.item {
+  display:block;
+  border-bottom:1px solid #eee;
+  padding:10px;
+  text-decoration:none;
+}
+
+.item.active {
+    background-color: #f8f8f8;
+}
+
+.item > .title {
+    display: block;
+    color: #0A2E52;
+    font-weight: 700;
+}
+
+.item > .title:hover {
+    color: #337ab7;
+}
+
+a.title {
+    text-decoration: none;
+}
+
+a.title:hover {
+    text-decoration: none;
+}
+
+.description-text {
+
+}
+
+.container2 {
+    width:100%;
+    height: 160px;
+    padding:1%;
+}
+
+.description-image {
+    float: left;
+    height: 175px;
+    width: 165px;
+}
+
+.description-text {
+    float: left;
+    padding-top: 5px;
+    height: 175px;
+    width: 150px;
+}
+
 </style>
 
 
@@ -167,11 +219,9 @@ body {
 
                         <p>The HIU serves as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.</p>
 
-                        <p><b>Select different regions on the map to view our products</b></p>
+                        <p><b>Select different regions on the map or on the sidebar tabs to view our products</b></p>
 
                       </div>
-
-                      <div id='region' class='region'></div>
 
                       <div id='product-listings' class='product-listings'></div>
 
@@ -189,8 +239,8 @@ body {
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="AF" style="overflow-y: scroll;height: 100%;">
-                  AF
+              <div class="sidebar-pane active" id="AF" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='AF' ></div>
 
                   <div id='AF-listings' class='AF-listings'></div>
 
@@ -206,8 +256,8 @@ body {
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="EAP" style="overflow-y: scroll;height: 100%;">
-                  EAP
+              <div class="sidebar-pane active" id="EAP" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='EAP' ></div>
 
                   <div id='EAP-listings' class='EAP-listings'></div>
 
@@ -223,8 +273,8 @@ body {
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="EUR" style="overflow-y: scroll;height: 100%;">
-                  EUR
+              <div class="sidebar-pane active" id="EUR" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='EUR' ></div>
 
                   <div id='EUR-listings' class='EUR-listings'></div>
 
@@ -240,8 +290,8 @@ body {
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="NEA" style="overflow-y: scroll;height: 100%;">
-                  NEA
+              <div class="sidebar-pane active" id="NEA" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='NEA' ></div>
 
                   <div id='NEA-listings' class='NEA-listings'></div>
 
@@ -257,8 +307,8 @@ body {
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="SCA" style="overflow-y: scroll;height: 100%;">
-                  SCA
+              <div class="sidebar-pane active" id="SCA" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='SCA' ></div>
 
                   <div id='SCA-listings' class='SCA-listings'></div>
 
@@ -274,8 +324,8 @@ body {
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="WHA" style="overflow-y: scroll;height: 100%;">
-                  WHA
+              <div class="sidebar-pane active" id="WHA" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='WHA' ></div>
 
                   <div id='WHA-listings' class='WHA-listings'></div>
 
@@ -291,8 +341,8 @@ body {
                   </h1>
               </div>
 
-              <div class="sidebar-pane active" id="global" style="overflow-y: scroll;height: 100%;">
-                  global
+              <div class="sidebar-pane active" id="global" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='global' ></div>
 
                   <div id='global-listings' class='global-listings'></div>
 
@@ -597,10 +647,7 @@ body {
                     var products = L.geoJson(response, {
                         zIndex: 100,
                         onEachFeature: function(feature, layer) {
-                            var popupOptions = {keepInView: true,maxWidth: 200};
-                            layer.setIcon(productIcon);
-                            var popupContent = '<img src="'+layer.feature.properties.thumbnail_150+'">'+'<h4><a href="'+layer.feature.properties.url+'"></br>'+layer.feature.properties.title+'</a></h4>Date Published: '+layer.feature.properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+layer.feature.properties.region_id+'">'+layer.feature.properties.region_title+'</a><br><a href="'+layer.feature.properties.pdf+'">Download</a>';
-                            layer.bindPopup(popupContent, popupOptions);
+                            
                         }
                     });
 
@@ -633,7 +680,7 @@ body {
 
                           //enabled[featureCollection._layers[i].feature.properties.title] = true;
 
-                          var popupContent = '<img src="'+featureCollection._layers[i].feature.properties.thumbnail_300+'" width="150" height="150" style="border:1px solid #021a40;">'+'<h4><a href="'+featureCollection._layers[i].feature.properties.url+'"></br>'+featureCollection._layers[i].feature.properties.title+'</a></h4>Date Published: '+featureCollection._layers[i].feature.properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+featureCollection._layers[i].feature.properties.region_id+'">'+featureCollection._layers[i].feature.properties.region_title+'</a><br><a href="'+featureCollection._layers[i].feature.properties.pdf+'">Download</a>';
+                          var popupContent = '<img src="'+featureCollection._layers[i].feature.properties.thumbnail_300+'" width="150" height="150" style="border:1px solid #021a40;">'+'<h4><a href="'+featureCollection._layers[i].feature.properties.url+'"></br>'+featureCollection._layers[i].feature.properties.title+'</a></h4>Date Published: '+featureCollection._layers[i].feature.properties.date_published+'<br><a href="'+featureCollection._layers[i].feature.properties.pdf+'">Download</a>';
 
                           var popupOptions = {keepInView: true,maxWidth: 200};
 
