@@ -150,6 +150,44 @@ a.title:hover {
     width: 150px;
 }
 
+.listitem-thumbnail {
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+}
+
+.listitem-thumbnail:hover div {
+    opacity: 0.8;
+    transition: opacity 0.4s ease-in-out;
+}
+
+#img-container {
+  position: relative;
+}
+
+#preview {
+   position: absolute;
+   top: 0px;
+   left: 30px;
+}
+
+#preview:hover {
+   color: red;
+}
+
+#hover {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+}
+
+#hover:hover {
+   color:black;
+   background-color: black;
+   opacity: .8;
+   transition: opacity 0.4s ease-in-out;
+}
+
 </style>
 
 
@@ -161,6 +199,27 @@ a.title:hover {
 <script src="{{ site.baseurl }}/lib/d3/d3.v3.min.js"></script>
 <script src="{{ site.baseurl }}/lib/d3/topojson.v1.min.js"></script>
 <script src="{{ site.baseurl }}/lib/queue/queue.v1.min.js"></script>
+
+
+<!-- Modals from Bootstrap, used to preview images when thumbnails clicked -->
+<!-- http://getbootstrap.com/javascript/#modals -->
+<!-- giving a z-index of 2050 to be on top of sidebar -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index: 2050;">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+        <img id="modal-img" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!--style="height: calc(100% - 61px); position:relative;"-->
     <div id="sidebar" class="sidebar" style="margin-top: 60px;">
@@ -221,15 +280,15 @@ a.title:hover {
 
                     <div class="scroll">
 
-                      <div id='hiu-tab' class='hiu-tab'>
+                        <div id='hiu-tab' class='hiu-tab'>
 
-                        <p>The HIU serves as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.</p>
+                          <p>The HIU serves as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.</p>
 
-                        <p><b>Select different regions on the map or on the sidebar tabs to view our products</b></p>
+                          <p><b>Select different regions on the map or on the sidebar tabs to view our products</b></p>
 
-                      </div>
+                        </div>
 
-                      <div id='product-listings' class='product-listings'></div>
+                        <div id='product-listings' class='product-listings'></div>
 
                      </div>
 
