@@ -127,10 +127,6 @@ a.title:hover {
     text-decoration: none;
 }
 
-.description-text {
-
-}
-
 .container2 {
     width:100%;
     height: 160px;
@@ -193,6 +189,22 @@ a.title:hover {
    background-color: black;
    opacity: .7;
    transition: opacity 0.4s ease-in-out;
+}
+
+/* icon css */
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+.type1 {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 4px solid #337ab7;
+    opacity: 1;
+    margin-left: -4px;
+    margin-top: -4px;
 }
 
 </style>
@@ -706,13 +718,19 @@ a.title:hover {
             }
 
             // Products GeoJSON
+            /* old picture icon 
             var productIcon = L.icon({
                 iconUrl: "{{ site.baseurl }}/assets/img/mapgive_blue_pt.png",
                 iconSize: [30, 45],
                 iconAnchor: [15, 40],
                 popupAnchor: [0, 0]
             });
+            */
 
+            var productIcon = L.divIcon({
+                className: 'product-icon',
+                html: '<div class="circleBase type1"></div>'
+            });
 
             function getProducts(region_id,regionCoord,regionZoom) {
 
