@@ -100,7 +100,7 @@ body {
 }
 
 .item.active {
-    background-color: #f8f8f8;
+    background-color: #d1d6d1;
 }
 
 .title {
@@ -473,6 +473,15 @@ a.title:hover {
 
 <script>
 
+//Sets a window activeListingID variable, the leaslet-list-markers.src.js script uses
+//this to keep a product item selected
+    window.activeListingID = 'none';
+
+//This resets the activeListingID if the home tab is selected
+    $('#home').click(function() {
+      activeListingID = 'none1';
+    });
+
     (function(){
 
             var layerswitcher = $('#menu-ui');
@@ -600,7 +609,10 @@ a.title:hover {
 
                 $('.hiu-tab').show();
 
+                //$('.item.active').removeClass('active');
 
+                //console.log('testing section');
+                //console.log($('.item.active'));
                 
             });
 
