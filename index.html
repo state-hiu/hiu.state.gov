@@ -168,23 +168,30 @@ a.title:hover {
 #preview {
    position: absolute;
    top: 0px;
-   left: 30px;
+   left: 0px;
+   width: 150px;
+   text-align: center;
+   opacity: 0;
 }
 
 #preview:hover {
-   color: red;
+   color: white;
+   opacity: 1;
+   transition: opacity 0.4s ease-in-out;
 }
 
 #hover {
    position: absolute;
    top: 0px;
    left: 0px;
+   height:150px;
+   width:150px;
 }
 
 #hover:hover {
    color:black;
    background-color: black;
-   opacity: .8;
+   opacity: .7;
    transition: opacity 0.4s ease-in-out;
 }
 
