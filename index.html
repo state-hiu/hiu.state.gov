@@ -424,6 +424,8 @@ a.title:hover {
             map.getPane('labels').style.zIndex = 550;
             map.getPane('labels').style.pointerEvents = 'none';
 
+            
+
 /*
             var Labels = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/cittl946w000q2inzyqzdlzs6/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ', {
               pane: 'labels'
@@ -484,6 +486,8 @@ a.title:hover {
             console.log('layerClicked val 1st');
             console.log(layerClicked);
 
+
+
             //This enables when a user clicks on part of the map that
             //is not part of a layer, it will zoom back into the 
             //original extent
@@ -517,6 +521,8 @@ a.title:hover {
                 map.removeLayer(WHAmarkers);
 
                 $('.hiu-tab').show();
+
+
                 
             });
 
@@ -642,7 +648,7 @@ a.title:hover {
             });
 
 
-            function getProducts(region_id) {
+            function getProducts(region_id,regionCoord,regionZoom) {
 
               var myLayer = L.featureGroup()
 
@@ -669,6 +675,8 @@ a.title:hover {
                       firstClick = false;
                     }
 
+
+                    window.map.setView(regionCoord,regionZoom);
 
 
                     var enabled = {};
@@ -886,8 +894,8 @@ a.title:hover {
                     console.log(activeLayer);
                     break;
                  case "EAP":
-                    regionCoord = [18, 100];
-                    regionZoom = 4;
+                    regionCoord = [5, 70];
+                    regionZoom = 3;
                     activeLayer = "EAP";
                     break;
                  case "EUR":
@@ -920,9 +928,9 @@ a.title:hover {
                   //products.clearLayers();
                 }
 
-                map.setView(regionCoord,regionZoom);
+                //map.setView(regionCoord,regionZoom);
 
-                getProducts(region);
+                getProducts(region,regionCoord,regionZoom);
 
                 $('.sidebar').addClass("sidebar-tall");
 
@@ -952,6 +960,8 @@ a.title:hover {
                 //console.log('bur prop');
                 //console.log(this.feature.properties.RegBureau);
 
+
+
                 switch (this.feature.properties.RegBureau) {
                  case "AF":
                     regionCoord = [-1, -3];
@@ -962,8 +972,8 @@ a.title:hover {
                     console.log(activeLayer);
                     break;
                  case "EAP":
-                    regionCoord = [18, 100];
-                    regionZoom = 4;
+                    regionCoord = [5, 70];
+                    regionZoom = 3;
                     activeLayer = "EAP";
                     sidebar.open('EAP');
                     break;
@@ -1004,13 +1014,15 @@ a.title:hover {
                 
 
                 //map.fitBounds(this.getBounds());
-                map.setView(regionCoord,regionZoom);
+                //map.setView(regionCoord,regionZoom);
 
-                //console.log(this.feature);
-                //console.log(this.feature.properties.RegBureau);
+                //window.map.setView([5, 70], 3);
+
+                console.log(regionCoord);
+                console.log(regionZoom);
 
 
-                getProducts(this.feature.properties.RegBureau);
+                getProducts(this.feature.properties.RegBureau,regionCoord,regionZoom);
 
 
                 //$('.sidebar').css({ "height": "89%"});
