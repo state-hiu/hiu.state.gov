@@ -482,6 +482,8 @@ a.title:hover {
       activeListingID = 'none1';
     });
 
+    window.selectedID = 'none';
+
     (function(){
 
             var layerswitcher = $('#menu-ui');
@@ -755,7 +757,7 @@ a.title:hover {
                     var products = L.geoJson(response, {
                         zIndex: 100,
                         onEachFeature: function(feature, layer) {
-                            
+                            //var title = layer.feature.properties.title;
                         }
                     });
 
@@ -771,9 +773,7 @@ a.title:hover {
                       firstClick = false;
                     }
 
-
                     window.map.setView(regionCoord,regionZoom);
-
 
                     var enabled = {};
 
@@ -794,10 +794,13 @@ a.title:hover {
 
                           var popupOptions = {keepInView: true,maxWidth: 200};
 
+                          var altString = featureCollection._layers[i].feature.properties.title;
+
                           var marker = L.marker(new L.LatLng(featureCollection._layers[i].feature.geometry.coordinates[1],featureCollection._layers[i].feature.geometry.coordinates[0]), {
-                                                      icon: productIcon
+                                                      icon: productIcon, alt: altString
                                                   });
-                                                  marker.bindPopup(popupContent,popupOptions);
+
+                          marker.bindPopup(popupContent,popupOptions);
 
                           switch (region_id) {
                                          case "AF":
@@ -835,8 +838,6 @@ a.title:hover {
                           }                      
                         }
 
-                        //console.log('enabled: ');
-                        //console.log(enabled);
 
                         /*
 
@@ -856,7 +857,104 @@ a.title:hover {
                         //console.log('templayerGroup val:');
                         //console.log(templayerGroup);
 
-                        
+                        AFmarkers.on("click", function (event) {
+                            var clickedMarker = event.layer;
+                            console.log('AF icon fired on click: ');
+                            console.log(event.layer.options.alt);
+
+                            //sample1 = "Democratic Republic of Congo: Presence at Mine Sites of Armed Groups and other Entities"
+
+                            clickedMarkerTitle = event.layer.options.alt;
+
+                            console.log('sample title');
+                            //console.log($('.item').attr('title'));
+                            console.log($('.item[title="'+clickedMarkerTitle+'"]'));
+                            $('.item').removeClass('active');
+                            $('.item[title="'+clickedMarkerTitle+'"]').addClass('active');
+
+                            selectedID = $('.item[title="'+clickedMarkerTitle+'"]').attr('id');
+
+                            var parentClass = $('.item[id="'+selectedID+'"]').parent().attr('class');
+
+                            $('.'+parentClass).prepend($('.item[title="'+clickedMarkerTitle+'"]'));
+                        });
+
+                        EAPmarkers.on("click", function (event) {
+                            var clickedMarker = event.layer;
+                            clickedMarkerTitle = event.layer.options.alt;
+                            $('.item').removeClass('active');
+                            $('.item[title="'+clickedMarkerTitle+'"]').addClass('active');
+
+                            selectedID = $('.item[title="'+clickedMarkerTitle+'"]').attr('id');
+
+                            var parentClass = $('.item[id="'+selectedID+'"]').parent().attr('class');
+
+                            $('.'+parentClass).prepend($('.item[title="'+clickedMarkerTitle+'"]'));
+                        });
+
+                        EURmarkers.on("click", function (event) {
+                            var clickedMarker = event.layer;
+                            clickedMarkerTitle = event.layer.options.alt;
+                            $('.item').removeClass('active');
+                            $('.item[title="'+clickedMarkerTitle+'"]').addClass('active');
+
+                            selectedID = $('.item[title="'+clickedMarkerTitle+'"]').attr('id');
+
+                            var parentClass = $('.item[id="'+selectedID+'"]').parent().attr('class');
+
+                            $('.'+parentClass).prepend($('.item[title="'+clickedMarkerTitle+'"]'));
+                        });
+
+                        NEAmarkers.on("click", function (event) {
+                            var clickedMarker = event.layer;
+                            clickedMarkerTitle = event.layer.options.alt;
+                            $('.item').removeClass('active');
+
+                            $('.item[title="'+clickedMarkerTitle+'"]').addClass('active');
+
+                            selectedID = $('.item[title="'+clickedMarkerTitle+'"]').attr('id');
+
+                            var parentClass = $('.item[id="'+selectedID+'"]').parent().attr('class');
+
+                            $('.'+parentClass).prepend($('.item[title="'+clickedMarkerTitle+'"]'));
+                        });
+
+                        SCAmarkers.on("click", function (event) {
+                            var clickedMarker = event.layer;
+                            clickedMarkerTitle = event.layer.options.alt;
+                            $('.item').removeClass('active');
+                            $('.item[title="'+clickedMarkerTitle+'"]').addClass('active');
+
+                            selectedID = $('.item[title="'+clickedMarkerTitle+'"]').attr('id');
+
+                            var parentClass = $('.item[id="'+selectedID+'"]').parent().attr('class');
+
+                            $('.'+parentClass).prepend($('.item[title="'+clickedMarkerTitle+'"]'));
+                        });
+
+                        WHAmarkers.on("click", function (event) {
+                            var clickedMarker = event.layer;
+                            clickedMarkerTitle = event.layer.options.alt;
+                            $('.item').removeClass('active');
+                            $('.item[title="'+clickedMarkerTitle+'"]').addClass('active');
+
+                            selectedID = $('.item[title="'+clickedMarkerTitle+'"]').attr('id');
+
+                            var parentClass = $('.item[id="'+selectedID+'"]').parent().attr('class');
+
+                            $('.'+parentClass).prepend($('.item[title="'+clickedMarkerTitle+'"]'));
+                        });
+
+/*
+                        var _markerOnClick = function(e) {
+                            console.log('icon fired on click: ');
+                            console.log(this);
+                        }
+
+                        .addEventListener('click', _markerOnClick)
+
+                        L.marker([5.482575, 26.501904], {icon: AFIcon}).addTo(map);
+*/
 
                         switch (region_id) {
                                        case "AF":
@@ -973,7 +1071,6 @@ a.title:hover {
             L.marker([42.906546, 67.195260], {icon: SCAIcon}).addTo(map);
             L.marker([-0.749253, -64.904349], {icon: WHAIcon}).addTo(map);
 
-
             function clickTab(region) {
               console.log('hi');
               console.log(region);
@@ -1056,8 +1153,6 @@ a.title:hover {
                 //console.log('bur prop');
                 //console.log(this.feature.properties.RegBureau);
 
-
-
                 switch (this.feature.properties.RegBureau) {
                  case "AF":
                     regionCoord = [-1, -3];
@@ -1130,10 +1225,6 @@ a.title:hover {
 
 
             }
-
-
-            
-
 
 
 /*
