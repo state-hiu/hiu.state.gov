@@ -4,22 +4,19 @@ category: products
 title: "Afghanistan: An Urban Future"
 region_id: "SCA"
 region_title: "South and Central Asia"
-date_published: 2015-07-07
-product_pdf: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.pdf"
-product_jpg: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.jpg"
-thumbnail: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.jpg"
+date_published: 2016-02-29
+product_pdf: "Afghanistan_UrbanFuture_2016Feb26_HIU_U1359.pdf"
+product_jpg: "Afghanistan_UrbanFuture_2016Feb26_HIU_U1359.jpg"
+thumbnail: "Afghanistan_UrbanFuture_2016Feb26_HIU_U1359.jpg"
 featured: true
-lat: 15.342
-lon: 44.201
+lat: 33.939
+lon: 67.709
 keywords:
-  - Yemen
-  - Middle East
-  - Refugees
-  - Displaced
-  - Conflict
-  - WASH
-  - Food Security
-  - Internally Displaced Persons (IDPs)
-tweet: "The humanitarian crisis in Yemen continues to deteriorate with an estimated 21.1 million in need of assistance."
+  - Afghanistan
+  - urban
+  - urbanization
+  - land use
+  - population
+tweet: "Afghanistan: An Urban Future."
 ---
-The humanitarian crisis in Yemen continues to deteriorate with an estimated 21.1 million, 80% of the population, in need of assistance. This map depicts key humanitarian issues in Yemen, specifically providing an overview for population in need, food security, health, water and sanitation, and displacement.
+Urban growth in Afghanistan during the past decade has been predominantly informal and unplanned. Urbanization can, however, provide opportunities for economic growth and social development.
