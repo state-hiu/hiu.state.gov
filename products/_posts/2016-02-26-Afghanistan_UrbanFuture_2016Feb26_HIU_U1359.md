@@ -7,7 +7,7 @@ region_title: "South and Central Asia"
 date_published: 2016-02-29
 product_pdf: "Afghanistan_UrbanFuture_2016Feb26_HIU_U1359.pdf"
 product_jpg: "Afghanistan_UrbanFuture_2016Feb26_HIU_U1359.jpg"
-thumbnail: "Afghanistan_UrbanFuture_2016Feb26_HIU_U1359.jpg"
+thumbnail: "Afghanistan_UrbanFuture_2016Feb26_HIU_U1359_Thumb.jpg"
 featured: true
 lat: 33.939
 lon: 67.709
