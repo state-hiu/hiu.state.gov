@@ -18,9 +18,9 @@ keywords:
   - Nationality Laws
   - Discrimination
   - Children
- - women
-- Conflict
-- State Succession
+  - women
+  - Conflict
+  - State Succession
 tweet: "World Water Day 2016: Urban Access to Sanitation."
 ---
 Today, 2.4 billion people in the world do not have access to basic sanitation. Most of them reside in Southern Asia (953 million) and Sub-Saharan Africa (695 million). Access to basic sanitation facilities close to home is critical to maintaining healthy and safe populations.
