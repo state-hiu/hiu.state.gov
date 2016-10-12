@@ -1,4 +1,3 @@
-World_Sanitation_2016Mar_HIU_U1372.md
 ---
 layout: product
 category: products
