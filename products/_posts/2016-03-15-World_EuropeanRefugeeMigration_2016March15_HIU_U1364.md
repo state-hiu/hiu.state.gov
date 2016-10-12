@@ -3,7 +3,7 @@ layout: product
 category: products
 title: "Europe: Displacement Snapshot (15 March 2016)"
 region_id: "WHA, NEA, AF, EAP"
-region_title: "Africa, East Asia and the Pacific, Europe, Near East, South and Central Asia, Western Hemisphere"
+region_title: "Africa, Europe, Near East, South and Central Asia"
 date_published: 03/15/2016
 product_pdf: "World_EuropeanRefugeeMigration_2016March15_HIU_U1364.pdf"
 product_jpg: "World_EuropeanRefugeeMigration_2016March15_HIU_U1364-01.jpg"
