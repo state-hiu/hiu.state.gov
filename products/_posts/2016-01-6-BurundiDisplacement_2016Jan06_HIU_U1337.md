@@ -2,9 +2,9 @@
 layout: product
 category: products
 title: "Burundi: Displacement Since April 2015"
-region_id: "NEA"
-region_title: "Middle East"
-date_published: 2015-07-07
+region_id: "AF"
+region_title: "Africa"
+date_published: 2016/1/6
 product_pdf: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.pdf"
 product_jpg: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.jpg"
 thumbnail: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.jpg"
