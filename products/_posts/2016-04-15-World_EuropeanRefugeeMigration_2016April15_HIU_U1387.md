@@ -9,8 +9,8 @@ product_pdf: "World_EuropeanRefugeeMigration_2016April15_HIU_U1387.pdf"
 product_jpg: "World_EuropeanRefugeeMigration_2016April_HIU_U1387-01.jpg"
 thumbnail: "World_EuropeanRefugeeMigration_2016April_HIU_U1387_Thumb.jpg"
 featured: true
-lat: 
-lon: 
+lat: 39.074
+lon: 21.824
 keywords:
   - Migration
   - Syrian
