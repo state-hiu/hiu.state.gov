@@ -7,7 +7,7 @@ region_title: "Middle East"
 date_published: 2015-07-07
 product_pdf: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.pdf"
 product_jpg: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.jpg"
-thumbnail: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.jpg"
+thumbnail: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254_thumb.jpg"
 featured: true
 lat: 15.342
 lon: 44.201
