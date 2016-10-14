@@ -7,7 +7,7 @@ region_title: "East & Southeast Asia"
 date_published: 2014-09-22
 product_pdf: "NKorea_FoodShortage_2014Sep22_HIU_U1057.pdf"
 product_jpg: "NKorea_FoodShortage_2014Sep22_HIU_U1057.jpg"
-thumbnail: "NKorea_FoodShortage_2014Sep22_HIU_U1057.jpg"
+thumbnail: "NKorea_FoodShortage_2014Sep22_HIU_U1057_thumb.jpg"
 featured: false
 lat: 39.7537
 lon: 126.6435
