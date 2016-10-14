@@ -7,7 +7,7 @@ region_title: "Africa"
 date_published: 2014-08-28
 product_pdf: "Africa_EbolaDiseaseWithoutBorders_2014Aug28_HIU_U1078.pdf"
 product_jpg: "Africa_EbolaDiseaseWithoutBorders_2014Aug28_HIU_U1078.jpg"
-thumbnail: "Africa_EbolaDiseaseWithoutBorders_2014Aug28_HIU_U1078.jpg"
+thumbnail: "Africa_EbolaDiseaseWithoutBorders_2014Aug28_HIU_U1078_thumb.jpg"
 featured: true
 lat: 8.4496546 
 lon: -11.4870578
