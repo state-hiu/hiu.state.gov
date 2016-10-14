@@ -27,5 +27,6 @@ keywords:
   - Food insecurity
   - Storm
   - violence
+tweet: "World Humanitarian Day 2016: Ongoing Humanitarian Situations (August 2015 – July 2016)."
 ---
 World Humanitarian Day, August 19, is dedicated to recognizing humanitarian personnel and those who have lost their lives working for humanitarian causes. 
