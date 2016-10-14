@@ -495,7 +495,7 @@ a.title:hover {
             //need to make map a window variable to make it seen in leaflet-list-markers.src.js
             //probably because all of this in inside of its own contained function
             window.map = L.map('map', {
-                attributionControl: false,
+                attributionControl: {collapsed: true},
                 maxBounds:[ [-90, -140], [100, 180] ],
                 minZoom: 3
               }).setView([20, 25], 3);
@@ -505,7 +505,8 @@ a.title:hover {
               minZoom: 1,
               maxZoom: 16,
               scrollWheelZoom: true,
-              zoomControl: false
+              zoomControl: false,
+              attribution: 'Names and boundary representation are not necessarily authoritative'
             }).addTo(map);
 
             //http://leafletjs.com/examples/map-panes/
