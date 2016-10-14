@@ -1,7 +1,7 @@
 ---
 layout: product
 category: products
-title: "Syria: Conflict Without Borders – Numbers and Locations of Refugees and IDPs"
+title: "Syria and Iraq Conflict Without Borders: 2015 Year in Review"
 region_id: NEA
 region_title: Middle East
 date_published: 2016-01-29
