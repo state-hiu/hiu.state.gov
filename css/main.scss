@@ -538,3 +538,9 @@ html, body{
     overflow: hidden;
     padding-top: 30px;
 }
+
+// http://stackoverflow.com/questions/29038596/bootstrap-fixed-header-and-footer-with-scrolling-body-content-area-in-fluid-cont
+.row {
+  max-height: calc(100% - 58px);
+  overflow-y: scroll;
+}
