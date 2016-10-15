@@ -170,6 +170,11 @@
   color: black;
 }
 
+/*added this class*/
+.sidebar-tall {
+  height: 89%; 
+}
+
 .sidebar-close {
   position: absolute;
   top: 0;

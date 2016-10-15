@@ -13,57 +13,471 @@ layerswitcher:
   
 ---
 
-<div id="container">
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" media="all" />
 
-  <!-- Modals from Bootstrap, used to preview images when thumbnails clicked -->
-  <!-- http://getbootstrap.com/javascript/#modals -->
-  <!-- giving a z-index of 2050 to be on top of sidebar -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index: 2050;">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel"></h4>
-        </div>
-        <div class="modal-body">
-          <img id="modal-img" >
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.css" type="text/css" media="all" />
+
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.src.css" type="text/css" media="all" />
+
+<script src="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.src.js"></script>
+
+
+<script src="{{ site.baseurl }}/lib/leaflet-markercluster/leaflet.markercluster.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/MarkerCluster.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/MarkerCluster.Default.css"  />
+
+<!--disables scroll bar-->
+<style type="text/css">
+body {
+    overflow:hidden;
+}
+.region_label {
+  color: #0A2E52;
+  color: #808284;
+/*
+  background: rgba(255,255,255,0.8);
+  background: #808284;
+
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+*/
+  padding: 4px 4px 4px 4px;
+  display: inline-block
+}
+
+
+body {
+  background-color: black;
+}
+
+#earth {
+  width: 80px;
+  height: 80px;
+  background: url(http://www.noirextreme.com/digital/Earth-Color4096.jpg);
+  border-radius: 50%;
+  background-size: 210px;
+  box-shadow: inset 16px 0 40px 6px rgb(0, 0, 0),
+    inset -3px 0 6px 2px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes rotate {
+  from { background-position-x: 0px; }
+  to { background-position-x: 210px; }
+}
+
+#earth:hover{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+    -moz-box-shadow:    0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+    box-shadow:         0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+}
+
+.info {
+  padding: 6px 8px 25px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #d73f3f;
+}
+
+.sidebar-tall {
+  height: 89%; 
+}
+
+.leaflet-container .list-markers {
+  visibility: hidden;
+}
+
+.item {
+  display:block;
+  border-bottom:1px solid #eee;
+  padding:10px;
+  text-decoration:none;
+}
+
+.item.active {
+    background-color: #d1d6d1;
+}
+
+.title {
+    display: block;
+    color: #0A2E52;
+    font-weight: 700;
+}
+
+.item > .title {
+    display: block;
+    color: #0A2E52;
+    font-weight: 700;
+}
+
+.item > .title:hover {
+    color: #337ab7;
+}
+
+a.title {
+    text-decoration: none;
+}
+
+a.title:hover {
+    text-decoration: none;
+}
+
+.container2 {
+    width:100%;
+    height: 160px;
+    padding:1%;
+}
+
+.description-image {
+    float: left;
+    height: 175px;
+    width: 165px;
+}
+
+.description-text {
+    float: left;
+    padding-top: 5px;
+    height: 175px;
+    width: 150px;
+}
+
+.listitem-thumbnail {
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+}
+
+.listitem-thumbnail:hover div {
+    opacity: 0.8;
+    transition: opacity 0.4s ease-in-out;
+}
+
+#img-container {
+  position: relative;
+}
+
+#preview {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 150px;
+   text-align: center;
+   opacity: 0;
+}
+
+#preview:hover {
+   color: white;
+   opacity: 1;
+   transition: opacity 0.4s ease-in-out;
+}
+
+#hover {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   height:150px;
+   width:150px;
+}
+
+#hover:hover {
+   color:black;
+   background-color: black;
+   opacity: .7;
+   transition: opacity 0.4s ease-in-out;
+}
+
+/* icon css */
+.circleBase {
+    border-radius: 50%;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+}
+
+.type1 {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 4px solid #337ab7;
+    opacity: 1;
+    margin-left: -4px;
+    margin-top: -4px;
+}
+
+</style>
+
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="http://d3js.org/queue.v1.min.js"></script>-->
+
+<script src="{{ site.baseurl }}/lib/d3/d3.v3.min.js"></script>
+<script src="{{ site.baseurl }}/lib/d3/topojson.v1.min.js"></script>
+<script src="{{ site.baseurl }}/lib/queue/queue.v1.min.js"></script>
+
+
+<!-- Modals from Bootstrap, used to preview images when thumbnails clicked -->
+<!-- http://getbootstrap.com/javascript/#modals -->
+<!-- giving a z-index of 2050 to be on top of sidebar -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index: 2050;">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+        <img id="modal-img" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
+</div>
+
+<!--style="height: calc(100% - 61px); position:relative;"-->
+    <div id="sidebar" class="sidebar" style="margin-top: 60px;">
+          <!-- Nav tabs -->
+          <div class="sidebar-tabs">
+              <ul role="tablist">
+                  <li class="active">
+                    <a href="#home" id="home" role="tab"><i class="fa fa-bars"></i></a>
+                  </li>
+                  <li>
+                    <a href="#AF" id="AF" role="tab">AF</a>
+                  </li>
+                  <li>
+                    <a href="#EAP" id="EAP" role="tab">EAP</a>
+                  </li>
+                  <li>
+                    <a href="#EUR" id="EUR" role="tab">EUR</a>
+                  </li>
+                  <li>
+                    <a href="#NEA" id="NEA" role="tab">NEA</a>
+                  </li>
+                  <li>
+                    <a href="#SCA" id="SCA" role="tab">SCA</a>
+                  </li>
+                  <li>
+                    <a href="#WHA" id="WHA" role="tab">WHA</a>
+                  </li>
+                  <li>
+                    <a href="#global" id="global" role="tab"><i class="fa fa-globe" style="font-size: 20px;"></i></a>
+                  </li>
+                  <!-- potentially can have an e-mail symbol,search, or twitter symbol
+                  <li class="disabled">
+                    <a href="#messages" role="tab"><i class="fa fa-envelope"></i></a>
+                  </li>
+                  -->
+              </ul>
+              <!--
+              <ul role="tablist">
+                  <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
+              </ul>
+              -->
+          </div>
+
+              <!-- Tab panes -->
+          <div class="sidebar-content">
 
 
-  {% include main/sidebar.html %}
+            <div class="sidebar-container active" id="home">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header">
+                    Humanitarian Information Unit (HIU)
+                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+              </div>
+
+              <div class="sidebar-pane active" id="home" style="overflow-y: scroll;height: 100%;">
+
+                    <div class="scroll">
+
+                        <div id='hiu-tab' class='hiu-tab'>
+
+                          <p>The HIU serves as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.</p>
+
+                          <p><b>Select different regions on the map or on the sidebar tabs to view our products</b></p>
+
+                        </div>
+
+                        <div id='product-listings' class='product-listings'></div>
+
+                     </div>
+
+                </div>
+
+            </div>
+
+            <div class="sidebar-container" id="AF">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header" id="AF">Africa<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
+              </div>
+
+              <div class="sidebar-pane active" id="AF" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='AF' ></div>
+
+                  <div id='AF-listings' class='AF-listings'></div>
+
+              </div>
+
+            </div>
+
+            <div class="sidebar-container" id="EAP">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header" id="EAP">East Asia and the Pacific<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
+              </div>
+
+              <div class="sidebar-pane active" id="EAP" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='EAP' ></div>
+
+                  <div id='EAP-listings' class='EAP-listings'></div>
+
+              </div>
+
+            </div>
+
+            <div class="sidebar-container" id="EUR">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header" id="EUR">Europe<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
+              </div>
+
+              <div class="sidebar-pane active" id="EUR" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='EUR' ></div>
+
+                  <div id='EUR-listings' class='EUR-listings'></div>
+
+              </div>
+
+            </div>
+
+            <div class="sidebar-container" id="NEA">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header" id="NEA">Near East<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
+              </div>
+
+              <div class="sidebar-pane active" id="NEA" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='NEA' ></div>
+
+                  <div id='NEA-listings' class='NEA-listings'></div>
+
+              </div>
+
+            </div>
+
+            <div class="sidebar-container" id="SCA">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header" id="SCA">South and Central Asia<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
+              </div>
+
+              <div class="sidebar-pane active" id="SCA" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='SCA' ></div>
+
+                  <div id='SCA-listings' class='SCA-listings'></div>
+
+              </div>
+
+            </div>
+
+            <div class="sidebar-container" id="WHA">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header" id="WHA">Western Hemisphere<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
+              </div>
+
+              <div class="sidebar-pane active" id="WHA" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='WHA' ></div>
+
+                  <div id='WHA-listings' class='WHA-listings'></div>
+
+              </div>
+
+            </div>
+
+            <div class="sidebar-container" id="global">
+
+              <div class="header-contain-div">
+                <h1 class="sidebar-header" id="global">Global Products<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
+              </div>
+
+              <div class="sidebar-pane active" id="global" style="overflow-y: scroll;height: 97%;">
+                  <div class='region-product-count' id='global' ></div>
+
+                  <div id='global-listings' class='global-listings'></div>
+
+              </div>
+
+            </div>
 
 
-  <div id="map" class="sidebar-map" style="top:0px;left:0px;width:100%;height:100%;height: 100%;"></div>
 
-  <script>
-      L.TopoJSON = L.GeoJSON.extend({  
-        addData: function(jsonData) {    
-          if (jsonData.type === "Topology") {
-            for (key in jsonData.objects) {
-              geojson = topojson.feature(jsonData, jsonData.objects[key]);
-              L.GeoJSON.prototype.addData.call(this, geojson);
-            }
-          }    
-          else {
-            L.GeoJSON.prototype.addData.call(this, jsonData);
+              <!--
+              <div class="sidebar-pane" id="settings">
+                  <h1 class="sidebar-header">Settings<span class="sidebar-close">
+                    <i class="fa fa-caret-left"></i></span>
+                  </h1>
+              </div>
+              -->
+
+          </div>
+      </div>
+
+
+<div id="map" class="sidebar-map" style="top:0px;left:0px;width:100%;height:100%;height: 92%;"></div>
+
+<script src="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.js"></script>
+
+<div class="bureau-name"></div>
+
+<script>
+    L.TopoJSON = L.GeoJSON.extend({  
+      addData: function(jsonData) {    
+        if (jsonData.type === "Topology") {
+          for (key in jsonData.objects) {
+            geojson = topojson.feature(jsonData, jsonData.objects[key]);
+            L.GeoJSON.prototype.addData.call(this, geojson);
           }
-        }  
-      });
-  </script>
+        }    
+        else {
+          L.GeoJSON.prototype.addData.call(this, jsonData);
+        }
+      }  
+    });
+</script>
 
-  <script>
 
-    //Sets a window activeListingID variable, the leaslet-list-markers.src.js script uses
-    //this to keep a product item selected
+<script>
+
+//Sets a window activeListingID variable, the leaslet-list-markers.src.js script uses
+//this to keep a product item selected
     window.activeListingID = 'none';
 
-    //This resets the activeListingID if the home tab is selected
+//This resets the activeListingID if the home tab is selected
     $('#home').click(function() {
       activeListingID = 'none1';
     });
@@ -106,6 +520,7 @@ layerswitcher:
             }).addTo(map);
 
 
+
             map.zoomControl.setPosition('topright');
 
             var topoLayer = new L.TopoJSON()
@@ -119,6 +534,18 @@ layerswitcher:
             var info = L.control({position: 'bottomright'});
 
             window.sidebar = L.control.sidebar('sidebar').addTo(map);
+
+
+/*
+            info.onAdd = function (map) {
+              this._div = L.DomUtil.create('div', 'info');
+              this._div.innerHTML = '<div id="earth" data-toggle="tooltip" data-placement="left" title="Hello This Will Have Some Value"></div>';
+              return this._div;
+            };
+
+            info.addTo(map);
+*/
+
 
             var AFmarkers = new L.MarkerClusterGroup();
             var EAPmarkers = new L.MarkerClusterGroup();
@@ -147,6 +574,7 @@ layerswitcher:
 
             console.log('layerClicked val 1st');
             console.log(layerClicked);
+
 
 
             //This enables when a user clicks on part of the map that
@@ -517,6 +945,17 @@ layerswitcher:
                             $('.'+parentClass).prepend($('.item[title="'+clickedMarkerTitle+'"]'));
                         });
 
+/*
+                        var _markerOnClick = function(e) {
+                            console.log('icon fired on click: ');
+                            console.log(this);
+                        }
+
+                        .addEventListener('click', _markerOnClick)
+
+                        L.marker([5.482575, 26.501904], {icon: AFIcon}).addTo(map);
+*/
+
                         switch (region_id) {
                                        case "AF":
                                           map.removeLayer(EAPmarkers);
@@ -592,6 +1031,47 @@ layerswitcher:
               });
 
             }
+
+            var AFIcon = L.divIcon({  
+              className: "my-div-icon",
+              html: "<div class='af-region-font region_label' id='af_label' >AFRICA</div>"
+            });
+
+            var EAPIcon = L.divIcon({ 
+              className: "my-div-icon", 
+              html: "<div class='eap-region-font region_label' id='eap_label' ><center>EAST&nbsp;ASIA and&nbsp;the PACIFIC</center></div>"
+            });
+
+            var EURIcon = L.divIcon({ 
+              className: "my-div-icon", 
+              html: "<div class='eur-region-font region_label' id='eur_label' ><center>EUROPE</center></div>"
+            });
+
+            var NEAIcon = L.divIcon({  
+              className: "my-div-icon",
+              html: "<div class='nea-region-font region_label' id='nea_label' >NEAR&nbsp;EAST</div>"
+            });
+
+            var SCAIcon = L.divIcon({  
+              className: "my-div-icon",
+              html: "<div class='sca-region-font region_label' id='sca_label' ><center>SOUTH&nbsp;and CENTRAL&nbsp;ASIA</center></div>"
+            });
+
+            var WHAIcon = L.divIcon({  
+              className: "my-div-icon",
+              html: "<div class='wha-region-font region_label' id='wha_label' ><center>WESTERN HEMISPHERE</center></div>"
+            });
+
+
+            // you can set .my-div-icon styles in CSS
+/*
+            L.marker([5.482575, 26.501904], {icon: AFIcon}).addTo(map);
+            L.marker([30.181217, 113.074164], {icon: EAPIcon}).addTo(map);
+            L.marker([52.454666, 32.214791], {icon: EURIcon}).addTo(map);
+            L.marker([27.408829, 34.412056], {icon: NEAIcon}).addTo(map);
+            L.marker([42.906546, 67.195260], {icon: SCAIcon}).addTo(map);
+            L.marker([-0.749253, -64.904349], {icon: WHAIcon}).addTo(map);
+*/
 
             function clickTab(region) {
               console.log('hi');
@@ -737,11 +1217,14 @@ layerswitcher:
 
                 getProducts(this.feature.properties.RegBureau,regionCoord,regionZoom);
 
+
+                //$('.sidebar').css({ "height": "89%"});
                 $('.sidebar').addClass("sidebar-tall");
 
                 layerClicked = true;
 
                 //map.setView(event.latlng, 5);
+
 
             }
 
@@ -789,8 +1272,8 @@ layerswitcher:
             });
 
 
-   }());
-  </script>
 
-</div>
+   }());
+</script>
+
 

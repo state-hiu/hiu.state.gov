@@ -133,6 +133,25 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     {% if site.ga.enabled == true %}
       {% include main/analytics/analytics_ga_snippet.html %}
     {% endif %}
+
+    <!--extra map_base files-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.css" type="text/css" media="all" />
+    <script src="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.js"></script>
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.src.css" type="text/css" media="all" />
+    <script src="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.src.js"></script>
+
+    <script src="{{ site.baseurl }}/lib/leaflet-markercluster/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/MarkerCluster.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/MarkerCluster.Default.css"  />
+
+    <script src="{{ site.baseurl }}/lib/d3/d3.v3.min.js"></script>
+    <script src="{{ site.baseurl }}/lib/d3/topojson.v1.min.js"></script>
+    <script src="{{ site.baseurl }}/lib/queue/queue.v1.min.js"></script>
+
   </head>
 
   <body>

@@ -326,7 +326,7 @@ $navbar-inverse-color:                      #333 !default;
 .listitem .listitem-thumbnail {
     position: relative;
     display: block;
-    /* max-width, max-height done set by template */
+    // max-width, max-height done set by template
 }
 .listitem .listitem-thumbnail div {
     display: block;
@@ -347,7 +347,7 @@ $navbar-inverse-color:                      #333 !default;
     display: inline-block;
     color:white;
     font-size: 24px;
-    /* line height set by template */
+    // line height set by template 
 }
 
 img.thumb150 {
@@ -385,4 +385,160 @@ img.thumb150 {
     .modal-lg {
         width: 1200px;
     }
+}
+
+.region_label {
+  color: #0A2E52;
+  color: #808284;
+
+//  background: rgba(255,255,255,0.8);
+//  background: #808284;
+//  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//  border-radius: 5px;
+
+  padding: 4px 4px 4px 4px;
+  display: inline-block
+}
+
+body {
+  background-color: black;
+}
+
+.info {
+  padding: 6px 8px 25px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #d73f3f;
+}
+
+.leaflet-container .list-markers {
+  visibility: hidden;
+}
+
+.item {
+  display:block;
+  border-bottom:1px solid #eee;
+  padding:10px;
+  text-decoration:none;
+}
+
+.item.active {
+    background-color: #d1d6d1;
+}
+
+.title {
+    display: block;
+    color: #0A2E52;
+    font-weight: 700;
+}
+
+.item > .title {
+    display: block;
+    color: #0A2E52;
+    font-weight: 700;
+}
+
+.item > .title:hover {
+    color: #337ab7;
+}
+
+a.title {
+    text-decoration: none;
+}
+
+a.title:hover {
+    text-decoration: none;
+}
+
+.container2 {
+    width:100%;
+    height: 160px;
+    padding:1%;
+}
+
+.description-image {
+    float: left;
+    height: 175px;
+    width: 165px;
+}
+
+.description-text {
+    float: left;
+    padding-top: 5px;
+    height: 175px;
+    width: 150px;
+}
+
+.listitem-thumbnail {
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+}
+
+.listitem-thumbnail:hover div {
+    opacity: 0.8;
+    transition: opacity 0.4s ease-in-out;
+}
+
+#img-container {
+  position: relative;
+}
+
+#preview {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 150px;
+   text-align: center;
+   opacity: 0;
+}
+
+#preview:hover {
+   color: white;
+   opacity: 1;
+   transition: opacity 0.4s ease-in-out;
+}
+
+#hover {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   height:150px;
+   width:150px;
+}
+
+#hover:hover {
+   color:black;
+   background-color: black;
+   opacity: .7;
+   transition: opacity 0.4s ease-in-out;
+}
+
+// icon css 
+.circleBase {
+    border-radius: 50%;
+    // remove if you don't care about IE8
+    behavior: url(PIE.htc);
+}
+
+.type1 {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 4px solid #337ab7;
+    opacity: 1;
+    margin-left: -4px;
+    margin-top: -4px;
+}
+
+// the padding top is very important because the navbar is fixed unless the container
+// div below will overlap with the navbar unless the body or the container has top-padding
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 30px;
 }
