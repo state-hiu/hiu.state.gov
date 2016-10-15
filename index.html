@@ -616,6 +616,13 @@ layerswitcher:
               var regionCoord;
               var regionZoom;
 
+              map.removeLayer(AFmarkers);
+              map.removeLayer(EAPmarkers);
+              map.removeLayer(EURmarkers);
+              map.removeLayer(NEAmarkers);
+              map.removeLayer(SCAmarkers);
+              map.removeLayer(WHAmarkers);
+
               switch (region) {
                  case "AF":
                     regionCoord = [-1, -3];
