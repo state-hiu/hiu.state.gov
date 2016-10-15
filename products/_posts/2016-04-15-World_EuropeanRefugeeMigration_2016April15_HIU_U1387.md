@@ -8,7 +8,7 @@ date_published: 04/15/2016
 product_pdf: "World_EuropeanRefugeeMigration_2016April15_HIU_U1387.pdf"
 product_jpg: "World_EuropeanRefugeeMigration_2016April15_HIU_U1387-01.jpg"
 thumbnail: "World_EuropeanRefugeeMigration_2016April15_HIU_U1387_Thumb.jpg"
-featured: true
+featured: false
 lat: 39.074
 lon: 21.824
 keywords:

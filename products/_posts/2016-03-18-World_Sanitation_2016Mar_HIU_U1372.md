@@ -8,7 +8,7 @@ date_published: 03/18/2016
 product_pdf: "World_Sanitation_2016Mar18_HIU_U1372.pdf"
 product_jpg: "World_Sanitation_2016Mar18_HIU_U1372.jpg"
 thumbnail: "World_Sanitation_2016Mar18_HIU_U1372_thumb.jpg"
-featured: true
+featured: false
 lat: 
 lon: 
 keywords:

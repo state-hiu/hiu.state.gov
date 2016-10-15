@@ -8,7 +8,7 @@ date_published: 03/15/2016
 product_pdf: "World_EuropeanRefugeeMigration_2016March15_HIU_U1364.pdf"
 product_jpg: "World_EuropeanRefugeeMigration_2016March15_HIU_U1364-01.jpg"
 thumbnail: "World_EuropeanRefugeeMigration_2016March15_HIU_U1364_Thumb.jpg"
-featured: true
+featured: false
 lat: 
 lon: 
 keywords:
