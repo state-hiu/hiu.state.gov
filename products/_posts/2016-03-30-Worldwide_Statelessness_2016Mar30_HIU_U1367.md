@@ -7,7 +7,7 @@ region_title: "Africa, Europe, Near East, South and Central Asia, Western Hemisp
 date_published: 03/30/2016
 product_pdf: "Worldwide_Statelessness_2016Mar30_HIU_U1367.pdf"
 product_jpg: "Worldwide_Statelessness_2016Mar30_HIU_U1367.jpg"
-thumbnail: "Worldwide_Statelessness_2016Mar30_HIU_U1367_Thumb.jpg"
+thumbnail: "Worldwide_Statelessness_2016Mar30_HIU_U1367_thumb.jpg"
 featured: false
 lat: 
 lon: 

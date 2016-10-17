@@ -7,7 +7,7 @@ region_title: "South and Central Asia"
 date_published: 2016-05-26
 product_pdf: "Pakistan_NorthwestBorder_2016May25_HIU_U1398.pdf"
 product_jpg: "Pakistan_NorthwestBorder_2016May25_HIU_U1398-01.jpg"
-thumbnail: "Pakistan_NorthwestBorder_2016May25_HIU_U1398_Thumb.jpg"
+thumbnail: "Pakistan_NorthwestBorder_2016May25_HIU_U1398_thumb.jpg"
 featured: false
 lat: 30.375
 lon: 69.345

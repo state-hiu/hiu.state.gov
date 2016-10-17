@@ -7,7 +7,7 @@ region_title: "Africa, Europe, Near East, South and Central Asia, Western Hemisp
 date_published: 06/20/2016
 product_pdf: "Global_WorldRefugeeDayDisplacement_2016June20_HIU_U1417-01.pdf"
 product_jpg: "Global_WorldRefugeeDayDisplacement_2016June20_HIU_U1417-01.jpg"
-thumbnail: "Global_WorldRefugeeDayDisplacement_2016June20_HIU_U1417_Thumb.jpg"
+thumbnail: "Global_WorldRefugeeDayDisplacement_2016June20_HIU_U1417_thumb.jpg"
 featured: true
 lat: 
 lon: 

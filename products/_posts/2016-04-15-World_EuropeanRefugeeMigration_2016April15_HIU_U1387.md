@@ -7,7 +7,7 @@ region_title: "Africa, Europe, Near East, South and Central Asia"
 date_published: 04/15/2016
 product_pdf: "World_EuropeanRefugeeMigration_2016April15_HIU_U1387.pdf"
 product_jpg: "World_EuropeanRefugeeMigration_2016April15_HIU_U1387-01.jpg"
-thumbnail: "World_EuropeanRefugeeMigration_2016April15_HIU_U1387_Thumb.jpg"
+thumbnail: "World_EuropeanRefugeeMigration_2016April15_HIU_U1387_thumb.jpg"
 featured: false
 lat: 39.074
 lon: 21.824

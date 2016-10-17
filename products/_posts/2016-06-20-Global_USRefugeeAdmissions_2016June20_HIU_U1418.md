@@ -7,7 +7,7 @@ region_title: "Africa, Europe, Near East, South and Central Asia, Western Hemisp
 date_published: 06/20/2016
 product_pdf: "Global_USRefugeeAdmissions_2016June20_HIU_U1418.pdf"
 product_jpg: "Global_USRefugeeAdmissions_2016June20_HIU_U1418.jpg"
-thumbnail: "Global_USRefugeeAdmissions_2016June20_HIU_U1418_Thumb.jpg"
+thumbnail: "Global_USRefugeeAdmissions_2016June20_HIU_U1418_thumb.jpg"
 featured: true
 lat: 
 lon: 
