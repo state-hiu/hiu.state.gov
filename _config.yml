@@ -34,8 +34,8 @@ copyright: "http://www.state.gov/misc/87529.htm"
 
 # Analytics
 ga:
-  enabled: false
-  code: "UA-XXXXXX-1"
+  enabled: true
+  code: "UA-24614711-1"
 
 dap:
   enabled: false
