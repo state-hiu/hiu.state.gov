@@ -7,7 +7,7 @@ region_title: "Africa"
 date_published: 2016/01/06
 product_pdf: "BurundiDisplacement_2016Jan06_HIU_U1337.pdf"
 product_jpg: "BurundiDisplacement_2016Jan06_HIU_U1337.jpg"
-thumbnail: "BurundiDisplacement_2016Jan06_HIU_U1337_thumb2.jpg"
+thumbnail: "BurundiDisplacement_2016Jan06_HIU_U1337_thumb.jpg"
 featured: false
 lat: -3.373
 lon: 29.918
