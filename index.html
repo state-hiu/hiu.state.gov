@@ -171,6 +171,9 @@ layerswitcher:
             map.on('click', function(e) {        
                 //The TopoJson layer click function always fires first
 
+                //close all popups
+                map.closePopup();
+
                 map.setView([20, 25], 3, {animation: false});
                 console.log('map clicked');
                 console.log(e);
@@ -615,6 +618,9 @@ layerswitcher:
 
               var regionCoord;
               var regionZoom;
+
+              //close all popups
+              map.closePopup();
 
               map.removeLayer(AFmarkers);
               map.removeLayer(EAPmarkers);
