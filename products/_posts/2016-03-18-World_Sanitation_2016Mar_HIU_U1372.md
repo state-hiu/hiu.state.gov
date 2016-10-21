@@ -4,7 +4,7 @@ category: products
 title: "World Water Day 2016: Urban Access to Sanitation"
 region_id: "global"
 region_title: "Africa, East Asia and the Pacific, Europe, Near East, South and Central Asia, Western Hemisphere"
-date_published: 03/18/2016
+date_published: 2016-03-18
 product_pdf: "World_Sanitation_2016Mar18_HIU_U1372.pdf"
 product_jpg: "World_Sanitation_2016Mar18_HIU_U1372.jpg"
 thumbnail: "World_Sanitation_2016Mar18_HIU_U1372_thumb.jpg"
