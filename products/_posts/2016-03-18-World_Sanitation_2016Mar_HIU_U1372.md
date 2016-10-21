@@ -9,8 +9,8 @@ product_pdf: "World_Sanitation_2016Mar18_HIU_U1372.pdf"
 product_jpg: "World_Sanitation_2016Mar18_HIU_U1372.jpg"
 thumbnail: "World_Sanitation_2016Mar18_HIU_U1372_thumb.jpg"
 featured: false
-lat: 
-lon: 
+lat: 0
+lon: 0
 keywords:
   - Stateless
   - Stateless Refugees
