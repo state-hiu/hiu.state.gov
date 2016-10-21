@@ -13,6 +13,14 @@ lat: 18.2
 lon: -73.75
 events:
   - Hurricane Matthew
-keywords: Hurricane Matthew, Natural Disasters, Humanitarian Issues, Haiti, Precipation, Logistics, Humanitarian Need, Wind
+keywords: 
+  - Hurricane Matthew
+  - Natural Disasters
+  - Humanitarian Issues
+  - Haiti
+  - Precipation
+  - Logistics
+  - Humanitarian Need
+  - Wind
 ---
 This map highlights the effects of Hurricane Matthew on Haiti, using data layers that show estimated rainfall, wind speeds, people in need of humanitarian aid, and logistical constraints.
