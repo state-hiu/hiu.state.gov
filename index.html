@@ -98,9 +98,9 @@ layerswitcher:
             //probably because all of this in inside of its own contained function
             window.map = L.map('map', {
                 attributionControl: {collapsed: true},
-                maxBounds:[ [-90, -140], [100, 180] ],
+                maxBounds:[ [-100, -140], [100, 165] ],
                 minZoom: 3
-              }).setView([20, 25], 3);
+              }).setView([20, 0], 3);
 
             // Use styleLayer to add a Mapbox style created in Mapbox Studio
             var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/cit0gm97500012ypfwnzijj6o/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ',{
@@ -174,7 +174,7 @@ layerswitcher:
                 //close all popups
                 map.closePopup();
 
-                map.setView([20, 25], 3, {animation: false});
+                map.setView([20, 0], 3, {animation: false});
                 console.log('map clicked');
                 console.log(e);
 
@@ -267,8 +267,13 @@ layerswitcher:
                  //for IE, need to make this emulate the correct mousover behavior
                  //http://stackoverflow.com/questions/3686132/move-active-element-loses-mouseout-event-in-internet-explorer
 
-                 //console.log('what is this style?');
+                 
+                 console.log('what is this style?');
+                 console.log(this.options.fillColor);
+
                  if (!this.options.fillColor != "#b3b3b3" || !this.options.fillColor != "#0A2E52") {
+
+console.log('inside function');
 
                   var countryName = this.feature.properties.RegBureau;
                   $tooltip.text(countryName).show();
