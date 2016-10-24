@@ -269,57 +269,54 @@ layerswitcher:
                  //for IE, need to make this emulate the correct mousover behavior
                  //http://stackoverflow.com/questions/3686132/move-active-element-loses-mouseout-event-in-internet-explorer
 
-                 
-                 console.log('what is this style?');
-                 console.log(this.options.fillColor);
-
-                
+                 //console.log('what is this style?');
+                 //console.log(this.options.fillColor);
 
                  if (leftLayer == true) {
 
-console.log('inside function');
+                      //console.log('inside function');
 
-                  var countryName = this.feature.properties.RegBureau;
-                  $tooltip.text(countryName).show();
+                      var countryName = this.feature.properties.RegBureau;
+                      $tooltip.text(countryName).show();
 
-                  this.bringToFront();
+                      this.bringToFront();
 
-                  console.log('enterLayer called');
+                      console.log('enterLayer called');
 
-                  switch (this.feature.properties.RegBureau) {
-                     case "AF":
-                        fillColor = "#fc944f";
-                        break;
-                     case "EAP":
-                        fillColor = "#fced8d";
-                        break;
-                     case "EUR":
-                        fillColor = "#eeb3cb";
-                        break;
-                     case "NEA":
-                        fillColor = "#b8d773";
-                        break;
-                     case "SCA":
-                        fillColor = "#b5aed6";
-                        break;
-                     case "WHA":
-                        fillColor = "#a8c8e9";
-                        break;
-                     default:
-                        fillColor = "#b3b3b3";
-                  }
+                      switch (this.feature.properties.RegBureau) {
+                         case "AF":
+                            fillColor = "#fc944f";
+                            break;
+                         case "EAP":
+                            fillColor = "#fced8d";
+                            break;
+                         case "EUR":
+                            fillColor = "#eeb3cb";
+                            break;
+                         case "NEA":
+                            fillColor = "#b8d773";
+                            break;
+                         case "SCA":
+                            fillColor = "#b5aed6";
+                            break;
+                         case "WHA":
+                            fillColor = "#a8c8e9";
+                            break;
+                         default:
+                            fillColor = "#b3b3b3";
+                      }
 
-                  this.setStyle({
-                    fillColor : fillColor,
-                    fillOpacity:0.5,
-                    color:fillColor,
-                    weight:0,
-                    opacity: 0
-                  });
+                      this.setStyle({
+                        fillColor : fillColor,
+                        fillOpacity:0.5,
+                        color:fillColor,
+                        weight:0,
+                        opacity: 0
+                      });
 
-                    leftLayer = false;
+                      leftLayer = false;
 
-                 }
+                    }
                 }
 
                 function leaveLayer(){  
