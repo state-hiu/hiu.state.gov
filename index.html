@@ -98,7 +98,7 @@ layerswitcher:
             //probably because all of this in inside of its own contained function
             window.map = L.map('map', {
                 attributionControl: {collapsed: true},
-                maxBounds:[ [-100, -140], [100, 165] ],
+                maxBounds:[ [-100, -140], [100, 163] ],
                 minZoom: 3
               }).setView([20, 0], 3);
 
@@ -271,7 +271,7 @@ layerswitcher:
                  console.log('what is this style?');
                  console.log(this.options.fillColor);
 
-                 if (!this.options.fillColor != "#b3b3b3" || !this.options.fillColor != "#0A2E52") {
+                 if (!(this.options.fillColor == "#b3b3b3" || !this.options.fillColor == "#0A2E52")) {
 
 console.log('inside function');
 
