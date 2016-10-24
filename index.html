@@ -86,6 +86,8 @@ layerswitcher:
 
     window.selectedID = 'none';
 
+    window.leftLayer = true;
+
     (function(){
 
             var layerswitcher = $('#menu-ui');
@@ -271,7 +273,7 @@ layerswitcher:
                  console.log('what is this style?');
                  console.log(this.options.fillColor);
 
-                 if (!(this.options.fillColor == "#b3b3b3" || this.options.fillColor == "#0A2E52")) {
+                 if (!(this.options.fillColor == "#b3b3b3" || this.options.fillColor == "#0A2E52") || leftLayer == true) {
 
 console.log('inside function');
 
@@ -313,7 +315,7 @@ console.log('inside function');
                     opacity: 0
                   });
 
-
+                    leftLayer = false;
 
                  }
                 }
@@ -340,6 +342,8 @@ console.log('inside function');
                     weight:0,
                     opacity:0
                   });
+
+                  leftLayer = true;
             }
 
             // Products GeoJSON
