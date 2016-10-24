@@ -30,29 +30,18 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     {% endfor %}
     <title>{{ page.title }}</title>
     <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/favicon.ico" />
-    <!-- CSS / External-->
-    <!--<link href="{{ site.baseurl }}/lib/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="{{ site.baseurl }}/lib/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet"/>-->
-    <!--<link href="{{ site.baseurl }}/assets/css/bootstrap.less.css" rel="stylesheet"/>-->
 
-    <!--<link href="{{ site.baseurl }}/build/bootstrap/bootstrap.css" rel="stylesheet"/>-->
+<!-- CSS / External-->
 
     <link href="{{ site.baseurl }}/css/main.css" rel="stylesheet"/>
-
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" media="all" />
 
     <!-- CSS / Internal: Not using LESS anymore
     <link href='{{site.baseurl}}/build/css/main.css?v={{ v }}' rel='stylesheet' />
     -->
 
-    <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}</style>
-    <!-- JavaScript / Polyfill -->	
-    {% if site.debug.polyfill == true %}
-        <script src="{{ site.baseurl }}/build/js/polyfill.js?v={{ v }}"></script>
-    {% else %}
-        <script src="{{ site.baseurl }}/build/js/polyfill.min.js?v={{ v }}"></script>
-    {% endif %}
-    <!-- JavaScript / External -->	
-    <!--<script src="{{ site.baseurl }}/lib/jquery/1.7.2/jquery-1.7.2.js"></script>-->
+    <!-- JavaScript / Internal -->
+
     {% if site.debug.jquery == true %}
         <script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.js"></script>
         <script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui-1.8.14.js"></script>
@@ -60,22 +49,16 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
         <script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.min.js"></script>
         <script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui-1.8.14.min.js"></script>
     {% endif %}
-    {% if site.debug.angular == true %}
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular-route.js"></script>
-    {% else %}
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular-route.min.js"></script>
-    {% endif %}
     {% if site.debug.bootstrap == true %}
         <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.js"></script>
     {% else %}
         <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.min.js"></script>
     {% endif %}
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/lib/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" media="all" />
 
     <!-- JavaScript / Internal -->
+{% comment %}
+
     {% if site.debug.main == true %}
     <script src="{{ site.baseurl }}/build/js/main.js?v={{ v }}"></script>
     {% else %}
@@ -120,11 +103,14 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
             return link;
         };
     </script>
+
     <script type="text/javascript" language="Javascript">
         $(function(){
             init_main("mainApp","{{ site.geonodes[0].layers }}");
         });
     </script>
+{% endcomment %}
+
     <!--Digital Analytics Program roll-up, see https://analytics.usa.gov for data-->
     {% if site.dap.enabled == true %}
       {% include main/analytics/analytics_dap_snippet.html %}
