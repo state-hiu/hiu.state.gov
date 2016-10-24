@@ -263,6 +263,13 @@ layerswitcher:
                 var $tooltip = $('.country-name');
 
                 function enterLayer(){  
+
+                 //for IE, need to make this emulate the correct mousover behavior
+                 //http://stackoverflow.com/questions/3686132/move-active-element-loses-mouseout-event-in-internet-explorer
+
+                 //console.log('what is this style?');
+                 if (!this.options.fillColor != "#b3b3b3" || !this.options.fillColor != "#0A2E52") {
+
                   var countryName = this.feature.properties.RegBureau;
                   $tooltip.text(countryName).show();
 
@@ -300,6 +307,10 @@ layerswitcher:
                     weight:0,
                     opacity: 0
                   });
+
+
+
+                 }
                 }
 
                 function leaveLayer(){  

@@ -542,6 +542,7 @@ html, body{
     height: 100%;
     width: 100%;
     // disable, not displaying right in IE 11 overflow: hidden;
+    -ms-overflow-style: none;
     padding-top: 30px;
 }
 
