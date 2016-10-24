@@ -541,7 +541,7 @@ a.title:hover {
 html, body{
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    // disable, not displaying right in IE 11 overflow: hidden;
     padding-top: 30px;
 }
 
