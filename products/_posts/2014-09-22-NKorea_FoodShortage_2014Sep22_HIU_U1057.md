@@ -12,5 +12,11 @@ featured: false
 lat: 39.7537
 lon: 126.6435
 keywords:
+  - food security
+  - agriculture
+  - north korea
+  - food insecurity
+  - hillside farming
+  - sloped agriculture
 ---
 Geospatial analysis using landcover and elevation data to determine how much agriculture in North Korea is on sloped lands. Sloped agriculture is an indicator that the people in that area are not obtaining enough food from the public distribution system.
