@@ -8,7 +8,7 @@ date_published: 2016-06-20
 product_pdf: "Global_USRefugeeAdmissions_2016June20_HIU_U1418.pdf"
 product_jpg: "Global_USRefugeeAdmissions_2016June20_HIU_U1418.jpg"
 thumbnail: "Global_USRefugeeAdmissions_2016June20_HIU_U1418_thumb.jpg"
-featured: true
+featured: false
 lat: 0
 lon: 0
 keywords:
