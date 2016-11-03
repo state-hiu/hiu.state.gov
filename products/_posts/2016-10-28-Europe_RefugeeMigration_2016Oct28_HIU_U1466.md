@@ -9,7 +9,7 @@ product_pdf: "Europe_RefugeeMigration_2016Oct28_HIU_U1466.pdf"
 product_jpg: "Europe_RefugeeMigrationPage2_2016Oct28_HIU_U1466.jpg"
 product_jpg_pg_2: "Europe_RefugeeMigrationPage1_2016Oct28_HIU_U1466.jpg"
 thumbnail: "Europe_RefugeeMigration_2016Oct28_HIU_U1466_thumb.jpg"
-featured: false
+featured: true
 lat: 53.5775 
 lon: 23.106111
 events:
