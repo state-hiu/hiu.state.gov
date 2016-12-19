@@ -2,12 +2,12 @@
 layout: product
 category: products
 title: "International Migrants Day, December 18, 2016"
-region_id: "AF"
-region_title: "Africa"
-date_published: 2014-08-28
-product_pdf: ".pdf"
-product_jpg: ".jpg"
-thumbnail: "_thumb.jpg"
+region_id: ""
+region_title: ""
+date_published: 2016-12-19
+product_pdf: "Worldwide_InternationalMigrantsDay_Movement_2016Dec19_HIU_U1498.pdf"
+product_jpg: "Worldwide_InternationalMigrantsDay_Movement_2016Dec19_HIU_U1498.jpg"
+thumbnail: "Worldwide_InternationalMigrantsDay_Movement_2016Dec19_HIU_U1498_thumb.jpg"
 featured: true
 lat: 0 
 lon: 0
@@ -21,4 +21,4 @@ keywords:
   - Regions
   - Migrant stock
 ---
-The map illustrates the extent and severity of the current Ebola outbreak in Guinea, Liberia, and Sierra Leone and highlights the number of cases and fatalities in all countries reporting Ebola cases. Ebola Treatment Units (both existing and under construction) are shown, and total population figures are for Guinea, Sierra Leone, Liberia, Senegal, and Nigeria are also included.
+Worldwide, international migrants account for a relatively stable share of the total global population. The number continues to grow by about two percent annually. To-thirds of all migrants originate from middle-income countries and most migrants move within their own regions.
