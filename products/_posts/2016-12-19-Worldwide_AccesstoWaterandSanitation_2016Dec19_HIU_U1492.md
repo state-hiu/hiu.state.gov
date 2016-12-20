@@ -20,4 +20,4 @@ keywords:
   - Humanitarian Response
 tweet: "Infographic - Worldwide: Access to Improved Sanitation Facilities and Water Sources @StateHIU"
 ---
-The Millennium Development Goals (MDGs) launched by the UN in 2000 sought to halve by 2015 the proportion of the world’s population without sustainable access to improved water sources and sanitation facilities. This infographic highlights the current situation around access to improved water sources and sanitation facilities around the world.
+The Millennium Development Goals (MDGs) launched by the UN in 2000 sought to halve by 2015 the proportion of the world’s population without sustainable access to improved water sources and sanitation facilities. This infographic highlights the current situation around access to improved water sources and sanitation facilities around the world. For the HIU this is baseline information we evaluate when trying to determine underlying vulnerability to disasters and humanitarian crisis, especially in less developed countries. 
