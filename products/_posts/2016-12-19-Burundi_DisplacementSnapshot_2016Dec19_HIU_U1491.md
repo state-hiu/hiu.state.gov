@@ -10,7 +10,7 @@ thumbnail: "Burundi_DisplacementSnapshot_2016Dec19_HIU_U1491_thumb.jpg"
 featured: true
 lat: -3.3822000
 lon: 29.3644000
-keywords:Burundi; Rwanda; Tanzania; Democratic Republic of the Congo; Uganda; Refugee; Internally displaced persons; IDP
+keywords:
   - Burundi
   - Rwanda
   - Tanzania
