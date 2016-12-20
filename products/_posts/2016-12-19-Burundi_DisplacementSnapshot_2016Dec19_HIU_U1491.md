@@ -1,3 +1,4 @@
+---
 layout: product
 category: products
 title: "Burundi Displacement Snapshot"
