@@ -9,7 +9,7 @@ permalink: none
 #url: http://localhost:8000
 #destination: /var/www
 # GitHub Pages
-baseurl: /hiu.state.gov
+baseurl:
 url: http://state-hiu.github.io/hiu.state.gov
 destination: _site
 # Production

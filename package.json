@@ -21,11 +21,12 @@
     "del": "*",
     "gulp": "^3.9.1",
     "gulp-concat": "*",
-    "gulp-jshint": "*",
+    "gulp-jshint": "^2.0.4",
     "gulp-less": "*",
     "gulp-minify": "*",
     "gulp-rename": "*",
     "gulp-uglify": "*",
+    "jshint": "^2.9.4",
     "path": "*"
   }
 }
