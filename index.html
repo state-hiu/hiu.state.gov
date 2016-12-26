@@ -54,7 +54,6 @@ layerswitcher:
 
   {% include main/sidebar.html %}
 
-
   <div id="map" class="sidebar-map" style="top:0px;left:0px;width:100%;height:100%;height: 100%;"></div>
 
   <script>
@@ -75,7 +74,7 @@ layerswitcher:
 
   <script>
 
-    //Sets a window activeListingID variable, the leaslet-list-markers.src.js script uses
+    //Sets a window activeListingID variable, the leaflet-list-markers.src.js script uses
     //this to keep a product item selected
     window.activeListingID = 'none';
 
@@ -100,7 +99,8 @@ layerswitcher:
             //probably because all of this in inside of its own contained function
             window.map = L.map('map', {
                 attributionControl: {collapsed: true},
-                maxBounds:[ [-100, -140], [100, 162] ],
+                maxBounds:[ [-100, -140], [100, 182] ],
+                maxBoundsViscosity: 1.0,
                 minZoom: 3
               }).setView([20, 0], 3);
 
@@ -166,7 +166,6 @@ layerswitcher:
             //console.log('layerClicked val 1st');
             //console.log(layerClicked);
 
-
             //This enables when a user clicks on part of the map that
             //is not part of a layer, it will zoom back into the 
             //original extent
@@ -179,9 +178,6 @@ layerswitcher:
                 map.setView([20, 0], 3, {animation: false});
                 console.log('map clicked');
                 console.log(e);
-
-                console.log('layerClicked val 2nd');
-                console.log(layerClicked);
 
                 if(layerClicked !== true){
                   //$('.sidebar').css({ "height": "33%"});
@@ -260,89 +256,79 @@ layerswitcher:
                     mouseout: leaveLayer,
                     click: clickLayer,
                   });
-                }
+            }
 
-                var $tooltip = $('.country-name');
+            function enterLayer(){  
+                //for IE, need to make this emulate the correct mousover behavior
+                //http://stackoverflow.com/questions/3686132/move-active-element-loses-mouseout-event-in-internet-explorer
 
-                function enterLayer(){  
+                if (leftLayer == true) {
+                  //console.log('inside function');
 
-                 //for IE, need to make this emulate the correct mousover behavior
-                 //http://stackoverflow.com/questions/3686132/move-active-element-loses-mouseout-event-in-internet-explorer
+                  //var RegionName = this.feature.properties.RegBureau;
+                  //$tooltip.text(RegionName).show();
 
-                 //console.log('what is this style?');
-                 //console.log(this.options.fillColor);
-
-                 if (leftLayer == true) {
-
-                      //console.log('inside function');
-
-                      var countryName = this.feature.properties.RegBureau;
-                      $tooltip.text(countryName).show();
-
-                      this.bringToFront();
-
-                      //console.log('enterLayer called');
-
-                      switch (this.feature.properties.RegBureau) {
-                         case "AF":
-                            fillColor = "#fc944f";
-                            break;
-                         case "EAP":
-                            fillColor = "#fced8d";
-                            break;
-                         case "EUR":
-                            fillColor = "#eeb3cb";
-                            break;
-                         case "NEA":
-                            fillColor = "#b8d773";
-                            break;
-                         case "SCA":
-                            fillColor = "#b5aed6";
-                            break;
-                         case "WHA":
-                            fillColor = "#a8c8e9";
-                            break;
-                         default:
-                            fillColor = "#b3b3b3";
-                      }
-
-                      this.setStyle({
-                        fillColor : fillColor,
-                        fillOpacity:0.5,
-                        color:fillColor,
-                        weight:0,
-                        opacity: 0
-                      });
-
-                      leftLayer = false;
-
-                    }
-                }
-
-                function leaveLayer(){  
-                  $tooltip.hide();
-                    
-                  //console.log('leaveLayer called');
+                  this.bringToFront();
 
                   switch (this.feature.properties.RegBureau) {
-                     case "USA":
-                        fillColor = "#b3b3b3";
+                     case "AF":
+                        fillColor = "#fc944f";
+                        break;
+                     case "EAP":
+                        fillColor = "#fced8d";
+                        break;
+                     case "EUR":
+                        fillColor = "#eeb3cb";
+                        break;
+                     case "NEA":
+                        fillColor = "#b8d773";
+                        break;
+                     case "SCA":
+                        fillColor = "#b5aed6";
+                        break;
+                     case "WHA":
+                        fillColor = "#a8c8e9";
                         break;
                      default:
-                        fillColor = "#0A2E52";
+                        fillColor = "#b3b3b3";
                   }
-
-                  this.bringToBack();
 
                   this.setStyle({
                     fillColor : fillColor,
-                    fillOpacity:0,
-                    color: fillColor,
+                    fillOpacity:0.5,
+                    color:fillColor,
                     weight:0,
-                    opacity:0
+                    opacity: 0
                   });
 
-                  leftLayer = true;
+                  leftLayer = false;
+
+                }
+            }
+
+            function leaveLayer(){  
+                //$tooltip.hide();
+                //console.log('leaveLayer called');
+
+                switch (this.feature.properties.RegBureau) {
+                   case "USA":
+                      fillColor = "#b3b3b3";
+                      break;
+                   default:
+                      fillColor = "#0A2E52";
+                }
+
+                this.bringToBack();
+
+                this.setStyle({
+                  fillColor : fillColor,
+                  fillOpacity:0,
+                  color: fillColor,
+                  weight:0,
+                  opacity:0
+                });
+
+                leftLayer = true;
             }
 
             // Products GeoJSON
@@ -375,12 +361,10 @@ layerswitcher:
                         }
                     });
 
-
                     $('.product-listings').empty();
 
-
-                    console.log('first click');
-                    console.log(firstClick);
+                    //console.log('first click');
+                    //console.log(firstClick);
 
                     if(firstClick == true){
                       map.addControl( new L.Control.ListMarkers({layer: products}) );
@@ -390,102 +374,90 @@ layerswitcher:
                     window.map.setView(regionCoord,regionZoom);
 
                     var enabled = {};
-
                     var featureCollection = products;
 
                     //console.log('features:');
                     //console.log(featureCollection._layers);
 
                     for (var i in featureCollection._layers) {
-                      //console.log('feature:');
-                      //console.log(featureCollection._layers[i].feature);
+                        //console.log('feature:');
+                        //console.log(featureCollection._layers[i].feature);
 
-                      if (featureCollection._layers[i].feature.properties.region_id === region_id) {
+                        if (featureCollection._layers[i].feature.properties.region_id === region_id) {
 
-                          //enabled[featureCollection._layers[i].feature.properties.title] = true;
+                              var popupContent = '<div class="title">'+featureCollection._layers[i].feature.properties.title+'</div>';
 
-                          var popupContent = '<div class="title">'+featureCollection._layers[i].feature.properties.title+'</div>';
+                              var popupOptions = {keepInView: true,maxWidth: 200};
 
-                          var popupOptions = {keepInView: true,maxWidth: 200};
+                              var altString = featureCollection._layers[i].feature.properties.title;
 
-                          var altString = featureCollection._layers[i].feature.properties.title;
+                              //inserting the title in the altString of the marker
+                              var marker = L.marker(new L.LatLng(featureCollection._layers[i].feature.geometry.coordinates[1],featureCollection._layers[i].feature.geometry.coordinates[0]), {
+                                                          icon: productIcon, alt: altString
+                                                      });
 
-                          var marker = L.marker(new L.LatLng(featureCollection._layers[i].feature.geometry.coordinates[1],featureCollection._layers[i].feature.geometry.coordinates[0]), {
-                                                      icon: productIcon, alt: altString
-                                                  });
+                              marker.bindPopup(popupContent,popupOptions);
 
-                          marker.bindPopup(popupContent,popupOptions);
-
-                          switch (region_id) {
-                                         case "AF":
-                                          if (AFcount == 1) {
-                                            AFmarkers.addLayer(marker);
-                                          }
-                                            break;
-                                         case "EAP":
-                                          if (EAPcount == 1) {
-                                            EAPmarkers.addLayer(marker);
-                                          }
-                                            break;
-                                         case "EUR":
-                                          if (EURcount == 1) {
-                                            EURmarkers.addLayer(marker);
-                                          }
-                                            break;
-                                         case "NEA":
-                                          if (NEAcount == 1) {
-                                            NEAmarkers.addLayer(marker);
-                                          }
-                                            break;
-                                         case "SCA":
-                                          if (SCAcount == 1) {
-                                            SCAmarkers.addLayer(marker);
-                                          }
-                                            break;
-                                         case "WHA":
-                                          if (WHAcount == 1) {
-                                            WHAmarkers.addLayer(marker);
-                                          }
-                                            break;
-                                         default:
-                                        }
-                          }                      
+                              switch (region_id) {
+                                  case "AF":
+                                  if (AFcount == 1) {
+                                    AFmarkers.addLayer(marker);
+                                  }
+                                    break;
+                                  case "EAP":
+                                  if (EAPcount == 1) {
+                                    EAPmarkers.addLayer(marker);
+                                  }
+                                    break;
+                                  case "EUR":
+                                  if (EURcount == 1) {
+                                    EURmarkers.addLayer(marker);
+                                  }
+                                    break;
+                                  case "NEA":
+                                  if (NEAcount == 1) {
+                                    NEAmarkers.addLayer(marker);
+                                  }
+                                    break;
+                                  case "SCA":
+                                  if (SCAcount == 1) {
+                                    SCAmarkers.addLayer(marker);
+                                  }
+                                    break;
+                                  case "WHA":
+                                  if (WHAcount == 1) {
+                                    WHAmarkers.addLayer(marker);
+                                  }
+                                    break;
+                                  default:
+                              }
+                          }
                         }
 
-
                         /*
-
                         console.log("AF length ");
                         console.log(AFmarkers.getLayers().length);
                         console.log(AFmarkers.getLayers());
 
-                        templayerGroup = L.LayerGroup();
-
                         for (var i = 0; i < AFmarkers.getLayers().length; i++) {
                           console.log(AFmarkers.getLayers()[i]);
-                          tempLayer = AFmarkers.getLayers()[i];
-                          templayerGroup.addLayer(tempLayer);
+
                         }
                         */
-
-                        //console.log('templayerGroup val:');
-                        //console.log(templayerGroup);
 
                         AFmarkers.on("click", function (event) {
                             var clickedMarker = event.layer;
                             console.log('AF icon fired on click: ');
                             console.log(event.layer.options.alt);
 
-                            //sample1 = "Democratic Republic of Congo: Presence at Mine Sites of Armed Groups and other Entities"
-
                             clickedMarkerTitle = event.layer.options.alt;
 
-                            console.log('sample title');
-                            //console.log($('.item').attr('title'));
-                            console.log($('.item[title="'+clickedMarkerTitle+'"]'));
+                            //remove the active class from all items
                             $('.item').removeClass('active');
+                            //add the active class to item that matches title
                             $('.item[title="'+clickedMarkerTitle+'"]').addClass('active');
 
+                            //set selectedID
                             selectedID = $('.item[title="'+clickedMarkerTitle+'"]').attr('id');
 
                             var parentClass = $('.item[id="'+selectedID+'"]').parent().attr('class');
@@ -559,76 +531,93 @@ layerswitcher:
                             $('.'+parentClass).prepend($('.item[title="'+clickedMarkerTitle+'"]'));
                         });
 
-                        switch (region_id) {
-                                       case "AF":
-                                          map.removeLayer(EAPmarkers);
-                                          map.removeLayer(EURmarkers);
-                                          map.removeLayer(NEAmarkers);
-                                          map.removeLayer(SCAmarkers);
-                                          map.removeLayer(WHAmarkers);
-                                          map.addLayer(AFmarkers);
-                                          $( '.product').remove();
-                                          $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + AFmarkers.getLayers().length + "&nbspProducts</p></center>" );
-                                          AFcount++;
 
-                                          break;
-                                       case "EAP":
-                                          map.removeLayer(AFmarkers);
-                                          map.removeLayer(EURmarkers);
-                                          map.removeLayer(NEAmarkers);
-                                          map.removeLayer(SCAmarkers);
-                                          map.removeLayer(WHAmarkers);
-                                          map.addLayer(EAPmarkers);
-                                          $( '.product').remove();
-                                          $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + EAPmarkers.getLayers().length + "&nbspProducts</p></center>" );
-                                          EAPcount++;
-                                          break;
-                                       case "EUR":
-                                          map.removeLayer(AFmarkers);
-                                          map.removeLayer(EAPmarkers);
-                                          map.removeLayer(NEAmarkers);
-                                          map.removeLayer(SCAmarkers);
-                                          map.removeLayer(WHAmarkers);
-                                          map.addLayer(EURmarkers);
-                                          $( '.product').remove();
-                                          $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + EURmarkers.getLayers().length + "&nbspProducts</p></center>" );
-                                          EURcount++;
-                                          break;
-                                       case "NEA":
-                                          map.removeLayer(AFmarkers);
-                                          map.removeLayer(EAPmarkers);
-                                          map.removeLayer(EURmarkers);
-                                          map.removeLayer(SCAmarkers);
-                                          map.removeLayer(WHAmarkers);
-                                          map.addLayer(NEAmarkers);
-                                          $( '.product').remove();
-                                          $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + NEAmarkers.getLayers().length + "&nbspProducts</p></center>" );
-                                          NEAcount++;
-                                          break;
-                                       case "SCA":
-                                          map.removeLayer(AFmarkers);
-                                          map.removeLayer(EAPmarkers);
-                                          map.removeLayer(EURmarkers);
-                                          map.removeLayer(NEAmarkers);
-                                          map.removeLayer(WHAmarkers);
-                                          map.addLayer(SCAmarkers);
-                                          $( '.product').remove();
-                                          $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + SCAmarkers.getLayers().length + "&nbspProducts</p></center>" );
-                                          SCAcount++;
-                                          break;
-                                       case "WHA":
-                                          map.removeLayer(AFmarkers);
-                                          map.removeLayer(EAPmarkers);
-                                          map.removeLayer(EURmarkers);
-                                          map.removeLayer(NEAmarkers);
-                                          map.removeLayer(SCAmarkers);
-                                          map.addLayer(WHAmarkers);
-                                          $( '.product').remove();
-                                          $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + WHAmarkers.getLayers().length + "&nbspProducts</p></center>" );
-                                          WHAcount++;
-                                          break;
-                                       default:
-                                      }
+                        switch (region_id) {
+                            case "AF":
+                              map.removeLayer(EAPmarkers);
+                              map.removeLayer(EURmarkers);
+                              map.removeLayer(NEAmarkers);
+                              map.removeLayer(SCAmarkers);
+                              map.removeLayer(WHAmarkers);
+                              map.addLayer(AFmarkers);
+
+/*
+                              $( '.product').remove();
+
+                              $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + AFmarkers.getLayers().length + "&nbspProducts</p></center>" );
+*/
+                              //increases AFcount from one, to prevent double-counting on repeated clicks
+                              AFcount++;
+
+                              break;
+                            case "EAP":
+                              map.removeLayer(AFmarkers);
+                              map.removeLayer(EURmarkers);
+                              map.removeLayer(NEAmarkers);
+                              map.removeLayer(SCAmarkers);
+                              map.removeLayer(WHAmarkers);
+                              map.addLayer(EAPmarkers);
+                              /*
+                              $( '.product').remove();
+                              $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + EAPmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                              */
+                              EAPcount++;
+                              break;
+                            case "EUR":
+                              map.removeLayer(AFmarkers);
+                              map.removeLayer(EAPmarkers);
+                              map.removeLayer(NEAmarkers);
+                              map.removeLayer(SCAmarkers);
+                              map.removeLayer(WHAmarkers);
+                              map.addLayer(EURmarkers);
+                              $( '.product').remove();
+                              /*
+                              $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + EURmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                              */
+                              EURcount++;
+                              break;
+                            case "NEA":
+                              map.removeLayer(AFmarkers);
+                              map.removeLayer(EAPmarkers);
+                              map.removeLayer(EURmarkers);
+                              map.removeLayer(SCAmarkers);
+                              map.removeLayer(WHAmarkers);
+                              map.addLayer(NEAmarkers);
+                              $( '.product').remove();
+                              /*
+                              $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + NEAmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                              */
+                              NEAcount++;
+                              break;
+                            case "SCA":
+                              map.removeLayer(AFmarkers);
+                              map.removeLayer(EAPmarkers);
+                              map.removeLayer(EURmarkers);
+                              map.removeLayer(NEAmarkers);
+                              map.removeLayer(WHAmarkers);
+                              map.addLayer(SCAmarkers);
+                              $( '.product').remove();
+                              /*
+                              $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + SCAmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                              */
+                              SCAcount++;
+                              break;
+                            case "WHA":
+                              map.removeLayer(AFmarkers);
+                              map.removeLayer(EAPmarkers);
+                              map.removeLayer(EURmarkers);
+                              map.removeLayer(NEAmarkers);
+                              map.removeLayer(SCAmarkers);
+                              map.addLayer(WHAmarkers);
+                              $( '.product').remove();
+                              /*
+                              $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + WHAmarkers.getLayers().length + "&nbspProducts</p></center>" );
+                              */
+                              WHAcount++;
+                              break;
+
+                            default:
+                        }
                     
                 }
               });
@@ -636,71 +625,67 @@ layerswitcher:
             }
 
             function clickTab(region) {
-              console.log('hi');
-              console.log(region);
+                console.log('tab was clicked, region is: ');
+                console.log(region);
 
-              var regionCoord;
-              var regionZoom;
+                var regionCoord;
+                var regionZoom;
 
-              //close all popups
-              map.closePopup();
+                //close all popups
+                map.closePopup();
 
-              map.removeLayer(AFmarkers);
-              map.removeLayer(EAPmarkers);
-              map.removeLayer(EURmarkers);
-              map.removeLayer(NEAmarkers);
-              map.removeLayer(SCAmarkers);
-              map.removeLayer(WHAmarkers);
+                map.removeLayer(AFmarkers);
+                map.removeLayer(EAPmarkers);
+                map.removeLayer(EURmarkers);
+                map.removeLayer(NEAmarkers);
+                map.removeLayer(SCAmarkers);
+                map.removeLayer(WHAmarkers);
 
-              switch (region) {
-                 case "AF":
+                switch (region) {
+                  case "AF":
                     regionCoord = [-1, -3];
                     regionZoom = 4;
                     activeLayer = "AF";
-                    console.log('active layerAF: ');
-                    console.log(activeLayer);
                     break;
-                 case "EAP":
+                  case "EAP":
                     regionCoord = [5, 70];
                     regionZoom = 3;
                     activeLayer = "EAP";
                     break;
-                 case "EUR":
+                  case "EUR":
                     regionCoord = [51, 22];
                     regionZoom = 4;
                     activeLayer = "EUR";
                     break;
-                 case "NEA":
+                  case "NEA":
                     regionCoord = [28, 10];
                     regionZoom = 4;
                     activeLayer = "NEA";
                     break;
-                 case "SCA":
+                  case "SCA":
                     regionCoord = [35, 52.5];
                     regionZoom = 4;
                     activeLayer = "SCA";
                     break;
-                 case "WHA":
+                  case "WHA":
                     regionCoord = [-4, -72];
                     regionZoom = 4;
                     activeLayer = "WHA";
                     break;
-                case "global":
+                  case "global":
                     regionCoord = [20, 25];
                     regionZoom = 3;
                     activeLayer = "global";
                     break;
-                 default:
+                  default:
                     regionCoord = [14, -20];
                     regionZoom = 3;
                 }
 
-                if (typeof(products) != "undefined") {
+                //if (typeof(products) != "undefined") {
                   //console.log("products are defined");
                   //products.clearLayers();
-                }
-
-                //map.setView(regionCoord,regionZoom);
+                //}
 
                 getProducts(region,regionCoord,regionZoom);
 
@@ -713,9 +698,10 @@ layerswitcher:
                 layerClicked = true;
             }
 
+            //if a tab is clicked on the sidebar
             $('a[role="tab"]').click(function () {
-              console.log('hi2');
-              console.log($(this).attr('id'));
+              //console.log('hi2');
+              //console.log($(this).attr('id'));
               var region = $(this).attr('id');
               clickTab(region);
             })
@@ -723,13 +709,12 @@ layerswitcher:
             function clickLayer(e) {
                 // Assuming the clicked feature is a shape, not a point marker.
 
-                console.log('layer clicked');
+                console.log('region layer clicked');
                 console.log(e);
 
                 var regionCoord;
                 var regionZoom;
 
-                //console.log('bur prop');
                 //console.log(this.feature.properties.RegBureau);
 
                 switch (this.feature.properties.RegBureau) {
@@ -738,8 +723,8 @@ layerswitcher:
                     regionZoom = 4;
                     activeLayer = "AF";
                     sidebar.open('AF');
-                    console.log('active layerAF: ');
-                    console.log(activeLayer);
+                    //console.log('active layerAF: ');
+                    //console.log(activeLayer);
                     break;
                  case "EAP":
                     regionCoord = [5, 70];
@@ -775,30 +760,19 @@ layerswitcher:
                     regionCoord = [14, -20];
                     regionZoom = 3;
                 }
-
-
-                if (typeof(products) != "undefined") {
-                  //console.log("products are defined");
-                  //products.clearLayers();
-                }
                 
-
                 //map.fitBounds(this.getBounds());
                 //map.setView(regionCoord,regionZoom);
-
                 //window.map.setView([5, 70], 3);
 
                 console.log(regionCoord);
                 console.log(regionZoom);
-
 
                 getProducts(this.feature.properties.RegBureau,regionCoord,regionZoom);
 
                 $('.sidebar').addClass("sidebar-tall");
 
                 layerClicked = true;
-
-                //map.setView(event.latlng, 5);
 
             }
 
