@@ -7,6 +7,8 @@ region_title: "Global & Transnational Products"
 date_published: 2016-07-13
 product_pdf: "Worldwide_HivTimeSeriesPEPFAR_2016Jul13_HIU_U1423.pdf"
 product_jpg: "Worldwide_HivTimeSeriesPEPFAR2015_2016Jul13_HIU_U1423.jpg"
+product_jpg_pg2: "Worldwide_HivTimeSeriesPEPFAR2015_2016Jul13_HIU_U1423_pg2.jpg"
+product_jpg_pg3: "Worldwide_HivTimeSeriesPEPFAR2015_2016Jul13_HIU_U1423_pg3.jpg"
 thumbnail: "Worldwide_HivTimeSeriesPEPFAR2015_2016Jul13_HIU_U1423_thumb.jpg"
 featured: true
 lat: 0
