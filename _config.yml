@@ -57,7 +57,7 @@ debug:
   main: true
   angular: false
   bootstrap: false
-  jquery: false
+  jquery: true
   leaflet: true
 
 # Dependencies Management
@@ -65,7 +65,7 @@ deps:
   angular:
     version: "1.4.0-beta.4"
   jquery:
-    version: "1.11.3"
+    version: "3.1.1"
 
 # GeoNode
 # The first GeoNode is the primary one that is loaded on the homepage.

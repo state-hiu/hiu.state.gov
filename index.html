@@ -137,6 +137,7 @@ layerswitcher:
             var info = L.control({position: 'bottomright'});
 
             window.sidebar = L.control.sidebar('sidebar').addTo(map);
+            //window.sidebar = $('#sidebar').sidebar();
 
             var AFmarkers = new L.MarkerClusterGroup();
             var EAPmarkers = new L.MarkerClusterGroup();
@@ -696,14 +697,18 @@ layerswitcher:
                 }
 
                 layerClicked = true;
+
+
             }
 
             //if a tab is clicked on the sidebar
             $('a[role="tab"]').click(function () {
               //console.log('hi2');
               //console.log($(this).attr('id'));
+
               var region = $(this).attr('id');
               clickTab(region);
+
             })
 
             function clickLayer(e) {

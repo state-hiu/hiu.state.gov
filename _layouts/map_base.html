@@ -47,12 +47,15 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     <!-- JavaScript / Internal -->
 
     {% if site.debug.jquery == true %}
-        <script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.js"></script>
-        <script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui-1.8.14.js"></script>
+        <!--<script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.js"></script>-->
+        <script src="{{ site.baseurl }}/lib/jquery/3.1.1/jquery-3.1.1.js"></script>
+        <!-- jquery-ui 1.12.1 -->
+        <!--<script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui.js"></script>-->
     {% else %}
-        <script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.min.js"></script>
-        <script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui-1.8.14.min.js"></script>
+        <script src="{{ site.baseurl }}/lib/jquery/3.1.1/jquery-3.1.1.js"></script>
+        <!--<script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui.js"></script>-->
     {% endif %}
+
     {% if site.debug.bootstrap == true %}
         <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.js"></script>
     {% else %}
@@ -147,8 +150,15 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     {% endif %}
 
     <!--extra map_base files-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <!--
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+-->
+
+    <!--leaflet 1.0.2-->
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/leaflet.css" />
+    <script src="{{ site.baseurl }}/lib/leaflet/leaflet-src.js"></script>
+
 
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.css" type="text/css" media="all" />
     <script src="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.js"></script>
