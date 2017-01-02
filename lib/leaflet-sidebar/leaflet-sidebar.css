@@ -129,6 +129,8 @@ li#global {
   display: none;
   left: 0;
   right: 0;
+  height: 94%;
+  overflow-y: scroll;
   box-sizing: border-box;
   padding: 10px 20px; }
   .sidebar-pane.active {
@@ -200,7 +202,7 @@ li#global {
 
 /*added this class*/
 .sidebar-tall {
-  height: 600px; 
+  height: 97%; 
 }
 
 .sidebar-close {
