@@ -853,33 +853,28 @@ tilelayers:
 
 
   <script type='text/javascript'>
-    /*
+
     //enables hashes on tabs
     $(document).ready(function() {
           
         // Javascript to enable link to tab
         var hash = document.location.hash;
-        var prefix = "tab_";
+        //var prefix = "tab_";
 
         console.log('hash! ');
         console.log(hash);
 
-
         if (hash) {
           //$('.nav-tabs a[href='+hash.replace(prefix,"")+']').tab('show');
+          hash = hash.replace("#", "");
+          console.log('hash! ');
+          console.log(hash);
+          document.getElementById(hash).click();
         } 
 
     });
 
-    $( 'a[role="tab"]' ).on( "click", function() {
-        console.log( 'tab clicked: ' +$( this ).text() );
-        console.log( $( this ).attr("href") );
-        console.log(window.location.pathname+window.location.hash);
 
-        $( this ).attr("href", "{{ site.baseurl }}/#SCA")
-
-    });
-       */ 
 </script>
 
 </div>
