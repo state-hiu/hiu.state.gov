@@ -129,7 +129,7 @@ li#global {
   display: none;
   left: 0;
   right: 0;
-  height: 95%;
+  height: calc(100% - 40px);
   overflow-y: auto;
   box-sizing: border-box;
   padding: 10px 20px; }
@@ -146,7 +146,7 @@ li#global {
       min-width: 420px; } }
 
 #home2.sidebar-pane  {
-  height: 88%;
+  height: calc(100%-40px);
 }
 
 .sidebar-container {
@@ -165,7 +165,7 @@ li#global {
       min-width: 350px; } }
   @media (min-width: 1200px) {
     .sidebar-container {
-      min-width: 410px; } }
+      min-width: 416px; } }
 
 .sidebar-header {
   /*min width will make sure that the header appears smoothly when it is expanded
