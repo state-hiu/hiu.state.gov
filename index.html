@@ -34,7 +34,94 @@ tilelayers:
   </div>
 
   <script>
+
+    
+
+    var addButtons = function( jpegDisplayNumber, dropdownCount, dropdown, modal) {
+//debugger;
+            console.log('jpegDisplayNumber');
+            console.log(jpegDisplayNumber);
+            if (jpegDisplayNumber == dropdownCount) {
+                //display prev button only
+                $('.close').after('<button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
+                $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button>');
+
+                $( ".btn-prev" ).on( "click", function() {
+                      console.log( 'activate prev button only' );
+                        console.log( 'jpegDisplayNumber valx1' );
+                      console.log(jpegDisplayNumber);
+                      jpegDisplayNumber--;
+                        console.log( 'jpegDisplayNumber valx2' );
+                      console.log(jpegDisplayNumber);
+                        console.log( 'dropdown val' );
+                      console.log($(dropdown).find("li"));
+                      modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
+                      $('.btn-prev').remove();
+                        
+                      addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
+                    });
+                //console.log('why would this run');
+                //jpegDisplayNumber = 2;
+                return 'final page';
+            } else {
+                if ((jpegDisplayNumber-1) == 1) {
+                    //display next button only
+                    $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button>');
+                    $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-next">Next Page</button>');
+
+                    $( ".btn-next" ).on( "click", function() {
+                      console.log( 'jpegDisplayNumber val' );
+                      console.log(jpegDisplayNumber);
+                      //console.log( 'jpegDisplayNumberConst val' );
+                      //console.log(jpegDisplayNumber);
+                      console.log( $(dropdown).find("li").eq(2).find("a").attr("href"));
+
+                      jpegDisplayNumber++;
+                      //however since it you are finding the right length in the array and the array starts at zero
+                      //you need to subtract 1 again
+                      //switch out img with next img
+                      modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
+                      $('.btn-next').remove();
+                      
+                      addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
+                    });
+                    return 'next';
+                } else {
+                    //display next & prev button
+                    $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
+
+                    $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
+
+                    $( ".btn-prev" ).on( "click", function() {
+                      console.log( 'activate prev button only' );
+                      jpegDisplayNumber--;
+                      modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
+                      $('.btn-prev,.btn-next').remove();
+                      addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
+                    });
+
+                    console.log( 'jpegDisplayNumber val2' );
+                    console.log(jpegDisplayNumber);
+
+                    $( ".btn-next" ).on( "click", function() {
+                      console.log( 'activate next button only' );
+                      jpegDisplayNumber++;
+                      modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
+                      $('.btn-prev,.btn-next').remove();
+                      
+                      addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
+                    });
+
+                    //jpegDisplayNumber++;
+                    return 'next';
+                }
+            }
+     }
+
+
   $('#myModal').on('show.bs.modal', function (event) {
+    //alert('modal is called');
+    var jpegDisplayNumber = 2;
     var button = $(event.relatedTarget) // Button that triggered the modal
     var title = button.data('title') // Extract info from data-* attributes
     console.log('title-data: ');
@@ -47,7 +134,45 @@ tilelayers:
     var modal = $(this)
     modal.find('.modal-title').text(title);
     modal.find('#modal-img').attr("src",img);
-  })
+
+    //need a list of all the pages in a product; actually I do not, just parse based on what is in the download button!
+    //if list is 2, then just add a next button
+    console.log('display modal parents id');
+    console.log(button.closest(".item"));
+    var item = button.closest(".item")
+    var dropdown = item.find(".dropdown");
+    console.log('display assoc dropdown');
+    console.log(dropdown);
+
+    console.log('dropdown li count');
+    console.log($(dropdown).find("li").length);
+
+    var dropdownCount = $(dropdown).find("li").length
+
+    //debugger;
+
+    if (dropdownCount > 2) {
+        addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
+    }
+
+    //on next button replace img with next img in list
+    //on next modal view have a prev and next button
+    //if view is the last item in list only have a prev button
+
+    //insert prev and next buttons
+    //$('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 10px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
+
+    //$('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
+
+})
+
+
+    $('#myModal').on('hidden.bs.modal', function () {
+        // do something…
+        console.log('modal is closing');
+        $('.btn-prev,.btn-next').remove();
+    })
+
   </script>
 
   <div id="map" class="sidebar-map" style="top:0px;left:0px;width:100%;height: 100%;"></div>

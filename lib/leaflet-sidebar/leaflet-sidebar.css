@@ -12,6 +12,7 @@
   bottom: 0;
   width: 100%;
   height: 44%;
+  min-height: 320px;
   z-index: 2000; }
   .sidebar.collapsed {
     width: 44px; height: 40px; }
