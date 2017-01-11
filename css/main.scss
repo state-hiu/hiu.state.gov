@@ -551,3 +551,7 @@ html, body{
   max-height: calc(100% - 58px);
   overflow-y: scroll;
 }
+
+html, body {
+    overflow:hidden;
+}
