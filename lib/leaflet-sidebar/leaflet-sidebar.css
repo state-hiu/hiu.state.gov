@@ -129,8 +129,8 @@ li#global {
   display: none;
   left: 0;
   right: 0;
-  height: 94%;
-  overflow-y: scroll;
+  height: 95%;
+  overflow-y: auto;
   box-sizing: border-box;
   padding: 10px 20px; }
   .sidebar-pane.active {
@@ -144,6 +144,10 @@ li#global {
   @media (min-width: 1200px) {
     .sidebar-pane {
       min-width: 420px; } }
+
+#home2.sidebar-pane  {
+  height: 88%;
+}
 
 .sidebar-container {
   display: none;
