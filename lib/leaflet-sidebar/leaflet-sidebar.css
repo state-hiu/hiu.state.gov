@@ -107,11 +107,6 @@ li#global {
   font-size: 12px;
 }
 
-.header-contain-div {
-  width: 100%;
-  -webkit-transition: width 500ms;
-  transition: width 500ms; }
-
 .sidebar-content {
   position: absolute;
   top: 0;
@@ -135,11 +130,38 @@ li#global {
 .sidebar.collapsed > .sidebar-tabs {
     overflow-y: hidden; }
 
+.header-contain-div {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
 /* have slower transition speed when sidebar collapses on inside divs
 so they is no log with sidebar border collapsing*/
 .header-contain-div.collapsed  { 
-  width: 0px;
-  transition: width 5000ms;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .sidebar-content.collapsed  {
