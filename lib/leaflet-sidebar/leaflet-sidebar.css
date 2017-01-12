@@ -234,7 +234,7 @@ so they is no log with sidebar border collapsing*/
 .sidebar-close {
   position: absolute;
   top: 0;
-  width: 40px;
+  width: 44px;
   height: 40px;
   text-align: center;
   cursor: pointer; }

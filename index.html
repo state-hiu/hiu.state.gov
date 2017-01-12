@@ -851,10 +851,10 @@ tilelayers:
     //if a tab is clicked on the sidebar
     $('a[role="tab"]').click(function () {
       console.log('click event1');
-      //console.log($(this).attr('id'));
+      console.log($(this).attr('id'));
 
-      //var region = $(this).attr('id');
-      //clickTab(region);
+      var region = $(this).attr('id');
+      clickTab(region);
 
     })
 
