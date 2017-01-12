@@ -19,6 +19,7 @@
   @media (min-width: 768px) {
     .sidebar {
       bottom: 10px;
+      -webkit-transition: width 500ms;
       transition: width 500ms; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .sidebar {
@@ -106,6 +107,11 @@ li#global {
   font-size: 12px;
 }
 
+.header-contain-div {
+  width: 100%;
+  -webkit-transition: width 500ms;
+  transition: width 500ms; }
+
 .sidebar-content {
   position: absolute;
   top: 0;
@@ -113,7 +119,10 @@ li#global {
   left:40px;
   background-color: rgba(255, 255, 255, 1);
   overflow-x: none;
-  overflow-y: none; }
+  overflow-y: none;
+  width: calc(100% - 44px);
+  -webkit-transition: width 500ms;
+  transition: width 500ms; }
   .sidebar-topleft .sidebar-content {
     left: 44px;
     right: 0; }
@@ -125,6 +134,18 @@ li#global {
 
 .sidebar.collapsed > .sidebar-tabs {
     overflow-y: hidden; }
+
+/* have slower transition speed when sidebar collapses on inside divs
+so they is no log with sidebar border collapsing*/
+.header-contain-div.collapsed  { 
+  width: 0px;
+  transition: width 5000ms;
+}
+
+.sidebar-content.collapsed  {
+  width: 0px;
+  transition: width 5000ms;
+}
 
 .sidebar-pane {
   display: none;
@@ -144,7 +165,7 @@ li#global {
       min-width: 350px; } }
   @media (min-width: 1200px) {
     .sidebar-pane {
-      min-width: 420px; } }
+      min-width: 412px; } }
 
 #home2.sidebar-pane  {
   height: calc(100%-40px);
