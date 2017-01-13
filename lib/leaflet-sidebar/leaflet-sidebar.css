@@ -113,8 +113,8 @@ li#global {
   bottom: 0;
   left:40px;
   background-color: rgba(255, 255, 255, 1);
-  overflow-x: none;
-  overflow-y: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
   width: calc(100% - 44px);
   -webkit-transition: width 500ms;
   transition: width 500ms; }
