@@ -175,6 +175,7 @@ so they is no log with sidebar border collapsing*/
   right: 0;
   height: calc(100% - 40px);
   overflow-y: auto;
+  overflow-x: hidden;
   box-sizing: border-box;
   padding: 10px 20px; }
   .sidebar-pane.active {
