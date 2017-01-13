@@ -543,7 +543,11 @@ html, body{
     width: 100%;
     // disable, not displaying right in IE 11 overflow: hidden;
     -ms-overflow-style: none;
-    padding-top: 30px;
+    //padding-top: 30px;
+}
+
+body {
+    padding-top: 60px;
 }
 
 // http://stackoverflow.com/questions/29038596/bootstrap-fixed-header-and-footer-with-scrolling-body-content-area-in-fluid-cont
@@ -552,6 +556,6 @@ html, body{
   overflow-y: scroll;
 }
 
-html, body {
+body {
     overflow:hidden;
 }
