@@ -5,6 +5,7 @@ title: "Europe Migration and Refugee Snapshot (October 2016)"
 region_id: "EUR"
 region_title: "Europe"
 date_published: 2016-10-28
+product_id: "U1466"
 product_pdf: "Europe_RefugeeMigration_2016Oct28_HIU_U1466.pdf"
 product_jpg: "Europe_RefugeeMigrationPage2_2016Oct28_HIU_U1466.jpg"
 product_jpg_pg_2: "Europe_RefugeeMigrationPage1_2016Oct28_HIU_U1466.jpg"

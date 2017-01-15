@@ -5,6 +5,7 @@ title: "World Humanitarian Day 2015: Limited Aid Access/Security Due to Conflict
 region_id: "global"
 region_title: "Global & Transnational Products"
 date_published: 2015-08-18
+product_id: "U1277"
 product_pdf: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277.pdf"
 product_jpg: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277.jpg"
 thumbnail: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277_thumb.jpg"

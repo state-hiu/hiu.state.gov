@@ -4,7 +4,8 @@ category: products
 title: "Europe Migration and Refugee Snapshot"
 region_id: "WHA, NEA, AF, EAP"
 region_title: "Africa, Europe, Near East, South and Central Asia"
-date_published: 06/14/2016
+date_published: 2016-06-14
+product_id: "U1415"
 product_pdf: "Europe_RefugeeMigration_2016June14_HIU_U1415.pdf"
 product_jpg: "Europe_RefugeeMigrationPage1_2016June14_HIU_U1415-01.jpg, Europe_RefugeeMigrationPage2_2016June14_HIU_U1415-01.jpg"
 thumbnail: "Europe_RefugeeMigrationPage2_2016June14_HIU_U1415_thumb.jpg"

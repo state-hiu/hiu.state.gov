@@ -4,7 +4,8 @@ category: products
 title: "2015 Global Displacement Snapshot"
 region_id: "WHA, AF, SCA, EUR"
 region_title: "Africa, Europe, Near East, South and Central Asia, Western Hemisphere"
-date_published: 06/20/2016
+date_published: 2016-06-20
+product_id: "U1417"
 product_pdf: "Global_WorldRefugeeDayDisplacement_2016June20_HIU_U1417-01.pdf"
 product_jpg: "Global_WorldRefugeeDayDisplacement_2016June20_HIU_U1417-01.jpg"
 thumbnail: "Global_WorldRefugeeDayDisplacement_2016June20_HIU_U1417_thumb.jpg"

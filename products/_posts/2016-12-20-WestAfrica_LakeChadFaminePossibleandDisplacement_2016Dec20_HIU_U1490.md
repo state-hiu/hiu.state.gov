@@ -4,7 +4,8 @@ category: products
 title: "Lake Chad Basin: Possible Famine, Continued Displacement"
 region_id: "AF"
 region_title: "Africa"
-date_published: 2016/12/20
+date_published: 2016-12-20
+product_id: "U1490"
 product_pdf: "WestAfrica_LakeChadPossibleFamineandDisplacement_2016Dec21_HIU_U1490.pdf"
 product_jpg: "WestAfrica_LakeChadPossibleFamineandDisplacement_2016Dec21_HIU_U1490.jpg"
 thumbnail: "WestAfrica_LakeChadPossibleFamineandDisplacement_2016Dec21_HIU_U1490_thumb.jpg"

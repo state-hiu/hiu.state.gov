@@ -5,6 +5,7 @@ title: "International Migrants Day, December 18, 2016"
 region_id: "global"
 region_title: "Africa, East Asia and the Pacific, Europe, Near East, South and Central Asia, Western Hemisphere"
 date_published: 2016-12-19
+product_id: "U1498"
 product_pdf: "Worldwide_InternationalMigrantsDay_Movement_2016Dec19_HIU_U1498.pdf"
 product_jpg: "Worldwide_InternationalMigrantsDay_Movement_2016Dec19_HIU_U1498.jpg"
 thumbnail: "Worldwide_InternationalMigrantsDay_Movement_2016Dec19_HIU_U1498_thumb.jpg"

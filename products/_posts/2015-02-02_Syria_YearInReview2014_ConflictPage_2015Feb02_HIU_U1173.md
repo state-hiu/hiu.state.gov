@@ -5,6 +5,7 @@ title: "Syria Conflict Without Borders: 2014 in Review"
 region_id: "NEA"
 region_title: "Near East"
 date_published: 2015-02-02
+product_id: "U1173"
 product_pdf: "Syria_YearInReview2014_2015Feb02_HIU_U1173.pdf"
 product_jpg: "Syria_YearInReview2014_ConflictPage_2015Feb02_HIU_U1173.jpg"
 thumbnail: "Syria_YearInReview2014_ConflictPage_2015Feb02_HIU_U1173_thumb.jpg"

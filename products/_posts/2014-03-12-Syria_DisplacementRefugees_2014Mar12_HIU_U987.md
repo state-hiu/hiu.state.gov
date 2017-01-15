@@ -5,6 +5,7 @@ title: "Syria: Numbers and Locations of Refugees and IDPs"
 region_id: "NEA"
 region_title: "Near East"
 date_published: 2014-03-14
+product_id: "U987"
 product_pdf: "Syria_DisplacementRefugees_2014Mar12_HIU_U987.pdf"
 product_jpg: "Syria_DisplacementRefugees_2014Mar12_HIU_U987.jpg"
 thumbnail: "Syria_DisplacementRefugees_2014Mar12_HIU_U987_thumb.jpg"

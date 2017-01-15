@@ -4,7 +4,8 @@ category: products
 title: "Burundi: Displacement Since April 2015"
 region_id: "AF"
 region_title: "Africa"
-date_published: 2016/01/06
+date_published: 2016-01-06
+product_id: "U1337"
 product_pdf: "BurundiDisplacement_2016Jan06_HIU_U1337.pdf"
 product_jpg: "BurundiDisplacement_2016Jan06_HIU_U1337.jpg"
 thumbnail: "BurundiDisplacement_2016Jan06_HIU_U1337_thumb.jpg"

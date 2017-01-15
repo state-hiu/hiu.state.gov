@@ -5,6 +5,7 @@ title: "Syria: Conflict Without Borders – Numbers and Locations of Refugees an
 region_id: NEA
 region_title: Middle East
 date_published: 2015-08-27
+product_id: "U1283"
 product_pdf: "Syria_ConflictWithoutBorders_Displacement_2015Aug27_HIU_U1283.pdf"
 product_jpg: "Syria_ConflictWithoutBorders_Displacement_2015Aug27_HIU_U1283.jpg"
 thumbnail: "Syria_ConflictWithoutBorders_Displacement_2015Aug27_HIU_U1283_thumb.jpg"

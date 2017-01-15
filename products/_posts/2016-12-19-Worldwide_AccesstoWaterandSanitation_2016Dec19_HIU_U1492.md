@@ -5,6 +5,7 @@ title: "Worldwide: Access to Improved Sanitation Facilities and Water Sources"
 region_id: "global"
 region_title: "Global & Transnational Products" 
 date_published: 2016-12-19
+product_id: "U1492"
 product_pdf: "Worldwide_AccesstoWaterandSanitation_2016Dec19_HIU_U1492.pdf"
 product_jpg: "Worldwide_AccesstoWaterandSanitation_2016Dec19_HIU_U1492.jpg"
 thumbnail: "Worldwide_AccesstoWaterandSanitation_2016Dec19_HIU_U1492_thumb.jpg"

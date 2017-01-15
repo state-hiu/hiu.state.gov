@@ -5,6 +5,7 @@ title: "Afghanistan: Populations in Need as Winter Approaches"
 region_id: "SCA"
 region_title: "South and Central Asia"
 date_published: 2015-12-30
+product_id: "U1334"
 product_pdf: "Afghanistan_Winterization_2015Dec30_HIU_U1334.pdf"
 product_jpg: "Afghanistan_Winterization_2015Dec30_HIU_U1334.jpg"
 thumbnail: "Afghanistan_Winterization_2015Dec30_HIU_U1334_thumb.jpg"

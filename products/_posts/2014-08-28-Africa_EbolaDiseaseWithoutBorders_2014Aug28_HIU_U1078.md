@@ -5,6 +5,7 @@ title: "Disease Without Borders: Ebola in West Africa"
 region_id: "AF"
 region_title: "Africa"
 date_published: 2014-08-28
+product_id: "U1078"
 product_pdf: "Africa_EbolaDiseaseWithoutBorders_2014Aug28_HIU_U1078.pdf"
 product_jpg: "Africa_EbolaDiseaseWithoutBorders_2014Aug28_HIU_U1078.jpg"
 thumbnail: "Africa_EbolaDiseaseWithoutBorders_2014Aug28_HIU_U1078_thumb.jpg"

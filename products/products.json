@@ -14,6 +14,7 @@ layout: default
         "region_title": "{{ product.region_title }}",
         "featured": "{{ product.featured }}",
         "url": "{{ site.url }}{{ product.url | remove: '.html' }}",
+        "product_id": "{{ product.product_id }}",
         "product_pdf": "https://s3.amazonaws.com/hiu-products/{{ product.product_pdf }}",
         "product_jpg": "https://s3.amazonaws.com/hiu-products/products/resized/{{ product.product_jpg }}",
         {% if product.product_jpg_pg2 %}

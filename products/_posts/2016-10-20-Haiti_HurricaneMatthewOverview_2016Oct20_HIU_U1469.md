@@ -5,6 +5,7 @@ title: "Post-Hurricane Matthew Snapshot"
 region_id: "WHA"
 region_title: "Western Hemisphere"
 date_published: 2014-08-28
+product_id: "U1469"
 product_pdf: "Haiti_HurricaneMatthewOverview_2016Oct20_HIU_U1469.pdf"
 product_jpg: "Haiti_HurricaneMatthewOverview_2016Oct20_HIU_U1469.jpg"
 thumbnail: "Haiti_HurricaneMatthewOverview_2016Oct20_HIU_U1469_thumb.jpg"

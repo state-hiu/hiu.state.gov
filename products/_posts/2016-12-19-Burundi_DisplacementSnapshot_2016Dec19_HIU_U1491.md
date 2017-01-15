@@ -5,6 +5,7 @@ title: "Burundi Displacement Snapshot"
 region_id: "AF" 
 region_title: "Africa" 
 date_published: 2016-12-19
+product_id: "U1491"
 product_pdf: "Burundi_DisplacementSnapshot_2016Dec19_HIU_U1491.pdf"
 product_jpg: "Burundi_DisplacementSnapshot_2016Dec19_HIU_U1491.jpg"
 thumbnail: "Burundi_DisplacementSnapshot_2016Dec19_HIU_U1491_thumb.jpg"
