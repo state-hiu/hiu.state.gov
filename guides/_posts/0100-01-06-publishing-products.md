@@ -83,6 +83,10 @@ choices include - Africa, East Asia and the Pacific, Europe, Near East, South an
 
 format in yyyy-mm-dd
 
+**product_id**
+
+In quotes insert the product id (ex: U1057).
+
 **product_pdf**
 
 In quotes insert the product pdf file name that was uploaded.
@@ -93,7 +97,7 @@ In quotes insert the product jpg file name that was uploaded.
 
 **(optional) product_jpg_pg#**
 
-If a product has more than one page then you need to create additional lines for each page.
+If a product has more than one page then you need to create additional lines for each page (ex: product_jpg_pg2).
 
 **thumbnail**
 
