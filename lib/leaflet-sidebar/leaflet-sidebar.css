@@ -93,11 +93,11 @@ li#home {
   height: 40px;
 }
 
-li#global {
+li#global-outer {
   height: 54px;
 }
 
-.sidebar-tabs > ul > li#global {
+.sidebar-tabs > ul > li#global-outer {
   overflow: visible;
 }
 
