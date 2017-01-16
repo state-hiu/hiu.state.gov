@@ -76,6 +76,12 @@ $navbar-inverse-color:                      #333 !default;
   }
 }
 
+@media (max-width: 992px) {
+  img.data-img {
+          max-width: 350px;
+      }
+}
+
 .social li {
   float: left;
   width: 20px;
@@ -470,8 +476,9 @@ a.title:hover {
 .description-text {
     float: left;
     padding-top: 5px;
+    padding-left: 5px;
     height: 175px;
-    width: 150px;
+    width: 175px;
 }
 
 .listitem-thumbnail {
@@ -568,3 +575,20 @@ body {
 .nav.nav-tabs {
   font-size: 16px;
 }
+
+
+@media (max-width: 992px) {
+  .nav > li > a {
+      padding: 10px 10px;
+  }
+  .mapgive-font {
+      font-size: 15px;
+  }
+  .navbar-right-text {
+    padding-top: 10px;
+  }
+  #nav_mapgive {
+    padding-top: 3px;
+  }
+}
+

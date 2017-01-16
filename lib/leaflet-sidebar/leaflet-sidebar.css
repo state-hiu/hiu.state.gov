@@ -177,7 +177,7 @@ so they is no log with sidebar border collapsing*/
   overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding: 10px 20px; }
+  padding: 10px 10px; }
   .sidebar-pane.active {
     display: block; }
   @media (min-width: 768px) and (max-width: 991px) {
@@ -218,7 +218,7 @@ so they is no log with sidebar border collapsing*/
   margin: 0;
   padding: 0 20px;
   line-height: 40px;
-  font-size: 14.4pt;
+  font-size: 13.4pt;
   color: #fff;
   background-color: #0A2E52; }
   .sidebar-right .sidebar-header {
