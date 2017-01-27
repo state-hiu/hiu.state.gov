@@ -24,10 +24,22 @@
       {% else %}
         <h4>{{ product.title }}</h4>
       {% endif %}
-      <a href="{{ site.baseurl }}/regions/{{ product.region_id }}">{{ product.region_title }}</a> | {{ product.date_published | date: '%B %d, %Y' }}
+      <!--<a href="{{ site.baseurl }}/regions/{{ product.region_id }}">{{ product.region_title }}</a>-->{{ product.region_title }} | {{ product.date_published | date: '%B %d, %Y' }}
       <br>
       <br>
       {{ product.content }}
+
+      <span class="entry-tags">
+          {% if product.keywords %}
+              {% for tag in product.keywords %}
+                  <!--<a href="{{ site.baseurl }}/products/#{{ tag | url_encode }}" title="Posts tagged {{ tag }}" id="{{ tag | url_encode }}">{{ tag }}</a>-->
+                  <a title="Posts tagged {{ tag }}" id="{{ tag | url_encode }}">{{ tag }}</a>
+                  {% unless forloop.last %}
+                  {% endunless %}
+              {% endfor %}
+          {% endif %}
+      </span>
+
       <hr>
 
       <div class="dropdown" style="display: inline-block;">

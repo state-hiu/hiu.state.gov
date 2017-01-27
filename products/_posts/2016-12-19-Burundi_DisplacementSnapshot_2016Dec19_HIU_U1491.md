@@ -19,7 +19,7 @@ keywords:
   - Democratic Republic of the Congo
   - Uganda
   - Refugee
-  - Internally dispalced persons
+  - Internally displaced persons
   - IDP
 tweet: 
 ---
