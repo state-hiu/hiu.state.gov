@@ -11,7 +11,7 @@ layout: wrapper_text
         <div class="content">
           <div class="posts">
             {% for post in site.categories.news limit:50 %}{% if post.archived %}{% else %}<a
-            href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ post.url }}{% endif %}"
+            href="{% if post.external_url %}{{ post.external_url }}{% else %}{{ site.baseurl }}{{ post.url }}{% endif %}"
             class="post-excerpt{% if post.photo_url %} photo{% endif %}">
               <div class="c">
                 <h3 class="text">{{ post.title }}</h3>
