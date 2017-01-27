@@ -1,0 +1,31 @@
+---
+layout: wrapper
+---
+<div class="wrapper" style="min-height:800px">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 body" style="padding:10px;">
+
+
+          <div class="post single">
+            {% unless page.title_hidden %}
+            <br>
+            <h1 style="display: inline;">{{ page.title }}</h1>
+            <info datetime="{{ page.date | date: "%Y-%m-%d" }}">
+              {{ page.date | date: "%b %e, %Y" }}
+            </info>
+            <br>
+            {% endunless %}
+            {% if page.photo_url %}
+                <img src="{{ page.photo_url }}" style="max-width: 500px;max-height: 500px;margin-top:15px;margin-bottom:15px;">
+            {% endif %}
+            <div class="body" style="margin-top:15px">{% if page.external_url %}Article is published at {{ page.external_url }}<script>
+            document.location.href = "{{ page.external_url }}";
+            </script>{% else %}{{ content }}{% endif %}</div>
+            <div class="breaker"></div>
+          </div>
+
+
+        <div class="push"></div>
+    </div>
+    <div class="col-md-2"></div>
+</div>

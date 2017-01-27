@@ -596,3 +596,30 @@ body {
 position: relative;
 height: 100%;
 }
+
+
+//css for news section
+
+a[href].post-excerpt:hover {
+    text-decoration: none;
+}
+
+.body {
+    color: black;
+    font-size: 16px;
+}
+
+a[href].post-excerpt:hover h3 {
+    background-color: #eeeeee;
+}
+
+h3 {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+info {
+    display: inline;
+    color: #c6c6c6;
+    white-space: nowrap;
+}

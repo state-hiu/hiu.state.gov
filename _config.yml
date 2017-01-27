@@ -57,7 +57,7 @@ debug:
   main: true
   angular: false
   bootstrap: false
-  jquery: true
+  jquery: false
   leaflet: true
 
 # Dependencies Management
