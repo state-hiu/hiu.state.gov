@@ -59,7 +59,7 @@
     padding: 0; }
     .sidebar-tabs > li, .sidebar-tabs > ul > li {
       width: 100%;
-      height: 37px;
+      height: 36px;
       color: #333;
       font-size: 12pt;
       overflow: hidden;
@@ -80,7 +80,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        line-height: 40px;
+        line-height: 33px;
         color: inherit;
         text-decoration: none;
         text-align: center;
@@ -328,3 +328,7 @@ so they is no log with sidebar border collapsing*/
 @media (min-width: 768px) {
   .sidebar-right.collapsed ~ .sidebar-map .leaflet-right {
     right: 50px; } }
+
+.fa-bars {
+    padding-top: 12px;
+}
