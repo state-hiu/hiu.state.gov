@@ -12,7 +12,7 @@
   bottom: 0;
   width: 100%;
   height: 44%;
-  min-height: 320px;
+  min-height: 335px;
   z-index: 2000; }
   .sidebar.collapsed {
     width: 48px; height: 40px; }
@@ -94,7 +94,7 @@ li#home {
 }
 
 li#global-outer {
-  height: 54px;
+  height: 57px;
 }
 
 .sidebar-tabs > ul > li#global-outer {
@@ -103,7 +103,7 @@ li#global-outer {
 
 .sidebar-tabs > ul > li > a#global {
   line-height: 20px;
-  padding-top: 6px;
+  padding-top: 0px;
   font-size: 12px;
 }
 
