@@ -6,7 +6,7 @@ layout: wrapper_text
 
 <div class="row">
 
-    <div class="col-md-9">
+    <div class="col-md-8">
 
         <div class="content">
           <div class="posts">
@@ -42,11 +42,9 @@ layout: wrapper_text
 
     </div>
 
-    <div class="col-md-3">
+    <div class="col-md-4">
 
-        <a class="twitter-timeline" href="https://twitter.com/stateHIU" data-widget-id="568534040936853505">Tweets by @StateHIU</a>
-
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<a class="twitter-timeline" data-height="900" data-theme="light" href="https://twitter.com/StateHIU">Tweets by StateHIU</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
     </div>
 
