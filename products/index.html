@@ -29,180 +29,68 @@ title: Products
 
 </style>
 
-{% assign count_featured = 0 %}
-{% for product in site.categories.products %}
-  {% if product.featured == true %}
-    {% assign count_featured = count_featured | plus: 1 %}
-  {% endif %}
-{% endfor %}
-
-{% assign count_AF = 0 %}
-{% for product in site.categories.products %}
-  {% if product.region_id == "AF" %}
-    {% assign count_AF = count_AF | plus: 1 %}
-  {% endif %}
-{% endfor %}
-
-{% assign count_EAP = 0 %}
-{% for product in site.categories.products %}
-  {% if product.region_id == "EAP" %}
-    {% assign count_EAP = count_EAP | plus: 1 %}
-  {% endif %}
-{% endfor %}
-
-{% assign count_EUR = 0 %}
-{% for product in site.categories.products %}
-  {% if product.region_id == "EUR" %}
-    {% assign count_EUR = count_EUR | plus: 1 %}
-  {% endif %}
-{% endfor %}
-
-{% assign count_NEA = 0 %}
-{% for product in site.categories.products %}
-  {% if product.region_id == "NEA" %}
-    {% assign count_NEA = count_NEA | plus: 1 %}
-  {% endif %}
-{% endfor %}
-
-{% assign count_SCA = 0 %}
-{% for product in site.categories.products %}
-  {% if product.region_id == "SCA" %}
-    {% assign count_SCA = count_SCA | plus: 1 %}
-  {% endif %}
-{% endfor %}
-
-{% assign count_WHA = 0 %}
-{% for product in site.categories.products %}
-  {% if product.region_id == "WHA" %}
-    {% assign count_WHA = count_WHA | plus: 1 %}
-  {% endif %}
-{% endfor %}
-
-{% assign count_global = 0 %}
-{% for product in site.categories.products %}
-  {% if product.region_id == "global" %}
-    {% assign count_global = count_global | plus: 1 %}
-  {% endif %}
-{% endfor %}
+<script data-main="{{ site.baseurl }}/lib/elasticlunr/app.js" src="{{ site.baseurl }}/lib/elasticlunr/require.js"></script>
 
 <div><h1 class="page-title">{{ page.title }}</h1></div>
 
-<ul class="nav nav-tabs" style="padding: 10px 10px 0px 10px;">
-  <li class="active"><a href="#featured" data-toggle="tab">Featured ({{ count_featured }})</a></li>
-  <li><a href="#AF" data-toggle="tab">Africa ({{ count_AF }})</a></li>
-  <li><a href="#EAP" data-toggle="tab">East Asia and the Pacific ({{ count_EAP }})</a></li>
-  <li><a href="#EUR" data-toggle="tab">Europe and Eurasia ({{ count_EUR }})</a></li>
-  <li><a href="#NEA" data-toggle="tab">Near East ({{ count_NEA}})</a></li>
-  <li><a href="#SCA" data-toggle="tab">South and Central Asia ({{ count_SCA }})</a></li>
-  <li><a href="#WHA" data-toggle="tab">Western Hemisphere ({{ count_WHA }})</a></li>
-  <li><a href="#global" data-toggle="tab">Global ({{ count_global }})</a></li>
-  <li><a href="#all" data-toggle="tab">All ({{ site.categories.products | size }}) </a></li>
-</ul>
 
-<div class="tab-content" style="padding: 10px;">
-  <div id="featured" class="tab-pane active">
-    {% for product in site.categories.products %}
-      {% if product.featured == true %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
+<main class="main" role="main" style="margin-top: 30px">
+            <div class="container">
+                <div class="row">
+                    <header style="margin-left: 15px; margin-right: 15px;">
+                        <h1>Elasticlunr<span>.js</span></h1>
+                        <h2>Lightweight full-text search engine in Javascript for browser search and offline search.</h2>
+                    </header>
+                </div>
 
-    <div id="AF" class="tab-pane ">
-    {% for product in site.categories.products %}
-      {% if product.region_id == "AF" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <span><strong><i>Search Configuration:</i></strong></span>
+                        <textarea id="configuration" class="form-control" rows="6" style="font-size: 0.8em;"></textarea>
+                    </div>
 
-  <div id="EAP" class="tab-pane ">
-    {% for product in site.categories.products %}
-      {% if product.region_id == "EAP" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
+                    <div class="col-md-6" style="margin-left: 0px; margin-right: 0px; padding-right: 0px; padding-left: 0px;">
+                        <span><strong><i>Configuration Example:</i></strong></span>
+                        <pre style="font-size: 0.8em;">
+{
+    "fields": {
+        "title": {"boost": 2},
+        "body": {"boost": 1}
+    },
+    "boolean": "OR"
+}</pre>
+                    </div>
+                </div>
 
-  <div id="EUR" class="tab-pane ">
-    {% for product in site.categories.products %}
-      {% if product.region_id == "EUR" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
+                <div class="row" style="margin-left: 0px; margin-right: 0px; border-top-style: solid; border-top-width: 0px; padding-top: 10px;"> 
+                    <div class="col-md-6" style="padding-left: 0px; padding-right: 50px">
+                        <form>
+                            <div class="form-group has-success">
+                                <div class="col-xs-9" style="padding-left: 0px;">
+                                    <input type="search" class="form-control" id="inputSuccess1" placeholder="search elasticlunr.js">
+                                </div>
+                            </div>
+                            <div><a class="all btn btn-primary btn-block" href="#">All</a></div>
+                        </form>
+                    </div>
+                    <div class="col-md-12" style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(7, 94, 115, 0.3); padding-left: 0px;"></div>
+                </div>
 
-    <div id="NEA" class="tab-pane ">
-    {% for product in site.categories.products %}
-      {% if product.region_id == "NEA" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
+                <div class="row" style="margin-left: 0px; margin-right: 0px;">
+                    <div class="col-md-6" style="margin-left: 0px; margin-right: 0px;">
+                        <div id='question-list-container' style="margin-left: 0px; margin-right: 0px;"></div>
+                    </div>
 
-  <div id="SCA" class="tab-pane ">
-    {% for product in site.categories.products %}
-      {% if product.region_id == "SCA" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
+                    <div class="col-md-6" style="margin-left: 0px; margin-right: 0px; padding-right: 0px; padding-left: 0px;">
+                        <div id='question-view-container' style="margin-left: 0px; margin-right: 0px; padding-right: 0px; padding-left: 0px;"></div>
+                    </div>
+                    <div class="col-md-12" style="padding-bottom: 15px; border-bottom:1px solid rgba(7,94,115,0.3);"></div>
+                </div>
+            </main>
 
-  <div id="WHA" class="tab-pane ">
-    {% for product in site.categories.products %}
-      {% if product.region_id == "WHA" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
+<!--<script src="{{ site.baseurl }}/products/products.json"></script>-->
 
-  <div id="global" class="tab-pane ">
-    {% for product in site.categories.products %}
-      {% if product.region_id == "global" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
+
 
   <div id="all" class="tab-pane">
     {% for product in site.categories.products %}
@@ -214,7 +102,6 @@ title: Products
       {% endif %}
     {% endfor %}
   </div>
-</div>
 
 <!-- Modals from Bootstrap, used to preview images when thumbnails clicked -->
 <!-- http://getbootstrap.com/javascript/#modals -->
