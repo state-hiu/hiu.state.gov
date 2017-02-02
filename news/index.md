@@ -1,8 +1,6 @@
 ---
 layout: wrapper_text
 ---
-# News
-
 
 <div class="row">
 

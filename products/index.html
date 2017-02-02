@@ -31,9 +31,46 @@ title: Products
 
 <script data-main="{{ site.baseurl }}/lib/elasticlunr/app.js" src="{{ site.baseurl }}/lib/elasticlunr/require.js"></script>
 
-<div><h1 class="page-title">{{ page.title }}</h1></div>
+<!--<div><h1 class="page-title">{{ page.title }}</h1></div>-->
+
+<main class="main" role="main" style="margin-top: 30px">
+    <div class="container">
+
+        <div class="row" style="margin-left: 0px; margin-right: 0px; border-top-style: solid; border-top-width: 0px; padding-top: 10px;"> 
+            <div class="col-md-8" style="padding-left: 0px; padding-right: 50px">
+
+                <div class="input-group">
+                  <input type="search" class="form-control" id="inputSuccess1" placeholder="search products">
+                  <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All <span class="caret"></span></button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li><a href="#">Africa Region</a></li>
+                      <li><a href="#">East Asia and the Pacific</a></li>
+                      <li><a href="#">Europe</a></li>
+                      <li><a href="#">Near East</a></li>
+                      <li><a href="#">South and Central Asia</a></li>
+                      <li><a href="#">Western Hemisphere</a></li>
+                      <li><a href="#">Global</a></li>
+                    </ul>
+                  </div><!-- /btn-group -->
+                </div><!-- /input-group -->
+
+            </div>
+        </div>
+
+        <div class="row" style="margin-left: 0px; margin-right: 0px;">
+            <div class="col-md-12" style="margin-left: 0px; margin-right: 0px;">
+                <div id='question-list-container' style="margin-left: 0px; margin-right: 0px;"></div>
+            </div>
+            <div class="col-md-12" style="padding-bottom: 15px; border-bottom:1px solid rgba(7,94,115,0.3);"></div>
+        </div>
+
+    </div>
+</main>
 
 
+
+<!--
 <main class="main" role="main" style="margin-top: 30px">
 <div class="container">
     <div class="row" style="margin-left: 0px; margin-right: 0px; border-top-style: solid; border-top-width: 0px; padding-top: 10px;"> 
@@ -41,7 +78,7 @@ title: Products
             <form>
                 <div class="form-group has-success">
                     <div class="col-xs-9" style="padding-left: 0px;">
-                        <input type="search" class="form-control" id="inputSuccess1" placeholder="search elasticlunr.js">
+                        <input type="search" class="form-control" id="inputSuccess1" placeholder="search products">
                     </div>
                 </div>
                 <div><a class="all btn btn-primary btn-block" href="#">All</a></div>
@@ -57,9 +94,12 @@ title: Products
         </div>
 
         <div class="col-md-12" style="padding-bottom: 15px; border-bottom:1px solid rgba(7,94,115,0.3);"></div>
-
     </div>
 </main>
+-->
+
+
+
 
 <!--<script src="{{ site.baseurl }}/products/products.json"></script>-->
 
@@ -114,11 +154,9 @@ $('#myModal').on('show.bs.modal', function (event) {
 </script>
 
 
-<!-- http://stackoverflow.com/questions/7862233/twitter-bootstrap-tabs-go-to-specific-tab-on-page-reload-or-hyperlink -->
+<!-- http://stackoverflow.com/questions/7862233/twitter-bootstrap-tabs-go-to-specific-tab-on-page-reload-or-hyperlink 
 <script type='text/javascript'>
-        
-  $(document).ready(function() {
-          
+
   // Javascript to enable link to tab
   var hash = document.location.hash;
   var prefix = "tab_";
@@ -138,3 +176,6 @@ $('#myModal').on('show.bs.modal', function (event) {
 });
         
 </script>
+-->
+
+

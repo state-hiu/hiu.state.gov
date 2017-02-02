@@ -177,6 +177,7 @@ $navbar-inverse-color:                      #333 !default;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #left-footer-menu,#footer-disclaimer {
@@ -296,7 +297,7 @@ $navbar-inverse-color:                      #333 !default;
     padding: 5px 9px 0px 13px;
     font-size: 18px;
     line-height: 20px;
-    height: 42px;
+    height: 100%;
 }
 
 .navbar-inverse {
@@ -312,16 +313,23 @@ $navbar-inverse-color:                      #333 !default;
 }
 
 .navbar {
-    min-height: 61px;
+    height: 61px;
 }
 
 .navbar-right-text {
     padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .navbar-nav > li > a {
     padding-bottom: 0px;
     line-height: initial;
+    height: 100%;
+}
+
+.navbar-nav {
+    position: relative;
+    height: 100%;
 }
 
 #nav_mapgive a {
@@ -373,6 +381,10 @@ img.thumb150 {
     padding-right: 0px;
     min-height: 100%;
     margin-bottom: -58px;
+}
+
+.container {
+    height: 100%;
 }
 
 .btn-primary {
@@ -585,7 +597,8 @@ body {
       font-size: 15px;
   }
   .navbar-right-text {
-    padding-top: 10px;
+    padding-top: 5px;
+    padding-top: 5px;
   }
   #nav_mapgive {
     padding-top: 3px;
@@ -612,7 +625,7 @@ a[href].post-excerpt:hover {
 a[href].post-excerpt:hover h3 {
     background-color: #eeeeee;
 }
-
+f
 h3 {
     display: inline-block;
     padding: 10px 15px;
@@ -622,4 +635,35 @@ info {
     display: inline;
     color: #c6c6c6;
     white-space: nowrap;
+}
+
+.nav > li {
+    height: 100%;
+}
+
+.navbar-fixed-top {
+    position: absolute;
+}
+
+.navbar-header {
+    position: relative;
+    height: 100%;
+}
+
+/*
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #0A2E52;
+    background-color: #e7e7e7;
+}
+*/
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #0A2E52;
+    background-color: #e7e7e7;
+}
+
+@media (min-width: 768px) {
+    .navbar-collapse.collapse {
+        height: 100%!important;
+    }
 }
