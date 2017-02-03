@@ -286,12 +286,6 @@ $navbar-inverse-color:                      #333 !default;
     display: inline-block;
 }
 
-.odd {
-    background: #f5f5f5;
-    padding-top: 7px;
-    padding-bottom: 7px;
-}
-
 .navbar-brand {
     float: left;
     padding: 5px 9px 0px 13px;
@@ -335,45 +329,6 @@ $navbar-inverse-color:                      #333 !default;
 #nav_mapgive a {
     padding-top: 7px;
     font-size: 20px;
-}
-
-.listitem .listitem-thumbnail {
-    position: relative;
-    display: block;
-    // max-width, max-height done set by template
-}
-.listitem .listitem-thumbnail div {
-    display: block;
-    position: absolute;
-    background: rgb(0,0,0);
-    opacity: 0.0;
-    left:0;
-    bottom: 0;
-    width:100%;
-    height: 100%;
-    text-align:center;
-}
-.listitem .listitem-thumbnail:hover div {
-    opacity: 0.8;
-    transition: opacity 0.4s ease-in-out;
-}
-.listitem .listitem-thumbnail div span {
-    display: inline-block;
-    color:white;
-    font-size: 24px;
-    // line height set by template 
-}
-
-img.thumb150 {
-    vertical-align: middle;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-}
-
-.listitem a.thumb150 {
-    display: initial;
 }
 
 .container-fluid {
@@ -493,16 +448,6 @@ a.title:hover {
     width: 175px;
 }
 
-.listitem-thumbnail {
-    display: inline-block;
-    color: white;
-    font-size: 24px;
-}
-
-.listitem-thumbnail:hover div {
-    opacity: 0.8;
-    transition: opacity 0.4s ease-in-out;
-}
 
 #img-container {
   position: relative;
@@ -671,4 +616,73 @@ info {
 h3.text {
     display: inline-block;
     padding: 4px;
+}
+
+.odd {
+    background: #f5f5f5;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.listitem .listitem-thumbnail {
+    position: relative;
+    display: block;
+    // max-width, max-height done set by template
+}
+.listitem .listitem-thumbnail div {
+    display: block;
+    position: absolute;
+    background: rgb(0,0,0);
+    opacity: 0.0;
+    left:0;
+    bottom: 0;
+    width:100%;
+    height: 100%;
+    text-align:center;
+}
+.listitem .listitem-thumbnail:hover div {
+    opacity: 0.8;
+    transition: opacity 0.4s ease-in-out;
+}
+.listitem .listitem-thumbnail div span {
+    display: inline-block;
+    color:white;
+    font-size: 24px;
+    // line height set by template 
+}
+
+img.thumb150 {
+    vertical-align: middle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.listitem a.thumb150 {
+    display: initial;
+}
+
+.listitem-thumbnail {
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+}
+
+.listitem-thumbnail:hover div {
+    opacity: 0.8;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.listitem:nth-child(even) {background: none;}
+.listitem:nth-child(odd) {
+    background: #f5f5f5;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
