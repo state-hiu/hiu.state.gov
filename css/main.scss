@@ -605,6 +605,7 @@ info {
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     color: #0A2E52;
     background-color: #e7e7e7;
+    border-radius: 5px;
 }
 
 @media (min-width: 768px) {
@@ -691,7 +692,7 @@ img.thumb150 {
     display: block;
     margin-top: .5em;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 2.18182;
     margin-bottom: 24px;
     margin-bottom: 1.5rem;
