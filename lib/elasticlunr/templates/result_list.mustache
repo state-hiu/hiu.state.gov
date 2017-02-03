@@ -16,35 +16,12 @@
             <br>
             {{description}}
 
-            <script>
-            /*
-            var str = '{{keywords}}';
-            var str_array = str.split(',');
-
-            console.log('str_array1');
-            console.log(str_array);
-
-            //console.log("myStringArray: ");
-            //console.log("{{keywords}}");
-            for (var i = 0; i < str_array; i++) {
-                console.log('str_array');
-                console.log(str_array[i]);
-                //Do something
-            }*/
-            </script>
-
-
             <span class="entry-tags">
-              {{keywords.length}}
               {{#keywords}}
-                <a title="Posts tagged" >{{.}}
+                <a title="Posts tagged {{.}}" >{{.}}
                 </a>
               {{/keywords}}
             </span>
-
-            {{#keywords.length}}
-                {{#keywords}}<li>{{.}}</li>{{/keywords}}
-            {{/keywords.length}}
 
             <hr>
             <div class="dropdown" style="display: inline-block;">
