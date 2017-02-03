@@ -28,7 +28,7 @@ layout: default
         "thumbnail_300": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/middle/{{ product.thumbnail }}",
         "twitter_pic": "https://s3.amazonaws.com/hiu-thumbnails/products/twitter/{{ product.twitter_pic }}",
         "tweet": "{{ product.tweet }}",
-        "keywords": "{% for keyword in product.keywords %}{{ keyword }}{% unless forloop.last %},{% endunless %}{% endfor %}",
+        "keywords": "[{% for keyword in product.keywords %}'{{ keyword }}'{% unless forloop.last %},{% endunless %}{% endfor %}]",
         "marker-color": "#8cc250"
       },
       "geometry": {
