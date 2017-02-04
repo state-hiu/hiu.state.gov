@@ -94,6 +94,23 @@ a.title div{
   word-wrap:break-word; */
 }
 
+.my-small-country-italics-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 8px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: .02em;
+  line-height: 1em;
+  text-transform: uppercase;
+  /* word wrap isn't working
+  width:150px;
+  word-wrap:break-word; */
+}
 
 </style>
 
@@ -417,6 +434,14 @@ $('#myModal').on('hidden.bs.modal', function () {
         }
     }
 
+    function onEachFeatureSmallItalicsLabels(feature, layer) {
+        //layer.setStyle({'opacity' :'.5'});
+        if (feature.properties && feature.properties.COUNTRY_NA) {
+            //layer.bindTooltip("my tooltip text").openTooltip();
+            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-small-country-italics-label", offset: [0, 0], direction: 'center' });
+        }
+    }
+
     function onEachFeatureRegions(feature, layer) {
         //layer.setStyle({'opacity' :'.5'});
         if (feature.properties && feature.properties.REGION_NA) {
@@ -470,6 +495,13 @@ $('#myModal').on('hidden.bs.modal', function () {
           onEachFeature: onEachFeatureSmallLabels
         });
 
+    var SmallCountryLabelsItalicsLayer = new L.GeoJSON.AJAX("{{ site.baseurl }}/assets/country_labels_small_italics.geojson", {
+          pointToLayer: function (feature, latlng) {
+              return L.circleMarker(latlng, geojsonMarkerOptions);
+          },
+          onEachFeature: onEachFeatureSmallItalicsLabels
+        });
+
 
     map.on('zoomend', function () {
       console.log('zoomend called');
@@ -481,18 +513,6 @@ $('#myModal').on('hidden.bs.modal', function () {
               console.log("layer already removed");
           }
 
-          if (map.hasLayer(MediumCountryLabelsLayer)){
-              map.removeLayer(MediumCountryLabelsLayer);
-          } else {
-              console.log("layer already removed");
-          }
-
-          if (map.hasLayer(SmallCountryLabelsLayer)){
-              map.removeLayer(SmallCountryLabelsLayer);
-          } else {
-              console.log("layer already removed");
-          }
-          
       }
       if (map.getZoom() >= 4 ) {
           //map.removeLayer(geojsonLayer);
@@ -503,18 +523,40 @@ $('#myModal').on('hidden.bs.modal', function () {
               //map.addLayer(geojsonLayer);
           }
 
-          if (map.hasLayer(MediumCountryLabelsLayer)){
+      }
+
+      if (map.getZoom() < 5 ) {
+        if (map.hasLayer(MediumCountryLabelsLayer)){
+              map.removeLayer(MediumCountryLabelsLayer);
+          } else {
+              console.log("layer already removed");
+          }
+      }
+      if (map.getZoom() >= 5 ) {
+        if (map.hasLayer(MediumCountryLabelsLayer)){
               console.log("layer already added");
           } else {
               MediumCountryLabelsLayer.addTo(map);
           }
+      }
 
-          if (map.hasLayer(SmallCountryLabelsLayer)){
+      if (map.getZoom() < 6 ) {
+        if (map.hasLayer(SmallCountryLabelsLayer)){
+              map.removeLayer(SmallCountryLabelsLayer);
+              map.removeLayer(SmallCountryLabelsItalicsLayer);
+          } else {
+              console.log("layer already removed");
+          }
+      }
+      if (map.getZoom() >= 6 ) {
+        if (map.hasLayer(SmallCountryLabelsLayer)){
               console.log("layer already added");
           } else {
               SmallCountryLabelsLayer.addTo(map);
+              SmallCountryLabelsItalicsLayer.addTo(map);
           }
-      }  
+      }
+
     }); 
 
     //var jsonTest = new L.GeoJSON.AJAX(["colleges.geojson","counties.geojson"],{onEachFeature:popUp}).addTo(m);

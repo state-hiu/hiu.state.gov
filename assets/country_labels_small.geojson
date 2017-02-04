@@ -25,6 +25,8 @@
 { "type": "Feature", "properties": { "OBJECTID": 215, "COUNTRY_NA": "Slovenia", "Size": "Small", "F3_CODE": "SVN", "NUM_CODE": "705" }, "geometry": { "type": "Point", "coordinates": [ 14.920982991060947, 46.072440232636161 ] } },
 { "type": "Feature", "properties": { "OBJECTID": 219, "COUNTRY_NA": "Barbados", "Size": "Small", "F3_CODE": "BRB", "NUM_CODE": "052" }, "geometry": { "type": "Point", "coordinates": [ -59.534359855340384, 13.190249894265364 ] } },
 { "type": "Feature", "properties": { "OBJECTID": 222, "COUNTRY_NA": "Montenegro", "Size": "Small", "F3_CODE": "MNE", "NUM_CODE": "499" }, "geometry": { "type": "Point", "coordinates": [ 19.078919691108855, 42.713065305210534 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 226, "COUNTRY_NA": "Lebanon", "Size": "Small", "F3_CODE": "LBN", "NUM_CODE": "422" }, "geometry": { "type": "Point", "coordinates": [ 35.883784383438552, 33.873399303637143 ] } }
+{ "type": "Feature", "properties": { "OBJECTID": 226, "COUNTRY_NA": "Lebanon", "Size": "Small", "F3_CODE": "LBN", "NUM_CODE": "422" }, "geometry": { "type": "Point", "coordinates": [ 35.883784383438552, 33.873399303637143 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 228, "COUNTRY_NA": "Gaza Strip", "Size": "Small, initial cap", "F3_CODE": "XGZ", "NUM_CODE": "916" }, "geometry": { "type": "Point", "coordinates": [ 34.390531574649678, 31.407135153134178 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 229, "COUNTRY_NA": "West Bank", "Size": "Small, initial cap", "F3_CODE": "XWB", "NUM_CODE": "934" }, "geometry": { "type": "Point", "coordinates": [ 35.251682124448934, 31.947351760265356 ] } }
 ]
 }
