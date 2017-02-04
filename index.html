@@ -11,6 +11,8 @@ tilelayers:
 
 ---
 
+<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+
 <style type="text/css">
 
 .new-product {
@@ -24,6 +26,24 @@ tilelayers:
 a.title div{
   display: inline;
 }
+
+
+
+/*http://gis.stackexchange.com/questions/212820/overriding-leaflet-tooltip-style*/
+.my-region-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 17.8px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: .1em;
+  line-height: 1em;
+}
+
 
 </style>
 
@@ -49,22 +69,82 @@ a.title div{
     </div>
   </div>
 
-  <script>
+<script>
 
-    
+  //manages Prev and Next buttons on modals 
+  var addButtons = function( jpegDisplayNumber, dropdownCount, dropdown, modal) {
+      //console.log('jpegDisplayNumber');
+      //console.log(jpegDisplayNumber);
+      if (jpegDisplayNumber == dropdownCount) {
+          //display prev button only
+          $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
 
-    var addButtons = function( jpegDisplayNumber, dropdownCount, dropdown, modal) {
-//debugger;
-            console.log('jpegDisplayNumber');
-            console.log(jpegDisplayNumber);
-            if (jpegDisplayNumber == dropdownCount) {
-                //display prev button only
+          $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
+
+          $('.btn-next').prop("disabled", true);
+
+          //adding modal header text, ex. Page 1 of X
+          $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
+
+          //adding modal header text, ex. Page 1 of X
+          $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
+
+          $( ".btn-prev" ).on( "click", function() {
+                console.log( 'activate prev button only' );
+                  console.log( 'jpegDisplayNumber valx1' );
+                console.log(jpegDisplayNumber);
+                jpegDisplayNumber--;
+                  console.log( 'jpegDisplayNumber valx2' );
+                console.log(jpegDisplayNumber);
+                  console.log( 'dropdown val' );
+                console.log($(dropdown).find("li"));
+                modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
+                $('.btn-prev,.btn-next').remove();
+                $('.modal-header-text,.modal-footer-text').remove();
+                  
+                addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
+              });
+          //console.log('why would this run');
+          //jpegDisplayNumber = 2;
+          return 'final page';
+        } else {
+            if ((jpegDisplayNumber-1) == 1) {
+                //display next button only
                 $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
 
                 $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
 
+                $('.btn-prev').prop("disabled", true);
 
-                $('.btn-next').prop("disabled", true);
+                //adding modal header text, ex. Page 1 of X
+                $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
+
+                //adding modal header text, ex. Page 1 of X
+                $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
+
+                $( ".btn-next" ).on( "click", function() {
+                  console.log( 'jpegDisplayNumber val' );
+                  console.log(jpegDisplayNumber);
+                  //console.log( 'jpegDisplayNumberConst val' );
+                  //console.log(jpegDisplayNumber);
+                  console.log( $(dropdown).find("li").eq(2).find("a").attr("href"));
+
+                  jpegDisplayNumber++;
+                  //however since it you are finding the right length in the array and the array starts at zero
+                  //you need to subtract 1 again
+                  //switch out img with next img
+                  modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
+                  $('.btn-prev,.btn-next').remove();
+                  $('.modal-header-text,.modal-footer-text').remove();
+                  
+                  addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
+                });
+                return 'next';
+            } else {
+                //display next & prev button
+                $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
+
+                $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
 
                 //adding modal header text, ex. Page 1 of X
                 $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
@@ -73,175 +153,102 @@ a.title div{
                 $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
                 $( ".btn-prev" ).on( "click", function() {
-                      console.log( 'activate prev button only' );
-                        console.log( 'jpegDisplayNumber valx1' );
-                      console.log(jpegDisplayNumber);
-                      jpegDisplayNumber--;
-                        console.log( 'jpegDisplayNumber valx2' );
-                      console.log(jpegDisplayNumber);
-                        console.log( 'dropdown val' );
-                      console.log($(dropdown).find("li"));
-                      modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
-                      $('.btn-prev,.btn-next').remove();
-                      $('.modal-header-text,.modal-footer-text').remove();
-                        
-                      addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
-                    });
-                //console.log('why would this run');
-                //jpegDisplayNumber = 2;
-                return 'final page';
-            } else {
-                if ((jpegDisplayNumber-1) == 1) {
-                    //display next button only
-                    $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
+                  console.log( 'activate prev button only' );
+                  jpegDisplayNumber--;
+                  modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
+                  $('.btn-prev,.btn-next').remove();
+                  $('.modal-header-text,.modal-footer-text').remove();
 
-                    $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
+                  addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
+                });
 
-                    $('.btn-prev').prop("disabled", true);
+                //console.log( 'jpegDisplayNumber val2' );
+                //console.log(jpegDisplayNumber);
 
-                    //adding modal header text, ex. Page 1 of X
-                    $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
+                $( ".btn-next" ).on( "click", function() {
+                  console.log( 'activate next button only' );
+                  jpegDisplayNumber++;
+                  modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
+                  $('.btn-prev,.btn-next').remove();
+                  $('.modal-header-text,.modal-footer-text').remove();
+                  //$('.btn-prev').remove();
+                  
+                  addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
+                });
 
-                    //adding modal header text, ex. Page 1 of X
-                    $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
-
-                    $( ".btn-next" ).on( "click", function() {
-                      console.log( 'jpegDisplayNumber val' );
-                      console.log(jpegDisplayNumber);
-                      //console.log( 'jpegDisplayNumberConst val' );
-                      //console.log(jpegDisplayNumber);
-                      console.log( $(dropdown).find("li").eq(2).find("a").attr("href"));
-
-                      jpegDisplayNumber++;
-                      //however since it you are finding the right length in the array and the array starts at zero
-                      //you need to subtract 1 again
-                      //switch out img with next img
-                      modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
-                      $('.btn-prev,.btn-next').remove();
-                      $('.modal-header-text,.modal-footer-text').remove();
-                      
-                      addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
-                    });
-                    return 'next';
-                } else {
-                    //display next & prev button
-                    $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
-
-                    $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
-
-                    //adding modal header text, ex. Page 1 of X
-                    $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
-
-                    //adding modal header text, ex. Page 1 of X
-                    $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
-
-                    $( ".btn-prev" ).on( "click", function() {
-                      console.log( 'activate prev button only' );
-                      jpegDisplayNumber--;
-                      modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
-                      $('.btn-prev,.btn-next').remove();
-                      $('.modal-header-text,.modal-footer-text').remove();
-
-                      addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
-                    });
-
-                    console.log( 'jpegDisplayNumber val2' );
-                    console.log(jpegDisplayNumber);
-
-                    $( ".btn-next" ).on( "click", function() {
-                      console.log( 'activate next button only' );
-                      jpegDisplayNumber++;
-                      modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
-                      $('.btn-prev,.btn-next').remove();
-                      $('.modal-header-text,.modal-footer-text').remove();
-                      //$('.btn-prev').remove();
-                      
-                      addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
-                    });
-
-                    //jpegDisplayNumber++;
-                    return 'next';
-                }
+                //jpegDisplayNumber++;
+                return 'next';
             }
-     }
-
-
-  $('#myModal').on('show.bs.modal', function (event) {
-    //alert('modal is called');
-    var jpegDisplayNumber = 2;
-    var button = $(event.relatedTarget) // Button that triggered the modal
-    var title = button.data('title') // Extract info from data-* attributes
-    console.log('title-data: ');
-    console.log(title);
-    var img = button.data('img') // Extract info from data-* attributes
-    console.log('img-data: ');
-    console.log(img);
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this)
-    modal.find('.modal-title').text(title);
-    modal.find('#modal-img').attr("src",img);
-
-    //need a list of all the pages in a product; actually I do not, just parse based on what is in the download button!
-    //if list is 2, then just add a next button
-    console.log('display modal parents id');
-    console.log(button.closest(".item"));
-    var item = button.closest(".item")
-    var dropdown = item.find(".dropdown");
-    console.log('display assoc dropdown');
-    console.log(dropdown);
-
-    console.log('dropdown li count');
-    console.log($(dropdown).find("li").length);
-
-    var dropdownCount = $(dropdown).find("li").length
-
-    //debugger;
-
-    if (dropdownCount > 2) {
-        addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
+        }
     }
 
-    //on next button replace img with next img in list
-    //on next modal view have a prev and next button
-    //if view is the last item in list only have a prev button
 
-    //insert prev and next buttons
-    //$('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 10px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
+$('#myModal').on('show.bs.modal', function (event) {
+  //alert('modal is called');
+  var jpegDisplayNumber = 2;
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var title = button.data('title') // Extract info from data-* attributes
+  console.log('title-data: ');
+  console.log(title);
+  var img = button.data('img') // Extract info from data-* attributes
+  console.log('img-data: ');
+  console.log(img);
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text(title);
+  modal.find('#modal-img').attr("src",img);
 
-    //$('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
+  //need a list of all the pages in a product; actually I do not, just parse based on what is in the download button!
+  //if list is 2, then just add a next button
+  console.log('display modal parents id');
+  console.log(button.closest(".item"));
+  var item = button.closest(".item")
+  var dropdown = item.find(".dropdown");
+  console.log('display assoc dropdown');
+  console.log(dropdown);
+
+  console.log('dropdown li count');
+  console.log($(dropdown).find("li").length);
+
+  var dropdownCount = $(dropdown).find("li").length
+
+  //debugger;
+
+  if (dropdownCount > 2) {
+      addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
+  }
 
 })
 
+$('#myModal').on('hidden.bs.modal', function () {
+    // do something…
+    console.log('modal is closing');
+    $('.btn-prev,.btn-next').remove();
+    $('.modal-header-text,.modal-footer-text').remove();
+})
 
-    $('#myModal').on('hidden.bs.modal', function () {
-        // do something…
-        console.log('modal is closing');
-        $('.btn-prev,.btn-next').remove();
-        $('.modal-header-text,.modal-footer-text').remove();
-    })
-
-  </script>
+</script>
 
   <div id="map" class="sidebar-map" style="top:0px;left:0px;width:100%;height: 100%;"></div>
 
   {% include main/sidebar.html %}
 
-  <script>
-      L.TopoJSON = L.GeoJSON.extend({  
-        addData: function(jsonData) {    
-          if (jsonData.type === "Topology") {
-            for (key in jsonData.objects) {
-              geojson = topojson.feature(jsonData, jsonData.objects[key]);
-              L.GeoJSON.prototype.addData.call(this, geojson);
-            }
-          }    
-          else {
-            L.GeoJSON.prototype.addData.call(this, jsonData);
+<script>
+    L.TopoJSON = L.GeoJSON.extend({  
+      addData: function(jsonData) {    
+        if (jsonData.type === "Topology") {
+          for (key in jsonData.objects) {
+            geojson = topojson.feature(jsonData, jsonData.objects[key]);
+            L.GeoJSON.prototype.addData.call(this, geojson);
           }
-        }  
-      });
-  </script>
+        }    
+        else {
+          L.GeoJSON.prototype.addData.call(this, jsonData);
+        }
+      }  
+    });
+</script>
 
   <script>
 
@@ -289,19 +296,14 @@ a.title div{
       }).setView([20, 0], 3);
 
     // Use styleLayer to add a Mapbox style created in Mapbox Studio
-    //var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/cit0gm97500012ypfwnzijj6o/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ',{
-    var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/ciyd2k8k300352sqs2vytdguw/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ',{
+    var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/cit0gm97500012ypfwnzijj6o/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ',{
+    //var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/ciyd2k8k300352sqs2vytdguw/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ',{
       minZoom: 1,
       maxZoom: 16,
       scrollWheelZoom: true,
       zoomControl: false,
       attribution: 'Names and boundary representation are not necessarily authoritative'
     }).addTo(map);
-
-    //http://leafletjs.com/examples/map-panes/
-    map.createPane('labels');
-    map.getPane('labels').style.zIndex = 550;
-    map.getPane('labels').style.pointerEvents = 'none';
 
 /*
     var Labels = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/ciua29cno001p2imv942m1kfv/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ', {
@@ -315,6 +317,105 @@ a.title div{
 
     $.getJSON('{{ site.baseurl }}/localdata/bureau_outline_topojson5.json')
       .done(addTopoData);
+
+    //http://leafletjs.com/examples/map-panes/
+    //map.createPane('labels');
+    //map.getPane('labels').style.zIndex = 550;
+    //map.getPane('labels').style.pointerEvents = 'none';
+
+    var geojsonMarkerOptions = {
+        radius: 8,
+        fillColor: "#ff7800",
+        color: "#000",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+    //using leaflet-ajax to import geojson, https://github.com/calvinmetcalf/leaflet-ajax
+    /*
+    var geojsonLayer = new L.GeoJSON.AJAX("{{ site.baseurl }}/assets/country_labels_large.geojson", {
+          pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, geojsonMarkerOptions);
+          }
+        }).addTo(map);
+    */
+
+
+    //http://gis.stackexchange.com/questions/59571/how-to-add-text-only-labels-on-leaflet-map-with-no-icon
+    function onEachFeature(feature, layer) {
+        //layer.setStyle({'opacity' :'.5'});
+        if (feature.properties && feature.properties.COUNTRY_NA) {
+            //layer.bindTooltip("my tooltip text").openTooltip();
+            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-country-label", offset: [0, 0], direction: 'center' });
+        }
+    }
+
+    function onEachFeatureRegions(feature, layer) {
+        //layer.setStyle({'opacity' :'.5'});
+        if (feature.properties && feature.properties.REGION_NA) {
+            //layer.bindTooltip("my tooltip text").openTooltip();
+            layer.bindTooltip(feature.properties.REGION_NA, {permanent: true, className: "my-region-label", offset: [0, 0], direction: 'center' });
+        }
+    }
+
+    var geojsonMarkerOptions = {
+        radius: 1,
+        fillColor: "#ff7800",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0,
+        opacity: 0
+    };
+
+/*
+    var geojsonLayer = new L.GeoJSON.AJAX("{{ site.baseurl }}/assets/country_labels_large.geojson", {
+          pointToLayer: function (feature, latlng) {
+              return L.circleMarker(latlng, geojsonMarkerOptions);
+          },
+          onEachFeature: onEachFeature
+        }).addTo(map);
+*/
+    var RegionLabelsLayer = new L.GeoJSON.AJAX("{{ site.baseurl }}/assets/region_labels.geojson", {
+          pointToLayer: function (feature, latlng) {
+              return L.circleMarker(latlng, geojsonMarkerOptions);
+          },
+          onEachFeature: onEachFeatureRegions
+        }).addTo(map);
+
+    var LargeCountryLabelsLayer = new L.GeoJSON.AJAX("{{ site.baseurl }}/assets/country_labels_large.geojson", {
+          pointToLayer: function (feature, latlng) {
+              return L.circleMarker(latlng, geojsonMarkerOptions);
+          },
+          onEachFeature: onEachFeature
+        });
+
+    map.on('zoomend', function () {
+      console.log('zoomend called');
+      console.log(map.getZoom());
+      if (map.getZoom() < 4 ) {
+          if (map.hasLayer(LargeCountryLabelsLayer)){
+              map.removeLayer(LargeCountryLabelsLayer);
+          } else {
+              console.log("layer already removed");
+          }
+          
+      }
+      if (map.getZoom() >= 4 ) {
+          //map.removeLayer(geojsonLayer);
+          if (map.hasLayer(LargeCountryLabelsLayer)){
+              console.log("layer already added");
+          } else {
+              LargeCountryLabelsLayer.addTo(map);
+              //map.addLayer(geojsonLayer);
+          }
+      }  
+    }); 
+
+    //var jsonTest = new L.GeoJSON.AJAX(["colleges.geojson","counties.geojson"],{onEachFeature:popUp}).addTo(m);
+
+    //var LargeCountryLabelsLayer = L.geoJSON().addTo(map);
+    //LargeCountryLabelsLayer.addData(geojsonLayer);
 
     //taken from: http://leafletjs.com/examples/choropleth-example.html
     //info box that contains title
@@ -736,7 +837,6 @@ a.title div{
                       map.removeLayer(SCAmarkers);
                       map.removeLayer(WHAmarkers);
                       map.addLayer(AFmarkers);
-
 /*
                       $( '.product').remove();
 
@@ -814,7 +914,6 @@ a.title div{
 
                     default:
                 }
-            
         }
       });
 
@@ -893,7 +992,6 @@ a.title div{
 
         layerClicked = true;
 
-        
 
     }
 
@@ -976,7 +1074,6 @@ a.title div{
         layerClicked = true;
 
     }
-
 
 /*
     topoLayer.on("click", function (event) {
@@ -1070,7 +1167,6 @@ a.title div{
             }
         }
 
-
         //insert new product labels
 
         function getArray(){
@@ -1109,7 +1205,6 @@ a.title div{
 
                 var newDate = new Date(fixture.properties.date_published);
 
-                
                 if ( newDate > past_90_days) {
                     //print out today's schedule here
                     //console.log(fixture.team1 + " Vs. " + fixture.team2);
@@ -1124,18 +1219,14 @@ a.title div{
                     $('#'+region_id).append("<div class='new-product'>new</div>");
 
                 }
-
             }
 
             console.log("x new products: ");
             console.log(jsonCount);
 
-
           });
 
-
     });
-
 
 </script>
 

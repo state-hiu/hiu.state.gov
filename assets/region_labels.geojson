@@ -1,0 +1,89 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": null,
+        "REGION_NA": "NEAR EAST"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.30523407323066,
+          30.324326386266563
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": null,
+        "REGION_NA": "EUROPE and <br> EURASIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.9140625,
+          55.178867663281984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": null,
+        "REGION_NA": "SOUTH <br> CENTRAL <br> ASIA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.15023894695075,
+          44.26934348412036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": null,
+        "REGION_NA": "EAST <br> ASIA <br> and the <br> PACIFIC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.951171875,
+          28.22697003891834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": null,
+        "REGION_NA": "AFRICA"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.49041539529842,
+          10.952186458103647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": null,
+        "REGION_NA": "WESTERN <br> HEMISPHERE"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.32854565810196,
+          -0.596406377938329
+        ]
+      }
+    }
+  ]
+}
