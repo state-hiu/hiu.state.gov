@@ -706,7 +706,7 @@
         "type": "Feature",
         "properties": {
             "OBJECTID": 143,
-            "COUNTRY_NA": "Democratic Republic of the Congo",
+            "COUNTRY_NA": "Democratic <br> Republic <br> of <br> the <br> Congo",
             "Size": "Large",
             "F3_CODE": "COD",
             "NUM_CODE": "180"

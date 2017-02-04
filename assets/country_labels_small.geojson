@@ -1,0 +1,30 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 184, "COUNTRY_NA": "Monaco", "Size": "Small", "F3_CODE": "MCO", "NUM_CODE": "492" }, "geometry": { "type": "Point", "coordinates": [ 7.424090397922803, 43.738012016253542 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 185, "COUNTRY_NA": "Holy See", "Size": "Small", "F3_CODE": "SMR", "NUM_CODE": "674" }, "geometry": { "type": "Point", "coordinates": [ 12.452055487517171, 41.893196715199643 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 186, "COUNTRY_NA": "San Marino", "Size": "Small", "F3_CODE": "SMR", "NUM_CODE": "674" }, "geometry": { "type": "Point", "coordinates": [ 12.460045544726926, 43.943090137006472 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 187, "COUNTRY_NA": "Andorra", "Size": "Small", "F3_CODE": "AND", "NUM_CODE": "020" }, "geometry": { "type": "Point", "coordinates": [ 1.60067077948552, 42.542166871536402 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 188, "COUNTRY_NA": "Saint Lucia", "Size": "Small", "F3_CODE": "LCA", "NUM_CODE": "662" }, "geometry": { "type": "Point", "coordinates": [ -60.977896755795832, 13.906247748073122 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 189, "COUNTRY_NA": "Macedonia", "Size": "Small", "F3_CODE": "MKD", "NUM_CODE": "807" }, "geometry": { "type": "Point", "coordinates": [ 21.742271905417748, 41.612656948389152 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 190, "COUNTRY_NA": "Luxembourg", "Size": "Small", "F3_CODE": "LUX", "NUM_CODE": "442" }, "geometry": { "type": "Point", "coordinates": [ 6.135027925776928, 49.814006202623837 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 191, "COUNTRY_NA": "Seychelles", "Size": "Small", "F3_CODE": "SYC", "NUM_CODE": "690" }, "geometry": { "type": "Point", "coordinates": [ 55.452764782795775, -4.681731252546157 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 192, "COUNTRY_NA": "Sao Tome and Principe", "Size": "Small", "F3_CODE": "STP", "NUM_CODE": "678" }, "geometry": { "type": "Point", "coordinates": [ 6.610436296071009, 0.21839293146348 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 193, "COUNTRY_NA": "Kosovo", "Size": "Small", "F3_CODE": "XKS", "NUM_CODE": "901" }, "geometry": { "type": "Point", "coordinates": [ 20.893994225318021, 42.562585905495425 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 194, "COUNTRY_NA": "Moldova", "Size": "Small", "F3_CODE": "MDA", "NUM_CODE": "498" }, "geometry": { "type": "Point", "coordinates": [ 28.713596328210475, 47.114254840829972 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 196, "COUNTRY_NA": "Antigua and Barbuda", "Size": "Small", "F3_CODE": "ATG", "NUM_CODE": "028" }, "geometry": { "type": "Point", "coordinates": [ -61.790885019172514, 17.08673418450724 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 197, "COUNTRY_NA": "Trinidad and Tobago", "Size": "Small", "F3_CODE": "TTO", "NUM_CODE": "780" }, "geometry": { "type": "Point", "coordinates": [ -61.422676575997734, 10.441226515851072 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 201, "COUNTRY_NA": "The Gambia", "Size": "Small", "F3_CODE": "GMB", "NUM_CODE": "270" }, "geometry": { "type": "Point", "coordinates": [ -15.309840217154326, 13.445931707232804 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 203, "COUNTRY_NA": "Malta", "Size": "Small", "F3_CODE": "MLT", "NUM_CODE": "470" }, "geometry": { "type": "Point", "coordinates": [ 14.4477940811528, 35.902429799830799 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 204, "COUNTRY_NA": "Saint Kitts and Nevis", "Size": "Small", "F3_CODE": "KNA", "NUM_CODE": "659" }, "geometry": { "type": "Point", "coordinates": [ -62.747250410725606, 17.313563015226482 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 205, "COUNTRY_NA": "Israel", "Size": "Small", "F3_CODE": "ISR", "NUM_CODE": "376" }, "geometry": { "type": "Point", "coordinates": [ 34.908553580401481, 30.775476785939709 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 206, "COUNTRY_NA": "Grenada", "Size": "Small", "F3_CODE": "GRD", "NUM_CODE": "308" }, "geometry": { "type": "Point", "coordinates": [ -61.706767478450111, 12.108928895256305 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 208, "COUNTRY_NA": "Saint Vincent and the Grenadines", "Size": "Small", "F3_CODE": "VCT", "NUM_CODE": "670" }, "geometry": { "type": "Point", "coordinates": [ -61.201396395640607, 13.249731426678746 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 210, "COUNTRY_NA": "Liechtenstein", "Size": "Small", "F3_CODE": "LIE", "NUM_CODE": "438" }, "geometry": { "type": "Point", "coordinates": [ 9.553440493856979, 47.159531828293296 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 212, "COUNTRY_NA": "Dominica", "Size": "Small", "F3_CODE": "DMA", "NUM_CODE": "212" }, "geometry": { "type": "Point", "coordinates": [ -61.362085312491814, 15.421251266176085 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 215, "COUNTRY_NA": "Slovenia", "Size": "Small", "F3_CODE": "SVN", "NUM_CODE": "705" }, "geometry": { "type": "Point", "coordinates": [ 14.920982991060947, 46.072440232636161 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 219, "COUNTRY_NA": "Barbados", "Size": "Small", "F3_CODE": "BRB", "NUM_CODE": "052" }, "geometry": { "type": "Point", "coordinates": [ -59.534359855340384, 13.190249894265364 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 222, "COUNTRY_NA": "Montenegro", "Size": "Small", "F3_CODE": "MNE", "NUM_CODE": "499" }, "geometry": { "type": "Point", "coordinates": [ 19.078919691108855, 42.713065305210534 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 226, "COUNTRY_NA": "Lebanon", "Size": "Small", "F3_CODE": "LBN", "NUM_CODE": "422" }, "geometry": { "type": "Point", "coordinates": [ 35.883784383438552, 33.873399303637143 ] } }
+]
+}
