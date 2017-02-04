@@ -385,10 +385,13 @@ $('#myModal').on('hidden.bs.modal', function () {
     $.getJSON('{{ site.baseurl }}/localdata/bureau_outline_topojson5.json')
       .done(addTopoData);
 
+
+    //I'm still using panes, then binging the Labels (which are tooltips) to the pane
+    //This way the labels will stay below the cluster markers
     //http://leafletjs.com/examples/map-panes/
-    //map.createPane('labels');
-    //map.getPane('labels').style.zIndex = 550;
-    //map.getPane('labels').style.pointerEvents = 'none';
+    map.createPane('labels');
+    map.getPane('labels').style.zIndex = 550;
+    map.getPane('labels').style.pointerEvents = 'none';
 
     var geojsonMarkerOptions = {
         radius: 8,
@@ -414,7 +417,7 @@ $('#myModal').on('hidden.bs.modal', function () {
         //layer.setStyle({'opacity' :'.5'});
         if (feature.properties && feature.properties.COUNTRY_NA) {
             //layer.bindTooltip("my tooltip text").openTooltip();
-            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-large-country-label", offset: [0, 0], direction: 'center' });
+            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-large-country-label", offset: [0, 0], direction: 'center', pane: 'labels' });
         }
     }
 
@@ -422,7 +425,7 @@ $('#myModal').on('hidden.bs.modal', function () {
         //layer.setStyle({'opacity' :'.5'});
         if (feature.properties && feature.properties.COUNTRY_NA) {
             //layer.bindTooltip("my tooltip text").openTooltip();
-            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-medium-country-label", offset: [0, 0], direction: 'center' });
+            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-medium-country-label", offset: [0, 0], direction: 'center', pane: 'labels' });
         }
     }
 
@@ -430,7 +433,7 @@ $('#myModal').on('hidden.bs.modal', function () {
         //layer.setStyle({'opacity' :'.5'});
         if (feature.properties && feature.properties.COUNTRY_NA) {
             //layer.bindTooltip("my tooltip text").openTooltip();
-            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-small-country-label", offset: [0, 0], direction: 'center' });
+            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-small-country-label", offset: [0, 0], direction: 'center', pane: 'labels' });
         }
     }
 
@@ -438,7 +441,7 @@ $('#myModal').on('hidden.bs.modal', function () {
         //layer.setStyle({'opacity' :'.5'});
         if (feature.properties && feature.properties.COUNTRY_NA) {
             //layer.bindTooltip("my tooltip text").openTooltip();
-            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-small-country-italics-label", offset: [0, 0], direction: 'center' });
+            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-small-country-italics-label", offset: [0, 0], direction: 'center', pane: 'labels' });
         }
     }
 
@@ -446,7 +449,7 @@ $('#myModal').on('hidden.bs.modal', function () {
         //layer.setStyle({'opacity' :'.5'});
         if (feature.properties && feature.properties.REGION_NA) {
             //layer.bindTooltip("my tooltip text").openTooltip();
-            layer.bindTooltip(feature.properties.REGION_NA, {permanent: true, className: "my-region-label", offset: [0, 0], direction: 'center' });
+            layer.bindTooltip(feature.properties.REGION_NA, {permanent: true, className: "my-region-label", offset: [0, 0], direction: 'center', pane: 'labels' });
         }
     }
 
