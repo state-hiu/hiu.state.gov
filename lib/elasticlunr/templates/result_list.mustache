@@ -16,9 +16,13 @@
             <br>
             {{description}}
 
-            <span class="entry-tags">
-              Keywords: {{keywords}}
-            </span>
+            <!--http://stackoverflow.com/questions/6114435/in-mustache-templating-is-there-an-elegant-way-of-expressing-a-comma-separated-l-->
+            <div class="entry-tags">
+              Keywords:
+              {{#keywords}}
+                <li>{{.}}</li>
+              {{/keywords}}
+            </div>
 
             <hr>
             <div class="dropdown" style="display: inline-block;">

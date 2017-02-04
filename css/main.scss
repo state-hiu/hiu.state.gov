@@ -710,3 +710,15 @@ img.thumb150 {
     white-space: nowrap;
 }
 
+.entry-tags li
+{
+    display: inline;
+}
+.entry-tags li:before
+{
+    content: ", "
+}
+.entry-tags li:first-child:before
+{
+    content: ""
+}
