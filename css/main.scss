@@ -722,3 +722,21 @@ img.thumb150 {
 {
     content: ""
 }
+
+.new-product {
+  line-height: 0px;
+  font-size: 13px;
+  color: #088008;
+  font-style: italic;
+  text-shadow: 0 0 1px #05e03e;
+}
+
+.featured-product {
+  line-height: 0px;
+  font-size: 14px;
+  color: #fc7307;
+  font-style: italic;
+  text-shadow: 0 0 1px #ffe109;
+  display: inline-block;
+  padding-left: 5px;
+}
