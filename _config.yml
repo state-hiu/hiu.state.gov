@@ -10,7 +10,7 @@ permalink: none
 #destination: /var/www
 # GitHub Pages
 baseurl:
-url: http://state-hiu.github.io/hiu.state.gov
+url: https://hiu.state.gov
 destination: _site
 # Production
 #baseurl: 
