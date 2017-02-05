@@ -1307,13 +1307,22 @@ $('#myModal').on('hidden.bs.modal', function () {
               //something like this can work for a product
               //$('a[href="#NEA#U1283"').trigger("click");
               document.getElementById(region_hash).click();
+
+
               setTimeout(function(){ 
                 console.log("done waiting"); 
+
+                //triggering modal
+                document.getElementById('modal#'+region_hash+'#'+product_hash).click();
+                //this below works manually
+                //document.getElementById('modal#NEA#U1283').click();
+
                 $('a[href="#'+region_hash+'#'+product_hash+'"').trigger("click");
                 document.location.hash = '#'+region_hash+'#'+product_hash
               }, 1500);
               
             }
+
         }
 
         //insert new product labels
