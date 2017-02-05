@@ -15,29 +15,25 @@ To accomplish this mission, the HIU performs the following tasks:
 
 The HIU is part of the Bureau of Intelligence and Research, U.S. Department of State. Its staff  is composed of personnel from the U.S. Department of State, U.S. Agency for International Development (USAID), U.S. Department of Defense (DOD), National Geospatial-Intelligence Agency (NGA), and other technical and specialist personnel.
 
-## Events
+## [Initiatives]({{ site.baseurl }}/programs)
 
-The Humanitarian Information Unit will respond to certain humanitarian [events]({{ site.baseurl }}/events) given partner needs.
+Learn more about our initiatives, such as [MapGive](http://mapgive.state.gov) and [Secondary Cities](http://secondarycities.state.gov).
 
-## Science & Technology Programs
+## [Satellite Imagery]({{ site.baseurl }}/about/imagery)
 
-[Click here]({{ site.baseurl }}/programs) to learn more about our science and technology programs, such as [MapGive](http://mapgive.state.gov) and [Secondary Cities](http://secondarycities.state.gov).
+For information on commercial satellite imagery requests.
 
-## Satellite Imagery
+## [Guides]({{ site.baseurl }}/guides)
 
-For commercial satellite imagery requests, see [Imagery]({{ site.baseurl }}/about/imagery).
+Browse through our open guide collection, including guides on GeoNode and our Imagery to the Crowd workflow.
 
-## Guides
+## [Careers]({{ site.baseurl }}/about/careers)
 
-Browse through our [open guide collection]({{ site.baseurl }}/guides), including guides on GeoNode and our Imagery to the Crowd workflow.
+Visit our careers page if you are interested in a career or internship with the HIU.
 
-## Careers
+## [Developer]({{ site.baseurl }}/developer)
 
-If you are interested in a career or internship with HIU, please visit our [careers page]({{ site.baseurl }}/about/careers).
-
-## Developer
-
-You can more about about our open source software, developer resources, APIs, and websites on our [developer page]({{ site.baseurl }}/developer).
+Learn more about our open source software, developer resources, APIs, and websites.
 
 ## Contact
 
@@ -45,4 +41,3 @@ If you have general questions, please contact HIU at **[HIU_INFO@state.gov](mail
 
 If you have questions about data, please contact HIU at **[HIU_DATA@state.gov](mailto:HIU_DATA@state.gov)**.
 
-If you have questions about HIU S&T programs, please contact HIU at **[HIU_DEV@state.gov](mailto:HIU_DEV@state.gov)**.

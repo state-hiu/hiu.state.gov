@@ -1,8 +1,8 @@
 ---
-layout: website
-category: websites
+layout: geonode
+category: geonode
 title: "Cusco GeoNode"
-featured: true
+featured: false
 keywords:
 refurl: "http://cuscogeonode.state.gov"
 ---

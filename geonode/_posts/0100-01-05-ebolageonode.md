@@ -1,6 +1,6 @@
 ---
-layout: website
-category: websites
+layout: geonode
+category: geonode
 title: "Ebola GeoNode"
 featured: true
 keywords:

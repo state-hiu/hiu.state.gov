@@ -1,6 +1,6 @@
 ---
 layout: wrapper
-title: "Websites"
+title: "GeoNode"
 ---
 <div class="col-md-2">
 </div>
@@ -12,15 +12,15 @@ title: "Websites"
   </ul>
   <div class="tab-content" style="padding: 10px;">
     <div id="featured" class="tab-pane active">
-      {% for website in site.categories.websites reversed %}
-        {% if website.featured == true %}
-          {% include main/listitem_website.html %}
+      {% for geonode in site.categories.geonode reversed %}
+        {% if geonode.featured == true %}
+          {% include main/listitem_geonode.html %}
         {% endif %}
       {% endfor %}
     </div>
     <div id="all" class="tab-pane">
-      {% for website in site.categories.websites reversed %}
-        {% include main/listitem_website.html %}
+      {% for geonode in site.categories.geonode reversed %}
+        {% include main/listitem_geonode.html %}
       {% endfor %}
     </div>
   </div>
