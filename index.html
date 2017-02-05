@@ -611,7 +611,7 @@ $('#myModal').on('hidden.bs.modal', function () {
     //This enables when a user clicks on part of the map that
     //is not part of a layer, it will zoom back into the 
     //original extent
-    map.on('click', function(e) {        
+    map.on('click', function(e) {
         //The TopoJson layer click function always fires first
 
         //close all popups
@@ -1011,7 +1011,7 @@ $('#myModal').on('hidden.bs.modal', function () {
                       map.removeLayer(SCAmarkers);
                       map.removeLayer(WHAmarkers);
                       map.addLayer(EURmarkers);
-                      $( '.product').remove();
+                      //$( '.product').remove();
                       /*
                       $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + EURmarkers.getLayers().length + "&nbspProducts</p></center>" );
                       */
@@ -1024,7 +1024,7 @@ $('#myModal').on('hidden.bs.modal', function () {
                       map.removeLayer(SCAmarkers);
                       map.removeLayer(WHAmarkers);
                       map.addLayer(NEAmarkers);
-                      $( '.product').remove();
+                      //$( '.product').remove();
                       /*
                       $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + NEAmarkers.getLayers().length + "&nbspProducts</p></center>" );
                       */
@@ -1037,7 +1037,7 @@ $('#myModal').on('hidden.bs.modal', function () {
                       map.removeLayer(NEAmarkers);
                       map.removeLayer(WHAmarkers);
                       map.addLayer(SCAmarkers);
-                      $( '.product').remove();
+                      //$( '.product').remove();
                       /*
                       $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + SCAmarkers.getLayers().length + "&nbspProducts</p></center>" );
                       */
@@ -1050,7 +1050,7 @@ $('#myModal').on('hidden.bs.modal', function () {
                       map.removeLayer(NEAmarkers);
                       map.removeLayer(SCAmarkers);
                       map.addLayer(WHAmarkers);
-                      $( '.product').remove();
+                      //$( '.product').remove();
                       /*
                       $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + WHAmarkers.getLayers().length + "&nbspProducts</p></center>" );
                       */
@@ -1080,6 +1080,8 @@ $('#myModal').on('hidden.bs.modal', function () {
         map.removeLayer(NEAmarkers);
         map.removeLayer(SCAmarkers);
         map.removeLayer(WHAmarkers);
+
+        //map.setView([20, 0], 3, {animation: false});
 
         switch (region) {
           case "AF":
