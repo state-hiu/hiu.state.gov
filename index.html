@@ -617,7 +617,8 @@ $('#myModal').on('hidden.bs.modal', function () {
         //close all popups
         map.closePopup();
 
-        map.setView([20, 0], 3, {animation: false});
+        //map.setView([20, 0], 3, {animation: false});
+        map.flyTo([20, 0], 3);
         console.log('map clicked');
         console.log(e);
 
@@ -813,7 +814,8 @@ $('#myModal').on('hidden.bs.modal', function () {
               firstClick = false;
             }
 
-            window.map.setView(regionCoord,regionZoom);
+            //window.map.setView(regionCoord,regionZoom);
+            window.map.flyTo(regionCoord,regionZoom);
 
             var enabled = {};
             var featureCollection = products;
