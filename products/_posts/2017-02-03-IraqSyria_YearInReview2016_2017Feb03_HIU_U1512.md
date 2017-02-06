@@ -1,7 +1,7 @@
 ---
 layout: product
 category: products
-title: "Syria: Conflict Without Borders – 2016"
+title: "Syria and Iraq Conflict Without Borders: 2016 in Review"
 region_id: NEA
 region_title: Middle East
 date_published: 2017-02-03
