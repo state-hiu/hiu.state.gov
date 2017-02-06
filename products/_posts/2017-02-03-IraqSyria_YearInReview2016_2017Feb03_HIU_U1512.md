@@ -5,7 +5,7 @@ title: "Syria and Iraq Conflict Without Borders: 2016 in Review"
 region_id: NEA
 region_title: Middle East
 date_published: 2017-02-03
-product_id: "U1283"
+product_id: "U1512"
 product_pdf: "IraqSyria_YearInReview2016_2017Feb03_HIU_U1512.pdf"
 product_jpg: "IraqSyria_YearInReview2016_Page1_2017Feb03_HIU_U1512.jpg"
 product_jpg_pg2: "IraqSyria_YearInReview2016_Page2_2017Feb03_HIU_U1512.jpg"
