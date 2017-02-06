@@ -10,7 +10,7 @@ product_pdf: "IraqSyria_YearInReview2016_2017Feb03_HIU_U1512.pdf"
 product_jpg: "IraqSyria_YearInReview2016_Page1_2017Feb03_HIU_U1512.jpg"
 product_jpg_pg2: "IraqSyria_YearInReview2016_Page2_2017Feb03_HIU_U1512.jpg"
 product_jpg_pg3: "IraqSyria_YearInReview2016_Page3_2017Feb03_HIU_U1512.jpg"
-thumbnail: "IraqSyria_YearInReview2016_2017Feb03_HIU_U1512_thumb.jpg"
+thumbnail: "IraqSyria_YearInReview2016_Page2_2017Feb03_HIU_U1512_thumb.jpg"
 featured: true
 lat: 35.210
 lon: 38.864
