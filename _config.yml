@@ -1,6 +1,6 @@
 name: HIU
 description: "Main website of the U.S. Department of State, Humanitarian Information Unit"
-logo: "/assets/img/hiu_logo.png"
+logo: "/assets/img/hiu_logo_twitter.png"
 #markdown: redcarpet
 timezone: America/New_York
 permalink: none
