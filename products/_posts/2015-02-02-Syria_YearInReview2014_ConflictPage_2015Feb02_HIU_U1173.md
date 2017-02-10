@@ -6,7 +6,7 @@ region_id: "NEA"
 region_title: "Near East"
 date_published: 2015-02-02
 product_id: "U1173"
-product_pdf: "Syria_YearInReview2014_2015Feb02_HIU_U1173.pdf"
+product_pdf: "SyriaIraq_YearInReview2014_2015Feb02_HIU_U1173.pdf"
 product_jpg: "Syria_YearInReview2014_ConflictPage_2015Feb02_HIU_U1173.jpg"
 product_jpg_pg_2: "Syria_YearInReview2014_HumanitarianPage_2015Feb02_HIU_U1173.jpg"
 product_jpg_pg_3: "Syria_YearInReview2014_DataPage_2015Feb02_HIU_U1173.jpg"
