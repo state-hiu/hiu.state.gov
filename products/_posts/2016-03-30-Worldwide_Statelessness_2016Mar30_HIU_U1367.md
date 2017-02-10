@@ -2,9 +2,10 @@
 layout: product
 category: products
 title: "Peoples Without a State: the Locations and Causes of Statelessness (30 March 2016)"
-region_id: "WHA, AF, SCA, EUR"
-region_title: "Africa, Europe, Near East, South and Central Asia, Western Hemisphere"
-date_published: 03/30/2016
+region_id: "Global"
+region_title: "Global & Transnational Products"
+date_published: 2016-03-30
+product_id: "U1367"
 product_pdf: "Worldwide_Statelessness_2016Mar30_HIU_U1367.pdf"
 product_jpg: "Worldwide_Statelessness_2016Mar30_HIU_U1367.jpg"
 thumbnail: "Worldwide_Statelessness_2016Mar30_HIU_U1367_thumb.jpg"
