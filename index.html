@@ -352,7 +352,7 @@ $('#myModal').on('hidden.bs.modal', function () {
     //probably because all of this in inside of its own contained function
     window.map = L.map('map', {
         attributionControl: {collapsed: true},
-        maxBounds:[ [-80, -140], [85, 182] ],
+        maxBounds:[ [-85, -190], [90, 190] ],
         maxBoundsViscosity: 1.0,
         minZoom: 3
       }).setView([20, 0], 3);
@@ -361,7 +361,7 @@ $('#myModal').on('hidden.bs.modal', function () {
     var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/cit0gm97500012ypfwnzijj6o/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ',{
     //var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/ciyd2k8k300352sqs2vytdguw/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ',{
       minZoom: 1,
-      maxZoom: 16,
+      maxZoom: 12,
       scrollWheelZoom: true,
       zoomControl: false,
       attribution: 'Names and boundary representation are not necessarily authoritative'
