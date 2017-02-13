@@ -316,8 +316,8 @@ $('#myModal').on('hidden.bs.modal', function () {
 
     jQuery(document).ready(function($){
       var path = window.location.href.split("/").pop();
-      console.log('path: ');
-      console.log(path);
+      //console.log('path: ');
+      //console.log(path);
 
       //It won't work because all of the products need to load first
       //based on link it can look-up region and preload region first
@@ -1146,8 +1146,8 @@ $('#myModal').on('hidden.bs.modal', function () {
 
     //if a tab is clicked on the sidebar
     $('a[role="tab"]').click(function () {
-      console.log('click event1');
-      console.log($(this).attr('id'));
+      //console.log('click event1');
+      //console.log($(this).attr('id'));
 
       var region = $(this).attr('id');
       clickTab(region);
@@ -1288,18 +1288,18 @@ $('#myModal').on('hidden.bs.modal', function () {
         // Javascript to enable link to tab
         var hash = document.location.hash;
 
-        console.log('hash! ');
-        console.log(hash);
+        //console.log('hash! ');
+        //console.log(hash);
 
-        console.log('hash length: ');
-        console.log(hash.length);
+        //console.log('hash length: ');
+        //console.log(hash.length);
 
         if (hash) {
           //$('.nav-tabs a[href='+hash.replace(prefix,"")+']').tab('show');
-          hash = hash.slice(1).split('#');
-          region_hash = hash[0].replace("#", "");
-          console.log('region_hash! ');
-          console.log(region_hash);
+          hash = hash.slice(1).split(',');
+          region_hash = hash[0].replace(",", "");
+          //console.log('region_hash! ');
+          //console.log(region_hash);
 
             if (hash.length == 1) {
               document.getElementById(region_hash).click();
@@ -1309,17 +1309,16 @@ $('#myModal').on('hidden.bs.modal', function () {
               //$('a[href="#NEA#U1283"').trigger("click");
               document.getElementById(region_hash).click();
 
-
               setTimeout(function(){ 
-                console.log("done waiting"); 
+                //console.log("done waiting"); 
 
                 //triggering modal
-                document.getElementById('modal#'+region_hash+'#'+product_hash).click();
+                document.getElementById('modal#'+region_hash+','+product_hash).click();
                 //this below works manually
                 //document.getElementById('modal#NEA#U1283').click();
 
-                $('a[href="#'+region_hash+'#'+product_hash+'"').trigger("click");
-                document.location.hash = '#'+region_hash+'#'+product_hash
+                $('a[href="#'+region_hash+','+product_hash+'"').trigger("click");
+                document.location.hash = '#'+region_hash+','+product_hash
               }, 1500);
               
             }
@@ -1333,26 +1332,25 @@ $('#myModal').on('hidden.bs.modal', function () {
         }
 
         getArray().done( function(json) {
-            console.log('printing out json: ');
-            console.log(json); // show the json data in console
+            //console.log('printing out json: ');
+            //console.log(json); // show the json data in console
             var _len = json.length;
             var fixture;
 
-            console.log('json 3');
-            console.log(json.features[3]);
+            //console.log('json 3');
+            //console.log(json.features[3]);
             
             var d = new Date();
 
-            console.log("current date");
-            console.log(d);
-
+            //console.log("current date");
+            //console.log(d);
 
             var curr_date = d.getDate();
             
             var past_90_days = d.setDate(d.getDate()-90);
 
-            console.log("past 90 days");
-            console.log(past_90_days);
+            //console.log("past 90 days");
+            //console.log(past_90_days);
 
             //loop through json and match today's date with match-date
             var jsonCount = 0;
@@ -1367,8 +1365,8 @@ $('#myModal').on('hidden.bs.modal', function () {
                 if ( newDate > past_90_days) {
                     //print out today's schedule here
                     //console.log(fixture.team1 + " Vs. " + fixture.team2);
-                    console.log('new date');
-                    console.log(newDate);
+                    //console.log('new date');
+                    //console.log(newDate);
                     jsonCount++;
 
                     //add new to the product
@@ -1380,10 +1378,13 @@ $('#myModal').on('hidden.bs.modal', function () {
                 }
             }
 
-            console.log("x new products: ");
-            console.log(jsonCount);
+            //console.log("x new products: ");
+            //console.log(jsonCount);
 
           });
+
+
+          
 
     });
 
