@@ -1,0 +1,43 @@
+<div>
+  <!--<ul style="margin-left: 0px; margin-right: 0px; padding-left: 0px;">-->
+    {{#results}}
+      <div class="item listitem row" title="{{item.title}}" style="margin-bottom: 15px;">
+        <div class="col-md-2">
+              <span class="helper">
+              <a class="listitem-thumbnail" data-toggle="modal" data-target="#myModal" data-title="{{item.title}}" data-img="{{item.product_jpg}}" style="max-width: 150px; max-height: 150px;">
+              </span><img src="{{item.thumbnail_300}}" width="150px" height="150px" style="border:1px solid #021a40;" class="img-responsive"/>
+                <div><span style="line-height: 150px;">Preview</span></div>
+              </a>
+        </div>
+        <div class="col-md-10">
+            <h4 style="display:inline-block;">{{item.title}}</h4>
+            {{#item.featured}}
+              <div class="featured-product">featured</div>
+            {{/item.featured}}
+            <div> {{item.region_title}} | {{item.date_published}} </div>
+            <br>
+            {{item.description}}
+
+            <!--http://stackoverflow.com/questions/6114435/in-mustache-templating-is-there-an-elegant-way-of-expressing-a-comma-separated-l-->
+            <div class="entry-tags">
+              Keywords:
+              {{#item.keywords}}
+                <li>{{.}}</li>
+              {{/item.keywords}}
+            </div>
+
+            <hr>
+            <div class="dropdown" style="display: inline-block;">
+              <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Download
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="{{item.product_pdf}}">PDF</a></li>
+                <li><a href="{{item.product_jpg}}">JPG</a></li>
+              </ul>
+            </div>
+            <a href="https://twitter.com/intent/tweet?text={{item.tweet}}&url={{item.url}}"><img src="../assets/img/Twitter_Logo_Blue.png" style="width: 40px;margin-left:20px"></a>
+        </div>
+      </div>
+    {{/results}}
+  <!--</ul>-->
+</div>

@@ -1,0 +1,150 @@
+[
+    
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Syria and Iraq Conflict Without Borders: 2016 in Review",
+        "date_published": "February 03, 2017",
+        "region_id": "NEA",
+        "region_title": "Middle East",
+        "description": "This 3-page map is a comprehensive overview of the humanitarian situation in Syria and Iraq as a result of conflict throughout 2016, and the years prior. Page 1 highlights humanitarian access and internally displaced persons (IDPs) throughout Iraq and Syria, with a timeline of key events in 2016; page 2 includes 4 inset maps of major flashpoints of conflict and displacement in 2016; and page 3 is a comprehensive summary of displacement inside Iraq/Syria and all of the surrounding refugee-hosting nations (including Europe).",
+        "featured": true,
+        "url": "http://localhost:4000/products/IraqSyria_YearInReview2016_2017Feb03_HIU_U1512",
+        "product_id": "U1512",
+        "product_pdf": "https://s3.amazonaws.com/hiu-products/IraqSyria_YearInReview2016_2017Feb03_HIU_U1512.pdf",
+        "product_jpg": "https://s3.amazonaws.com/hiu-products/products/resized/IraqSyria_YearInReview2016_Page1_2017Feb03_HIU_U1512.jpg",
+        
+        "product_jpg_pg2": "https://s3.amazonaws.com/hiu-products/products/resized/IraqSyria_YearInReview2016_Page2_2017Feb03_HIU_U1512.jpg",
+        
+        
+        "product_jpg_pg3": "https://s3.amazonaws.com/hiu-products/products/resized/IraqSyria_YearInReview2016_Page3_2017Feb03_HIU_U1512.jpg",
+        
+        "thumbnail_150": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/small/IraqSyria_YearInReview2016_Page2_2017Feb03_HIU_U1512_thumb.jpg",
+        "thumbnail_300": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/middle/IraqSyria_YearInReview2016_Page2_2017Feb03_HIU_U1512_thumb.jpg",
+        "twitter_pic": "https://s3.amazonaws.com/hiu-thumbnails/products/twitter/",
+        "tweet": "",
+        "keywords": ["Syria","Turkey","Lebanon","Jordan","Iraq","Middle East","Europe","refugees","Displaced","IDP","Conflict","UNHCR","Migrants","Refugee camps","Border crossing","Affected Populations","Internally Displaced Persons (IDPs)"],
+        "marker-color": "#8cc250"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [38.864, 35.21]
+      }
+    },
+    
+    
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Lake Chad Basin: Possible Famine, Continued Displacement",
+        "date_published": "December 20, 2016",
+        "region_id": "AF",
+        "region_title": "Africa",
+        "description": "This map illustrates the severe food insecurity and displacement situation throughout the Lake Chad region due to the Boko Haram-related conflict as of mid-December 2016. Access constraints have led to an elevated risk of ongoing famine in several Local Government Areas (LGAs) in Northeast Nigeria and displacement numbers continue to increase.",
+        "featured": true,
+        "url": "http://localhost:4000/products/WestAfrica_LakeChadFaminePossibleandDisplacement_2016Dec20_HIU_U1490",
+        "product_id": "U1490",
+        "product_pdf": "https://s3.amazonaws.com/hiu-products/WestAfrica_LakeChadPossibleFamineandDisplacement_2016Dec21_HIU_U1490.pdf",
+        "product_jpg": "https://s3.amazonaws.com/hiu-products/products/resized/WestAfrica_LakeChadPossibleFamineandDisplacement_2016Dec21_HIU_U1490.jpg",
+        
+        
+        "thumbnail_150": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/small/WestAfrica_LakeChadPossibleFamineandDisplacement_2016Dec21_HIU_U1490_thumb.jpg",
+        "thumbnail_300": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/middle/WestAfrica_LakeChadPossibleFamineandDisplacement_2016Dec21_HIU_U1490_thumb.jpg",
+        "twitter_pic": "https://s3.amazonaws.com/hiu-thumbnails/products/twitter/",
+        "tweet": "Lake Chad Basin: Possible Famine, Continued Displacement",
+        "keywords": ["Nigeria","Niger","Cameroon","Chad","Refugee","Food Security","Internally displaced persons","IDP"],
+        "marker-color": "#8cc250"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [14, 13]
+      }
+    },
+    
+    
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "International Migrants Day, December 18, 2016",
+        "date_published": "December 19, 2016",
+        "region_id": "global",
+        "region_title": "Africa, East Asia and the Pacific, Europe, Near East, South and Central Asia, Western Hemisphere",
+        "description": "Worldwide, international migrants account for a relatively stable share of the total global population. The number continues to grow by about two percent annually. To-thirds of all migrants originate from middle-income countries and most migrants move within their own regions.",
+        "featured": true,
+        "url": "http://localhost:4000/products/Worldwide_InternationalMigrantsDay_Movement_2016Dec19_HIU_U1498",
+        "product_id": "U1498",
+        "product_pdf": "https://s3.amazonaws.com/hiu-products/Worldwide_InternationalMigrantsDay_Movement_2016Dec19_HIU_U1498.pdf",
+        "product_jpg": "https://s3.amazonaws.com/hiu-products/products/resized/Worldwide_InternationalMigrantsDay_Movement_2016Dec19_HIU_U1498.jpg",
+        
+        
+        "thumbnail_150": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/small/Worldwide_InternationalMigrantsDay_Movement_2016Dec19_HIU_U1498_thumb.jpg",
+        "thumbnail_300": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/middle/Worldwide_InternationalMigrantsDay_Movement_2016Dec19_HIU_U1498_thumb.jpg",
+        "twitter_pic": "https://s3.amazonaws.com/hiu-thumbnails/products/twitter/",
+        "tweet": "",
+        "keywords": ["Migration","Migrants","Refugees","Host countries","Regions","Migrant stock"],
+        "marker-color": "#8cc250"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0, 0]
+      }
+    },
+    
+    
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Worldwide: Access to Improved Sanitation Facilities and Water Sources",
+        "date_published": "December 19, 2016",
+        "region_id": "global",
+        "region_title": "Global & Transnational Products",
+        "description": "The Millennium Development Goals (MDGs) launched by the UN in 2000 sought to halve by 2015 the proportion of the world’s population without sustainable access to improved water sources and sanitation facilities. This infographic highlights the current situation around access to improved water sources and sanitation facilities around the world. For the HIU this is baseline information we evaluate when trying to determine underlying vulnerability to disasters and humanitarian crisis, especially in less developed countries.",
+        "featured": true,
+        "url": "http://localhost:4000/products/Worldwide_AccesstoWaterandSanitation_2016Dec19_HIU_U1492",
+        "product_id": "U1492",
+        "product_pdf": "https://s3.amazonaws.com/hiu-products/Worldwide_AccesstoWaterandSanitation_2016Dec19_HIU_U1492.pdf",
+        "product_jpg": "https://s3.amazonaws.com/hiu-products/products/resized/Worldwide_AccesstoWaterandSanitation_2016Dec19_HIU_U1492.jpg",
+        
+        
+        "thumbnail_150": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/small/Worldwide_AccesstoWaterandSanitation_2016Dec19_HIU_U1492_thumb.jpg",
+        "thumbnail_300": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/middle/Worldwide_AccesstoWaterandSanitation_2016Dec19_HIU_U1492_thumb.jpg",
+        "twitter_pic": "https://s3.amazonaws.com/hiu-thumbnails/products/twitter/",
+        "tweet": "Infographic - Worldwide: Access to Improved Sanitation Facilities and Water Sources @StateHIU",
+        "keywords": ["WASH","Water","Sanitation","Millennium Development Goals","Worldwide","Humanitarian Response"],
+        "marker-color": "#8cc250"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [0, 0]
+      }
+    },
+    
+    
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Burundi Displacement Snapshot",
+        "date_published": "December 19, 2016",
+        "region_id": "AF",
+        "region_title": "Africa",
+        "description": "This infographic depicts the displacement of refugees from Burundi to neighboring countries as well as estimates of internal displacement as IDPs per province since the crisis began in April 2015. The map also highlights the current UNHCR funding for the situation.",
+        "featured": true,
+        "url": "http://localhost:4000/products/Burundi_DisplacementSnapshot_2016Dec19_HIU_U1491",
+        "product_id": "U1491",
+        "product_pdf": "https://s3.amazonaws.com/hiu-products/Burundi_DisplacementSnapshot_2016Dec19_HIU_U1491.pdf",
+        "product_jpg": "https://s3.amazonaws.com/hiu-products/products/resized/Burundi_DisplacementSnapshot_2016Dec19_HIU_U1491.jpg",
+        
+        
+        "thumbnail_150": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/small/Burundi_DisplacementSnapshot_2016Dec19_HIU_U1491_thumb.jpg",
+        "thumbnail_300": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/middle/Burundi_DisplacementSnapshot_2016Dec19_HIU_U1491_thumb.jpg",
+        "twitter_pic": "https://s3.amazonaws.com/hiu-thumbnails/products/twitter/",
+        "tweet": "",
+        "keywords": ["Burundi","Rwanda","Tanzania","Democratic Republic of the Congo","Uganda","Refugee","Internally displaced persons","IDP"],
+        "marker-color": "#8cc250"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [29.3644, -3.3822]
+      }
+    }
+]
