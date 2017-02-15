@@ -4,7 +4,7 @@ category: guides
 title: "Publishing Open Geospatial Data"
 description: "This guide provides instructions for how to publish open geospatial data to [Data.gov](http://www.data.gov/) and [Humanitarian Data Exchange](https://data.hdx.rwlabs.org/) (HDX) using [GeoNode](http://geonode.org/), specifically [State GeoNode](http://geonode.state.gov/).  State GeoNode is a digital service provided by the U.S. Department of State for publishing open geographic data produced by or compiled by the U.S. Government to the public, U.S. Government decision-makers, and partners on complex emergencies, natural disasters, and diplomatic activities world-wide."
 version: 1.0
-date_published: 2015-10-13
+date: 2015-10-13
 featured: false
 keywords:
   - cybergis

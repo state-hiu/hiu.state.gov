@@ -6,14 +6,16 @@
       {% else %}
       <a href="{{ site.baseurl }}{{ guide.url | remove: '.html' }}"><h4>{{ guide.title }}</h4></a>
       {% endif %}
-      {{ guide.date_published | date: '%B %d, %Y' }}
+      {{ guide.date | date: '%B %d, %Y' }}
       <br>
       <br>
       {% if guide.description %}
       {{ guide.description | markdownify }}
       {% endif %}
       <br>
-      <a href="{{ site.baseurl }}{{ guide.url | remove: '.html' }}">View</a>
+
+      <!--<a href="{{ site.baseurl }}{{ guide.url | remove: '.html' }}">View</a>-->
+
     </div>
 
     <div class="col-md-5">

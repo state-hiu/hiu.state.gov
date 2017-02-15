@@ -4,12 +4,12 @@ category: guides
 title: "Publishing Products"
 description: "This guide provides instructions for how to publish products to the HIU website." 
 version: 1.1
-date_published: 2016-10-17
+date: 2016-10-17
 featured: false
 keywords:
   -  site
 ---
-# [Guides]({{ site.baseurl }}/guides) / [{{ page.title }} ({{ page.version }})]({{ site.baseurl }}{{ page.url | remove: '.html'}})
+# [Guides]({{ site.baseurl }}/guides) / [{{ page.title }} (ver {{ page.version }})]({{ site.baseurl }}{{ page.url | remove: '.html'}})
 
 ## Description
 

@@ -31,6 +31,6 @@ keywords:
   - Refugee camps
   - Border crossing
   - Affected Populations
-  - Internally Displaced Persons (IDPs)
+  - Internally Displaced Persons
 ---
 This 3-page map is a comprehensive overview of the humanitarian situation in Syria and Iraq as a result of conflict throughout 2016, and the years prior. Page 1 highlights humanitarian access and internally displaced persons (IDPs) throughout Iraq and Syria, with a timeline of key events in 2016; page 2 includes 4 inset maps of major flashpoints of conflict and displacement in 2016; and page 3 is a comprehensive summary of displacement inside Iraq/Syria and all of the surrounding refugee-hosting nations (including Europe).

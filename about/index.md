@@ -17,15 +17,15 @@ The HIU is part of the Bureau of Intelligence and Research, U.S. Department of S
 
 ## [Initiatives]({{ site.baseurl }}/about/initiatives)
 
-Learn more about our initiatives, such as [MapGive](http://mapgive.state.gov) and [Secondary Cities](http://secondarycities.state.gov).
-
-## [Satellite Imagery]({{ site.baseurl }}/about/imagery)
-
-For information on commercial satellite imagery requests.
+Learn more about our initiatives, such as MapGive and Secondary Cities.
 
 ## [Careers]({{ site.baseurl }}/about/careers)
 
 Visit our careers page if you are interested in a career or internship with the HIU.
+
+## [Satellite Imagery]({{ site.baseurl }}/imagery)
+
+For information on commercial satellite imagery requests.
 
 ## [Guides]({{ site.baseurl }}/guides)
 

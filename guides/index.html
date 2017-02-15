@@ -29,47 +29,56 @@ title: Guides
 
 
   <div><h1 class="page-title">{{ page.title }}</h1></div>
+
   <ul class="nav nav-tabs" style="padding: 10px 10px 0px 10px;">
-    <li class="active"><a href="#featured" data-toggle="tab">Featured ({{ count_featured }})</a></li>
-    <li><a href="#cybergis" data-toggle="tab">CyberGIS ({{ count_cybergis }})</a></li>
-    <li><a href="#ittc" data-toggle="tab">ITTC ({{ count_ittc }})</a></li>
+    <!--<li class="active"><a href="#featured" data-toggle="tab">Featured ({{ count_featured }})</a></li>-->
+    <li class="active">
+      <a href="#all" data-toggle="tab">All ({{ site.categories.guides | size }}) </a>
+    </li>
     <li><a href="#site" data-toggle="tab">HIU Website ({{ count_site }})</a></li>
-    <li><a href="#all" data-toggle="tab">All ({{ site.categories.guides | size }}) </a></li>
+    <li><a href="#ittc" data-toggle="tab">ITTC ({{ count_ittc }})</a></li>
+    <li><a href="#cybergis" data-toggle="tab">CyberGIS ({{ count_cybergis }})</a></li>
   </ul>
+
   <div class="tab-content" style="padding: 10px;">
-    <div id="featured" class="tab-pane active">
-      {% for guide in site.categories.guides %}
+
+    {% assign sorted = (site.categories.guides | reversed sort: 'date') %}
+
+    <div id="all" class="tab-pane active">
+      {% for guide in sorted %}
+        {% include main/listitem_guide.html %}
+      {% endfor %}
+    </div>
+    <div id="featured" class="tab-pane">
+      {% for guide in sorted %}
         {% if guide.featured == true %}
           {% include main/listitem_guide.html %}
         {% endif %}
       {% endfor %}
     </div>
-    <div id="cybergis" class="tab-pane active">
-      {% for guide in site.categories.guides %}
+    <div id="cybergis" class="tab-pane">
+      {% for guide in sorted %}
         {% if guide.keywords contains 'cybergis' %}
           {% include main/listitem_guide.html %}
         {% endif %}
       {% endfor %}
     </div>
-    <div id="ittc" class="tab-pane active">
-      {% for guide in site.categories.guides %}
+    <div id="ittc" class="tab-pane">
+      {% for guide in sorted %}
         {% if guide.keywords contains 'ittc' %}
           {% include main/listitem_guide.html %}
         {% endif %}
       {% endfor %}
     </div>
-    <div id="site" class="tab-pane active">
-      {% for guide in site.categories.guides %}
+    <div id="site" class="tab-pane">
+      {% for guide in sorted %}
         {% if guide.keywords contains 'site' %}
           {% include main/listitem_guide.html %}
         {% endif %}
       {% endfor %}
     </div>
-    <div id="all" class="tab-pane">
-      {% for guide in site.categories.guides %}
-        {% include main/listitem_guide.html %}
-      {% endfor %}
-    </div>
+    
+
   </div>
 
 
