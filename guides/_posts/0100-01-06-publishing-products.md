@@ -9,7 +9,7 @@ featured: false
 keywords:
   -  site
 ---
-# [Guides]({{ site.baseurl }}/guides) / [{{ page.title }} (ver {{ page.version }})]({{ site.baseurl }}{{ page.url | remove: '.html'}})
+# [Guides]({{ site.baseurl }}/guides) / {{ page.title }} (ver {{ page.version }})
 
 ## Description
 
@@ -57,7 +57,7 @@ If a product has more than one page then you need to upload a seperate jpg for e
 
 ## Step 3: Upload Thumbnails
 
-Upload thumbnails to the hiu-thumbnail S3 bucket inside the products directory. That is `https://s3.amazonaws.com/hiu-thumbnails/products/`. Here are where all of the images are stored Upload a .jpg. It must be of any size 600px or greater, and has to have the same width as height. thumbnails of 600px, 300px, and 150px will automatically be created and saved inside the resized directory.
+Upload thumbnails to the hiu-thumbnail S3 bucket inside the products directory. That is `https://s3.amazonaws.com/hiu-thumbnails/products/`. Here are where all of the images are stored Upload a .jpg. It must be of any size 600px or greater, and has to have the same width as height. Thumbnails of 600px, 300px, and 150px will automatically be created and saved inside the resized directory.
 
 ## Step 4: Create Post
 
@@ -127,7 +127,7 @@ Check the existing list of keywords to minimize duplication and redundancy. Make
 
 Insert the message that will auto-fill when a user chooses to share the product on twitter. 255 characters or less.
 
-For example:
+An example post:
 
 ```
 ---
@@ -159,4 +159,4 @@ The humanitarian crisis in Yemen continues to deteriorate with an estimated 21.1
 
 ## Step 5: Double-check
 
-Double check that the product is now visible on the site.
+Double check that the product is now visible on the development site.

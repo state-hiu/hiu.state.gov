@@ -1,8 +1,8 @@
 ---
 layout: guide
 category: guides
-title: "Vanilla GeoNode"
-description: "This guide provides instructions for installing and managing a vanilla GeoNode instance in a production environment.  You can find basic information about installing a vanilla GeoNode at [http://geonode.org/](http://geonode.org/).  Use the ROGUE GeoNode guide for deployment of a Rogue GeoNode in a production environment [https://github.com/state-hiu/cybergis-guides/blob/master/1.0/cybergis-guides-roguegeonode-1.0.md](https://github.com/state-hiu/cybergis-guides/blob/master/1.0/cybergis-guides-roguegeonode-1.0.md)."
+title: "Vanilla GeoNode Set-up"
+description: "This guide provides instructions for installing and managing a vanilla GeoNode instance in a production environment.  You can find basic information about installing a vanilla GeoNode at [http://geonode.org/](http://geonode.org/)."
 version: 1.0
 date: 2015-10-07
 featured: true
@@ -69,7 +69,7 @@ Installation only requires 5 simple steps.  Most steps only require executing on
 4. Create superuser [[Jump]](#step-4)
 5. Update IP Address [[Jump]](#step-5)
 
-### Kown Issues
+### Known Issues
 No known issues
 
 ### Step 1

@@ -1,7 +1,7 @@
 ---
 layout: guide
 category: guides
-title: "OpenGeo Suite"
+title: "OpenGeo Suite Set-up"
 description: "This guide provides instructions for installing and managing an OpenGeo Suite instance in a production environment.  You can find the basic installation guide at [http://suite.opengeo.org/opengeo-docs/installation/ubuntu/install.html](http://suite.opengeo.org/opengeo-docs/installation/ubuntu/install.html).  You can find more information about configuring the OpenGeo Suite for production at [http://suite.opengeo.org/opengeo-docs/sysadmin/production/performance.html](http://suite.opengeo.org/opengeo-docs/sysadmin/production/performance.html)."
 version: 1.0
 date: 2015-10-07
@@ -47,11 +47,11 @@ Installation only requires 5 simple steps.  Most steps only require executing on
 4. Remove sensitive documents [[Jump]](#step-4)
 5. Tune memory space.  [[Jump]](#step-5)
 
-###Kown Issues
+### Known Issues
 
 No known issues
 
-###Step 1
+### Step 1
 
 The first step is install the CyberGIS scripts from the [cybergis-scripts](https://github.com/state-hiu/cybergis-scripts) repo.  As root (`sudo su -`) execute the following commands.
 
@@ -63,7 +63,7 @@ git clone https://github.com/state-hiu/cybergis-scripts.git cybergis-scripts.git
 cp cybergis-scripts.git/profile/cybergis-scripts.sh /etc/profile.d/
 ```
 
-###Step 2
+### Step 2
 
 The second step is to download and configure the OpenGeo Suite apt repo.  The following code block will download and configure the OpenGeo Suite apt repo.
 
@@ -85,7 +85,7 @@ and by checking the apt cache with the following command.
 apt-cache search opengeo
 ```
 
-###Step 3
+### Step 3
 
 Confirm you ran `apt-get update` so that the OpenGeo Suite apt repo is discovered.  To install the OpenGeo Suite, run the following command.
 
@@ -95,7 +95,7 @@ apt-get install opengeo
 
 The default admin `username/password` will be `admin/geoserver`.  After the command has finished running, you should be able to log into GeoServer via the implicit url.  GeoServer will respond to the domain name or ip address automatically.
 
-###Step 4
+### Step 4
 
 You should now remove sensitive documents that are left on disk after a fresh install.
 
@@ -107,7 +107,7 @@ rm -f /var/lib/opengeo/geoserver/security/masterpw.info
 rm -f /var/lib/opengeo/geoserver/security/users.properties.old
 ```
 
-###Step 5
+### Step 5
 
 You're still root right?  Now we need to configure GeoServer so that it has enough memory.  If you do not tune GeoServer, then your risk out of memory errors on large WMS requests.  You can tun GeoServer with the following command.  The `repo` paramter is the path to a git repo that is backing up the /etc/defaults directory, so that you can roll back to a previous version if necessary.  The `Xmx` parameter stands for the maximum JVM heap size.  See [http://docs.oracle.com/javase/6/docs/technotes/tools/windows/java.html](http://docs.oracle.com/javase/6/docs/technotes/tools/windows/java.html) for more details.  Other JVM options will be added automatically in align with the GeoServer performance documentation provided at [http://suite.opengeo.org/opengeo-docs/sysadmin/production/performance.html](http://suite.opengeo.org/opengeo-docs/sysadmin/production/performance.html).
 
