@@ -720,7 +720,7 @@
     }, {
         "type": "Feature",
         "properties": {
-            "NAME": "DEMOCRATIC REPUBLIC OF THE CONGO",
+            "NAME": "DEMOCRATIC<br>REPUBLIC<br>OF THE<br>CONGO",
             "REGION": "Africa",
             "NUM_CODE": 180.000000,
             "3_CODE": "COD",
