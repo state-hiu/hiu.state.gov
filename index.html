@@ -66,7 +66,6 @@ a.title div{
   text-align: center;
   letter-spacing: .06em;
   line-height: 1em;
-  text-transform: uppercase;
   /* word wrap isn't working
   width:150px;
   word-wrap:break-word; */
@@ -83,7 +82,6 @@ a.title div{
   text-align: center;
   letter-spacing: .02em;
   line-height: 1em;
-  text-transform: uppercase;
   /* word wrap isn't working
   width:150px;
   word-wrap:break-word; */
@@ -101,7 +99,6 @@ a.title div{
   text-align: center;
   letter-spacing: .02em;
   line-height: 1em;
-  text-transform: uppercase;
   /* word wrap isn't working
   width:150px;
   word-wrap:break-word; */
@@ -361,7 +358,7 @@ $('#myModal').on('hidden.bs.modal', function () {
     var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/cit0gm97500012ypfwnzijj6o/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ',{
     //var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/ciyd2k8k300352sqs2vytdguw/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ',{
       minZoom: 1,
-      maxZoom: 12,
+      maxZoom: 10,
       scrollWheelZoom: true,
       zoomControl: false,
       attribution: 'Names and boundary representation are not necessarily authoritative'
@@ -410,35 +407,41 @@ $('#myModal').on('hidden.bs.modal', function () {
     //http://gis.stackexchange.com/questions/59571/how-to-add-text-only-labels-on-leaflet-map-with-no-icon
     function onEachFeatureLargeLabels(feature, layer) {
         //layer.setStyle({'opacity' :'.5'});
-        if (feature.properties && feature.properties.COUNTRY_NA) {
+        if (feature.properties && feature.properties.NAME) {
             //layer.bindTooltip("my tooltip text").openTooltip();
-            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-large-country-label", offset: [0, 0], direction: 'center', pane: 'labels' });
+            layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-large-country-label", offset: [0, 0], direction: 'center', pane: 'labels' });
         }
     }
 
     function onEachFeatureMediumLabels(feature, layer) {
         //layer.setStyle({'opacity' :'.5'});
-        if (feature.properties && feature.properties.COUNTRY_NA) {
+        if (feature.properties && feature.properties.NAME) {
             //layer.bindTooltip("my tooltip text").openTooltip();
-            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-medium-country-label", offset: [0, 0], direction: 'center', pane: 'labels' });
+            layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-medium-country-label", offset: [0, 0], direction: 'center', pane: 'labels' });
         }
     }
 
     function onEachFeatureSmallLabels(feature, layer) {
         //layer.setStyle({'opacity' :'.5'});
-        if (feature.properties && feature.properties.COUNTRY_NA) {
+        if (feature.properties && feature.properties.NAME) {
             //layer.bindTooltip("my tooltip text").openTooltip();
-            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-small-country-label", offset: [0, 0], direction: 'center', pane: 'labels' });
+            if (feature.properties.Italics == "Y") {
+              layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-small-country-italics-label", offset: [0, 0], direction: 'center', pane: 'labels' });
+          } else {
+              layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-small-country-label", offset: [0, 0], direction: 'center', pane: 'labels' });
+          }
         }
     }
 
+/*
     function onEachFeatureSmallItalicsLabels(feature, layer) {
         //layer.setStyle({'opacity' :'.5'});
-        if (feature.properties && feature.properties.COUNTRY_NA) {
+        if (feature.properties && feature.properties.NAME) {
             //layer.bindTooltip("my tooltip text").openTooltip();
-            layer.bindTooltip(feature.properties.COUNTRY_NA, {permanent: true, className: "my-small-country-italics-label", offset: [0, 0], direction: 'center', pane: 'labels' });
+            layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-small-country-italics-label", offset: [0, 0], direction: 'center', pane: 'labels' });
         }
     }
+*/
 
     function onEachFeatureRegions(feature, layer) {
         //layer.setStyle({'opacity' :'.5'});
@@ -492,19 +495,44 @@ $('#myModal').on('hidden.bs.modal', function () {
           },
           onEachFeature: onEachFeatureSmallLabels
         });
-
+/*
     var SmallCountryLabelsItalicsLayer = new L.GeoJSON.AJAX("{{ site.baseurl }}/assets/country_labels_small_italics.geojson", {
           pointToLayer: function (feature, latlng) {
               return L.circleMarker(latlng, geojsonMarkerOptions);
           },
           onEachFeature: onEachFeatureSmallItalicsLabels
         });
+*/
 
+    var regionCountryLabelFontSize = 15;
+    var largeCountryLabelFontSize = 13;
+    var mediumCountryLabelFontSize = 9;
+    var smallCountryLabelFontSize = 5;
 
     map.on('zoomend', function () {
       console.log('zoomend called');
       console.log(map.getZoom());
+
+      var regionZoomLevel = regionCountryLabelFontSize + (map.getZoom() * 2);
+      var largeZoomLevel = largeCountryLabelFontSize + map.getZoom();
+      var mediumZoomLevel = mediumCountryLabelFontSize + map.getZoom();
+      var smallZoomLevel = smallCountryLabelFontSize + map.getZoom();
+
+      console.log('large label zoom level');
+      console.log(largeZoomLevel);
+
+      $('.my-region-label').css("font-size", regionZoomLevel + "px");
+      $('.my-large-country-label').css("font-size", largeZoomLevel + "px");
+      $('.my-medium-country-label').css("font-size", mediumZoomLevel + "px");
+      $('.my-small-country-label').css("font-size", smallZoomLevel + "px");
+      $('.my-small-country-italics-label').css("font-size", smallZoomLevel + "px");
+
       if (map.getZoom() < 4 ) {
+
+          map.removeLayer(RegionLabelsLayer);
+          $('.my-region-label').css("font-size", "18px");
+          RegionLabelsLayer.addTo(map);
+
           if (map.hasLayer(LargeCountryLabelsLayer)){
               map.removeLayer(LargeCountryLabelsLayer);
           } else {
@@ -552,6 +580,19 @@ $('#myModal').on('hidden.bs.modal', function () {
           } else {
               SmallCountryLabelsLayer.addTo(map);
               SmallCountryLabelsItalicsLayer.addTo(map);
+          }
+      }
+
+      if (map.getZoom() < 8 ) {
+        if (map.hasLayer(topoLayer)){
+              //do nothing
+          } else {
+              topoLayer.addTo(map);
+          }
+      }
+      if (map.getZoom() >= 8 ) {
+        if (map.hasLayer(topoLayer)){
+              map.removeLayer(topoLayer);
           }
       }
 

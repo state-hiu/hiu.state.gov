@@ -1,32 +1,1196 @@
 {
-"type": "FeatureCollection",
-"features": [
-{ "type": "Feature", "properties": { "OBJECTID": 184, "COUNTRY_NA": "Monaco", "Size": "Small", "F3_CODE": "MCO", "NUM_CODE": "492" }, "geometry": { "type": "Point", "coordinates": [ 7.424090397922803, 43.738012016253542 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 185, "COUNTRY_NA": "Holy See", "Size": "Small", "F3_CODE": "SMR", "NUM_CODE": "674" }, "geometry": { "type": "Point", "coordinates": [ 12.452055487517171, 41.893196715199643 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 186, "COUNTRY_NA": "San Marino", "Size": "Small", "F3_CODE": "SMR", "NUM_CODE": "674" }, "geometry": { "type": "Point", "coordinates": [ 12.460045544726926, 43.943090137006472 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 187, "COUNTRY_NA": "Andorra", "Size": "Small", "F3_CODE": "AND", "NUM_CODE": "020" }, "geometry": { "type": "Point", "coordinates": [ 1.60067077948552, 42.542166871536402 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 188, "COUNTRY_NA": "Saint Lucia", "Size": "Small", "F3_CODE": "LCA", "NUM_CODE": "662" }, "geometry": { "type": "Point", "coordinates": [ -60.977896755795832, 13.906247748073122 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 189, "COUNTRY_NA": "Macedonia", "Size": "Small", "F3_CODE": "MKD", "NUM_CODE": "807" }, "geometry": { "type": "Point", "coordinates": [ 21.742271905417748, 41.612656948389152 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 190, "COUNTRY_NA": "Luxembourg", "Size": "Small", "F3_CODE": "LUX", "NUM_CODE": "442" }, "geometry": { "type": "Point", "coordinates": [ 6.135027925776928, 49.814006202623837 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 191, "COUNTRY_NA": "Seychelles", "Size": "Small", "F3_CODE": "SYC", "NUM_CODE": "690" }, "geometry": { "type": "Point", "coordinates": [ 55.452764782795775, -4.681731252546157 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 192, "COUNTRY_NA": "Sao Tome and Principe", "Size": "Small", "F3_CODE": "STP", "NUM_CODE": "678" }, "geometry": { "type": "Point", "coordinates": [ 6.610436296071009, 0.21839293146348 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 193, "COUNTRY_NA": "Kosovo", "Size": "Small", "F3_CODE": "XKS", "NUM_CODE": "901" }, "geometry": { "type": "Point", "coordinates": [ 20.893994225318021, 42.562585905495425 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 194, "COUNTRY_NA": "Moldova", "Size": "Small", "F3_CODE": "MDA", "NUM_CODE": "498" }, "geometry": { "type": "Point", "coordinates": [ 28.713596328210475, 47.114254840829972 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 196, "COUNTRY_NA": "Antigua and Barbuda", "Size": "Small", "F3_CODE": "ATG", "NUM_CODE": "028" }, "geometry": { "type": "Point", "coordinates": [ -61.790885019172514, 17.08673418450724 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 197, "COUNTRY_NA": "Trinidad and Tobago", "Size": "Small", "F3_CODE": "TTO", "NUM_CODE": "780" }, "geometry": { "type": "Point", "coordinates": [ -61.422676575997734, 10.441226515851072 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 201, "COUNTRY_NA": "The Gambia", "Size": "Small", "F3_CODE": "GMB", "NUM_CODE": "270" }, "geometry": { "type": "Point", "coordinates": [ -15.309840217154326, 13.445931707232804 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 203, "COUNTRY_NA": "Malta", "Size": "Small", "F3_CODE": "MLT", "NUM_CODE": "470" }, "geometry": { "type": "Point", "coordinates": [ 14.4477940811528, 35.902429799830799 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 204, "COUNTRY_NA": "Saint Kitts and Nevis", "Size": "Small", "F3_CODE": "KNA", "NUM_CODE": "659" }, "geometry": { "type": "Point", "coordinates": [ -62.747250410725606, 17.313563015226482 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 205, "COUNTRY_NA": "Israel", "Size": "Small", "F3_CODE": "ISR", "NUM_CODE": "376" }, "geometry": { "type": "Point", "coordinates": [ 34.908553580401481, 30.775476785939709 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 206, "COUNTRY_NA": "Grenada", "Size": "Small", "F3_CODE": "GRD", "NUM_CODE": "308" }, "geometry": { "type": "Point", "coordinates": [ -61.706767478450111, 12.108928895256305 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 208, "COUNTRY_NA": "Saint Vincent and the Grenadines", "Size": "Small", "F3_CODE": "VCT", "NUM_CODE": "670" }, "geometry": { "type": "Point", "coordinates": [ -61.201396395640607, 13.249731426678746 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 210, "COUNTRY_NA": "Liechtenstein", "Size": "Small", "F3_CODE": "LIE", "NUM_CODE": "438" }, "geometry": { "type": "Point", "coordinates": [ 9.553440493856979, 47.159531828293296 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 212, "COUNTRY_NA": "Dominica", "Size": "Small", "F3_CODE": "DMA", "NUM_CODE": "212" }, "geometry": { "type": "Point", "coordinates": [ -61.362085312491814, 15.421251266176085 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 215, "COUNTRY_NA": "Slovenia", "Size": "Small", "F3_CODE": "SVN", "NUM_CODE": "705" }, "geometry": { "type": "Point", "coordinates": [ 14.920982991060947, 46.072440232636161 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 219, "COUNTRY_NA": "Barbados", "Size": "Small", "F3_CODE": "BRB", "NUM_CODE": "052" }, "geometry": { "type": "Point", "coordinates": [ -59.534359855340384, 13.190249894265364 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 222, "COUNTRY_NA": "Montenegro", "Size": "Small", "F3_CODE": "MNE", "NUM_CODE": "499" }, "geometry": { "type": "Point", "coordinates": [ 19.078919691108855, 42.713065305210534 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 226, "COUNTRY_NA": "Lebanon", "Size": "Small", "F3_CODE": "LBN", "NUM_CODE": "422" }, "geometry": { "type": "Point", "coordinates": [ 35.883784383438552, 33.873399303637143 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 228, "COUNTRY_NA": "Gaza Strip", "Size": "Small, initial cap", "F3_CODE": "XGZ", "NUM_CODE": "916" }, "geometry": { "type": "Point", "coordinates": [ 34.390531574649678, 31.407135153134178 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 229, "COUNTRY_NA": "West Bank", "Size": "Small, initial cap", "F3_CODE": "XWB", "NUM_CODE": "934" }, "geometry": { "type": "Point", "coordinates": [ 35.251682124448934, 31.947351760265356 ] } }
-]
+    "type": "FeatureCollection",
+
+
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "NAME": "South Georgia and the South Sandwich Islands (U.K.)",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 239.000000,
+            "3_CODE": "SGS",
+            "2_CODE": "GS",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-36.923165387938724, -54.427380032279444]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SAINT HELENA",
+            "REGION": "Africa",
+            "NUM_CODE": 654.000000,
+            "3_CODE": "SHN",
+            "2_CODE": "SH",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-5.71267245645339, -15.96502291138313]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "French Southern and Antarctic Lands (FR.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 260.000000,
+            "3_CODE": "ATF",
+            "2_CODE": "TF",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [69.560097573985075, -49.194336821838959]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Cocos (Keeling) Islands (AUSTL.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 166.000000,
+            "3_CODE": "CCK",
+            "2_CODE": "CC",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [96.838594852057724, -12.171965465186361]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Bouvet Island (NOR.)",
+            "REGION": "Africa",
+            "NUM_CODE": 74.000000,
+            "3_CODE": "BVT",
+            "2_CODE": "BV",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [3.409974717977661, -54.433150628745267]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Faroe Islands (DEN.)",
+            "REGION": "Europe",
+            "NUM_CODE": 234.000000,
+            "3_CODE": "FRO",
+            "2_CODE": "FO",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-7.005286064800373, 62.124685978454366]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Wake Island (U.S.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 933.000000,
+            "3_CODE": "XWK",
+            "2_CODE": "QW",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [166.629964078006935, 19.288882574509046]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Niue (N.Z.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 570.000000,
+            "3_CODE": "NIU",
+            "2_CODE": "NU",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-169.860840063410393, -19.053623696712236]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Northern Mariana Islands (U.S.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 580.000000,
+            "3_CODE": "MNP",
+            "2_CODE": "MP",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [145.758604445154162, 15.190427407658859]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Akrotiri Sovereign Base Area (U.K.)",
+            "REGION": "Middle East",
+            "NUM_CODE": 900.000000,
+            "3_CODE": "XQZ",
+            "2_CODE": "QZ",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [32.898610442465042, 34.633786361235394]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Jersey (U.K.)",
+            "REGION": "Europe",
+            "NUM_CODE": 832.000000,
+            "3_CODE": "JEY",
+            "2_CODE": "JE",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-2.133792917546231, 49.212088602077387]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Johnston Atoll (U.S.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 922.000000,
+            "3_CODE": "XJA",
+            "2_CODE": "XU",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-169.535911093180317, 16.728957203857561]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Palmayra Atoll (U.S.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 927.000000,
+            "3_CODE": "XPL",
+            "2_CODE": "XL",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-162.077415161088851, 5.879791956052344]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Christmas Island (AUSTL.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 162.000000,
+            "3_CODE": "CXR",
+            "2_CODE": "CX",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [105.62233045712992, -10.491390217520916]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Ashmore and Cartier Islands (AUSTL.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 902.000000,
+            "3_CODE": "XAC",
+            "2_CODE": "XA",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [122.968299541393435, -12.274060633428036]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Norfolk Island (AUSTRL.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 574.000000,
+            "3_CODE": "NFK",
+            "2_CODE": "NF",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [167.941221151858883, -29.034092230391423]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Coral Sea Islands (AUSTRL.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 906.000000,
+            "3_CODE": "XCS",
+            "2_CODE": "XC",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [150.006207336044383, -16.134589669071516]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Faroe Islands (DEN.)",
+            "REGION": "Europe",
+            "NUM_CODE": 234.000000,
+            "3_CODE": "FRO",
+            "2_CODE": "FO",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-58.670324007490834, -51.79687582793045]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Isle of Man (U.K.)",
+            "REGION": "Europe",
+            "NUM_CODE": 833.000000,
+            "3_CODE": "IMN",
+            "2_CODE": "IM",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-4.559440947358098, 54.234061149479061]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "French Polynesia (FR.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 258.000000,
+            "3_CODE": "PYF",
+            "2_CODE": "PF",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-149.354581630030651, -17.686436226345222]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "British Indian Ocean Territory (U.K.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 86.000000,
+            "3_CODE": "IOT",
+            "2_CODE": "IO",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [72.425864557325781, -7.338868979031815]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Heard Island and McDonald Islands (AUSTRL.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 334.000000,
+            "3_CODE": "HMD",
+            "2_CODE": "HM",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [73.555569788521893, -53.078836027417452]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Saint Pierre and Miquelon (FR.)",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 666.000000,
+            "3_CODE": "SPM",
+            "2_CODE": "PM",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-56.341222495472749, 46.961555980401812]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Pitcairn Islands (U.K.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 612.000000,
+            "3_CODE": "PCN",
+            "2_CODE": "PN",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-128.314321077543298, -24.361684661208585]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Guernsey (U.K)",
+            "REGION": "Europe",
+            "NUM_CODE": 831.000000,
+            "3_CODE": "GGY",
+            "2_CODE": "GG",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-2.588116416221766, 49.463775386394929]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Kingman Reef (U.S.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 924.000000,
+            "3_CODE": "XKR",
+            "2_CODE": "XM",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-162.557706343860644, 6.416901319410812]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Jan Mayen (NOR.)",
+            "REGION": "Europe",
+            "NUM_CODE": 920.000000,
+            "3_CODE": "XJM",
+            "2_CODE": "XJ",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-8.4998705494516, 70.990985502191592]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Reunion (FR.)",
+            "REGION": "Africa",
+            "NUM_CODE": 638.000000,
+            "3_CODE": "REU",
+            "2_CODE": "RE",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [55.533997025719884, -21.119053339445259]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Dhekelia Sovereign Base Area (U.K.)",
+            "REGION": "Middle East",
+            "NUM_CODE": 907.000000,
+            "3_CODE": "XXD",
+            "2_CODE": "XD",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [33.791721218561946, 35.033289193485501]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "American Samoa (U.S.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 16.000000,
+            "3_CODE": "ASM",
+            "2_CODE": "AS",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [189.277335746229255, -14.311525077903553]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Baker Island (U.S.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 903.000000,
+            "3_CODE": "XBK",
+            "2_CODE": "XB",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [183.537811722902802, 0.221944067319271]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Clipperton Island (FR.)",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 905.000000,
+            "3_CODE": "CPT",
+            "2_CODE": "CP",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-109.218973480060185, 10.296961604630951]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Jarvis Island (U.S.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 921.000000,
+            "3_CODE": "XJV",
+            "2_CODE": "XQ",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-160.021085305090423, -0.379973533270885]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Guam (U.S.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 316.000000,
+            "3_CODE": "GUM",
+            "2_CODE": "GU",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [144.775383585783118, 13.448595059048415]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Howland Island (U.S.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 919.000000,
+            "3_CODE": "XHO",
+            "2_CODE": "XH",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [183.362474368748622, 0.803886526296907]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Western Sahara",
+            "REGION": "Africa",
+            "NUM_CODE": 732.000000,
+            "3_CODE": "ESH",
+            "2_CODE": "EH",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-13.984822490227543, 23.80148901079184]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Gaza Strip",
+            "REGION": "Middle East",
+            "NUM_CODE": 916.000000,
+            "3_CODE": "XGZ",
+            "2_CODE": "XG",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [34.390531574901246, 31.407135152762066]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "West Bank",
+            "REGION": "Middle East",
+            "NUM_CODE": 934.000000,
+            "3_CODE": "XWB",
+            "2_CODE": "XW",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [35.251682124418124, 31.94735176037139]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "PARACEL ISLANDS",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 928.000000,
+            "3_CODE": "XPR",
+            "2_CODE": "XP",
+            "Italics": "Y"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [112.329983010609112, 16.835047400421757]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "Taiwan",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 158.000000,
+            "3_CODE": "TWN",
+            "2_CODE": "TW",
+            "Italics": "Y"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [120.904201574767967, 23.600849810595122]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SPRATLY ISLANDS",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 929.000000,
+            "3_CODE": "XSP",
+            "2_CODE": "XS",
+            "Italics": "Y"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [114.335931120540465, 11.440871380973732]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SAINT HELENA",
+            "REGION": "Africa",
+            "NUM_CODE": 654.000000,
+            "3_CODE": "SHN",
+            "2_CODE": "SH",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-5.71267245645339, -15.96502291138313]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MONACO",
+            "REGION": "Europe",
+            "NUM_CODE": 492.000000,
+            "3_CODE": "MCO",
+            "2_CODE": "MC",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [7.424090398019501, 43.73801201617934]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SAN MARINO",
+            "REGION": "Europe",
+            "NUM_CODE": 674.000000,
+            "3_CODE": "SMR",
+            "2_CODE": "SM",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [12.460045544549928, 43.943090136734384]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "ANDORRA",
+            "REGION": "Europe",
+            "NUM_CODE": 20.000000,
+            "3_CODE": "AND",
+            "2_CODE": "AD",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [1.600670779920534, 42.542166871644042]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SAINT LUCIA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 662.000000,
+            "3_CODE": "LCA",
+            "2_CODE": "LC",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-60.977896755770999, 13.906247747992694]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MACEDONIA",
+            "REGION": "Europe",
+            "NUM_CODE": 807.000000,
+            "3_CODE": "MKD",
+            "2_CODE": "MK",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [21.742271905863078, 41.612656948608816]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "LUXEMBOURG",
+            "REGION": "Europe",
+            "NUM_CODE": 442.000000,
+            "3_CODE": "LUX",
+            "2_CODE": "LU",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [6.135027925959179, 49.814006202667514]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SEYCHELLES",
+            "REGION": "Africa",
+            "NUM_CODE": 690.000000,
+            "3_CODE": "SYC",
+            "2_CODE": "SC",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [55.452764783162365, -4.681731252532813]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SAO TOME AND PRINCIPE",
+            "REGION": "Africa",
+            "NUM_CODE": 678.000000,
+            "3_CODE": "STP",
+            "2_CODE": "ST",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [6.610436296336786, 0.218392931032582]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "KOSOVO",
+            "REGION": "Europe",
+            "NUM_CODE": 901.000000,
+            "3_CODE": "XKS",
+            "2_CODE": "XK",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [20.89399422538537, 42.562585905292366]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MOLDOVA",
+            "REGION": "Europe",
+            "NUM_CODE": 498.000000,
+            "3_CODE": "MDA",
+            "2_CODE": "MD",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [28.577765365662287, 47.068977853073505]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SAINT MARTIN",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 663.000000,
+            "3_CODE": "MAF",
+            "2_CODE": "MF",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-63.084164465800697, 18.085935157400399]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "ANTIGUA AND BARBUDA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 28.000000,
+            "3_CODE": "ATG",
+            "2_CODE": "AG",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-61.790885019399951, 17.086734184739328]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "TRINIDAD AND TOBAGO",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 780.000000,
+            "3_CODE": "TTO",
+            "2_CODE": "TT",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-61.422676575676107, 10.441226516276828]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "NAVASSA ISLAND",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 926.000000,
+            "3_CODE": "XNV",
+            "2_CODE": "XV",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-75.016426281039514, 18.40642520727215]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "BERMUDA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 60.000000,
+            "3_CODE": "BMU",
+            "2_CODE": "BM",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-64.779610096666531, 32.300689820894803]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "CAYMAN ISLANDS",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 136.000000,
+            "3_CODE": "CYM",
+            "2_CODE": "KY",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-81.248004626087337, 19.330608425877386]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "THE GAMBIA",
+            "REGION": "Africa",
+            "NUM_CODE": 270.000000,
+            "3_CODE": "GMB",
+            "2_CODE": "GM",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-15.309840217190384, 13.44593170683342]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "HONG KONG (S.A.R.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 344.000000,
+            "3_CODE": "HKG",
+            "2_CODE": "HK",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [114.152603709741243, 22.411219154561479]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MALTA",
+            "REGION": "Europe",
+            "NUM_CODE": 470.000000,
+            "3_CODE": "MLT",
+            "2_CODE": "MT",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [14.447794081012091, 35.902429799647365]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SAINT KITTS AND NEVIS",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 659.000000,
+            "3_CODE": "KNA",
+            "2_CODE": "KN",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-62.747250410603115, 17.313563015050221]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "ISRAEL",
+            "REGION": "Middle East",
+            "NUM_CODE": 376.000000,
+            "3_CODE": "ISR",
+            "2_CODE": "IL",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [34.908553580718888, 30.775476785771076]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "GRENADA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 308.000000,
+            "3_CODE": "GRD",
+            "2_CODE": "GD",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-61.706767478609521, 12.108928894903073]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SAINT BARTHELEMY",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 652.000000,
+            "3_CODE": "BLM",
+            "2_CODE": "BL",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-62.835584925733968, 17.906158882887866]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SAINT VINCENT AND THE GRENADINES",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 670.000000,
+            "3_CODE": "VCT",
+            "2_CODE": "VC",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-61.201396395813134, 13.249731426995027]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MONTSERRAT",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 500.000000,
+            "3_CODE": "MSR",
+            "2_CODE": "MS",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-62.199931530420471, 16.749376237505913]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "LIECHTENSTEIN",
+            "REGION": "Europe",
+            "NUM_CODE": 438.000000,
+            "3_CODE": "LIE",
+            "2_CODE": "LI",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [9.553440493912518, 47.159531828383535]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "PUERTO RICO",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 630.000000,
+            "3_CODE": "PRI",
+            "2_CODE": "PR",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-66.421788683232364, 18.21821498407877]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "DOMINICA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 212.000000,
+            "3_CODE": "DMA",
+            "2_CODE": "DM",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-61.362085312784842, 15.421251266292245]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "GUADELOUPE",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 312.000000,
+            "3_CODE": "GLP",
+            "2_CODE": "GP",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-61.484155622639037, 16.234017583903267]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SINT MAARTEN",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 534.000000,
+            "3_CODE": "SXM",
+            "2_CODE": "SX",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-63.074176894994437, 18.035775357351213]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SLOVENIA",
+            "REGION": "Europe",
+            "NUM_CODE": 705.000000,
+            "3_CODE": "SVN",
+            "2_CODE": "SI",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [14.920982991210536, 46.072440232627429]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "BRITISH VIRGIN ISLANDS",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 92.000000,
+            "3_CODE": "VGB",
+            "2_CODE": "VG",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-64.635345185020668, 18.422849212597981]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MARTINIQUE",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 474.000000,
+            "3_CODE": "MTQ",
+            "2_CODE": "MQ",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-61.024949311569344, 14.633786794723704]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "TURKS AND CAICOS ISLANDS",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 796.000000,
+            "3_CODE": "TCA",
+            "2_CODE": "TC",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-71.7751266353837, 21.778229111462991]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "BARBADOS",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 52.000000,
+            "3_CODE": "BRB",
+            "2_CODE": "BB",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-59.534359855240638, 13.190249894193357]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "CURACAO",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 531.000000,
+            "3_CODE": "CUW",
+            "2_CODE": "CW",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-68.948644097214242, 12.218126335718097]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "UNITED STATES VIRGIN ISLANDS",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 850.000000,
+            "3_CODE": "VIR",
+            "2_CODE": "VI",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-64.734998947065279, 17.728602068554494]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MONTENEGRO",
+            "REGION": "Europe",
+            "NUM_CODE": 499.000000,
+            "3_CODE": "MNE",
+            "2_CODE": "ME",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [19.078919690862421, 42.713065305439926]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "ANGUILLA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 660.000000,
+            "3_CODE": "AIA",
+            "2_CODE": "AI",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-63.071513542779442, 18.225317256652119]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "ARUBA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 533.000000,
+            "3_CODE": "ABW",
+            "2_CODE": "AW",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-69.968264103523666, 12.522636272299849]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MACAU (S.A.R.)",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 446.000000,
+            "3_CODE": "MAC",
+            "2_CODE": "MO",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [113.545359404721125, 22.198594869397283]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "LEBANON",
+            "REGION": "Middle East",
+            "NUM_CODE": 422.000000,
+            "3_CODE": "LBN",
+            "2_CODE": "LB",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [35.883784383444947, 33.873399303852693]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MAYOTTE",
+            "REGION": "Africa",
+            "NUM_CODE": 175.000000,
+            "3_CODE": "MYT",
+            "2_CODE": "YT",
+            "Italics": "N"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [45.140708898715616, -12.823598973789842]
+        }
+    }]
 }

@@ -1,84 +1,1098 @@
 {
-"type": "FeatureCollection",
-"features": [
-{ "type": "Feature", "properties": { "OBJECTID": 2, "COUNTRY_NA": "Tonga", "Size": "Medium", "F3_CODE": "TON", "NUM_CODE": "776" }, "geometry": { "type": "Point", "coordinates": [ -175.184223106223214, -21.165218111401106 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 3, "COUNTRY_NA": "Nicaragua", "Size": "Medium", "F3_CODE": "NIC", "NUM_CODE": "558" }, "geometry": { "type": "Point", "coordinates": [ -85.07612954309576, 12.63183371325665 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 4, "COUNTRY_NA": "Guatemala", "Size": "Medium", "F3_CODE": "GTM", "NUM_CODE": "320" }, "geometry": { "type": "Point", "coordinates": [ -90.562413160168376, 15.057259796746104 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 5, "COUNTRY_NA": "Burundi", "Size": "Medium", "F3_CODE": "BDI", "NUM_CODE": "108" }, "geometry": { "type": "Point", "coordinates": [ 29.92897272308862, -3.389117643882685 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 6, "COUNTRY_NA": "Swaziland", "Size": "Medium", "F3_CODE": "SWZ", "NUM_CODE": "748" }, "geometry": { "type": "Point", "coordinates": [ 31.456849110125386, -26.517668279084379 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 7, "COUNTRY_NA": "Bosnia and Herzegovina", "Size": "Medium", "F3_CODE": "BIH", "NUM_CODE": "070" }, "geometry": { "type": "Point", "coordinates": [ 17.886625682627667, 43.97771371545101 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 8, "COUNTRY_NA": "Guinea-Bissau", "Size": "Medium", "F3_CODE": "GNB", "NUM_CODE": "624" }, "geometry": { "type": "Point", "coordinates": [ -15.131173673153189, 11.801755605798478 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 9, "COUNTRY_NA": "Guinea", "Size": "Medium", "F3_CODE": "GIN", "NUM_CODE": "324" }, "geometry": { "type": "Point", "coordinates": [ -11.354096340120643, 11.027607896022065 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 10, "COUNTRY_NA": "Panama", "Size": "Medium", "F3_CODE": "PAN", "NUM_CODE": "591" }, "geometry": { "type": "Point", "coordinates": [ -80.122960260962145, 8.419742185036435 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 11, "COUNTRY_NA": "Latvia", "Size": "Medium", "F3_CODE": "LVA", "NUM_CODE": "428" }, "geometry": { "type": "Point", "coordinates": [ 24.901451525212124, 56.967104413880108 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 12, "COUNTRY_NA": "Maldives", "Size": "Medium", "F3_CODE": "MDV", "NUM_CODE": "462" }, "geometry": { "type": "Point", "coordinates": [ 73.529824050314417, 1.944245166593483 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 13, "COUNTRY_NA": "Switzerland", "Size": "Medium", "F3_CODE": "CHE", "NUM_CODE": "756" }, "geometry": { "type": "Point", "coordinates": [ 8.214662114276008, 46.812852148382028 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 14, "COUNTRY_NA": "Czechia", "Size": "Medium", "F3_CODE": "CZE", "NUM_CODE": "203" }, "geometry": { "type": "Point", "coordinates": [ 15.479399171884468, 49.79869192746677 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 15, "COUNTRY_NA": "Haiti", "Size": "Medium", "F3_CODE": "HTI", "NUM_CODE": "332" }, "geometry": { "type": "Point", "coordinates": [ -73.077505868285471, 18.986148206328 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 16, "COUNTRY_NA": "C&ocirc;te d'Ivoire", "Size": "Medium", "F3_CODE": "CIV", "NUM_CODE": "384" }, "geometry": { "type": "Point", "coordinates": [ -5.690255908341573, 7.660242911575542 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 17, "COUNTRY_NA": "Belgium", "Size": "Medium", "F3_CODE": "BEL", "NUM_CODE": "056" }, "geometry": { "type": "Point", "coordinates": [ 4.580518016803687, 50.612124083163131 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 18, "COUNTRY_NA": "Djibouti", "Size": "Medium", "F3_CODE": "DJI", "NUM_CODE": "262" }, "geometry": { "type": "Point", "coordinates": [ 42.589661368505617, 11.8230624241111 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 19, "COUNTRY_NA": "United Arab Emirates", "Size": "Medium", "F3_CODE": "ARE", "NUM_CODE": "784" }, "geometry": { "type": "Point", "coordinates": [ 53.987921064611513, 23.517842000193902 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 20, "COUNTRY_NA": "Portugal", "Size": "Medium", "F3_CODE": "PRT", "NUM_CODE": "620" }, "geometry": { "type": "Point", "coordinates": [ -8.230650029665442, 39.619581707422185 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 21, "COUNTRY_NA": "Togo", "Size": "Medium", "F3_CODE": "TGO", "NUM_CODE": "768" }, "geometry": { "type": "Point", "coordinates": [ 0.972563549549965, 8.807259932273134 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 22, "COUNTRY_NA": "Republic of the Congo", "Size": "Medium", "F3_CODE": "COG", "NUM_CODE": "178" }, "geometry": { "type": "Point", "coordinates": [ 16.021835240085107, -0.081678085005325 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 23, "COUNTRY_NA": "Georgia", "Size": "Medium", "F3_CODE": "GEO", "NUM_CODE": "268" }, "geometry": { "type": "Point", "coordinates": [ 43.383340328680468, 42.093392023581295 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 24, "COUNTRY_NA": "Armenia", "Size": "Medium", "F3_CODE": "ARM", "NUM_CODE": "051" }, "geometry": { "type": "Point", "coordinates": [ 44.766507912387247, 40.441669758148848 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 25, "COUNTRY_NA": "Comoros", "Size": "Medium", "F3_CODE": "COM", "NUM_CODE": "174" }, "geometry": { "type": "Point", "coordinates": [ 43.358926267129959, -11.649504539298349 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 26, "COUNTRY_NA": "Fiji", "Size": "Medium", "F3_CODE": "FJI", "NUM_CODE": "242" }, "geometry": { "type": "Point", "coordinates": [ 177.923465253550944, -17.793858098773871 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 27, "COUNTRY_NA": "Estonia", "Size": "Medium", "F3_CODE": "EST", "NUM_CODE": "233" }, "geometry": { "type": "Point", "coordinates": [ 25.712886166677986, 58.816802527575433 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 28, "COUNTRY_NA": "Sierra Leone", "Size": "Medium", "F3_CODE": "SLE", "NUM_CODE": "694" }, "geometry": { "type": "Point", "coordinates": [ -11.789110535343005, 8.461468036798507 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 29, "COUNTRY_NA": "Benin", "Size": "Medium", "F3_CODE": "BEN", "NUM_CODE": "204" }, "geometry": { "type": "Point", "coordinates": [ 2.389910819786772, 10.493161884534942 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 30, "COUNTRY_NA": "Bahrain", "Size": "Medium", "F3_CODE": "BHR", "NUM_CODE": "048" }, "geometry": { "type": "Point", "coordinates": [ 50.543762758928992, 26.022280866222751 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 31, "COUNTRY_NA": "North Korea", "Size": "Medium", "F3_CODE": "PRK", "NUM_CODE": "408" }, "geometry": { "type": "Point", "coordinates": [ 126.40979449530758, 39.825991504589986 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 32, "COUNTRY_NA": "Jamaica", "Size": "Medium", "F3_CODE": "JAM", "NUM_CODE": "388" }, "geometry": { "type": "Point", "coordinates": [ -77.28005371741979, 18.115232031696841 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 33, "COUNTRY_NA": "Qatar", "Size": "Medium", "F3_CODE": "QAT", "NUM_CODE": "634" }, "geometry": { "type": "Point", "coordinates": [ 51.198947403417201, 25.31560474482129 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 34, "COUNTRY_NA": "Guyana", "Size": "Medium", "F3_CODE": "GUY", "NUM_CODE": "328" }, "geometry": { "type": "Point", "coordinates": [ -59.006350278750112, 6.174536268219237 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 35, "COUNTRY_NA": "Oman", "Size": "Medium", "F3_CODE": "OMN", "NUM_CODE": "512" }, "geometry": { "type": "Point", "coordinates": [ 56.429771153602601, 20.826968478995592 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 36, "COUNTRY_NA": "Eritrea", "Size": "Medium", "F3_CODE": "ERI", "NUM_CODE": "232" }, "geometry": { "type": "Point", "coordinates": [ 38.100137318057854, 15.869138330063672 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 37, "COUNTRY_NA": "Croatia", "Size": "Medium", "F3_CODE": "HRV", "NUM_CODE": "191" }, "geometry": { "type": "Point", "coordinates": [ 16.505677559306847, 45.568178879647576 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 38, "COUNTRY_NA": "Cabo Verde", "Size": "Medium", "F3_CODE": "CPV", "NUM_CODE": "132" }, "geometry": { "type": "Point", "coordinates": [ -23.620608858003166, 15.115853545410399 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 39, "COUNTRY_NA": "Tuvalu", "Size": "Medium", "F3_CODE": "TUV", "NUM_CODE": "798" }, "geometry": { "type": "Point", "coordinates": [ 178.688291231403412, -7.471148805816216 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 40, "COUNTRY_NA": "Palau", "Size": "Medium", "F3_CODE": "PLW", "NUM_CODE": "585" }, "geometry": { "type": "Point", "coordinates": [ 134.56364730160206, 7.525743624980053 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 42, "COUNTRY_NA": "Rwanda", "Size": "Medium", "F3_CODE": "RWA", "NUM_CODE": "646" }, "geometry": { "type": "Point", "coordinates": [ 29.878812923037351, -1.943361283115155 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 43, "COUNTRY_NA": "Lithuania", "Size": "Medium", "F3_CODE": "LTU", "NUM_CODE": "440" }, "geometry": { "type": "Point", "coordinates": [ 23.899587200238617, 55.305172631729654 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 45, "COUNTRY_NA": "Malawi", "Size": "Medium", "F3_CODE": "MWI", "NUM_CODE": "454" }, "geometry": { "type": "Point", "coordinates": [ 33.889377466753139, -13.078836893970912 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 46, "COUNTRY_NA": "Bhutan", "Size": "Medium", "F3_CODE": "BTN", "NUM_CODE": "064" }, "geometry": { "type": "Point", "coordinates": [ 90.528669562589613, 27.474251715636633 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 47, "COUNTRY_NA": "Netherlands", "Size": "Medium", "F3_CODE": "NLD", "NUM_CODE": "528" }, "geometry": { "type": "Point", "coordinates": [ 5.312052091561757, 52.370158490789564 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 48, "COUNTRY_NA": "Equatorial Guinea", "Size": "Medium", "F3_CODE": "GNQ", "NUM_CODE": "226" }, "geometry": { "type": "Point", "coordinates": [ 10.338685505104205, 1.631745172840468 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 50, "COUNTRY_NA": "Gabon", "Size": "Medium", "F3_CODE": "GAB", "NUM_CODE": "266" }, "geometry": { "type": "Point", "coordinates": [ 11.414235908243809, -0.921965709163013 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 51, "COUNTRY_NA": "Austria", "Size": "Medium", "F3_CODE": "AUT", "NUM_CODE": "040" }, "geometry": { "type": "Point", "coordinates": [ 14.057612981774058, 47.485792474743896 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 53, "COUNTRY_NA": "Ghana", "Size": "Medium", "F3_CODE": "GHA", "NUM_CODE": "288" }, "geometry": { "type": "Point", "coordinates": [ -1.075554304522865, 7.28515414110591 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 54, "COUNTRY_NA": "Costa Rica", "Size": "Medium", "F3_CODE": "CRI", "NUM_CODE": "188" }, "geometry": { "type": "Point", "coordinates": [ -84.346371036107428, 9.590729376035743 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 55, "COUNTRY_NA": "Albania", "Size": "Medium", "F3_CODE": "ALB", "NUM_CODE": "008" }, "geometry": { "type": "Point", "coordinates": [ 19.936519104470257, 40.831850857688202 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 56, "COUNTRY_NA": "Honduras", "Size": "Medium", "F3_CODE": "HND", "NUM_CODE": "340" }, "geometry": { "type": "Point", "coordinates": [ -86.990413947214492, 14.818445881234762 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 57, "COUNTRY_NA": "Mauritius", "Size": "Medium", "F3_CODE": "MUS", "NUM_CODE": "480" }, "geometry": { "type": "Point", "coordinates": [ 57.536393999450574, -20.254795545483297 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 59, "COUNTRY_NA": "El Salvador", "Size": "Medium", "F3_CODE": "SLV", "NUM_CODE": "222" }, "geometry": { "type": "Point", "coordinates": [ -88.925117385626308, 13.802377011665515 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 61, "COUNTRY_NA": "The Bahamas", "Size": "Medium", "F3_CODE": "BHS", "NUM_CODE": "044" }, "geometry": { "type": "Point", "coordinates": [ -76.743832138659144, 24.802909443722857 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 62, "COUNTRY_NA": "Azerbaijan", "Size": "Medium", "F3_CODE": "AZE", "NUM_CODE": "031" }, "geometry": { "type": "Point", "coordinates": [ 47.624284839257818, 40.492273449970334 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 63, "COUNTRY_NA": "Solomon Islands", "Size": "Medium", "F3_CODE": "SLB", "NUM_CODE": "090" }, "geometry": { "type": "Point", "coordinates": [ 160.198856262443172, -9.598279441171588 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 64, "COUNTRY_NA": "Timor-Leste", "Size": "Medium", "F3_CODE": "TLS", "NUM_CODE": "626" }, "geometry": { "type": "Point", "coordinates": [ 126.131918080498579, -8.892934996281355 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 65, "COUNTRY_NA": "Liberia", "Size": "Medium", "F3_CODE": "LBR", "NUM_CODE": "430" }, "geometry": { "type": "Point", "coordinates": [ -9.696381532183791, 6.362746491013145 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 66, "COUNTRY_NA": "Nauru", "Size": "Medium", "F3_CODE": "NRU", "NUM_CODE": "520" }, "geometry": { "type": "Point", "coordinates": [ 166.930478986011025, -0.519799524490833 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 67, "COUNTRY_NA": "Singapore", "Size": "Medium", "F3_CODE": "SGP", "NUM_CODE": "702" }, "geometry": { "type": "Point", "coordinates": [ 103.82101657527835, 1.342327565918571 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 68, "COUNTRY_NA": "Burkina Faso", "Size": "Medium", "F3_CODE": "BFA", "NUM_CODE": "854" }, "geometry": { "type": "Point", "coordinates": [ -1.473947406072001, 12.568801044455999 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 69, "COUNTRY_NA": "Lesotho", "Size": "Medium", "F3_CODE": "LSO", "NUM_CODE": "426" }, "geometry": { "type": "Point", "coordinates": [ 28.241295202636376, -29.624468637789299 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 70, "COUNTRY_NA": "Bulgaria", "Size": "Medium", "F3_CODE": "BGR", "NUM_CODE": "100" }, "geometry": { "type": "Point", "coordinates": [ 25.236146120331952, 42.666456641753854 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 72, "COUNTRY_NA": "Cyprus", "Size": "Medium", "F3_CODE": "CYP", "NUM_CODE": "196" }, "geometry": { "type": "Point", "coordinates": [ 33.40819849963524, 35.16423734375212 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 73, "COUNTRY_NA": "Kuwait", "Size": "Medium", "F3_CODE": "KWT", "NUM_CODE": "414" }, "geometry": { "type": "Point", "coordinates": [ 47.547935408987946, 29.314184203913872 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 74, "COUNTRY_NA": "Brunei", "Size": "Medium", "F3_CODE": "BRN", "NUM_CODE": "096" }, "geometry": { "type": "Point", "coordinates": [ 114.626236512312758, 4.843304052796905 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 75, "COUNTRY_NA": "Vanuatu", "Size": "Medium", "F3_CODE": "VUT", "NUM_CODE": "548" }, "geometry": { "type": "Point", "coordinates": [ 166.869665777544469, -15.157139406500837 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 76, "COUNTRY_NA": "Samoa", "Size": "Medium", "F3_CODE": "WSM", "NUM_CODE": "882" }, "geometry": { "type": "Point", "coordinates": [ -172.504890777494808, -13.621272961922985 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 77, "COUNTRY_NA": "Dominican Republic", "Size": "Medium", "F3_CODE": "DOM", "NUM_CODE": "214" }, "geometry": { "type": "Point", "coordinates": [ -70.187102876795663, 18.767309432193933 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 78, "COUNTRY_NA": "Belize", "Size": "Medium", "F3_CODE": "BLZ", "NUM_CODE": "084" }, "geometry": { "type": "Point", "coordinates": [ -88.664330814531482, 17.191048813250209 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 79, "COUNTRY_NA": "Central African Republic", "Size": "Medium", "F3_CODE": "CAF", "NUM_CODE": "140" }, "geometry": { "type": "Point", "coordinates": [ 21.636625601107561, 6.916279860166901 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 80, "COUNTRY_NA": "Kiribati", "Size": "Medium", "F3_CODE": "KIR", "NUM_CODE": "296" }, "geometry": { "type": "Point", "coordinates": [ -157.363947578877145, 1.875441901121863 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 81, "COUNTRY_NA": "Marshall Islands", "Size": "Medium", "F3_CODE": "MHL", "NUM_CODE": "584" }, "geometry": { "type": "Point", "coordinates": [ 171.195837559037216, 7.112480139852946 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 82, "COUNTRY_NA": "Jordan", "Size": "Medium", "F3_CODE": "JOR", "NUM_CODE": "400" }, "geometry": { "type": "Point", "coordinates": [ 36.463063490273051, 31.022280757752128 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 83, "COUNTRY_NA": "Uganda", "Size": "Medium", "F3_CODE": "UGA", "NUM_CODE": "800" }, "geometry": { "type": "Point", "coordinates": [ 32.549711301939787, 1.333893616872644 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 84, "COUNTRY_NA": "Serbia", "Size": "Medium", "F3_CODE": "SRB", "NUM_CODE": "688" }, "geometry": { "type": "Point", "coordinates": [ 20.696462269832928, 44.329276208013248 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 85, "COUNTRY_NA": "Slovakia", "Size": "Medium", "F3_CODE": "SVK", "NUM_CODE": "703" }, "geometry": { "type": "Point", "coordinates": [ 19.688827348035598, 48.671206156519595 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 86, "COUNTRY_NA": "South Korea", "Size": "Medium", "F3_CODE": "KOR", "NUM_CODE": "410" }, "geometry": { "type": "Point", "coordinates": [ 127.99981576776112, 36.338331778513812 ] } },
-{ "type": "Feature", "properties": { "OBJECTID": 87, "COUNTRY_NA": "Suriname", "Size": "Medium", "F3_CODE": "SUR", "NUM_CODE": "740" }, "geometry": { "type": "Point", "coordinates": [ -55.849168173482752, 3.842327511363328 ] } }
-]
+    "type": "FeatureCollection",
+
+
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "NAME": "TONGA",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 776.000000,
+            "3_CODE": "TON",
+            "2_CODE": "TO"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [184.815776894067312, -21.165218111171924]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "NICARAGUA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 558.000000,
+            "3_CODE": "NIC",
+            "2_CODE": "NI"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-85.007992115614528, 12.836467941634083]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "GUATEMALA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 320.000000,
+            "3_CODE": "GTM",
+            "2_CODE": "GT"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-90.39173667222046, 15.569067314224782]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "BURUNDI",
+            "REGION": "Africa",
+            "NUM_CODE": 108.000000,
+            "3_CODE": "BDI",
+            "2_CODE": "BI"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.928972722739303, -3.389117644185802]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SWAZILAND",
+            "REGION": "Africa",
+            "NUM_CODE": 748.000000,
+            "3_CODE": "SWZ",
+            "2_CODE": "SZ"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [31.456849110078025, -26.517668279251609]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "BOSNIA AND HERZEGOVINA",
+            "REGION": "Europe",
+            "NUM_CODE": 70.000000,
+            "3_CODE": "BIH",
+            "2_CODE": "BA"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [17.886625682613783, 43.977713715529404]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "GUINEA-BISSAU",
+            "REGION": "Africa",
+            "NUM_CODE": 624.000000,
+            "3_CODE": "GNB",
+            "2_CODE": "GW"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-15.131173672767432, 11.801755606106326]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "GUINEA",
+            "REGION": "Africa",
+            "NUM_CODE": 324.000000,
+            "3_CODE": "GIN",
+            "2_CODE": "GN"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-10.899550895167181, 10.574838019062696]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "PANAMA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 591.000000,
+            "3_CODE": "PAN",
+            "2_CODE": "PA"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-80.122960261267465, 8.419742185091309]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "LATVIA",
+            "REGION": "Europe",
+            "NUM_CODE": 428.000000,
+            "3_CODE": "LVA",
+            "2_CODE": "LV"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [24.675066586614633, 56.876106546759729]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MALDIVES",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 462.000000,
+            "3_CODE": "MDV",
+            "2_CODE": "MV"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [73.52982405044358, 1.944245166353028]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SWITZERLAND",
+            "REGION": "Europe",
+            "NUM_CODE": 756.000000,
+            "3_CODE": "CHE",
+            "2_CODE": "CH"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [8.214662113838841, 46.81285214839761]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "CZECHIA",
+            "REGION": "Europe",
+            "NUM_CODE": 203.000000,
+            "3_CODE": "CZE",
+            "2_CODE": "CZ"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [15.479399172289021, 49.798691927431264]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "HAITI",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 332.000000,
+            "3_CODE": "HTI",
+            "2_CODE": "HT"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-73.077505868519026, 18.986148206070624]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "BELGIUM",
+            "REGION": "Europe",
+            "NUM_CODE": 56.000000,
+            "3_CODE": "BEL",
+            "2_CODE": "BE"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [4.489520149124587, 50.498043829886853]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "DJIBOUTI",
+            "REGION": "Africa",
+            "NUM_CODE": 262.000000,
+            "3_CODE": "DJI",
+            "2_CODE": "DJ"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [42.58966136878081, 11.823062423826343]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "UNITED ARAB EMIRATES",
+            "REGION": "Middle East",
+            "NUM_CODE": 784.000000,
+            "3_CODE": "ARE",
+            "2_CODE": "AE"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [54.304859978497092, 23.744226938169334]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "PORTUGAL",
+            "REGION": "Europe",
+            "NUM_CODE": 620.000000,
+            "3_CODE": "PRT",
+            "2_CODE": "PT"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-8.230650029718618, 39.619581707716634]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "TOGO",
+            "REGION": "Africa",
+            "NUM_CODE": 768.000000,
+            "3_CODE": "TGO",
+            "2_CODE": "TG"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [0.836732586251173, 8.626151981753878]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "REPUBLIC OF THE CONGO",
+            "REGION": "Africa",
+            "NUM_CODE": 178.000000,
+            "3_CODE": "COG",
+            "2_CODE": "CG"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [16.021835240077479, 0.107863814110061]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "GEORGIA",
+            "REGION": "Eurasia",
+            "NUM_CODE": 268.000000,
+            "3_CODE": "GEO",
+            "2_CODE": "GE"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [43.383340328851006, 42.319776961691474]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "ARMENIA",
+            "REGION": "Eurasia",
+            "NUM_CODE": 51.000000,
+            "3_CODE": "ARM",
+            "2_CODE": "AM"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [45.027516429578071, 40.06791266390843]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "COMOROS",
+            "REGION": "Africa",
+            "NUM_CODE": 174.000000,
+            "3_CODE": "COM",
+            "2_CODE": "KM"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [43.358926266880161, -11.649504539010394]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "FIJI",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 242.000000,
+            "3_CODE": "FJI",
+            "2_CODE": "FJ"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [177.9234652536814, -17.793858099016916]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "ESTONIA",
+            "REGION": "Europe",
+            "NUM_CODE": 233.000000,
+            "3_CODE": "EST",
+            "2_CODE": "EE"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [25.712886166393247, 58.589307859058891]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SIERRA LEONE",
+            "REGION": "Africa",
+            "NUM_CODE": 694.000000,
+            "3_CODE": "SLE",
+            "2_CODE": "SL"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-11.789110534977425, 8.46146803645965]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "BENIN",
+            "REGION": "Africa",
+            "NUM_CODE": 204.000000,
+            "3_CODE": "BEN",
+            "2_CODE": "BJ"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.351736104550724, 9.886805363520835]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "BAHRAIN",
+            "REGION": "Middle East",
+            "NUM_CODE": 48.000000,
+            "3_CODE": "BHR",
+            "2_CODE": "BH"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [50.543762758880291, 26.022280866066552]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "NORTH KOREA",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 408.000000,
+            "3_CODE": "PRK",
+            "2_CODE": "KP"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [126.947791642640311, 40.056371470976757]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "JAMAICA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 388.000000,
+            "3_CODE": "JAM",
+            "2_CODE": "JM"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-77.280053717772176, 18.115232031765402]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "QATAR",
+            "REGION": "Middle East",
+            "NUM_CODE": 634.000000,
+            "3_CODE": "QAT",
+            "2_CODE": "QA"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [51.198947403770461, 25.315604745019726]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "GUYANA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 328.000000,
+            "3_CODE": "GUY",
+            "2_CODE": "GY"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-58.963514697158828, 4.892132176322917]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "OMAN",
+            "REGION": "Middle East",
+            "NUM_CODE": 512.000000,
+            "3_CODE": "OMN",
+            "2_CODE": "OM"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [56.429771154031783, 20.826968478671915]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "ERITREA",
+            "REGION": "Africa",
+            "NUM_CODE": 232.000000,
+            "3_CODE": "ERI",
+            "2_CODE": "ER"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [38.100137318361334, 15.86913833044818]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "CROATIA",
+            "REGION": "Europe",
+            "NUM_CODE": 191.000000,
+            "3_CODE": "HRV",
+            "2_CODE": "HR"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [16.505677559135933, 45.568178879920623]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "CABO VERDE",
+            "REGION": "Africa",
+            "NUM_CODE": 132.000000,
+            "3_CODE": "CPV",
+            "2_CODE": "CV"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-23.620608858082051, 15.115853545638828]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "TUVALU",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 798.000000,
+            "3_CODE": "TUV",
+            "2_CODE": "TV"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [178.688291231422454, -7.471148805710158]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "PALAU",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 585.000000,
+            "3_CODE": "PLW",
+            "2_CODE": "PW"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [134.563647301434685, 7.525743624922768]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MIDWAY ISLAND",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 925.000000,
+            "3_CODE": "XMW",
+            "2_CODE": "QM"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [182.622506345014244, 28.202678546080449]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "RWANDA",
+            "REGION": "Africa",
+            "NUM_CODE": 646.000000,
+            "3_CODE": "RWA",
+            "2_CODE": "RW"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.878812922690116, -1.943361283476293]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "LITHUANIA",
+            "REGION": "Europe",
+            "NUM_CODE": 440.000000,
+            "3_CODE": "LTU",
+            "2_CODE": "LT"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [23.899587200013627, 55.168675830926361]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "FRENCH GUIANA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 254.000000,
+            "3_CODE": "GUF",
+            "2_CODE": "GF"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-53.109022636551529, 3.929330350600196]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MALAWI",
+            "REGION": "Africa",
+            "NUM_CODE": 454.000000,
+            "3_CODE": "MWI",
+            "2_CODE": "MW"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [34.253368935828718, -13.214667857359103]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "BHUTAN",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 64.000000,
+            "3_CODE": "BTN",
+            "2_CODE": "BT"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [90.528669562685309, 27.474251715277745]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "NETHERLANDS",
+            "REGION": "Europe",
+            "NUM_CODE": 528.000000,
+            "3_CODE": "NLD",
+            "2_CODE": "NL"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [5.326256636670621, 52.105154945621848]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "EQUATORIAL GUINEA",
+            "REGION": "Africa",
+            "NUM_CODE": 226.000000,
+            "3_CODE": "GNQ",
+            "2_CODE": "GQ"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [10.338685505301896, 1.631745173126291]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "WALLIS AND FUTUNA",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 876.000000,
+            "3_CODE": "WLF",
+            "2_CODE": "WF"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [183.791717967399563, -13.283915014949116]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "GABON",
+            "REGION": "Africa",
+            "NUM_CODE": 266.000000,
+            "3_CODE": "GAB",
+            "2_CODE": "GA"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [11.823504365164752, -0.557974239640117]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "AUSTRIA",
+            "REGION": "Europe",
+            "NUM_CODE": 40.000000,
+            "3_CODE": "AUT",
+            "2_CODE": "AT"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [14.057612981514495, 47.485792474721109]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "GHANA",
+            "REGION": "Africa",
+            "NUM_CODE": 288.000000,
+            "3_CODE": "GHA",
+            "2_CODE": "GH"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-1.037601535055558, 7.815605124321991]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "COSTA RICA",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 188.000000,
+            "3_CODE": "CRI",
+            "2_CODE": "CR"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-84.346371036204772, 9.590729375619929]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "ALBANIA",
+            "REGION": "Europe",
+            "NUM_CODE": 8.000000,
+            "3_CODE": "ALB",
+            "2_CODE": "AL"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [19.936519104092639, 40.831850857577763]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "HONDURAS",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 340.000000,
+            "3_CODE": "HND",
+            "2_CODE": "HN"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-87.160868489406738, 13.931549594035204]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MAURITIUS",
+            "REGION": "Africa",
+            "NUM_CODE": 480.000000,
+            "3_CODE": "MUS",
+            "2_CODE": "MU"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [57.536393999364549, -20.254795545677553]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "TOKELAU",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 772.000000,
+            "3_CODE": "TKL",
+            "2_CODE": "TK"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [187.507538199361306, -8.562679321824618]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "EL SALVADOR",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 222.000000,
+            "3_CODE": "SLV",
+            "2_CODE": "SV"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-88.925117385826752, 13.802377011607661]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "COOK ISLANDS",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 184.000000,
+            "3_CODE": "COK",
+            "2_CODE": "CK"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-159.780939713704527, -21.231801916546942]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "THE BAHAMAS",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 44.000000,
+            "3_CODE": "BHS",
+            "2_CODE": "BS"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-76.342997630127769, 24.850405891466266]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "AZERBAIJAN",
+            "REGION": "Eurasia",
+            "NUM_CODE": 31.000000,
+            "3_CODE": "AZE",
+            "2_CODE": "AZ"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [47.397899900928678, 40.492273450165186]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SOLOMON ISLANDS",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 90.000000,
+            "3_CODE": "SLB",
+            "2_CODE": "SB"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [160.198856262851962, -9.59827944142404]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "TIMOR-LESTE",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 626.000000,
+            "3_CODE": "TLS",
+            "2_CODE": "TL"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [126.131918080778405, -8.892934996484684]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "LIBERIA",
+            "REGION": "Africa",
+            "NUM_CODE": 430.000000,
+            "3_CODE": "LBR",
+            "2_CODE": "LR"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-9.332390062657225, 6.408023478694133]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "NAURU",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 520.000000,
+            "3_CODE": "NRU",
+            "2_CODE": "NR"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [166.930478986266166, -0.519799524558437]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SINGAPORE",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 702.000000,
+            "3_CODE": "SGP",
+            "2_CODE": "SG"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [103.821016575717806, 1.342327565762872]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "BURKINA FASO",
+            "REGION": "Africa",
+            "NUM_CODE": 854.000000,
+            "3_CODE": "BFA",
+            "2_CODE": "BF"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-1.473947406279819, 12.568801044026515]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "LESOTHO",
+            "REGION": "Africa",
+            "NUM_CODE": 426.000000,
+            "3_CODE": "LSO",
+            "2_CODE": "LS"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [28.241295202500538, -29.624468638049905]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "BULGARIA",
+            "REGION": "Europe",
+            "NUM_CODE": 100.000000,
+            "3_CODE": "BGR",
+            "2_CODE": "BG"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [25.236146119908113, 42.666456641677399]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "NEW CALEDONIA",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 540.000000,
+            "3_CODE": "NCL",
+            "2_CODE": "NC"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [165.503809983097483, -21.239791973191956]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "CYPRUS",
+            "REGION": "Middle East",
+            "NUM_CODE": 196.000000,
+            "3_CODE": "CYP",
+            "2_CODE": "CY"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [33.408198499601838, 35.164237344056346]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "KUWAIT",
+            "REGION": "Middle East",
+            "NUM_CODE": 414.000000,
+            "3_CODE": "KWT",
+            "2_CODE": "KW"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [47.547935409040377, 29.3141842038074]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "BRUNEI",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 96.000000,
+            "3_CODE": "BRN",
+            "2_CODE": "BN"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [114.580959524320519, 4.526365138796166]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "VANUATU",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 548.000000,
+            "3_CODE": "VUT",
+            "2_CODE": "VU"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [166.869665777357, -15.157139406166266]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SAMOA",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 882.000000,
+            "3_CODE": "WSM",
+            "2_CODE": "WS"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [187.495109222357996, -13.621272962182559]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "DOMINICAN REPUBLIC",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 214.000000,
+            "3_CODE": "DOM",
+            "2_CODE": "DO"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-70.18710287718956, 18.767309432404744]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "BELIZE",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 84.000000,
+            "3_CODE": "BLZ",
+            "2_CODE": "BZ"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-88.664330814774601, 17.191048813160194]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "CENTRAL AFRICAN REPUBLIC",
+            "REGION": "Africa",
+            "NUM_CODE": 140.000000,
+            "3_CODE": "CAF",
+            "2_CODE": "CF"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [21.636625601334714, 6.916279859723431]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "KIRIBATI",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 296.000000,
+            "3_CODE": "KIR",
+            "2_CODE": "KI"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-157.363947578591421, 1.875441900798847]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "MARSHALL ISLANDS",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 584.000000,
+            "3_CODE": "MHL",
+            "2_CODE": "MH"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [171.195837558589744, 7.112480139561825]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "JORDAN",
+            "REGION": "Middle East",
+            "NUM_CODE": 400.000000,
+            "3_CODE": "JOR",
+            "2_CODE": "JO"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [36.629079111609315, 31.197618111848698]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "UGANDA",
+            "REGION": "Africa",
+            "NUM_CODE": 800.000000,
+            "3_CODE": "UGA",
+            "2_CODE": "UG"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [32.549711302299954, 1.333893617082026]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SERBIA",
+            "REGION": "Europe",
+            "NUM_CODE": 688.000000,
+            "3_CODE": "SRB",
+            "2_CODE": "RS"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [20.696462269439479, 44.329276207909487]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SLOVAKIA",
+            "REGION": "Europe",
+            "NUM_CODE": 703.000000,
+            "3_CODE": "SVK",
+            "2_CODE": "SK"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [19.688827348097561, 48.671206156414314]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SOUTH KOREA",
+            "REGION": "Asia-Oceania",
+            "NUM_CODE": 410.000000,
+            "3_CODE": "KOR",
+            "2_CODE": "KR"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [127.771655261147146, 36.338331778835823]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "NAME": "SURINAME",
+            "REGION": "Western Hemisphere",
+            "NUM_CODE": 740.000000,
+            "3_CODE": "SUR",
+            "2_CODE": "SR"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-55.962804534924743, 4.126418414510226]
+        }
+    }]
 }
