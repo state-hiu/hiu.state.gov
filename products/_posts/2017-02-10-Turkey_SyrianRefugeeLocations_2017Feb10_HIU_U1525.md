@@ -20,6 +20,6 @@ keywords:
   - Displaced
   - Refugee camp
   - Border crossing
-tweet: "Turkey hosts the largest number of Syrian refugees, hosting over 2.8 millions Syrians who have registered under a temporary protection status."
+tweet: "Turkey hosts over 2.8 millions Syrians who have registered under a temporary protection status"
 ---
 Turkey hosts the largest number of Syrian refugees, hosting over 2.8 millions Syrians who have registered under a temporary protection status.
