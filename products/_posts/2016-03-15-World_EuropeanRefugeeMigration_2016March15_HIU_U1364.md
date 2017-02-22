@@ -2,8 +2,8 @@
 layout: product
 category: products
 title: "Europe: Displacement Snapshot (15 March 2016)"
-region_id: "WHA, NEA, AF, EAP"
-region_title: "Africa, Europe, Near East, South and Central Asia"
+region_id: "global"
+region_title: "Global & Transnational Products"
 date_published: 2016-03-15
 product_id: "U1364"
 product_pdf: "World_EuropeanRefugeeMigration_2016March15_HIU_U1364.pdf"
