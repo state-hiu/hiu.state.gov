@@ -38,9 +38,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
         "NAME": "SRI<br>LANKA",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 144,
@@ -92,9 +89,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
         "NAME": "PAPUA<br>NEW<br>GUINEA",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 598,
@@ -333,9 +327,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
         "NAME": "SOUTH<br>SUDAN",
         "REGION": "Africa",
         "NUM_CODE": 728,
@@ -404,9 +395,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
         "NAME": "C&ocirc;TE<br>D'IVOIRE",
         "REGION": "Africa",
         "NUM_CODE": 384,
@@ -1104,9 +1092,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
         "NAME": "UNITED<br>KINGDOM",
         "REGION": "Europe",
         "NUM_CODE": 826,
@@ -1260,9 +1245,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
         "NAME": "SAUDI<br>ARABIA",
         "REGION": "Middle East",
         "NUM_CODE": 682,
