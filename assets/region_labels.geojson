@@ -18,22 +18,28 @@
     {
       "type": "Feature",
       "properties": {
-        "id": null,
-        "REGION_NA": "EUROPE and <br> EURASIA"
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "id": "null",
+        "REGION_NA": "EUROPE and<br>EURASIA"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          37.70507812499999,
-          55.07836723201515
+          37.353515625,
+          51.944264879028765
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "id": null,
-        "REGION_NA": "SOUTH <br> CENTRAL <br> ASIA"
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "id": "null",
+        "REGION_NA": "SOUTH<br>CENTRAL<br>ASIA"
       },
       "geometry": {
         "type": "Point",
@@ -46,8 +52,11 @@
     {
       "type": "Feature",
       "properties": {
-        "id": null,
-        "REGION_NA": "EAST <br> ASIA <br> and the <br> PACIFIC"
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "id": "null",
+        "REGION_NA": "EAST<br>ASIA<br>and the<br>PACIFIC"
       },
       "geometry": {
         "type": "Point",
