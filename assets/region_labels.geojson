@@ -18,9 +18,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
         "id": "null",
         "REGION_NA": "EUROPE and<br>EURASIA"
       },
@@ -35,9 +32,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
         "id": "null",
         "REGION_NA": "SOUTH<br>CENTRAL<br>ASIA"
       },
@@ -52,9 +46,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#7e7e7e",
-        "marker-size": "medium",
-        "marker-symbol": "",
         "id": "null",
         "REGION_NA": "EAST<br>ASIA<br>and the<br>PACIFIC"
       },
