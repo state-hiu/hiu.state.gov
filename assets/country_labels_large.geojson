@@ -98,8 +98,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          143.33717338968273,
-          -5.719550832311398
+          144.931640625,
+          -6.577303118123875
         ]
       }
     },
@@ -514,7 +514,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "FEDERATED STATES OF MICRONESIA",
+        "NAME": "FEDERATED STATES<br>OF MICRONESIA",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 583,
         "3_CODE": "FSM",
@@ -523,8 +523,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          158.21954167507062,
-          6.885651309250932
+          154.86328125,
+          6.839169626342808
         ]
       }
     },
@@ -1585,7 +1585,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "NEW ZEALAND",
+        "NAME": "NEW<br>ZEALAND",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 554,
         "3_CODE": "NZL",
@@ -1594,8 +1594,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          168.85963377399833,
-          -45.30539869590217
+          169.8046875,
+          -45.02695045318544
         ]
       }
     }
