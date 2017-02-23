@@ -500,6 +500,8 @@ a.title:hover {
     margin-top: -4px;
 }
 
+//somewhere in the next 20 lines is breaking the datepicker window to move with scrolling
+
 // the padding top is very important because the navbar is fixed unless the container
 // div below will overlap with the navbar unless the body or the container has top-padding
 html, body{
@@ -511,18 +513,18 @@ html, body{
 }
 
 body {
+    overflow:hidden;
+    -ms-scroll-limit: 0 0 0 0;
+}
+
+body {
     padding-top: 60px;
 }
 
 // http://stackoverflow.com/questions/29038596/bootstrap-fixed-header-and-footer-with-scrolling-body-content-area-in-fluid-cont
 .main {
-  max-height: calc(100% - 62px);
+  max-height: calc(100% - 75px);
   overflow-y: scroll;
-}
-
-body {
-    overflow:hidden;
-    -ms-scroll-limit: 0 0 0 0;
 }
 
 .modal-title {
