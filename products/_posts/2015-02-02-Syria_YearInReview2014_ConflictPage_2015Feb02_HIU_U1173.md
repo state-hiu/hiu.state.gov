@@ -3,7 +3,7 @@ layout: product
 category: products
 title: "Syria Conflict Without Borders: 2014 in Review"
 region_id: "NEA"
-region_title: "Near East"
+region_title: "Middle East"
 date_published: 2015-02-02
 product_id: "U1173"
 product_pdf: "SyriaIraq_YearInReview2014_2015Feb02_HIU_U1173.pdf"
