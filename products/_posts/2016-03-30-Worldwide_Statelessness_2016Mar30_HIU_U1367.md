@@ -2,16 +2,16 @@
 layout: product
 category: products
 title: "Peoples Without a State: the Locations and Causes of Statelessness (30 March 2016)"
-region_id: "Global"
+region_id: "global"
 region_title: "Global & Transnational Products"
 date_published: 2016-03-30
 product_id: "U1367"
 product_pdf: "Worldwide_Statelessness_2016Mar30_HIU_U1367.pdf"
 product_jpg: "Worldwide_Statelessness_2016Mar30_HIU_U1367.jpg"
-thumbnail: "Worldwide_Statelessness_2016Mar30_HIU_U1367_thumb.jpg"
+thumbnail: "Worldwide_Statelessness_2016Mar30_HIU_U1367_Thumb.jpg"
 featured: false
-lat: 
-lon: 
+lat: 0
+lon: 0
 keywords:
   - Stateless
   - Stateless Refugees
