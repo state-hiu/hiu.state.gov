@@ -489,8 +489,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          126.94779164264031,
-          40.05637147097676
+          126.826171875,
+          39.67337039176558
         ]
       }
     },
@@ -1024,7 +1024,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "TIMOR-LESTE",
+        "NAME": "TIMOR-<br>LESTE",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 626,
         "3_CODE": "TLS",
@@ -1084,8 +1084,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          103.8210165757178,
-          1.342327565762872
+          103.875732421875,
+          1.33746396806039
         ]
       }
     },
@@ -1407,8 +1407,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          127.77165526114715,
-          36.33833177883582
+          127.96875,
+          36.24427318493909
         ]
       }
     },
