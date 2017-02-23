@@ -4,7 +4,7 @@ category: products
 title: "Afghanistan: An Urban Future"
 region_id: "SCA"
 region_title: "South and Central Asia"
-date_published: 2016-02-29
+date_published: 2016-02-26
 product_id: "U1359"
 product_pdf: "Afghanistan_UrbanFuture_2016Feb26_HIU_U1359.pdf"
 product_jpg: "Afghanistan_UrbanFuture_2016Feb26_HIU_U1359.jpg"
