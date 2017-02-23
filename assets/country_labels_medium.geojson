@@ -276,7 +276,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "UNITED ARAB EMIRATES",
+        "NAME": "UNITED<br>ARAB<br>EMIRATES",
         "REGION": "Middle East",
         "NUM_CODE": 784,
         "3_CODE": "ARE",
@@ -327,7 +327,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "REPUBLIC OF THE CONGO",
+        "NAME": "REPUBLIC<br>OF THE<br>CONGO",
         "REGION": "Africa",
         "NUM_CODE": 178,
         "3_CODE": "COG",
@@ -336,8 +336,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          16.02183524007748,
-          0.107863814110061
+          15.93017578125,
+          0.021972655711432625
         ]
       }
     },
@@ -472,8 +472,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          50.54376275888029,
-          26.022280866066552
+          50.60302734375,
+          26.125850185680356
         ]
       }
     },
@@ -523,8 +523,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          51.19894740377046,
-          25.315604745019726
+          51.21826171875,
+          24.966140159912975
         ]
       }
     },
@@ -557,8 +557,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          56.42977115403178,
-          20.826968478671915
+          56.953125,
+          20.8588117908677
         ]
       }
     },
@@ -769,7 +769,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "EQUATORIAL GUINEA",
+        "NAME": "EQUATORIAL<br>GUINEA",
         "REGION": "Africa",
         "NUM_CODE": 226,
         "3_CODE": "GNQ",
@@ -1279,7 +1279,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "CENTRAL AFRICAN REPUBLIC",
+        "NAME": "CENTRAL<br>AFRICAN<br>REPUBLIC",
         "REGION": "Africa",
         "NUM_CODE": 140,
         "3_CODE": "CAF",
@@ -1288,8 +1288,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          21.636625601334714,
-          6.916279859723431
+          20.7861328125,
+          6.402648405963896
         ]
       }
     },
@@ -1426,6 +1426,42 @@
         "coordinates": [
           -55.986328125,
           4.061535597066106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "LEBANON",
+        "REGION": "Middle East",
+        "NUM_CODE": 422,
+        "3_CODE": "LBN",
+        "2_CODE": "LB",
+        "Italics": "N"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.89233398437499,
+          34.06176136129718
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "ISRAEL",
+        "REGION": "Middle East",
+        "NUM_CODE": 376,
+        "3_CODE": "ISR",
+        "2_CODE": "IL",
+        "Italics": "N"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.82666015625,
+          30.65681556429287
         ]
       }
     }
