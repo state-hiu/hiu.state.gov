@@ -30,8 +30,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -85.00799211561453,
-          12.836467941634083
+          -85.10009765625,
+          12.726084296948196
         ]
       }
     },
@@ -47,8 +47,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -90.39173667222046,
-          15.569067314224782
+          -90.41748046874999,
+          15.284185114076433
         ]
       }
     },
@@ -106,7 +106,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "GUINEA-BISSAU",
+        "NAME": "GUINEA-<br>BISSAU",
         "REGION": "Africa",
         "NUM_CODE": 624,
         "3_CODE": "GNB",
@@ -132,8 +132,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -10.899550895167181,
-          10.574838019062696
+          -10.8984375,
+          10.660607953624776
         ]
       }
     },
@@ -234,8 +234,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.07750586851903,
-          18.986148206070624
+          -72.652587890625,
+          18.46918890441719
         ]
       }
     },
@@ -319,8 +319,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0.836732586251173,
-          8.626151981753878
+          1.0546875,
+          8.602747284770018
         ]
       }
     },
@@ -429,7 +429,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "SIERRA LEONE",
+        "NAME": "SIERRA<br>LEONE",
         "REGION": "Africa",
         "NUM_CODE": 694,
         "3_CODE": "SLE",
@@ -438,8 +438,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -11.789110534977425,
-          8.46146803645965
+          -11.8212890625,
+          8.146242825034385
         ]
       }
     },
@@ -455,8 +455,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.351736104550724,
-          9.886805363520835
+          2.5048828125,
+          10.250059987303016
         ]
       }
     },
@@ -506,8 +506,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -77.28005371777218,
-          18.1152320317654
+          -77.27783203125,
+          18.187606552494625
         ]
       }
     },
@@ -540,8 +540,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -58.96351469715883,
-          4.892132176322917
+          -58.95263671875001,
+          5.331644153439766
         ]
       }
     },
@@ -599,7 +599,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "CABO VERDE",
+        "NAME": "CABO<br>VERDE",
         "REGION": "Africa",
         "NUM_CODE": 132,
         "3_CODE": "CPV",
@@ -701,7 +701,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "FRENCH GUIANA",
+        "NAME": "FRENCH<br>GUIANA",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 254,
         "3_CODE": "GUF",
@@ -710,8 +710,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -53.10902263655153,
-          3.929330350600196
+          -53.02001953125,
+          3.995780512963038
         ]
       }
     },
@@ -897,8 +897,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -87.16086848940674,
-          13.931549594035204
+          -86.60522460937499,
+          14.764259178591587
         ]
       }
     },
@@ -939,7 +939,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "EL SALVADOR",
+        "NAME": "EL<br>SALVADOR",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 222,
         "3_CODE": "SLV",
@@ -948,8 +948,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -88.92511738582675,
-          13.80237701160766
+          -88.9453125,
+          13.66733825965496
         ]
       }
     },
@@ -973,7 +973,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "THE BAHAMAS",
+        "NAME": "THE<br>BAHAMAS",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 44,
         "3_CODE": "BHS",
@@ -1050,8 +1050,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -9.332390062657225,
-          6.408023478694133
+          -9.4921875,
+          6.315298538330033
         ]
       }
     },
@@ -1092,7 +1092,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "BURKINA FASO",
+        "NAME": "BURKINA<br>FASO",
         "REGION": "Africa",
         "NUM_CODE": 854,
         "3_CODE": "BFA",
@@ -1254,8 +1254,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -70.18710287718956,
-          18.767309432404744
+          -70.169677734375,
+          18.968636543402212
         ]
       }
     },
@@ -1271,8 +1271,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -88.6643308147746,
-          17.191048813160194
+          -88.52783203125,
+          17.14079039331665
         ]
       }
     },
@@ -1424,8 +1424,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -55.96280453492474,
-          4.126418414510226
+          -55.986328125,
+          4.061535597066106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "C&ocirc;TE<br>D'IVOIRE",
+        "REGION": "Africa",
+        "NUM_CODE": 384,
+        "3_CODE": "CIV",
+        "2_CODE": "CI"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.44921875,
+          7.493196470122287
         ]
       }
     }
