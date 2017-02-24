@@ -3,7 +3,7 @@ layout: product
 category: products
 title: "Turkey: Numbers and Locations of Externally Displaced Syrians"
 region_id: "NEA"
-region_title: "Middle East"
+region_title: "Near East"
 date_published: 2016-03-11
 product_id: "U1366"
 product_pdf: "Turkey_SyrianRefugeeLocation_2016Mar11_HIU_U1366.pdf"
