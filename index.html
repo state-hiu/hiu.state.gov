@@ -641,14 +641,14 @@ $('#myModal').on('hidden.bs.modal', function () {
           }
       }
 
-      if (map.getZoom() < 8 ) {
+      if (map.getZoom() < 6 ) {
         if (map.hasLayer(topoLayer)){
               //do nothing
           } else {
               topoLayer.addTo(map);
           }
       }
-      if (map.getZoom() >= 8 ) {
+      if (map.getZoom() >= 6 ) {
         if (map.hasLayer(topoLayer)){
               map.removeLayer(topoLayer);
           }
@@ -716,10 +716,16 @@ $('#myModal').on('hidden.bs.modal', function () {
         //close all popups
         map.closePopup();
 
+        //topoLayer had trouble redrawing after flyTo, so I am removing it before flyTo, and adding it back in after flyTo
+        topoLayer.clearLayers();
+
         //map.setView([20, 0], 3, {animation: false});
         map.flyTo([20, 0], 3);
         console.log('map clicked');
         console.log(e);
+
+        $.getJSON('{{ site.baseurl }}/localdata/bureau_outline_topojson5.json')
+            .done(addTopoData);
 
         if(layerClicked !== true){
           //$('.sidebar').css({ "height": "33%"});
@@ -749,7 +755,7 @@ $('#myModal').on('hidden.bs.modal', function () {
         
     });
 
-    function addTopoData(topoData){  
+    function addTopoData(topoData){ 
       topoLayer.addData(topoData);
       topoLayer.addTo(map);
       topoLayer.eachLayer(handleLayer);
