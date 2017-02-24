@@ -23,4 +23,4 @@ keywords:
   - Afghanistan
 tweet: 
 ---
-This map highlights the milestone of Syrians becoming the largest registered refugee caseload in the world as the Syrian conict enters its fourth year in March 2014. The number of refugees fleeing Syria has now surpassed the number of refugees originating from Afghanistan.
+This map highlights the milestone of Syrians becoming the largest registered refugee caseload in the world as the Syrian conflict enters its fourth year in March 2014. The number of refugees fleeing Syria has now surpassed the number of refugees originating from Afghanistan.
