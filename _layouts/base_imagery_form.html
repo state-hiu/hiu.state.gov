@@ -2,9 +2,7 @@
 layout: default
 
 dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','//mapgive.state.gov','//geonode.state.gov','//secondarycities.state.gov']
-
 ---
-
 {% capture v %}{{ site.time | date: '%Y-%m-%dT%H:%M' }}{% endcapture %}
 
 <!DOCTYPE html>
@@ -36,15 +34,16 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
 
 <!-- CSS / External-->
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <!-- main.css is bootstrap 3.3.7-->
+    <link href="{{ site.baseurl }}/css/main.css" rel="stylesheet"/>
     
     <!--bootstrap theme has the form icons-->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
-
-
-    <link href="{{ site.baseurl }}/css/main.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.css" rel="stylesheet">
+
+    <!-- [ Start: iCheck support ]  -->
+    <link href="https://cdn.jsdelivr.net/icheck/1.0.2/skins/flat/_all.min.css" rel="stylesheet">
 
     <!--
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" media="all" /> -->
@@ -60,9 +59,9 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
 
 
     {% if site.debug.bootstrap == true %}
-        <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.js"></script>
+        <script src="{{ site.baseurl }}/lib/bootstrap/3.3.7/bootstrap.js"></script>
     {% else %}
-        <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.min.js"></script>
+        <script src="{{ site.baseurl }}/lib/bootstrap/3.3.7/bootstrap.min.js"></script>
     {% endif %}
 
     <script src="{{ site.baseurl }}/lib/bootstrap/bootstrap-datepicker.js"></script>

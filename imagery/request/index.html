@@ -31,6 +31,31 @@ body {
   position: relative
 }
 
+.navbar-inverse {
+    background-image: none;
+}
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+    position: relative;
+    margin-top: 0px;
+    margin-left: 2px;
+}
+
+.checkbox label, .radio label {
+   padding-left: 4px;
+}
+
+label.comment {
+    font-weight: normal;
+}
+
+label.italic {
+    font-style: italic;
+}
+
+label.group-title {
+    font-size: 20px;
+}
 
 </style>
 
@@ -158,14 +183,21 @@ $(document).ready(function(){
               <div class="radio">
               	<input  id="ittc_request" name="request_type"  type="radio" value="IttC Tiled Map Service"  >
               	<label  for="c66_2">
-              		IttC Tiled Map Service
+              		Tile Map Service (for OpenStreetMap)<sup>*</sup>
               	</label>
-              </div>  
+              </div>
         </div>
 
 
+        <label class="control-label comment italic" for="c66">
+          <sup>*</sup> A Tile Map Service (TMS) is a specification for tiled web maps. The HIU creates a TMS from processing raw imagery. The imagery service is hosted on a web server that allows for embedding imagery into an OSM task on the HOT Tasking Manager (TM). This option is specifically for imagery requests to support mapping into OpenStreetMap via the HOT TM.
+        </label>
+
+        </br>
+
+
         <div class="form-group c85 " data-cid="c85">
-          <label class="control-label" for="c85">Point of Contact Information</label>
+          <label class="control-label group-title" for="c85" style="margin-top:15px;">Point of Contact Information</label>
 
         </div>
 
@@ -179,6 +211,11 @@ $(document).ready(function(){
               data-rule-required="true"  />
           </div>
   
+        </div>
+
+        <div class="form-group c58 required" data-cid="c58">
+          <label class="control-label" for="c58">Organization/Affiliation</label>
+          <input type="text" class="form-control" id="org" name="org" value=""     />
         </div>
 
         <div class="form-group c2 required" data-cid="c2">
@@ -203,24 +240,22 @@ $(document).ready(function(){
           
         </div>
 
-        <div class="form-group c79 " data-cid="c79">
-          <label class="control-label" for="c79">Project Information</label>
+        <div class="form-group c79" data-cid="c79">
+          <label class="control-label group-title" for="c79">Project Information</label>
         </div>
 
-        <div class="form-group c58 " data-cid="c58">
-          <label class="control-label" for="c58">Project Title/City Name</label>
+        <div class="form-group c58 required" data-cid="c58">
+          <label class="control-label" for="c58">Project Title</label>
+          <input type="text" class="form-control" id="project_title" name="project_title" value=""     />
+        </div>
+
+        <div class="form-group c58" data-cid="c58">
+          <label class="control-label" for="c58">Donor Organization (if applicable)</label>
 
           <input type="text" class="form-control" id="project_title" name="project_title" value=""     />
         </div>
 
-        <div class="form-group c94 " data-cid="c94">
-          <label class="control-label" for="c94">Project Description</label>
-
-          <textarea class="form-control" id="project_description" name="project_description" rows="3"   ></textarea>
-
-        </div>
-
-        <div class="form-group c53 " data-cid="c53">
+        <div class="form-group c53 required" data-cid="c53">
           <label class="control-label" for="c53">Country</label>
 
           <select class="form-control" id="country" name="country"   
@@ -474,8 +509,20 @@ $(document).ready(function(){
             
           </div>
 
+        <div class="form-group c58" data-cid="c58">
+          <label class="control-label" for="c58">Region & Village/City (if applicable)</label>
+          <input type="text" class="form-control" id="project_title" name="project_title" value=""     />
+        </div>
+
+        <div class="form-group c94 required" data-cid="c94">
+          <label class="control-label" for="c94">Project Description</label>
+
+          <textarea class="form-control" id="project_description" name="project_description" rows="3"   ></textarea>
+        </div>
+        
+
           <div class="form-group c48 " data-cid="c48">
-            <label class="control-label" for="c48">When would you need the imagery delivered by?</label>
+            <label class="control-label" for="c48">Deadline for imagery</label>
 
             <div class="form-group">
               <div class='input-group date' id='sandbox-container'>
@@ -494,15 +541,42 @@ $(document).ready(function(){
           -->
           </div>
 
-          <div class="form-group c58 " data-cid="c58">
+          
+
+        <div class="form-group c79" data-cid="c79">
+          <label class="control-label group-title" for="c79">Additional Information</label>
+        </div>
+
+        <div class="form-group c58 required" data-cid="c58">
               <label class="control-label" for="c58" data-toggle="tooltip" data-placement="right" title="Recommend browsing imagery at https://imagehunter.apollomapping.com/ to speed up request">Digital Globe Catalog ID (Optional)</label>
 
               <input type="text" class="form-control" id="catalog_id" name="catalog_id" value=""     />
 
+        </div>
+
+
+        <div class="form-group c53" data-cid="c53">
+          <label class="control-label" for="c53">Format</label>
+
+          <select class="form-control" id="format" name="format"   
+              >
+            <option  value="AF">GeoTiff</option>
+            <option  value="AX">ERDOS Imagine</option>
+            <option  value="AL">Albania</option>
+            <option  value="DZ">Algeria</option>
+            
+            </select>
+            
           </div>
 
-          
 
+
+        <div class="form-group c58 required" data-cid="c58">
+              <label class="control-label" for="c58" data-toggle="tooltip" data-placement="right" title="Recommend browsing imagery at https://imagehunter.apollomapping.com/ to speed up request">Format</label>
+
+              <input type="text" class="form-control" id="catalog_id" name="catalog_id" value=""     />
+
+        </div>
 <!--
 <div class='form-group recaptcha'>
   <script type="text/javascript">
@@ -559,8 +633,10 @@ $(document).ready(function(){
     <div id="map" style="margin-left: auto; margin-right: auto; width: 100%; height: 400px"></div>
 
     <!--Leaflet Draw link-->
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.css' rel='stylesheet' />
-    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.js'></script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.css' />
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.js'></script>
+    
     
     <!--TurfJS link-->
     <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
@@ -703,22 +779,9 @@ $(document).ready(function(){
 
 </div>
 
-<!-- [ Start: iCheck support ] ---------------------------------- -->
-<link href="https://cdn.jsdelivr.net/icheck/1.0.2/skins/flat/_all.min.css" rel="stylesheet">
-<style type="text/css">
-/* overwrite bootstrap styles */
-.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
-    position: relative;
-    margin-top: 0px;
-    margin-left: 2px;
-}
-
-.checkbox label, .radio label {
-   padding-left: 4px;
-}
-</style>
 
 <script src="https://cdn.jsdelivr.net/icheck/1.0.2/icheck.min.js"></script>
+
 <script type="text/javascript">
   $('.jf-form input').iCheck({
 	    checkboxClass: 'icheckbox_flat',
@@ -730,10 +793,8 @@ $(document).ready(function(){
     }, 250);
   });
 </script>
-<!-- [ End: iCheck support ] ---------------------------------- -->
-  
-<!--
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+<!-- [ End: iCheck support ] -->
+
 
 
 
