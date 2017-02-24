@@ -29,9 +29,9 @@
 2. **Merging Imagery Tiles:**
     1. To process your imagery, you will need to open the Vagrant OSMBox. You need to work in the virtual machine to process the imagery because you do not have access to the same software (QGIS)as the host machine and it also saves space/memory by working in the virtual machine. To boot the virtual machine, open the terminal of the host machine (in the search bar, start typing “terminal”, it should immediately appear).
     2. When the terminal is open, run the following commands to boot: 
-    3.      <pre><code>cd .. vagrant</code></pre>
-    4.      <pre><code>cd osm box</code></pre>
-    5.      <pre><code>vagrant up</code></pre>
+    3.      ```cd .. vagrant```
+    4.      ```cd osm box```
+    5.      ```vagrant up```
     3. Also, where you can, you should **always utilize the Tab key when typing in the terminal** because it auto-completes what you are typing (if it exists). For example, if I am trying to move to the ittc_ssd_processing folder, and I start typing “ittc_” and then tab, it will auto-complete the rest of the folder name. 
     4. When the file is completely downloaded, extract the zip folder in “ittc_ssd_processing”. Open the unzipped folder, and find the TILE_SHAPE subfolder. Enter the TILE_SHAPE folder.
     5. Open QGIS and import or drag/drop the .shp file from the TILE_SHAPE folder. This shapefile is the shape/outline of the imagery you are working with. If you have the OpenLayer plugin in QGIS, you can turn on the OpenStreetMaps basemap. Turning it on allows you to ensure your imagery is in the correct location, and can also assist in identifying which tiles you will want to merge if you are not going to process the entire strip. 
@@ -63,9 +63,9 @@
     5. When the window closes, pan around the image to ensure the enhancement looks good in other areas. Try to examine areas that will be of interest to the end user (e.g. buildings, roads, etc.) This will allow you to make sure that the user will be able to see the important and necessary features clearly all throughout the image. After you determine if this specific cumulative count cut works, go back into the style menu, and at the bottom click the button that says “Style” then click “Save Style As”. Save the style file in the same folder as the imagery you are working on. **Name it similar to how you named the image (e.g. Mekele_29feb16_WV3_w)**. The output will be a .qml file. 
     6. Now you will run a custom python script to stretch the imagery and the .qml file. This is done to create a separate output layer that has the style file applied to it.
     7. Open the terminal in the virtual machine and type the following command:
-    <pre><code>/opt/cybergis-scripts.git/bin/cybergis-script-ittc-stretch.py /ittc_ssd_processing/(imagery folder)/(imagery layer)_merged.img /ittc_ssd_processing/(imagery folder)/(imagery style file).qml /ittc_ssd_processing/(imagery folder)/(imagery output file)_stretched.img –r 1024 3</code></pre> 
+    ```/opt/cybergis-scripts.git/bin/cybergis-script-ittc-stretch.py /ittc_ssd_processing/(imagery folder)/(imagery layer)_merged.img /ittc_ssd_processing/(imagery folder)/(imagery style file).qml /ittc_ssd_processing/(imagery folder)/(imagery output file)_stretched.img –r 1024 3``` 
     8.  Example:
-    <pre><code>/opt/cybergis-scripts.git/bin/cybergis-script-ittc-stretch.py /ittc_ssd_processing/mekele_29feb16_WV3_e/mekele_29feb16_WV3_e_merged.img /ittc_ssd_processing/mekele_29feb16_WV3_e/mekele_29feb16_WV3_e.qml /ittc_ssd_processing/mekele_29feb16_WV3_e/mekele_29feb16_WV3_e_stretched.img -r 2048 3</code></pre>
+    ```/opt/cybergis-scripts.git/bin/cybergis-script-ittc-stretch.py /ittc_ssd_processing/mekele_29feb16_WV3_e/mekele_29feb16_WV3_e_merged.img /ittc_ssd_processing/mekele_29feb16_WV3_e/mekele_29feb16_WV3_e.qml /ittc_ssd_processing/mekele_29feb16_WV3_e/mekele_29feb16_WV3_e_stretched.img -r 2048 3```
         * ![alt text](../../assets/img/ittc-guide/stretch%20command.png)
     9.  At the end of the command you see the numbers *1024* and *3*. *1024* refers to the number of megabytes (mb) used to process the imagery. The computer *can* handle higher amounts; however **no more than 2048** should be used if you are running more than one stretch script at a time. *3* refers to the number of bands in the image. You will **use 1 if the image is a single band** (greyscale) image.
     10.  Below is an example imagery before and after the enhancement:
@@ -77,10 +77,10 @@
     2. To begin the pyramid building process, first open the terminal on the virtual machine (if it isn’t open already).
     3. Next, cd to the folder containing the image you are building pyramids for.
     4. Now, type the following command:
-    <pre><code>gdaladdo -ro --config USE_RDD YES (filename)_stretched.img 2 4 8 16</code></pre>
+    ```gdaladdo -ro --config USE_RDD YES (filename)_stretched.img 2 4 8 16```
         * The numbers 2 4 8 and 16 are the zoom levels at which the pyramids will be built
     6. Example:
-    <pre><code>gdaladdo -ro --config USE_RRD YES mekele_29feb16_WV3_c_stretched.img 2 4 8 16</code></pre>
+    ```gdaladdo -ro --config USE_RRD YES mekele_29feb16_WV3_c_stretched.img 2 4 8 16```
     * ![alt text](../../assets/img/ittc-guide/pyramids%20command.png)
     7. The imagery is fully processed for our purposes. Next, you will need to transfer the files to the back-end server
 
@@ -89,18 +89,18 @@
     2. Next, type the correct command to upload the files to the drop folder in the backend server.
     3. To ensure you transfer all the necessary files, you need to make sure you type the “.*” after the file name.
     4. Once the files have finished copying, access the back-end server and locate the file. Use the following command from the host machine:
-    <pre><code>ssh backend-ittc-server</code></pre>
+    ```ssh backend-ittc-server```
     5. Once on the back-end, use:
-    <pre><code>cd cybergis/misc/drop/Ubuntu</code></pre>
+    ```cd cybergis/misc/drop/Ubuntu```
         * this is the location of the files you transferred from the machine to the server
     6. Next, cd to the following directory:
-    <pre><code>/cybergis/data4/nextview</code></pre>
+    ```/cybergis/data4/nextview```
     7. Now, create a new folder/directory to put your files from the drop location, use:
-    <pre><code>sudo mkdir (country name)</code></pre>
+    ```sudo mkdir (country name)```
     8. cd in the new folder:
-    <pre><code>cd .. /(foldername)</code></pre>
+    ```cd .. /(foldername)```
     9. Once in the folder, copy files from drop location to the current folder, use the following command:
-    <pre><code>sudo cp /cybergis/misc/drop/Ubuntu/(file name)* .</code></pre>
+    ```sudo cp /cybergis/misc/drop/Ubuntu/(file name)* .```
         * Make sure to include the * followed by a single space and a period. Doing this ensures you will copy all the files needed. 
 
 6. **Creating Stores and Layers in GeoServer:**
@@ -120,21 +120,21 @@
 7. **Editing the Tile Cache Configuration File:**
     1. Now that you have created the store and layer, you need to edit the tile cache configuration file.
     2. First, from the host machine, open the terminal and use the following command:
-    <pre><code>ssh frontend-ittc-server</code></pre>
+    ```ssh frontend-ittc-server```
     3. Then type:
-    <pre><code>sudo vim /etc/tilecache.cfg</code></pre>
+    ```sudo vim /etc/tilecache.cfg```
     4. Once in the tile cache configuration file, go to the bottom of the page, use **shift+g** to jump to the bottom.
         * ![alt text](../../assets/img/ittc-guide/tilecache%20cfg.jpg)
     5. For ease, copy the previous service information from the blue #city, country/ XX XX, XXX section, through the orange "debug=false" of the "flipped" service.
     6. To edit this file, you must go into editing mode. To do so, use:
-    <pre><code>i</code></pre>
+    ```i```
     7. Right click and paste the information you copied at the bottom of the file, you will use this as a template for your current service.
     8. Change the name portion in blue at the top (e.g. #Sowa, Botswana/ May 10 2016) and the first section in the green brackets (e.g. [sowa-10may2016]). For the second green bracket, use the same name, but **keep the end portion (“-flipped”)**. You need this for the service to display properly in OpenStreetMaps. Also, these are only the names of the TMS, not the layers themselves. If there is more than one layer in a service, you do not need to do two separate entries (see below).
     9.  Change the **“layers” line to match what is on GeoServer**. If there is more than piece of imagery for this service, layer them in order from **BOTTOM to TOP**. So if you have two layers, list the layer that you want on top of the others last **(e.g. *sowa-10may2016-w,sowa-10may2016-e*)**. Make sure when listing layers, you **use the comma and no space**. 
     10.  Once you have finished editing the tile cache configuration file, press esc. Then to exit press:
-    <pre><code>:wq (then press enter)</code></pre>
+    ```:wq (then press enter)```
     11.  To make sure changes take effect, restart the serve fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully proce fully procer using the following command:
-    <pre><code>sudo /etc/init.d/apache2 restart</code></pre>
+    ```sudo /etc/init.d/apache2 restart```
 
 8. **Testing the TMS:**
     1. Now that the server has restarted, go to GetCapabilities url to locate the service.
@@ -174,31 +174,31 @@
     Here you will find a list of all terminal commands for processing the imagery, and other commands you may need to navigate the terminal and various folders along the way.
 
 + **Booting the Vagrant virtual machine:**
-    <pre><code>cd ..vagrant</code></pre> 
-    <pre><code>cd .. osm box</code></pre>
-    <pre><code>vagrant up</code></pre>
+    ```cd ..vagrant``` 
+    ```cd .. osm box```
+    ```vagrant up```
 + **Stretch command:**
-    <pre><code>/opt/cybergis-scripts.git/bin/cybergis-script-ittc-stretch.py /ittc_ssd_processing/(folder name)/(file name)/merged.img /ittc_ssd_processing/(folder name)/( file name).qml /ittc_ssd_processing/( file name) /( file name )_stretched.img -r 1024 3</code></pre>
+    ```/opt/cybergis-scripts.git/bin/cybergis-script-ittc-stretch.py /ittc_ssd_processing/(folder name)/(file name)/merged.img /ittc_ssd_processing/(folder name)/( file name).qml /ittc_ssd_processing/( file name) /( file name )_stretched.img -r 1024 3```
 + **Build pyramids:**
-    <pre><code>gdaladdo -ro --config USE_RRD YES (file name)_stretched.img 2 4 8 16</code></pre>
+    ```gdaladdo -ro --config USE_RRD YES (file name)_stretched.img 2 4 8 16```
 + **Copying from drop to “data#” folder:**
-  <pre><code>sudo cp /cybergis/misc/drop/Ubuntu/(file name)* . </code></pre>
+  ```sudo cp /cybergis/misc/drop/Ubuntu/(file name)* . ```
 + **Show files in current directory:**
-    <pre><code>ls</code></pre>
+    ```ls```
 + **Change directory:**
-    <pre><code>cd</code></pre>
+    ```cd```
 + **Add directory:**
-    <pre><code>sudo mkdir</code></pre>
+    ```sudo mkdir```
 + **Remove directory/file:** 
-    <pre><code> for directory: sudo rm (directory name)</code></pre>
-    <pre><code>for file: sudo rm –f (file name)</code></pre>
+    ``` for directory: sudo rm (directory name)```
+    ```for file: sudo rm –f (file name)```
 + **ssh to the back-end; ssh to the front end:**
-    <pre><code>ssh backend-ittc-server</code></pre>
-    <pre><code>ssh frontend-ittc-server</code></pre>
+    ```ssh backend-ittc-server```
+    ```ssh frontend-ittc-server```
 + **Edit the tile cache configuration file (from the front-end server):**
-    <pre><code>sudo vim /etc/tilecache.cfg</code></pre>
+    ```sudo vim /etc/tilecache.cfg```
 + **Exit the tile cache configuration file:**
-    <pre><code>:wq (press enter)</code></pre>
+    ```:wq (press enter)```
 + **Restart the front-end server:**
-    <pre><code>sudo /etc/init.d.apache2 restart</code><pre>
-        
+    ```sudo /etc/init.d.apache2 restart```
+
