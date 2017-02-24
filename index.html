@@ -1391,6 +1391,18 @@ $('#myModal').on('hidden.bs.modal', function () {
 
     //enables hashes on tabs
     $(document).ready(function() {
+
+        //probably doesn't work because of propogation being stopped in sidebar!
+        //also need to link global products somehow
+        $( "a" ).on( "click", function() {
+            console.log('title clicked');
+            var match = $(this).attr('href').match(/#\S+/);
+            console.log('url fragment match made: ');
+            console.log(match[0]);
+            ga('send', 'pageview', location.pathname + match[0]);
+        });
+
+
         //come up with unique ids for HIU products
         //then store the ids under a new tag called data-product-id
 
@@ -1498,7 +1510,8 @@ $('#myModal').on('hidden.bs.modal', function () {
           });
 
 
-          
+    //http://mediacause.org/track-anchor-tags-google-analytics-2/
+
 
     });
 
