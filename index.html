@@ -55,6 +55,41 @@ a.title div{
   word-wrap:break-word; */
 }
 
+.my-large-country-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .1em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  /* word wrap isn't working
+  width:150px;
+  word-wrap:break-word; */
+}
+
+.my-large-country-italics-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: .1em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  /* word wrap isn't working
+  width:150px;
+  word-wrap:break-word; */
+}
+
 .my-medium-country-label {
   background: none;
   border: none;
@@ -71,7 +106,24 @@ a.title div{
   word-wrap:break-word; */
 }
 
-.my-small-country-label {
+.my-medium-country-italics-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: .06em;
+  line-height: 1.2em;
+  /* word wrap isn't working
+  width:150px;
+  word-wrap:break-word; */
+}
+
+.my-small-country--label {
   background: none;
   border: none;
   box-shadow: none;
@@ -93,12 +145,12 @@ a.title div{
   box-shadow: none;
   font-family: 'Droid Serif', serif;
   color: rgb(158,157,159);
-  font-size: 8px;
+  font-size: 14px;
   font-weight: bold;
   font-style: italic;
   text-align: center;
   letter-spacing: .02em;
-  line-height: 1em;
+  line-height: 1.2em;
   /* word wrap isn't working
   width:150px;
   word-wrap:break-word; */
@@ -408,16 +460,22 @@ $('#myModal').on('hidden.bs.modal', function () {
     function onEachFeatureLargeLabels(feature, layer) {
         //layer.setStyle({'opacity' :'.5'});
         if (feature.properties && feature.properties.NAME) {
-            //layer.bindTooltip("my tooltip text").openTooltip();
-            layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-large-country-label", offset: [0, 0], direction: 'center', pane: 'labels' });
+            if (feature.properties.Italics == "Y") {
+              layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-large-country-italics-label", offset: [0, 0], direction: 'center', pane: 'labels' });
+          } else {
+              layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-large-country-label", offset: [0, 0], direction: 'center', pane: 'labels' });
+          }
         }
     }
 
     function onEachFeatureMediumLabels(feature, layer) {
         //layer.setStyle({'opacity' :'.5'});
         if (feature.properties && feature.properties.NAME) {
-            //layer.bindTooltip("my tooltip text").openTooltip();
-            layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-medium-country-label", offset: [0, 0], direction: 'center', pane: 'labels' });
+            if (feature.properties.Italics == "Y") {
+              layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-medium-country-italics-label", offset: [0, 0], direction: 'center', pane: 'labels' });
+          } else {
+              layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-medium-country-label", offset: [0, 0], direction: 'center', pane: 'labels' });
+          }
         }
     }
 

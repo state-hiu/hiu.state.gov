@@ -38,6 +38,3 @@ The request process is similar for either option, the key is a clear justificati
 
 If you have general questions, please contact HIU at **[HIU_INFO@state.gov](mailto:HIU_INFO@state.gov)**.
 
-If you have questions about data, please contact HIU at **[HIU_DATA@state.gov](mailto:HIU_DATA@state.gov)**.
-
-If you have questions about HIU S&T programs, please contact HIU at **[HIU_DEV@state.gov](mailto:HIU_DEV@state.gov)**.

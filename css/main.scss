@@ -523,7 +523,7 @@ body {
 
 // http://stackoverflow.com/questions/29038596/bootstrap-fixed-header-and-footer-with-scrolling-body-content-area-in-fluid-cont
 .main {
-  max-height: calc(100% - 75px);
+  max-height: calc(100% - 62px);
   overflow-y: scroll;
 }
 
@@ -727,10 +727,10 @@ img.thumb150 {
 
 .new-product {
   line-height: 0px;
-  font-size: 13px;
-  color: #088008;
+  font-size: 15px;
+  color: #f15b0e;
   font-style: italic;
-  text-shadow: 0 0 1px #05e03e;
+  #text-shadow: 0 0 1px #05e03e;
 }
 
 .featured-product {

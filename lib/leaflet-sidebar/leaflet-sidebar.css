@@ -15,7 +15,7 @@
   min-height: 335px;
   z-index: 2000; }
   .sidebar.collapsed {
-    width: 48px; height: 40px; }
+    width: 54px; height: 40px; }
   @media (min-width: 768px) {
     .sidebar {
       bottom: 10px;
@@ -54,7 +54,7 @@
     right: 0; }
   .sidebar-tabs, .sidebar-tabs > ul {
     position: absolute;
-    width: 44px;
+    width: 50px;
     margin: 0;
     padding: 0; }
     .sidebar-tabs > li, .sidebar-tabs > ul > li {
@@ -85,7 +85,7 @@
         text-decoration: none;
         text-align: center;
         /* padding-left: 2px; */
-        font-size: 15px; }
+        font-size: 16px; }
   .sidebar-tabs > ul + ul {
     bottom: 0; }
 
@@ -104,22 +104,22 @@ li#global-outer {
 .sidebar-tabs > ul > li > a#global {
   line-height: 20px;
   padding-top: 0px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .sidebar-content {
   position: absolute;
   top: 0;
   bottom: 0;
-  left:40px;
+  left:50px;
   background-color: rgba(255, 255, 255, 1);
   overflow-x: hidden;
   overflow-y: hidden;
-  width: calc(100% - 44px);
+  width: calc(100% - 50px);
   -webkit-transition: width 500ms;
   transition: width 500ms; }
   .sidebar-topleft .sidebar-content {
-    left: 44px;
+    left: 50px;
     right: 0; }
   .sidebar-right .sidebar-content {
     left: 0;
@@ -218,7 +218,7 @@ so they is no log with sidebar border collapsing*/
   margin: 0;
   padding: 0 20px;
   line-height: 40px;
-  font-size: 13.4pt;
+  font-size: 16pt;
   color: #fff;
   background-color: #0A2E52; }
   .sidebar-right .sidebar-header {

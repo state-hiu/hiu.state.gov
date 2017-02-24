@@ -39,5 +39,3 @@ Learn more about our open source software, developer resources, APIs, and websit
 
 If you have general questions, please contact HIU at **[HIU_INFO@state.gov](mailto:HIU_INFO@state.gov)**.
 
-If you have questions about data, please contact HIU at **[HIU_DATA@state.gov](mailto:HIU_DATA@state.gov)**.
-
