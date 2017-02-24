@@ -3,7 +3,7 @@ layout: product
 category: products
 title: "Yemen: Humanitarian Overview"
 region_id: "NEA"
-region_title: "Middle East"
+region_title: "Near East"
 date_published: 2015-07-17
 product_id: "U1254"
 product_pdf: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.pdf"
