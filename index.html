@@ -123,7 +123,7 @@ a.title div{
   word-wrap:break-word; */
 }
 
-.my-small-country--label {
+.my-small-country-label {
   background: none;
   border: none;
   box-shadow: none;
@@ -716,16 +716,13 @@ $('#myModal').on('hidden.bs.modal', function () {
         //close all popups
         map.closePopup();
 
-        //topoLayer had trouble redrawing after flyTo, so I am removing it before flyTo, and adding it back in after flyTo
+        //clear topo layer before fly to prevent effect of it not rendering on the fly
         topoLayer.clearLayers();
 
         //map.setView([20, 0], 3, {animation: false});
         map.flyTo([20, 0], 3);
         console.log('map clicked');
         console.log(e);
-
-        $.getJSON('{{ site.baseurl }}/localdata/bureau_outline_topojson5.json')
-            .done(addTopoData);
 
         if(layerClicked !== true){
           //$('.sidebar').css({ "height": "33%"});
