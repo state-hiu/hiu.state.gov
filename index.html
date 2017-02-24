@@ -77,7 +77,7 @@ a.title div{
   box-shadow: none;
   font-family: 'Droid Serif', serif;
   color: rgb(158,157,159);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
   letter-spacing: .02em;
@@ -566,7 +566,7 @@ $('#myModal').on('hidden.bs.modal', function () {
           }
       }
 
-      if (map.getZoom() < 5 ) {
+      if (map.getZoom() < 6 ) {
         if (map.hasLayer(SmallCountryLabelsLayer)){
               map.removeLayer(SmallCountryLabelsLayer);
               map.removeLayer(SmallCountryLabelsItalicsLayer);
@@ -574,7 +574,7 @@ $('#myModal').on('hidden.bs.modal', function () {
               console.log("layer already removed");
           }
       }
-      if (map.getZoom() >= 5 ) {
+      if (map.getZoom() >= 6 ) {
         if (map.hasLayer(SmallCountryLabelsLayer)){
               console.log("layer already added");
           } else {
@@ -855,8 +855,20 @@ $('#myModal').on('hidden.bs.modal', function () {
               firstClick = false;
             }
 
+            console.log('region id: ');
+            console.log(region_id);
+
             //window.map.setView(regionCoord,regionZoom);
-            window.map.flyTo(regionCoord,regionZoom);
+            if (region_id == 'NEA') {
+                console.log('NEA region!');
+                map.fitBounds([
+                [43.8415, 75.3892],
+                [3.7555, -54.728]
+                ]);
+            } else {
+                console.log('flying to');
+                window.map.flyTo(regionCoord,regionZoom);
+            }
 
             var enabled = {};
             var featureCollection = products;
@@ -1144,7 +1156,7 @@ $('#myModal').on('hidden.bs.modal', function () {
             break;
           case "NEA":
             regionCoord = [28, 10];
-            regionZoom = 4;
+            regionZoom = 5;
             activeLayer = "NEA";
             break;
           case "SCA":
@@ -1388,10 +1400,10 @@ $('#myModal').on('hidden.bs.modal', function () {
 
             var curr_date = d.getDate();
             
-            var past_90_days = d.setDate(d.getDate()-90);
+            var past_60_days = d.setDate(d.getDate()-60);
 
-            //console.log("past 90 days");
-            //console.log(past_90_days);
+            //console.log("past 60 days");
+            //console.log(past_60_days);
 
             //loop through json and match today's date with match-date
             var jsonCount = 0;
@@ -1403,7 +1415,7 @@ $('#myModal').on('hidden.bs.modal', function () {
 
                 var newDate = new Date(fixture.properties.date_published);
 
-                if ( newDate > past_90_days) {
+                if ( newDate > past_60_days) {
                     //print out today's schedule here
                     //console.log(fixture.team1 + " Vs. " + fixture.team2);
                     //console.log('new date');

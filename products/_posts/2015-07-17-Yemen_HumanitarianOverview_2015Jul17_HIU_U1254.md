@@ -2,14 +2,14 @@
 layout: product
 category: products
 title: "Yemen: Humanitarian Overview"
-region_id: "NEA"
+region_id: NEA
 region_title: "Middle East"
 date_published: 2015-07-17
 product_id: "U1254"
 product_pdf: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.pdf"
 product_jpg: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.jpg"
 thumbnail: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254_thumb.jpg"
-featured: false
+featured: true
 lat: 15.342
 lon: 44.201
 keywords:
