@@ -6,6 +6,7 @@ description: "This guide provides instructions for how to publish products to th
 version: 1.1
 date: 2016-10-17
 featured: false
+display: false
 keywords:
   -  site
 ---

@@ -627,7 +627,7 @@ $('#myModal').on('hidden.bs.modal', function () {
       if (map.getZoom() < 6 ) {
         if (map.hasLayer(SmallCountryLabelsLayer)){
               map.removeLayer(SmallCountryLabelsLayer);
-              map.removeLayer(SmallCountryLabelsItalicsLayer);
+              //map.removeLayer(SmallCountryLabelsItalicsLayer);
           } else {
               console.log("layer already removed");
           }
@@ -637,7 +637,7 @@ $('#myModal').on('hidden.bs.modal', function () {
               console.log("layer already added");
           } else {
               SmallCountryLabelsLayer.addTo(map);
-              SmallCountryLabelsItalicsLayer.addTo(map);
+              //SmallCountryLabelsItalicsLayer.addTo(map);
           }
       }
 

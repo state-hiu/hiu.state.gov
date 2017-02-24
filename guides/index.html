@@ -2,29 +2,49 @@
 layout: wrapper_text
 title: Guides
 ---
+
+{% assign count_all = 0 %}
+
+{% for guide in site.categories.guides %}
+  {% unless guide.display == false %}
+        {% assign count_all = count_all | plus: 1 %}
+  {% endunless %}
+{% endfor %}
+
 {% assign count_featured = 0 %}
 {% for guide in site.categories.guides %}
-  {% if guide.featured == true %}
-    {% assign count_featured = count_featured | plus: 1 %}
-  {% endif %}
+  {% unless guide.display == false %}
+      {% if guide.featured == true %}
+        {% assign count_featured = count_featured | plus: 1 %}
+      {% endif %}
+  {% endunless %}
 {% endfor %}
+
 {% assign count_cybergis = 0 %}
 {% for guide in site.categories.guides %}
+  {% unless guide.display == false %}
   {% if guide.keywords contains 'cybergis' %}
     {% assign count_cybergis = count_cybergis | plus: 1 %}
   {% endif %}
+  {% endunless %}
 {% endfor %}
+
 {% assign count_ittc = 0 %}
 {% for guide in site.categories.guides %}
-  {% if guide.keywords contains 'ittc' %}
-    {% assign count_ittc = count_ittc | plus: 1 %}
-  {% endif %}
+  {% unless guide.display == false %}
+      {% if guide.keywords contains 'ittc' %}
+        {% assign count_ittc = count_ittc | plus: 1 %}
+      {% endif %}
+  {% endunless %}
 {% endfor %}
+
 {% assign count_site = 0 %}
 {% for guide in site.categories.guides %}
-  {% if guide.keywords contains 'site' %}
-    {% assign count_site = count_site | plus: 1 %}
-  {% endif %}
+  {% unless guide.display == false %}
+      {% if guide.keywords contains 'site' %}
+        {% assign count_site = count_site | plus: 1 %}
+      {% endif %}
+  {% endunless %}
 {% endfor %}
 
 
@@ -33,7 +53,7 @@ title: Guides
   <ul class="nav nav-tabs" style="padding: 10px 10px 0px 10px;">
     <!--<li class="active"><a href="#featured" data-toggle="tab">Featured ({{ count_featured }})</a></li>-->
     <li class="active">
-      <a href="#all" data-toggle="tab">All ({{ site.categories.guides | size }}) </a>
+      <a href="#all" data-toggle="tab">All ({{ count_all }}) </a>
     </li>
     <li><a href="#site" data-toggle="tab">HIU Website ({{ count_site }})</a></li>
     <li><a href="#ittc" data-toggle="tab">ITTC ({{ count_ittc }})</a></li>
@@ -46,7 +66,9 @@ title: Guides
 
     <div id="all" class="tab-pane active">
       {% for guide in sorted %}
-        {% include main/listitem_guide.html %}
+        {% unless guide.display == false %}
+          {% include main/listitem_guide.html %}
+        {% endunless %}
       {% endfor %}
     </div>
     <div id="featured" class="tab-pane">
@@ -58,23 +80,29 @@ title: Guides
     </div>
     <div id="cybergis" class="tab-pane">
       {% for guide in sorted %}
-        {% if guide.keywords contains 'cybergis' %}
-          {% include main/listitem_guide.html %}
-        {% endif %}
+        {% unless guide.display == false %}
+            {% if guide.keywords contains 'cybergis' %}
+              {% include main/listitem_guide.html %}
+            {% endif %}
+        {% endunless %}
       {% endfor %}
     </div>
     <div id="ittc" class="tab-pane">
       {% for guide in sorted %}
-        {% if guide.keywords contains 'ittc' %}
-          {% include main/listitem_guide.html %}
-        {% endif %}
+        {% unless guide.display == false %}
+            {% if guide.keywords contains 'ittc' %}
+              {% include main/listitem_guide.html %}
+            {% endif %}
+        {% endunless %}
       {% endfor %}
     </div>
     <div id="site" class="tab-pane">
       {% for guide in sorted %}
-        {% if guide.keywords contains 'site' %}
-          {% include main/listitem_guide.html %}
-        {% endif %}
+        {% unless guide.display == false %}
+            {% if guide.keywords contains 'site' %}
+              {% include main/listitem_guide.html %}
+            {% endif %}
+        {% endunless %}
       {% endfor %}
     </div>
     
