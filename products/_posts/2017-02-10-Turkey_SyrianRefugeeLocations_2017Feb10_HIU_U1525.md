@@ -3,7 +3,7 @@ layout: product
 category: products
 title: "Turkey-Syria: Numbers and Locations of Displaced Syrians as of Feb 09 2017"
 region_id: "NEA"
-region_title: "Middle East"
+region_title: "Near East"
 date_published: 2017-02-10
 product_id: "U1525"
 product_pdf: "Turkey_SyrianRefugeeLocations_2017Feb09_HIU_U1525.pdf"
