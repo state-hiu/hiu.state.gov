@@ -517,7 +517,7 @@ $(document).ready(function(){
         <div class="form-group c94 required" data-cid="c94">
           <label class="control-label" for="c94">Project Description</label>
 
-          <textarea class="form-control" id="project_description" name="project_description" rows="3"   ></textarea>
+          <textarea class="form-control" id="project_description" name="project_description" rows="5" placeholder='Please provide a description of the project that this imagery and mapping will support. Please also clearly outline how the imagery and output mapping data will benefit the program.' ></textarea>
         </div>
         
 
@@ -541,22 +541,8 @@ $(document).ready(function(){
           -->
           </div>
 
-          
-
-        <div class="form-group c79" data-cid="c79">
-          <label class="control-label group-title" for="c79">Additional Information</label>
-        </div>
-
-        <div class="form-group c58 required" data-cid="c58">
-              <label class="control-label" for="c58" data-toggle="tooltip" data-placement="right" title="Recommend browsing imagery at https://imagehunter.apollomapping.com/ to speed up request">Digital Globe Catalog ID (Optional)</label>
-
-              <input type="text" class="form-control" id="catalog_id" name="catalog_id" value=""     />
-
-        </div>
-
-
         <div class="form-group c53" data-cid="c53">
-          <label class="control-label" for="c53">Format</label>
+          <label class="control-label" for="c53">Requested Imagery Format</label>
 
           <select class="form-control" id="format" name="format"   
               >
@@ -570,13 +556,6 @@ $(document).ready(function(){
           </div>
 
 
-
-        <div class="form-group c58 required" data-cid="c58">
-              <label class="control-label" for="c58" data-toggle="tooltip" data-placement="right" title="Recommend browsing imagery at https://imagehunter.apollomapping.com/ to speed up request">Format</label>
-
-              <input type="text" class="form-control" id="catalog_id" name="catalog_id" value=""     />
-
-        </div>
 <!--
 <div class='form-group recaptcha'>
   <script type="text/javascript">
@@ -600,24 +579,22 @@ $(document).ready(function(){
 			    <label for="name">Name</label>
 			    <input id="name" name="name" type="text" value="" />
 -->
-   <input type="submit" class="btn btn-primary btn-lg" style="z-index: 1;" value="Submit" />
 
-</form>
-
-<div class="container jf-thankyou" style="display:none;" data-redirect="" data-seconds="10">
-  <h3>Your form has been submitted. Thank You!</h3>
-</div>
-
-		</section>
-
-		<br>
 
 <div class="form-group c86" data-cid="c86">
-    <label class="control-label" for="c86">Requested Imagery Coverage</label>
+    <label class="control-label group-title" for="c86">Requested Imagery Coverage</label>
+</div>
+
+
+<div class="form-group c58 required" data-cid="c58">
+      <label class="control-label" for="c58" data-toggle="tooltip" data-placement="right" title="Recommend browsing imagery at https://imagehunter.apollomapping.com/ to speed up request">Digital Globe Catalog ID/s (Optional)</label>
+
+      <input type="text" class="form-control" id="catalog_id" name="catalog_id" value=""     />
+
 </div>
 
     <div class="form-group c38 " data-cid="c38">
-              <label class="control-label" for="c38">Upload Geojson File</label>
+              <label class="control-label" for="c38">or upload geojson file</label>
 
           <input type="file" class="form-control" id="geojson" name="geojson" value="" accept=".geojson" style="padding-bottom: 40px;"/>
 
@@ -627,19 +604,34 @@ $(document).ready(function(){
 
 <br>
  
-    <!--The col-md-offset centers the div, but the bootstrap div is messing with the leaflet map
-    <div class="col-md-10 col-md-offset-1"> -->
+<!--The col-md-offset centers the div, but the bootstrap div is messing with the leaflet map
+<div class="col-md-10 col-md-offset-1"> -->
 
-    <div id="map" style="margin-left: auto; margin-right: auto; width: 100%; height: 400px"></div>
+<div id="map" style="margin-left: auto; margin-right: auto; width: 100%; height: 400px"></div>
 
-    <!--Leaflet Draw link-->
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.css' />
+<br>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.js'></script>
-    
-    
-    <!--TurfJS link-->
-    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
+<input type="submit" class="btn btn-primary btn-lg" style="z-index: 1;" value="Submit" />
+
+</form>
+
+<div class="container jf-thankyou" style="display:none;" data-redirect="" data-seconds="10">
+  <h3>Your form has been submitted. Thank You!</h3>
+</div>
+
+    </section>
+
+    <br>
+
+
+<!--Leaflet Draw link-->
+<link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.css' />
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.js'></script>
+
+
+<!--TurfJS link-->
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
 
 
 <script>
