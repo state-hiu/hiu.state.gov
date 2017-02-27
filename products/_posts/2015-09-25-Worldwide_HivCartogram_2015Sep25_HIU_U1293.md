@@ -9,7 +9,7 @@ product_id: "U1293"
 product_pdf: "Worldwide_HivCartogram_2015Sep25_HIU_U1293.pdf"
 product_jpg: "Worldwide_HivCartogram_2015Sep25_HIU_U1293.jpg"
 thumbnail: "Worldwide_HivCartogram_2015Sep25_HIU_U1293_thumb.jpg"
-featured: true
+featured: false
 lat: 0
 lon: 0
 keywords:
