@@ -6,9 +6,9 @@ region_id: "global"
 region_title: "Global & Transnational Products"
 date_published: 2016-11-29
 product_id: "U1495"
-product_pdf: Worldwide_PepfarPlansFY2016_2016Nov29_HIU_U1495.pdf
-product_jpg: Worldwide_PepfarPlansFY2016_2016Nov29_HIU_U1495.jpg
-thumbnail: Worldwide_PepfarPlansFY2016_2016Nov29_HIU_U1495_thumb.jpg
+product_pdf: "Worldwide_PepfarPlansFY2016_2016Nov29_HIU_U1495.pdf"
+product_jpg: "Worldwide_PepfarPlansFY2016_2016Nov29_HIU_U1495.jpg"
+thumbnail: "Worldwide_PepfarPlansFY2016_2016Nov29_HIU_U1495_thumb.jpg"
 featured: false
 lat: 0
 lon: 0
