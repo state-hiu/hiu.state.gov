@@ -1,7 +1,7 @@
 ---
 layout: product
 category: products
-title: "Worldwide: Path to HIV Epidemic Control"
+title: "HIV Prevalence and Estimated Number of Adults and Children Infected with HIV, 2014"
 region_id: "global"
 region_title: "Global & Transnational Products"
 date_published: 2015-09-25
