@@ -4,7 +4,7 @@ category: products
 title: "PEPFAR World Activities, 2014; U.S. President's Emergency Plan for AIDS Relief"
 region_id: "global"
 region_title: "Global & Transnational Products"
-date_published: 2014-02-12
+date_published: 2014-02-19
 product_id: "U967"
 product_pdf: "Worldwide_PepfarPlansFY2014_2014Feb19_HIU_U967.pdf"
 product_jpg: "Worldwide_PepfarPlansFY2014_2014Feb19_HIU_U967.jpg"
