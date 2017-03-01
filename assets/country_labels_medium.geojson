@@ -1468,6 +1468,24 @@
     {
       "type": "Feature",
       "properties": {
+        "NAME": "Western<br>Sahara",
+        "REGION": "Africa",
+        "NUM_CODE": 732,
+        "3_CODE": "ESH",
+        "2_CODE": "EH",
+        "Italics": "N"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.623046875,
+          24.287026865376436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "NAME": "West<br>Bank",
         "REGION": "Middle East",
         "NUM_CODE": 934,
