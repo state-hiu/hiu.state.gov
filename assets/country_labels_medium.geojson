@@ -98,7 +98,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          17.75390625,
+          17.841796875,
           43.88205730390537
         ]
       }
@@ -353,8 +353,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          43.383340328851006,
-          42.319776961691474
+          43.52783203125,
+          42.06560675405716
         ]
       }
     },
@@ -370,8 +370,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          45.02751642957807,
-          40.06791266390843
+          45.10986328125,
+          39.90973623453719
         ]
       }
     },
@@ -999,8 +999,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          47.39789990092868,
-          40.492273450165186
+          47.48291015625,
+          40.613952441166596
         ]
       }
     },
@@ -1373,8 +1373,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.7861328125,
-          44.32384807250689
+          20.654296875,
+          44.62175409623324
         ]
       }
     },
@@ -1462,6 +1462,42 @@
         "coordinates": [
           34.82666015625,
           30.65681556429287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "West<br>Bank",
+        "REGION": "Middle East",
+        "NUM_CODE": 934,
+        "3_CODE": "XWB",
+        "2_CODE": "XW",
+        "Italics": "N"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.3045654296875,
+          32.055808605387014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Gaza<br>Strip",
+        "REGION": "Middle East",
+        "NUM_CODE": 916,
+        "3_CODE": "XGZ",
+        "2_CODE": "XG",
+        "Italics": "N"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.37210083007812,
+          31.415772260270316
         ]
       }
     }
