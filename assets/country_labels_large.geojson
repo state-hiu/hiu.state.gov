@@ -395,7 +395,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "C&ocirc;TE<br>D'IVOIRE",
+        "NAME": "C&ocirc;TE<br>D&#8217IVOIRE",
         "REGION": "Africa",
         "NUM_CODE": 384,
         "3_CODE": "CIV",
