@@ -1397,7 +1397,6 @@ $('#myModal').on('hidden.bs.modal', function () {
     $(document).ready(function() {
 
         //probably doesn't work because of propogation being stopped in sidebar!
-        //also need to link global products somehow
         $( "a" ).on( "click", function() {
             console.log('title clicked');
             var match = $(this).attr('href').match(/#\S+/);
@@ -1447,18 +1446,24 @@ $('#myModal').on('hidden.bs.modal', function () {
                 //this below works manually
                 //document.getElementById('modal#NEA#U1283').click();
 
-                $('a[href="#'+region_hash+','+product_hash+'"]').trigger("click");
+                //made the query more specific so it would just call the 
+                //thumbnail modal and not trigger two modals, thus closing it 
+                //immediatly after it opened
+                $('description-image.a[href="#'+region_hash+','+product_hash+'"]').trigger("click");
 
                 document.location.hash = '#' + region_hash + ',' + product_hash
+
 
 
               }, 1500);
               
             }
 
+
+
         }
 
-        
+
 
         //insert new product labels
 
