@@ -4,7 +4,7 @@ category: products
 title: "Europe: Displacement Snapshot (21 December 2015)"
 region_id: "EUR"
 region_title: "Europe"
-date_published: 2016-10-28
+date_published: 2015-12-21
 product_id: "U1332"
 product_pdf: "World_EuropeanRefugeeMigration_2015Dec21_HIU_U1332.pdf"
 product_jpg: "World_EuropeanRefugeeMigration_2015Dec21_HIU_U1332.jpg"
