@@ -295,16 +295,20 @@ a.title div{
 
 
 $('#myModal').on('show.bs.modal', function (event) {
+
   //alert('modal is called');
   var jpegDisplayNumber = 2;
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var title = button.data('title') // Extract info from data-* attributes
+  var button = $(event.relatedTarget); // Button that triggered the modal
+  var title = button.data('title'); // Extract info from data-* attributes
   console.log('title-data: ');
   console.log(title);
   var img = button.data('img') // Extract info from data-* attributes
   console.log('img-data: ');
   console.log(img);
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+
+  window.location.hash = button.data('href');
+
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   var modal = $(this)
   modal.find('.modal-title').text(title);
@@ -1443,13 +1447,18 @@ $('#myModal').on('hidden.bs.modal', function () {
                 //this below works manually
                 //document.getElementById('modal#NEA#U1283').click();
 
-                $('a[href="#'+region_hash+','+product_hash+'"').trigger("click");
-                document.location.hash = '#'+region_hash+','+product_hash
+                $('a[href="#'+region_hash+','+product_hash+'"]').trigger("click");
+
+                document.location.hash = '#' + region_hash + ',' + product_hash
+
+
               }, 1500);
               
             }
 
         }
+
+        
 
         //insert new product labels
 
@@ -1458,8 +1467,9 @@ $('#myModal').on('hidden.bs.modal', function () {
         }
 
         getArray().done( function(json) {
-            //console.log('printing out json: ');
-            //console.log(json); // show the json data in console
+            console.log('printing out json: ');
+            console.log(json); // show the json data in console
+
             var _len = json.length;
             var fixture;
 
@@ -1475,30 +1485,34 @@ $('#myModal').on('hidden.bs.modal', function () {
             
             var past_60_days = d.setDate(d.getDate()-60);
 
-            //console.log("past 60 days");
-            //console.log(past_60_days);
+            console.log("past 60 days");
+            console.log(past_60_days);
 
             //loop through json and match today's date with match-date
             var jsonCount = 0;
+
             for (var i in json.features) {
                 fixture = json.features[i];
                 
-                //console.log('json properties');
-                //console.log(fixture.properties.date_published);
+                console.log('json properties');
+                console.log(fixture.properties.date_published);
 
                 var newDate = new Date(fixture.properties.date_published);
 
                 if ( newDate > past_60_days) {
-                    //print out today's schedule here
-                    //console.log(fixture.team1 + " Vs. " + fixture.team2);
-                    //console.log('new date');
-                    //console.log(newDate);
+
+                    console.log('new date');
+                    console.log(newDate);
+
                     jsonCount++;
 
                     //add new to the product
 
                     //add new to the region tab
                     var region_id = fixture.properties.region_id;
+
+                    console.log('new product region id: ');
+                    console.log(region_id);
                     $('#'+region_id).append("<div class='new-product'>new</div>");
 
                 }
