@@ -55,23 +55,6 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "TAJIKISTAN",
-        "REGION": "Eurasia",
-        "NUM_CODE": 762,
-        "3_CODE": "TJK",
-        "2_CODE": "TJ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          71.455078125,
-          38.30718056188316
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "NAME": "TURKMENISTAN",
         "REGION": "Eurasia",
         "NUM_CODE": 795,
@@ -457,23 +440,6 @@
         "coordinates": [
           101.176751718258,
           34.32838864058198
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "KYRGYZSTAN",
-        "REGION": "Eurasia",
-        "NUM_CODE": 417,
-        "3_CODE": "KGZ",
-        "2_CODE": "KG"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          74.70703125,
-          41.44272637767212
         ]
       }
     },
