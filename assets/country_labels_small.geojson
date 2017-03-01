@@ -22,7 +22,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "SAINT HELENA",
+        "NAME": "SAINT<br>HELENA",
         "REGION": "Africa",
         "NUM_CODE": 654,
         "3_CODE": "SHN",
@@ -194,8 +194,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.133792917546231,
-          49.21208860207739
+          -2.0846557617187496,
+          49.20503726723141
         ]
       }
     },
@@ -328,7 +328,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Isle of Man (U.K.)",
+        "NAME": "Isle of Man<br>(U.K.)",
         "REGION": "Europe",
         "NUM_CODE": 833,
         "3_CODE": "IMN",
@@ -338,8 +338,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -4.559440947358098,
-          54.23406114947906
+          -4.537353515625,
+          54.226707764386695
         ]
       }
     },
@@ -446,8 +446,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.588116416221766,
-          49.46377538639493
+          -2.6174926757812496,
+          49.43777096183293
         ]
       }
     },
@@ -490,7 +490,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Reunion (FR.)",
+        "NAME": "Reunion<br>(FR.)",
         "REGION": "Africa",
         "NUM_CODE": 638,
         "3_CODE": "REU",
@@ -644,8 +644,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -13.984822490227543,
-          23.80148901079184
+          -13.623046875,
+          24.287026865376436
         ]
       }
     },
