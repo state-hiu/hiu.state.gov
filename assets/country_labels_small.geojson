@@ -631,60 +631,6 @@
         ]
       }
     },
-  {
-      "type": "Feature",
-      "properties": {
-        "NAME": "Western<br>Sahara",
-        "REGION": "Africa",
-        "NUM_CODE": 732,
-        "3_CODE": "ESH",
-        "2_CODE": "EH",
-        "Italics": "N"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -13.623046875,
-          24.287026865376436
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "Gaza<br>Strip",
-        "REGION": "Middle East",
-        "NUM_CODE": 916,
-        "3_CODE": "XGZ",
-        "2_CODE": "XG",
-        "Italics": "N"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          34.37210083007812,
-          31.415772260270316
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "West<br>Bank",
-        "REGION": "Middle East",
-        "NUM_CODE": 934,
-        "3_CODE": "XWB",
-        "2_CODE": "XW",
-        "Italics": "N"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          35.3045654296875,
-          32.055808605387014
-        ]
-      }
-    },
     {
       "type": "Feature",
       "properties": {
