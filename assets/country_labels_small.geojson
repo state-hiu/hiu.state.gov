@@ -631,7 +631,7 @@
         ]
       }
     },
-   /* {
+  {
       "type": "Feature",
       "properties": {
         "NAME": "Western<br>Sahara",
@@ -685,7 +685,6 @@
         ]
       }
     },
-   */
     {
       "type": "Feature",
       "properties": {
