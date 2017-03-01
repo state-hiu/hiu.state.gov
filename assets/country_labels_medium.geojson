@@ -1520,6 +1520,24 @@
     {
       "type": "Feature",
       "properties": {
+        "NAME": "Taiwan",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 158,
+        "3_CODE": "TWN",
+        "2_CODE": "TW",
+        "Italics": "Y"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.90420157476797,
+          23.600849810595122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "NAME": "West<br>Bank",
         "REGION": "Middle East",
         "NUM_CODE": 934,
