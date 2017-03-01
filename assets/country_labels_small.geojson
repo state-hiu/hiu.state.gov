@@ -896,8 +896,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -63.0841644658007,
-          18.0859351574004
+          -63.033714294433594,
+          18.097560372874558
         ]
       }
     },
@@ -1084,7 +1084,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "St. Barthelemy (FR.)",
+        "NAME": "St. Barthelemy<br>(FR.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 652,
         "3_CODE": "BLM",
@@ -1102,7 +1102,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "ST. VINCENT &<br>THE GRENADINES",
+        "NAME": "ST. VINCENT<br>& THE<br>GRENADINES",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 670,
         "3_CODE": "VCT",
@@ -1210,7 +1210,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "SINT MAARTEN",
+        "NAME": "Sint Maarten (NETH.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 534,
         "3_CODE": "SXM",
@@ -1220,8 +1220,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -63.07417689499444,
-          18.035775357351213
+          -63.08486938476563,
+          18.025751281356246
         ]
       }
     },
@@ -1246,7 +1246,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "British Virgin<br>Islands (U.K.)",
+        "NAME": "British<br>Virgin<br>Islands<br>(U.K.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 92,
         "3_CODE": "VGB",
@@ -1256,8 +1256,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.63534518502067,
-          18.42284921259798
+          -64.5391845703125,
+          18.538210598712347
         ]
       }
     },
@@ -1310,8 +1310,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -59.53435985524064,
-          13.190249894193357
+          -59.48822021484374,
+          13.151701527938698
         ]
       }
     },
@@ -1336,7 +1336,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "U.S. VIRGIN<br>ISLANDS (U.S.)",
+        "NAME": "U.S.<br>VIRGIN<br>ISLANDS<br>(U.S.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 850,
         "3_CODE": "VIR",
@@ -1346,8 +1346,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.73499894706528,
-          17.728602068554494
+          -64.76028442382811,
+          17.705519887565256
         ]
       }
     },
@@ -1382,8 +1382,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -63.07151354277944,
-          18.22531725665212
+          -63.029251098632805,
+          18.238155600789916
         ]
       }
     },
