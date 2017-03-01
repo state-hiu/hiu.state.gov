@@ -3,16 +3,6 @@ layout: wrapper_imagery_form
 title: Imagery Request Form
 ---
 
-<!--
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
-
-
-
-
-<!-- bootstrap datepicker needs jquery
-  https://bootstrap-datepicker.readthedocs.io/en/latest/
--->
-
 <!--custom css for this page-->
 
 <style type="text/css">
@@ -57,16 +47,61 @@ label.group-title {
     font-size: 20px;
 }
 
+/*overides bootstrap*/
+.navbar-default {
+    background-image: none;
+}
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #d73f3f;
+}
+/*overides leaflet control layer order so it doesn't appear on top of nav bar*/
+.leaflet-top, .leaflet-bottom {
+    z-index: 1;
+}
+.required .control-label:not(span):before, td.required:before {
+    content: '* ';
+    color: #F00;
+    font-weight: bold;
+}
+
+label.control-label span:after {
+    font-family: FontAwesome;
+    color: #1E91CF;
+    content: "\f059";
+    font-size: 10px;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.tooltip-inner {
+    max-width: 550px;
+    /* If max-width does not work, try using width instead */
+    width: 550px; 
+}
+
 </style>
 
 
-<!--leaflet 1.0.2-->
 <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/leaflet.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.css" />
+
 <script src="{{ site.baseurl }}/lib/leaflet/leaflet-src.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.js"></script>
+
 
 <!-- The bootstrap libraries are already included in the default_bootstrap layout, don't add them again to prevent Uncaught TypeErrors -->
 
-<script type='text/javascript'>//<![CDATA[
+<script type='text/javascript'>
+
 $(document).ready(function(){
   $('#sandbox-container input').datepicker({
       autoclose: true
@@ -85,7 +120,7 @@ $(document).ready(function(){
   $('#sandbox-container input').on('hide', function(e){
       console.debug('hide', e.date, $(this).data('stickyDate'));
       var stickyDate = $(this).data('stickyDate');
-      
+
       if ( !e.date && stickyDate ) {
           console.debug('restore stickyDate', stickyDate);
           $(this).datepicker('setDate', stickyDate);
@@ -98,64 +133,20 @@ $(document).ready(function(){
 </script>
 
 
-<style>
-    /*overides bootstrap*/
-    .navbar-default {
-        background-image: none;
-    }
-    .info {
-    	padding: 6px 8px;
-    	font: 14px/16px Arial, Helvetica, sans-serif;
-    	background: white;
-    	background: rgba(255,255,255,0.8);
-    	box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    	border-radius: 5px;
-    }
-    .info h4 {
-    	margin: 0 0 5px;
-    	color: #d73f3f;
-    }
-    /*overides leaflet control layer order so it doesn't appear on top of nav bar*/
-    .leaflet-top, .leaflet-bottom {
-    	z-index: 1;
-    }
-    .required .control-label:not(span):before, td.required:before {
-      content: '* ';
-      color: #F00;
-      font-weight: bold;
-    }
-
-    label.control-label span:after {
-      font-family: FontAwesome;
-      color: #1E91CF;
-      content: "\f059";
-      font-size: 10px;
-      cursor: pointer;
-      margin-left: 4px;
-    }
-    .tooltip-inner {
-    max-width: 550px;
-    /* If max-width does not work, try using width instead */
-    width: 550px; 
-    }
-</style>
-
-
 <div class="col-md-12">
 
-
-	<div class="row">
-		<div class="col-md-12">
-			<header role="header">
-			  <h1 class="page-title">{{ page.title }}</h1>
-			</header>
-		</div>
+    <div class="row">
+        <div class="col-md-12">
+            <header role="header">
+              <h1 class="page-title">{{ page.title }}</h1>
+            </header>
+        </div>
     <!--
-		<div class="col-md-offset-1 col-md-3">
-			{% include social-media.html %}
-		</div>
+        <div class="col-md-offset-1 col-md-3">
+            {% include social-media.html %}
+        </div>
   -->
-	</div>
+    </div>
 
 
 <div class="row">
@@ -168,23 +159,22 @@ $(document).ready(function(){
 
     <form id="form">
 
-
         <div class="form-group c66 required col-1" data-cid="c66">
           <label class="control-label" for="c66">Type of Request</label>
 
             <div class="radio">
-              	<input  id="raw_imagery" name="request_type"  type="radio" value="Raw Imagery" 
+                  <input  id="raw_imagery" name="request_type"  type="radio" value="Raw Imagery" 
                 data-rule-required="true"  >
-              	<label  for="c66_1">
-              		Raw Imagery
-              	</label>
+                  <label  for="c66_1">
+                      Raw Imagery
+                  </label>
               </div>
 
               <div class="radio">
-              	<input  id="ittc_request" name="request_type"  type="radio" value="IttC Tiled Map Service"  >
-              	<label  for="c66_2">
-              		Tile Map Service (for OpenStreetMap)<sup class="asterick">*</sup>
-              	</label>
+                  <input  id="ittc_request" name="request_type"  type="radio" value="IttC Tiled Map Service"  >
+                  <label  for="c66_2">
+                      Tile Map Service (for OpenStreetMap)<sup class="asterick">*</sup>
+                  </label>
               </div>
         </div>
 
@@ -543,32 +533,28 @@ $(document).ready(function(){
 
         <div class="form-group c53" data-cid="c53">
           <label class="control-label" for="c53">Requested Imagery Format</label>
-
-          <select class="form-control" id="format" name="format"   
-              >
+          <select class="form-control" id="format" name="format">
             <option  value="AF">GeoTiff</option>
-            <option  value="AX">ERDOS Imagine</option>
-            <option  value="AL">Albania</option>
-            <option  value="DZ">Algeria</option>
-            
-            </select>
-            
-          </div>
+            <option  value="AX">JPEG</option>
+            <option  value="AL">MrSid</option>
+            <option  value="DZ">NITF</option>
+          </select>
+        </div>
 
 
 <!--
 <div class='form-group recaptcha'>
   <script type="text/javascript">
-  	function renderReCaptcha(){
-  		var jfKey = '6Ldh_QkTAAAAAA1WdrF09PX4bYuZklOKqzAZ916H', // when form loaded from jqueryform.com
-  		realKey = '6LdopwYTAAAAABunoQoWr5mZGVpVSmTFumNM8ZfO',
-  		theme = 'light',
-  		key = -1 !== location.href.indexOf('jqueryform.com/') ? jfKey : realKey;
-  		grecaptcha.render( document.getElementById('g-recaptcha'), {
+      function renderReCaptcha(){
+          var jfKey = '6Ldh_QkTAAAAAA1WdrF09PX4bYuZklOKqzAZ916H', // when form loaded from jqueryform.com
+          realKey = '6LdopwYTAAAAABunoQoWr5mZGVpVSmTFumNM8ZfO',
+          theme = 'light',
+          key = -1 !== location.href.indexOf('jqueryform.com/') ? jfKey : realKey;
+          grecaptcha.render( document.getElementById('g-recaptcha'), {
           'sitekey' : key,
           'theme' : theme
         });
-  	};
+      };
   </script>
   <script src="https://www.google.com/recaptcha/api.js?hl=&onload=renderReCaptcha&render=explicit" async defer></script>
   <div id='g-recaptcha' class='g-recaptcha col_field' data-theme='light' data-sitekey='6LdopwYTAAAAABunoQoWr5mZGVpVSmTFumNM8ZfO'></div>
@@ -576,8 +562,8 @@ $(document).ready(function(){
 -->
 
 <!--
-			    <label for="name">Name</label>
-			    <input id="name" name="name" type="text" value="" />
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" value="" />
 -->
 
 
@@ -593,12 +579,12 @@ $(document).ready(function(){
 
 </div>
 
-    <div class="form-group c38 " data-cid="c38">
-              <label class="control-label" for="c38">or upload geojson file</label>
+<div class="form-group c38 " data-cid="c38">
+  <label class="control-label" for="c38">or upload geojson file</label>
 
-          <input type="file" class="form-control" id="geojson" name="geojson" value="" accept=".geojson" style="padding-bottom: 40px;"/>
+  <input type="file" class="form-control" id="geojson" name="geojson" value="" accept=".geojson" style="padding-bottom: 40px;"/>
 
-    </div>
+</div>
 
 <label class="control-label" for="c87">or draw area of interest on map: </label>
 
@@ -619,15 +605,9 @@ $(document).ready(function(){
   <h3>Your form has been submitted. Thank You!</h3>
 </div>
 
-    </section>
+</section>
 
-    <br>
-
-
-<!--Leaflet Draw link-->
-<link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.css' />
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.js'></script>
+<br>
 
 
 <!--TurfJS link-->
@@ -636,133 +616,49 @@ $(document).ready(function(){
 
 <script>
 
-            // Variable to hold request
-            var request;
+//map extent
+var southWest = L.latLng(-50,-100),
+  northEast = L.latLng(55,140),
+  bounds = L.latLngBounds(southWest, northEast);
 
-            var json;
+var map = L.map('map', {
+  minZoom: 2,
+  maxZoom: 16,
+  //scrollWheelZoom: false,
+});
 
-            // Bind to the submit event of our form
-            $("#form").submit(function(event){
+L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ', {
+    maxZoom: 18,
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+        '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Names and boundary representation are not necessarily authoritative. ',
+    id: 'mapbox.streets-basic'
+}).addTo(map);
 
-                    // Abort any pending request
-                    if (request) {
-                    request.abort();
-                    }
-                    // setup some local variables
-                    var $form = $(this);
+//https://www.mapbox.com/mapbox.js/example/v1.0.0/leaflet-draw/
+var featureGroup = L.featureGroup().addTo(map);
 
-                    // Let's select and cache all the fields
-                    var $inputs = $form.find("input, select, button, textarea");
-
-                    // Serialize the data in the form
-                    var serializedData = $form.serialize();
-                    //event.preventDefault();
-                    //var serializedData = $('input[name!=geojson]', this).serialize(); 
-
-                    // Let's disable the inputs for the duration of the Ajax request.
-                    // Note: we disable elements AFTER the form data has been serialized.
-                    // Disabled form elements will not be serialized.
-                    $inputs.prop("disabled", true);
-
-                    // Fire off the request to /form.php
-                    request = $.ajax({
-                    url: "https://script.google.com/macros/s/AKfycbzZdJsJnOEV95m4LUU_TxXPrON3BmZQjJ9pal9F8QPlRoqJsLmt/exec",
-                    type: "post",
-                    data: serializedData
-                    });
-
-                    // Callback handler that will be called on success
-                    request.done(function (response, textStatus, jqXHR){
-                        // Log a message to the console
-                        console.log("Hooray, it worked!");
-                        $(".jf-thankyou").show();
-                        console.log("drawn json: ");
-                        console.log(json);
-                    });
-
-                    // Callback handler that will be called on failure
-                    request.fail(function (jqXHR, textStatus, errorThrown){
-                    // Log the error to the console
-                    console.error(
-                        "The following error occurred: "+
-                        textStatus, errorThrown
-                    );
-                    });
-
-                    // Callback handler that will be called regardless
-                    // if the request failed or succeeded
-                    request.always(function () {
-                    // Reenable the inputs
-                    $inputs.prop("disabled", false);
-                    });
-
-                    // Prevent default posting of form
-                    event.preventDefault();
-            });
-
-</script>
-
-
-<script>
-
-  //map extent
-  var southWest = L.latLng(-50,-100),
-  		northEast = L.latLng(55,140),
-  		bounds = L.latLngBounds(southWest, northEast);
-
-  //var map = L.map('map').setView([15, 25], 2);
-  //var map = L.map('map').setView([15, 25], 2);
-  var map = L.map('map', {
-  	minZoom: 2,
-  	maxZoom: 16,
-  	//scrollWheelZoom: false,
-  });
-
-
-  //L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
-  L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-  	maxZoom: 18,
-  	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-  		'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Names and boundary representation are not necessarily authoritative. ',
-  	id: 'examples.map-i875mjb7'
-  }).addTo(map);
-
-  //taken from: http://leafletjs.com/examples/choropleth-example.html
-  //info box that contains title
-  /*
-  var info = L.control();
-
-  info.onAdd = function (map) {
-  	this._div = L.DomUtil.create('div', 'info');
-  	this._div.innerHTML = '<h4>Imagery Services</h4>';
-  	return this._div;
-  };
-
-  info.addTo(map);
-  */
-
-  //https://www.mapbox.com/mapbox.js/example/v1.0.0/leaflet-draw/
-  var featureGroup = L.featureGroup().addTo(map);
-
-  var drawControl = new L.Control.Draw({
+var drawControl = new L.Control.Draw({
+    draw: {
+          polyline: false,
+          circle: false
+         },
     edit: {
-      featureGroup: featureGroup
-    }
-  }).addTo(map);
+          featureGroup: featureGroup
+        }
+}).addTo(map);
 
-  map.on('draw:created', function(e) {
-      featureGroup.addLayer(e.layer);
-      console.log(featureGroup.toGeoJSON());
-      // get json
-      json = featureGroup.toGeoJSON();
-  });
+map.on('draw:created', function(e) {
+  featureGroup.addLayer(e.layer);
+  console.log(featureGroup.toGeoJSON());
+  // get json
+  json = featureGroup.toGeoJSON();
+});
 
-  //map.setMaxBounds(bounds);
-  //zoom the map to that bounding box
-  map.fitBounds(bounds);
+//map.setMaxBounds(bounds);
+//zoom the map to that bounding box
+map.fitBounds(bounds);
 
 </script>
-
 
 <br>
 
@@ -776,8 +672,8 @@ $(document).ready(function(){
 
 <script type="text/javascript">
   $('.jf-form input').iCheck({
-	    checkboxClass: 'icheckbox_flat',
-	    radioClass: 'iradio_flat'
+        checkboxClass: 'icheckbox_flat',
+        radioClass: 'iradio_flat'
   }).on('ifClicked', function(e){
     setTimeout( function(){
       $(e.target).valid();
