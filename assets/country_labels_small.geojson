@@ -770,8 +770,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -60.977896755771,
-          13.906247747992694
+          -60.96313476562499,
+          13.880745842025602
         ]
       }
     },
@@ -886,7 +886,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "SAINT MARTIN",
+        "NAME": "St. Martin (FR.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 663,
         "3_CODE": "MAF",
@@ -904,7 +904,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "ANTIGUA AND BARBUDA",
+        "NAME": "ANTIGUA &<br>BARBUDA",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 28,
         "3_CODE": "ATG",
@@ -922,7 +922,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "TRINIDAD AND TOBAGO",
+        "NAME": "TRINIDAD &<br>TOBAGO",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 780,
         "3_CODE": "TTO",
@@ -940,7 +940,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "NAVASSA ISLAND",
+        "NAME": "NAVASSA<br>ISLAND",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 926,
         "3_CODE": "XNV",
@@ -976,7 +976,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "CAYMAN ISLANDS",
+        "NAME": "CAYMAN<br>ISLANDS",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 136,
         "3_CODE": "CYM",
@@ -1048,7 +1048,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "SAINT KITTS AND NEVIS",
+        "NAME": "ST. KITTS<br>& NEVIS",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 659,
         "3_CODE": "KNA",
@@ -1084,7 +1084,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "SAINT BARTHELEMY",
+        "NAME": "St. Barthelemy (FR.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 652,
         "3_CODE": "BLM",
@@ -1102,7 +1102,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "SAINT VINCENT AND THE GRENADINES",
+        "NAME": "ST. VINCENT &<br>THE GRENADINES",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 670,
         "3_CODE": "VCT",
@@ -1120,7 +1120,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "MONTSERRAT",
+        "NAME": "Montserrat (U.K.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 500,
         "3_CODE": "MSR",
@@ -1130,8 +1130,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -62.19993153042047,
-          16.749376237505913
+          -62.1826171875,
+          16.707232312927637
         ]
       }
     },
@@ -1156,7 +1156,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "PUERTO RICO",
+        "NAME": "Puerto<br>Rico<br>(U.S.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 630,
         "3_CODE": "PRI",
@@ -1192,7 +1192,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "GUADELOUPE",
+        "NAME": "Guadeloupe (FR.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 312,
         "3_CODE": "GLP",
@@ -1246,7 +1246,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "BRITISH VIRGIN ISLANDS",
+        "NAME": "British Virgin<br>Islands (U.K.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 92,
         "3_CODE": "VGB",
@@ -1282,7 +1282,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "TURKS AND CAICOS ISLANDS",
+        "NAME": "TURKS AND<br>CAICOS ISLANDS",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 796,
         "3_CODE": "TCA",
@@ -1336,7 +1336,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "UNITED STATES VIRGIN ISLANDS",
+        "NAME": "U.S. VIRGIN<br>ISLANDS (U.S.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 850,
         "3_CODE": "VIR",
@@ -1372,7 +1372,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "ANGUILLA",
+        "NAME": "Anguilla (U.K.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 660,
         "3_CODE": "AIA",
