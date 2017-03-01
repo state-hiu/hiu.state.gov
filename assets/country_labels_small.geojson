@@ -634,7 +634,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Western Sahara",
+        "NAME": "Western<br>Sahara",
         "REGION": "Africa",
         "NUM_CODE": 732,
         "3_CODE": "ESH",
@@ -886,7 +886,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "SAO TOME AND PRINCIPE",
+        "NAME": "SAO TOME<br>AND PRINCIPE",
         "REGION": "Africa",
         "NUM_CODE": 678,
         "3_CODE": "STP",
@@ -914,8 +914,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.89399422538537,
-          42.562585905292366
+          20.9124755859375,
+          42.49235259142821
         ]
       }
     },
@@ -932,8 +932,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          28.577765365662287,
-          47.068977853073505
+          28.619384765624996,
+          47.331377157798244
         ]
       }
     },
@@ -1058,8 +1058,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -15.309840217190384,
-          13.44593170683342
+          -15.67474365234375,
+          13.467092893859657
         ]
       }
     },
@@ -1292,8 +1292,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          14.920982991210536,
-          46.07244023262743
+          14.69970703125,
+          46.03129569755731
         ]
       }
     },
@@ -1418,8 +1418,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.07891969086242,
-          42.713065305439926
+          19.237060546875,
+          42.83166720261409
         ]
       }
     },
@@ -1498,12 +1498,13 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "HOLY SEE",
+        "NAME": "HOLY<br>SEE",
         "REGION": "Europe",
         "NUM_CODE": 674,
         "3_CODE": "SMR",
         "2_CODE": "",
-        "Italics": "N"},
+        "Italics": "N"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
