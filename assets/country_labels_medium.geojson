@@ -438,8 +438,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -11.766357421875,
-          8.341953075466817
+          -11.832275390625,
+          8.570157714682582
         ]
       }
     },
@@ -489,8 +489,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          126.73828125,
-          40.027614437486655
+          126.46362304687499,
+          39.93501296038254
         ]
       }
     },
@@ -693,8 +693,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          23.97216796875,
-          55.29162848682989
+          23.9501953125,
+          55.35413531021057
         ]
       }
     },
@@ -710,8 +710,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -52.97607421875,
-          4.19302960536076
+          -52.93212890625,
+          4.412136788910181
         ]
       }
     },
@@ -1024,7 +1024,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "TIMOR-LESTE",
+        "NAME": "TIMOR-<br>LESTE",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 626,
         "3_CODE": "TLS",
@@ -1033,8 +1033,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          126.1319180807784,
-          -8.892934996484684
+          126.1614990234375,
+          -8.803653945861065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "TAJIKISTAN",
+        "REGION": "Eurasia",
+        "NUM_CODE": 762,
+        "3_CODE": "TJK",
+        "2_CODE": "TJ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.630859375,
+          38.60828592850559
         ]
       }
     },
@@ -1052,6 +1069,23 @@
         "coordinates": [
           -9.4921875,
           6.315298538330033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "KYRGYZSTAN",
+        "REGION": "Eurasia",
+        "NUM_CODE": 417,
+        "3_CODE": "KGZ",
+        "2_CODE": "KG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.70703125,
+          41.44272637767212
         ]
       }
     },
@@ -1424,8 +1458,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -55.87646484375,
-          3.6230713262356864
+          -55.810546875,
+          3.4037578795775887
         ]
       }
     },
