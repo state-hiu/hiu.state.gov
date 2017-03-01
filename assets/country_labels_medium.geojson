@@ -98,7 +98,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          17.75390625,
+          17.841796875,
           43.88205730390537
         ]
       }
@@ -234,8 +234,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -72.79541015625,
-          18.35452552912664
+          -72.88330078125,
+          18.34409780210156
         ]
       }
     },
@@ -353,8 +353,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          43.383340328851006,
-          42.319776961691474
+          43.52783203125,
+          42.06560675405716
         ]
       }
     },
@@ -370,8 +370,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          45.02751642957807,
-          40.06791266390843
+          45.10986328125,
+          39.90973623453719
         ]
       }
     },
@@ -438,8 +438,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -11.8212890625,
-          8.146242825034385
+          -11.832275390625,
+          8.570157714682582
         ]
       }
     },
@@ -480,7 +480,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "NORTH KOREA",
+        "NAME": "NORTH<br>KOREA",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 408,
         "3_CODE": "PRK",
@@ -489,8 +489,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          126.94779164264031,
-          40.05637147097676
+          126.46362304687499,
+          39.93501296038254
         ]
       }
     },
@@ -540,8 +540,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -58.95263671875001,
-          5.331644153439766
+          -58.99658203124999,
+          5.572249801113911
         ]
       }
     },
@@ -693,8 +693,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          23.8623046875,
-          55.229023057406344
+          23.9501953125,
+          55.35413531021057
         ]
       }
     },
@@ -710,8 +710,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -53.02001953125,
-          3.995780512963038
+          -52.93212890625,
+          4.412136788910181
         ]
       }
     },
@@ -727,8 +727,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          34.25336893582872,
-          -13.214667857359103
+          34.068603515625,
+          -13.341520159660119
         ]
       }
     },
@@ -854,7 +854,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "COSTA RICA",
+        "NAME": "COSTA<br>RICA",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 188,
         "3_CODE": "CRI",
@@ -863,8 +863,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -84.17724609375,
-          9.665738395188692
+          -84.05639648437499,
+          9.849803938000607
         ]
       }
     },
@@ -999,8 +999,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          47.39789990092868,
-          40.492273450165186
+          47.48291015625,
+          40.613952441166596
         ]
       }
     },
@@ -1024,7 +1024,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "TIMOR-LESTE",
+        "NAME": "TIMOR-<br>LESTE",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 626,
         "3_CODE": "TLS",
@@ -1033,8 +1033,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          126.1319180807784,
-          -8.892934996484684
+          126.1614990234375,
+          -8.803653945861065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "TAJIKISTAN",
+        "REGION": "Eurasia",
+        "NUM_CODE": 762,
+        "3_CODE": "TJK",
+        "2_CODE": "TJ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.630859375,
+          38.60828592850559
         ]
       }
     },
@@ -1052,6 +1069,23 @@
         "coordinates": [
           -9.4921875,
           6.315298538330033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "KYRGYZSTAN",
+        "REGION": "Eurasia",
+        "NUM_CODE": 417,
+        "3_CODE": "KGZ",
+        "2_CODE": "KG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.70703125,
+          41.44272637767212
         ]
       }
     },
@@ -1254,8 +1288,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -70.169677734375,
-          18.968636543402212
+          -69.993896484375,
+          19.093266636089712
         ]
       }
     },
@@ -1373,8 +1407,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.7861328125,
-          44.32384807250689
+          20.654296875,
+          44.62175409623324
         ]
       }
     },
@@ -1398,7 +1432,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "SOUTH KOREA",
+        "NAME": "SOUTH<br>KOREA",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 410,
         "3_CODE": "KOR",
@@ -1407,8 +1441,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          127.77165526114715,
-          36.33833177883582
+          128.0126953125,
+          36.24427318493909
         ]
       }
     },
@@ -1424,8 +1458,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -55.986328125,
-          4.061535597066106
+          -55.810546875,
+          3.4037578795775887
         ]
       }
     },
@@ -1462,6 +1496,78 @@
         "coordinates": [
           34.82666015625,
           30.65681556429287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Western<br>Sahara",
+        "REGION": "Africa",
+        "NUM_CODE": 732,
+        "3_CODE": "ESH",
+        "2_CODE": "EH",
+        "Italics": "N"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.623046875,
+          24.287026865376436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Taiwan",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 158,
+        "3_CODE": "TWN",
+        "2_CODE": "TW",
+        "Italics": "Y"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.90420157476797,
+          23.600849810595122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "West<br>Bank",
+        "REGION": "Middle East",
+        "NUM_CODE": 934,
+        "3_CODE": "XWB",
+        "2_CODE": "XW",
+        "Italics": "N"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.3045654296875,
+          32.055808605387014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Gaza<br>Strip",
+        "REGION": "Middle East",
+        "NUM_CODE": 916,
+        "3_CODE": "XGZ",
+        "2_CODE": "XG",
+        "Italics": "N"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.37210083007812,
+          31.415772260270316
         ]
       }
     }
