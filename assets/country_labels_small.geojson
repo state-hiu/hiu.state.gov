@@ -896,8 +896,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -63.033714294433594,
-          18.097560372874558
+          -63.02719116210937,
+          18.100171059195425
         ]
       }
     },
@@ -932,8 +932,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -61.42267657567611,
-          10.441226516276828
+          -61.19384765625,
+          10.466205555063882
         ]
       }
     },
@@ -1076,8 +1076,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -61.70676747860952,
-          12.108928894903073
+          -61.64978027343751,
+          12.08229583736359
         ]
       }
     },
@@ -1094,8 +1094,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -62.83558492573397,
-          17.906158882887866
+          -62.821197509765625,
+          17.87028237853446
         ]
       }
     },
@@ -1220,8 +1220,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -63.08486938476563,
-          18.025751281356246
+          -63.09036254882812,
+          18.016609838548597
         ]
       }
     },
@@ -1264,7 +1264,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "MARTINIQUE",
+        "NAME": "Martinique (FR.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 474,
         "3_CODE": "MTQ",
@@ -1318,7 +1318,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "CURACAO",
+        "NAME": "Curacao (NETH.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 531,
         "3_CODE": "CUW",
@@ -1382,15 +1382,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -63.029251098632805,
-          18.238155600789916
+          -62.9791259765625,
+          18.252828380738396
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "NAME": "ARUBA",
+        "NAME": "Aruba (NETH.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 533,
         "3_CODE": "ABW",
