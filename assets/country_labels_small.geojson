@@ -58,7 +58,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Cocos (Keeling) Islands (AUSTL.)",
+        "NAME": "Cocos (Keeling)<br>Islands (AUSTL.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 166,
         "3_CODE": "CCK",
@@ -238,7 +238,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Christmas Island (AUSTL.)",
+        "NAME": "Christmas Island<br>(AUSTL.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 162,
         "3_CODE": "CXR",
@@ -256,7 +256,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Ashmore and Cartier Islands (AUSTL.)",
+        "NAME": "Ashmore & Cartier<br>Islands (AUSTL.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 902,
         "3_CODE": "XAC",
@@ -526,7 +526,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "American Samoa (U.S.)",
+        "NAME": "American<br>Samoa<br>(U.S.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 16,
         "3_CODE": "ASM",
@@ -536,8 +536,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          189.27733574622926,
-          -14.311525077903553
+          189.25872802734375,
+          -14.325598515691496
         ]
       }
     },
@@ -634,7 +634,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "PARACEL ISLANDS",
+        "NAME": "PARACEL<br>ISLANDS",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 928,
         "3_CODE": "XPR",
@@ -644,8 +644,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          112.32998301060911,
-          16.835047400421757
+          112.2802734375,
+          16.573022719182777
         ]
       }
     },
@@ -670,7 +670,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "SPRATLY ISLANDS",
+        "NAME": "SPRATLY<br>ISLANDS",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 929,
         "3_CODE": "XSP",
@@ -680,8 +680,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          114.33593112054047,
-          11.440871380973732
+          115.15869140624999,
+          8.624472107633936
         ]
       }
     },
@@ -1012,7 +1012,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "HONG KONG (S.A.R.)",
+        "NAME": "HONG KONG<br>(S.A.R.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 344,
         "3_CODE": "HKG",
@@ -1022,8 +1022,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          114.15260370974124,
-          22.41121915456148
+          114.21112060546875,
+          22.38563480185718
         ]
       }
     },
@@ -1408,7 +1408,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "MACAU (S.A.R.)",
+        "NAME": "MACAU<br>(S.A.R.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 446,
         "3_CODE": "MAC",
@@ -1418,8 +1418,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          113.54535940472113,
-          22.198594869397283
+          113.5272216796875,
+          22.09581971780769
         ]
       }
     },
