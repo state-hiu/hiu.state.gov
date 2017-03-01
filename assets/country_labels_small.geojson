@@ -94,7 +94,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Faroe Islands (DEN.)",
+        "NAME": "Faroe Islands<br>(DEN.)",
         "REGION": "Europe",
         "NUM_CODE": 234,
         "3_CODE": "FRO",
@@ -166,7 +166,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Akrotiri<br>S.B.A (U.K.)",
+        "NAME": "Akrotiri<br>S.B.A<br>(U.K.)",
         "REGION": "Middle East",
         "NUM_CODE": 900,
         "3_CODE": "XQZ",
@@ -176,15 +176,15 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          32.9315185546875,
-          34.5902585629658
+          32.845001220703125,
+          34.63094797335811
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Jersey (U.K.)",
+        "NAME": "Jersey<br>(U.K.)",
         "REGION": "Europe",
         "NUM_CODE": 832,
         "3_CODE": "JEY",
@@ -436,7 +436,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Guernsey (U.K)",
+        "NAME": "Guernsey<br>(U.K)",
         "REGION": "Europe",
         "NUM_CODE": 831,
         "3_CODE": "GGY",
@@ -472,7 +472,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Jan Mayen (NOR.)",
+        "NAME": "Jan Mayen<br>(NOR.)",
         "REGION": "Europe",
         "NUM_CODE": 920,
         "3_CODE": "XJM",
@@ -508,7 +508,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Dhekelia<br>S.B.A (U.K.)",
+        "NAME": "Dhekelia<br>S.B.A<br>(U.K.)",
         "REGION": "Middle East",
         "NUM_CODE": 907,
         "3_CODE": "XXD",
@@ -518,8 +518,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          33.87908935546875,
-          34.94673942495388
+          33.82965087890625,
+          34.96587351132771
         ]
       }
     },
@@ -662,8 +662,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          34.390531574901246,
-          31.407135152762066
+          34.37210083007812,
+          31.415772260270316
         ]
       }
     },
@@ -680,8 +680,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          35.251682124418124,
-          31.94735176037139
+          35.3045654296875,
+          32.055808605387014
         ]
       }
     },
@@ -850,7 +850,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "LUXEMBOURG",
+        "NAME": "LUX.",
         "REGION": "Europe",
         "NUM_CODE": 442,
         "3_CODE": "LUX",
@@ -860,8 +860,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.135027925959179,
-          49.814006202667514
+          6.13861083984375,
+          49.73335620733158
         ]
       }
     },
@@ -1192,7 +1192,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "LIECHTENSTEIN",
+        "NAME": "LIECH.",
         "REGION": "Europe",
         "NUM_CODE": 438,
         "3_CODE": "LIE",
@@ -1202,8 +1202,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.553440493912518,
-          47.159531828383535
+          9.5635986328125,
+          47.13929295458033
         ]
       }
     },
@@ -1492,6 +1492,23 @@
         "coordinates": [
           45.140708898715616,
           -12.823598973789842
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "HOLY SEE",
+        "REGION": "Europe",
+        "NUM_CODE": 674,
+        "3_CODE": "SMR",
+        "2_CODE": "",
+        "Italics": "N"},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.453131675720213,
+          41.90355467806868
         ]
       }
     }
