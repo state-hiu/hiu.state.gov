@@ -582,7 +582,7 @@ $(document).ready(function(){
 <div class="form-group c38 " data-cid="c38">
   <label class="control-label" for="c38">or upload geojson file</label>
 
-  <input type="file" class="form-control" id="geojson" name="geojson" value="" accept=".geojson" style="padding-bottom: 40px;"/>
+  <input type="file" class="form-control" id="geojson_file" name="geojson_file" value="" accept=".geojson" style="padding-bottom: 40px;"/>
 
 </div>
 
@@ -694,8 +694,44 @@ $("#form").submit(function(event){
         console.log('serializedData: ');
         console.log(serializedData);
 
+        function sumbitForm() {
 
-        function createGist() {
+          // Fire off the request to /form.php
+          request = $.ajax({
+          url: "https://script.google.com/macros/s/AKfycbzZdJsJnOEV95m4LUU_TxXPrON3BmZQjJ9pal9F8QPlRoqJsLmt/exec",
+          type: "post",
+          data: serializedData
+          });
+
+          // Callback handler that will be called on success
+          request.done(function (response, textStatus, jqXHR){
+              // Log a message to the console
+              console.log("Hooray, it worked!");
+              $(".jf-thankyou").show();
+              console.log("drawn json: ");
+              console.log(json);
+          });
+
+          // Callback handler that will be called on failure
+          request.fail(function (jqXHR, textStatus, errorThrown){
+          // Log the error to the console
+          console.error(
+              "The following error occurred: "+
+              textStatus, errorThrown
+          );
+          });
+
+          // Callback handler that will be called regardless
+          // if the request failed or succeeded
+          request.always(function () {
+          // Reenable the inputs
+          $inputs.prop("disabled", false);
+          });
+
+        }
+
+
+        function createGist(uploaded_file) {
           
           // Let's disable the inputs for the duration of the Ajax request.
           // Note: we disable elements AFTER the form data has been serialized.
@@ -709,20 +745,34 @@ $("#form").submit(function(event){
 
           //http://stackoverflow.com/questions/11110880/save-anonymous-github-gist-with-jquery-ajax
 
-          var data2 = {
-            "description": "posting gist test",
-            "public": true,
-            "files": {
-              "test.txt": {
-                "content": JSON.stringify(json)
+          if (uploaded_file){
+              var data = {
+                "description": "posting gist test",
+                "public": true,
+                "files": {
+                  "aoi.geojson": {
+                    "content": uploaded_file
+                  }
+                }
               }
-            }
+          } else {
+                var data = {
+                "description": "posting gist test",
+                "public": true,
+                "files": {
+                  "aoi.geojson": {
+                    "content": JSON.stringify(json)
+                  }
+                }
+              }
           }
+
+
           $.ajax({
             url: 'https://api.github.com/gists',
             type: 'POST',
             dataType: 'json',
-            data: JSON.stringify(data2)
+            data: JSON.stringify(data)
           })
           .done( function(e) {
             console.log(e);
@@ -770,9 +820,44 @@ $("#form").submit(function(event){
           });
         }
 
-        //submitForm();
 
-        createGist();
+        if ( document.getElementById("geojson_file").files.length == 0 ){
+          console.log("no files selected");
+          if ( json.length > 0 ){
+            console.log("json exists");
+            createGist();
+          } else {
+            submitForm();
+          }
+        } else {
+          console.log("file selected");
+
+          var fileInput = document.getElementById("geojson_file");
+
+          var file = fileInput.files[0];
+
+          console.log('uploaded geojson_file: ');
+          console.log(geojson_file);
+
+
+          var reader = new FileReader();
+
+          
+          reader.onload = function(e) {
+              // e.target.result should contain the text
+              var uploaded_file = reader.result;
+
+              console.log('uploaded geojson_file2: ');
+              console.log(uploaded_file);
+
+              createGist(uploaded_file);
+          };
+
+          reader.readAsText(file);
+          
+        }
+
+        
 
         // Prevent default posting of form
         event.preventDefault();
