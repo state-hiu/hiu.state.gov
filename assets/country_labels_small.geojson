@@ -508,7 +508,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Dhekelia<br>S.B.A<br>(U.K.)",
+        "NAME": "Dhekelia<br>S.B.A (U.K.)",
         "REGION": "Middle East",
         "NUM_CODE": 907,
         "3_CODE": "XXD",
@@ -914,8 +914,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -61.79088501939995,
-          17.086734184739328
+          -61.74179077148437,
+          17.07253857905759
         ]
       }
     },
@@ -1058,8 +1058,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -62.747250410603115,
-          17.31356301505022
+          -62.77587890625,
+          17.327697889671377
         ]
       }
     },
@@ -1246,7 +1246,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "British<br>Virgin<br>Islands<br>(U.K.)",
+        "NAME": "British Virgin<br>Islands<br>(U.K.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 92,
         "3_CODE": "VGB",
@@ -1256,8 +1256,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.34967041015625,
-          18.661858919062677
+          -64.32083129882812,
+          18.72299903156041
         ]
       }
     },
@@ -1336,7 +1336,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "U.S.<br>VIRGIN<br>ISLANDS<br>(U.S.)",
+        "NAME": "U.S.<br>Virgin<br>Islands<br>(U.S.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 850,
         "3_CODE": "VIR",
@@ -1346,8 +1346,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -64.76028442382811,
-          17.705519887565256
+          -64.84542846679688,
+          17.71598551213184
         ]
       }
     },
