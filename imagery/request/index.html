@@ -88,6 +88,10 @@ label.control-label span:after {
     width: 550px; 
 }
 
+.reveal-if-raw-request {
+  overflow: hidden;
+}
+
 </style>
 
 
@@ -132,6 +136,44 @@ $(document).ready(function(){
 
 </script>
 
+<script type="text/javascript">
+
+  function validateForm() {
+
+    var name = document.forms["myForm"]["name"].value;
+    if (name == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+
+    var org = document.forms["myForm"]["org"].value;
+    if (org == "") {
+      alert("Organization/Affiliation must be filled out");
+      return false;
+    }
+
+    var email = document.forms["myForm"]["email"].value;
+    if (email == "") {
+      alert("Email must be filled out");
+      return false;
+    }
+
+    var project_title = document.forms["myForm"]["project_title"].value;
+    if (project_title == "") {
+      alert("Project Title must be filled out");
+      return false;
+    }
+
+    var project_description = document.forms["myForm"]["project_description"].value;
+    if (project_description == "") {
+      alert("Project Description must be filled out");
+      return false;
+    }
+
+  }
+
+</script>
+
 
 <div class="col-md-12">
 
@@ -157,14 +199,13 @@ $(document).ready(function(){
 
 <section>
 
-  <form id="form">
+  <form name="myForm" id="form" onsubmit="return validateForm()">
 
       <div class="form-group c66 required col-1" data-cid="c66">
         <label class="control-label" for="c66">Type of Request</label>
 
           <div class="radio">
-                <input  id="raw_imagery" name="request_type"  type="radio" value="Raw Imagery" 
-              data-rule-required="true"  >
+                <input  id="raw_imagery" name="request_type"  type="radio" value="Raw Imagery" data-rule-required="true" checked="checked">
                 <label  for="c66_1">
                     Raw Imagery
                 </label>
@@ -516,7 +557,7 @@ $(document).ready(function(){
 
           <div class="form-group">
             <div class='input-group date' id='sandbox-container'>
-              <input type="text" class="form-control" id="delivery_deadline" name="delivery_date"/>
+              <input type="text" class="form-control" id="delivery_deadline" name="delivery_deadline"/>
               <span class="input-group-addon">
                   <span class="glyphicon glyphicon-calendar"></span>
               </span>
@@ -531,14 +572,16 @@ $(document).ready(function(){
         -->
         </div>
 
-      <div class="form-group c53" data-cid="c53">
-        <label class="control-label" for="c53">Requested Imagery Format</label>
-        <select class="form-control" id="format" name="format">
-          <option  value="AF">GeoTiff</option>
-          <option  value="AX">JPEG</option>
-          <option  value="AL">MrSid</option>
-          <option  value="DZ">NITF</option>
-        </select>
+      <div class="reveal-if-raw-request">
+        <div class="form-group c53" data-cid="c53">
+          <label class="control-label" for="c53">Requested Imagery Format</label>
+          <select class="form-control" id="format" name="format">
+            <option  value="AF">GeoTiff</option>
+            <option  value="AX">JPEG</option>
+            <option  value="AL">MrSid</option>
+            <option  value="DZ">NITF</option>
+          </select>
+        </div>
       </div>
 
 
@@ -572,7 +615,7 @@ $(document).ready(function(){
 </div>
 
 
-<div class="form-group c58 required" data-cid="c58">
+<div class="form-group c58" data-cid="c58">
       <label class="control-label" for="c58" data-toggle="tooltip" data-placement="right" title="Recommend browsing imagery at https://imagehunter.apollomapping.com/ to speed up request">Digital Globe Catalog ID/s (Optional)</label>
 
       <input type="text" class="form-control" id="catalog_id" name="catalog_id" value=""     />
@@ -618,6 +661,25 @@ $(document).ready(function(){
 <!--TurfJS link-->
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
 
+<script type="text/javascript">
+
+  $(document).ready(function() {
+     $('input[type="radio"]').click(function() {
+         console.log('what input is clicked');
+         console.log($(this));
+         if($(this).attr('id') == 'raw_imagery') {
+              console.log('reveal');
+              $('.reveal-if-raw-request').show();           
+         }
+
+         else {
+              $('.reveal-if-raw-request').hide();   
+         }
+     });
+  });
+
+</script>
+
 
 <script>
 
@@ -652,6 +714,8 @@ var drawControl = new L.Control.Draw({
         }
 }).addTo(map);
 
+var json;
+
 map.on('draw:created', function(e) {
   featureGroup.addLayer(e.layer);
   console.log(featureGroup.toGeoJSON());
@@ -670,8 +734,6 @@ map.fitBounds(bounds);
 
 // Variable to hold request
 var request;
-
-var json;
 
 // Bind to the submit event of our form
 $("#form").submit(function(event){
@@ -708,8 +770,6 @@ $("#form").submit(function(event){
               // Log a message to the console
               console.log("Hooray, it worked!");
               $(".jf-thankyou").show();
-              console.log("drawn json: ");
-              console.log(json);
           });
 
           // Callback handler that will be called on failure
@@ -820,13 +880,19 @@ $("#form").submit(function(event){
           });
         }
 
+        //debugger;
 
         if ( document.getElementById("geojson_file").files.length == 0 ){
           console.log("no files selected");
-          if ( json.length > 0 ){
+
+          console.log('json data1: ');
+          console.log(json);
+
+          if (json){
             console.log("json exists");
             createGist();
           } else {
+            console.log("only DG ID");
             submitForm();
           }
         } else {
