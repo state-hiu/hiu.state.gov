@@ -133,6 +133,9 @@ li#global-outer {
 .header-contain-div {
   opacity: 1;
   transition: opacity 1s ease-in;
+  background-color: #0A2E52;
+  height: 40px;
+  overflow: hidden;
 }
 
 /* have slower transition speed when sidebar collapses on inside divs
