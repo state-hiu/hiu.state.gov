@@ -14,6 +14,10 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     <meta name="google" content="notranslate" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Language" content="en_US" />
+
+    <meta id="meta" name="viewport"
+content="width=device-width; initial-scale=1.0" />
+
     {% if site.twittercard.enabled == true %}
       {% if page.categories contains "products" %}
         {% include main/seo/twittercard_product.html %}
