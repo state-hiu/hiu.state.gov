@@ -65,7 +65,33 @@ content="width=device-width; initial-scale=1.0" />
     {% endif %}
 
 
-    
+    <div class="modal hide fade" id="myPopup">
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Modal header</h3>
+      </div>
+      <div class="modal-body">
+        <p>Welcome to HIU site</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn">Close</a>
+        <a href="#" class="btn btn-primary">Save changes</a>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">
+      <!--
+      if (screen.width <= 800) {
+
+        if (window.location == "{{ site.baseurl }}/products/") {
+            $('#myPopup').modal('show');
+          }
+        
+      }
+      //-->
+    </script>
+
 
     <!-- JavaScript / Internal -->
 {% comment %}
