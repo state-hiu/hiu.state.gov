@@ -223,6 +223,8 @@ so they is no log with sidebar border collapsing*/
   line-height: 40px;
   font-size: 16pt;
   color: #fff;
+  overflow: hidden;
+  height: 40px;
   background-color: #0A2E52; }
   .sidebar-right .sidebar-header {
     padding-left: 40px; }
@@ -317,8 +319,16 @@ so they is no log with sidebar border collapsing*/
     transition: right 500ms; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  
   .sidebar-right ~ .sidebar-map .leaflet-right {
-    right: 315px; } }
+    right: 315px; 
+  } 
+
+  .sidebar-header {
+    font-size: 12pt;
+  }
+
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .sidebar-right ~ .sidebar-map .leaflet-right {
