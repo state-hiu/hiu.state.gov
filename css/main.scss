@@ -215,7 +215,13 @@ $navbar-inverse-color:                      #333 !default;
 
 @media (max-width: 889px) {
     #footer-disclaimer {
-        visibility: hidden;
+        display: none;
+    }
+}
+
+@media (min-width: 890px) {
+    #footer-disclaimer {
+        display: block;
     }
 }
 
