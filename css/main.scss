@@ -167,6 +167,7 @@ $navbar-inverse-color:                      #333 !default;
 
 .body {
     height: 100%;
+    overflow: auto;
 }
 
 .wrapper {
@@ -550,7 +551,7 @@ body {
 
 // http://stackoverflow.com/questions/29038596/bootstrap-fixed-header-and-footer-with-scrolling-body-content-area-in-fluid-cont
 .main {
-  max-height: calc(100% - 62px);
+  max-height: calc(100% - 72px);
   overflow-y: scroll;
 }
 
