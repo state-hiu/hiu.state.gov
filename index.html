@@ -522,6 +522,11 @@ $('#myModal').on('hidden.bs.modal', function () {
         opacity: 0
     };
 
+    var leadersStyle = {
+        color: "rgb(158,157,159)",
+        weight: 3,
+        opacity: 0.85
+    };
 /*
     var geojsonLayer = new L.GeoJSON.AJAX("{{ site.baseurl }}/assets/country_labels_large.geojson", {
           pointToLayer: function (feature, latlng) {
@@ -557,6 +562,11 @@ $('#myModal').on('hidden.bs.modal', function () {
           },
           onEachFeature: onEachFeatureSmallLabels
         });
+
+    //leader lines
+    var LeadersLabelsLayer = new L.GeoJSON.AJAX("{{ site.baseurl }}/assets/leaders.geojson",{style:leadersStyle});
+
+
 /*
     var SmallCountryLabelsItalicsLayer = new L.GeoJSON.AJAX("{{ site.baseurl }}/assets/country_labels_small_italics.geojson", {
           pointToLayer: function (feature, latlng) {
@@ -588,6 +598,8 @@ $('#myModal').on('hidden.bs.modal', function () {
       $('.my-medium-country-label').css("font-size", mediumZoomLevel + "px");
       $('.my-small-country-label').css("font-size", smallZoomLevel + "px");
       $('.my-small-country-italics-label').css("font-size", smallZoomLevel + "px");
+
+
 
       if (map.getZoom() < 4 ) {
 
@@ -631,6 +643,7 @@ $('#myModal').on('hidden.bs.modal', function () {
       if (map.getZoom() < 6 ) {
         if (map.hasLayer(SmallCountryLabelsLayer)){
               map.removeLayer(SmallCountryLabelsLayer);
+              map.removeLayer(LeadersLabelsLayer);
               //map.removeLayer(SmallCountryLabelsItalicsLayer);
           } else {
               console.log("layer already removed");
@@ -641,6 +654,7 @@ $('#myModal').on('hidden.bs.modal', function () {
               console.log("layer already added");
           } else {
               SmallCountryLabelsLayer.addTo(map);
+              LeadersLabelsLayer.addTo(map);
               //SmallCountryLabelsItalicsLayer.addTo(map);
           }
       }
