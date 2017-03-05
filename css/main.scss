@@ -208,7 +208,6 @@ $navbar-inverse-color:                      #333 !default;
 #right-footer-menu {
     padding-right: 75px;
     padding-left: 20px;
-    text-align: right;
     float: right;
     line-height: 1.3;
 }
@@ -217,6 +216,11 @@ $navbar-inverse-color:                      #333 !default;
     #footer-disclaimer {
         display: none;
     }
+    #right-footer-menu {
+    padding-right: 15px;
+    padding-left: 56px;
+    float: left;
+  }
 }
 
 @media (min-width: 890px) {
