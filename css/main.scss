@@ -60,6 +60,21 @@ $navbar-inverse-color:                      #333 !default;
   background:#3074a4;
   }
 
+/*for mobile devices I'm making the preview thumbnails unclickable*/
+@media (max-width: 400px) {
+  #preview {
+    visibility: hidden;
+  }
+  .listitem .listitem-thumbnail div {
+    background: none;
+  }
+  .listitem .listitem-thumbnail {
+   pointer-events: none;
+   cursor: default;
+  }
+
+}
+
 #hidden-sprite {
   display: none;
 }
@@ -769,6 +784,7 @@ img.thumb150 {
     display: block;
     padding-top: 0px;
   }
+
 }
 
 
