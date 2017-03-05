@@ -65,6 +65,15 @@ content="width=device-width; initial-scale=1.0" />
     {% endif %}
 
 
+    <script type="text/javascript">
+      <!--
+      if (screen.width <= 800) {
+        window.location = "{{ site.baseurl }}/products/";
+      }
+      //-->
+    </script>
+
+
     <!-- JavaScript / Internal -->
 {% comment %}
 
@@ -132,8 +141,8 @@ content="width=device-width; initial-scale=1.0" />
     {% endif %}
   </head>
 
-  <body>
+<body>
     {{ content }}
-  </body>
+</body>
 
 </html>

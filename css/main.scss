@@ -552,7 +552,7 @@ body {
 // http://stackoverflow.com/questions/29038596/bootstrap-fixed-header-and-footer-with-scrolling-body-content-area-in-fluid-cont
 .main {
   max-height: calc(100% - 72px);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .modal-title {
@@ -798,4 +798,12 @@ sup.asterick {
     line-height: 0;
     position: relative;
     vertical-align: baseline;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }
