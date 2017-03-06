@@ -1545,8 +1545,8 @@ $('#myModal').on('hidden.bs.modal', function () {
             for (var i in json.features) {
                 fixture = json.features[i];
                 
-                console.log('json properties');
-                console.log(fixture.properties.date_published);
+                //console.log('json properties');
+                //console.log(fixture.properties.date_published);
 
                 var newDate = new Date(fixture.properties.date_published);
 
@@ -1564,8 +1564,13 @@ $('#myModal').on('hidden.bs.modal', function () {
 
                     console.log('new product region id: ');
                     console.log(region_id);
-                    $('#'+region_id).append("<div class='new-product'>new</div>");
+                    console.log('region id length');
+                    console.log($('#'+region_id+' .new-product').length);
 
+                    //http://stackoverflow.com/questions/7951505/about-jquery-append-and-how-to-check-if-an-element-has-been-appended
+                    if($('#'+region_id+' .new-product').length <= 0) {
+                        $('#'+region_id).append("<div class='new-product'>new</div>");
+                    }
                 }
             }
 
