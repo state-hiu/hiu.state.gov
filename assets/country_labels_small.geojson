@@ -1210,7 +1210,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Sint Maarten (NETH.)",
+        "NAME": "Sint Maarten<br>(NETH.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 534,
         "3_CODE": "SXM",
@@ -1382,8 +1382,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -63.02719116210937,
-          19.04
+          -62.8692626953125,
+          19.05692585554252
         ]
       }
     },
