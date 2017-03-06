@@ -868,7 +868,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "St. Martin<br>(FR.)",
+        "NAME": "St. Martin (FR.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 663,
         "3_CODE": "MAF",
@@ -1192,7 +1192,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Sint Maarten<br>(NETH.)",
+        "NAME": "Sint Maarten (NETH.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 534,
         "3_CODE": "SXM",
