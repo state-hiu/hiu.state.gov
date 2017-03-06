@@ -1,3 +1,6 @@
+---
+layout: product
+category: products
 title: "South Sudan: Famine and Aid Access"
 region_id: "AF"
 region_title: "Africa"
@@ -17,8 +20,7 @@ keywords:
   - Famine
   - Aid
   - Conflict
-  - Insecurity
-  
+  - Insecurity  
 tweet: "Famine declared in South Sudan, where about 42% of the population is severely food insecure."
 ---
 On 20th February, the UN and South Sudanese Government declared a famine, affecting 100,000 people in multiple counties in Unity State. An estimated 4.9 million people are severely food insecure in South Sudan, about 42% of the population. Ongoing conflict and insecurity, attacks against aid workers, and poor road infrastructure impede humanitarian access and response.
