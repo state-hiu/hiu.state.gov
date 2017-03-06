@@ -176,8 +176,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          32.845001220703125,
-          34.63094797335811
+          32.84088134765626,
+          33.8
         ]
       }
     },
@@ -518,8 +518,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          33.82965087890625,
-          34.96587351132771
+          33.7939453125,
+          34.41108320299971
         ]
       }
     },
@@ -886,7 +886,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "St. Martin (FR.)",
+        "NAME": "St. Martin<br>(FR.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 663,
         "3_CODE": "MAF",
@@ -896,8 +896,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -63.02719116210937,
-          18.100171059195425
+          -62.35839843749999,
+          18.265869811558165
         ]
       }
     },
@@ -1210,7 +1210,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Sint Maarten (NETH.)",
+        "NAME": "Sint Maarten<br>(NETH.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 534,
         "3_CODE": "SXM",
@@ -1220,8 +1220,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -63.09036254882812,
-          18.016609838548597
+          -61.86332702636719,
+          17.9
         ]
       }
     },
@@ -1382,8 +1382,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -62.5,
-          18.661858919062677
+          -62.8692626953125,
+          19.05692585554252
         ]
       }
     },
@@ -1456,6 +1456,23 @@
         "coordinates": [
           12.453131675720213,
           41.90355467806868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "AZER.",
+        "REGION": "Eurasia",
+        "NUM_CODE": 31,
+        "3_CODE": "AZE",
+        "2_CODE": "AZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.5657958984375,
+          39.17691709496078
         ]
       }
     }
