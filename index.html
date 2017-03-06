@@ -29,7 +29,7 @@ a.title div{
   border: none;
   box-shadow: none;
   font-family: 'Droid Serif', serif;
-  color: rgb(145,144,146);
+  color: rgb(132,131,133);
   font-size: 18px;
   font-weight: bold;
   font-style: italic;
@@ -43,7 +43,7 @@ a.title div{
   border: none;
   box-shadow: none;
   font-family: 'Droid Serif', serif;
-  color: rgb(145,144,146);
+  color: rgb(132,131,133);
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -60,7 +60,7 @@ a.title div{
   border: none;
   box-shadow: none;
   font-family: 'Droid Serif', serif;
-  color: rgb(145,144,146);
+  color: rgb(132,131,133);
   font-size: 16px;
   font-weight: bold;
   text-align: center;
@@ -77,7 +77,7 @@ a.title div{
   border: none;
   box-shadow: none;
   font-family: 'Droid Serif', serif;
-  color: rgb(145,144,146);
+  color: rgb(132,131,133);
   font-size: 16px;
   font-weight: bold;
   font-style: italic;
@@ -95,7 +95,7 @@ a.title div{
   border: none;
   box-shadow: none;
   font-family: 'Droid Serif', serif;
-  color: rgb(145,144,146);
+  color: rgb(132,131,136);
   font-size: 14px;
   font-weight: bold;
   text-align: center;
@@ -111,7 +111,7 @@ a.title div{
   border: none;
   box-shadow: none;
   font-family: 'Droid Serif', serif;
-  color: rgb(145,144,146);
+  color: rgb(132,131,133);
   font-size: 14px;
   font-weight: bold;
   font-style: italic;
@@ -128,7 +128,7 @@ a.title div{
   border: none;
   box-shadow: none;
   font-family: 'Droid Serif', serif;
-  color: rgb(145,144,146);
+  color: rgb(132,131,133);
   font-size: 14px;
   font-weight: bold;
   text-align: center;
@@ -144,7 +144,7 @@ a.title div{
   border: none;
   box-shadow: none;
   font-family: 'Droid Serif', serif;
-  color: rgb(145,144,146);
+  color: rgb(132,131,133);
   font-size: 14px;
   font-weight: bold;
   font-style: italic;
@@ -523,9 +523,9 @@ $('#myModal').on('hidden.bs.modal', function () {
     };
 
     var leadersStyle = {
-        color: "rgb(145,144,146)",
-        weight: 3,
-        opacity: 0.85
+        color: "rgb(132,131,133)",
+        weight: 2,
+        opacity: 0.8
     };
 /*
     var geojsonLayer = new L.GeoJSON.AJAX("{{ site.baseurl }}/assets/country_labels_large.geojson", {
@@ -644,6 +644,10 @@ $('#myModal').on('hidden.bs.modal', function () {
         if (map.hasLayer(SmallCountryLabelsLayer)){
               map.removeLayer(SmallCountryLabelsLayer);
               map.removeLayer(LeadersLabelsLayer);
+
+              map.removeLayer(RegionLabelsLayer);
+              $('.my-region-label').css("font-size", "18px");
+              RegionLabelsLayer.addTo(map);
               //map.removeLayer(SmallCountryLabelsItalicsLayer);
           } else {
               console.log("layer already removed");
@@ -655,6 +659,7 @@ $('#myModal').on('hidden.bs.modal', function () {
           } else {
               SmallCountryLabelsLayer.addTo(map);
               LeadersLabelsLayer.addTo(map);
+              map.removeLayer(RegionLabelsLayer);
               //SmallCountryLabelsItalicsLayer.addTo(map);
           }
       }
