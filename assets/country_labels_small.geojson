@@ -177,7 +177,7 @@
         "type": "Point",
         "coordinates": [
           32.924652099609375,
-          33.82
+          34.02
         ]
       }
     },
@@ -519,7 +519,7 @@
         "type": "Point",
         "coordinates": [
           33.7939453125,
-          33.8
+          34.41108320299971
         ]
       }
     },
@@ -886,7 +886,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "St. Martin (FR.)",
+        "NAME": "St. Martin<br>(FR.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 663,
         "3_CODE": "MAF",
@@ -897,7 +897,7 @@
         "type": "Point",
         "coordinates": [
           -62.35839843749999,
-          18.218916080017465
+          18.265869811558165
         ]
       }
     },
@@ -1220,8 +1220,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -62.1221923828125,
-          17.936928637549443
+          -61.86332702636719,
+          17.9
         ]
       }
     },
