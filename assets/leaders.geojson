@@ -3,7 +3,9 @@
   "features": [
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "comment":"Anguilla"
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [
@@ -20,7 +22,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "comment":"St. Martin"
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [
@@ -41,7 +45,9 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "comment":"St. Maarten"
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [
@@ -50,8 +56,12 @@
             18.031627672558482
           ],
           [
-            -61.92718505859375,
+            -61.86332702636719,
             18.031627672558482
+          ],
+          [
+            -61.86332702636719,
+            17.921249418623304
           ]
         ]
       }
