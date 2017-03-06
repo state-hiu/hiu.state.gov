@@ -98,7 +98,8 @@ content="width=device-width, initial-scale=1.0" />
       }
 
       $( ".focus-search" ).on( "click", function() {
-        $( "#inputSuccess1" ).focus();
+        console.log('focus-search clicked');
+        setTimeout(function() { $('#inputSuccess1').focus() }, 1000);
       });
 
     </script>
