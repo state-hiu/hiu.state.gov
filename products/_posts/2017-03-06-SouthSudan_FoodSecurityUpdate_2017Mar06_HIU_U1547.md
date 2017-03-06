@@ -1,7 +1,7 @@
 ---
 layout: product
 category: products
-title: "South Sudan: Famine and Aid Access"
+title: "South Sudan: Famine and Humanitarian Aid Access"
 region_id: "AF"
 region_title: "Africa"
 product_id: "U1547"
