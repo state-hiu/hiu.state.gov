@@ -1458,6 +1458,23 @@
           41.90355467806868
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "AZER.",
+        "REGION": "Eurasia",
+        "NUM_CODE": 31,
+        "3_CODE": "AZE",
+        "2_CODE": "AZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.5657958984375,
+          39.17691709496078
+        ]
+      }
     }
   ]
 }
