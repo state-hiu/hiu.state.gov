@@ -78,7 +78,8 @@ content="width=device-width, initial-scale=1.0" />
         <!--<img id="modal-img" style="max-width:800px;">-->
         <p>The HIU serves as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.</p>
 
-        <p><b>Search to view our products</b></p>
+        </b>
+        <a href="" class="focus-search" data-dismiss="modal">Search to view our products</a>
 
       </div>
       <div class="modal-footer">
@@ -96,6 +97,9 @@ content="width=device-width, initial-scale=1.0" />
         $('#myPopup').modal('show');
       }
 
+      $( ".focus-search" ).on( "click", function() {
+        $( "#inputSuccess1" ).focus();
+      });
 
     </script>
 
