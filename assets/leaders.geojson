@@ -117,8 +117,8 @@
             22.195988054738663
           ],
           [
-            113.543701171875,
-            21.80030805097259
+            113.54541778564453,
+            21.58593511478851
           ]
         ]
       }
@@ -126,7 +126,7 @@
     {
       "type": "Feature",
       "properties": {
-        "comment":"Hong Kong"
+        "comment": "Hong Kong"
       },
       "geometry": {
         "type": "LineString",
