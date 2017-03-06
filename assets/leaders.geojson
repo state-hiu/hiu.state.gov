@@ -103,6 +103,44 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "comment": "Macau"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            113.54541778564453,
+            22.195988054738663
+          ],
+          [
+            113.543701171875,
+            21.80030805097259
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "comment":"Hong Kong"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            114.16168212890625,
+            22.421184710331858
+          ],
+          [
+            114.16168212890625,
+            20.917831371761558
+          ]
+        ]
+      }
     }
   ]
 }
