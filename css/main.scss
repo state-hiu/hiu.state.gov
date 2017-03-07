@@ -819,3 +819,130 @@ sup.asterick {
    height: 0;
    clear: both;
 }
+
+
+a.title div{
+  display: inline;
+}
+
+.fa-globe {
+    padding-top: 2px;
+}
+
+
+
+
+/*http://gis.stackexchange.com/questions/212820/overriding-leaflet-tooltip-style*/
+.my-region-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: .2em;
+  line-height: 1.2em;
+}
+
+.my-large-country-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .1em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+.my-large-country-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .1em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+.my-large-country-italics-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: .1em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+.my-medium-country-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .06em;
+  line-height: 1.2em;
+}
+
+.my-medium-country-italics-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: .06em;
+  line-height: 1.2em;
+}
+
+.my-small-country-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .02em;
+  line-height: 1.2em;
+}
+
+.my-small-country-italics-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: .02em;
+  line-height: 1.2em;
+  /* word wrap isn't working
+  width:150px;
+  word-wrap:break-word; */
+}
