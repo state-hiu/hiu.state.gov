@@ -33,6 +33,10 @@ tilelayers:
     </div>
   </div>
 
+  <div id="map" class="sidebar-map" style="top:0px;left:0px;width:100%;height: 100%;"></div>
+
+  {% include main/sidebar.html %}
+
 </div>
 
 <script>
@@ -197,9 +201,7 @@ $('#myModal').on('hidden.bs.modal', function () {
 
 </script>
 
-  <div id="map" class="sidebar-map" style="top:0px;left:0px;width:100%;height: 100%;"></div>
 
-  {% include main/sidebar.html %}
 
 <script>
     L.TopoJSON = L.GeoJSON.extend({  
