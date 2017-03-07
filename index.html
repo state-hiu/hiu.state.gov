@@ -161,7 +161,7 @@ a.title div{
 <div id="container">
 
   <!-- Modals from Bootstrap, used to preview images when thumbnails clicked -->
-  <!-- http://getbootstrap.com/javascript/#modals -->
+  <!-- getbootstrap.com/javascript/#modals -->
   <!-- giving a z-index of 2050 to be on top of sidebar -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index: 2050;">
     <div class="modal-dialog modal-lg" role="document">
@@ -182,22 +182,22 @@ a.title div{
 
 <script>
 
-  //manages Prev and Next buttons on modals 
+  /*manages Prev and Next buttons on modals */
   var addButtons = function( jpegDisplayNumber, dropdownCount, dropdown, modal) {
-      //console.log('jpegDisplayNumber');
-      //console.log(jpegDisplayNumber);
+      /*console.log('jpegDisplayNumber');
+      console.log(jpegDisplayNumber);*/
       if (jpegDisplayNumber == dropdownCount) {
-          //display prev button only
+          /*display prev button only*/
           $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
 
           $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
 
           $('.btn-next').prop("disabled", true);
 
-          //adding modal header text, ex. Page 1 of X
+          /*adding modal header text, ex. Page 1 of X*/
           $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
-          //adding modal header text, ex. Page 1 of X
+          /*adding modal header text, ex. Page 1 of X*/
           $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
           $( ".btn-prev" ).on( "click", function() {
@@ -215,35 +215,35 @@ a.title div{
                   
                 addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
               });
-          //console.log('why would this run');
-          //jpegDisplayNumber = 2;
+          /*console.log('why would this run');
+          jpegDisplayNumber = 2;*/
           return 'final page';
         } else {
             if ((jpegDisplayNumber-1) == 1) {
-                //display next button only
+                /*display next button only*/
                 $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
 
                 $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
 
                 $('.btn-prev').prop("disabled", true);
 
-                //adding modal header text, ex. Page 1 of X
+                /*adding modal header text, ex. Page 1 of X*/
                 $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
-                //adding modal header text, ex. Page 1 of X
+                /*adding modal header text, ex. Page 1 of X*/
                 $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
                 $( ".btn-next" ).on( "click", function() {
-                  console.log( 'jpegDisplayNumber val' );
+                  /*console.log( 'jpegDisplayNumber val' );
                   console.log(jpegDisplayNumber);
-                  //console.log( 'jpegDisplayNumberConst val' );
-                  //console.log(jpegDisplayNumber);
-                  console.log( $(dropdown).find("li").eq(2).find("a").attr("href"));
+                  console.log( 'jpegDisplayNumberConst val' );
+                  console.log(jpegDisplayNumber);
+                  console.log( $(dropdown).find("li").eq(2).find("a").attr("href"));*/
 
                   jpegDisplayNumber++;
-                  //however since it you are finding the right length in the array and the array starts at zero
-                  //you need to subtract 1 again
-                  //switch out img with next img
+                  /*however since it you are finding the right length in the array and the array starts at zero
+                  you need to subtract 1 again
+                  switch out img with next img*/
                   modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
                   $('.btn-prev,.btn-next').remove();
                   $('.modal-header-text,.modal-footer-text').remove();
@@ -252,15 +252,15 @@ a.title div{
                 });
                 return 'next';
             } else {
-                //display next & prev button
+                /*display next & prev button*/
                 $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
 
                 $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
 
-                //adding modal header text, ex. Page 1 of X
+                /*adding modal header text, ex. Page 1 of X*/
                 $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
-                //adding modal header text, ex. Page 1 of X
+                /*adding modal header text, ex. Page 1 of X*/
                 $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
                 $( ".btn-prev" ).on( "click", function() {
@@ -273,8 +273,8 @@ a.title div{
                   addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
                 });
 
-                //console.log( 'jpegDisplayNumber val2' );
-                //console.log(jpegDisplayNumber);
+                /*console.log( 'jpegDisplayNumber val2' );
+                console.log(jpegDisplayNumber);*/
 
                 $( ".btn-next" ).on( "click", function() {
                   console.log( 'activate next button only' );
@@ -282,12 +282,12 @@ a.title div{
                   modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
                   $('.btn-prev,.btn-next').remove();
                   $('.modal-header-text,.modal-footer-text').remove();
-                  //$('.btn-prev').remove();
+                  /*$('.btn-prev').remove();*/
                   
                   addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
                 });
 
-                //jpegDisplayNumber++;
+                /*jpegDisplayNumber++;*/
                 return 'next';
             }
         }
@@ -296,26 +296,25 @@ a.title div{
 
 $('#myModal').on('show.bs.modal', function (event) {
 
-  //alert('modal is called');
   var jpegDisplayNumber = 2;
-  var button = $(event.relatedTarget); // Button that triggered the modal
-  var title = button.data('title'); // Extract info from data-* attributes
+  var button = $(event.relatedTarget);  /*Button that triggered the modal*/
+  var title = button.data('title');  /*Extract info from data-* attributes*/
   console.log('title-data: ');
   console.log(title);
-  var img = button.data('img') // Extract info from data-* attributes
+  var img = button.data('img')  /*Extract info from data-* attributes*/
   console.log('img-data: ');
   console.log(img);
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+   /*If necessary, you could initiate an AJAX request here (and then do the updating in a callback).*/
 
   window.location.hash = button.data('href');
 
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+   /*Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.*/
   var modal = $(this)
   modal.find('.modal-title').text(title);
   modal.find('#modal-img').attr("src",img);
 
-  //need a list of all the pages in a product; actually I do not, just parse based on what is in the download button!
-  //if list is 2, then just add a next button
+  /*need a list of all the pages in a product; actually I do not, just parse based on what is in the download button!
+  if list is 2, then just add a next button*/
   console.log('display modal parents id');
   console.log(button.closest(".item"));
   var item = button.closest(".item")
@@ -328,7 +327,6 @@ $('#myModal').on('show.bs.modal', function (event) {
 
   var dropdownCount = $(dropdown).find("li").length
 
-  //debugger;
 
   if (dropdownCount > 2) {
       addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
@@ -337,8 +335,8 @@ $('#myModal').on('show.bs.modal', function (event) {
 })
 
 $('#myModal').on('hidden.bs.modal', function () {
-    // do something…
-    console.log('modal is closing');
+    /* do something…
+    console.log('modal is closing');*/
     $('.btn-prev,.btn-next').remove();
     $('.modal-header-text,.modal-footer-text').remove();
 })
@@ -369,19 +367,20 @@ $('#myModal').on('hidden.bs.modal', function () {
 
     jQuery(document).ready(function($){
       var path = window.location.href.split("/").pop();
-      //console.log('path: ');
-      //console.log(path);
 
-      //It won't work because all of the products need to load first
-      //based on link it can look-up region and preload region first
+      /*console.log(path);
+
+      It won't work because all of the products need to load first
+      based on link it can look-up region and preload region first*/
 
     });
 
-    //Sets a window activeListingID variable, the leaflet-list-markers.src.js script uses
-    //this to keep a product item selected
+    /*Sets a window activeListingID variable, the leaflet-list-markers.src.js script uses
+    this to keep a product item selected*/
+
     window.activeListingID = 'none';
 
-    //This resets the activeListingID if the home tab is selected
+    /*This resets the activeListingID if the home tab is selected*/
     $('#home').click(function() {
       activeListingID = 'none1';
     });
@@ -390,19 +389,19 @@ $('#myModal').on('hidden.bs.modal', function () {
 
     window.leftLayer = true;
 
-    //if you run these commands in the console, it will open the right tab and populate it
-    //window.clickTab('NEA')
-    //window.sidebar.open('NEA')
+    /*if you run these commands in the console, it will open the right tab and populate it
+    window.clickTab('NEA')
+    window.sidebar.open('NEA')*/
 
-    //commenting out closure for now
-    //(function(){
+    /*commenting out closure for now
+    (function(){
 
-    //var map = L.map('map').setView([0, 30], 3);
+    var map = L.map('map').setView([0, 30], 3);
 
-    //L.mapbox.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
+    L.mapbox.accessToken = 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ';
 
-    //need to make map a window variable to make it seen in leaflet-list-markers.src.js
-    //probably because all of this in inside of its own contained function
+    need to make map a window variable to make it seen in leaflet-list-markers.src.js
+    probably because all of this in inside of its own contained function*/
     window.map = L.map('map', {
         attributionControl: {collapsed: true},
         maxBounds:[ [-85, -190], [90, 190] ],
@@ -410,9 +409,9 @@ $('#myModal').on('hidden.bs.modal', function () {
         minZoom: 3
       }).setView([20, 0], 3);
 
-    // Use styleLayer to add a Mapbox style created in Mapbox Studio
+    /*Use styleLayer to add a Mapbox style created in Mapbox Studio*/
     var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/cit0gm97500012ypfwnzijj6o/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ',{
-    //var baseLayer = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/ciyd2k8k300352sqs2vytdguw/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ',{
+    /*var baseLayer = L.tileLayer('api.mapbox.com/styles/v1/hiu/ciyd2k8k300352sqs2vytdguw/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ',{*/
       minZoom: 1,
       maxZoom: 10,
       scrollWheelZoom: true,
@@ -421,7 +420,7 @@ $('#myModal').on('hidden.bs.modal', function () {
     }).addTo(map);
 
 /*
-    var Labels = L.tileLayer('https://api.mapbox.com/styles/v1/hiu/ciua29cno001p2imv942m1kfv/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ', {
+    var Labels = L.tileLayer('api.mapbox.com/styles/v1/hiu/ciua29cno001p2imv942m1kfv/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ', {
       pane: 'labels'
     }).addTo(map);
 */
@@ -434,9 +433,9 @@ $('#myModal').on('hidden.bs.modal', function () {
       .done(addTopoData);
 
 
-    //I'm still using panes, then binging the Labels (which are tooltips) to the pane
-    //This way the labels will stay below the cluster markers
-    //http://leafletjs.com/examples/map-panes/
+    /*I'm still using panes, then binging the Labels (which are tooltips) to the pane
+    This way the labels will stay below the cluster markers
+    leafletjs.com/examples/map-panes/*/
     map.createPane('labels');
     map.getPane('labels').style.zIndex = 550;
     map.getPane('labels').style.pointerEvents = 'none';
@@ -450,8 +449,8 @@ $('#myModal').on('hidden.bs.modal', function () {
         fillOpacity: 0.8
     };
 
-    //using leaflet-ajax to import geojson, https://github.com/calvinmetcalf/leaflet-ajax
-    /*
+    /*using leaflet-ajax to import geojson, github.com/calvinmetcalf/leaflet-ajax
+    
     var geojsonLayer = new L.GeoJSON.AJAX("{{ site.baseurl }}/assets/country_labels_large.geojson", {
           pointToLayer: function (feature, latlng) {
             return L.circleMarker(latlng, geojsonMarkerOptions);
@@ -460,9 +459,9 @@ $('#myModal').on('hidden.bs.modal', function () {
     */
 
 
-    //http://gis.stackexchange.com/questions/59571/how-to-add-text-only-labels-on-leaflet-map-with-no-icon
+    /*gis.stackexchange.com/questions/59571/how-to-add-text-only-labels-on-leaflet-map-with-no-icon*/
     function onEachFeatureLargeLabels(feature, layer) {
-        //layer.setStyle({'opacity' :'.5'});
+        /*layer.setStyle({'opacity' :'.5'});*/
         if (feature.properties && feature.properties.NAME) {
             if (feature.properties.Italics == "Y") {
               layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-large-country-italics-label", offset: [0, 0], direction: 'center', pane: 'labels' });
@@ -473,7 +472,7 @@ $('#myModal').on('hidden.bs.modal', function () {
     }
 
     function onEachFeatureMediumLabels(feature, layer) {
-        //layer.setStyle({'opacity' :'.5'});
+        /*layer.setStyle({'opacity' :'.5'});*/
         if (feature.properties && feature.properties.NAME) {
             if (feature.properties.Italics == "Y") {
               layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-medium-country-italics-label", offset: [0, 0], direction: 'center', pane: 'labels' });
@@ -484,9 +483,9 @@ $('#myModal').on('hidden.bs.modal', function () {
     }
 
     function onEachFeatureSmallLabels(feature, layer) {
-        //layer.setStyle({'opacity' :'.5'});
+        /*layer.setStyle({'opacity' :'.5'});*/
         if (feature.properties && feature.properties.NAME) {
-            //layer.bindTooltip("my tooltip text").openTooltip();
+            /*layer.bindTooltip("my tooltip text").openTooltip();*/
             if (feature.properties.Italics == "Y") {
               layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-small-country-italics-label", offset: [0, 0], direction: 'center', pane: 'labels' });
           } else {
@@ -497,18 +496,18 @@ $('#myModal').on('hidden.bs.modal', function () {
 
 /*
     function onEachFeatureSmallItalicsLabels(feature, layer) {
-        //layer.setStyle({'opacity' :'.5'});
+        layer.setStyle({'opacity' :'.5'});
         if (feature.properties && feature.properties.NAME) {
-            //layer.bindTooltip("my tooltip text").openTooltip();
+            layer.bindTooltip("my tooltip text").openTooltip();
             layer.bindTooltip(feature.properties.NAME, {permanent: true, className: "my-small-country-italics-label", offset: [0, 0], direction: 'center', pane: 'labels' });
         }
     }
 */
 
     function onEachFeatureRegions(feature, layer) {
-        //layer.setStyle({'opacity' :'.5'});
+        /*layer.setStyle({'opacity' :'.5'});*/
         if (feature.properties && feature.properties.REGION_NA) {
-            //layer.bindTooltip("my tooltip text").openTooltip();
+            /*layer.bindTooltip("my tooltip text").openTooltip();*/
             layer.bindTooltip(feature.properties.REGION_NA, {permanent: true, className: "my-region-label", offset: [0, 0], direction: 'center', pane: 'labels' });
         }
     }
@@ -563,7 +562,7 @@ $('#myModal').on('hidden.bs.modal', function () {
           onEachFeature: onEachFeatureSmallLabels
         });
 
-    //leader lines
+    /*leader lines*/
     var LeadersLabelsLayer = new L.GeoJSON.AJAX("{{ site.baseurl }}/assets/leaders.geojson",{style:leadersStyle});
 
 
@@ -615,12 +614,12 @@ $('#myModal').on('hidden.bs.modal', function () {
 
       }
       if (map.getZoom() >= 4 ) {
-          //map.removeLayer(geojsonLayer);
+          /*map.removeLayer(geojsonLayer);*/
           if (map.hasLayer(LargeCountryLabelsLayer)){
               console.log("layer already added");
           } else {
               LargeCountryLabelsLayer.addTo(map);
-              //map.addLayer(geojsonLayer);
+              /*map.addLayer(geojsonLayer);*/
           }
 
       }
@@ -661,7 +660,7 @@ $('#myModal').on('hidden.bs.modal', function () {
               map.removeLayer(RegionLabelsLayer);
               $('.my-region-label').css("font-size", "18px");
               RegionLabelsLayer.addTo(map);
-              //map.removeLayer(SmallCountryLabelsItalicsLayer);
+              /*map.removeLayer(SmallCountryLabelsItalicsLayer);*/
 
               $('.my-region-label').css("color", "rgb(145,144,146)");
               $('.my-large-country-label').css("color", "rgb(145,144,146)");
@@ -680,7 +679,7 @@ $('#myModal').on('hidden.bs.modal', function () {
               SmallCountryLabelsLayer.addTo(map);
               LeadersLabelsLayer.addTo(map);
               map.removeLayer(RegionLabelsLayer);
-              //SmallCountryLabelsItalicsLayer.addTo(map);
+              /*SmallCountryLabelsItalicsLayer.addTo(map);*/
 
               $('.my-region-label').css("color", "rgb(132,131,133)");
               $('.my-large-country-label').css("color", "rgb(132,131,133)");
@@ -693,7 +692,7 @@ $('#myModal').on('hidden.bs.modal', function () {
 
       if (map.getZoom() < 6 ) {
         if (map.hasLayer(topoLayer)){
-              //do nothing
+              /*do nothing*/
           } else {
               topoLayer.addTo(map);
           }
@@ -706,28 +705,27 @@ $('#myModal').on('hidden.bs.modal', function () {
 
     }); 
 
-    //var jsonTest = new L.GeoJSON.AJAX(["colleges.geojson","counties.geojson"],{onEachFeature:popUp}).addTo(m);
+    /*var jsonTest = new L.GeoJSON.AJAX(["colleges.geojson","counties.geojson"],{onEachFeature:popUp}).addTo(m);
 
-    //var LargeCountryLabelsLayer = L.geoJSON().addTo(map);
-    //LargeCountryLabelsLayer.addData(geojsonLayer);
+    var LargeCountryLabelsLayer = L.geoJSON().addTo(map);
+    LargeCountryLabelsLayer.addData(geojsonLayer);
 
-    //taken from: http://leafletjs.com/examples/choropleth-example.html
-    //info box that contains title
-    var info = L.control({position: 'bottomright'});
+    taken from: leafletjs.com/examples/choropleth-example.html
+    info box that contains title
 
-    //window.sidebar = L.control.sidebar('sidebar', {position: 'topleft'}).addTo(map);
-    //map.addControl(new MyControl2('sidebar', {position: 'topleft'}));
+    var info = L.control({position: 'bottomright'});*/
+
+    /*window.sidebar = L.control.sidebar('sidebar', {position: 'topleft'}).addTo(map);
+    map.addControl(new MyControl2('sidebar', {position: 'topleft'}));*/
 
     window.sidebar= new leafletSidebar('sidebar');
     map.addControl(sidebar);
 
-    //var sidebar2 = L.control.sidebar('sidebar', {position: 'topleft'}).addTo(map);
-    //window.sidebar = $('#sidebar').sidebar();
-
-    //var layerControl = L.control.layers({"baseLayer":baseLayer,"Labels":Labels}).addTo(map);
-
-    //map.addHash({lc:layerControl});
-    //map.addHash();
+    /*var sidebar2 = L.control.sidebar('sidebar', {position: 'topleft'}).addTo(map);
+    window.sidebar = $('#sidebar').sidebar();
+    var layerControl = L.control.layers({"baseLayer":baseLayer,"Labels":Labels}).addTo(map);
+    map.addHash({lc:layerControl});
+    map.addHash();*/
 
     var AFmarkers = new L.MarkerClusterGroup();
     var EAPmarkers = new L.MarkerClusterGroup();
@@ -751,31 +749,24 @@ $('#myModal').on('hidden.bs.modal', function () {
 
     var firstClick = true;
 
-    //console.log('active layer: ');
-    //console.log(activeLayer);
-
-    //console.log('layerClicked val 1st');
-    //console.log(layerClicked);
-
-    //This enables when a user clicks on part of the map that
-    //is not part of a layer, it will zoom back into the 
-    //original extent
+    /*This enables when a user clicks on part of the map that
+    is not part of a layer, it will zoom back into the original extent*/
     map.on('click', function(e) {
-        //The TopoJson layer click function always fires first
+        /*The TopoJson layer click function always fires first*/
 
-        //close all popups
+        /*close all popups*/
         map.closePopup();
 
-        //clear topo layer before fly to prevent effect of it not rendering on the fly
+        /*clear topo layer before fly to prevent effect of it not rendering on the fly*/
         topoLayer.clearLayers();
 
-        //map.setView([20, 0], 3, {animation: false});
+        /*map.setView([20, 0], 3, {animation: false});*/
         map.flyTo([20, 0], 3);
         console.log('map clicked');
         console.log(e);
 
         if(layerClicked !== true){
-          //$('.sidebar').css({ "height": "33%"});
+          /*$('.sidebar').css({ "height": "33%"});*/
           $('.sidebar').removeClass("sidebar-tall");
           activeLayer = 'none';
 
@@ -795,10 +786,9 @@ $('#myModal').on('hidden.bs.modal', function () {
 
         $('.hiu-tab').show();
 
-        //$('.item.active').removeClass('active');
-
-        //console.log('testing section');
-        //console.log($('.item.active'));
+        /*$('.item.active').removeClass('active');
+        console.log('testing section');
+        console.log($('.item.active'));*/
         
     });
 
@@ -809,11 +799,11 @@ $('#myModal').on('hidden.bs.modal', function () {
     }
 
     function handleLayer(layer){  
-        //var randomValue = Math.random(),
-        //fillColor = colorScale(randomValue).hex();
+        /*var randomValue = Math.random(),
+        fillColor = colorScale(randomValue).hex();*/
         var fillColor;
 
-        //console.log(layer.feature.properties.RegBureau);
+        /*console.log(layer.feature.properties.RegBureau);*/
 
         switch (layer.feature.properties.RegBureau) {
          case "AF":
@@ -854,14 +844,13 @@ $('#myModal').on('hidden.bs.modal', function () {
     }
 
     function enterLayer(){  
-        //for IE, need to make this emulate the correct mousover behavior
-        //http://stackoverflow.com/questions/3686132/move-active-element-loses-mouseout-event-in-internet-explorer
+        /*for IE, need to make this emulate the correct mousover behavior
+        stackoverflow.com/questions/3686132/move-active-element-loses-mouseout-event-in-internet-explorer*/
 
         if (leftLayer == true) {
-          //console.log('inside function');
-
-          //var RegionName = this.feature.properties.RegBureau;
-          //$tooltip.text(RegionName).show();
+          /*console.log('inside function');
+          var RegionName = this.feature.properties.RegBureau;
+          $tooltip.text(RegionName).show();*/
 
           this.bringToFront();
 
@@ -902,8 +891,8 @@ $('#myModal').on('hidden.bs.modal', function () {
     }
 
     function leaveLayer(){  
-        //$tooltip.hide();
-        //console.log('leaveLayer called');
+        /*$tooltip.hide();
+        console.log('leaveLayer called');*/
 
         switch (this.feature.properties.RegBureau) {
            case "USA":
@@ -926,8 +915,8 @@ $('#myModal').on('hidden.bs.modal', function () {
         leftLayer = true;
     }
 
-    // Products GeoJSON
-    /* old picture icon 
+     /*Products GeoJSON
+     old picture icon 
     var productIcon = L.icon({
         iconUrl: "{{ site.baseurl }}/assets/img/mapgive_blue_pt.png",
         iconSize: [30, 45],
@@ -952,24 +941,24 @@ $('#myModal').on('hidden.bs.modal', function () {
             var products = L.geoJson(response, {
                 zIndex: 100,
                 onEachFeature: function(feature, layer) {
-                    //var title = layer.feature.properties.title;
+                    /*var title = layer.feature.properties.title;*/
                 }
             });
 
             $('.product-listings').empty();
 
-            //console.log('first click');
-            //console.log(firstClick);
+            /*console.log('first click');
+            console.log(firstClick);*/
 
             if(firstClick == true){
               map.addControl( new L.Control.ListMarkers({layer: products}) );
               firstClick = false;
             }
 
-            console.log('region id: ');
+            /*console.log('region id: ');
             console.log(region_id);
 
-            //window.map.setView(regionCoord,regionZoom);
+            window.map.setView(regionCoord,regionZoom);*/
             if (region_id == 'NEA') {
                 console.log('NEA region!');
                 map.fitBounds([
@@ -984,12 +973,12 @@ $('#myModal').on('hidden.bs.modal', function () {
             var enabled = {};
             var featureCollection = products;
 
-            //console.log('features:');
-            //console.log(featureCollection._layers);
+            /*console.log('features:');
+            console.log(featureCollection._layers);*/
 
             for (var i in featureCollection._layers) {
-                //console.log('feature:');
-                //console.log(featureCollection._layers[i].feature);
+                /*console.log('feature:');
+                console.log(featureCollection._layers[i].feature);*/
 
                 if (featureCollection._layers[i].feature.properties.region_id === region_id) {
 
@@ -999,7 +988,7 @@ $('#myModal').on('hidden.bs.modal', function () {
 
                       var altString = featureCollection._layers[i].feature.properties.title;
 
-                      //inserting the title in the altString of the marker
+                      /*inserting the title in the altString of the marker*/
                       var marker = L.marker(new L.LatLng(featureCollection._layers[i].feature.geometry.coordinates[1],featureCollection._layers[i].feature.geometry.coordinates[0]), {
                                                   icon: productIcon, alt: altString
                                               });
@@ -1060,12 +1049,12 @@ $('#myModal').on('hidden.bs.modal', function () {
 
                     clickedMarkerTitle = event.layer.options.alt;
 
-                    //remove the active class from all items
+                    /*remove the active class from all items*/
                     $('.item').removeClass('active');
-                    //add the active class to item that matches title
+                    /*add the active class to item that matches title*/
                     $('.item[title="'+clickedMarkerTitle+'"]').addClass('active');
 
-                    //set selectedID
+                    /*set selectedID*/
                     selectedID = $('.item[title="'+clickedMarkerTitle+'"]').attr('id');
 
                     var parentClass = $('.item[id="'+selectedID+'"]').parent().attr('class');
@@ -1152,8 +1141,8 @@ $('#myModal').on('hidden.bs.modal', function () {
                       $( '.product').remove();
 
                       $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + AFmarkers.getLayers().length + "&nbspProducts</p></center>" );
-*/
-                      //increases AFcount from one, to prevent double-counting on repeated clicks
+
+increases AFcount from one, to prevent double-counting on repeated clicks*/
                       AFcount++;
 
                       break;
@@ -1177,7 +1166,7 @@ $('#myModal').on('hidden.bs.modal', function () {
                       map.removeLayer(SCAmarkers);
                       map.removeLayer(WHAmarkers);
                       map.addLayer(EURmarkers);
-                      //$( '.product').remove();
+
                       /*
                       $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + EURmarkers.getLayers().length + "&nbspProducts</p></center>" );
                       */
@@ -1190,7 +1179,6 @@ $('#myModal').on('hidden.bs.modal', function () {
                       map.removeLayer(SCAmarkers);
                       map.removeLayer(WHAmarkers);
                       map.addLayer(NEAmarkers);
-                      //$( '.product').remove();
                       /*
                       $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + NEAmarkers.getLayers().length + "&nbspProducts</p></center>" );
                       */
@@ -1203,7 +1191,6 @@ $('#myModal').on('hidden.bs.modal', function () {
                       map.removeLayer(NEAmarkers);
                       map.removeLayer(WHAmarkers);
                       map.addLayer(SCAmarkers);
-                      //$( '.product').remove();
                       /*
                       $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + SCAmarkers.getLayers().length + "&nbspProducts</p></center>" );
                       */
@@ -1216,8 +1203,7 @@ $('#myModal').on('hidden.bs.modal', function () {
                       map.removeLayer(NEAmarkers);
                       map.removeLayer(SCAmarkers);
                       map.addLayer(WHAmarkers);
-                      //$( '.product').remove();
-                      /*
+                      /*$( '.product').remove();
                       $( '#'+ region_id.toLowerCase() +'_label' ).append( "<center><p class='product' >" + WHAmarkers.getLayers().length + "&nbspProducts</p></center>" );
                       */
                       WHAcount++;
@@ -1237,7 +1223,7 @@ $('#myModal').on('hidden.bs.modal', function () {
         var regionCoord;
         var regionZoom;
 
-        //close all popups
+        /*close all popups*/
         map.closePopup();
 
         map.removeLayer(AFmarkers);
@@ -1247,7 +1233,7 @@ $('#myModal').on('hidden.bs.modal', function () {
         map.removeLayer(SCAmarkers);
         map.removeLayer(WHAmarkers);
 
-        //map.setView([20, 0], 3, {animation: false});
+        /*map.setView([20, 0], 3, {animation: false});*/
 
         switch (region) {
           case "AF":
@@ -1290,10 +1276,10 @@ $('#myModal').on('hidden.bs.modal', function () {
             regionZoom = 3;
         }
 
-        //if (typeof(products) != "undefined") {
-          //console.log("products are defined");
-          //products.clearLayers();
-        //}
+        /*if (typeof(products) != "undefined") {
+          console.log("products are defined");
+          products.clearLayers();
+        }*/
 
         getProducts(region,regionCoord,regionZoom);
 
@@ -1308,10 +1294,10 @@ $('#myModal').on('hidden.bs.modal', function () {
 
     }
 
-    //if a tab is clicked on the sidebar
+    /*if a tab is clicked on the sidebar*/
     $('a[role="tab"]').click(function () {
-      //console.log('click event1');
-      //console.log($(this).attr('id'));
+      /*console.log('click event1');
+      console.log($(this).attr('id'));*/
 
       var region = $(this).attr('id');
       clickTab(region);
@@ -1319,7 +1305,7 @@ $('#myModal').on('hidden.bs.modal', function () {
     })
 
     function clickLayer(e) {
-        // Assuming the clicked feature is a shape, not a point marker.
+        /*Assuming the clicked feature is a shape, not a point marker.*/
 
         console.log('region layer clicked');
         console.log(e);
@@ -1327,7 +1313,7 @@ $('#myModal').on('hidden.bs.modal', function () {
         var regionCoord;
         var regionZoom;
 
-        //console.log(this.feature.properties.RegBureau);
+        /*console.log(this.feature.properties.RegBureau);*/
 
         switch (this.feature.properties.RegBureau) {
          case "AF":
@@ -1335,11 +1321,8 @@ $('#myModal').on('hidden.bs.modal', function () {
             regionZoom = 4;
             activeLayer = "AF";
             sidebar.open('AF');
-            //console.log('active layerAF: ');
-            //console.log(activeLayer);
             break;
          case "EAP":
-            //regionCoord = [5, 70];
             regionCoord = [15, 80];
             regionZoom = 4;
             activeLayer = "EAP";
@@ -1374,9 +1357,9 @@ $('#myModal').on('hidden.bs.modal', function () {
             regionZoom = 3;
         }
         
-        //map.fitBounds(this.getBounds());
-        //map.setView(regionCoord,regionZoom);
-        //window.map.setView([5, 70], 3);
+        /*map.fitBounds(this.getBounds());
+        map.setView(regionCoord,regionZoom);
+        window.map.setView([5, 70], 3);*/
 
         console.log(regionCoord);
         console.log(regionZoom);
@@ -1391,15 +1374,15 @@ $('#myModal').on('hidden.bs.modal', function () {
 
 /*
     topoLayer.on("click", function (event) {
-        // Assuming the clicked feature is a shape, not a point marker.
+         Assuming the clicked feature is a shape, not a point marker.
         map.fitBounds(event.layer.getBounds());
-        //console.log(event.layer);
-        //getProducts(event.layer.feature.properties.RegBureau);
-        //map.setView(event.latlng, 5);
+        console.log(event.layer);
+        getProducts(event.layer.feature.properties.RegBureau);
+        map.setView(event.latlng, 5);
     });
 */
 
-    //events
+    /*events*/
     var eventIcon = L.icon({
         iconUrl: "{{ site.baseurl }}/assets/img/mapgive_red_pt.png",
         iconSize: [30, 45],
@@ -1420,29 +1403,30 @@ $('#myModal').on('hidden.bs.modal', function () {
                     layer.bindPopup(popupContent, popupOptions);
                 }
             });
-            //events.addTo(map);
-            //geojsonLayers.push(events);
-            //geojsonLayers = sortLayers(geojsonLayers)
-            //updateRenderOrder(geojsonLayers);
-            //layerswitcher.append(createLink(map, events, 'Events', events.options.zIndex));
 
-            //map.addControl( new L.Control.ListMarkers({layer: events}) );
-            //markersLayer is a L.LayerGroup contains listing markers
+            /*events.addTo(map);
+            geojsonLayers.push(events);
+            geojsonLayers = sortLayers(geojsonLayers)
+            updateRenderOrder(geojsonLayers);
+            layerswitcher.append(createLink(map, events, 'Events', events.options.zIndex));*/
+
+            /*map.addControl( new L.Control.ListMarkers({layer: events}) );
+            markersLayer is a L.LayerGroup contains listing markers*/
         }
     });
 
-   //end of closure
-   //}());
+   /*end of closure
+   }());*/
 
   </script>
 
 
   <script type='text/javascript'>
 
-    //enables hashes on tabs
+    /*enables hashes on tabs*/
     $(document).ready(function() {
 
-        //probably doesn't work because of propogation being stopped in sidebar!
+        /*probably doesn't work because of propogation being stopped in sidebar!*/
         $( "a" ).on( "click", function() {
             console.log('title clicked');
             var match = $(this).attr('href').match(/#\S+/);
@@ -1452,49 +1436,48 @@ $('#myModal').on('hidden.bs.modal', function () {
         });
 
 
-        //come up with unique ids for HIU products
-        //then store the ids under a new tag called data-product-id
+        /*come up with unique ids for HIU products
+        then store the ids under a new tag called data-product-id
 
-        //The pattern for the hash will be: /#regioncode/#data-product-id
-        //The code will parse the hash, based on the #regioncode, it will
-        //force a click for the regiontab
-        //based on the #data-product-id it will call $(link).click(function()
+        The pattern for the hash will be: /#regioncode/#data-product-id
+        The code will parse the hash, based on the #regioncode, it will
+        force a click for the regiontab
+        based on the #data-product-id it will call $(link).click(function()
 
-        // Javascript to enable link to tab
+         Javascript to enable link to tab*/
         var hash = document.location.hash;
 
-        //console.log('hash! ');
-        //console.log(hash);
+        /*console.log('hash! ');
+        console.log(hash);
 
-        //console.log('hash length: ');
-        //console.log(hash.length);
+        console.log('hash length: ');
+        console.log(hash.length);*/
 
         if (hash) {
-          //$('.nav-tabs a[href='+hash.replace(prefix,"")+']').tab('show');
+          /*$('.nav-tabs a[href='+hash.replace(prefix,"")+']').tab('show');*/
           hash = hash.slice(1).split(',');
           region_hash = hash[0].replace(",", "");
-          //console.log('region_hash! ');
-          //console.log(region_hash);
+          /*console.log('region_hash! ');
+          console.log(region_hash);*/
 
             if (hash.length == 1) {
               document.getElementById(region_hash).click();
             } else if (hash.length > 1) {
               product_hash = hash[1].replace("#", "");
-              //something like this can work for a product
-              //$('a[href="#NEA#U1283"').trigger("click");
+              /*something like this can work for a product
+              $('a[href="#NEA#U1283"').trigger("click");*/
               document.getElementById(region_hash).click();
 
               setTimeout(function(){ 
-                //console.log("done waiting"); 
 
-                //triggering modal
+                /*triggering modal*/
                 document.getElementById('modal#'+region_hash+','+product_hash).click();
-                //this below works manually
-                //document.getElementById('modal#NEA#U1283').click();
+                /*this below works manually
+                document.getElementById('modal#NEA#U1283').click();
 
-                //made the query more specific so it would just call the 
-                //thumbnail modal and not trigger two modals, thus closing it 
-                //immediatly after it opened
+                made the query more specific so it would just call the 
+                thumbnail modal and not trigger two modals, thus closing it 
+                immediatly after it opened*/
                 $('description-image.a[href="#'+region_hash+','+product_hash+'"]').trigger("click");
 
                 document.location.hash = '#' + region_hash + ',' + product_hash
@@ -1511,7 +1494,7 @@ $('#myModal').on('hidden.bs.modal', function () {
 
 
 
-        //insert new product labels
+        /*insert new product labels*/
 
         function getArray(){
             return $.getJSON('products/products.json');
@@ -1519,18 +1502,15 @@ $('#myModal').on('hidden.bs.modal', function () {
 
         getArray().done( function(json) {
             console.log('printing out json: ');
-            console.log(json); // show the json data in console
+            console.log(json);  /*show the json data in console*/
 
             var _len = json.length;
             var fixture;
 
-            //console.log('json 3');
-            //console.log(json.features[3]);
-            
             var d = new Date();
 
-            //console.log("current date");
-            //console.log(d);
+            /*console.log("current date");
+            console.log(d);*/
 
             var curr_date = d.getDate();
             
@@ -1539,14 +1519,14 @@ $('#myModal').on('hidden.bs.modal', function () {
             console.log("past 60 days");
             console.log(past_60_days);
 
-            //loop through json and match today's date with match-date
+            /*loop through json and match today's date with match-date*/
             var jsonCount = 0;
 
             for (var i in json.features) {
                 fixture = json.features[i];
                 
-                //console.log('json properties');
-                //console.log(fixture.properties.date_published);
+                /*console.log('json properties');
+                console.log(fixture.properties.date_published);*/
 
                 var newDate = new Date(fixture.properties.date_published);
 
@@ -1557,9 +1537,9 @@ $('#myModal').on('hidden.bs.modal', function () {
 
                     jsonCount++;
 
-                    //add new to the product
+                    /*add new to the product*/
 
-                    //add new to the region tab
+                    /*add new to the region tab*/
                     var region_id = fixture.properties.region_id;
 
                     console.log('new product region id: ');
@@ -1567,20 +1547,17 @@ $('#myModal').on('hidden.bs.modal', function () {
                     console.log('region id length');
                     console.log($('#'+region_id+' .new-product').length);
 
-                    //http://stackoverflow.com/questions/7951505/about-jquery-append-and-how-to-check-if-an-element-has-been-appended
+                    /*stackoverflow.com/questions/7951505/about-jquery-append-and-how-to-check-if-an-element-has-been-appended*/
                     if($('#'+region_id+' .new-product').length <= 0) {
                         $('#'+region_id).append("<div class='new-product'>new</div>");
                     }
                 }
             }
 
-            //console.log("x new products: ");
-            //console.log(jsonCount);
-
           });
 
 
-    //http://mediacause.org/track-anchor-tags-google-analytics-2/
+    /*mediacause.org/track-anchor-tags-google-analytics-2/*/
 
 
     });

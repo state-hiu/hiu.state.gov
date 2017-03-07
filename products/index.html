@@ -75,22 +75,21 @@ title: Products
 <script>
 
 
-  //manages Prev and Next buttons on modals 
+  /*manages Prev and Next buttons on modals */
   var addButtons = function( jpegDisplayNumber, dropdownCount, dropdown, modal) {
-      //console.log('jpegDisplayNumber');
-      //console.log(jpegDisplayNumber);
+
       if (jpegDisplayNumber == dropdownCount) {
-          //display prev button only
+          /*display prev button only*/
           $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
 
           $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
 
           $('.btn-next').prop("disabled", true);
 
-          //adding modal header text, ex. Page 1 of X
+          /*adding modal header text, ex. Page 1 of X*/
           $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
-          //adding modal header text, ex. Page 1 of X
+          /*adding modal header text, ex. Page 1 of X*/
           $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
           $( ".btn-prev" ).on( "click", function() {
@@ -108,35 +107,33 @@ title: Products
                   
                 addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
               });
-          //console.log('why would this run');
-          //jpegDisplayNumber = 2;
+
           return 'final page';
         } else {
             if ((jpegDisplayNumber-1) == 1) {
-                //display next button only
+                /*display next button only*/
                 $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
 
                 $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
 
                 $('.btn-prev').prop("disabled", true);
 
-                //adding modal header text, ex. Page 1 of X
+                /*adding modal header text, ex. Page 1 of X*/
                 $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
-                //adding modal header text, ex. Page 1 of X
+                /*adding modal header text, ex. Page 1 of X*/
                 $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
                 $( ".btn-next" ).on( "click", function() {
                   console.log( 'jpegDisplayNumber val' );
                   console.log(jpegDisplayNumber);
-                  //console.log( 'jpegDisplayNumberConst val' );
-                  //console.log(jpegDisplayNumber);
+
                   console.log( $(dropdown).find("li").eq(2).find("a").attr("href"));
 
                   jpegDisplayNumber++;
-                  //however since it you are finding the right length in the array and the array starts at zero
-                  //you need to subtract 1 again
-                  //switch out img with next img
+                  /*however since it you are finding the right length in the array and the array starts at zero
+                  you need to subtract 1 again
+                  switch out img with next img*/
                   modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
                   $('.btn-prev,.btn-next').remove();
                   $('.modal-header-text,.modal-footer-text').remove();
@@ -145,15 +142,15 @@ title: Products
                 });
                 return 'next';
             } else {
-                //display next & prev button
+                /*display next & prev button*/
                 $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
 
                 $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
 
-                //adding modal header text, ex. Page 1 of X
+                /*adding modal header text, ex. Page 1 of X*/
                 $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
-                //adding modal header text, ex. Page 1 of X
+                /*adding modal header text, ex. Page 1 of X*/
                 $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
                 $( ".btn-prev" ).on( "click", function() {
@@ -166,8 +163,6 @@ title: Products
                   addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
                 });
 
-                //console.log( 'jpegDisplayNumber val2' );
-                //console.log(jpegDisplayNumber);
 
                 $( ".btn-next" ).on( "click", function() {
                   console.log( 'activate next button only' );
@@ -175,12 +170,12 @@ title: Products
                   modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
                   $('.btn-prev,.btn-next').remove();
                   $('.modal-header-text,.modal-footer-text').remove();
-                  //$('.btn-prev').remove();
+                  /*$('.btn-prev').remove();*/
                   
                   addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
                 });
 
-                //jpegDisplayNumber++;
+                /*jpegDisplayNumber++;*/
                 return 'next';
             }
         }
@@ -188,23 +183,23 @@ title: Products
 
 
 $('#myModal').on('show.bs.modal', function (event) {
-  //alert('modal is called');
+  /*alert('modal is called');*/
   var jpegDisplayNumber = 2;
-  var button = $(event.relatedTarget) // Button that triggered the modal
-  var title = button.data('title') // Extract info from data-* attributes
+  var button = $(event.relatedTarget)  /*Button that triggered the modal*/
+  var title = button.data('title')  /*Extract info from data-* attributes*/
   console.log('title-data: ');
   console.log(title);
-  var img = button.data('img') // Extract info from data-* attributes
+  var img = button.data('img') /*Extract info from data-* attributes*/
   console.log('img-data: ');
   console.log(img);
-  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+   /*If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+   Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.*/
   var modal = $(this)
   modal.find('.modal-title').text(title);
   modal.find('#modal-img').attr("src",img);
 
-  //need a list of all the pages in a product; actually I do not, just parse based on what is in the download button!
-  //if list is 2, then just add a next button
+  /*need a list of all the pages in a product; actually I do not, just parse based on what is in the download button!
+  if list is 2, then just add a next button*/
   console.log('display modal parents id');
   console.log(button.closest(".item"));
   var item = button.closest(".item")
@@ -217,7 +212,6 @@ $('#myModal').on('show.bs.modal', function (event) {
 
   var dropdownCount = $(dropdown).find("li").length
 
-  //debugger;
 
   if (dropdownCount > 2) {
       addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
@@ -226,8 +220,7 @@ $('#myModal').on('show.bs.modal', function (event) {
 })
 
 $('#myModal').on('hidden.bs.modal', function () {
-    // do something…
-    console.log('modal is closing');
+    /*console.log('modal is closing');*/
     $('.btn-prev,.btn-next').remove();
     $('.modal-header-text,.modal-footer-text').remove();
 })
@@ -237,11 +230,11 @@ $('#myModal').on('hidden.bs.modal', function () {
 
 <script type="text/javascript">
 
-//adding the twitter pop-up
+/*adding the twitter pop-up*/
 $("body").on("click", ".tweet", function() {
     console.log('tweet clicked');
-    //var myWindow = window.open("", "", "width=200,height=100");
-    //return false;
+    /*var myWindow = window.open("", "", "width=200,height=100");
+    return false;*/
 
     var w = 550;
     var h = 420;
@@ -256,33 +249,6 @@ $("body").on("click", ".tweet", function() {
   });
 
 
-
-
-
 </script>
-
-<!-- http://stackoverflow.com/questions/7862233/twitter-bootstrap-tabs-go-to-specific-tab-on-page-reload-or-hyperlink 
-<script type='text/javascript'>
-
-  // Javascript to enable link to tab
-  var hash = document.location.hash;
-  var prefix = "tab_";
-
-  //console.log('hash! ');
-  //console.log(hash);
-
-  if (hash) {
-      $('.nav-tabs a[href='+hash.replace(prefix,"")+']').tab('show');
-  } 
-
-  // Change hash for page-reload
-  $('.nav-tabs a').on('shown.bs.tab', function (e) {
-      window.location.hash = e.target.hash.replace("#", "#" + prefix);
-  });
-        
-});
-        
-</script>
--->
 
 

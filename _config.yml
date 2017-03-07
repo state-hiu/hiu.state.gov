@@ -93,3 +93,7 @@ mapbox:
   access_token: "pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ"
   url_tiles: "https://api.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token="
   url_utfgrid: "http://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.grid.json?callback={cb}&access_token="
+
+compress_html:
+  blanklines: true
+  comments: all
