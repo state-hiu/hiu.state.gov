@@ -7,7 +7,7 @@ The U.S. Department of State Humanitarian Information Unit's new public-facing w
 
 ## Installation
 
-Site is tested and built using Ubuntu. To install locally, jekyll is required.
+Site is tested and built using Ubuntu 16.04. To install locally, jekyll is required.
 
 ## Gulp.js
 
@@ -20,7 +20,7 @@ If updated app.js javascript file (`lib/app.js`) , run gulp to minify and strip 
 gulp
 ```
 
-## Leaflet Extensions
+## Implemented Leaflet Extensions
 
 ### leaflet-ajax
 
@@ -44,7 +44,7 @@ A responsive sidebar with tabs for Leaflet, OpenLayers, Google Maps, ... (https:
 
 Both the leaflet-sidebar.js and leaflet-sidebar.css files are heavily customized.
 
-## Search
+## Implemented Search (used in Products Page)
 
 ### fuse.js
 Lightweight fuzzy-search Javascript library.  (http://fusejs.io/) 
