@@ -24,20 +24,44 @@ If you updated bootstrap variables (`src/less/bootstrap/variables.less`), re-com
 gulp bootstrap:compile
 ```
 
-## Examples
+## Leaflet Extensions
 
-TBD
+### leaflet-ajax
 
+Allows you to call JSON via an Ajax call with a jsonp fallback. (https://github.com/calvinmetcalf/leaflet-ajax)
 
-### Search
+### leaflet-list-markers
 
+A Leaflet Control for listing visible markers/features in a interactive box. (https://github.com/stefanocudini/leaflet-list-markers)
 
-#### The events page is depreciated at this time
+Heavy customization was done to the leaflet-list-markers.src.js file. The code builds the product entries that get added to the sidebar. A minimized file will need to get built.
+
+### leaflet-markercluster
+
+Marker Clustering plugin for Leaflet. ver 1.0.3 (https://github.com/Leaflet/Leaflet.markercluster)
+
+Only the MarkCluster.Default.css file is modified for customized style.
+
+### leaflet-sidebar-v2
+
+A responsive sidebar with tabs for Leaflet, OpenLayers, Google Maps, ... (https://github.com/Turbo87/sidebar-v2)
+
+Both the leaflet-sidebar.js and leaflet-sidebar.css files are heavily customized.
+
+## Search
+
+### fuse.js
+Lightweight fuzzy-search Javascript library.  (http://fusejs.io/) 
+
+### Elasticlunr.js 
+Lightweight full-text search engine in Javascript for browser search and offline search. (http://elasticlunr.com/)
+This was also tested, but fuse.js was preferred due to its capabilities for fuzzy search and fuse.js was faster.
 
 ### CSS
 
 multiple libraries are used, however Sass/SCSS is mainly used along with bootstrap. Jekyll provides [built-in support for Sass](https://jekyllrb.com/docs/assets/). The Bootstrap partials are in the _sass directory. The main Sass/SCSS file is named main.scss and is in the css directory. Jekyll automatically processes it and puts it in the site's destination folder.
 
+#### The events page is depreciated at this time
 
 ## Contributing
 

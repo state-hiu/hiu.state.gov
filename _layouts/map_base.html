@@ -54,11 +54,8 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     {% if site.debug.jquery == true %}
         <!--<script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.js"></script>-->
         <script src="{{ site.baseurl }}/lib/jquery/3.1.1/jquery-3.1.1.js"></script>
-        <!-- jquery-ui 1.12.1 -->
-        <!--<script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui.js"></script>-->
     {% else %}
         <script src="{{ site.baseurl }}/lib/jquery/3.1.1/jquery-3.1.1.js"></script>
-        <!--<script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui.js"></script>-->
     {% endif %}
 
     {% if site.debug.bootstrap == true %}
@@ -95,17 +92,13 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular-route.min.js"></script>
     {% endif %}
 
-{% endcomment %}
-
-
-    <!-- JavaScript / Internal -->
-{% comment %}
-
     {% if site.debug.main == true %}
     <script src="{{ site.baseurl }}/build/js/main.js?v={{ v }}"></script>
     {% else %}
     <script src="{{ site.baseurl }}/build/js/main.min.js?v={{ v }}"></script>
     {% endif %}
+
+
     {% include main/const_snippet.html %}
     <script type="text/javascript" language="Javascript">
         var mb_access_token = '{{ site.mapbox.access_token }}';
@@ -151,6 +144,7 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
             init_main("mainApp","{{ site.geonodes[0].layers }}");
         });
     </script>
+
 {% endcomment %}
 
     <!--Digital Analytics Program roll-up, see https://analytics.usa.gov for data-->
@@ -163,22 +157,17 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     {% endif %}
 
     <!--extra map_base files-->
-    <!--
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
--->
 
-    <!--leaflet 1.0.2-->
+    <!--leaflet 1.0.3-->
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/leaflet.css" />
     <script src="{{ site.baseurl }}/lib/leaflet/leaflet-src.js"></script>
-
 
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.css" type="text/css" media="all" />
     <script src="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.js"></script>
 
     <script src="{{ site.baseurl }}/lib/leaflet-ajax/leaflet.ajax.min.js"></script>
 
-    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.src.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.min.css" type="text/css" media="all" />
     <script src="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.src.js"></script>
 
     <script src="{{ site.baseurl }}/lib/leaflet-markercluster/leaflet.markercluster.js"></script>
