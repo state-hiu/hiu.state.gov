@@ -14,7 +14,7 @@ Site is tested and built using Ubuntu. To install locally, jekyll is required.
 [Gulp](http://gulpjs.com/) is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
 (note, gulp is not active now, need to re-implement)
-If updated main javascript file (`lib/main.js`) , run gulp to minify:
+If updated app.js javascript file (`lib/app.js`) , run gulp to minify and strip out comments:
 
 ```
 gulp
