@@ -285,9 +285,8 @@ $('#myModal').on('hidden.bs.modal', function () {
 
     var topoLayer = new L.TopoJSON()
 
-    $.getJSON('{{ site.baseurl }}/localdata/bureau_outline_topojson5.json')
+    $.getJSON('{{ site.baseurl }}/assets/data/bureau_outline_topojson5.json')
       .done(addTopoData);
-
 
     /*I'm still using panes, then binging the Labels (which are tooltips) to the pane
     This way the labels will stay below the cluster markers

@@ -18,20 +18,6 @@ var compilelist =
         "src": "./src/js/main/*.js",
         "outfile":"main.js",
         "dest":"./build/js/"
-    },
-    {
-        "name": "main_less",
-        "type": "less",
-        "src": "./src/less/main/*.less",
-        "outfile":"main.css",
-        "dest":"./build/css/"
-    },
-    {
-        "name": "polyfill_js",
-        "type": "js",
-        "src": "./src/js/polyfill/*.js",
-        "outfile":"polyfill.js",
-        "dest":"./build/js/"
     }
 ];
 
@@ -57,13 +43,6 @@ gulp.task('compile', function(){
         else if(t.type=="css")
         {
             gulp.src(t.src)
-                .pipe(concat(t.outfile))
-                .pipe(gulp.dest(t.dest));
-        }
-        else if(t.type=="less")
-        {
-            gulp.src(t.src)
-                .pipe(less())
                 .pipe(concat(t.outfile))
                 .pipe(gulp.dest(t.dest));
         }

@@ -17,7 +17,6 @@ layout: default
     "count":
     {
         "regions": {{ site.categories.regions | size }},
-        "events": {{ site.categories.events | size }},
         "products": {{ site.categories.products | size }},
         "repos": {{ site.categories.repos | size }},
         "programs": {{ site.categories.programs | size }}
@@ -40,7 +39,6 @@ layout: default
     },
     "api":
     {
-        "events":"{{ site.url }}/events/events.json",
         "products":"{{ site.url }}/products/products.json"
     }
 }
