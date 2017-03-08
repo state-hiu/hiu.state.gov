@@ -1,27 +1,23 @@
-Prototype of New hiu.state.gov (hiu.state.gov)
+[hiu.state.gov](hiu.state.gov)
 ================
 
 ## Description
 
-Prototype of the U.S. Department of State Humanitarian Information Unit's new public-facing website, hiu.state.gov.
+The U.S. Department of State Humanitarian Information Unit's new public-facing website, hiu.state.gov.
 
 ## Installation
 
 Site is tested and built using Ubuntu. To install locally, jekyll is required.
 
-## Usage
+## Gulp.js
 
+[Gulp](http://gulpjs.com/) is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
-If updated less (`src/less`) or javascript (`src/js/`), run gulp to update:
+(note, gulp is not active now, need to re-implement)
+If updated main javascript file (`lib/main.js`) , run gulp to minify:
 
 ```
 gulp
-```
-
-If you updated bootstrap variables (`src/less/bootstrap/variables.less`), re-compile the bootstrap.css with:
-
-```
-gulp bootstrap:compile
 ```
 
 ## Leaflet Extensions
