@@ -11,6 +11,26 @@ tilelayers:
 
 ---
 
+<style type="text/css">
+
+.rightMenu {
+    position:relative;
+}
+.right-caret {
+
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #fff;
+    display: inline-block;
+    height: 0;
+    opacity: 1;
+    vertical-align: top;
+    width: 0;
+
+}
+
+</style>
+
 <div id="container">
 
   <!-- Modals from Bootstrap, used to preview images when thumbnails clicked -->
@@ -24,9 +44,16 @@ tilelayers:
           <h4 class="modal-title" id="myModalLabel"></h4>
         </div>
         <div class="modal-body">
+          <!--http://stackoverflow.com/questions/16409266/change-bootstrap-drop-down-to-drop-horizontal-right-->
+          <button class="btn btn-primary dropdown-toggle" style="padding: 3px 10px;float:left;" type="button" data-toggle="dropdown" >Download
+            <span class="right-caret caret"></span>
+          </button>
+          <ul class="dropdown-menu rightMenu" id="modal-dropdownfill">
+          </ul>
           <img id="modal-img" style="max-width:1000px;">
         </div>
         <div class="modal-footer">
+          
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
