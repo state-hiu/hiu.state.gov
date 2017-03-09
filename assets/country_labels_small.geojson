@@ -9,7 +9,8 @@
         "NUM_CODE": 239,
         "3_CODE": "SGS",
         "2_CODE": "GS",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -27,7 +28,8 @@
         "NUM_CODE": 654,
         "3_CODE": "SHN",
         "2_CODE": "SH",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -45,7 +47,8 @@
         "NUM_CODE": 260,
         "3_CODE": "ATF",
         "2_CODE": "TF",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -63,7 +66,8 @@
         "NUM_CODE": 166,
         "3_CODE": "CCK",
         "2_CODE": "CC",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -81,7 +85,8 @@
         "NUM_CODE": 74,
         "3_CODE": "BVT",
         "2_CODE": "BV",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -99,7 +104,8 @@
         "NUM_CODE": 234,
         "3_CODE": "FRO",
         "2_CODE": "FO",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -117,7 +123,8 @@
         "NUM_CODE": 933,
         "3_CODE": "XWK",
         "2_CODE": "QW",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -135,7 +142,8 @@
         "NUM_CODE": 570,
         "3_CODE": "NIU",
         "2_CODE": "NU",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -153,7 +161,8 @@
         "NUM_CODE": 580,
         "3_CODE": "MNP",
         "2_CODE": "MP",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -171,7 +180,8 @@
         "NUM_CODE": 900,
         "3_CODE": "XQZ",
         "2_CODE": "QZ",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -189,7 +199,8 @@
         "NUM_CODE": 832,
         "3_CODE": "JEY",
         "2_CODE": "JE",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -207,7 +218,8 @@
         "NUM_CODE": 922,
         "3_CODE": "XJA",
         "2_CODE": "XU",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -225,7 +237,8 @@
         "NUM_CODE": 927,
         "3_CODE": "XPL",
         "2_CODE": "XL",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -243,7 +256,8 @@
         "NUM_CODE": 162,
         "3_CODE": "CXR",
         "2_CODE": "CX",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -261,7 +275,8 @@
         "NUM_CODE": 902,
         "3_CODE": "XAC",
         "2_CODE": "XA",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -279,7 +294,8 @@
         "NUM_CODE": 574,
         "3_CODE": "NFK",
         "2_CODE": "NF",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -297,7 +313,8 @@
         "NUM_CODE": 906,
         "3_CODE": "XCS",
         "2_CODE": "XC",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -315,7 +332,8 @@
         "NUM_CODE": 234,
         "3_CODE": "FRO",
         "2_CODE": "FO",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -333,7 +351,8 @@
         "NUM_CODE": 833,
         "3_CODE": "IMN",
         "2_CODE": "IM",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -351,7 +370,8 @@
         "NUM_CODE": 258,
         "3_CODE": "PYF",
         "2_CODE": "PF",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -369,7 +389,8 @@
         "NUM_CODE": 86,
         "3_CODE": "IOT",
         "2_CODE": "IO",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -387,7 +408,8 @@
         "NUM_CODE": 334,
         "3_CODE": "HMD",
         "2_CODE": "HM",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -405,7 +427,8 @@
         "NUM_CODE": 666,
         "3_CODE": "SPM",
         "2_CODE": "PM",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -423,7 +446,8 @@
         "NUM_CODE": 612,
         "3_CODE": "PCN",
         "2_CODE": "PN",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -441,7 +465,8 @@
         "NUM_CODE": 831,
         "3_CODE": "GGY",
         "2_CODE": "GG",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -459,7 +484,8 @@
         "NUM_CODE": 924,
         "3_CODE": "XKR",
         "2_CODE": "XM",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -477,7 +503,8 @@
         "NUM_CODE": 920,
         "3_CODE": "XJM",
         "2_CODE": "XJ",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -495,7 +522,8 @@
         "NUM_CODE": 638,
         "3_CODE": "REU",
         "2_CODE": "RE",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -513,7 +541,8 @@
         "NUM_CODE": 907,
         "3_CODE": "XXD",
         "2_CODE": "XD",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -531,7 +560,8 @@
         "NUM_CODE": 16,
         "3_CODE": "ASM",
         "2_CODE": "AS",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -549,7 +579,8 @@
         "NUM_CODE": 903,
         "3_CODE": "XBK",
         "2_CODE": "XB",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -567,7 +598,8 @@
         "NUM_CODE": 905,
         "3_CODE": "CPT",
         "2_CODE": "CP",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -585,7 +617,8 @@
         "NUM_CODE": 921,
         "3_CODE": "XJV",
         "2_CODE": "XQ",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -603,7 +636,8 @@
         "NUM_CODE": 316,
         "3_CODE": "GUM",
         "2_CODE": "GU",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -621,7 +655,8 @@
         "NUM_CODE": 919,
         "3_CODE": "XHO",
         "2_CODE": "XH",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -639,7 +674,8 @@
         "NUM_CODE": 928,
         "3_CODE": "XPR",
         "2_CODE": "XP",
-        "Italics": "Y"
+        "Italics": "Y",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -657,7 +693,8 @@
         "NUM_CODE": 929,
         "3_CODE": "XSP",
         "2_CODE": "XS",
-        "Italics": "Y"
+        "Italics": "Y",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -675,7 +712,8 @@
         "NUM_CODE": 654,
         "3_CODE": "SHN",
         "2_CODE": "SH",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -693,7 +731,8 @@
         "NUM_CODE": 492,
         "3_CODE": "MCO",
         "2_CODE": "MC",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -711,7 +750,8 @@
         "NUM_CODE": 674,
         "3_CODE": "SMR",
         "2_CODE": "SM",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -729,7 +769,8 @@
         "NUM_CODE": 20,
         "3_CODE": "AND",
         "2_CODE": "AD",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -747,7 +788,8 @@
         "NUM_CODE": 662,
         "3_CODE": "LCA",
         "2_CODE": "LC",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -765,7 +807,8 @@
         "NUM_CODE": 807,
         "3_CODE": "MKD",
         "2_CODE": "MK",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -783,7 +826,8 @@
         "NUM_CODE": 442,
         "3_CODE": "LUX",
         "2_CODE": "LU",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -801,7 +845,8 @@
         "NUM_CODE": 690,
         "3_CODE": "SYC",
         "2_CODE": "SC",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -819,7 +864,8 @@
         "NUM_CODE": 678,
         "3_CODE": "STP",
         "2_CODE": "ST",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -837,7 +883,8 @@
         "NUM_CODE": 901,
         "3_CODE": "XKS",
         "2_CODE": "XK",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -855,7 +902,8 @@
         "NUM_CODE": 498,
         "3_CODE": "MDA",
         "2_CODE": "MD",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -873,7 +921,8 @@
         "NUM_CODE": 663,
         "3_CODE": "MAF",
         "2_CODE": "MF",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "right"
       },
       "geometry": {
         "type": "Point",
@@ -891,7 +940,8 @@
         "NUM_CODE": 28,
         "3_CODE": "ATG",
         "2_CODE": "AG",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -909,7 +959,8 @@
         "NUM_CODE": 780,
         "3_CODE": "TTO",
         "2_CODE": "TT",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -927,7 +978,8 @@
         "NUM_CODE": 926,
         "3_CODE": "XNV",
         "2_CODE": "XV",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -945,7 +997,8 @@
         "NUM_CODE": 60,
         "3_CODE": "BMU",
         "2_CODE": "BM",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -963,7 +1016,8 @@
         "NUM_CODE": 136,
         "3_CODE": "CYM",
         "2_CODE": "KY",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -981,7 +1035,8 @@
         "NUM_CODE": 270,
         "3_CODE": "GMB",
         "2_CODE": "GM",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -999,7 +1054,8 @@
         "NUM_CODE": 344,
         "3_CODE": "HKG",
         "2_CODE": "HK",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1017,7 +1073,8 @@
         "NUM_CODE": 470,
         "3_CODE": "MLT",
         "2_CODE": "MT",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1035,7 +1092,8 @@
         "NUM_CODE": 659,
         "3_CODE": "KNA",
         "2_CODE": "KN",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1053,7 +1111,8 @@
         "NUM_CODE": 308,
         "3_CODE": "GRD",
         "2_CODE": "GD",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1071,7 +1130,8 @@
         "NUM_CODE": 652,
         "3_CODE": "BLM",
         "2_CODE": "BL",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1089,7 +1149,8 @@
         "NUM_CODE": 670,
         "3_CODE": "VCT",
         "2_CODE": "VC",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1107,7 +1168,8 @@
         "NUM_CODE": 500,
         "3_CODE": "MSR",
         "2_CODE": "MS",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1125,7 +1187,8 @@
         "NUM_CODE": 438,
         "3_CODE": "LIE",
         "2_CODE": "LI",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1143,7 +1206,8 @@
         "NUM_CODE": 630,
         "3_CODE": "PRI",
         "2_CODE": "PR",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1161,7 +1225,8 @@
         "NUM_CODE": 212,
         "3_CODE": "DMA",
         "2_CODE": "DM",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1179,7 +1244,8 @@
         "NUM_CODE": 312,
         "3_CODE": "GLP",
         "2_CODE": "GP",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1197,7 +1263,8 @@
         "NUM_CODE": 534,
         "3_CODE": "SXM",
         "2_CODE": "SX",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "right"
       },
       "geometry": {
         "type": "Point",
@@ -1215,7 +1282,8 @@
         "NUM_CODE": 705,
         "3_CODE": "SVN",
         "2_CODE": "SI",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1233,7 +1301,8 @@
         "NUM_CODE": 92,
         "3_CODE": "VGB",
         "2_CODE": "VG",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1251,7 +1320,8 @@
         "NUM_CODE": 474,
         "3_CODE": "MTQ",
         "2_CODE": "MQ",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1269,7 +1339,8 @@
         "NUM_CODE": 796,
         "3_CODE": "TCA",
         "2_CODE": "TC",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1287,7 +1358,8 @@
         "NUM_CODE": 52,
         "3_CODE": "BRB",
         "2_CODE": "BB",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1305,7 +1377,8 @@
         "NUM_CODE": 531,
         "3_CODE": "CUW",
         "2_CODE": "CW",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1323,7 +1396,8 @@
         "NUM_CODE": 850,
         "3_CODE": "VIR",
         "2_CODE": "VI",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1341,7 +1415,8 @@
         "NUM_CODE": 499,
         "3_CODE": "MNE",
         "2_CODE": "ME",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1359,7 +1434,8 @@
         "NUM_CODE": 660,
         "3_CODE": "AIA",
         "2_CODE": "AI",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "right"
       },
       "geometry": {
         "type": "Point",
@@ -1377,7 +1453,8 @@
         "NUM_CODE": 533,
         "3_CODE": "ABW",
         "2_CODE": "AW",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1395,7 +1472,8 @@
         "NUM_CODE": 446,
         "3_CODE": "MAC",
         "2_CODE": "MO",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1413,7 +1491,8 @@
         "NUM_CODE": 175,
         "3_CODE": "MYT",
         "2_CODE": "YT",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1431,7 +1510,8 @@
         "NUM_CODE": 674,
         "3_CODE": "SMR",
         "2_CODE": "",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
