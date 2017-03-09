@@ -539,6 +539,14 @@ a.title:hover {
     margin-top: -4px;
 }
 
+.glow1 {
+    box-shadow: 0px 0px 12px 2.5px #ff5600;
+}
+
+.glow2 {
+    box-shadow: 0px 0px 12px 4px #ff5600;
+}
+
 //somewhere in the next 20 lines is breaking the datepicker window to move with scrolling
 
 // the padding top is very important because the navbar is fixed unless the container
