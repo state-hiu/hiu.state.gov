@@ -71,3 +71,9 @@
 .marker-cluster span {
 	line-height: 30px;
 	}
+
+.selectedMarker {
+	width: 90px;
+	height: 90px;
+	font: 25px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
