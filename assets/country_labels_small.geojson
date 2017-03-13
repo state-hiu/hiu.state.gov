@@ -1212,8 +1212,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -66.42178868323236,
-          18.21821498407877
+          -75.12845993041992,
+          19.92155135847338
         ]
       }
     },
@@ -1231,8 +1231,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.1427936553955,
-          19.913078200273997
+          -66.41098022460938,
+          18.205871127330347
         ]
       }
     },
@@ -1637,8 +1637,8 @@
         "NUM_CODE": 292,
         "3_CODE": "GIB",
         "2_CODE": "",
-        "Italics":"N",
-        "direction":"center"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1656,8 +1656,8 @@
         "NUM_CODE": 292,
         "3_CODE": "GIB",
         "2_CODE": "",
-        "Italics":"N",
-        "direction":"center"
+        "Italics": "N",
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -1675,8 +1675,8 @@
         "NUM_CODE": "",
         "3_CODE": "",
         "2_CODE": "",
-        "Italics":"N",
-        "direction":"right"
+        "Italics": "N",
+        "direction": "right"
       },
       "geometry": {
         "type": "Point",
