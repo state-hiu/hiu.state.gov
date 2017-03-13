@@ -1721,6 +1721,26 @@
     {
       "type": "Feature",
       "properties": {
+        "NAME": "SINGAPORE",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 702,
+        "3_CODE": "SGP",
+        "2_CODE": "SG",
+        "Italics": "N",
+        "direction": "right"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8210165757178,
+          1.342327565762872
+        ]
+      }
+    },
+
+    {
+      "type": "Feature",
+      "properties": {
         "NAME": "Gibraltar (U.K.)",
         "REGION": "Eurasia",
         "NUM_CODE": 292,
