@@ -922,23 +922,6 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Tokalau (N.Z.)",
-        "REGION": "Asia-Oceania",
-        "NUM_CODE": 772,
-        "3_CODE": "TKL",
-        "2_CODE": "TK"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          187.5075381993613,
-          -8.562679321824618
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "NAME": "EL<br>SALVADOR",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 222,
