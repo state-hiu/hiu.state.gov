@@ -1636,7 +1636,9 @@
         "REGION": "Eurasia",
         "NUM_CODE": 292,
         "3_CODE": "GIB",
-        "2_CODE": ""
+        "2_CODE": "",
+        "Italics":"N",
+        "direction":"center"
       },
       "geometry": {
         "type": "Point",
@@ -1655,7 +1657,7 @@
         "3_CODE": "GIB",
         "2_CODE": "",
         "Italics":"N",
-        "direction":"right"
+        "direction":"left"
       },
       "geometry": {
         "type": "Point",
@@ -1674,7 +1676,7 @@
         "3_CODE": "",
         "2_CODE": "",
         "Italics":"N",
-        "direction":"right"
+        "direction":"left"
       },
       "geometry": {
         "type": "Point",
