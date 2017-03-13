@@ -650,7 +650,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "MIDWAY ISLAND",
+        "NAME": "Midway<br>Island <br>(U.S.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 925,
         "3_CODE": "XMW",
@@ -701,7 +701,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "FRENCH<br>GUIANA",
+        "NAME": "French<br>Guiana<br> (FR.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 254,
         "3_CODE": "GUF",
@@ -786,7 +786,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "WALLIS AND FUTUNA",
+        "NAME": "Wallis and<br>Futuna (FR.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 876,
         "3_CODE": "WLF",
@@ -922,7 +922,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "TOKELAU",
+        "NAME": "Tokalau (N.Z.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 772,
         "3_CODE": "TKL",
@@ -1177,7 +1177,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "NEW CALEDONIA",
+        "NAME": "New Caledonia (FR.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 540,
         "3_CODE": "NCL",
@@ -1608,7 +1608,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "WALLIS AND FUTUNA",
+        "NAME": "Wallis and<br>Futuna (FR.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 876,
         "3_CODE": "WLF",
