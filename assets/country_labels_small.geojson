@@ -251,6 +251,23 @@
     {
       "type": "Feature",
       "properties": {
+        "NAME": "RUSSIA",
+        "REGION": "Eurasia",
+        "NUM_CODE": 643,
+        "3_CODE": "RUS",
+        "2_CODE": "RU"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.5936279296875,
+          54.677007155737826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "NAME": "Christmas Island<br>(AUSTL.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 162,
