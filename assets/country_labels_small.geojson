@@ -927,7 +927,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -61.39160156249999,
+          -62.0013427734375,
           18.70869162255995
         ]
       }
@@ -1283,13 +1283,13 @@
         "3_CODE": "SXM",
         "2_CODE": "SX",
         "Italics": "N",
-        "direction": "left"
+        "direction": "right"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -60.55664062499999,
-          18.145851771694467
+          -61.95190429687499,
+          18.255436745247998
         ]
       }
     },
@@ -1448,18 +1448,18 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Anguilla (U.K.)",
+        "NAME": "Anguilla<br>(U.K.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 660,
         "3_CODE": "AIA",
         "2_CODE": "AI",
         "Italics": "N",
-        "direction": "left"
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -62.51220703125,
+          -63.03131103515624,
           19.16592425362802
         ]
       }
@@ -1497,8 +1497,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -68.256705,
-          12.19106
+          -67.91885375976562,
+          12.195073064033384
         ]
       }
     },
