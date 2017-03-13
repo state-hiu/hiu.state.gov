@@ -922,7 +922,7 @@
         "3_CODE": "MAF",
         "2_CODE": "MF",
         "Italics": "N",
-        "direction": "left"
+        "direction": "right"
       },
       "geometry": {
         "type": "Point",
@@ -1492,7 +1492,7 @@
         "3_CODE": "BES",
         "2_CODE": "BQ",
         "Italics": "N",
-        "direction": "left"
+        "direction": "right"
       },
       "geometry": {
         "type": "Point",
