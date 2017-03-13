@@ -973,7 +973,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "NAVASSA<br>ISLAND",
+        "NAME": "Navassa<br>Island<br>(U.S.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 926,
         "3_CODE": "XNV",
@@ -1011,7 +1011,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "CAYMAN<br>ISLANDS",
+        "NAME": "Cayman<br>Islands<br>(U.K.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 136,
         "3_CODE": "CYM",
@@ -1334,7 +1334,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "TURKS AND<br>CAICOS ISLANDS",
+        "NAME": "Turks &<br>Caicos Islands<br>(U.K.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 796,
         "3_CODE": "TCA",
@@ -1546,6 +1546,23 @@
         "coordinates": [
           -170.74676513671872,
           -14.309630880716188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Gibraltar<br>(U.K.)",
+        "REGION": "Eurasia",
+        "NUM_CODE": 292,
+        "3_CODE": "GIB",
+        "2_CODE": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.348625183105469,
+          36.14147911355093
         ]
       }
     }
