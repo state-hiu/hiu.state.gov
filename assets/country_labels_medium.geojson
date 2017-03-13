@@ -650,7 +650,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Midway<br>Island <br>(U.S.)",
+        "NAME": "Midway<br>Island<br>(U.S.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 925,
         "3_CODE": "XMW",
@@ -660,6 +660,23 @@
         "type": "Point",
         "coordinates": [
           182.62250634501424,
+          28.20267854608045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Midway<br>Island<br>(U.S.)",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 925,
+        "3_CODE": "XMW",
+        "2_CODE": "QM"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -177.37289428710938,
           28.20267854608045
         ]
       }
@@ -1629,7 +1646,8 @@
         "REGION": "Western Hemisphere",
         "NUM_CODE": 840,
         "3_CODE": "USA",
-        "2_CODE": "US"},
+        "2_CODE": "US"
+      },
       "geometry": {
         "type": "Point",
         "coordinates": [
