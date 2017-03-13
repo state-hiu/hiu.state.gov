@@ -1540,12 +1540,14 @@
     },
     {
       "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -170.74676513671872,
-          -14.309630880716188
+      "properties": {
+        "NAME": "American<br>Samoa<br>(U.S)",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 16,
+        "3_CODE": "ASM",
+        "2_CODE": "AS",
+        "Italics": "N",
+        "direction": "center"
         ]
       }
     },
