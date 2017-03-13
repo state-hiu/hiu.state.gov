@@ -1560,6 +1560,40 @@
     {
       "type": "Feature",
       "properties": {
+        "NAME": "Tokelau (N.Z.)",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 772,
+        "3_CODE": "TKL",
+        "2_CODE": "TK"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          187.5075381993613,
+          -9.161755687904076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Tokelau (N.Z.)",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 772,
+        "3_CODE": "TKL",
+        "2_CODE": "TK"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -171.8144989013672,
+          -9.161755687904076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "NAME": "Gibraltar<br>(U.K.)",
         "REGION": "Eurasia",
         "NUM_CODE": 292,
