@@ -1632,17 +1632,38 @@
     {
       "type": "Feature",
       "properties": {
+        "NAME": "Melilla<br>(SP.)",
+        "REGION": "Eurasia",
+        "NUM_CODE": 292,
+        "3_CODE": "",
+        "2_CODE": ""
+         "Italics": "N",
+        "direction": "left"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.9419326782226562,
+          35.29074879702828
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "NAME": "Gibraltar<br>(U.K.)",
         "REGION": "Eurasia",
         "NUM_CODE": 292,
         "3_CODE": "GIB",
         "2_CODE": ""
+        "Italics": "N",
+        "direction": "left"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -5.348625183105469,
-          36.14147911355093
+          -5.346221923828125,
+          36.13565654678543
         ]
       }
     },
