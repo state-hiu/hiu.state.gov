@@ -232,7 +232,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Palmayra Atoll (U.S.)",
+        "NAME": "Palmyra Atoll (U.S.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 927,
         "3_CODE": "XPL",
@@ -1486,7 +1486,10 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "MAYOTTE",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "NAME": "Mayotte<br>(Fr.)",
         "REGION": "Africa",
         "NUM_CODE": 175,
         "3_CODE": "MYT",
@@ -1535,6 +1538,17 @@
         "coordinates": [
           45.5548095703125,
           39.198205348894795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -170.74676513671872,
+          -14.309630880716188
         ]
       }
     }
