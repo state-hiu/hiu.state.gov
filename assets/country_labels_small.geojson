@@ -922,7 +922,7 @@
         "3_CODE": "MAF",
         "2_CODE": "MF",
         "Italics": "N",
-        "direction": "right"
+        "direction": "left"
       },
       "geometry": {
         "type": "Point",
@@ -1283,7 +1283,7 @@
         "3_CODE": "SXM",
         "2_CODE": "SX",
         "Italics": "N",
-        "direction": "right"
+        "direction": "left"
       },
       "geometry": {
         "type": "Point",
@@ -1454,7 +1454,7 @@
         "3_CODE": "AIA",
         "2_CODE": "AI",
         "Italics": "N",
-        "direction": "right"
+        "direction": "left"
       },
       "geometry": {
         "type": "Point",
@@ -1492,7 +1492,7 @@
         "3_CODE": "BES",
         "2_CODE": "BQ",
         "Italics": "N",
-        "direction": "center"
+        "direction": "left"
       },
       "geometry": {
         "type": "Point",
@@ -1666,7 +1666,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Ceuta<br>(SP.)",
+        "NAME": "Ceuta (SP.)",
         "REGION": "Eurasia",
         "NUM_CODE": "",
         "3_CODE": "",
