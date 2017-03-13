@@ -1625,6 +1625,40 @@
     {
       "type": "Feature",
       "properties": {
+        "NAME": "MALAYSIA",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 458,
+        "3_CODE": "MYS",
+        "2_CODE": "MY"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.939453125,
+          2.3065056838291094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "MALAYSIA",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 458,
+        "3_CODE": "MYS",
+        "2_CODE": "MY"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.1728515625,
+          4.061535597066106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "NAME": "SAMOA",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 882,
