@@ -327,11 +327,11 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Faroe Islands (DEN.)",
-        "REGION": "Europe",
+        "NAME": "Falkland Islands<br>(U.K.)",
+        "REGION": "Western Hemisphere",
         "NUM_CODE": 234,
-        "3_CODE": "FRO",
-        "2_CODE": "FO",
+        "3_CODE": "FLK",
+        "2_CODE": "FK",
         "Italics": "N",
         "direction": "center"
       },
