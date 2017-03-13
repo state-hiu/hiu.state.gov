@@ -1708,7 +1708,7 @@
         "3_CODE": "OMN",
         "2_CODE": "OM",
         "Italics": "N",
-        "direction": "left"
+        "direction": "right"
       },
       "geometry": {
         "type": "Point",
