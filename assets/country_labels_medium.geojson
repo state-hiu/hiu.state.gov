@@ -1109,23 +1109,6 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "SINGAPORE",
-        "REGION": "Asia-Oceania",
-        "NUM_CODE": 702,
-        "3_CODE": "SGP",
-        "2_CODE": "SG"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          103.8210165757178,
-          1.342327565762872
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "NAME": "BURKINA<br>FASO",
         "REGION": "Africa",
         "NUM_CODE": 854,
@@ -1494,8 +1477,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          34.969482421875,
-          30.372875188118016
+          34.881591796875,
+          30.5717205651999
         ]
       }
     },
@@ -1566,8 +1549,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          34.32128906249999,
-          31.339562861785012
+          34.34326171875,
+          31.372399104880525
         ]
       }
     },
