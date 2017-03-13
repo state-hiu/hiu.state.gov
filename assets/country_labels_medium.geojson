@@ -939,7 +939,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "COOK ISLANDS",
+        "NAME": "Cook Islands<br>(N.Z.)",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 184,
         "3_CODE": "COK",
@@ -1624,7 +1624,12 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "NAME": "Hawaii<br>(U.S.)",
+        "REGION": "Western Hemisphere",
+        "NUM_CODE": 840,
+        "3_CODE": "USA",
+        "2_CODE": "US"},
       "geometry": {
         "type": "Point",
         "coordinates": [
