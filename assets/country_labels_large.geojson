@@ -817,23 +817,7 @@
         ]
       }
     },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "MALAYSIA",
-        "REGION": "Asia-Oceania",
-        "NUM_CODE": 458,
-        "3_CODE": "MYS",
-        "2_CODE": "MY"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          107.6220703125,
-          2.8113711933311403
-        ]
-      }
-    },
+    
     {
       "type": "Feature",
       "properties": {
