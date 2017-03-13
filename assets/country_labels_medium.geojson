@@ -1587,6 +1587,57 @@
           -17.86374708440522
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "TONGA",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 776,
+        "3_CODE": "TON",
+        "2_CODE": "TO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -184.8157768940673,
+          -21.165218111171924
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "WALLIS AND FUTUNA",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 876,
+        "3_CODE": "WLF",
+        "2_CODE": "WF"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -176.19598388671875,
+          -13.283915014949116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "SAMOA",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 882,
+        "3_CODE": "WSM",
+        "2_CODE": "WS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -172.43041992187497,
+          -13.621272962182559
+        ]
+      }
     }
   ]
 }
