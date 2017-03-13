@@ -599,7 +599,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Greenland (DENMARK)",
+        "NAME": "Greenland<br>(DENMARK)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 304,
         "3_CODE": "GRL",
@@ -1382,7 +1382,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Svalbard (NORWAY)",
+        "NAME": "Svalbard<br>(NORWAY)",
         "REGION": "Europe",
         "NUM_CODE": 930,
         "3_CODE": "XSV",
