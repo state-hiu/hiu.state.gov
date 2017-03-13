@@ -1049,7 +1049,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "HONG KONG<br>(S.A.R.)",
+        "NAME": "Hong Kong<br>S.A.R.",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 344,
         "3_CODE": "HKG",
@@ -1201,7 +1201,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Puerto<br>Rico<br>(U.S.)",
+        "NAME": "U.S. Naval Base<br>Guantanamo Bay",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 630,
         "3_CODE": "PRI",
@@ -1214,6 +1214,25 @@
         "coordinates": [
           -66.42178868323236,
           18.21821498407877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Puerto<br>Rico<br>(U.S.)",
+        "REGION": "Western Hemisphere",
+        "NUM_CODE": 630,
+        "3_CODE": "PRI",
+        "2_CODE": "PR",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1427936553955,
+          19.913078200273997
         ]
       }
     },
@@ -1467,7 +1486,26 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "MACAU<br>(S.A.R.)",
+        "NAME": "Bonaire<br>(NETH.)",
+        "REGION": "Western Hemisphere",
+        "NUM_CODE": 535,
+        "3_CODE": "BES",
+        "2_CODE": "BQ",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.256705,
+          12.19106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Macau<br>S.A.R.",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 446,
         "3_CODE": "MAC",
@@ -1605,6 +1643,23 @@
         "coordinates": [
           -5.348625183105469,
           36.14147911355093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Ceuta<br>(SP.)",
+        "REGION": "Eurasia",
+        "NUM_CODE": "",
+        "3_CODE": "",
+        "2_CODE": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.315856,
+          35.88851
         ]
       }
     }
