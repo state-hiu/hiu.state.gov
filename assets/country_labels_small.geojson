@@ -1657,7 +1657,7 @@
         "3_CODE": "GIB",
         "2_CODE": "",
         "Italics":"N",
-        "direction":"left"
+        "direction":"center"
       },
       "geometry": {
         "type": "Point",
