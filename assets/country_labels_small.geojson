@@ -1670,7 +1670,9 @@
         "REGION": "Eurasia",
         "NUM_CODE": "",
         "3_CODE": "",
-        "2_CODE": ""
+        "2_CODE": "",
+        "Italics":"N",
+        "direction":"right"
       },
       "geometry": {
         "type": "Point",
