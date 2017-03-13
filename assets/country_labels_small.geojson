@@ -1651,6 +1651,59 @@
     {
       "type": "Feature",
       "properties": {
+        "NAME": "EQUATORIAL<br>GUINEA",
+        "REGION": "Africa",
+        "NUM_CODE": 226,
+        "3_CODE": "GNQ",
+        "2_CODE": "GQ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.338685505301896,
+          1.631745173126291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "EQUA.<br>GUI.",
+        "REGION": "Africa",
+        "NUM_CODE": 226,
+        "3_CODE": "GNQ",
+        "2_CODE": "GQ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.668212890625,
+          3.4037578795775887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "OMAN",
+        "REGION": "Middle East",
+        "NUM_CODE": 512,
+        "3_CODE": "OMN",
+        "2_CODE": "OM",
+        "Italics": "N",
+        "direction": "left"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          57.19482421875,
+          25.383735254706867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "NAME": "Gibraltar (U.K.)",
         "REGION": "Eurasia",
         "NUM_CODE": 292,
