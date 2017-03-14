@@ -24,6 +24,18 @@ layout: default
         {% if product.product_jpg_pg3 %}
         "product_jpg_pg3": "https://s3.amazonaws.com/hiu-products/products/resized/{{ product.product_jpg_pg3 }}",
         {% endif %}
+        {% if product.product_jpg_pg4 %}
+        "product_jpg_pg4": "https://s3.amazonaws.com/hiu-products/products/resized/{{ product.product_jpg_pg4 }}",
+        {% endif %}
+        {% if product.product_jpg_pg5 %}
+        "product_jpg_pg5": "https://s3.amazonaws.com/hiu-products/products/resized/{{ product.product_jpg_pg5 }}",
+        {% endif %}
+        {% if product.product_jpg_pg6 %}
+        "product_jpg_pg6": "https://s3.amazonaws.com/hiu-products/products/resized/{{ product.product_jpg_pg6 }}",
+        {% endif %}
+        {% if product.product_jpg_pg7 %}
+        "product_jpg_pg7": "https://s3.amazonaws.com/hiu-products/products/resized/{{ product.product_jpg_pg7 }}",
+        {% endif %}
         "thumbnail_150": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/small/{{ product.thumbnail }}",
         "thumbnail_300": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/middle/{{ product.thumbnail }}",
         "twitter_pic": "https://s3.amazonaws.com/hiu-thumbnails/products/twitter/{{ product.twitter_pic }}",
