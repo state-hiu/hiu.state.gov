@@ -759,10 +759,18 @@ $("#form").submit(function(event){
         function sumbitForm() {
 
           // Fire off the request to /form.php
+          /*
           request = $.ajax({
           url: "https://script.google.com/macros/s/AKfycbzZdJsJnOEV95m4LUU_TxXPrON3BmZQjJ9pal9F8QPlRoqJsLmt/exec",
           type: "post",
           data: serializedData
+          */
+            
+          request = $.ajax({
+          url: "https://script.google.com/macros/s/AKfycbyZ7grQaH1ixo-qfB9su3l1YJQPf4_MdxlK9LTP3bDs7yQYzx2r/exec",
+          type: "post",
+          data: serializedData
+
           });
 
           // Callback handler that will be called on success
@@ -842,8 +850,15 @@ $("#form").submit(function(event){
 
 
                 // Fire off the request to /form.php
+                /*
                 request = $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbzZdJsJnOEV95m4LUU_TxXPrON3BmZQjJ9pal9F8QPlRoqJsLmt/exec",
+                type: "post",
+                data: serializedData + '&geojson_gist=' + e.html_url,
+                */
+
+                request = $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbyZ7grQaH1ixo-qfB9su3l1YJQPf4_MdxlK9LTP3bDs7yQYzx2r/exec",
                 type: "post",
                 data: serializedData + '&geojson_gist=' + e.html_url,
                 });
