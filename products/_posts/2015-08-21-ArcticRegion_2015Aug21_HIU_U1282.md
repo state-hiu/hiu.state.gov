@@ -9,7 +9,6 @@ product_id: "U1282"
 product_pdf: "ArcticRegion_2015Aug21_HIU_U1282.pdf"
 product_jpg: "ArcticRegion_2015Aug21_HIU_U1282.jpg"
 thumbnail: "ArcticRegion_2015Aug21_HIU_U1282_thumb.jpg"
-twitter_pic: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277_twitter.jpg"
 featured: false
 lat: 0
 lon: 0
