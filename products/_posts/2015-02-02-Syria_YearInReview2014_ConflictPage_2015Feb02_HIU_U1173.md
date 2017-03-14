@@ -8,8 +8,8 @@ date_published: 2015-02-02
 product_id: "U1173"
 product_pdf: "SyriaIraq_YearInReview2014_2015Feb02_HIU_U1173.pdf"
 product_jpg: "Syria_YearInReview2014_ConflictPage_2015Feb02_HIU_U1173.jpg"
-product_jpg_pg_2: "Syria_YearInReview2014_HumanitarianPage_2015Feb02_HIU_U1173.jpg"
-product_jpg_pg_3: "Syria_YearInReview2014_DataPage_2015Feb02_HIU_U1173.jpg"
+product_jpg_pg2: "Syria_YearInReview2014_HumanitarianPage_2015Feb02_HIU_U1173.jpg"
+product_jpg_pg3: "Syria_YearInReview2014_DataPage_2015Feb02_HIU_U1173.jpg"
 thumbnail: "Syria_YearInReview2014_ConflictPage_2015Feb02_HIU_U1173_thumb.jpg"
 featured: false
 lat: 33.510414 
