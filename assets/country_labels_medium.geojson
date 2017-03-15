@@ -1356,8 +1356,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          37.99072265625,
-          32.2313896627376
+          36.353759765625,
+          30.552800413453546
         ]
       }
     },
@@ -1459,8 +1459,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          35.89233398437499,
-          34.06176136129718
+          36.0791015625,
+          34.14363482031264
         ]
       }
     },
@@ -1477,8 +1477,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          34.881591796875,
-          30.5717205651999
+          35.35400390625,
+          32.722598604044066
         ]
       }
     },
@@ -1515,42 +1515,6 @@
         "coordinates": [
           120.90420157476797,
           23.600849810595122
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "West<br>Bank",
-        "REGION": "Middle East",
-        "NUM_CODE": 934,
-        "3_CODE": "XWB",
-        "2_CODE": "XW",
-        "Italics": "N"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          35.33203125,
-          32.29641979896909
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "Gaza<br>Strip",
-        "REGION": "Middle East",
-        "NUM_CODE": 916,
-        "3_CODE": "XGZ",
-        "2_CODE": "XG",
-        "Italics": "N"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          34.34326171875,
-          31.372399104880525
         ]
       }
     },
