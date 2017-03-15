@@ -221,6 +221,25 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "comment": "Guantanamo"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -75.1409912109375,
+            19.909446707787783
+          ],
+          [
+            -75.1409912109375,
+            19.621892180319374
+          ]
+        ]
+      }
     }
   ]
 }
