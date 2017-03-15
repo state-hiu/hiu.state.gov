@@ -952,7 +952,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "ANTIGUA &<br>BARBUDA",
+        "NAME": "ANTIGUA & BARBUDA",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 28,
         "3_CODE": "ATG",
@@ -963,8 +963,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -61.74179077148437,
-          17.07253857905759
+          -60.99884033203125,
+          17.36636733709516
         ]
       }
     },
@@ -1148,13 +1148,13 @@
         "3_CODE": "BLM",
         "2_CODE": "BL",
         "Italics": "N",
-        "direction": "center"
+        "direction": "right"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -62.821197509765625,
-          17.87028237853446
+          -61.85852050781249,
+          17.897727988564345
         ]
       }
     },
@@ -1484,7 +1484,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Aruba (NETH.)",
+        "NAME": "Aruba<br>(NETH.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 533,
         "3_CODE": "ABW",
@@ -1737,7 +1737,6 @@
         ]
       }
     },
-
     {
       "type": "Feature",
       "properties": {
