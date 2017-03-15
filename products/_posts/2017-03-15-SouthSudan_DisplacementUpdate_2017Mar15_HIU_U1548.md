@@ -28,6 +28,6 @@ keywords:
   - Central African Republic
   - Democratic Republic of the Congo
   - Funding 
-tweet: "Ongoing conflict & insecurity in South Sudan has caused large scale displacement, with over 3.5M South Sudanese forced to flee."
+tweet: "Ongoing conflict & insecurity in South Sudan has caused over 3.5M South Sudanese to flee."
 ---
 Ongoing conflict and insecurity in South Sudan has forced an estimated 3.5 million South Sudanese to flee. Close to 1.9 million are internally displaced, and there are over 1.6 million refguees and asylum-seekers in neighboring countries.
