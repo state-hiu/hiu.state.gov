@@ -191,7 +191,7 @@ so they is no log with sidebar border collapsing*/
       min-width: 350px; } }
   @media (min-width: 1200px) {
     .sidebar-pane {
-      min-width: 412px; } }
+      min-width: 407px; } }
 
 #home2.sidebar-pane  {
   height: calc(100%-40px);
@@ -213,7 +213,7 @@ so they is no log with sidebar border collapsing*/
       min-width: 350px; } }
   @media (min-width: 1200px) {
     .sidebar-container {
-      min-width: 412px; } }
+      min-width: 407px; } }
 
 .sidebar-header {
   /*min width will make sure that the header appears smoothly when it is expanded
