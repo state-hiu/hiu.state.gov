@@ -9,6 +9,7 @@ product_id: "U1548"
 product_pdf: "SouthSudan_DisplacementUpdate_2017Mar15_HIU_U1548.pdf"
 product_jpg: "SouthSudan_DisplacementUpdate_2017Mar15_HIU_U1548.jpg"
 thumbnail: "SouthSudan_DisplacementUpdate_2017Mar15_HIU_U1548_thumb.jpg"
+twitter: "SouthSudan_DisplacementUpdate_2017Mar15_HIU_U1548_twitter.jpg"
 featured: true
 lat: 6.877000
 lon: 31.307000
