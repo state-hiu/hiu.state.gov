@@ -1375,7 +1375,7 @@
 			"3_CODE": "XGZ",
 			"2_CODE": "XG",
 			"Italics": "N",
-			"direction": "left"
+			"direction": "center"
 		},
 		"geometry": {
 			"type": "Point",
