@@ -4,6 +4,7 @@ category: news
 date: 2017-02-10
 title: UN-sponsored Humanitarian Networks and Partnership Week conference on 6-10 February 2017
 description: "HIU attended the UN-sponsored Humanitarian Networks and Partnership Week conference on 6-10 February 2017 in Geneva, Switzerland."
+tweet: "HIU attended the UN-sponsored Humanitarian Networks and Partnership Week conference in Geneva, Switzerland."
 ---
 
 <!--

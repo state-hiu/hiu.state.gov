@@ -5,6 +5,7 @@ date: 2017-03-06
 title: 2017 State of Global Partnerships Report features Secondary Cities
 photo_url: '../assets/img/news/2c_sdg_11.png'
 description: "As part of Global Partnerships Week, the 2017 State of Global Partnerships Report which features the partnership, The Secondary Cities (2C) Initiative, has been released. We’re excited that  The Secondary Cities Initiative is being featured under SDG 11!"
+tweet: "The 2017 State of Global Partnerships Report features the Secondary Cities (2C) Initiative"
 ---
 
 <!--

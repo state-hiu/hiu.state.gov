@@ -5,6 +5,7 @@ date: 2017-03-05
 title: Map Africa for a brighter future
 photo_url: '../assets/img/news/mcc_mapathon.png'
 description: "Map data is key to humanitarian and development missions. On March 14, in partnership with the Millennium Challenge Corporation and the U.S. President's Emergency Plan for AIDS Relief, HIU will participate in a mapathon to improve map data in Cote d’Ivoire, Tanzania, and Togo."
+tweet: "MCC, PEPFAR, and HIU will participate in a mapathon to improve map data in Cote d’Ivoire, Tanzania, and Togo"
 ---
 
 Map data is key to humanitarian and development missions. On March 14, in partnership with the Millennium Challenge Corporation and the U.S. President's Emergency Plan for AIDS Relief, HIU will participate in a mapathon to improve map data in Cote d’Ivoire, Tanzania, and Togo.

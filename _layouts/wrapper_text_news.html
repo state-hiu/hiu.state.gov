@@ -1,10 +1,36 @@
 ---
 layout: wrapper
 ---
+
+<script>
+console.log('pg open');
+
+
+/*adding the twitter pop-up*/
+$("body").on("click", ".tweet", function() {
+    console.log('tweet clicked');
+    /*var myWindow = window.open("", "", "width=200,height=100");
+    return false;*/
+
+    var w = 550;
+    var h = 420;
+    var url = $(this).attr('href');
+    var title = "Share a link on Twitter";
+
+    var left = (screen.width/2)-(w/2);
+    var top = (screen.height/2)-(h/2);
+
+    var url = "https://twitter.com/intent/tweet?text="+ encodeURIComponent("{{ page.tweet }}") + "&via=StateHIU";
+
+    window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+    return false;
+  });
+
+</script>
+
 <div class="wrapper" style="min-height:800px">
     <div class="col-md-2"></div>
     <div class="col-md-8 body" style="padding:10px;">
-
 
           <div class="post single">
             {% unless page.title_hidden %}
@@ -13,6 +39,9 @@ layout: wrapper
             <info datetime="{{ page.date | date: "%Y-%m-%d" }}">
               {{ page.date | date: "%b %e, %Y" }}
             </info>
+
+            <a href="" class="tweet"><img src="{{ site.baseurl }}/assets/img/Twitter_Logo_Blue.png" style="width: 40px;margin-left:15px"></a>
+
             <br>
             {% endunless %}
             {% if page.photo_url %}
@@ -24,8 +53,9 @@ layout: wrapper
             <div class="breaker"></div>
           </div>
 
-
         <div class="push"></div>
     </div>
     <div class="col-md-2"></div>
 </div>
+
+

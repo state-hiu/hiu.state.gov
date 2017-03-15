@@ -11,6 +11,8 @@ Imagery can be requested in two ways. First, in the native imagery format (NITF 
 
 The request process is similar for either option, the key is a clear justification for why the imagery is needed. Beyond the justification, the requesting organization should be able to provide specific answers to the questions below. In dialogue with the Department, it may be determined that further refinement of the requirements or narrowing of the requested scope is necessary.
 
+<a href= "{{ site.baseurl }}/imagery/request/" type="button" class="btn btn-primary">Imagery Request Form</a>
+
 ### Common Questions
 
 **General**

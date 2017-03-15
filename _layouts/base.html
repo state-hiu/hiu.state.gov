@@ -22,17 +22,25 @@ content="width=device-width, initial-scale=1.0" />
     {% if site.twittercard.enabled == true %}
       {% if page.categories contains "products" %}
         {% include main/seo/twittercard_product.html %}
+      {% elsif page.categories contains "news" %}
+        {% include main/seo/twittercard_news.html %}
       {% else %}
         {% include main/seo/twittercard_default.html %}
       {% endif %}
     {% endif %}
+
+
     {% if site.opengraph.enabled == true %}
       {% if page.categories contains "products" %}
         {% include main/seo/opengraph_product.html %}
+      {% elsif page.categories contains "news" %}
+        {% include main/seo/opengraph_news.html %}
       {% else %}
         {% include main/seo/opengraph_default.html %}
       {% endif %}
     {% endif %}
+
+
     {% for dns in page.dns_prefetch %}
         <link rel="dns-prefetch" href="{{ dns }}">
     {% endfor %}
