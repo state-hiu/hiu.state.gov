@@ -1357,7 +1357,7 @@
 			"3_CODE": "XWB",
 			"2_CODE": "XW",
 			"Italics": "N",
-			"direction": "left"
+			"direction": "center"
 		},
 		"geometry": {
 			"type": "Point",
@@ -1374,7 +1374,8 @@
 			"NUM_CODE": 916,
 			"3_CODE": "XGZ",
 			"2_CODE": "XG",
-			"Italics": "N"
+			"Italics": "N",
+			"direction": "left"
 		},
 		"geometry": {
 			"type": "Point",
