@@ -12,7 +12,6 @@ layout: default
         "date_published": "{{ product.date_published | date: '%B %d, %Y' }}",
         "region_id": "{{ product.region_id }}",
         "region_title": "{{ product.region_title }}",
-        "featured": "{{ product.featured }}",
         "url": "{{ site.url }}{{ product.url | remove: '.html' }}",
         "product_id": "{{ product.product_id }}",
         "product_pdf": "https://s3.amazonaws.com/hiu-products/{{ product.product_pdf }}",
