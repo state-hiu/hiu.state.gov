@@ -180,13 +180,14 @@
         "NUM_CODE": 900,
         "3_CODE": "XQZ",
         "2_CODE": "QZ",
-        "Italics": "N"
+        "Italics": "N",
+        "direction": "right"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          32.3162841796875,
-          34.11180455556899
+            32.3712158203125,
+            34.11180455556899
         ]
       }
     },
