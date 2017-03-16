@@ -240,6 +240,44 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "comment": "Gibraltar"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.34759521484375,
+            36.135379270923735
+          ],
+          [
+            -5.093536376953125,
+            36.135379270923735
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "comment": "Ceuta"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.34759521484375,
+            35.891275201659134
+          ],
+          [
+            -5.093536376953125,
+            35.891275201659134
+          ]
+        ]
+      }
     }
   ]
 }
