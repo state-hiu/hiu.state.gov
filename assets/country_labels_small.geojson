@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "South Georgia and the South Sandwich Islands (U.K.)",
+        "NAME": "South Georgia and the<br>South Sandwich Islands (U.K.)",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 239,
         "3_CODE": "SGS",
