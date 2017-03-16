@@ -1,0 +1,85 @@
+---
+layout: wrapper
+title: Tags
+---
+
+<!--used to build site cloud-->
+{% capture site_tags_products %}
+  {% for post in site.categories.products %}
+    {% for keyword in post.keywords %}'{{ keyword | url_encode }}'{% unless forloop.last %},{% endunless %}{% endfor %}{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+{% endcapture %}
+
+<div class="container">
+
+    <div class="col-md-10" style="padding-left: 0px; padding-right: 50px">
+
+      <div><h1 class="page-title">{{ page.title }}</h1></div>
+
+      <div id="myDiv"></div>
+
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript">
+
+var counts_products = {};
+
+var site_tags_array_products = [{{ site_tags_products }}];
+
+console.log(site_tags_array_products);
+
+for (var i = 0; i < site_tags_array_products.length; i++) {
+        counts_products[site_tags_array_products[i]] = (counts_products[site_tags_array_products[i]] + 1) || 1;
+    }
+
+console.log('counts_products: ');
+console.log(counts_products);
+
+
+//http://stackoverflow.com/questions/1069666/sorting-javascript-object-by-property-value
+var sortable = [];
+
+for (var keyword in counts_products) {
+    sortable.push([keyword, counts_products[keyword]]);
+}
+
+sortable.sort(function(a, b) {
+    return  b[1] - a[1];
+});
+
+console.log('counts_products sorted: ');
+console.log(sortable);
+
+//http://stackoverflow.com/questions/11958641/print-out-javascript-array-in-table
+var $table = $( "<table></table>" );
+
+for ( var i = 0; i < sortable.length; i++ ) {
+    var row = sortable[i];
+    console.log('row: ');
+    console.log(row);
+    console.log('row: 0');
+    console.log(row[0]);
+    var $line = $( "<tr></tr>" );
+    $line.append( $( "<td></td>" ).html( row[0] ) );
+    $line.append( $( "<td></td>" ).html( row[1] ) );
+    $table.append( $line );
+}
+
+//$table.appendTo( document.body );
+
+// if you want to insert this table in a div with id attribute 
+// set as "myDiv", you can do this:
+$table.appendTo( $( "#myDiv" ) );
+
+</script>
+
+
+
+
+
+
+
