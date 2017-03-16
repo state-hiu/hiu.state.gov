@@ -10,7 +10,6 @@ product_pdf: "Europe_RefugeeMigration_2016June14_HIU_U1415.pdf"
 product_jpg: "Europe_RefugeeMigrationPage1_2016June14_HIU_U1415-01.jpg"
 product_jpg1: "Europe_RefugeeMigrationPage2_2016June14_HIU_U1415-01.jpg"
 thumbnail: "Europe_RefugeeMigrationPage2_2016June14_HIU_U1415_thumb.jpg"
-featured: false
 lat: 0
 lon: 0
 keywords:

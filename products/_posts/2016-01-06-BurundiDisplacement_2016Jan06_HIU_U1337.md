@@ -9,7 +9,6 @@ product_id: "U1337"
 product_pdf: "BurundiDisplacement_2016Jan06_HIU_U1337.pdf"
 product_jpg: "BurundiDisplacement_2016Jan06_HIU_U1337.jpg"
 thumbnail: "BurundiDisplacement_2016Jan06_HIU_U1337_thumb.jpg"
-featured: false
 lat: -3.373
 lon: 29.918
 keywords:

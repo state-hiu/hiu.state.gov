@@ -9,7 +9,6 @@ product_id: "U1258"
 product_pdf: "Worldwide_PepfarPlans_2015July28_HIU_U1258.pdf"
 product_jpg: "Worldwide_PepfarPlans_2015July28_HIU_U1258.jpg"
 thumbnail: "Worldwide_PepfarPlans_2015July28_HIU_U1258_thumb.jpg"
-featured: false
 lat: 0
 lon: 0
 keywords:
@@ -23,6 +22,6 @@ keywords:
   - antiretroviral therapy
   - development assistance
   - health
-tweet: 
+tweet: "PEPFAR World Activities; U.S. President's Emergency Plan for AIDS Relief"
 ---
 The AmThe American people, through the U.S. President’s Emergency Plan for AIDS Relief (PEPFAR), support the fight against global AIDS through bilateral and regional programs in 65 countries. As a result of this commitment, the U.S. supported life-saving treatment for 7.7 million men, women and children worldwide. In addition, the U.S. is the largest donor to the Global Fund to Fight AIDS, Tuberculosis and Malaria. the Global Fund to Fight AIDS, Tuberculosis and Malaria.

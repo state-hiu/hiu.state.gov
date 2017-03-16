@@ -9,7 +9,6 @@ product_id: "U461"
 product_pdf: "Worldwide_HivCartogram_2011Nov10_HIU_U461.pdf"
 product_jpg: "Worldwide_HivCartogram_2011Nov10_HIU_U461.jpg"
 thumbnail: "Worldwide_HivCartogram_2011Nov10_HIU_U461_thumb.jpg"
-featured: false
 lat: 0
 lon: 0
 keywords:
@@ -19,6 +18,6 @@ keywords:
   - HIV
   - AIDS
   - Cartogram
-tweet: 
+tweet: "HIV Prevalence and Estimated Number of Adults and Children Infected with HIV, 2009"
 ---
 This graphic depicts country size relative to the estimated number of its HIV-infected population. Sizes and shapes are distorted in this cartogram, which is presented for illustrative purposes only.

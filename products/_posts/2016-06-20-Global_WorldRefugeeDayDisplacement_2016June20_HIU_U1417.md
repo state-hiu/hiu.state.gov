@@ -9,7 +9,6 @@ product_id: "U1417"
 product_pdf: "Global_WorldRefugeeDayDisplacement_2016June20_HIU_U1417-01.pdf"
 product_jpg: "Global_WorldRefugeeDayDisplacement_2016June20_HIU_U1417-01.jpg"
 thumbnail: "Global_WorldRefugeeDayDisplacement_2016June20_HIU_U1417_thumb.jpg"
-featured: false
 lat: 0
 lon: 0
 keywords:

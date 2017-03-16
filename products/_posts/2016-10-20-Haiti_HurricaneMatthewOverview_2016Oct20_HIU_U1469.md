@@ -9,11 +9,8 @@ product_id: "U1469"
 product_pdf: "Haiti_HurricaneMatthewOverview_2016Oct20_HIU_U1469.pdf"
 product_jpg: "Haiti_HurricaneMatthewOverview_2016Oct20_HIU_U1469.jpg"
 thumbnail: "Haiti_HurricaneMatthewOverview_2016Oct20_HIU_U1469_thumb.jpg"
-featured: true
 lat: 18.2
 lon: -73.75
-events:
-  - Hurricane Matthew
 keywords: 
   - Hurricane Matthew
   - Natural Disasters
@@ -23,5 +20,6 @@ keywords:
   - Logistics
   - Humanitarian Need
   - Wind
+tweet: "Post-Hurricane Matthew Snapshot, Haiti"
 ---
 This map highlights the effects of Hurricane Matthew on Haiti, using data layers that show estimated rainfall, wind speeds, people in need of humanitarian aid, and logistical constraints.

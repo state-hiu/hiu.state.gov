@@ -9,7 +9,6 @@ product_id: "U1490"
 product_pdf: "WestAfrica_LakeChadPossibleFamineandDisplacement_2016Dec21_HIU_U1490.pdf"
 product_jpg: "WestAfrica_LakeChadPossibleFamineandDisplacement_2016Dec21_HIU_U1490.jpg"
 thumbnail: "WestAfrica_LakeChadPossibleFamineandDisplacement_2016Dec21_HIU_U1490_thumb.jpg"
-featured: true
 lat: 13
 lon: 14
 keywords:

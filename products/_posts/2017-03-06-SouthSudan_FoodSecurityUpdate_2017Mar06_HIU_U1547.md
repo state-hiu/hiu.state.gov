@@ -9,7 +9,6 @@ date_published: 2017-03-06
 product_pdf: "SouthSudan_FoodSecurityUpdate_2017Mar06_HIU_U1547.pdf"
 product_jpg: "SouthSudan_FoodSecurityUpdate_2017Mar06_HIU_U1547.jpg"
 thumbnail: "SouthSudan_FoodSecurityUpdate_2017Mar06_HIU_U1547_thumb.jpg"
-featured: true
 lat: 6.877000
 lon: 31.307000
 keywords:

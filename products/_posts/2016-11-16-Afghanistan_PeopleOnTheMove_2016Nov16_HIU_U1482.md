@@ -9,7 +9,6 @@ product_id: "U1482"
 product_pdf: "Afghanistan_PeopleOnTheMove_2016Nov16_HIU_U1482.pdf"
 product_jpg: "Afghanistan_PeopleOnTheMove_2016Nov16_HIU_U1482.jpg"
 thumbnail: "Afghanistan_PeopleOnTheMove_2016Nov16_HIU_U1482_thumb.jpg"
-featured: true
 lat: 33.939
 lon: 67.709
 keywords:

@@ -10,7 +10,6 @@ product_pdf: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277.pdf"
 product_jpg: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277.jpg"
 thumbnail: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277_thumb.jpg"
 twitter_pic: "Worldwide_LimitedAidAccess_2015Aug18_HIU_U1277_twitter.jpg"
-featured: false
 lat: 0
 lon: 0
 keywords:

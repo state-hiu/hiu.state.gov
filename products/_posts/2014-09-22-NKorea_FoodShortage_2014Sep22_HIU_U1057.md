@@ -9,7 +9,6 @@ product_id: "U1057"
 product_pdf: "NKorea_FoodShortage_2014Sep22_HIU_U1057.pdf"
 product_jpg: "NKorea_FoodShortage_2014Sep22_HIU_U1057.jpg"
 thumbnail: "NKorea_FoodShortage_2014Sep22_HIU_U1057_thumb.jpg"
-featured: false
 lat: 39.7537
 lon: 126.6435
 keywords:
@@ -19,5 +18,6 @@ keywords:
   - food insecurity
   - hillside farming
   - sloped agriculture
+tweet: "North Korea: Chronic Food Shortage Coping Mechanisms Hillside Farming"
 ---
 Geospatial analysis using landcover and elevation data to determine how much agriculture in North Korea is on sloped lands. Sloped agriculture is an indicator that the people in that area are not obtaining enough food from the public distribution system.

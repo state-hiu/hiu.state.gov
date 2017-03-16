@@ -9,7 +9,6 @@ product_id: "U1525"
 product_pdf: "Turkey_SyrianRefugeeLocations_2017Feb09_HIU_U1525.pdf"
 product_jpg: "Turkey_SyrianRefugeeLocations_2017Feb09_HIU_U1525.jpg"
 thumbnail: "Turkey_SyrianRefugeeLocations_2017Feb09_HIU_U1525_thumb.jpg"
-featured: false
 lat: 38.152
 lon: 39.644
 keywords:

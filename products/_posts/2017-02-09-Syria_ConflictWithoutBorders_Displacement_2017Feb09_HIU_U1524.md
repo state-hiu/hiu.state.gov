@@ -9,7 +9,6 @@ product_id: "U1524"
 product_pdf: "Syria_ConflictWithoutBorders_Displacement_2017Feb09_HIU_U1524.pdf"
 product_jpg: "Syria_ConflictWithoutBorders_Displacement_2017Feb09_HIU_U1524.jpg"
 thumbnail: "Syria_ConflictWithoutBorders_Displacement_2017Feb09_HIU_U1524_thumb.jpg"
-featured: false
 lat: 38.152
 lon: 39.644
 keywords:

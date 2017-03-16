@@ -9,7 +9,6 @@ product_id: "U1334"
 product_pdf: "Afghanistan_Winterization_2015Dec30_HIU_U1334.pdf"
 product_jpg: "Afghanistan_Winterization_2015Dec30_HIU_U1334.jpg"
 thumbnail: "Afghanistan_Winterization_2015Dec30_HIU_U1334_thumb.jpg"
-featured: false
 lat: 33.939
 lon: 67.709
 keywords:

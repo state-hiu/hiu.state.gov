@@ -36,5 +36,6 @@ keywords:
   - Iraqi Security Forces
   - ISF
   - Jabhat al-Nusra
+tweet: "Syria Conflict Without Borders: 2014 in Review"
 ---
 Syria Conflict Without Borders:  2014 in Review” is intended as a reference product and provides a summary visualization of key events, locations, and final humanitarian data for the Syrian regional crisis during 2014.  Page 1 is a map of the conflict situation for Syria, Iraq, and other neighboring countries; Page 2 visualizes the humanitarian situation for the region as a whole; and Page 3 provides data and charts describing the displaced populations in Turkey, Iraq, Jordan, and Lebanon.

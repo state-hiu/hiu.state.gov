@@ -9,7 +9,6 @@ product_id: "U1456"
 product_pdf: "Rwanda_HIVsurface_2016Sept15_HIU_1456.pdf"
 product_jpg: "Rwanda_HIVsurface_2016Sept15_HIU_1456.jpg"
 thumbnail: "Rwanda_HIVsurface_2016Sept15_HIU_1456_thumb.jpg"
-featured: true
 lat: -1.940
 lon: 29.873
 keywords:

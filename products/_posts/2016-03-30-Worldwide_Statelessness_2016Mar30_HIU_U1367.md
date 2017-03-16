@@ -9,7 +9,6 @@ product_id: "U1367"
 product_pdf: "Worldwide_Statelessness_2016Mar30_HIU_U1367.pdf"
 product_jpg: "Worldwide_Statelessness_2016Mar30_HIU_U1367.jpg"
 thumbnail: "Worldwide_Statelessness_2016Mar30_HIU_U1367_Thumb.jpg"
-featured: false
 lat: 0
 lon: 0
 keywords:

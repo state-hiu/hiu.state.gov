@@ -9,7 +9,6 @@ product_id: "U1254"
 product_pdf: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.pdf"
 product_jpg: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254.jpg"
 thumbnail: "Yemen_HumanitarianOverview_2015Jul17_HIU_U1254_thumb.jpg"
-featured: true
 lat: 15.342
 lon: 44.201
 keywords:

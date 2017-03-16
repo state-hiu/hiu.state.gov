@@ -108,10 +108,6 @@ In quotes insert the thumbnail image file name that was uploaded.
 
 An optional picture to use for twitter.
 
-**featured**
-
-true or false
-
 **lat**
 
 The latitude where the post will show up on the web map.
@@ -126,7 +122,7 @@ Check the existing list of keywords to minimize duplication and redundancy. Make
 
 **tweet**
 
-Insert the message that will auto-fill when a user chooses to share the product on twitter. 255 characters or less.
+Insert the message that will auto-fill when a user chooses to share the product on twitter. limit your tweet to 102 characters because the url and the @StateHIU automatically get added to the tweet.
 
 An example post:
 
