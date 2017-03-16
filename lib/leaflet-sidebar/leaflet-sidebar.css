@@ -213,7 +213,8 @@ so they is no log with sidebar border collapsing*/
       min-width: 350px; } }
   @media (min-width: 1200px) {
     .sidebar-container {
-      min-width: 407px; } }
+      min-width: 407px;
+      height: 100%; } }
 
 .sidebar-header {
   /*min width will make sure that the header appears smoothly when it is expanded
