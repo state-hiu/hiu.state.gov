@@ -181,7 +181,7 @@
         "3_CODE": "XQZ",
         "2_CODE": "QZ",
         "Italics": "N",
-        "direction": "right"
+        "direction": "left"
       },
       "geometry": {
         "type": "Point",
@@ -1784,13 +1784,14 @@
         "3_CODE": "GIB",
         "2_CODE": "",
         "Italics": "N",
-        "direction": "left"
+        "direction": "right"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -5.3482818603515625,
-          36.13510199408225
+         -5.211639404296875,
+            36.135379270923735
+
         ]
       }
     },
