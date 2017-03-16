@@ -9,7 +9,10 @@
 
   ga('create', '{{ site.ga.code }}', 'auto');
   //ga('send', 'pageview');
+  console.log('about to send ga pageview');
+  console.log(location.pathname + location.search + location.hash);
   ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+
 </script>
 
 
