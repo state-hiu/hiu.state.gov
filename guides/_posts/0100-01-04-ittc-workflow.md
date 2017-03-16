@@ -3,7 +3,7 @@ layout: guide
 category: guides
 title: "ITTC Workflow"
 description: "This guide describes our process for tasking, downloading, processing, and publishing high-resolution commercial satellite imagery for Imagery to the Crowd."
-version: 2.0
+version: 2.1
 date: 2016-05-15
 featured: false
 keywords:
@@ -15,4 +15,4 @@ keywords:
 
 This guide describes our process for tasking, downloading, processing, and publishing high-resolution commercial satellite imagery for [Imagery to the Crowd](http://mapgive.state.gov/ittc).
 
-{% include public-ittc-guide-2016.md %}
+{% include public-ittc-guide-2017.md %}
