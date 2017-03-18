@@ -22,6 +22,29 @@
 	background-color: white;
 	}
 
+/*border color*/
+.marker-cluster-small-orange {
+	background-color: #f15b0e;
+	}
+/*inner color*/
+.marker-cluster-small-orange div {
+	background-color: white;
+	}
+
+.marker-cluster-medium-orange {
+	background-color: #f15b0e;
+	}
+.marker-cluster-medium-orange div {
+	background-color: white;
+	}
+
+.marker-cluster-large-orange {
+	background-color: #f15b0e;
+	}
+.marker-cluster-large-orange div {
+	background-color: white;
+	}
+
 /* example of default cluster styling
 .marker-cluster-large {
 	background-color: rgba(253, 156, 115, 0.6);
