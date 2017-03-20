@@ -7,7 +7,7 @@ The U.S. Department of State Humanitarian Information Unit's new public-facing w
 
 ## Installation
 
-Site is tested and built using Ubuntu 16.04. To install locally, jekyll is required.
+Site is tested and built using Ubuntu 16.04. To install locally, the [jekyll](https://jekyllrb.com/) static site generator is required.
 
 ## Gulp.js
 
@@ -57,11 +57,27 @@ This was also tested, but fuse.js was preferred due to its capabilities for fuzz
 
 multiple libraries are used, however Sass/SCSS is mainly used along with bootstrap. Jekyll provides [built-in support for Sass](https://jekyllrb.com/docs/assets/). The Bootstrap partials are in the _sass directory. The main Sass/SCSS file is named main.scss and is in the css directory. Jekyll automatically processes it and puts it in the site's destination folder.
 
+## Analytics
+
+Google Analytics is used to track page views and events.
+
+Each tracked event has the following components:
+
+- Category
+A category is a name that you supply as a way to group objects that you want to track. We are tracking 'product'
+
+- Action
+Typically, you will use the action parameter to name the type of event or interaction you want to track for a particular web object. These are the following actions we are tracking: 'download - JPG', download - 'PDF', 'click - preview', 'link - preview', and 'click new product pin - preview'
+
+- Label
+This is the url fragment of the product. It is in the following format: '# + 'region code' + ',' + 'product id'
+
+
 #### The events page is depreciated at this time
 
 ## Contributing
 
-This website is currently in beta.  HIU is currently accepting pull requests for this repository.
+This website is currently in beta. HIU is currently accepting pull requests for this repository.
 
 ## License
 This project constitutes a work of the United States Government and is not subject to domestic copyright protection under 17 USC § 105.
