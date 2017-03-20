@@ -72,6 +72,8 @@ Typically, you will use the action parameter to name the type of event or intera
 - Label
 This is the url fragment of the product. It is in the following format: '# + 'region code' + ',' + 'product id'
 
+For more information on how Google Analytics Events work, go [here](https://support.google.com/analytics/answer/1033068)
+
 
 #### The events page is depreciated at this time
 
