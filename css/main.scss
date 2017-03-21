@@ -859,12 +859,11 @@ img.thumb150 {
 }
 
 #product-count {
-  padding-left: 20px;
+  padding-left: 10px;
   padding-right: 10px;
   display: inline-block;
-  position: absolute;
-  padding-top: 14px;
   font-size: 16px;
+  vertical-align: middle;
 }
 
 @media (max-width: 400px) {
@@ -1009,4 +1008,17 @@ a.title div{
 /*This gets rid of a pointer that existed on the labels*/
 .leaflet-tooltip-top:before, .leaflet-tooltip-bottom:before, .leaflet-tooltip-left:before, .leaflet-tooltip-right:before {
     border: none;
+}
+
+.dropdown-menu-right {
+  left: auto;
+  right: -200px;
+  }
+
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 65%;
+    margin-bottom: 0;
 }

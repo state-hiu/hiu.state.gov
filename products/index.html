@@ -14,28 +14,33 @@ title: Products
     <div class="container">
 
         <div class="row" style="margin-left: 0px; margin-right: 0px; border-top-style: solid; border-top-width: 0px; padding-top: 10px; padding-bottom: 20px;"> 
-            <div class="col-md-10" style="padding-left: 0px; padding-right: 50px">
+            <div class="col-md-10" style="padding-left: 0px; padding-right: 50px; padding-top:15px;">
 
-                <div class="input-group" style="min-width: 60%; display:inline-block;">
-                  <input type="search" class="form-control" id="inputSuccess1" placeholder="search products">
-                  <div class="input-group-btn">
+                <div class="input-group input-group-btn" style="min-width: 70%; display: inline-flex; justify-content:flex-start;">
 
-                    <!--
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All <span class="caret"></span></button>
+                  <input type="search" class="form-control" id="inputSuccess1" placeholder="search products" style="flex-grow: 10;float:left;">
+
+
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='line-height:20px;flex-grow: 1;float:left;'>
+                      <span id="search_concept">Filter: </span> <span id="filter-label"></span>
+                    </button>
+
                     <ul class="dropdown-menu dropdown-menu-right">
-                      <li><a href="#">Africa Region</a></li>
-                      <li><a href="#">East Asia and the Pacific</a></li>
-                      <li><a href="#">Europe</a></li>
-                      <li><a href="#">Near East</a></li>
-                      <li><a href="#">South and Central Asia</a></li>
-                      <li><a href="#">Western Hemisphere</a></li>
-                      <li><a href="#">Global</a></li>
+                      <li><a href="#all" selected="selected">All Products</a></li>
+                      <li><a href="#AF">Africa</a></li>
+                      <li><a href="#EAP">East Asia and the Pacific</a></li>
+                      <li><a href="#EUR">Europe</a></li>
+                      <li><a href="#NEA">Near East</a></li>
+                      <li><a href="#SCA">South and Central Asia</a></li>
+                      <li><a href="#WHA">Western Hemisphere</a></li>
+                      <li><a href="#global">Global</a></li>
                     </ul>
-                    -->
 
-                  </div><!-- /btn-group -->
+
                 </div><!-- /input-group -->
+
                 <div id="product-count">total products </div>
+
             </div>
         </div>
 
@@ -71,8 +76,33 @@ title: Products
 </div>
 
 
-
 <script>
+
+    $(document).ready(function(e){
+
+      //initially select all
+      $('span#search_concept').text('Apply Filter');
+
+      $('.dropdown-menu').find('a').click(function(e) {
+      e.preventDefault();
+      //var param = $(this).attr("href").replace("#","");
+      var concept = $(this).text();
+
+      console.log('selected href');
+      console.log($(this).attr("href"));
+
+      if ($(this).attr("href") == '#all') {
+        $('span#search_concept').text('');
+        $('span#filter-label').text(concept);
+      } else {
+        $('span#search_concept').text('Filter: ');
+        $('span#filter-label').text(concept);
+        //$('.input-group #search_param').val(param);
+      }
+
+      
+    });
+  });
 
 
   /*manages Prev and Next buttons on modals */
@@ -224,6 +254,7 @@ $('#myModal').on('hidden.bs.modal', function () {
     $('.btn-prev,.btn-next').remove();
     $('.modal-header-text,.modal-footer-text').remove();
 })
+
 
 </script>
 
