@@ -22,22 +22,24 @@ title: Products
 
 
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='line-height:20px;flex-grow: 1;float:left;'>
-                      <span id="search_concept">Filter: </span> <span id="filter-label"></span>
+                      <span id="search_concept">Filter: </span><span id="filter-label"></span><span id="filtered-count"></span>
                     </button>
 
                     <ul class="dropdown-menu dropdown-menu-right">
-                      <li><a href="#AF">Africa</a></li>
-                      <li><a href="#EAP">East Asia and the Pacific</a></li>
-                      <li><a href="#EUR">Europe</a></li>
-                      <li><a href="#NEA">Near East</a></li>
-                      <li><a href="#SCA">South and Central Asia</a></li>
-                      <li><a href="#WHA">Western Hemisphere</a></li>
-                      <li><a href="#global">Global</a></li>
+                      <li><a href="#AF">Africa <span id="filtered-count"></span></a></li>
+                      <li><a href="#EAP">East Asia and the Pacific<span id="filtered-count"></span></a></li>
+                      <li><a href="#EUR">Europe<span id="filtered-count"></span></a></li>
+                      <li><a href="#NEA">Near East<span id="filtered-count"></span></a></li>
+                      <li><a href="#SCA">South and Central Asia<span id="filtered-count"></span></a></li>
+                      <li><a href="#WHA">Western Hemisphere<span id="filtered-count"></span></a></li>
+                      <li><a href="#global">Global<span id="filtered-count"></span></a></li>
                       <li><a href="#all" selected="selected">All Products</a></li>
                     </ul>
 
 
                 </div><!-- /input-group -->
+
+                <input type="hidden" name="filter_param" value="all" id="filter_param"> 
 
                 <div id="product-count">total products </div>
 
@@ -80,12 +82,37 @@ title: Products
 
     $(document).ready(function(e){
 
+
+      $( ".dropdown-menu li" ).each(function( index ) {
+        console.log( index + ": " + $( this ).text() );
+        var param = $(this).find('a').attr("href").replace("#","");
+        console.log('found filtered-count: ');
+        console.log($(this).find('#filtered-count'));
+
+        if (param == 'all') {
+          $('#product-count').text(ObjectLength(questions) + ' total products');
+        } else {
+
+          console.log('filtered objects1');
+          //need to wait for deferred object (questions) to complete?
+          var filterObjectsNum = filterObjects(questions,param);
+          console.log('filterObjectsNum1: ');
+          console.log(filterObjectsNum);
+
+          console.log('ObjectLength count1: ');
+          console.log(ObjectLength(filterObjects(questions,param)));
+
+          $(this).find('#filtered-count').text('(' + ObjectLength(filterObjects(questions,param)) + ')');
+        }
+        
+      });
+
       //initially select all
       $('span#search_concept').text('Apply Filter');
 
       $('.dropdown-menu').find('a').click(function(e) {
       e.preventDefault();
-      //var param = $(this).attr("href").replace("#","");
+      var param = $(this).attr("href").replace("#","");
       var concept = $(this).text();
 
       console.log('selected href');
@@ -94,10 +121,24 @@ title: Products
       if ($(this).attr("href") == '#all') {
         $('span#search_concept').text('');
         $('span#filter-label').text(concept);
+        $('#filter_param').val(param);
+
+        $('#product-count').text(ObjectLength(questions) + ' total products');
+
       } else {
         $('span#search_concept').text('Filter: ');
         $('span#filter-label').text(concept);
-        //$('.input-group #search_param').val(param);
+        $('#filter_param').val(param);
+
+        console.log('filtered objects');
+        var filterObjectsNum = filterObjects(questions,param);
+        console.log('filterObjectsNum: ');
+        console.log(filterObjectsNum);
+
+        console.log('ObjectLength count: ');
+        console.log(ObjectLength(filterObjects(questions,param)));
+
+        $('#product-count').text(ObjectLength(filterObjects(questions,param)) + ' total products');
       }
 
       
