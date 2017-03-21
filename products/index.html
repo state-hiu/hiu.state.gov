@@ -26,7 +26,7 @@ title: Products
                     </button>
 
                     <ul class="dropdown-menu dropdown-menu-right">
-                      <li><a href="#AF">Africa <span id="filtered-count"></span></a></li>
+                      <li><a href="#AF">Africa<span id="filtered-count"></span></a></li>
                       <li><a href="#EAP">East Asia and the Pacific<span id="filtered-count"></span></a></li>
                       <li><a href="#EUR">Europe<span id="filtered-count"></span></a></li>
                       <li><a href="#NEA">Near East<span id="filtered-count"></span></a></li>
@@ -81,31 +81,6 @@ title: Products
 <script>
 
     $(document).ready(function(e){
-
-
-      $( ".dropdown-menu li" ).each(function( index ) {
-        console.log( index + ": " + $( this ).text() );
-        var param = $(this).find('a').attr("href").replace("#","");
-        console.log('found filtered-count: ');
-        console.log($(this).find('#filtered-count'));
-
-        if (param == 'all') {
-          $('#product-count').text(ObjectLength(questions) + ' total products');
-        } else {
-
-          console.log('filtered objects1');
-          //need to wait for deferred object (questions) to complete?
-          var filterObjectsNum = filterObjects(questions,param);
-          console.log('filterObjectsNum1: ');
-          console.log(filterObjectsNum);
-
-          console.log('ObjectLength count1: ');
-          console.log(ObjectLength(filterObjects(questions,param)));
-
-          $(this).find('#filtered-count').text('(' + ObjectLength(filterObjects(questions,param)) + ')');
-        }
-        
-      });
 
       //initially select all
       $('span#search_concept').text('Apply Filter');
