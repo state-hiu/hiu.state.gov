@@ -18,7 +18,7 @@ destination: _site
 #destination: /var/www
 
 # Explicit excludes, including dotfiles to be safe
-exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
+exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, gulpfile.js, notes.md, node_modules, backups, _assets/img/src-images]
 
 # Markdown Configuration
 #redcarpet:

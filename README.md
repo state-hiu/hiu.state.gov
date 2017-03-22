@@ -51,7 +51,7 @@ Lightweight fuzzy-search Javascript library.  (http://fusejs.io/)
 
 ### Elasticlunr.js 
 Lightweight full-text search engine in Javascript for browser search and offline search. (http://elasticlunr.com/)
-This was also tested, but fuse.js was preferred due to its capabilities for fuzzy search and fuse.js was faster.
+This was also tested, but fuse.js was preferred due to its capabilities for fuzzy search and was faster.
 
 ### CSS
 
