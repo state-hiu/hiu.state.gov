@@ -74,6 +74,7 @@ This is the url fragment of the product. It is in the following format: '# + 're
 
 For more information on how Google Analytics Events work, go [here](https://support.google.com/analytics/answer/1033068)
 
+## Other Notes
 
 #### The events page is depreciated at this time
 
