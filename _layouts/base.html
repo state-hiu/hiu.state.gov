@@ -117,11 +117,6 @@ content="width=device-width, initial-scale=1.0" />
     <!-- JavaScript / Internal -->
 {% comment %}
 
-    {% if site.debug.main == true %}
-    <script src="{{ site.baseurl }}/build/js/main.js?v={{ v }}"></script>
-    {% else %}
-    <script src="{{ site.baseurl }}/build/js/main.min.js?v={{ v }}"></script>
-    {% endif %}
     {% include main/const_snippet.html %}
     <script type="text/javascript" language="Javascript">
         var mb_access_token = '{{ site.mapbox.access_token }}';

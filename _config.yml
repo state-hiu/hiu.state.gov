@@ -51,10 +51,12 @@ dap:
   agency: DOS
   subagency: HIU
 
+sass:
+    style: compressed
+
 # Debugging & Testing
 debug:
-  #polyfill: false
-  main: true
+  app: true
   angular: false
   bootstrap: false
   jquery: false

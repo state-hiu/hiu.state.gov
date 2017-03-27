@@ -20,15 +20,11 @@
   "devDependencies": {
     "del": "*",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.0.4",
     "gulp-concat": "*",
     "gulp-jshint": "^2.0.4",
-    "gulp-less": "*",
     "gulp-minify": "*",
     "gulp-rename": "*",
-    "gulp-rev": "^7.1.2",
     "gulp-uglify": "*",
-    "gulp-usemin": "^0.3.28",
     "jshint": "^2.9.4",
     "path": "*"
   }

@@ -51,7 +51,7 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
         <!--<script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.js"></script>-->
         <script src="{{ site.baseurl }}/lib/jquery/3.1.1/jquery-3.1.1.js"></script>
     {% else %}
-        <script src="{{ site.baseurl }}/lib/jquery/3.1.1/jquery-3.1.1.js"></script>
+        <script src="{{ site.baseurl }}/lib/jquery/3.1.1/jquery-3.1.1.min.js"></script>
     {% endif %}
 
     {% if site.debug.bootstrap == true %}
@@ -86,12 +86,6 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     {% else %}
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular-route.min.js"></script>
-    {% endif %}
-
-    {% if site.debug.main == true %}
-    <script src="{{ site.baseurl }}/build/js/main.js?v={{ v }}"></script>
-    {% else %}
-    <script src="{{ site.baseurl }}/build/js/main.min.js?v={{ v }}"></script>
     {% endif %}
 
 
@@ -164,11 +158,17 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     <script src="{{ site.baseurl }}/lib/leaflet-ajax/leaflet.ajax.min.js"></script>
 
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.min.css" type="text/css" media="all" />
-    <script src="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.src.js"></script>
 
-    <script src="{{ site.baseurl }}/lib/leaflet-markercluster/leaflet.markercluster.js"></script>
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/MarkerCluster.css" />
     <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/MarkerCluster.Default.css"  />
+
+    {% if site.debug.leaflet == true %}
+        <script src="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.src.js"></script>
+        <script src="{{ site.baseurl }}/lib/leaflet-markercluster/leaflet.markercluster.js"></script>
+    {% else %}
+        <script src="{{ site.baseurl }}/build/js/leaflet-list-markers.src.min.js"></script>
+        <script src="{{ site.baseurl }}/build/js/leaflet.markercluster.min.js"></script>
+    {% endif %}
 
     <!--https://github.com/ClaudioCas/leaflet-hash-->
     <!--<script src="{{ site.baseurl }}/lib/leaflet-hash/leaflet-hash.js"></script>-->
