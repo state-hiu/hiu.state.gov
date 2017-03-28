@@ -184,8 +184,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.9124755859375,
-          42.49235259142821
+          20.939941406249996,
+          42.46399280017058
         ]
       }
     },
@@ -325,7 +325,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "MONTENEGRO",
+        "NAME": "MONT.",
         "REGION": "Europe",
         "NUM_CODE": 499,
         "3_CODE": "MNE",
@@ -336,8 +336,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          19.237060546875,
-          42.83166720261409
+          19.2919921875,
+          42.85985981506279
         ]
       }
     },
