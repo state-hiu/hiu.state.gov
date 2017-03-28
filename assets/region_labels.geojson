@@ -19,7 +19,7 @@
       "type": "Feature",
       "properties": {
         "id": "null",
-        "REGION_NA": "EUROPE and<br>EURASIA<br>(EUR)"
+        "REGION_NA": "EUROPE and<br>EURASIA (EUR)"
       },
       "geometry": {
         "type": "Point",
