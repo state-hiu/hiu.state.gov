@@ -191,7 +191,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "SWITZERLAND",
+        "NAME": "SWITZ.",
         "REGION": "Europe",
         "NUM_CODE": 756,
         "3_CODE": "CHE",
@@ -200,8 +200,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          8.214662113838841,
-          46.81285214839761
+          8.19580078125,
+          46.717268685073954
         ]
       }
     },
