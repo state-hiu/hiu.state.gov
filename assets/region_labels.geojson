@@ -33,7 +33,7 @@
       "type": "Feature",
       "properties": {
         "id": "null",
-        "REGION_NA": "SOUTH<br>CENTRAL  <br>ASIA<br>(SCA)"
+        "REGION_NA": "SOUTH<br>CENTRAL  <br>ASIA (SCA)"
       },
       "geometry": {
         "type": "Point",
