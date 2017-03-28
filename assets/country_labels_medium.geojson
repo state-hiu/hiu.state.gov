@@ -650,40 +650,6 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Midway<br>Island<br>(U.S.)",
-        "REGION": "Asia-Oceania",
-        "NUM_CODE": 925,
-        "3_CODE": "XMW",
-        "2_CODE": "QM"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          182.62250634501424,
-          28.20267854608045
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "Midway<br>Island<br>(U.S.)",
-        "REGION": "Asia-Oceania",
-        "NUM_CODE": 925,
-        "3_CODE": "XMW",
-        "2_CODE": "QM"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -177.37289428710938,
-          28.20267854608045
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "NAME": "RWANDA",
         "REGION": "Africa",
         "NUM_CODE": 646,
@@ -780,23 +746,6 @@
         "coordinates": [
           5.537109374999999,
           52.17393169256849
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "Wallis and<br>Futuna (FR.)",
-        "REGION": "Asia-Oceania",
-        "NUM_CODE": 876,
-        "3_CODE": "WLF",
-        "2_CODE": "WF"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          183.79171796739956,
-          -13.283915014949116
         ]
       }
     },
@@ -933,23 +882,6 @@
         "coordinates": [
           -88.9453125,
           13.66733825965496
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "Cook Islands<br>(N.Z.)",
-        "REGION": "Asia-Oceania",
-        "NUM_CODE": 184,
-        "3_CODE": "COK",
-        "2_CODE": "CK"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -159.78093971370453,
-          -21.231801916546942
         ]
       }
     },
@@ -1169,8 +1101,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          32.9644775390625,
-          35.106428057364255
+          33.22265625,
+          34.92197103616377
         ]
       }
     },
@@ -1538,23 +1470,6 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Wallis and<br>Futuna (FR.)",
-        "REGION": "Asia-Oceania",
-        "NUM_CODE": 876,
-        "3_CODE": "WLF",
-        "2_CODE": "WF"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -176.19598388671875,
-          -13.283915014949116
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "NAME": "MALAYSIA",
         "REGION": "Asia-Oceania",
         "NUM_CODE": 458,
@@ -1583,40 +1498,6 @@
         "coordinates": [
           102.1728515625,
           4.061535597066106
-        ]
-      }
-    },
-      {
-      "type": "Feature",
-      "properties": {
-        "NAME": "W. Bank",
-        "REGION": "Middle East",
-        "NUM_CODE": 934,
-        "3_CODE": "XWB",
-        "2_CODE": "XW"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          35.2935791015625,
-          32.10584293285769
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "Gaz. Str.",
-        "REGION": "Middle East",
-        "NUM_CODE": 916,
-        "3_CODE": "XGZ",
-        "2_CODE": "XG"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          34.34326171875,
-          31.372399104880525
         ]
       }
     },
