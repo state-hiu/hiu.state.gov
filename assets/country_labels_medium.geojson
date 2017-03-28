@@ -1586,6 +1586,40 @@
         ]
       }
     },
+      {
+      "type": "Feature",
+      "properties": {
+        "NAME": "W. Bank",
+        "REGION": "Middle East",
+        "NUM_CODE": 934,
+        "3_CODE": "XWB",
+        "2_CODE": "XW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.2935791015625,
+          32.10584293285769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Gaz. Str.",
+        "REGION": "Middle East",
+        "NUM_CODE": 916,
+        "3_CODE": "XGZ",
+        "2_CODE": "XG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.34326171875,
+          31.372399104880525
+        ]
+      }
+    },
     {
       "type": "Feature",
       "properties": {
