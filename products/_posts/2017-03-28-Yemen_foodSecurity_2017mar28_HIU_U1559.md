@@ -5,7 +5,7 @@ title: "Yemen: Food Security and Displacement Snapshot"
 region_id: "NEA"
 region_title: "Near East" 
 product_id: "U1559"
-date_published:2017-03-28
+date_published: 2017-03-28
 product_pdf: "Yemen_FoodSecurity_2017Mar28_HIU_U1559.pdf"
 product_jpg: "Yemen_FoodSecurity_2017Mar28_HIU_U1559.jpg"
 thumbnail: "Yemen_FoodSecurity_2017Mar28_HIU_U1559_thumb.jpg"
