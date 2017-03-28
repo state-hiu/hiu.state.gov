@@ -1,3 +1,6 @@
+---
+layout: product
+category: products
 title: "Yemen: Food Security and Displacement Snapshot"
 region_id: "NEA"
 region_title: "Near East" 
