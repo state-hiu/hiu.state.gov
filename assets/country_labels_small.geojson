@@ -173,7 +173,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "KOSOVO",
+        "NAME": "KOS.",
         "REGION": "Europe",
         "NUM_CODE": 901,
         "3_CODE": "XKS",
@@ -325,7 +325,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "MONT.",
+        "NAME": "MONTENEGRO",
         "REGION": "Europe",
         "NUM_CODE": 499,
         "3_CODE": "MNE",
