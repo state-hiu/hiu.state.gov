@@ -4,25 +4,6 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "SAINT<br>HELENA",
-        "REGION": "Africa",
-        "NUM_CODE": 654,
-        "3_CODE": "SHN",
-        "2_CODE": "SH",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -5.71267245645339,
-          -15.96502291138313
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "NAME": "RUSSIA",
         "REGION": "Eurasia",
         "NUM_CODE": 643,
@@ -456,19 +437,19 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "OMAN",
-        "REGION": "Middle East",
-        "NUM_CODE": 512,
-        "3_CODE": "OMN",
-        "2_CODE": "OM",
+        "NAME": "EQUATORIAL<br>GUINEA",
+        "REGION": "Africa",
+        "NUM_CODE": 226,
+        "3_CODE": "GNQ",
+        "2_CODE": "GQ",
         "Italics": "N",
-        "direction": "right"
+        "direction": "left"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          57.10693359375,
-          25.388697990350824
+          7.239990234375,
+          2.4711573377481715
         ]
       }
     },
