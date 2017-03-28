@@ -98,8 +98,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          17.77587890625,
-          44.07969327425713
+          17.86376953125,
+          44.134913443750726
         ]
       }
     },
@@ -592,7 +592,7 @@
         "type": "Point",
         "coordinates": [
           16.6552734375,
-          45.55252525134013
+          45.54483149242463
         ]
       }
     },
@@ -778,7 +778,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          14.23828125,
+          14.249267578124998,
           47.44294999517949
         ]
       }
@@ -1177,7 +1177,7 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "DOMINICAN<br>REPUBLIC",
+        "NAME": "DOM.<br>REP.",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 214,
         "3_CODE": "DOM",
