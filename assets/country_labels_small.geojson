@@ -363,13 +363,13 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "West<br>Bank",
+        "NAME": "W. Bank",
         "REGION": "Middle East",
         "NUM_CODE": 934,
         "3_CODE": "XWB",
         "2_CODE": "XW",
         "Italics": "N",
-        "direction": "center"
+        "direction": "right"
       },
       "geometry": {
         "type": "Point",
@@ -382,13 +382,13 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Gaza<br>Strip  ",
+        "NAME": "Gaz. Str.",
         "REGION": "Middle East",
         "NUM_CODE": 916,
         "3_CODE": "XGZ",
         "2_CODE": "XG",
         "Italics": "N",
-        "direction": "center"
+        "direction": "left"
       },
       "geometry": {
         "type": "Point",
