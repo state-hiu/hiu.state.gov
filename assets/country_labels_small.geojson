@@ -249,25 +249,6 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Hong Kong<br>S.A.R.",
-        "REGION": "Asia-Oceania",
-        "NUM_CODE": 344,
-        "3_CODE": "HKG",
-        "2_CODE": "HK",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          114.169921875,
-          20.540221355754728
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "NAME": "MALTA",
         "REGION": "Europe",
         "NUM_CODE": 470,
@@ -369,7 +350,7 @@
         "3_CODE": "XWB",
         "2_CODE": "XW",
         "Italics": "N",
-        "direction": "right"
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
@@ -388,32 +369,13 @@
         "3_CODE": "XGZ",
         "2_CODE": "XG",
         "Italics": "N",
-        "direction": "left"
+        "direction": "center"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           34.34326171875,
           31.372399104880525
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "Macau<br>S.A.R.",
-        "REGION": "Asia-Oceania",
-        "NUM_CODE": 446,
-        "3_CODE": "MAC",
-        "2_CODE": "MO",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.51074218749999,
-          21.248422235627014
         ]
       }
     },
