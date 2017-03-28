@@ -783,23 +783,7 @@
         ]
       }
     },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "EQUATORIAL<br>GUINEA",
-        "REGION": "Africa",
-        "NUM_CODE": 226,
-        "3_CODE": "GNQ",
-        "2_CODE": "GQ"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.338685505301896,
-          1.631745173126291
-        ]
-      }
-    },
+  
     {
       "type": "Feature",
       "properties": {
