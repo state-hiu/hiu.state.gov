@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "id": null,
-        "REGION_NA": "NEAR EAST"
+        "REGION_NA": "NEAR EAST<br>(NEA)"
       },
       "geometry": {
         "type": "Point",
@@ -19,7 +19,7 @@
       "type": "Feature",
       "properties": {
         "id": "null",
-        "REGION_NA": "EUROPE and<br>EURASIA"
+        "REGION_NA": "EUROPE and<br>EURASIA<br>(EUR)"
       },
       "geometry": {
         "type": "Point",
@@ -33,7 +33,7 @@
       "type": "Feature",
       "properties": {
         "id": "null",
-        "REGION_NA": "SOUTH<br>CENTRAL  <br>ASIA"
+        "REGION_NA": "SOUTH<br>CENTRAL  <br>ASIA<br>(SCA)"
       },
       "geometry": {
         "type": "Point",
@@ -47,7 +47,7 @@
       "type": "Feature",
       "properties": {
         "id": "null",
-        "REGION_NA": "EAST<br>ASIA<br>and the<br>PACIFIC"
+        "REGION_NA": "EAST<br>ASIA<br>and the<br>PACIFIC<br>(EAP)"
       },
       "geometry": {
         "type": "Point",
@@ -61,7 +61,7 @@
       "type": "Feature",
       "properties": {
         "id": null,
-        "REGION_NA": "AFRICA"
+        "REGION_NA": "AFRICA<br>(AF)"
       },
       "geometry": {
         "type": "Point",
@@ -75,7 +75,7 @@
       "type": "Feature",
       "properties": {
         "id": null,
-        "REGION_NA": "WESTERN <br> HEMISPHERE"
+        "REGION_NA": "WESTERN <br> HEMISPHERE<br>(WHA)"
       },
       "geometry": {
         "type": "Point",
