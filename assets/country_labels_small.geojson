@@ -23,44 +23,6 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Faroe Islands<br>(DEN.)",
-        "REGION": "Europe",
-        "NUM_CODE": 234,
-        "3_CODE": "FRO",
-        "2_CODE": "FO",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -7.005286064800373,
-          62.124685978454366
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "Northern Mariana Islands (U.S.)",
-        "REGION": "Asia-Oceania",
-        "NUM_CODE": 580,
-        "3_CODE": "MNP",
-        "2_CODE": "MP",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          145.75860444515416,
-          15.19042740765886
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "NAME": "RUSSIA",
         "REGION": "Eurasia",
         "NUM_CODE": 643,
@@ -91,25 +53,6 @@
         "coordinates": [
           -58.670324007490834,
           -51.79687582793045
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "Jan Mayen<br>(NOR.)",
-        "REGION": "Europe",
-        "NUM_CODE": 920,
-        "3_CODE": "XJM",
-        "2_CODE": "XJ",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.4998705494516,
-          70.99098550219159
         ]
       }
     },
@@ -154,44 +97,6 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "MONACO",
-        "REGION": "Europe",
-        "NUM_CODE": 492,
-        "3_CODE": "MCO",
-        "2_CODE": "MC",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          7.424090398019501,
-          43.73801201617934
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "SAN MARINO",
-        "REGION": "Europe",
-        "NUM_CODE": 674,
-        "3_CODE": "SMR",
-        "2_CODE": "SM",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.460045544549928,
-          43.943090136734384
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "NAME": "ANDORRA",
         "REGION": "Europe",
         "NUM_CODE": 20,
@@ -205,25 +110,6 @@
         "coordinates": [
           1.600670779920534,
           42.54216687164404
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "SAINT LUCIA",
-        "REGION": "Western Hemisphere",
-        "NUM_CODE": 662,
-        "3_CODE": "LCA",
-        "2_CODE": "LC",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -60.96313476562499,
-          13.880745842025602
         ]
       }
     },
@@ -344,44 +230,6 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "ANTIGUA & BARBUDA",
-        "REGION": "Western Hemisphere",
-        "NUM_CODE": 28,
-        "3_CODE": "ATG",
-        "2_CODE": "AG",
-        "Italics": "N",
-        "direction": "right"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -61.060638427734375,
-          17.36767802291435
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "TRINIDAD &<br>TOBAGO",
-        "REGION": "Western Hemisphere",
-        "NUM_CODE": 780,
-        "3_CODE": "TTO",
-        "2_CODE": "TT",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -61.19384765625,
-          10.466205555063882
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "NAME": "BERMUDA",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 60,
@@ -458,63 +306,6 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "ST. KITTS<br>& NEVIS",
-        "REGION": "Western Hemisphere",
-        "NUM_CODE": 659,
-        "3_CODE": "KNA",
-        "2_CODE": "KN",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -62.77587890625,
-          17.327697889671377
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "GRENADA",
-        "REGION": "Western Hemisphere",
-        "NUM_CODE": 308,
-        "3_CODE": "GRD",
-        "2_CODE": "GD",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -61.64978027343751,
-          12.08229583736359
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "ST. VINCENT<br>& THE<br>GRENADINES",
-        "REGION": "Western Hemisphere",
-        "NUM_CODE": 670,
-        "3_CODE": "VCT",
-        "2_CODE": "VC",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -61.201396395813134,
-          13.249731426995027
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "NAME": "LIECH.",
         "REGION": "Europe",
         "NUM_CODE": 438,
@@ -553,25 +344,6 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "DOMINICA",
-        "REGION": "Western Hemisphere",
-        "NUM_CODE": 212,
-        "3_CODE": "DMA",
-        "2_CODE": "DM",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -61.36208531278484,
-          15.421251266292245
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "NAME": "SLOVENIA",
         "REGION": "Europe",
         "NUM_CODE": 705,
@@ -585,25 +357,6 @@
         "coordinates": [
           14.69970703125,
           46.03129569755731
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "BARBADOS",
-        "REGION": "Western Hemisphere",
-        "NUM_CODE": 52,
-        "3_CODE": "BRB",
-        "2_CODE": "BB",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -59.48822021484374,
-          13.151701527938698
         ]
       }
     },
@@ -680,25 +433,6 @@
         "coordinates": [
           113.51074218749999,
           21.248422235627014
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "NAME": "HOLY<br>SEE",
-        "REGION": "Europe",
-        "NUM_CODE": 674,
-        "3_CODE": "SMR",
-        "2_CODE": "",
-        "Italics": "N",
-        "direction": "center"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.453131675720213,
-          41.90355467806868
         ]
       }
     },
