@@ -21,6 +21,40 @@
     {
       "type": "Feature",
       "properties": {
+        "NAME": "W. Bank",
+        "REGION": "Middle East",
+        "NUM_CODE": 934,
+        "3_CODE": "XWB",
+        "2_CODE": "XW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.31555175781249,
+          31.984782715952374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Gaz. Str.",
+        "REGION": "Middle East",
+        "NUM_CODE": 916,
+        "3_CODE": "XGZ",
+        "2_CODE": "XG"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.34326171875,
+          31.325486676506983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "NAME": "NICARAGUA",
         "REGION": "Western Hemisphere",
         "NUM_CODE": 558,
@@ -783,7 +817,6 @@
         ]
       }
     },
-  
     {
       "type": "Feature",
       "properties": {
@@ -1461,7 +1494,7 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          35.35400390625,
+          35.3265380859375,
           32.722598604044066
         ]
       }
