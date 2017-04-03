@@ -105,14 +105,14 @@ title: Products
           $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
           $( ".btn-prev" ).on( "click", function() {
-                console.log( 'activate prev button only' );
-                  console.log( 'jpegDisplayNumber valx1' );
-                console.log(jpegDisplayNumber);
+                //console.log( 'activate prev button only' );
+                //console.log( 'jpegDisplayNumber valx1' );
+                //console.log(jpegDisplayNumber);
                 jpegDisplayNumber--;
-                  console.log( 'jpegDisplayNumber valx2' );
-                console.log(jpegDisplayNumber);
-                  console.log( 'dropdown val' );
-                console.log($(dropdown).find("li"));
+                //console.log( 'jpegDisplayNumber valx2' );
+                //console.log(jpegDisplayNumber);
+                //console.log( 'dropdown val' );
+                //console.log($(dropdown).find("li"));
                 modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
                 $('.btn-prev,.btn-next').remove();
                 $('.modal-header-text,.modal-footer-text').remove();
@@ -137,10 +137,10 @@ title: Products
                 $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
                 $( ".btn-next" ).on( "click", function() {
-                  console.log( 'jpegDisplayNumber val' );
-                  console.log(jpegDisplayNumber);
+                  //console.log( 'jpegDisplayNumber val' );
+                  //console.log(jpegDisplayNumber);
 
-                  console.log( $(dropdown).find("li").eq(2).find("a").attr("href"));
+                  //console.log( $(dropdown).find("li").eq(2).find("a").attr("href"));
 
                   jpegDisplayNumber++;
                   /*however since it you are finding the right length in the array and the array starts at zero
@@ -166,7 +166,7 @@ title: Products
                 $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
 
                 $( ".btn-prev" ).on( "click", function() {
-                  console.log( 'activate prev button only' );
+                  //console.log( 'activate prev button only' );
                   jpegDisplayNumber--;
                   modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
                   $('.btn-prev,.btn-next').remove();
@@ -177,7 +177,7 @@ title: Products
 
 
                 $( ".btn-next" ).on( "click", function() {
-                  console.log( 'activate next button only' );
+                  //console.log( 'activate next button only' );
                   jpegDisplayNumber++;
                   modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
                   $('.btn-prev,.btn-next').remove();
@@ -199,11 +199,11 @@ $('#myModal').on('show.bs.modal', function (event) {
   var jpegDisplayNumber = 2;
   var button = $(event.relatedTarget)  /*Button that triggered the modal*/
   var title = button.data('title')  /*Extract info from data-* attributes*/
-  console.log('title-data: ');
-  console.log(title);
+  //console.log('title-data: ');
+  //console.log(title);
   var img = button.data('img') /*Extract info from data-* attributes*/
-  console.log('img-data: ');
-  console.log(img);
+  //console.log('img-data: ');
+  //console.log(img);
    /*If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
    Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.*/
   var modal = $(this)
@@ -212,15 +212,15 @@ $('#myModal').on('show.bs.modal', function (event) {
 
   /*need a list of all the pages in a product; actually I do not, just parse based on what is in the download button!
   if list is 2, then just add a next button*/
-  console.log('display modal parents id');
-  console.log(button.closest(".item"));
+  //console.log('display modal parents id');
+  //console.log(button.closest(".item"));
   var item = button.closest(".item")
   var dropdown = item.find(".dropdown");
-  console.log('display assoc dropdown');
-  console.log(dropdown);
+  //console.log('display assoc dropdown');
+  //console.log(dropdown);
 
-  console.log('dropdown li count');
-  console.log($(dropdown).find("li").length);
+  //console.log('dropdown li count');
+  //console.log($(dropdown).find("li").length);
 
   var dropdownCount = $(dropdown).find("li").length
 
