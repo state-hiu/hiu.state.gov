@@ -550,17 +550,17 @@ $(document).ready(function(){
 
         <textarea class="form-control" id="project_description" name="project_description" rows="5" placeholder='Please provide a description of the project that this imagery and mapping will support. Please also clearly outline how the imagery and output mapping data will benefit the program.' ></textarea>
       </div>
-      
 
         <div class="form-group c48 " data-cid="c48">
           <label class="control-label" for="c48">Deadline for imagery</label>
 
           <div class="form-group">
             <div class='input-group date' id='sandbox-container'>
-              <input type="text" class="form-control" id="delivery_deadline" name="delivery_deadline"/>
+              
               <span class="input-group-addon">
                   <span class="glyphicon glyphicon-calendar"></span>
               </span>
+              <input type="text" class="form-control" id="delivery_deadline" name="delivery_deadline"/>
             </div>
           </div>
         <!--
@@ -625,9 +625,11 @@ $(document).ready(function(){
 <div class="form-group c38 " data-cid="c38">
   <label class="control-label" for="c38">or upload geojson file</label>
 
-  <input type="file" class="form-control" id="geojson_file" name="geojson_file" value="" accept=".geojson" style="padding-bottom: 40px;"/>
+  <!--temp moving input outside of div-->
 
 </div>
+
+<input type="file" class="form-control" id="geojson_file" name="geojson_file" value="" accept=".geojson" style="padding-bottom: 40px;"/>
 
 <label class="control-label" for="c87">or draw area of interest on map: </label>
 
