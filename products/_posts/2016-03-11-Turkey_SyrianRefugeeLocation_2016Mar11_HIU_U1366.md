@@ -6,9 +6,9 @@ region_id: "NEA"
 region_title: "Near East"
 date_published: 2016-03-11
 product_id: "U1366"
-product_pdf: "Turkey_SyrianRefugeeLocation_2016Mar11_HIU_U1366.pdf"
-product_jpg: "Turkey_SyrianRefugeeLocation_2016Mar11_HIU_U1366.jpg"
-thumbnail: "Turkey_SyrianRefugeeLocation_2016Mar11_HIU_U1366_thumb.jpg"
+product_pdf: "Turkey_SyrianRefugeeLocations_2016Mar11_HIU_U1366.pdf"
+product_jpg: "Turkey_SyrianRefugeeLocations_2016Mar11_HIU_U1366.jpg"
+thumbnail: "Turkey_SyrianRefugeeLocations_2016Mar11_HIU_U1366_thumb.jpg"
 lat: 38.152
 lon: 39.644
 keywords:
