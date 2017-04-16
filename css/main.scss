@@ -1027,11 +1027,9 @@ a.title div{
     min-width: 70%; 
     display: inline-flex; 
     justify-content: flex-start;
-    flex-wrap: wrap;
   }
 
 @media (max-width: 400px) {
-
   .input-group.input-group-btn {
     min-width: 100%; 
     display: inline-flex; 
