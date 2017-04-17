@@ -1039,4 +1039,20 @@ a.title div{
 
 }
 
+.type-fa {
+  font-size: 23px;
+  margin-left: -4px;
+  margin-top: -4px; 
+}
+
+.fa-globe-new:before {
+    content: "\f0ac";
+    color: #f15b0e;
+}
+
+#new-global-products-legend-outer-div {
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
 
