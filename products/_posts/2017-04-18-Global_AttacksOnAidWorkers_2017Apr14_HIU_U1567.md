@@ -1,7 +1,7 @@
 ---
 layout: product
 category: products
-title: "(U) Attacks on Aid Workers"
+title: "Attacks on Aid Workers"
 region_id: "global"
 region_title: "Global & Transnational Products"
 date_published: 2017-04-18
