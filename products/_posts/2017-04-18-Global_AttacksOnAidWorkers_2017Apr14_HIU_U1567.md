@@ -4,6 +4,7 @@ category: products
 title: "(U) Attacks on Aid Workers"
 region_id: "global"
 region_title: "Global & Transnational Products"
+date_published: 2017-04-18
 product_id: "U1567"
 product_pdf: "Global_AttacksOnAidWorkers_2017Apr14_HIU_U1567.pdf"
 product_jpg: "Global_AttacksOnAidWorkers_2017Apr14_HIU_U1567.jpg"
