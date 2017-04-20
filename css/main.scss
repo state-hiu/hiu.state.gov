@@ -556,10 +556,18 @@ a.title:hover {
 }
 
 .glow1 {
-    box-shadow: 0px 0px 12px 2.5px #ff5600;
+    box-shadow: 0px 0px 12px 2.5px #00b2da;
 }
 
 .glow2 {
+    box-shadow: 0px 0px 12px 4px #00b2da;
+}
+
+.glow1-orange {
+    box-shadow: 0px 0px 12px 2.5px #ff5600;
+}
+
+.glow2-orange {
     box-shadow: 0px 0px 12px 4px #ff5600;
 }
 
