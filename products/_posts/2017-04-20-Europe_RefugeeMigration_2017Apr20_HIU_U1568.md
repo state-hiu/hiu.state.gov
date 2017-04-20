@@ -7,8 +7,9 @@ region_title: "Europe"
 date_published: 2017-04-20
 product_id: "U1568"
 product_pdf: "Europe_RefugeeMigration_2017Apr20_HIU_U1568.pdf"
-product_jpg: "Europe_RefugeeMigration_2017Apr20_HIU_U1568.jpg"
-thumbnail: "Europe_RefugeeMigration_2017Apr20_HIU_U1568_thumb.jpg"
+product_jpg: "Europe_RefugeeMigrationPage1_2017Apr20_HIU_U1568.jpg"
+product_jpg_2: "Europe_RefugeeMigrationPage2_2017Apr20_HIU_U1568.jpg"
+thumbnail: "Europe_RefugeeMigrationPage2_2017Apr20_HIU_U1568_thumb.jpg"
 lat: 53.5775
 lon: 23.106111
 keywords:
