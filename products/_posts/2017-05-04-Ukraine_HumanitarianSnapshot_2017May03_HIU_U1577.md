@@ -10,8 +10,8 @@ product_pdf: "Ukraine_HumanitarianSnapshot_2017May03_HIU_U1577.pdf"
 product_jpg: "Ukraine_HumanitarianSnapshot_2017May03_HIU_U1577.jpg"
 thumbnail: "Ukraine_HumanitarianSnapshot_2017May03_HIU_U1577_thumb.jpg"
 featured: true
-lat: 38.273
-lon: 48.580
+lat: 48.580
+lon: 38.273
 keywords:
   - Humanitarian access
   - Minsk Agreement
