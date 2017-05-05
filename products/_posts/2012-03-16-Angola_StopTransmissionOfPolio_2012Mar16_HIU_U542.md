@@ -9,8 +9,8 @@ product_id: "U542"
 product_pdf: "Angola_StopTransmissionOfPolio_2012Mar16_HIU_U542.pdf"
 product_jpg: "Angola_StopTransmissionOfPolio_2012Mar16_HIU_U542.jpg"
 thumbnail: "Angola_StopTransmissionOfPolio_2012Mar16_HIU_U542_thumb.jpg"
-lat: 17.00
-lon: -13.00
+lat: -11.2027
+lon: 17.8739
 keywords:
   - Polio
   - Angola
