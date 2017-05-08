@@ -18,6 +18,6 @@ keywords:
   - Refugees
   - Repatriation
   - Humanitarian
-tweet: "Over 2.9 million people in Somalia face crisis or emergency level acute food insecurity and need emergency food aid."
+tweet: "2.9M+ Somalis are in crisis/emergency level acute food insecurity & need food aid"
 ---
 Over 2.9 million people in Somalia face crisis or emergency level acute food insecurity and need emergency food aid, as a result of below average to failed rains in many areas in 2016 that reduced crop production and harmed livestock. Internal displacement is also an issue with an estimated 1.1 million IDPs currently in Somalia with about 548,000 being recently displaced due to drought.
