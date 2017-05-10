@@ -6,6 +6,10 @@
 
 ### WMS
 
+## creating topojson
+
+Originally a country file was dissolved by region in ArcGIS. Then the files was imported into a geodatabase, topology was created, and intersections were fixed. Also edits were made to clean up extra vertices and lines found within existing polygons. A shapefile was exported and then uploaded to mapshaper.org. In Map Shaper, the data was simplified at 70% and exported as topojson. 
+
 ## uploading thumbnails
 
 Images for products are uploaded in the hiu-thumbnails S3 bucket under the products folder. This will fire off a lamda function that creates a 150px and 300px thumbnails and saves them in the resized folder in products.
