@@ -10,8 +10,8 @@ product_pdf: "Africa_RefugeesInAfrica_2014June20_HIU_U1033.pdf"
 product_jpg: "Africa_RefugeeAsylum_2014June20_HIU_U1033.jpg"
 product_pg2_jpg: "Africa_RefugeeOrigins_2014June20_HIU_U1033.jpg"
 thumbnail: "Africa_RefugeeOrigins_2014June20_HIU_U1033_thumb.jpg"
-lat: 2.7143
-lon: 42.8933
+lat: 2.61667
+lon: 16.1
 keywords:
   - Africa
   - Migration
