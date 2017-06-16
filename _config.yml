@@ -100,3 +100,5 @@ mapbox:
 compress_html:
   blanklines: true
   comments: all
+
+future: true
