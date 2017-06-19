@@ -1,6 +1,6 @@
 ---
 layout: product
-category
+category: products
 title: "World Refugee Day 2017: Refugees' Countries of Origin and Destination""
 region_id: global
 region_title: "Global & Transnational Products"
@@ -27,4 +27,4 @@ keywords:
   - South Sudan
 tweet: "For World Refugee Day June 20, showing major countries of refugee origin and destination"
 ---
-"This map is part of an annual series of joint State/PRM and State/INR/HIU products created and published for World Refugee Day, each year on June 20."
+This map is part of an annual series of joint State/PRM and State/INR/HIU products created and published for World Refugee Day, each year on June 20.
