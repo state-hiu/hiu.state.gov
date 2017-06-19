@@ -8,7 +8,7 @@ date_published: 2017-06-19
 product_id: "U1603"
 product_pdf: "Global_WorldRefugeeDay_2017June19_HIU_U1603.pdf"
 product_jpg: "Global_WorldRefugeeDay_2017June19_HIU_U1603.jpg"
-thumbnail: "Global_WorldRefugeeDay_2017June19_HIU_U1603.jpg"
+thumbnail: "Global_WorldRefugeeDay_2017June19_HIU_U1603_thumb.jpg"
 lat: 0
 lon: 0
 keywords:
