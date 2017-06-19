@@ -1,7 +1,7 @@
 ---
 layout: product
 category: products
-title: "World Refugee Day 2017: Refugees' Countries of Origin and Destination""
+title: "World Refugee Day 2017: Refugees' Countries of Origin and Destination"
 region_id: "global"
 region_title: "Global & Transnational Products"
 date_published: 2017-06-19
