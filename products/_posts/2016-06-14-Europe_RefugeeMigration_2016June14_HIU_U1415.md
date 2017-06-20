@@ -2,8 +2,8 @@
 layout: product
 category: products
 title: "Europe Migration and Refugee Snapshot"
-region_id: "global"
-region_title: "Global & Transnational Issues"
+region_id: "EUR"
+region_title: "Europe"
 date_published: 2016-06-14
 product_id: "U1415"
 product_pdf: "Europe_RefugeeMigration_2016June14_HIU_U1415.pdf"
