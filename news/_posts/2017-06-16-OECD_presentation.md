@@ -1,7 +1,7 @@
 ---
 layout: wrapper_text_news
 category: news
-date: 2017-06-26
+date: 2017-06-16
 title: HIU Speaks on Migration Early Warning at OECD Conference
 description: "On June 16, HIU Humanitarian Analyst Dennis King gave a presentation on mass migration early warning and risk analysis at the Organization on Economic Cooperation and Development (OECD) conference"
 ---
