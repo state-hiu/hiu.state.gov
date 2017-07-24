@@ -22,4 +22,4 @@ keywords:
   - environmental refugees
 tweet: "Pakistan: Humanitarian Crises in 2011 - Natural Disasters - Sindh/Balochistan Flash Floods"
 ---
-This map illustrates the displacement caused by the flash flooding from intense monsoon rains in August and September which affected most of Sindh province and localized areas throughout Balochistan.  
+This map illustrates the displacement caused by the flash flooding from intense monsoon rains in August and September which affected most of Sindh province and localized areas throughout Balochistan.
