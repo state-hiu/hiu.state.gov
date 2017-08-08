@@ -2,7 +2,7 @@
 layout: product
 category: products
 title: "Eastern Afghanistan: Vulnerable Populations"
-region_id: "SCA"
+region_id: SCA
 region_title: "South and Central Asia"
 date_published: 2017-08-08
 product_id: "U1614"
