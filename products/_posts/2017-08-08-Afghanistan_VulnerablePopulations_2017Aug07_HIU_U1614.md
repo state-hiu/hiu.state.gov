@@ -4,11 +4,11 @@ category: products
 title: "Eastern Afghanistan: Vulnerable Populations"
 region_id: "SCA"
 region_title: "South and Central Asia"
-date_published: 2017-08-07
+date_published: 2017-08-08
 product_id: "U1614"
-product_pdf: "Afghanistan_VulnerablePopulations_2017Aug07_HIU_U1614.pdf"
-product_jpg: "Afghanistan_VulnerablePopulations_2017Aug07_HIU_U1614.jpg"
-thumbnail: "Afghanistan_VulnerablePopulations_2017Aug07_HIU_U1614_thumb.jpg"
+product_pdf: "Afghanistan_VulnerablePopulations_2017Aug08_HIU_U1614.pdf"
+product_jpg: "Afghanistan_VulnerablePopulations_2017Aug08_HIU_U1614.jpg"
+thumbnail: "Afghanistan_VulnerablePopulations_2017Aug08_HIU_U1614_thumb.jpg"
 lat: 34.5553
 lon: 69.2075
 keywords:
