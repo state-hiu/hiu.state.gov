@@ -12,14 +12,15 @@ thumbnail: "Worldwide_HumanitarianDayAidWorkerAttacks_2017Aug18_HIU_U1646_thumb.
 lat: 0
 lon: 0
 keywords:
-    - Aid Worker Security
-    - Aid Worker Safety
-    - Health Infrastructure
-    - Civil War
-    - Conflict
-    - Terrorism
-    - War Crimes
-    - Humanitarian
+  - Aid Worker Security
+  - Aid Worker Safety
+  - Health Infrastructure
+  - Civil War
+  - Conflict
+  - Terrorism
+  - War Crimes
+  - Humanitarian
+  - Populations at Risk
 tweet: "World Humanitarian Day (Aug 19) recognizes those lives risked in humanitarian service"
 ---
 HIU's annual product for World Humanitarian Day August 19, this year features attacks on health facilities, as well as aid worker victims for the period January 2015 through June 2017.
