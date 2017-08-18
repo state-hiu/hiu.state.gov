@@ -1,7 +1,7 @@
 ---
 layout: product
 category: products
-title: "World Humanitarian Day 19 August 2017: Humanitarians Under Attack"
+title: "World Humanitarian Day August 19, 2017: Humanitarians Under Attack"
 region_id: "global"
 region_title: "Global & Transnational Products"
 date_published: 2017-08-18
