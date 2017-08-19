@@ -4,11 +4,13 @@ title: Tags
 ---
 
 <!--used to build site cloud-->
+{% comment %}
 {% capture site_tags_products %}
   {% for post in site.categories.products %}
     {% for keyword in post.keywords %}'{{ keyword | url_encode }}'{% unless forloop.last %},{% endunless %}{% endfor %}{% unless forloop.last %},{% endunless %}
   {% endfor %}
 {% endcapture %}
+{% endcomment %}
 
 <div class="container">
 

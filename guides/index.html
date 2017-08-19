@@ -62,7 +62,7 @@ title: Guides
 
   <div class="tab-content" style="padding: 10px;">
 
-    {% assign sorted = (site.categories.guides | reversed sort: 'date') %}
+    {% assign sorted = site.categories.guides | sort: 'date' | reverse %}
 
     <div id="all" class="tab-pane active">
       {% for guide in sorted %}

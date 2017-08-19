@@ -1,21 +1,30 @@
 ---
 layout: wrapper
 ---
-{% assign primary_product = page %}
-{% assign count_region = 0 %}
-{% for related_product in site.categories.products %}
-  {% if related_product.id != primary_product.id %}
-    {% if related_product.region_id == primary_product.region_id %}
-      {% assign count_region = count_region | plus: 1 %}
+
+<!-- none of this is used any more, the products are created by templates,
+for example for the main page in the sidebar the template is located here: 
+leaflet-list-markers.src.js
+
+{% comment %}
+  {% assign primary_product = page %}
+  {% assign count_region = 0 %}
+  {% for related_product in site.categories.products %}
+    {% if related_product.id != primary_product.id %}
+      {% if related_product.region_id == primary_product.region_id %}
+        {% assign count_region = count_region | plus: 1 %}
+      {% endif %}
     {% endif %}
-  {% endif %}
-{% endfor %}
+  {% endfor %}
+
+
 {% assign region_filter = "" %}
 {% for r in site.categories.regions %}
   {% if primary_product.region_id == r.region_id %}
     {% assign region_filter = r.region_filter %}
   {% endif %}
 {% endfor %}
+
 <div class="col-md-2">
 </div>
 <div class="col-md-8">
@@ -25,6 +34,9 @@ layout: wrapper
   {% assign showProductTitle = false %}
   {% include main/listitem_product.html %}
   <hr>
+</div>
+{% endcomment %}
+-->
 
 <!--deactivate until I can understand Angular
 
@@ -61,4 +73,3 @@ layout: wrapper
 
 -->
 
-</div>

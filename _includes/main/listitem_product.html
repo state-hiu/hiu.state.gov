@@ -1,13 +1,29 @@
-{% assign odd = false %}{% if include.odd %}{% assign odd = include.odd %}{% endif %}
-{% assign li_left_cols = 4 %}{% if include.li_left_cols %}{% assign li_left_cols = include.li_left_cols %}{% endif %}
-{% assign li_right_cols = 8 %}{% if include.li_right_cols %}{% assign li_right_cols = include.li_right_cols %}{% endif %}
-{% assign li_thumbnail_width = 300 %}{% if include.li_thumbnail_width %}{% assign li_thumbnail_width = include.li_thumbnail_width %}{% endif %}
-{% assign li_thumbnail_height = 300 %}{% if include.li_thumbnail_height %}{% assign li_thumbnail_height = include.li_thumbnail_height %}{% endif %}
+{% assign odd = false %}
+{% if include.odd %}
+  {% assign odd = include.odd %}
+{% endif %}
+{% assign li_left_cols = 4 %}
+{% if include.li_left_cols %}
+  {% assign li_left_cols = include.li_left_cols %}
+{% endif %}
+{% assign li_right_cols = 8 %}
+{% if include.li_right_cols %}
+  {% assign li_right_cols = include.li_right_cols %}
+{% endif %}
+{% assign li_thumbnail_width = 300 %}
+{% if include.li_thumbnail_width %}
+  {% assign li_thumbnail_width = include.li_thumbnail_width %}
+{% endif %}
+{% assign li_thumbnail_height = 300 %}
+{% if include.li_thumbnail_height %}
+  {% assign li_thumbnail_height = include.li_thumbnail_height %}
+{% endif %}
 {% if odd == true %}
     {% assign li_class = 'listitem row odd' %}
 {% else %}
     {% assign li_class = 'listitem row' %}
 {% endif %}
+
 <div class="{{ li_class }}" id="{{ product.title }}" style="margin-bottom: 15px;">
     <div class="col-md-{{ li_left_cols }}">
           <a class="listitem-thumbnail" data-toggle="modal" data-target="#myModal" data-title="{{ product.title }}" data-img="{{ site.storage.products }}/products/resized/{{ product.product_jpg }}" style="max-width: {{ li_thumbnail_width }}px; max-height: {{ li_thumbnail_height }}px;">
