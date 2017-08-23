@@ -24,4 +24,4 @@ keywords:
   - Water and Sanitation 
 tweet: "Check out the latest HIU product on the link between cholera and malnutrition in Yemen"
 ---
- Cholera- an acute diarrheal illness that can spread rapidly through contaminated food and water- is suspected to have infected more than 500,000 people in Yemen since late April 2017. Children suffering from acute malnutrition are especially susceptible to cholera. 
+Cholera- an acute diarrheal illness that can spread rapidly through contaminated food and water- is suspected to have infected more than 530,000 people in Yemen since late April 2017. Children suffering from acute malnutrition are especially susceptible to cholera. 
