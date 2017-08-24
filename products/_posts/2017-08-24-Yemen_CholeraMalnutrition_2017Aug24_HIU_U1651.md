@@ -10,8 +10,8 @@ product_id: "U1651"
 product_pdf: "Yemen_CholeraMalnutrition_2017Aug24_HIU_U1651.pdf"
 product_jpg: "Yemen_CholeraMalnutrition_2017Aug24_HIU_U1651.jpg"
 thumbnail: "Yemen_CholeraMalnutrition_2017Aug24_HIU_U1651_thumb.jpg"
-lat: 15.55
-lon: 48.51
+lat: 13.20
+lon: 44.16
 keywords:
   - Yemen
   - Cholera
