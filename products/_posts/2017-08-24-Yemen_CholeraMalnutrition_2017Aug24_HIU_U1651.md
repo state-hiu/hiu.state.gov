@@ -2,7 +2,7 @@
 
 layout: product
 category: products
-title: "Yemen: Cholera and Malnutrition"
+title: "Yemen: Combined Impact of Cholera and Malnutrition"
 region_id: "NEA" 
 region_title: "Near East" 
 date_published: 2017-08-24
