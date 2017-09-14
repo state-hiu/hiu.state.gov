@@ -8,10 +8,10 @@ date_published: 2017-09-14
 product_id: "U1655"
 product_pdf: "EastAfrica_MalnutritionandCholera_2017Sep14_HIU_U1655.pdf"
 product_jpg: "EastAfrica_MalnutritionandCholeraPg1_2017Sep14_HIU_U1655.jpg"
-product_jpg_Pg2: "EastAfrica_MalnutritionandCholeraPg2_2017Sep14_HIU_U1655.jpg"
+product_jpg_pg2: "EastAfrica_MalnutritionandCholeraPg2_2017Sep14_HIU_U1655.jpg"
 thumbnail: "EastAfrica_MalnutritionandCholera_2017Sep14_HIU_U1655_thumb.jpg"
-lat: ##.##
-lon: ##.##
+lat: 6.545
+lon: 46.549
 keywords:
   - Horn of Africa
   - Ethiopia
