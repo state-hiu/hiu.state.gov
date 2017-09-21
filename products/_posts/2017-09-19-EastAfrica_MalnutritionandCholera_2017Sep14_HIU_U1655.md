@@ -9,7 +9,7 @@ product_id: "U1655"
 product_pdf: "EastAfrica_MalnutritionandCholera_2017Sep19_HIU_U1655.pdf"
 product_jpg: "EastAfrica_MalnutritionandCholeraPg1_2017Sep19_HIU_U1655.jpg"
 product_jpg_pg2: "EastAfrica_MalnutritionandCholeraPg2_2017Sep19_HIU_U1655.jpg"
-thumbnail: "EastAfrica_MalnutritionandCholera_2017Sep19_HIU_U1655_thumb.jpg"
+thumbnail: "EastAfrica_MalnutritionandCholeraPg1_2017Sep19_HIU_U1655_thumb.jpg"
 lat: 6.545
 lon: 46.549
 keywords:
