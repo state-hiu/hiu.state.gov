@@ -8,7 +8,7 @@ date_published: 2017-10-04
 product_id: "U1664"
 product_pdf: "BanglBurma_RohingyaHumanitarianCrisis_2017Oct03_HIU_U1664.pdf"
 product_jpg: "BanglBurma_RohingyaHumanitarianCrisis_2017Oct03_HIU_U1664.jpg"
-thumbnail: "BanglBurma_RohingyaHumanitarianCrisis_2017Oct03_HIU_U1664.jpg"
+thumbnail: "BanglBurma_RohingyaHumanitarianCrisis_2017Oct03_HIU_U1664_thumb.jpg"
 lat: 21.2269
 lon: 92.3037
 keywords:
