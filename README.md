@@ -11,7 +11,7 @@ Site is tested and built using Ubuntu 16.04. To install locally, the [jekyll](ht
 
 ## Gulp.js
 
-[Gulp](http://gulpjs.com/) is a toolkit for automating painful or time-consuming tasks in your development workflow.
+[Gulp](https://gulpjs.com/) is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
 (note, gulp is not active now, need to re-implement)
 If updated app.js javascript file (`lib/app.js`) , run gulp to minify and strip out comments:
