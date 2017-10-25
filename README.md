@@ -76,6 +76,8 @@ For more information on how Google Analytics Events work, go [here](https://supp
 
 ## Other Notes
 
+- This site uses reverse proxies configured on the server (we use NGINX in production) to redirect the JPG and PDF product URLs to the S3 bucket where HIU products are stored.
+
 #### The events page is depreciated at this time
 
 ## Contributing
