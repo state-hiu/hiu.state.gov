@@ -62,7 +62,8 @@
       height: 39px;
       color: #333;
       font-size: 12pt;
-      overflow: hidden;
+      /*overflow: hidden;*/
+      list-style: none;
       transition: all 80ms; }
       .sidebar-tabs > li:hover, .sidebar-tabs > ul > li:hover {
         color: #000;
