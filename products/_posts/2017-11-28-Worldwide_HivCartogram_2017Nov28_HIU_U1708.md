@@ -4,7 +4,7 @@ category: products
 title: "Worldwide: Adult HIV Prevalence and Estimated Number of Adults and Children Infected with HIV, 2016"
 region_id: "global"
 region_title: "Global & Transnational Products"
-date_published: 2017-11-29
+date_published: 2017-11-28
 product_id: "U1708"
 product_pdf: "Worldwide_HivCartogram_2017Nov28_HIU_U1708.pdf"
 product_jpg: "Worldwide_HivCartogram_2017Nov28_HIU_U1708.jpg"
