@@ -2,7 +2,7 @@
 layout: wrapper_text_news
 category: news
 date: 2018-02-15
-title: "GGI Outreach event and Mapathon"
+title: "GGI Outreach Event and Mapathon"
 photo_url: '../assets/img/news/dmv_mapathon.jpg'
 description: "Lee Schwartz, Director of the Office of the Geographer and Global Issues, and Humanitarian Information Unit (HIU) analysts presented to a group of university students from the Washington metropolitan area. Participants mapped refugee settlements in northern Uganda."
 tweet: ".@stateHIU presented to students in the Washington metropolitan area about the Office of the Geographer, followed by mapathon covering #SouthSudan #refugee settlements in #Uganda"
