@@ -1,7 +1,7 @@
 ---
 layout: product
 category: products
-title: "Democratic Republic of the Congo:UN Peacekeepers Face Conflict-Driven Humanitarian Crisis"
+title: "Democratic Republic of the Congo: UN Peacekeepers Face Conflict-Driven Humanitarian Crisis"
 region_id: "AF"
 region_title: "Africa"
 date_published: 2018-03-28
