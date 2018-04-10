@@ -25,5 +25,4 @@ keywords:
   - ACLED
 tweet: "Peacekeepers in DRC see increased humanitarian challenges ahead of mandate renewal"
 ---
-Expanding political and ethnic conflict in the Democratic Republic of the Congo has increased UN estimates of those needing humanitarian assistance by 96% since January 2017. Over 13 million people will need protection assistance in 2018 while 7.7 million remain food insecure. Greater displacement, civil unrest, and reported human rights violations, all
-resulting from increased violence, add to the challenges faced by the United Nations Organization Stabilization Mission in the Democratic Republic of the Congo (MONUSCO). MONUSCO is mandated to protect civilians and support upcoming elections.
+Expanding political and ethnic conflict in the Democratic Republic of the Congo has increased UN estimates of those needing humanitarian assistance by 96% since January 2017. Over 13 million people will need protection assistance in 2018 while 7.7 million remain food insecure. Greater displacement, civil unrest, and reported human rights violations, all resulting from increased violence, add to the challenges faced by the United Nations Organization Stabilization Mission in the Democratic Republic of the Congo (MONUSCO). MONUSCO is mandated to protect civilians and support upcoming elections.
