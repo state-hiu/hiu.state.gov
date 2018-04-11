@@ -22,4 +22,4 @@ keywords:
   - IDP
 tweet: "Lake Chad Basin: Food Security and Displacement Snapshot"
 ---
-Boko Haram-related conflict continues to restrict humanitrian access in the Lake Chad Basin region, where an esitatmed 10.7 million people need asissance and 2.4 million are displaced. 
+Boko Haram-related conflict continues to restrict humanitarian access in the Lake Chad Basin region, where an estimated 10.7 million people need assistance and 2.4 million are displaced. 
