@@ -403,6 +403,13 @@ $navbar-inverse-color:                      #333 !default;
     }
 }
 
+@media (min-width: 992px) {
+  .modal-xl {
+    width: 90%;
+   max-width:1800px;
+  }
+}
+
 .region_label {
   color: #0A2E52;
   color: #808284;
