@@ -132,6 +132,8 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
     {% if site.ga.enabled == true %}
       {% include main/analytics/analytics_ga_snippet.html %}
     {% endif %}
+    <!-- Google Captcha -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
 
   <body>

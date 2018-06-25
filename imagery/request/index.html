@@ -12,13 +12,13 @@ body {
 }
 
 .main {
-  max-height: 100%;
-  overflow-y:initial;
+    max-height: 100%;
+    overflow-y:initial;
 }
 
 .footer {
-  bottom: none;
-  position: relative
+    bottom: none;
+    position: relative
 }
 
 .navbar-inverse {
@@ -32,7 +32,7 @@ body {
 }
 
 .checkbox label, .radio label {
-   padding-left: 4px;
+    padding-left: 4px;
 }
 
 label.comment {
@@ -51,6 +51,7 @@ label.group-title {
 .navbar-default {
     background-image: none;
 }
+
 .info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
@@ -59,14 +60,17 @@ label.group-title {
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
 }
+
 .info h4 {
     margin: 0 0 5px;
     color: #d73f3f;
 }
+
 /*overides leaflet control layer order so it doesn't appear on top of nav bar*/
 .leaflet-top, .leaflet-bottom {
     z-index: 1;
 }
+
 .required .control-label:not(span):before, td.required:before {
     content: '* ';
     color: #F00;
@@ -101,9 +105,7 @@ label.control-label span:after {
 <script src="{{ site.baseurl }}/lib/leaflet/leaflet-src.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.js"></script>
 
-
 <!-- The bootstrap libraries are already included in the default_bootstrap layout, don't add them again to prevent Uncaught TypeErrors -->
-
 <script type='text/javascript'>
 
 $(document).ready(function(){
@@ -183,13 +185,7 @@ $(document).ready(function(){
               <h1 class="page-title">{{ page.title }}</h1>
             </header>
         </div>
-    <!--
-        <div class="col-md-offset-1 col-md-3">
-            {% include social-media.html %}
-        </div>
-  -->
     </div>
-
 
 <div class="row">
 
@@ -564,13 +560,6 @@ $(document).ready(function(){
               </span>
             </div>
           </div>
-        <!--
-            <div class="input-group date">
-                <input type="text" class="form-control datepicker" id="datepicker" name="delivery_date" value=""    
-                  data-datepicker-startDate="0d" />
-                <span class="input-group-addon right"><i class="glyphicon glyphicon-th"></i> </span>
-            </div>
-        -->
         </div>
 
       <div class="reveal-if-raw-request">
@@ -641,6 +630,11 @@ $(document).ready(function(){
 <div id="map" style="margin-left: auto; margin-right: auto; width: 100%; height: 400px"></div>
 
 <br>
+<!--Google Captcha
+<div class="g-recaptcha" data-sitekey="6Ld-pGAUAAAAACx8r0LOtuIqCg1sXlCmm8qI8o-q"></div>
+
+<br>
+-->
 
 <input type="submit" class="btn btn-primary btn-lg" style="z-index: 1;" value="Submit" />
 
@@ -758,7 +752,7 @@ $("#form").submit(function(event){
         console.log('serializedData: ');
         console.log(serializedData);
 
-        function sumbitForm() {
+        function submitForm() {
 
           // Fire off the request to /form.php
           /*
@@ -901,19 +895,18 @@ $("#form").submit(function(event){
 
         if ( document.getElementById("geojson_file").files.length == 0 ){
           console.log("no files selected");
-
-          console.log('json data1: ');
+          console.log('geojson data1: ');
           console.log(json);
 
           if (json){
-            console.log("json exists");
+            console.log("geojson drawn");
             createGist();
           } else {
             console.log("only DG ID");
             submitForm();
           }
         } else {
-          console.log("file selected");
+          console.log("file selected for upload");
 
           var fileInput = document.getElementById("geojson_file");
 
@@ -925,7 +918,6 @@ $("#form").submit(function(event){
           //http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
           var reader = new FileReader();
 
-          
           reader.onload = function(e) {
               // e.target.result should contain the text
               var uploaded_file = reader.result;
@@ -939,8 +931,6 @@ $("#form").submit(function(event){
           reader.readAsText(file);
           
         }
-
-        
 
         // Prevent default posting of form
         event.preventDefault();
