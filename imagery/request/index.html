@@ -644,6 +644,10 @@ $(document).ready(function(){
   <h3>Your form has been submitted. Thank You!</h3>
 </div>
 
+<div class="container jf-error" style="display:none;" data-redirect="" data-seconds="10">
+  <h3>Error in submitting form, please e-mail us at <a href="mailto:HIU_INFO@state.gov">HIU_INFO@state.gov</a></h3>
+</div>
+
 </section>
 
 <br>
@@ -779,10 +783,11 @@ $("#form").submit(function(event){
           // Callback handler that will be called on failure
           request.fail(function (jqXHR, textStatus, errorThrown){
           // Log the error to the console
-          console.error(
-              "The following error occurred: "+
-              textStatus, errorThrown
-          );
+              console.error(
+                  "The following error occurred: "+
+                  textStatus, errorThrown
+              );
+              $(".jf-error").show();
           });
 
           // Callback handler that will be called regardless
