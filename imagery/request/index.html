@@ -815,10 +815,10 @@ $("#form").submit(function(event){
 
           if (uploaded_file){
               var data = {
-                "description": "posting gist test",
+                "description": "uploaded geojson",
                 "public": true,
                 "files": {
-                  "aoi.geojson": {
+                  "aoi": {
                     "content": uploaded_file
                   }
                 }
@@ -826,10 +826,10 @@ $("#form").submit(function(event){
           } else {
                 //if geojson area drawn
                 var data = {
-                "description": "posting gist test",
+                "description": "user created geojson",
                 "public": true,
                 "files": {
-                  "aoi.geojson": {
+                  "aoi": {
                     "content": JSON.stringify(json)
                   }
                 }
@@ -838,8 +838,10 @@ $("#form").submit(function(event){
 
           //instead of post request as an anynomous gist, need to post to AWS s3
           $.ajax({
-            url: 'https://api.github.com/gists',
+            //url: 'https://api.github.com/gists',
+            url: 'http://localhost:3000/users',
             type: 'POST',
+            contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify(data)
           })
