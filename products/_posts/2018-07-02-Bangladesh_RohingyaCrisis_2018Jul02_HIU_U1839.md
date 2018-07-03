@@ -4,7 +4,7 @@ category: products
 title: "Bangladesh: Monsoons Begin, Worsening Rohingya Crisis"
 region_id: "SCA"
 region_title: "South and Central Asia"
-date_published: 2018-07-03
+date_published: 2018-07-02
 product_id: "U1839"
 product_pdf: "Bangladesh_RohingyaCrisis_2018Jul02_HIU_U1839.pdf"
 product_jpg: "Bangladesh_RohingyaCrisis_2018Jul02_HIU_U1839.jpg"
