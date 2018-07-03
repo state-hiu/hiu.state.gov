@@ -29,6 +29,6 @@ keywords:
   - Non-governmental
   - ISCG
   - Intersector Coordination Group
-tweet: "84 characters"
+tweet: "Monsoons begin, worsening #Rohingya crisis. Natural hazards impact almost 30k #refugees as heavy rains and strong winds hit #CXB #Bangladesh, while aid agencies estimate 215k remain in at-risk areas"
 ---
-Monsoons begin, worsening #Rohingya crisis. Natural hazards impact almost 30k #refugees as heavy rains and strong winds hit #CXB #Bangladesh, while aid agencies estimate 215k remain in at-risk areas. https://hiu.state.gov/#SCA,U1839
+
