@@ -767,10 +767,9 @@ $("#form").submit(function(event){
           */
             
           request = $.ajax({
-          url: "https://script.google.com/macros/s/AKfycbyZ7grQaH1ixo-qfB9su3l1YJQPf4_MdxlK9LTP3bDs7yQYzx2r/exec",
-          type: "post",
-          data: serializedData
-
+              url: "https://script.google.com/macros/s/AKfycbyZ7grQaH1ixo-qfB9su3l1YJQPf4_MdxlK9LTP3bDs7yQYzx2r/exec",
+              type: "post",
+              data: serializedData
           });
 
           // Callback handler that will be called on success
@@ -793,8 +792,8 @@ $("#form").submit(function(event){
           // Callback handler that will be called regardless
           // if the request failed or succeeded
           request.always(function () {
-          // Reenable the inputs
-          $inputs.prop("disabled", false);
+              // Reenable the inputs
+              $inputs.prop("disabled", false);
           });
 
         }
@@ -839,16 +838,18 @@ $("#form").submit(function(event){
           //instead of post request as an anynomous gist, need to post to AWS s3
           $.ajax({
             //url: 'https://api.github.com/gists',
-            url: 'http://localhost:3000/users',
+            //url: 'http://localhost:3000/users',
+            url: 'https://yujbp2w1q9.execute-api.us-east-1.amazonaws.com/dev/users',
             type: 'POST',
             contentType: 'application/json',
             dataType: 'json',
             data: JSON.stringify(data)
           })
           .done( function(e) {
+            console.log('done, display result: e');
             console.log(e);
-            console.log('html_url:');
-            console.log(e.html_url);
+            console.log('Id:');
+            console.log(e.Id);
             //submitForm(e.html_url);
 
 
@@ -863,7 +864,7 @@ $("#form").submit(function(event){
                 request = $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbyZ7grQaH1ixo-qfB9su3l1YJQPf4_MdxlK9LTP3bDs7yQYzx2r/exec",
                 type: "post",
-                data: serializedData + '&geojson_gist=' + e.html_url,
+                data: serializedData + '&geojson=' + e.geojson + '&geojson_id=' + e.Id,
                 });
 
                 // Callback handler that will be called on success
@@ -877,11 +878,12 @@ $("#form").submit(function(event){
 
                 // Callback handler that will be called on failure
                 request.fail(function (jqXHR, textStatus, errorThrown){
-                // Log the error to the console
-                console.error(
-                    "The following error occurred: "+
-                    textStatus, errorThrown
-                );
+                    // Log the error to the console
+                    console.error(
+                        "The following error occurred: "+
+                        textStatus, errorThrown
+                    );
+                    $(".jf-error").show();
                 });
 
                 // Callback handler that will be called regardless
@@ -891,10 +893,10 @@ $("#form").submit(function(event){
                 $inputs.prop("disabled", false);
                 });
 
-
           })
           .fail( function(e) {
             console.warn("gist save error", e);
+            $(".jf-error").show();
           });
         }
 
@@ -912,6 +914,7 @@ $("#form").submit(function(event){
             console.log("only DG ID");
             submitForm();
           }
+
         } else {
           console.log("file selected for upload");
 
