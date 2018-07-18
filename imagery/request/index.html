@@ -932,7 +932,13 @@ $("#form").submit(function(event){
               // e.target.result should contain the text
               var uploaded_file = reader.result;
 
-              console.log('uploaded geojson_file2: ');
+              console.log('uploaded_file before trim');
+              console.log(uploaded_file);
+
+              //https://stackoverflow.com/questions/25676165/javascript-how-do-i-remove-all-the-white-spaces-from-a-json-string-except-the-o
+              uploaded_file = JSON.stringify(JSON.parse(uploaded_file));
+
+              console.log('uploaded_file after trim');
               console.log(uploaded_file);
 
               createGist(uploaded_file);
