@@ -577,31 +577,6 @@ $(document).ready(function(){
       </div>
 
 
-<!--
-<div class='form-group recaptcha'>
-  <script type="text/javascript">
-      function renderReCaptcha(){
-          var jfKey = '6Ldh_QkTAAAAAA1WdrF09PX4bYuZklOKqzAZ916H', // when form loaded from jqueryform.com
-          realKey = '6LdopwYTAAAAABunoQoWr5mZGVpVSmTFumNM8ZfO',
-          theme = 'light',
-          key = -1 !== location.href.indexOf('jqueryform.com/') ? jfKey : realKey;
-          grecaptcha.render( document.getElementById('g-recaptcha'), {
-          'sitekey' : key,
-          'theme' : theme
-        });
-      };
-  </script>
-  <script src="https://www.google.com/recaptcha/api.js?hl=&onload=renderReCaptcha&render=explicit" async defer></script>
-  <div id='g-recaptcha' class='g-recaptcha col_field' data-theme='light' data-sitekey='6LdopwYTAAAAABunoQoWr5mZGVpVSmTFumNM8ZfO'></div>
-</div>
--->
-
-<!--
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" value="" />
--->
-
-
 <div class="form-group c86" data-cid="c86">
     <label class="control-label group-title" for="c86">Requested Imagery Coverage</label>
 </div>
@@ -633,7 +608,7 @@ $(document).ready(function(){
 
 <br>
 <!--Google Captcha-->
-<div class="g-recaptcha" data-sitekey="6Ld-pGAUAAAAACx8r0LOtuIqCg1sXlCmm8qI8o-q"></div>
+<div class="g-recaptcha" data-sitekey="6LdUIGUUAAAAAFhC9G1T_aiCuAckM-HykJo7JcSJ"></div>
 
 <br>
 
@@ -769,8 +744,12 @@ $("#form").submit(function(event){
         //event.preventDefault();
         //var serializedData = $('input[name!=geojson]', this).serialize(); 
 
-        console.log('serializedData: ');
+        console.log('serializedData3: ');
         console.log(serializedData);
+
+        console.log('g-recaptcha');
+        var recaptchaVar = $("#g-recaptcha-response").val();
+        console.log(recaptchaVar);
 
         function submitForm() {
 
@@ -826,6 +805,9 @@ $("#form").submit(function(event){
           //console.log(json);
           //console.log(JSON.stringify(json));
 
+            console.log('recaptchaVar inside of createGIST function');
+            console.log(recaptchaVar);
+
           //http://stackoverflow.com/questions/11110880/save-anonymous-github-gist-with-jquery-ajax
 
           if (uploaded_file){
@@ -842,6 +824,7 @@ $("#form").submit(function(event){
                 //if geojson area drawn
                 var data = {
                 "description": "user created geojson",
+                "g-recaptcha-response":recaptchaVar,
                 "public": true,
                 "files": {
                   "aoi": {
@@ -857,8 +840,8 @@ $("#form").submit(function(event){
           //instead of post request as an anynomous gist, need to post to AWS s3
           $.ajax({
             //url: 'https://api.github.com/gists',
-            //url: 'http://localhost:3000/users',
-            url: 'https://yujbp2w1q9.execute-api.us-east-1.amazonaws.com/dev/users',
+            url: 'http://localhost:3000/users',
+            //url: 'https://yujbp2w1q9.execute-api.us-east-1.amazonaws.com/dev/users',
             type: 'POST',
             contentType: 'application/json',
             dataType: 'json',
@@ -870,15 +853,6 @@ $("#form").submit(function(event){
             console.log('Id:');
             console.log(e.Id);
             //submitForm(e.html_url);
-
-
-                // Fire off the request to /form.php
-                /*
-                request = $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbzZdJsJnOEV95m4LUU_TxXPrON3BmZQjJ9pal9F8QPlRoqJsLmt/exec",
-                type: "post",
-                data: serializedData + '&geojson_gist=' + e.html_url,
-                */
 
                 request = $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbyZ7grQaH1ixo-qfB9su3l1YJQPf4_MdxlK9LTP3bDs7yQYzx2r/exec",
@@ -911,12 +885,13 @@ $("#form").submit(function(event){
                 // Reenable the inputs
                 $inputs.prop("disabled", false);
                 });
-
           })
           .fail( function(e) {
             console.warn("gist save error", e);
             $(".jf-error").show();
           });
+
+
         }
 
         //debugger;
