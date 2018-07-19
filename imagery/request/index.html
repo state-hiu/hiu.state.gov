@@ -105,6 +105,8 @@ label.control-label span:after {
 <script src="{{ site.baseurl }}/lib/leaflet/leaflet-src.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.js"></script>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <!-- The bootstrap libraries are already included in the default_bootstrap layout, don't add them again to prevent Uncaught TypeErrors -->
 <script type='text/javascript'>
 
@@ -615,7 +617,7 @@ $(document).ready(function(){
 <div class="form-group c38 " data-cid="c38">
   <label class="control-label" for="c38">or upload geojson file</label>
 
-    <input type="file" class="form-control" id="geojson_file" name="geojson_file" value="" accept=".geojson" style="height: 50px;"/>
+    <input type="file" id="geojson_file" name="geojson_file" value="" accept=".geojson" style="height: 30px;"/>
   <!--temp moving input outside of div-->
 
 </div>
@@ -635,8 +637,12 @@ $(document).ready(function(){
 
 <br>
 
-
+<div>
 <input type="submit" class="btn btn-primary btn-lg" style="z-index: 1;" value="Submit" />
+    <span style="vertical-align: sub">
+        <i class="fa fa-circle-o-notch fa-spin" id="loadingDiv" style="font-size:24px"></i> Submitting form...
+    </span>
+</div>
 
 </form>
 
@@ -731,6 +737,16 @@ map.fitBounds(bounds);
 
 
 <script>
+
+var $loading = $('#loadingDiv').hide();
+
+$(document)
+  .ajaxStart(function () {
+    $loading.show();
+  })
+  .ajaxStop(function () {
+    $loading.hide();
+  });
 
 // Variable to hold request
 var request;
@@ -834,6 +850,9 @@ $("#form").submit(function(event){
                 }
               }
           }
+
+
+
 
           //instead of post request as an anynomous gist, need to post to AWS s3
           $.ajax({
