@@ -813,6 +813,7 @@ $("#form").submit(function(event){
           if (uploaded_file){
               var data = {
                 "description": "uploaded geojson",
+                "g-recaptcha-response":recaptchaVar,
                 "public": true,
                 "files": {
                   "aoi": {
@@ -835,13 +836,11 @@ $("#form").submit(function(event){
           }
 
 
-
-
           //instead of post request as an anynomous gist, need to post to AWS s3
           $.ajax({
             //url: 'https://api.github.com/gists',
-            url: 'http://localhost:3000/users',
-            //url: 'https://yujbp2w1q9.execute-api.us-east-1.amazonaws.com/dev/users',
+            //url: 'http://localhost:3000/users',
+            url: 'https://yujbp2w1q9.execute-api.us-east-1.amazonaws.com/dev/users',
             type: 'POST',
             contentType: 'application/json',
             dataType: 'json',
