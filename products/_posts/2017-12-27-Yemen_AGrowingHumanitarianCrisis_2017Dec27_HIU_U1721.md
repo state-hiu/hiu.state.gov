@@ -10,8 +10,8 @@ product_pdf: "Yemen_AGrowingHumanitarianCrisis_2017Dec27_HIU_U1721.pdf"
 product_jpg: "Yemen_AGrowingHumanitarianCrisis_pg1_2017Dec27_HIU_U1721.jpg"
 product_jpg_pg2: "Yemen_AGrowingHumanitarianCrisis_pg2_2017Dec27_HIU_U1721.jpg"
 thumbnail: "Yemen_AGrowingHumanitarianCrisis_2017Dec27_HIU_U1721_thumb.jpg"
-lat: 15.55
-lon: 48.51
+lat: 15.342
+lon: 44.201
 keywords:
   - Yemen 
   - Access constraints
