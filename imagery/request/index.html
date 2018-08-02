@@ -105,6 +105,12 @@ label.control-label span:after {
 <script src="{{ site.baseurl }}/lib/leaflet/leaflet-src.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.9/leaflet.draw.js"></script>
 
+<!--https://github.com/marioizquierdo/jquery.serializeJSON-->
+<script type="text/javascript" src="{{ site.baseurl }}/lib/jquery.serializejson.js"></script>
+
+<!--turf.min.js-->
+<script src="{{ site.baseurl }}/lib/turf/turf_ThuAug022018.min.js" charset="utf-8"></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- The bootstrap libraries are already included in the default_bootstrap layout, don't add them again to prevent Uncaught TypeErrors -->
@@ -550,7 +556,23 @@ $(document).ready(function(){
       </div>
 
         <div class="form-group c48 " data-cid="c48">
-          <label class="control-label" for="c48">Deadline for imagery</label>
+          <label class="control-label" for="c48">Imagery needs to collected on this this date or more recent</label>
+
+          <div class="form-group">
+            <div class='input-group date' id='sandbox-container'>
+              
+              <input type="text" class="form-control" id="oldest_suitable_imagery_date" name="oldest_suitable_imagery_date"/>
+
+              <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group c48 " data-cid="c48">
+          <label class="control-label" for="c48">Deadline for Request to be Completed</label>
 
           <div class="form-group">
             <div class='input-group date' id='sandbox-container'>
@@ -639,9 +661,6 @@ $(document).ready(function(){
 </div>
 
 
-<!--TurfJS link-->
-<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v1.3.0/turf.min.js'></script>
-
 <script type="text/javascript">
 
   $(document).ready(function() {
@@ -702,6 +721,17 @@ map.on('draw:created', function(e) {
   console.log(featureGroup.toGeoJSON());
   // get json
   json = featureGroup.toGeoJSON();
+
+   var area = turf.area(json);
+   //limit to 200,000 sq km
+   console.log('what is the area of the json?');
+   //area is outputted in sq meters
+   console.log(area);
+
+   if (area > 200000000000) {
+        alert("Area is too large, please draw an area less than 200,000 square ");
+   }
+
 });
 
 //map.setMaxBounds(bounds);
@@ -751,44 +781,75 @@ $("#form").submit(function(event){
         var recaptchaVar = $("#g-recaptcha-response").val();
         console.log(recaptchaVar);
 
+        formJSON = $('form').serializeJSON();
+        console.log('print form JSON data');
+        console.log(formJSON);
+
         function submitForm() {
 
-          // Fire off the request to /form.php
-          /*
-          request = $.ajax({
-          url: "https://script.google.com/macros/s/AKfycbzZdJsJnOEV95m4LUU_TxXPrON3BmZQjJ9pal9F8QPlRoqJsLmt/exec",
-          type: "post",
-          data: serializedData
-          */
+          //verify captcha
+
+                var data = {
+                "description": "only_verify_captcha",
+                "public": true
+              }
+
+          
+          var newJSON = $.extend({}, data, formJSON);
+          console.log('print newJSON');
+          console.log(newJSON);
+
+          console.log('going to submit only DG id');
+          console.log(data);
+
+          //instead of post request as an anynomous gist, need to post to AWS s3
+          $.ajax({
+            //url: 'https://api.github.com/gists',
+            //url: 'http://localhost:3000/users',
+            url: 'https://yujbp2w1q9.execute-api.us-east-1.amazonaws.com/dev/users',
+            type: 'POST',
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify(newJSON)
+          })
+          .done( function(e) {
+            console.log('done, display result: e, from only_verify_captcha request');
+            console.log(e);
+            console.log('Id:');
             
-          request = $.ajax({
-              url: "https://script.google.com/macros/s/AKfycbyZ7grQaH1ixo-qfB9su3l1YJQPf4_MdxlK9LTP3bDs7yQYzx2r/exec",
-              type: "post",
-              data: serializedData
-          });
+                      request = $.ajax({
+                          url: "https://script.google.com/macros/s/AKfycbyZ7grQaH1ixo-qfB9su3l1YJQPf4_MdxlK9LTP3bDs7yQYzx2r/exec",
+                          type: "post",
+                          data: serializedData
+                      });
 
-          // Callback handler that will be called on success
-          request.done(function (response, textStatus, jqXHR){
-              // Log a message to the console
-              console.log("Hooray, it worked!");
-              $(".jf-thankyou").show();
-          });
+                      // Callback handler that will be called on success
+                      request.done(function (response, textStatus, jqXHR){
+                          // Log a message to the console
+                          console.log("Hooray, it worked!");
+                          $(".jf-thankyou").show();
+                      });
 
-          // Callback handler that will be called on failure
-          request.fail(function (jqXHR, textStatus, errorThrown){
-          // Log the error to the console
-              console.error(
-                  "The following error occurred: "+
-                  textStatus, errorThrown
-              );
-              $(".jf-error").show();
-          });
+                      // Callback handler that will be called on failure
+                      request.fail(function (jqXHR, textStatus, errorThrown){
+                      // Log the error to the console
+                          console.error(
+                              "The following error occurred: "+
+                              textStatus, errorThrown
+                          );
+                          $(".jf-error").show();
+                      });
 
-          // Callback handler that will be called regardless
-          // if the request failed or succeeded
-          request.always(function () {
-              // Reenable the inputs
-              $inputs.prop("disabled", false);
+                      // Callback handler that will be called regardless
+                      // if the request failed or succeeded
+                      request.always(function () {
+                          // Reenable the inputs
+                          $inputs.prop("disabled", false);
+                      });
+            })
+          .fail( function(e) {
+            console.warn("only_verify_captcha save error", e);
+            $(".jf-error").show();
           });
 
         }
@@ -812,8 +873,7 @@ $("#form").submit(function(event){
 
           if (uploaded_file){
               var data = {
-                "description": "uploaded geojson",
-                "g-recaptcha-response":recaptchaVar,
+                "description": "uploaded_geojson",
                 "public": true,
                 "files": {
                   "aoi": {
@@ -824,16 +884,21 @@ $("#form").submit(function(event){
           } else {
                 //if geojson area drawn
                 var data = {
-                "description": "user created geojson",
-                "g-recaptcha-response":recaptchaVar,
+                "description": "user_created_geojson",
                 "public": true,
                 "files": {
                   "aoi": {
+                    //"content": json
                     "content": JSON.stringify(json)
                   }
                 }
               }
           }
+
+
+          var newJSON = $.extend({}, data, formJSON);
+          console.log('print newJSON');
+          console.log(newJSON);
 
 
           //instead of post request as an anynomous gist, need to post to AWS s3
@@ -844,7 +909,7 @@ $("#form").submit(function(event){
             type: 'POST',
             contentType: 'application/json',
             dataType: 'json',
-            data: JSON.stringify(data)
+            data: JSON.stringify(newJSON)
           })
           .done( function(e) {
             console.log('done, display result: e');
@@ -858,7 +923,7 @@ $("#form").submit(function(event){
                 type: "post",
                 data: serializedData + '&geojson=' + e.geojson + '&geojson_id=' + e.Id,
                 });
-
+                
                 // Callback handler that will be called on success
                 request.done(function (response, textStatus, jqXHR){
                     // Log a message to the console
@@ -902,6 +967,7 @@ $("#form").submit(function(event){
 
           if (json){
             console.log("geojson drawn");
+            
             createGist();
           } else {
             console.log("only DG ID");
