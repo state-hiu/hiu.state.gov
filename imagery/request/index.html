@@ -921,7 +921,7 @@ $("#form").submit(function(event){
                 request = $.ajax({
                 url: "https://script.google.com/macros/s/AKfycbyZ7grQaH1ixo-qfB9su3l1YJQPf4_MdxlK9LTP3bDs7yQYzx2r/exec",
                 type: "post",
-                data: serializedData + '&geojson=' + e.geojson + '&geojson_id=' + e.Id,
+                data: serializedData + '&geojson=' + JSON.stringify(json) + '&geojson_id=' + e.Id,
                 });
                 
                 // Callback handler that will be called on success
