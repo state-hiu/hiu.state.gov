@@ -151,33 +151,28 @@ $(document).ready(function(){
   function validateForm() {
 
     var name = document.forms["myForm"]["name"].value;
+    var org = document.forms["myForm"]["org"].value;
+    var email = document.forms["myForm"]["email"].value;
+    var project_title = document.forms["myForm"]["project_title"].value;
+    var project_description = document.forms["myForm"]["project_description"].value;
+
     if (name == "") {
       alert("Name must be filled out");
       return false;
-    }
-
-    var org = document.forms["myForm"]["org"].value;
-    if (org == "") {
+    } else if (org == "") {
       alert("Organization/Affiliation must be filled out");
       return false;
-    }
-
-    var email = document.forms["myForm"]["email"].value;
-    if (email == "") {
+    } else if (email == "") {
       alert("Email must be filled out");
       return false;
-    }
-
-    var project_title = document.forms["myForm"]["project_title"].value;
-    if (project_title == "") {
+    } else if (project_title == "") {
       alert("Project Title must be filled out");
       return false;
-    }
-
-    var project_description = document.forms["myForm"]["project_description"].value;
-    if (project_description == "") {
+    } else if (project_description == "") {
       alert("Project Description must be filled out");
       return false;
+    } else {
+      return true;
     }
 
   }
@@ -203,7 +198,7 @@ $(document).ready(function(){
 
 <section>
 
-  <form name="myForm" id="form" onsubmit="return validateForm()">
+  <form name="myForm" id="form" onsubmit="">
 
       <div class="form-group c66 required col-1" data-cid="c66">
         <label class="control-label" for="c66">Type of Request</label>
@@ -760,6 +755,15 @@ $("#form").submit(function(event){
     if (request) {
     request.abort();
     }
+
+    if ( validateForm() ) {
+      // when its true
+    } else {
+      // when its false exit submit
+      event.preventDefault();
+      return false;
+    }
+
     // setup some local variables
     var $form = $(this);
 
