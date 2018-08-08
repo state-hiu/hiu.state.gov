@@ -142,7 +142,7 @@ $(document).ready(function(){
       }
   });
   $("[data-toggle='tooltip']").tooltip();
-});//]]> 
+});
 
 </script>
 
@@ -599,47 +599,46 @@ $(document).ready(function(){
       </div>
 
 
-<div class="form-group c86" data-cid="c86">
-    <label class="control-label group-title" for="c86">Requested Imagery Coverage</label>
-</div>
+    <div class="form-group c86" data-cid="c86">
+        <label class="control-label group-title" for="c86">Requested Imagery Coverage</label>
+    </div>
 
+    <div class="form-group c58" data-cid="c58">
+          <label class="control-label" for="c58" data-toggle="tooltip" data-placement="right" title="Recommend browsing imagery at https://imagehunter.apollomapping.com/ to speed up request">Digital Globe Catalog ID/s (Optional)</label>
 
-<div class="form-group c58" data-cid="c58">
-      <label class="control-label" for="c58" data-toggle="tooltip" data-placement="right" title="Recommend browsing imagery at https://imagehunter.apollomapping.com/ to speed up request">Digital Globe Catalog ID/s (Optional)</label>
+          <input type="text" class="form-control" id="catalog_id" name="catalog_id" value=""     />
 
-      <input type="text" class="form-control" id="catalog_id" name="catalog_id" value=""     />
+    </div>
 
-</div>
+    <div class="form-group c38 " data-cid="c38">
+      <label class="control-label" for="c38">or upload geojson file</label>
 
-<div class="form-group c38 " data-cid="c38">
-  <label class="control-label" for="c38">or upload geojson file</label>
+        <input type="file" id="geojson_file" name="geojson_file" value="" accept=".geojson" style="height: 30px;"/>
+      <!--temp moving input outside of div-->
 
-    <input type="file" id="geojson_file" name="geojson_file" value="" accept=".geojson" style="height: 30px;"/>
-  <!--temp moving input outside of div-->
+    </div>
 
-</div>
+    <label class="control-label" for="c87">or draw area of interest on map: </label>
 
-<label class="control-label" for="c87">or draw area of interest on map: </label>
+    <br>
+     
+    <!--The col-md-offset centers the div, but the bootstrap div is messing with the leaflet map
+    <div class="col-md-10 col-md-offset-1"> -->
 
-<br>
- 
-<!--The col-md-offset centers the div, but the bootstrap div is messing with the leaflet map
-<div class="col-md-10 col-md-offset-1"> -->
+    <div id="map" style="margin-left: auto; margin-right: auto; width: 100%; height: 400px"></div>
 
-<div id="map" style="margin-left: auto; margin-right: auto; width: 100%; height: 400px"></div>
+    <br>
+    <!--Google Captcha-->
+    <div class="g-recaptcha" data-sitekey="6LdUIGUUAAAAAFhC9G1T_aiCuAckM-HykJo7JcSJ"></div>
 
-<br>
-<!--Google Captcha-->
-<div class="g-recaptcha" data-sitekey="6LdUIGUUAAAAAFhC9G1T_aiCuAckM-HykJo7JcSJ"></div>
+    <br>
 
-<br>
-
-<div>
-<input type="submit" class="btn btn-primary btn-lg" style="z-index: 1;" value="Submit" />
-    <span id="loadingDiv" style="vertical-align: sub">
-        <i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> Submitting form...
-    </span>
-</div>
+    <div>
+    <input type="submit" class="btn btn-primary btn-lg" style="z-index: 1;" value="Submit" />
+        <span id="loadingDiv" style="vertical-align: sub">
+            <i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> Submitting form...
+        </span>
+    </div>
 
 </form>
 
@@ -665,13 +664,12 @@ $(document).ready(function(){
 
   $(document).ready(function() {
      $('input[type="radio"]').click(function() {
-         console.log('what input is clicked');
-         console.log($(this));
+         //console.log('what input is clicked');
+         //console.log($(this));
          if($(this).attr('id') == 'raw_imagery') {
-              console.log('reveal');
+              //console.log('reveal');
               $('.reveal-if-raw-request').show();           
          }
-
          else {
               $('.reveal-if-raw-request').hide();   
          }
@@ -722,16 +720,15 @@ map.on('draw:created', function(e) {
   // get json
   json = featureGroup.toGeoJSON();
 
-   var area = turf.area(json);
-   //limit to 200,000 sq km
-   console.log('what is the area of the json?');
-   //area is outputted in sq meters
-   console.log(area);
+  var area = turf.area(json);
+  //limit to 200,000 sq km
+  //console.log('what is the area of the json?');
+  //area is outputted in sq meters
+  //console.log(area);
 
-   if (area > 200000000000) {
-        alert("Area is too large, please draw an area less than 200,000 square ");
+  if (area > 200000000000) {
+      alert("Area is too large, please draw an area less than 200,000 square ");
    }
-
 });
 
 //map.setMaxBounds(bounds);
@@ -759,256 +756,236 @@ var request;
 // Bind to the submit event of our form
 $("#form").submit(function(event){
 
-        // Abort any pending request
-        if (request) {
-        request.abort();
-        }
-        // setup some local variables
-        var $form = $(this);
+    // Abort any pending request
+    if (request) {
+    request.abort();
+    }
+    // setup some local variables
+    var $form = $(this);
 
-        // Let's select and cache all the fields
-        var $inputs = $form.find("input, select, button, textarea");
+    // Let's select and cache all the fields
+    var $inputs = $form.find("input, select, button, textarea");
 
-        // Serialize the data in the form
-        var serializedData = $form.serialize();
-        //event.preventDefault();
-        //var serializedData = $('input[name!=geojson]', this).serialize(); 
+    // Serialize the data in the form
+    var serializedData = $form.serialize();
+    //event.preventDefault();
+    //var serializedData = $('input[name!=geojson]', this).serialize(); 
 
-        console.log('serializedData3: ');
-        console.log(serializedData);
+    //console.log('serializedData3: ');
+    //console.log(serializedData);
 
-        console.log('g-recaptcha');
-        var recaptchaVar = $("#g-recaptcha-response").val();
-        console.log(recaptchaVar);
+    //console.log('g-recaptcha');
+    var recaptchaVar = $("#g-recaptcha-response").val();
+    //console.log(recaptchaVar);
 
-        formJSON = $('form').serializeJSON();
-        console.log('print form JSON data');
-        console.log(formJSON);
+    formJSON = $('form').serializeJSON();
+    //console.log('print form JSON data');
+    //console.log(formJSON);
 
-        function submitForm() {
+    function submitForm() {
 
-          //verify captcha
+      var data = {
+      "description": "only_verify_captcha",
+      "public": true
+      }
+      
+      var newJSON = $.extend({}, data, formJSON);
 
-                var data = {
-                "description": "only_verify_captcha",
-                "public": true
+      //console.log('print newJSON');
+      //console.log(newJSON);
+
+      //console.log('going to submit only DG id');
+      //console.log(data);
+
+      //instead of post request as an anynomous gist, it is posted on AWS
+      $.ajax({
+        //url: 'https://api.github.com/gists',
+        //url: 'http://localhost:3000/forms',
+        url: 'https://yujbp2w1q9.execute-api.us-east-1.amazonaws.com/dev/forms',
+        type: 'POST',
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify(newJSON)
+      })
+      .done( function(e) {
+        console.log('done, display result: e, from only_verify_captcha request');
+        console.log(e);        
+
+        //post form data to Google Sheets
+        request = $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbyZ7grQaH1ixo-qfB9su3l1YJQPf4_MdxlK9LTP3bDs7yQYzx2r/exec",
+            type: "post",
+            data: serializedData
+        });
+        // Callback handler that will be called on success
+        request.done(function (response, textStatus, jqXHR){
+            // Log a message to the console
+            // console.log("Hooray, it worked!");
+            $(".jf-thankyou").show();
+        });
+        // Callback handler that will be called on failure
+        request.fail(function (jqXHR, textStatus, errorThrown){
+            // Log the error to the console
+              console.error(
+                  "The following error occurred: "+
+                  textStatus, errorThrown
+              );
+              $(".jf-error").show();
+        });
+        // Callback handler that will be called regardless
+        // if the request failed or succeeded
+        request.always(function () {
+            // Reenable the inputs
+            $inputs.prop("disabled", false);
+        });
+      })
+      .fail( function(e) {
+        console.warn("only_verify_captcha save error", e);
+        $(".jf-error").show();
+      });
+
+    }
+
+    function submitForm_w_geojson(uploaded_file) {
+      
+      // Let's disable the inputs for the duration of the Ajax request.
+      // Note: we disable elements AFTER the form data has been serialized.
+      // Disabled form elements will not be serialized.
+      $inputs.prop("disabled", true);
+
+      //console.log('json data: ');
+      //console.log(json);
+      //console.log(JSON.stringify(json));
+
+      //http://stackoverflow.com/questions/11110880/save-anonymous-github-gist-with-jquery-ajax
+
+      if (uploaded_file){
+          var data = {
+            "description": "uploaded_geojson",
+            "public": true,
+            "files": {
+              "aoi": {
+                "content": uploaded_file
               }
-
-          
-          var newJSON = $.extend({}, data, formJSON);
-          console.log('print newJSON');
-          console.log(newJSON);
-
-          console.log('going to submit only DG id');
-          console.log(data);
-
-          //instead of post request as an anynomous gist, need to post to AWS s3
-          $.ajax({
-            //url: 'https://api.github.com/gists',
-            //url: 'http://localhost:3000/users',
-            url: 'https://yujbp2w1q9.execute-api.us-east-1.amazonaws.com/dev/users',
-            type: 'POST',
-            contentType: 'application/json',
-            dataType: 'json',
-            data: JSON.stringify(newJSON)
-          })
-          .done( function(e) {
-            console.log('done, display result: e, from only_verify_captcha request');
-            console.log(e);
-            console.log('Id:');
-            
-                      request = $.ajax({
-                          url: "https://script.google.com/macros/s/AKfycbyZ7grQaH1ixo-qfB9su3l1YJQPf4_MdxlK9LTP3bDs7yQYzx2r/exec",
-                          type: "post",
-                          data: serializedData
-                      });
-
-                      // Callback handler that will be called on success
-                      request.done(function (response, textStatus, jqXHR){
-                          // Log a message to the console
-                          console.log("Hooray, it worked!");
-                          $(".jf-thankyou").show();
-                      });
-
-                      // Callback handler that will be called on failure
-                      request.fail(function (jqXHR, textStatus, errorThrown){
-                      // Log the error to the console
-                          console.error(
-                              "The following error occurred: "+
-                              textStatus, errorThrown
-                          );
-                          $(".jf-error").show();
-                      });
-
-                      // Callback handler that will be called regardless
-                      // if the request failed or succeeded
-                      request.always(function () {
-                          // Reenable the inputs
-                          $inputs.prop("disabled", false);
-                      });
-            })
-          .fail( function(e) {
-            console.warn("only_verify_captcha save error", e);
-            $(".jf-error").show();
-          });
-
-        }
-
-
-        function createGist(uploaded_file) {
-          
-          // Let's disable the inputs for the duration of the Ajax request.
-          // Note: we disable elements AFTER the form data has been serialized.
-          // Disabled form elements will not be serialized.
-          $inputs.prop("disabled", true);
-
-          //console.log('json data: ');
-          //console.log(json);
-          //console.log(JSON.stringify(json));
-
-            console.log('recaptchaVar inside of createGIST function');
-            console.log(recaptchaVar);
-
-          //http://stackoverflow.com/questions/11110880/save-anonymous-github-gist-with-jquery-ajax
-
-          if (uploaded_file){
-              var data = {
-                "description": "uploaded_geojson",
-                "public": true,
-                "files": {
-                  "aoi": {
-                    "content": uploaded_file
-                  }
-                }
-              }
-          } else {
-                //if geojson area drawn
-                var data = {
-                "description": "user_created_geojson",
-                "public": true,
-                "files": {
-                  "aoi": {
-                    //"content": json
-                    "content": JSON.stringify(json)
-                  }
-                }
-              }
+            }
           }
-
-
-          var newJSON = $.extend({}, data, formJSON);
-          console.log('print newJSON');
-          console.log(newJSON);
-
-
-          //instead of post request as an anynomous gist, need to post to AWS s3
-          $.ajax({
-            //url: 'https://api.github.com/gists',
-            //url: 'http://localhost:3000/users',
-            url: 'https://yujbp2w1q9.execute-api.us-east-1.amazonaws.com/dev/users',
-            type: 'POST',
-            contentType: 'application/json',
-            dataType: 'json',
-            data: JSON.stringify(newJSON)
-          })
-          .done( function(e) {
-            console.log('done, display result: e');
-            console.log(e);
-            console.log('Id:');
-            console.log(e.Id);
-            //submitForm(e.html_url);
-
-                request = $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbyZ7grQaH1ixo-qfB9su3l1YJQPf4_MdxlK9LTP3bDs7yQYzx2r/exec",
-                type: "post",
-                data: serializedData + '&geojson=' + JSON.stringify(json) + '&geojson_id=' + e.Id,
-                });
-                
-                // Callback handler that will be called on success
-                request.done(function (response, textStatus, jqXHR){
-                    // Log a message to the console
-                    console.log("Hooray, it worked!");
-                    $(".jf-thankyou").show();
-                    console.log("drawn json: ");
-                    console.log(json);
-                });
-
-                // Callback handler that will be called on failure
-                request.fail(function (jqXHR, textStatus, errorThrown){
-                    // Log the error to the console
-                    console.error(
-                        "The following error occurred: "+
-                        textStatus, errorThrown
-                    );
-                    $(".jf-error").show();
-                });
-
-                // Callback handler that will be called regardless
-                // if the request failed or succeeded
-                request.always(function () {
-                // Reenable the inputs
-                $inputs.prop("disabled", false);
-                });
-          })
-          .fail( function(e) {
-            console.warn("gist save error", e);
-            $(".jf-error").show();
-          });
-
-
-        }
-
-        //debugger;
-
-        if ( document.getElementById("geojson_file").files.length == 0 ){
-          console.log("no files selected");
-          console.log('geojson data1: ');
-          console.log(json);
-
-          if (json){
-            console.log("geojson drawn");
-            
-            createGist();
-          } else {
-            console.log("only DG ID");
-            submitForm();
+      } else {
+            //if geojson area drawn
+            var data = {
+            "description": "user_created_geojson",
+            "public": true,
+            "files": {
+              "aoi": {
+                //"content": json
+                "content": JSON.stringify(json)
+              }
+            }
           }
+      }
 
-        } else {
-          console.log("file selected for upload");
+      var newJSON = $.extend({}, data, formJSON);
+      //console.log('print newJSON');
+      //console.log(newJSON);
 
-          var fileInput = document.getElementById("geojson_file");
 
-          var file = fileInput.files[0];
+      //instead of post request as an anynomous gist, it is posted on AWS
+      $.ajax({
+        //url: 'https://api.github.com/gists',
+        //url: 'http://localhost:3000/forms',
+        url: 'https://yujbp2w1q9.execute-api.us-east-1.amazonaws.com/dev/forms',
+        type: 'POST',
+        contentType: 'application/json',
+        dataType: 'json',
+        data: JSON.stringify(newJSON)
+      })
+      .done( function(e) {
+        console.log('done, display result: e');
+        console.log(e);
+        //console.log('Id:');
+        //console.log(e.Id);
 
-          console.log('uploaded geojson_file: ');
-          console.log(geojson_file);
+        request = $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbyZ7grQaH1ixo-qfB9su3l1YJQPf4_MdxlK9LTP3bDs7yQYzx2r/exec",
+            type: "post",
+            data: serializedData + '&geojson=' + JSON.stringify(json) + '&geojson_id=' + e.Id,
+        });
+            
+        // Callback handler that will be called on success
+        request.done(function (response, textStatus, jqXHR){
+            // Log a message to the console
+            //console.log("Hooray, it worked!");
+            $(".jf-thankyou").show();
+            //console.log("drawn json: ");
+            //console.log(json);
+        });
 
-          //http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
-          var reader = new FileReader();
+        // Callback handler that will be called on failure
+        request.fail(function (jqXHR, textStatus, errorThrown){
+            // Log the error to the console
+            console.error(
+                "The following error occurred: "+
+                textStatus, errorThrown
+            );
+            $(".jf-error").show();
+        });
 
-          reader.onload = function(e) {
-              // e.target.result should contain the text
-              var uploaded_file = reader.result;
+        // Callback handler that will be called regardless
+        // if the request failed or succeeded
+        request.always(function () {
+        // Reenable the inputs
+        $inputs.prop("disabled", false);
+        });
+      })
+      .fail( function(e) {
+        console.warn("gist save error", e);
+        $(".jf-error").show();
+      });
 
-              console.log('uploaded_file before trim');
-              console.log(uploaded_file);
+    }
 
-              //https://stackoverflow.com/questions/25676165/javascript-how-do-i-remove-all-the-white-spaces-from-a-json-string-except-the-o
-              uploaded_file = JSON.stringify(JSON.parse(uploaded_file));
+    // after submit form button is clicked, the code checks to see if the uploaded a geojson file
+    if ( document.getElementById("geojson_file").files.length == 0 ){
+      //console.log("no geojson file uploaded");
+      if (json){
+        //console.log("geojson drawn");
+        submitForm_w_geojson();
+      } else {
+        //console.log("only DG ID provided");
+        submitForm();
+      }
+    } else {
+        //console.log("file selected for upload");
 
-              console.log('uploaded_file after trim');
-              console.log(uploaded_file);
+        var fileInput = document.getElementById("geojson_file");
+        var file = fileInput.files[0];
 
-              createGist(uploaded_file);
-          };
+        //console.log('uploaded geojson_file: ');
+        //console.log(geojson_file);
 
-          reader.readAsText(file);
-          
-        }
+        //http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api
+        var reader = new FileReader();
 
-        // Prevent default posting of form
-        event.preventDefault();
+        reader.onload = function(e) {
+          // e.target.result should contain the text
+          var uploaded_file = reader.result;
+
+          //console.log('uploaded_file before trim');
+          //console.log(uploaded_file);
+
+          //https://stackoverflow.com/questions/25676165/javascript-how-do-i-remove-all-the-white-spaces-from-a-json-string-except-the-o
+          uploaded_file = JSON.stringify(JSON.parse(uploaded_file));
+
+          //console.log('uploaded_file after trim');
+          //console.log(uploaded_file);
+
+          submitForm_w_geojson(uploaded_file);
+        };
+
+        reader.readAsText(file);
+    }
+
+    // Prevent default posting of form
+    event.preventDefault();
 
 });
 
