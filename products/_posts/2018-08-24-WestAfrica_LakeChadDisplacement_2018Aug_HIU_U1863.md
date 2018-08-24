@@ -6,9 +6,9 @@ region_id: "AF"
 region_title: "Africa"
 date_published: 2018-08-24
 product_id: "U1863"
-product_pdf: "WestAfrica_LakeChadDisplacement_2018Aug_HIU_U1863.pdf"
-product_jpg: "WestAfrica_LakeChadDisplacement_2018Aug_HIU_U1863.jpg"
-thumbnail: "WestAfrica_LakeChadDisplacement_2018Aug_HIU_U1863_thumb.jpg"
+product_pdf: "WestAfrica_LakeChadDisplacement_2018Aug23_HIU_U1863.pdf"
+product_jpg: "WestAfrica_LakeChadDisplacement_2018Aug23_HIU_U1863.jpg"
+thumbnail: "WestAfrica_LakeChadDisplacement_2018Aug23_HIU_U1863_thumb.jpg"
 lat: 13.0
 lon: 14.0
 keywords:
