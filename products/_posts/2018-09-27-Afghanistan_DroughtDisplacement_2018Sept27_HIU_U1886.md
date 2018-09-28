@@ -7,9 +7,9 @@ region_id: "SCA"
 region_title: "South and Central Asia"
 date_published: 2018-09-27
 product_id: "U1886"
-product_pdf: "Afghanistan_DroughtDisplacement_2018Sep27_HIU_U1886.pdf"
-product_jpg: "Afghanistan_DroughtDisplacement_2018Sep27_HIU_U1886.jpg"
-thumbnail: "Afghanistan_DroughtDisplacement_2018Sep27_HIU_U1886_thumb.jpg"
+product_pdf: "Afghanistan_DroughtDisplacement_2018Sept27_HIU_U1886.pdf"
+product_jpg: "Afghanistan_DroughtDisplacement_2018Sept27_HIU_U1886.jpg"
+thumbnail: "Afghanistan_DroughtDisplacement_2018Sept27_HIU_U1886_thumb.jpg"
 lat: 34.35
 lon: 65.70
 keywords:
