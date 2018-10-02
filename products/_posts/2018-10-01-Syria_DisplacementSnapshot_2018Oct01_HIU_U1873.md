@@ -5,7 +5,7 @@ title: "Syria: Conflict without Borders: Numbers and Locations of Refugees and I
 region_id: "NEA"
 region_title: "Near East" 
 product_id: "U1873"
-date_published: 2018-10-02
+date_published: 2018-10-01
 product_pdf: "Syria_DisplacementSnapshot_2018Oct01_HIU_U1873.pdf"
 product_jpg: "Syria_DisplacementSnapshot_2018Oct01_HIU_U1873.jpg"
 thumbnail: "Syria_DisplacementSnapshot_2018Oct01_HIU_U1873_thumb.jpg"
