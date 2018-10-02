@@ -1,7 +1,7 @@
 ---
 layout: product
 category: products
-title: "(U) Syria: Conflict without Borders: Numbers and Locations of Refugees and IDPs as of 24 September, 2018"
+title: "Syria: Conflict without Borders: Numbers and Locations of Refugees and IDPs as of 24 September, 2018"
 region_id: "NEA"
 region_title: "Near East" 
 product_id: "U1873"
