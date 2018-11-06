@@ -22,6 +22,6 @@ keywords:
   - IDP
   - Refugee
   - Anglophone
-tweet: "The Anglophone crisis displaced an estimated 463,891 and aid access is restricted."
+tweet: "The Anglophone crisis displaces an estimated 463,891 and aid access is restricted."
 ---
 The ongoing Anglophone crisis, in the South-West and North-West regions of Cameroon, continues to worsen with an estimated 464,000 displaced across southern Cameroon and Nigeria.  The worst affected areas are inaccessible to humanitarian aid because of continued violence.
