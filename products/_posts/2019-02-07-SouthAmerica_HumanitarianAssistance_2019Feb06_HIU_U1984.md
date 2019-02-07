@@ -1,3 +1,4 @@
+---
 layout: product
 category: products
 title: "Venezuela Regional Crisis: USG Humanitarian Response"
@@ -25,4 +26,4 @@ keywords:
   - UNICEF 
 tweet: "84 characters"
 ---
-This infographic outlines the countries where Venezuelan refugees and migrants have fled to, and all State Department Bureau of Population, Refugees,and Migration, USAID 			Office of Foreign Disaster Assistance, and USAID Food for Peace programming and contributions to the Venezuela humanitarian response.
+This infographic outlines the countries where Venezuelan refugees and migrants have fled to, and all State Department Bureau of Population, Refugees,and Migration, USAID Office of Foreign Disaster Assistance, and USAID Food for Peace programming and contributions to the Venezuela humanitarian response.
