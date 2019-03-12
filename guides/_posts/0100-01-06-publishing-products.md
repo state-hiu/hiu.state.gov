@@ -62,7 +62,7 @@ Upload thumbnails to the hiu-thumbnail S3 bucket inside the products directory. 
 
 ## Step 4: Create Post
 
-Add a post to [_posts]({{ site.code }}/tree/{{ site.branch }}/products/_posts).  Include all the relevant information.  The abstract should be added after the second `---` and after all the other variables.
+Log into Github and go to the [hiu.state.gov repo](https://github.com/state-hiu/hiu.state.gov). Inside of this repo navigate within the products directory, and then inside the [_posts]({{ site.code }}/tree/{{ site.branch }}/products/_posts) directory. Then create a new file and include all of the relevant information.  The abstract should be added after the second `---` and after all the other variables.
 
 **layout, category**
 
@@ -156,4 +156,4 @@ The humanitarian crisis in Yemen continues to deteriorate with an estimated 21.1
 
 ## Step 5: Double-check
 
-Double check that the product is now visible on the development site.
+Double check that the product is now visible on the development site (http://state-hiu.github.io/hiu.state.gov/).
