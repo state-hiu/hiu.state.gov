@@ -63,13 +63,13 @@ Google Analytics is used to track page views and events.
 
 Each tracked event has the following components:
 
-- Category
+- Category:
 A category is a name that you supply as a way to group objects that you want to track. We are tracking 'product'
 
-- Action
+- Action:
 Typically, you will use the action parameter to name the type of event or interaction you want to track for a particular web object. These are the following actions we are tracking: 'download - JPG', download - 'PDF', 'click - preview', 'link - preview', and 'click new product pin - preview'
 
-- Label
+- Label:
 This is the url fragment of the product. It is in the following format: '# + 'region code' + ',' + 'product id'
 
 For more information on how Google Analytics Events work, go [here](https://support.google.com/analytics/answer/1033068)
