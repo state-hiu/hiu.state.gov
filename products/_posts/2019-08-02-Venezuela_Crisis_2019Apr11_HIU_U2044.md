@@ -4,11 +4,11 @@ category: products
 title: "Venezuela Crisis"
 region_id: "WHA"
 region_title: "Western Hemisphere" 
-date_published: 2019-08-02
+date_published: 2019-08-05
 product_id: "U2118"
 product_pdf: "Venezuela_Crisis_2019Aug02_U2118.pdf"
 product_jpg: "Venezuela_Crisis_2019Aug02_U2118.jpg"
-thumbnail: "Venezuela_Crisis_2019Aug02_U21184_thumb.jpg"
+thumbnail: "Venezuela_Crisis_2019Aug02_HIU_U2118_thumb.jpg"
 lat: 10.00
 lon: -65.00
 keywords:
