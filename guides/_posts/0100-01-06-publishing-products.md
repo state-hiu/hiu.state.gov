@@ -52,7 +52,7 @@ Thumbnails follow very similar naming convention.
 
 ## Step 2: Upload Products
 
-Upload products to the product repository. Upload a pdf and a jpg version using the same filename (make the pdf and jpg filename lowercase). For the public HIU website, products are hosted on AWS S3.  That is `https://s3.amazonaws.com/hiu-products/`. Log into the Amazon Web Services (AWS) console as the hiu-website-user.
+Upload products to the product repository. Upload a pdf and a jpg version using the same filename (make the pdf and jpg filename lowercase). For the public HIU website, products are hosted on AWS S3.  That is `https://s3.amazonaws.com/hiu-products/`. Log into the Amazon Web Services (AWS) console (https://hiu.signin.aws.amazon.com/console) with your issued AWS account.
 
 If a product has more than one page then you need to upload a seperate jpg for each page. For each addional page add an underscore, pg, underscore, and the page number to the file name. (ex. BurundiDisplacement_2016Jan06_HIU_U1337_pg_2.jpg)
 
