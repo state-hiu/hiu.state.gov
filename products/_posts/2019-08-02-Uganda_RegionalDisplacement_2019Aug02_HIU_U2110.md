@@ -5,7 +5,7 @@ title: "Uganda: A Major Country of Refuge"
 region_id: "AF"
 region_title: "Africa" 
 date_published: 2019-08-02
-product_id: "U1577"
+product_id: "U2110"
 product_pdf: "Uganda_RegionalDisplacement_2019Aug02_HIU_U2110.pdf"
 product_jpg: "Uganda_RegionalDisplacement_2019Aug02_HIU_U2110.jpg"
 thumbnail: "Uganda_RegionalDisplacement_2019Aug02_HIU_U2110_thumb.jpg"
