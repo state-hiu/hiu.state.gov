@@ -1,7 +1,7 @@
 name: HIU
 description: "Main website of the U.S. Department of State, Humanitarian Information Unit"
-logo: "/assets/img/hiu_logo.png"
-markdown: redcarpet
+logo: "/assets/img/hiu_logo_twitter.png"
+#markdown: redcarpet
 timezone: America/New_York
 permalink: none
 # Local Dev
@@ -9,8 +9,8 @@ permalink: none
 #url: http://localhost:8000
 #destination: /var/www
 # GitHub Pages
-baseurl: /hiu.state.gov
-url: http://state-hiu.github.io/hiu.state.gov
+#baseurl:
+#url: https://hiu.state.gov
 destination: _site
 # Production
 #baseurl: 
@@ -18,29 +18,19 @@ destination: _site
 #destination: /var/www
 
 # Explicit excludes, including dotfiles to be safe
-exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, node_modules, backups, _assets/img/src-images]
+exclude: [.DS_Store, .git, .gitignore, .vagrant, Gruntfile.js, Vagrantfile, package.json, gulpfile.js, notes.md, node_modules, backups, _assets/img/src-images]
 
 # Markdown Configuration
-redcarpet:
-  extensions: [with_toc_data]
+#redcarpet:
+#  extensions: [with_toc_data]
 
 # General
 edit: true
 code: "https://github.com/state-hiu/hiu.state.gov"
 branch: "gh-pages"
-disclaimer: "This site is produced and maintained by the U.S. Department of State, Humanitarian Information Unit.  For more information see the [About Us](/hiu.state.gov/about) page."
+disclaimer: "The Humanitarian Information Unit, manages this site as a portal for information from the U.S. State Department. External links to other Internet sites should not be construed as an endorsement of the views or privacy policies contained therein."
 privacy: "http://www.state.gov/misc/415.htm"
 copyright: "http://www.state.gov/misc/87529.htm"
-
-# Analytics
-ga:
-  enabled: false
-  code: "UA-XXXXXX-1"
-
-dap:
-  enabled: false
-  agency: DOS
-  subagency: HIU
 
 # Twitter
 twittercard:
@@ -51,10 +41,22 @@ twittercard:
 opengraph:
   enabled: true
 
+# Analytics
+ga:
+  enabled: true
+  code: "UA-24614711-1"
+
+dap:
+  enabled: false
+  agency: DOS
+  subagency: HIU
+
+sass:
+    style: compressed
+
 # Debugging & Testing
 debug:
-  polyfill: false
-  main: true
+  app: true
   angular: false
   bootstrap: false
   jquery: false
@@ -65,7 +67,7 @@ deps:
   angular:
     version: "1.4.0-beta.4"
   jquery:
-    version: "1.9.1"
+    version: "3.1.1"
 
 # GeoNode
 # The first GeoNode is the primary one that is loaded on the homepage.
@@ -79,15 +81,6 @@ geonodes:
     wms: "http://geonode.state.gov/cors/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities"
     tiles: "http://geonode.state.gov/geoserver/gwc/service/tms/1.0.0/geonode%3A{id}@EPSG%3A900913@png/{z}/{x}/{y}.png"
 
-  - id: "cusco"
-    name: "Cusco GeoNode"
-    layers: "http://cuscogeonode.state.gov/layers"
-    csw:
-      xml: "http://cuscogeonode.state.gov/catalogue/csw?request=GetRecords&service=CSW&version=2.0.2&resultType=results&maxRecords=1000&elementsetname=full&typenames=csw:Record&outputschema=http://www.isotc211.org/2005/gmd"
-      json: "http://cuscogeonode.state.gov/catalogue/csw?request=GetRecords&service=CSW&version=2.0.2&resultType=results&maxRecords=1000&elementsetname=full&typenames=csw:Record&outputschema=http://www.isotc211.org/2005/gmd&outputFormat=application/json"
-    wms: "http://cuscogeonode.state.gov/cors/geoserver/wms?SERVICE=WMS&REQUEST=GetCapabilities"
-    tiles: "http://cuscogeonode.state.gov/geoserver/gwc/service/tms/1.0.0/geonode%3A{id}@EPSG%3A900913@png/{z}/{x}/{y}.png"
-
 
 # Document & Media Storage
 storage:
@@ -95,10 +88,17 @@ storage:
   thumbnails_regions: "https://s3.amazonaws.com/hiu-thumbnails/regions"
   thumbnails_guides: "https://s3.amazonaws.com/hiu-thumbnails/guides"
   thumbnails_platforms: "https://s3.amazonaws.com/hiu-thumbnails/platforms"
-  products: "https://s3.amazonaws.com/hiu-products"
+  #products: "https://s3.amazonaws.com/hiu-products"
+  products: "https://hiu.state.gov/hiu-products"
 
 # MapBox
 mapbox:
   access_token: "pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ"
   url_tiles: "https://api.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token="
-  url_utfgrid: "http://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.grid.json?callback={cb}&access_token="
+  #url_utfgrid: "http://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.grid.json?callback={cb}&access_token="
+
+compress_html:
+  blanklines: true
+  comments: all
+
+future: true

@@ -1,83 +1,88 @@
-Prototype of New hiu.state.gov (hiu.state.gov)
+[hiu.state.gov](hiu.state.gov)
 ================
 
 ## Description
 
-Prototype of the U.S. Department of State Humanitarian Information Unit's new public-facing website, hiu.state.gov.
-
-### CyberGIS
-The Humanitarian Information Unit has been developing a sophisticated geographic computing infrastructure referred to as the CyberGIS. The CyberGIS provides highly available, scalable, reliable, and timely geospatial services capable of supporting multiple concurrent projects.  The CyberGIS relies on primarily open source projects, such as PostGIS, GeoServer, GDAL, GeoGit, OGR, and OpenLayers.  The name CyberGIS is dervied from the term geospatial cyberinfrastructure.
-
-### ROGUE
-The Rapid Opensource Geospatial User-Driven Enterprise (ROGUE) Joint Capabilities Technology Demonstration (JCTD) is a two-year research & development project developing the technology for distributed geographic data creation and synchronization in a disconnected environement.  This new technology taken altogether is referred to as GeoSHAPE.  See [http://geoshape.org](http://geoshape.org) for more information.  HIU is leveraging the technology developed through ROGUE to build out the CyberGIS into a robust globally distributed infrastruture.
+The U.S. Department of State Humanitarian Information Unit's new public-facing website, hiu.state.gov.
 
 ## Installation
 
-Installation instructions for Ubuntu 14.04.
+Site is tested and built using Ubuntu 16.04. To install locally, the [jekyll](https://jekyllrb.com/) static site generator is required.
 
-```Shell
-sudo apt-get install nginx
-sudo mkdir /var/www
-sudo chown -R vagrant:vagrant /var/www
-# Edit /etc/nginx/sites-availble/default to listen to :8000 and point to /var/www
-sudo /etc/init.d/nginx restart
-###############
-sudo su -
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-\curl -sSL https://get.rvm.io | bash -s stable
-source /usr/local/rvm/scripts/rvm
-rvm get stable
-rvm list known
-rvm install ruby-2.0.0-p353
-rvm --default use ruby-2.0.0-p353
-gem install jekyll
-gem install redcarpet
-###############
-# Still as root (sudo su -)
-apt-get install npm
-ln -s /usr/bin/nodejs /usr/bin/node
-exit
-###############
-# Back to regular user
-cd ~/hiu.state.gov
-npm install
-sudo npm install -g gulp
-###############
-gulp
-gulp bootstrap:compile
-```
+## Gulp.js
 
-**Extensionless Permalinks**
+[Gulp](https://gulpjs.com/) is a toolkit for automating painful or time-consuming tasks in your development workflow.
 
-```
-# http://jekyllrb.com/docs/permalinks/#extensionless-permalinks
-try_files $uri $uri.html $uri/ =404;
-```
-
-Also, see [http://rickharrison.me/how-to-remove-trailing-slashes-from-jekyll-urls-using-nginx](http://rickharrison.me/how-to-remove-trailing-slashes-from-jekyll-urls-using-nginx).
-
-## Usage
-
-
-If updated less (`src/less`) or javascript (`src/js/`), run gulp to update:
+(note, gulp is not active now, need to re-implement)
+If updated app.js javascript file (`lib/app.js`) , run gulp to minify and strip out comments:
 
 ```
 gulp
 ```
 
-If you updated bootstrap variables (`src/less/bootstrap/variables.less`), re-compile the bootstrap.css with:
+## Implemented Leaflet Extensions
 
-```
-gulp bootstrap:compile
-```
+### leaflet-ajax
 
-## Examples
+Allows you to call JSON via an Ajax call with a jsonp fallback. (https://github.com/calvinmetcalf/leaflet-ajax)
 
-TBD
+### leaflet-list-markers
+
+A Leaflet Control for listing visible markers/features in a interactive box. (https://github.com/stefanocudini/leaflet-list-markers)
+
+Heavy customization was done to the leaflet-list-markers.src.js file. The code builds the product entries that get added to the sidebar. A minimized file will need to get built.
+
+### leaflet-markercluster
+
+Marker Clustering plugin for Leaflet. ver 1.0.3 (https://github.com/Leaflet/Leaflet.markercluster)
+
+Only the MarkCluster.Default.css file is modified for customized style.
+
+### leaflet-sidebar-v2
+
+A responsive sidebar with tabs for Leaflet, OpenLayers, Google Maps, ... (https://github.com/Turbo87/sidebar-v2)
+
+Both the leaflet-sidebar.js and leaflet-sidebar.css files are heavily customized.
+
+## Implemented Search (used in Products Page)
+
+### fuse.js
+Lightweight fuzzy-search Javascript library.  (http://fusejs.io/) 
+
+### Elasticlunr.js 
+Lightweight full-text search engine in Javascript for browser search and offline search. (http://elasticlunr.com/)
+This was also tested, but fuse.js was preferred due to its capabilities for fuzzy search and was faster.
+
+### CSS
+
+multiple libraries are used, however Sass/SCSS is mainly used along with bootstrap. Jekyll provides [built-in support for Sass](https://jekyllrb.com/docs/assets/). The Bootstrap partials are in the _sass directory. The main Sass/SCSS file is named main.scss and is in the css directory. Jekyll automatically processes it and puts it in the site's destination folder.
+
+## Analytics
+
+Google Analytics is used to track page views and events.
+
+Each tracked event has the following components:
+
+- Category:
+A category is a name that you supply as a way to group objects that you want to track. We are tracking 'product'
+
+- Action:
+Typically, you will use the action parameter to name the type of event or interaction you want to track for a particular web object. These are the following actions we are tracking: 'download - JPG', download - 'PDF', 'click - preview', 'link - preview', and 'click new product pin - preview'
+
+- Label:
+This is the url fragment of the product. It is in the following format: '# + 'region code' + ',' + 'product id'
+
+For more information on how Google Analytics Events work, go [here](https://support.google.com/analytics/answer/1033068)
+
+## Other Notes
+
+- This site uses reverse proxies configured on the server (we use NGINX in production) to redirect the JPG and PDF product URLs to the S3 bucket where HIU products are stored.
+
+#### The events page is depreciated at this time
 
 ## Contributing
 
-This prototype is still very much in alpha stage.  HIU is currently accepting pull requests for this repository.
+This website is currently in beta. HIU is currently accepting pull requests for this repository.
 
 ## License
 This project constitutes a work of the United States Government and is not subject to domestic copyright protection under 17 USC § 105.

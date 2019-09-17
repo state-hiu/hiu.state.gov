@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "OBJECTID": 230, "COUNTRY_NA": "Paracel Islands", "Size": "Small italics", "F3_CODE": "XPR", "NUM_CODE": "928" }, "geometry": { "type": "Point", "coordinates": [ 112.3299830109857, 16.835047400780123 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 231, "COUNTRY_NA": "Taiwan", "Size": "Small italics", "F3_CODE": "TWN", "NUM_CODE": "158" }, "geometry": { "type": "Point", "coordinates": [ 120.904201575033198, 23.600849810430823 ] } },
+{ "type": "Feature", "properties": { "OBJECTID": 232, "COUNTRY_NA": "Spratly Islands", "Size": "Small italics", "F3_CODE": "XSP", "NUM_CODE": "929" }, "geometry": { "type": "Point", "coordinates": [ 114.335931120420412, 11.440871380864664 ] } }
+]
+}

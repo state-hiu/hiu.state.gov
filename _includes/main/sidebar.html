@@ -1,0 +1,182 @@
+<div id="sidebar" class="sidebar" >
+        <!-- Nav tabs -->
+        <div class="sidebar-tabs">
+            <ul role="tablist">
+                <li class="active" id="home">
+                  <a href="#home" id="home" role="tab"><i class="fa fa-bars"></i></a>
+                </li>
+                <li>
+                  <a href="#AF" id="AF" title="Africa" role="tab">
+                    <div>AF</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#EAP" id="EAP" title="East Asia and the Pacific" role="tab">
+                    <div>EAP</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#EUR" id="EUR" title="Europe" role="tab">
+                    <div>EUR</div>
+                    <!--<div class='new-product'>2 new</div>-->
+                  </a>
+                </li>
+                <li>
+                  <a href="#NEA" id="NEA" title="Near East" role="tab">
+                    <div>NEA</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#SCA" id="SCA" title="South and Central Asia" role="tab">  <div>SCA</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#WHA" id="WHA" title="Western Hemisphere" role="tab">
+                    <div>WHA</div>
+                  </a>
+                </li>
+                <li id="global-outer">
+                  <a href="#global" id="global" title="Global" role="tab">
+                    <i class="fa fa-globe" style="font-size: 20px;"></i>
+                    <div style="padding-bottom: 3px;">Global</div>
+                  </a>
+                </li>
+
+                <!-- potentially can have an e-mail symbol,search, or twitter symbol
+                <li class="disabled">
+                  <a href="#messages" role="tab"><i class="fa fa-envelope"></i></a>
+                </li>
+                -->
+            </ul>
+            <!--
+            <ul role="tablist">
+                <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
+            </ul>
+            -->
+        </div>
+
+        <!-- Tab panes -->
+        <div class="sidebar-content">
+            <div class="sidebar-container active" id="home">
+                <div class="header-contain-div">
+                  <h1 class="sidebar-header">
+                      Humanitarian Information Unit (HIU)
+                      <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                  </h1>
+                </div>
+                <div class="sidebar-pane active" id="home2" >
+                    <div class="scroll">
+                        <div id='hiu-tab' class='hiu-tab'>
+                          <p><b>This website displays some of the featured products and datasets published by the HIU. Select different regions on the map or on the sidebar tabs to view our products.</b></p>
+
+<!-- former mission statement
+                          <p>The HIU serves as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.</p>
+-->
+
+                          <p>The HIU identifies, creates, and disseminates multidisciplinary information and analysis to U.S. Government decision makers and humanitarian partners. Our subject matter experts produce written and visual analytics on a range of current and enduring humanitarian challenges and complex emergencies worldwide. The HIU employs geographic methods and technologies, serves as an information-sharing node, and manages projects that facilitate the creation of geospatial data.</p>
+
+                          <div id="new-products-legend-outer-div"> 
+                            <div class="new-products-legend circleBase type-new" id="new-products-legend"></div> 
+                            <div class= "new-products-legend new-product-text" style="padding-left:5px;"> New Products</div> 
+                          </div>
+
+
+                        </div>
+                        <div id='product-listings' class='product-listings'></div>
+                     </div>
+                </div>
+            </div>
+            <div class="sidebar-container" id="AF">
+                <div class="header-contain-div">
+                  <h1 class="sidebar-header" id="AF2">Africa<span class="sidebar-close">
+                      <i class="fa fa-caret-left"></i></span>
+                    </h1>
+                </div>
+                <div class="sidebar-pane active" id="AF2" >
+                    <div class='region-product-count' id='AF2' ></div>
+                    <div id='AF-listings' class='AF-listings'></div>
+                </div>
+            </div>
+
+            <div class="sidebar-container" id="EAP">
+                <div class="header-contain-div">
+                  <h1 class="sidebar-header" id="EAP2">East Asia and the Pacific<span class="sidebar-close">
+                      <i class="fa fa-caret-left"></i></span>
+                    </h1>
+                </div>
+                <div class="sidebar-pane active" id="EAP2" >
+                    <div class='region-product-count' id='EAP2' ></div>
+                    <div id='EAP-listings' class='EAP-listings'></div>
+                </div>
+            </div>
+
+            <div class="sidebar-container" id="EUR">
+                <div class="header-contain-div">
+                  <h1 class="sidebar-header" id="EUR2">Europe<span class="sidebar-close">
+                      <i class="fa fa-caret-left"></i></span>
+                    </h1>
+                </div>
+                <div class="sidebar-pane active" id="EUR2" >
+                    <div class='region-product-count' id='EUR2' ></div>
+                    <div id='EUR-listings' class='EUR-listings'></div>
+                </div>
+            </div>
+
+            <div class="sidebar-container" id="NEA">
+                <div class="header-contain-div">
+                  <h1 class="sidebar-header" id="NEA2">Near East<span class="sidebar-close">
+                      <i class="fa fa-caret-left"></i></span>
+                    </h1>
+                </div>
+                <div class="sidebar-pane active" id="NEA2" >
+                    <div class='region-product-count' id='NEA2' ></div>
+                    <div id='NEA-listings' class='NEA-listings'></div>
+                </div>
+            </div>
+
+            <div class="sidebar-container" id="SCA">
+                <div class="header-contain-div">
+                  <h1 class="sidebar-header" id="SCA2">South and Central Asia<span class="sidebar-close">
+                      <i class="fa fa-caret-left"></i></span>
+                    </h1>
+                </div>
+                <div class="sidebar-pane active" id="SCA2" >
+                    <div class='region-product-count' id='SCA2' ></div>
+                    <div id='SCA-listings' class='SCA-listings'></div>
+                </div>
+            </div>
+
+            <div class="sidebar-container" id="WHA">
+                <div class="header-contain-div">
+                  <h1 class="sidebar-header" id="WHA2">Western Hemisphere<span class="sidebar-close">
+                      <i class="fa fa-caret-left"></i></span>
+                    </h1>
+                </div>
+                <div class="sidebar-pane active" id="WHA2" >
+                    <div class='region-product-count' id='WHA2' ></div>
+                    <div id='WHA-listings' class='WHA-listings'></div>
+                </div>
+            </div>
+
+            <div class="sidebar-container" id="global">
+                <div class="header-contain-div">
+                  <h1 class="sidebar-header" id="global2">Global Products<span class="sidebar-close">
+                      <i class="fa fa-caret-left"></i></span>
+                    </h1>
+                </div>
+                <div class="sidebar-pane active" id="global2" >
+                    <div class='region-product-count' id='global2' ></div>
+                    <div id='global-listings' class='global-listings'></div>
+                </div>
+            </div>
+
+            <!--
+            <div class="sidebar-pane" id="settings">
+                <h1 class="sidebar-header">Settings<span class="sidebar-close">
+                  <i class="fa fa-caret-left"></i></span>
+                </h1>
+            </div>
+            -->
+      </div>
+  <!--end of sidebar div-->
+  </div>

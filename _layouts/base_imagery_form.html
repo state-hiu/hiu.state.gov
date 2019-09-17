@@ -1,0 +1,143 @@
+---
+layout: default
+
+dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','//mapgive.state.gov','//geonode.state.gov','//secondarycities.state.gov']
+---
+{% capture v %}{{ site.time | date: '%Y-%m-%dT%H:%M' }}{% endcapture %}
+
+<!DOCTYPE html>
+<html class="svg">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="en_US" />
+    {% if site.twittercard.enabled == true %}
+      {% if page.categories contains "products" %}
+        {% include main/seo/twittercard_product.html %}
+      {% else %}
+        {% include main/seo/twittercard_default.html %}
+      {% endif %}
+    {% endif %}
+    {% if site.opengraph.enabled == true %}
+      {% if page.categories contains "products" %}
+        {% include main/seo/opengraph_product.html %}
+      {% else %}
+        {% include main/seo/opengraph_default.html %}
+      {% endif %}
+    {% endif %}
+    {% for dns in page.dns_prefetch %}
+        <link rel="dns-prefetch" href="{{ dns }}">
+    {% endfor %}
+    <title>{{ page.title }}</title>
+    <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/favicon.ico" />
+
+<!-- CSS / External-->
+
+    <!-- main.css is bootstrap 3.3.7-->
+    <link href="{{ site.baseurl }}/css/main.css" rel="stylesheet"/>
+    
+    <!--bootstrap theme has the form icons-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.css" rel="stylesheet">
+
+    <!-- [ Start: iCheck support ]  -->
+    <link href="https://cdn.jsdelivr.net/icheck/1.0.2/skins/flat/_all.min.css" rel="stylesheet">
+
+    <!--
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" media="all" /> -->
+
+    
+
+    <!-- CSS / Internal: Not using LESS anymore
+    <link href='{{site.baseurl}}/build/css/main.css?v={{ v }}' rel='stylesheet' />
+    -->
+
+    <script src="{{ site.baseurl }}/lib/jquery/3.1.1/jquery-3.1.1.js"></script>
+
+
+
+    {% if site.debug.bootstrap == true %}
+        <script src="{{ site.baseurl }}/lib/bootstrap/3.3.7/bootstrap.js"></script>
+    {% else %}
+        <script src="{{ site.baseurl }}/lib/bootstrap/3.3.7/bootstrap.min.js"></script>
+    {% endif %}
+
+    <script src="{{ site.baseurl }}/lib/bootstrap/bootstrap-datepicker.js"></script>
+
+
+    <!-- JavaScript / Internal -->
+{% comment %}
+
+    {% if site.debug.main == true %}
+    <script src="{{ site.baseurl }}/build/js/main.js?v={{ v }}"></script>
+    {% else %}
+    <script src="{{ site.baseurl }}/build/js/main.min.js?v={{ v }}"></script>
+    {% endif %}
+    {% include main/const_snippet.html %}
+    <script type="text/javascript" language="Javascript">
+        var mb_access_token = '{{ site.mapbox.access_token }}';
+        var mb_url_tiles = '{{ site.mapbox.url_tiles }}' + mb_access_token;
+        var mb_url_utfgrid = '{{ site.mapbox.url_utfgrid }}'+ mb_access_token;
+        var gn_url_tiles = '{{ site.geonodes[0].tiles }}';
+    </script>
+    {% include main/site_snippet.html %}
+    {% include main/tilelayers_snippet.html %}
+    </script>
+    <script type="text/javascript" language="Javascript">
+        var createLink = function(map, layer, label, zIndex)
+        {
+            var link = document.createElement('a');
+            link.href = '#';
+            link.className = 'active';
+            link.innerHTML = label;
+            $(link).data('map', map)
+            $(link).data('layer', layer)
+            $(link).data('zIndex', zIndex)
+            $(link).click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                var map = $(this).data('map');
+                var layer = $(this).data('layer');
+                if(map.hasLayer(layer))
+                {
+                    map.removeLayer(layer);
+                    this.className = ''
+                }
+                else
+                {
+                    map.addLayer(layer);
+                    this.className = 'active';
+                }
+            });
+            return link;
+        };
+    </script>
+
+
+
+    <script type="text/javascript" language="Javascript">
+        $(function(){
+            init_main("mainApp","{{ site.geonodes[0].layers }}");
+        });
+    </script>
+{% endcomment %}
+
+    <!--Digital Analytics Program roll-up, see https://analytics.usa.gov for data-->
+    {% if site.dap.enabled == true %}
+      {% include main/analytics/analytics_dap_snippet.html %}
+    {% endif %}
+    <!-- Google Analytics -->
+    {% if site.ga.enabled == true %}
+      {% include main/analytics/analytics_ga_snippet.html %}
+    {% endif %}
+    <!-- Google Captcha -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+  </head>
+
+  <body>
+    {{ content }}
+  </body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "comment": "Equatorial Guinea"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            9.9755859375,
+            1.5159363834516861
+          ],
+          [
+            7.09716796875,
+            3.118576216781991
+          ],
+          [
+            8.492431640625,
+            3.3050503438610943
+          ]
+        ]
+      }
+    }
+  ]
+}

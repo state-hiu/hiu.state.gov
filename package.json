@@ -19,13 +19,13 @@
   "private": "false",
   "devDependencies": {
     "del": "*",
-    "path": "*",
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-concat": "*",
-    "gulp-jshint": "*",
+    "gulp-jshint": "^2.0.4",
     "gulp-minify": "*",
-    "gulp-uglify": "*",
     "gulp-rename": "*",
-    "gulp-less": "*"
+    "gulp-uglify": "*",
+    "jshint": "^2.9.4",
+    "path": "*"
   }
 }

@@ -1,0 +1,349 @@
+.leaflet-top.leaflet-left {
+  height: 100%;
+}
+
+.leaflet-container {
+  font-size: 15px;
+}
+
+.sidebar {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 35%;
+  min-height: 430px;
+  z-index: 2000; }
+  .sidebar.collapsed {
+    width: 54px; height: 40px; }
+  @media (min-width: 768px) {
+    .sidebar {
+      bottom: 10px;
+      -webkit-transition: width 500ms;
+      transition: width 500ms; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .sidebar {
+      width: 305px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .sidebar {
+      width: 390px; } }
+  @media (min-width: 1200px) {
+    .sidebar {
+      width: 460px; } }
+
+.sidebar-topleft {
+  left: 0; }
+  @media (min-width: 768px) {
+    .sidebar-topleft {
+      left: 0px; } }
+
+.sidebar-right {
+  right: 0; }
+  @media (min-width: 768px) {
+    .sidebar-right {
+      right: 10px; } }
+
+.sidebar-tabs {
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: #e6dccd; }
+  .sidebar-topleft .sidebar-tabs {
+    left: 0; }
+  .sidebar-right .sidebar-tabs {
+    right: 0; }
+  .sidebar-tabs, .sidebar-tabs > ul {
+    position: absolute;
+    width: 50px;
+    margin: 0;
+    padding: 0; }
+    .sidebar-tabs > li, .sidebar-tabs > ul > li {
+      width: 100%;
+      height: 39px;
+      color: #333;
+      font-size: 12pt;
+      /*overflow: hidden;*/
+      list-style: none;
+      transition: all 80ms; }
+      .sidebar-tabs > li:hover, .sidebar-tabs > ul > li:hover {
+        color: #000;
+        background-color: #eee; }
+      .sidebar-tabs > li.active, .sidebar-tabs > ul > li.active {
+        color: #fff;
+        background-color: #0A2E52; }
+      .sidebar-tabs > li.disabled, .sidebar-tabs > ul > li.disabled {
+        color: rgba(51, 51, 51, 0.4); }
+        .sidebar-tabs > li.disabled:hover, .sidebar-tabs > ul > li.disabled:hover {
+          background: transparent; }
+        .sidebar-tabs > li.disabled > a, .sidebar-tabs > ul > li.disabled > a {
+          cursor: default; }
+      .sidebar-tabs > li > a, .sidebar-tabs > ul > li > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        line-height: 30px;
+        color: inherit;
+        text-decoration: none;
+        text-align: center;
+        /* padding-left: 2px; */
+        font-size: 16px; }
+  .sidebar-tabs > ul + ul {
+    bottom: 0; }
+
+li#home {
+  height: 40px;
+}
+
+li#global-outer {
+  height: 57px;
+}
+
+.sidebar-tabs > ul > li#global-outer {
+  overflow: visible;
+}
+
+.sidebar-tabs > ul > li > a#global {
+  line-height: 20px;
+  padding-top: 0px;
+  font-size: 14px;
+}
+
+.sidebar-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left:50px;
+  background-color: rgba(255, 255, 255, 1);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: calc(100% - 50px);
+  -webkit-transition: width 500ms;
+  transition: width 500ms; }
+  .sidebar-topleft .sidebar-content {
+    left: 50px;
+    right: 0; }
+  .sidebar-right .sidebar-content {
+    left: 0;
+    right: 40px; }
+  .sidebar.collapsed > .sidebar-content {
+    overflow-y: hidden; }
+
+.sidebar.collapsed > .sidebar-tabs {
+    overflow-y: hidden; }
+
+.header-contain-div {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+  background-color: #0A2E52;
+  height: 40px;
+  overflow: hidden;
+}
+
+/* have slower transition speed when sidebar collapses on inside divs
+so they is no log with sidebar border collapsing*/
+.header-contain-div.collapsed  { 
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.sidebar-content.collapsed  {
+  width: 0px;
+  transition: width 5000ms;
+}
+
+.sidebar-pane {
+  display: none;
+  left: 0;
+  right: 0;
+  height: calc(100% - 40px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 10px 10px; }
+  .sidebar-pane.active {
+    display: block; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .sidebar-pane {
+      min-width: 265px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .sidebar-pane {
+      min-width: 350px; } }
+  @media (min-width: 1200px) {
+    .sidebar-pane {
+      min-width: 407px; } }
+
+#home2.sidebar-pane  {
+  height: calc(100%-40px);
+}
+
+.sidebar-container {
+  display: none;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+ }
+  .sidebar-container.active {
+    display: block; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .sidebar-container {
+      min-width: 265px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .sidebar-container {
+      min-width: 350px; } }
+  @media (min-width: 1200px) {
+    .sidebar-container {
+      min-width: 407px;
+      height: 100%; } }
+
+.sidebar-header {
+  /*min width will make sure that the header appears smoothly when it is expanded
+  min-width: 420px;*/
+  margin: 0;
+  padding: 0 20px;
+  line-height: 40px;
+  font-size: 16pt;
+  color: #fff;
+  overflow: hidden;
+  height: 40px;
+  background-color: #0A2E52; }
+  .sidebar-right .sidebar-header {
+    padding-left: 40px; }
+
+#AF2.sidebar-header {
+  background-color: #fc944f;
+  color: black;
+}
+#EAP2.sidebar-header {
+  background-color: #fced8d;
+  color: black;
+}
+#EUR2.sidebar-header {
+  background-color: #eeb3cb;
+  color: black;
+}
+#NEA2.sidebar-header {
+  background-color: #b8d773;
+  color: black;
+}
+#SCA2.sidebar-header {
+  background-color: #b5aed6;
+  color: black;
+}
+#WHA2.sidebar-header {
+  background-color: #a8c8e9;
+  color: black;
+}
+
+/*added this class*/
+.sidebar-tall {
+  height: 97%; 
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 0;
+  width: 44px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer; }
+  .sidebar-topleft .sidebar-close {
+    right: 0; }
+  .sidebar-right .sidebar-close {
+    left: 0; }
+
+.sidebar-topleft ~ .sidebar-map {
+  margin-left: 40px; }
+  @media (min-width: 768px) {
+    .sidebar-topleft ~ .sidebar-map {
+      margin-left: 0; } }
+
+.sidebar-right ~ .sidebar-map {
+  margin-right: 40px; }
+  @media (min-width: 768px) {
+    .sidebar-right ~ .sidebar-map {
+      margin-right: 0; } }
+
+.sidebar {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65); }
+  .sidebar.leaflet-touch {
+    box-shadow: none;
+    border-right: 2px solid rgba(0, 0, 0, 0.2); }
+  @media (min-width: 768px) {
+    .sidebar {
+      border-radius: 4px; }
+      .sidebar.leaflet-touch {
+        border: 2px solid rgba(0, 0, 0, 0.2); } }
+
+@media (min-width: 768px) {
+  .sidebar-topleft ~ .sidebar-map .leaflet-left {
+    transition: left 500ms; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar-topleft ~ .sidebar-map .leaflet-left {
+    left: 315px; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sidebar-topleft ~ .sidebar-map .leaflet-left {
+    left: 400px; } }
+
+@media (min-width: 1200px) {
+  .sidebar-topleft ~ .sidebar-map .leaflet-left {
+    left: 470px; } }
+
+@media (min-width: 768px) {
+  .sidebar-topleft.collapsed ~ .sidebar-map .leaflet-left {
+    left: 50px; } }
+
+@media (min-width: 768px) {
+  .sidebar-right ~ .sidebar-map .leaflet-right {
+    transition: right 500ms; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  
+  .sidebar-right ~ .sidebar-map .leaflet-right {
+    right: 315px; 
+  } 
+
+  .sidebar-header {
+    font-size: 12pt;
+  }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .sidebar-right ~ .sidebar-map .leaflet-right {
+    right: 400px; } }
+
+@media (min-width: 1200px) {
+  .sidebar-right ~ .sidebar-map .leaflet-right {
+    right: 470px; } }
+
+@media (min-width: 768px) {
+  .sidebar-right.collapsed ~ .sidebar-map .leaflet-right {
+    right: 50px; } }
+
+.fa-bars {
+    padding-top: 12px;
+}

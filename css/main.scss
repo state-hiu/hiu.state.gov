@@ -1,0 +1,1057 @@
+---
+---
+
+// you should override bootstrap variables before you import bootstrap
+// override the bootstrap brand-primary colour
+
+//$brand-primary: red;
+
+$state-blue: #0A2E52;
+
+$navbar-inverse-color:                      #333 !default;
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "bootstrap";
+
+//////////////////////////////////////////////////////
+/////////////// Custom Code //////////////////////////
+//////////////////////////////////////////////////////
+
+// remainder of sass goes here. If you want to use the bootstrap variables in your own variables, you should put their definitions after
+
+@sprite: "assets/img/mapgive_sprite.svg";
+
+.menu-ui {
+  background:#fff;
+  position:absolute;
+  top:10px;right:10px;
+  z-index:9999;
+  border-radius:3px;
+  width:120px;
+  border:1px solid rgba(0,0,0,0.4);
+  }
+.menu-ui a {
+  font-size:13px;
+  color:#404040;
+  display:block;
+  margin:0;padding:0;
+  padding:10px;
+  text-decoration:none;
+  border-bottom:1px solid rgba(0,0,0,0.25);
+  text-align:center;
+  }
+.menu-ui a:first-child {
+  border-radius:3px 3px 0 0;
+  }
+.menu-ui a:last-child {
+  border:none;
+  border-radius:0 0 3px 3px;
+  }
+.menu-ui a:hover {
+  background:#f8f8f8;
+  color:#404040;
+  }
+.menu-ui a.active {
+  background:#3887BE;
+  color:#FFF;
+  }
+.menu-ui a.active:hover {
+  background:#3074a4;
+  }
+
+/*for mobile devices I'm making the preview thumbnails unclickable*/
+@media (max-width: 400px) {
+  #preview {
+    visibility: hidden;
+  }
+  .listitem .listitem-thumbnail div {
+    background: none;
+  }
+  .listitem .listitem-thumbnail {
+   pointer-events: none;
+   cursor: default;
+  }
+
+}
+
+#hidden-sprite {
+  display: none;
+}
+
+.social {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .social {
+    margin: 70px 0 0;
+  }
+}
+
+@media (max-width: 992px) {
+  img.data-img {
+          max-width: 350px;
+      }
+}
+
+.social li {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.social .share {
+  border-right: 1px solid #51504d;
+  padding-right: 10px;
+  width: auto;
+  height: auto;
+}
+
+.opera-mini .social .share,
+.no-svg .social .share,
+.svg .social .share {
+  background: none;
+}
+
+.social a {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.svg .globe,
+.svg .marker,
+.svg .map,
+.svg .hot,
+.svg .dos,
+.svg .logo,
+.svg .play-button,
+.svg .steps .estimate .clock,
+.svg .social li {
+  background-image: url(@sprite);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 366px 208px;
+}
+
+.svg .social .mail {
+  background-position: -256px -177px;
+  margin-top: 3px;
+}
+
+.svg .social .facebook {
+  background-position: -277px -177px;
+}
+
+.svg .social .twitter {
+  background-position: -298px -177px;
+  margin-top: 2px;
+}
+
+.svg #footer .twitter {
+  margin: 0;
+}
+
+.svg .social .plus {
+  background-position: -319px -177px;
+}
+
+.html {
+    overflow: hidden;
+    height: 100%;
+}
+
+.body {
+    height: 100%;
+    overflow: auto;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    position: relative;
+}
+
+.footer {
+    bottom: 0px;
+    width: 100%;
+    clear: both;
+    position: absolute;
+    height: 73px;
+}
+
+.footer, .push {
+    background-color: #f5f5f5;
+}
+
+.footer-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 2px solid #667764;
+}
+
+#left-footer-menu,#footer-disclaimer {
+    padding-left: 56px;
+    padding-right: 15px;
+    float: left;
+    line-height: 1.3;
+}
+
+#right-footer-menu {
+    padding-right: 75px;
+    padding-left: 20px;
+    float: right;
+    line-height: 1.3;
+}
+
+@media (max-width: 889px) {
+    #footer-disclaimer {
+        display: none;
+    }
+    #right-footer-menu {
+    padding-right: 15px;
+    padding-left: 56px;
+    float: left;
+  }
+}
+
+@media (min-width: 890px) {
+    #footer-disclaimer {
+        display: block;
+    }
+}
+
+.mapgive-font {
+    font-family: "Trebuchet MS",Arial,sans-serif;
+    font-size: 18px;
+}
+
+.nea-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 5px;
+}
+
+.eur-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 5px;
+}
+
+.sca-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+.eap-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 3px;
+}
+
+.af-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.wha-region-font {
+    font-family: "Merriweather-serif";
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.logo-font {
+    font-family: "Trebuchet MS",Arial,sans-serif;
+    font-size: 16px;
+    color: #ffffff
+}
+
+.float-right {
+    float:right;
+}
+
+.header-container {
+    width: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.hiu-logo {
+    display: inline-block;
+    opacity: 1;
+    height: 50px;
+}
+
+.logo {
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+}
+
+.mapgive-logo {
+    height:24px;
+    margin: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    vertical-align: bottom;
+}
+
+#mapgive-logo-padding {
+    padding-top: 15px;
+}
+
+.sameline
+{
+    display: inline-block;
+}
+
+.navbar-brand {
+    float: left;
+    padding: 5px 9px 0px 13px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 100%;
+}
+
+.navbar-inverse {
+    border-bottom: 2px #667764;
+    border-style: solid;
+    background-color: #0A2E52;
+    border-color: #667766;
+    color: #fff;
+  }
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar {
+    height: 61px;
+}
+
+.navbar-right-text {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #0A2E52;
+}
+
+.navbar-nav > li > a {
+    /*padding-bottom: 0px;*/
+    line-height: initial;
+    height: 100%;
+}
+
+.navbar-nav {
+    position: relative;
+    height: 100%;
+    background-color: #0A2E52;
+}
+
+#nav_mapgive a {
+    padding-top: 6px;
+    font-size: 20px;
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+    min-height: 100%;
+    margin-bottom: -58px;
+}
+
+.container {
+    height: 100%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #204d74;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0A2E52;
+    border-color: #204d74;
+}
+
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 1050px;
+    }
+}
+
+@media (min-width: 992px) {
+  .modal-xl {
+    width: 90%;
+   max-width:1800px;
+  }
+}
+
+.region_label {
+  color: #0A2E52;
+  color: #808284;
+
+//  background: rgba(255,255,255,0.8);
+//  background: #808284;
+//  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//  border-radius: 5px;
+
+  padding: 4px 4px 4px 4px;
+  display: inline-block
+}
+
+.info {
+  padding: 6px 8px 25px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #d73f3f;
+}
+
+.leaflet-container .list-markers {
+  visibility: hidden;
+}
+
+.item {
+  display:block;
+  border-bottom:1px solid #eee;
+  padding:10px;
+  text-decoration:none;
+}
+
+.item.active {
+    background-color: #d1d6d1;
+}
+
+.title {
+    display: block;
+    color: #0A2E52;
+    font-weight: 700;
+}
+
+.item > .title-global {
+    display: block;
+    color: 'black';
+    font-weight: 700;
+}
+
+.item > .title {
+    display: block;
+    color: #0A2E52;
+    font-weight: 700;
+}
+
+.item > .title:hover {
+    color: #337ab7;
+}
+
+a.title {
+    text-decoration: none;
+}
+
+a.title:hover {
+    text-decoration: none;
+}
+
+.container2 {
+    width:100%;
+    padding:1%;
+}
+
+.description-image {
+    display: inline-block;
+}
+
+.description-text {
+    padding-top: 5px;
+    padding-left: 5px;
+    vertical-align: top;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+
+#img-container {
+  position: relative;
+}
+
+#preview {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 150px;
+   text-align: center;
+   opacity: 0;
+}
+
+#preview:hover {
+   color: white;
+   opacity: 1;
+   transition: opacity 0.4s ease-in-out;
+}
+
+#hover {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   height:150px;
+   width:150px;
+}
+
+#hover:hover {
+   color:black;
+   background-color: black;
+   opacity: .7;
+   transition: opacity 0.4s ease-in-out;
+}
+
+// icon css 
+.circleBase {
+    border-radius: 50%;
+    // remove if you don't care about IE8
+    behavior: url(PIE.htc);
+}
+
+.type1 {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 4px solid #337ab7;
+    opacity: 1;
+    margin-left: -4px;
+    margin-top: -4px;
+}
+
+.type-new {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 4px solid #f15b0e;
+    opacity: 1;
+    margin-left: -4px;
+    margin-top: -4px;
+}
+
+.new-products-legend {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.glow1 {
+    box-shadow: 0px 0px 12px 2.5px #00b2da;
+}
+
+.glow2 {
+    box-shadow: 0px 0px 12px 4px #00b2da;
+}
+
+.glow1-orange {
+    box-shadow: 0px 0px 12px 2.5px #ff5600;
+}
+
+.glow2-orange {
+    box-shadow: 0px 0px 12px 4px #ff5600;
+}
+
+//somewhere in the next 20 lines is breaking the datepicker window to move with scrolling
+
+// the padding top is very important because the navbar is fixed unless the container
+// div below will overlap with the navbar unless the body or the container has top-padding
+html, body{
+    height: 100%;
+    width: 100%;
+    // disable, not displaying right in IE 11 overflow: hidden;
+    -ms-overflow-style: none;
+    //padding-top: 30px;
+}
+
+body {
+    overflow:hidden;
+    -ms-scroll-limit: 0 0 0 0;
+}
+
+body {
+    padding-top: 60px;
+}
+
+// http://stackoverflow.com/questions/29038596/bootstrap-fixed-header-and-footer-with-scrolling-body-content-area-in-fluid-cont
+.main {
+  max-height: calc(100% - 72px);
+  overflow-y: auto;
+}
+
+.modal-title {
+    margin-top: 5px;
+  }
+
+.nav.nav-tabs {
+  font-size: 16px;
+}
+
+
+@media (max-width: 992px) {
+  .nav > li > a {
+      padding: 10px 10px;
+  }
+  .mapgive-font {
+      font-size: 15px;
+  }
+  .navbar-right-text {
+    padding-top: 5px;
+    padding-top: 5px;
+  }
+  #nav_mapgive {
+    padding-top: 3px;
+  }
+}
+
+#container {
+position: relative;
+height: 100%;
+}
+
+
+//css for news section
+
+a[href].post-excerpt:hover {
+    text-decoration: none;
+}
+
+.body {
+    color: black;
+    font-size: 16px;
+}
+
+a[href].post-excerpt:hover h3 {
+    background-color: #eeeeee;
+}
+f
+h3 {
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+info {
+    display: inline;
+    color: #c6c6c6;
+    white-space: nowrap;
+}
+
+.nav > li {
+    height: 100%;
+}
+
+.navbar-fixed-top {
+    position: absolute;
+}
+
+.navbar-header {
+    position: relative;
+    height: 100%;
+}
+
+/*
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #0A2E52;
+    background-color: #e7e7e7;
+}
+*/
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #0A2E52;
+    background-color: #e7e7e7;
+    border-radius: 5px;
+}
+
+@media (min-width: 1200px) {
+    .navbar-collapse.collapse {
+        height: 100%!important;
+    }
+}
+
+
+@media (max-width: 1200px) {
+  .navbar-header {
+      float: none;
+  }
+  .navbar-left,.navbar-right {
+      float: none !important;
+  }
+  .navbar-toggle {
+      display: block;
+  }
+  .navbar-collapse {
+      border-top: 1px solid transparent;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+      top: 0;
+      border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+      display: none!important;
+  }
+  .navbar-nav {
+      float: none!important;
+      margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+      float: none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  .collapse.in{
+      display:block !important;
+  }
+}
+
+h3.text {
+    display: inline-block;
+    padding: 4px;
+}
+
+.odd {
+    background: #f5f5f5;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.listitem .listitem-thumbnail {
+    position: relative;
+    display: block;
+    // max-width, max-height done set by template
+}
+.listitem .listitem-thumbnail div {
+    display: block;
+    position: absolute;
+    background: rgb(0,0,0);
+    opacity: 0.0;
+    left:0;
+    bottom: 0;
+    width:100%;
+    height: 100%;
+    text-align:center;
+}
+.listitem .listitem-thumbnail:hover div {
+    opacity: 0.8;
+    transition: opacity 0.4s ease-in-out;
+}
+.listitem .listitem-thumbnail div span {
+    display: inline-block;
+    color:white;
+    font-size: 24px;
+    // line height set by template 
+}
+
+img.thumb150 {
+    vertical-align: middle;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.listitem a.thumb150 {
+    display: initial;
+}
+
+.listitem-thumbnail {
+    display: inline-block;
+    color: white;
+    font-size: 24px;
+}
+
+.listitem-thumbnail:hover div {
+    opacity: 0.8;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.listitem:nth-child(even) {background: none;}
+.listitem:nth-child(odd) {
+    background: #f5f5f5;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.entry-tags {
+    display: block;
+    margin-top: .5em;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    line-height: 2.18182;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.entry-tags a {
+    padding: .2em .4em;
+    margin: 0 .2em;
+    background-color: #fff;
+    color: #101010;
+    border-radius: 5px;
+    border: .5px solid #101010;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.entry-tags li
+{
+    display: inline;
+}
+.entry-tags li:before
+{
+    content: ", "
+}
+.entry-tags li:first-child:before
+{
+    content: ""
+}
+
+.new-product {
+    line-height: 0px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #f15b0e;
+    font-style: italic;
+  #text-shadow: 0 0 1px #05e03e;
+}
+
+.new-product-text {
+    line-height: 0px;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: italic;
+  #text-shadow: 0 0 1px #05e03e;
+}
+
+#new-products-legend-outer-div {
+  padding-top: 8px;
+  padding-left: 5px;
+}
+
+.featured-product {
+  line-height: 0px;
+  font-size: 14px;
+  color: #fc7307;
+  font-style: italic;
+  text-shadow: 0 0 1px #ffe109;
+  display: inline-block;
+  padding-left: 5px;
+}
+
+#product-count {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+@media (max-width: 400px) {
+  #product-count {
+    display: block;
+    padding-top: 0px;
+  }
+
+}
+
+
+sup.asterick {
+    top: -0em;
+}
+
+sup.asterick {
+    font-size: 125%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+
+a.title div{
+  display: inline;
+}
+
+.fa-globe {
+    padding-top: 2px;
+}
+
+
+
+
+/*http://gis.stackexchange.com/questions/212820/overriding-leaflet-tooltip-style*/
+.my-region-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: .2em;
+  line-height: 1.2em;
+}
+
+.my-large-country-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .1em;
+  line-height: 1.2em;
+}
+
+.my-large-country-italics-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: .1em;
+  line-height: 1.2em;
+}
+
+.my-medium-country-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .06em;
+  line-height: 1.2em;
+}
+
+.my-medium-country-italics-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: .06em;
+  line-height: 1.2em;
+}
+
+.my-small-country-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .02em;
+  line-height: 1.2em;
+}
+
+.my-small-country-italics-label {
+  background: none;
+  border: none;
+  box-shadow: none;
+  font-family: 'Droid Serif', serif;
+  color: rgb(158,157,159);
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: .02em;
+  line-height: 1.2em;
+  /* word wrap isn't working
+  width:150px;
+  word-wrap:break-word; */
+}
+
+/*This gets rid of a pointer that existed on the labels*/
+.leaflet-tooltip-top:before, .leaflet-tooltip-bottom:before, .leaflet-tooltip-left:before, .leaflet-tooltip-right:before {
+    border: none;
+}
+
+.dropdown-menu-right {
+  left: auto;
+  right: 0px;
+  }
+
+.input-group .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    /*width: 65%;*/
+    margin-bottom: 0;
+}
+
+.input-group.input-group-btn {
+    min-width: 70%; 
+    display: inline-flex; 
+    justify-content: flex-start;
+  }
+
+@media (max-width: 400px) {
+  .input-group.input-group-btn {
+    min-width: 100%; 
+    display: inline-flex; 
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+}
+
+

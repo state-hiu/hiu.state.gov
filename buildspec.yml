@@ -1,0 +1,18 @@
+version: 0.2
+   
+phases:
+  install:
+    runtime-versions:
+        nodejs: 8
+    commands:
+      - apt-get update --assume-yes --no-install-recommends
+      - gem install bundler
+      - bundle install
+  build:
+    commands:
+      - echo "******** Jekyll Build command ********"
+      - bundle exec jekyll build
+      - echo "******** Uploading to S3 ********"
+      - aws s3 sync _site/ s3://hiu.state.gov
+      - echo "******** Deleting AWS CloudFront Cache ********"
+      - aws cloudfront create-invalidation --distribution-id E10JKYM6CSTS12 --paths '/*'

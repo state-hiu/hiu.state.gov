@@ -1,12 +1,26 @@
-<div class="row" style="background:rgb(252, 252, 252); margin-bottom: 15px;">
+{% assign odd = false %}
+
+{% if include.odd %}
+  {% assign odd = include.odd %}
+{% endif %}
+
+{% if odd == true %}
+    {% assign li_class = 'listitem row odd' %}
+{% else %}
+    {% assign li_class = 'listitem row' %}
+{% endif %}
+
+
+<div class="{{ li_class }}" style="margin-bottom: 15px;">
     <div class="col-md-5">
-      <a href="{{ platform.refurl }}"><img src="{{ site.storage.thumbnails_platforms }}/{{ platform.thumbnail_300 }}" width="300" height="300"/></a>
+      <a href="{{ platform.refurl }}">
+        <img class="data-img" src="{{ site.storage.thumbnails_platforms }}/{{ platform.thumbnail_300 }}" width="100%"  style="margin: 10px;border:1px solid #021a40;"/>
+      </a>
     </div>
     <div class="col-md-7">
       <a href="{{ platform.refurl }}"><h3>{{ platform.title }}</h3></a>
       <br>
       {{ platform.content }}
       <hr>
-      <a href="{{ platform.refurl }}"><h3>Discover &gt;&gt;&gt;&gt;</h3></a>
     </div>
 </div>

@@ -1,0 +1,438 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "RUSSIA",
+        "REGION": "Eurasia",
+        "NUM_CODE": 643,
+        "3_CODE": "RUS",
+        "2_CODE": "RU"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.5936279296875,
+          54.677007155737826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Falkland Islands<br>(U.K.)",
+        "REGION": "Western Hemisphere",
+        "NUM_CODE": 234,
+        "3_CODE": "FLK",
+        "2_CODE": "FK",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -58.670324007490834,
+          -51.79687582793045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "PARACEL<br>ISLANDS",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 928,
+        "3_CODE": "XPR",
+        "2_CODE": "XP",
+        "Italics": "Y",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.2802734375,
+          16.573022719182777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "SPRATLY<br>ISLANDS",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 929,
+        "3_CODE": "XSP",
+        "2_CODE": "XS",
+        "Italics": "Y",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.15869140624999,
+          8.624472107633936
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "ANDORRA",
+        "REGION": "Europe",
+        "NUM_CODE": 20,
+        "3_CODE": "AND",
+        "2_CODE": "AD",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.600670779920534,
+          42.54216687164404
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "MACEDONIA",
+        "REGION": "Europe",
+        "NUM_CODE": 807,
+        "3_CODE": "MKD",
+        "2_CODE": "MK",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.77490234375,
+          41.50857729743935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "LUX.",
+        "REGION": "Europe",
+        "NUM_CODE": 442,
+        "3_CODE": "LUX",
+        "2_CODE": "LU",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.13861083984375,
+          49.73335620733158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "SEYCHELLES",
+        "REGION": "Africa",
+        "NUM_CODE": 690,
+        "3_CODE": "SYC",
+        "2_CODE": "SC",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.452764783162365,
+          -4.681731252532813
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "SAO TOME<br>AND PRINCIPE",
+        "REGION": "Africa",
+        "NUM_CODE": 678,
+        "3_CODE": "STP",
+        "2_CODE": "ST",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.610436296336786,
+          0.218392931032582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "KOS.",
+        "REGION": "Europe",
+        "NUM_CODE": 901,
+        "3_CODE": "XKS",
+        "2_CODE": "XK",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          20.9619140625,
+          42.431565872579185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "MOLDOVA",
+        "REGION": "Europe",
+        "NUM_CODE": 498,
+        "3_CODE": "MDA",
+        "2_CODE": "MD",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.619384765624996,
+          47.331377157798244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "BERMUDA",
+        "REGION": "Western Hemisphere",
+        "NUM_CODE": 60,
+        "3_CODE": "BMU",
+        "2_CODE": "BM",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.77961009666653,
+          32.3006898208948
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "THE GAMBIA",
+        "REGION": "Africa",
+        "NUM_CODE": 270,
+        "3_CODE": "GMB",
+        "2_CODE": "GM",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.67474365234375,
+          13.467092893859657
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "MALTA",
+        "REGION": "Europe",
+        "NUM_CODE": 470,
+        "3_CODE": "MLT",
+        "2_CODE": "MT",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.447794081012091,
+          35.902429799647365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "LIECH.",
+        "REGION": "Europe",
+        "NUM_CODE": 438,
+        "3_CODE": "LIE",
+        "2_CODE": "LI",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.55535888671875,
+          47.17477833929903
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Puerto<br>Rico<br>(U.S.)",
+        "REGION": "Western Hemisphere",
+        "NUM_CODE": 630,
+        "3_CODE": "PRI",
+        "2_CODE": "PR",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.41098022460938,
+          18.205871127330347
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "SLOVENIA",
+        "REGION": "Europe",
+        "NUM_CODE": 705,
+        "3_CODE": "SVN",
+        "2_CODE": "SI",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.754638671875,
+          46.03510927947334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "MONT.",
+        "REGION": "Europe",
+        "NUM_CODE": 499,
+        "3_CODE": "MNE",
+        "2_CODE": "ME",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          19.335937499999996,
+          42.924251753870685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "W. Bank",
+        "REGION": "Middle East",
+        "NUM_CODE": 934,
+        "3_CODE": "XWB",
+        "2_CODE": "XW",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.2935791015625,
+          32.10584293285769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Gaz. Str.",
+        "REGION": "Middle East",
+        "NUM_CODE": 916,
+        "3_CODE": "XGZ",
+        "2_CODE": "XG",
+        "Italics": "N",
+        "direction": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.34326171875,
+          31.372399104880525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "AZER.",
+        "REGION": "Eurasia",
+        "NUM_CODE": 31,
+        "3_CODE": "AZE",
+        "2_CODE": "AZ"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          45.5548095703125,
+          39.198205348894795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "EQUA. GUI.",
+        "REGION": "Africa",
+        "NUM_CODE": 226,
+        "3_CODE": "GNQ",
+        "2_CODE": "GQ",
+        "Italics": "N",
+        "direction": "left"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4267578125,
+          3.162455530237848
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "SINGAPORE",
+        "REGION": "Asia-Oceania",
+        "NUM_CODE": 702,
+        "3_CODE": "SGP",
+        "2_CODE": "SG",
+        "Italics": "N",
+        "direction": "right"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8210165757178,
+          1.342327565762872
+        ]
+      }
+    }
+  ]
+}

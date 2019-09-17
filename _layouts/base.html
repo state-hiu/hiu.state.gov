@@ -4,80 +4,121 @@ layout: default
 dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','//mapgive.state.gov','//geonode.state.gov','//secondarycities.state.gov']
 
 ---
+
 {% capture v %}{{ site.time | date: '%Y-%m-%dT%H:%M' }}{% endcapture %}
+
+
+<!DOCTYPE html>
 <html class="svg">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="google" content="notranslate" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Language" content="en_US" />
+
+    <meta id="meta" name="viewport"
+content="width=device-width, initial-scale=1.0" />
+
     {% if site.twittercard.enabled == true %}
       {% if page.categories contains "products" %}
         {% include main/seo/twittercard_product.html %}
+      {% elsif page.categories contains "news" %}
+        {% include main/seo/twittercard_news.html %}
       {% else %}
         {% include main/seo/twittercard_default.html %}
       {% endif %}
     {% endif %}
+
+
     {% if site.opengraph.enabled == true %}
       {% if page.categories contains "products" %}
         {% include main/seo/opengraph_product.html %}
+      {% elsif page.categories contains "news" %}
+        {% include main/seo/opengraph_news.html %}
       {% else %}
         {% include main/seo/opengraph_default.html %}
       {% endif %}
     {% endif %}
+
+
     {% for dns in page.dns_prefetch %}
-    <link rel="dns-prefetch" href="{{ dns }}">
+        <link rel="dns-prefetch" href="{{ dns }}">
     {% endfor %}
     <title>{{ page.title }}</title>
     <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/favicon.ico" />
-    <!-- CSS / External-->
-    <!--<link href="{{ site.baseurl }}/lib/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="{{ site.baseurl }}/lib/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet"/>-->
-    <!--<link href="{{ site.baseurl }}/assets/css/bootstrap.less.css" rel="stylesheet"/>-->
-    <link href="{{ site.baseurl }}/build/bootstrap/bootstrap.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.css" type="text/css" media="all" />
-    <!-- CSS / Internal -->
+
+<!-- CSS / External-->
+
+    <link href="{{ site.baseurl }}/css/main.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" media="all" />
+
+    <!-- CSS / Internal: Not using LESS anymore
     <link href='{{site.baseurl}}/build/css/main.css?v={{ v }}' rel='stylesheet' />
-    <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}</style>
-    <!-- JavaScript / Polyfill -->	
-    {% if site.debug.polyfill == true %}
-    <script src="{{ site.baseurl }}/build/js/polyfill.js?v={{ v }}"></script>
-    {% else %}
-    <script src="{{ site.baseurl }}/build/js/polyfill.min.js?v={{ v }}"></script>
-    {% endif %}
-    <!-- JavaScript / External -->	
-    <!--<script src="{{ site.baseurl }}/lib/jquery/1.7.2/jquery-1.7.2.js"></script>-->
-    {% if site.debug.jquery == true %}
-    <script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.js"></script>
-    <script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui-1.8.14.js"></script>
-    {% else %}
-    <script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.min.js"></script>
-    <script src="{{ site.baseurl }}/lib/jqueryui/jquery-ui-1.8.14.min.js"></script>
-    {% endif %}
-    {% if site.debug.angular == true %}
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular-route.js"></script>
-    {% else %}
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular-route.min.js"></script>
-    {% endif %}
-    {% if site.debug.bootstrap == true %}
-    <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.js"></script>
-    {% else %}
-    <script src="{{ site.baseurl }}/lib/bootstrap/3.3.5/dist/js/bootstrap.min.js"></script>
-    {% endif %}
-    {% if site.debug.leaflet == true %}
-    <script src="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet-src.js"></script>
-    <script src="{{ site.baseurl }}/lib/Leaflet.utfgrid/dist/leaflet.utfgrid-src.js"></script>
-    {% else %}
-    <script src="{{ site.baseurl }}/lib/leaflet/1.0.0-b1/leaflet.js"></script>
-    <script src="{{ site.baseurl }}/lib/Leaflet.utfgrid/dist/leaflet.utfgrid.js"></script>
-    {% endif %}
+    -->
+
+
     <!-- JavaScript / Internal -->
-    {% if site.debug.main == true %}
-    <script src="{{ site.baseurl }}/build/js/main.js?v={{ v }}"></script>
+    <!--jquery UI should work with jquery core 3+ -->
+    {% if site.debug.jquery == true %}
+        <script src="{{ site.baseurl }}/lib/jquery/3.1.1/jquery-3.1.1.js"></script>
+        <script src="{{ site.baseurl }}/lib/jqueryui/1.12.1/jquery-ui.js"></script>
     {% else %}
-    <script src="{{ site.baseurl }}/build/js/main.min.js?v={{ v }}"></script>
+        <script src="{{ site.baseurl }}/lib/jquery/3.1.1/jquery-3.1.1.min.js"></script>
+        <script src="{{ site.baseurl }}/lib/jqueryui/1.12.1/jquery-ui.min.js"></script>
     {% endif %}
+    
+    {% if site.debug.bootstrap == true %}
+        <script src="{{ site.baseurl }}/lib/bootstrap/3.3.7/bootstrap.js"></script>
+    {% else %}
+        <script src="{{ site.baseurl }}/lib/bootstrap/3.3.7/bootstrap.min.js"></script>
+    {% endif %}
+
+
+<div class="modal fade" id="myPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">
+            Humanitarian Information Unit (HIU)
+        </h4>
+      </div>
+      <div class="modal-body">
+        <!--<img id="modal-img" style="max-width:800px;">-->
+        <p>The HIU identifies, creates, and disseminates multidisciplinary information and analysis to U.S. Government decision makers and humanitarian partners. Our subject matter experts produce written and visual analytics on a range of current and enduring humanitarian challenges and complex emergencies worldwide. The HIU employs geographic methods and technologies, serves as an information-sharing node, and manages projects that facilitate the creation of geospatial data.</p>
+
+<!--<p>The HIU serves as a U.S. Government interagency center to identify, collect, analyze, and disseminate all-source information critical to U.S. Government decision-makers and partners in preparation for and response to humanitarian emergencies worldwide, and to promote innovative technologies and best practices for humanitarian information management.</p>-->
+
+        </b>
+        <a href="" class="focus-search" data-dismiss="modal">Search to view our products</a>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script type="text/javascript">
+
+
+      if (screen.width <= 800) {
+        $('#myPopup').modal('show');
+      }
+
+      $( ".focus-search" ).on( "click", function() {
+        console.log('focus-search clicked');
+        setTimeout(function() { $('#inputSuccess1').focus() }, 1000);
+      });
+
+    </script>
+
+
+    <!-- JavaScript / Internal -->
+{% comment %}
+
     {% include main/const_snippet.html %}
     <script type="text/javascript" language="Javascript">
         var mb_access_token = '{{ site.mapbox.access_token }}';
@@ -117,11 +158,16 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
             return link;
         };
     </script>
+
+
+
     <script type="text/javascript" language="Javascript">
         $(function(){
             init_main("mainApp","{{ site.geonodes[0].layers }}");
         });
     </script>
+{% endcomment %}
+
     <!--Digital Analytics Program roll-up, see https://analytics.usa.gov for data-->
     {% if site.dap.enabled == true %}
       {% include main/analytics/analytics_dap_snippet.html %}
@@ -131,7 +177,10 @@ dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','/
       {% include main/analytics/analytics_ga_snippet.html %}
     {% endif %}
   </head>
-  <body>
+
+<body>
     {{ content }}
-  </body>
+</body>
+
+
 </html>

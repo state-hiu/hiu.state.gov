@@ -1,22 +1,29 @@
 <footer class="footer">
       <div class="footer-container">
         <div class="row">
-          <div class="col-md-8" id="left-footer-menu">
+          <div class="clearfix" id="left-footer-menu">
               {% if site.edit == true %}<a href="{{ site.code }}/edit/{{ site.branch }}/{{ page.path }}" style="color:purple;text-decoration:underline;font-weight:bold;">Edit this Page</a> | {% endif %}
               <a href="{{ site.baseurl }}/">Home</a> |
               <a href="{{ site.baseurl }}/products">Products</a> |
               <a target="_blank" href="{{ site.baseurl }}/data">Data</a> |
+              <a href="{{ site.baseurl }}/about" style="white-space: nowrap;">About Us</a> |
               <a target="_blank" href="http://mapgive.state.gov">MapGive</a> |
-              <a target="_blank" href="http://secondarycities.state.gov">Secondary Cities</a> |
-              <a href="{{ site.baseurl }}/about"> About Us</a>
+              <a target="_blank" href="http://secondarycities.state.gov">Secondary Cities</a> 
           </div>
-          <div class="col-md-4" id="right-footer-menu">
+          <div class="clearfix" id="right-footer-menu">
               <a href="{{ site.privacy }}">Privacy Policy</a> |
               <a href="{{ site.copyright }}">Copyright Information</a>
           </div>
       </div>
       <div class="row">
-        <div class="col-md-12" id="footer-disclaimer"><h6><span style="margin-right:4px;font-weight:bold;">Disclaimer:</span>{{ site.disclaimer | markdownify | remove: '<p>' | remove: '</p>' }}</h6></div>
+
+
+        <div class="col-md-12" id="footer-disclaimer">
+          <h6>{{ site.disclaimer | markdownify | remove: '<p>' | remove: '</p>' }}</h6>
+        </div>
+
       </div>
     </div>
 </footer>
+
+

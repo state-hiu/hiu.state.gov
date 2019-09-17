@@ -1,9 +1,0 @@
----
-layout: website
-category: websites
-title: "OSMGeoWeek"
-featured: true
-keywords:
-refurl: "http://osmgeoweek.org"
----
-Website for OpenStreetMap events for National Geography Awareness week.

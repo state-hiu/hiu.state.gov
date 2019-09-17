@@ -1,10 +1,10 @@
 ---
 layout: guide
 category: guides
-title: "ROGUE GeoNode"
-description: "This guide provides instructions for installing and managing a ROGUE GeoNode instance in a production environment.  You can find information about installing a vanilla GeoNode without the advanced data editing and sharing technology at [http://geonode.org/](http://geonode.org/).  You can find more information about ROGUE below and at [http://geoshape.org/](http://geoshape.org/).  Use the directions found at [http://geoshape.org/](http://geoshape.org/) for deploying a ROGUE GeoNode in a development environment."
+title: "ROGUE GeoNode Set-up"
+description: "This guide provides instructions for installing and managing a ROGUE GeoNode instance in a production environment.  You can find more information about ROGUE below and at [http://geoshape.org/](http://geoshape.org/).  Use the directions found at [http://geoshape.org/](http://geoshape.org/) for deploying a ROGUE GeoNode in a development environment."
 version: 1.0
-date_published: 2015-10-07
+date: 2015-10-07
 featured: true
 keywords:
   - cybergis
@@ -76,11 +76,11 @@ Installation only requires 5 simple steps.  Most steps only require executing on
 10. Add OpenStreetMap (OSM) extracts.  [[Jump]](#step-10)
 11. Add styles to baseline [[Jump]](#step-11)
 
-###Kown Issues
+### Known Issues
 1.  This scipt is currently incompatible with the most recent GeoGig Web API implementation.  You can still add remotes manually through MapLoom.  **Do not execute step 6.**
 2.  The SNS hooks are not added to any repository .geogig/hooks directories, since the Geoserver GeoGig hooks implementation is not executing properly.  However, step 7 does not break the installation and you'll be able to test AWS SNS from the command line.
 
-###Step 1
+### Step 1
 
 The first step is install the CyberGIS scripts from the [cybergis-scripts](https://github.com/state-hiu/cybergis-scripts) GitHub repo. As root (`sudo su -`) execute the following commands.
 
@@ -96,7 +96,7 @@ git clone https://github.com/state-hiu/cybergis-scripts.git cybergis-scripts.git
 cp cybergis-scripts.git/profile/cybergis-scripts.sh /etc/profile.d/
 ```
 
-###Step 2
+### Step 2
 
 Log out completely and log back in (or `source /etc/profile.d/cybergis-scripts.sh`).  Remember to become root again (`sudo su -`).  The CyberGIS scripts should now be in every user's path.  We now need to create an account to run GeoNode.  You don't execute any commands as the "rogue" user during installation.  Execute every command as root.
 
@@ -104,7 +104,7 @@ Log out completely and log back in (or `source /etc/profile.d/cybergis-scripts.s
 cybergis-script-rogue.sh prod user
 ```
 
-###Step 3
+### Step 3
 
 You're still root right?  We now need to install RVM (Ruby Version Manager).  RVM is used to install Ruby GEM dependencies.  Chef also uses ruby to manage the integration of custom ROGUE components with a vanilla GeoNode.
 
@@ -119,13 +119,13 @@ Next, install the Ruby GEM Bundler.  See [http://bundler.io/](http://bundler.io/
 cybergis-script-rogue.sh prod bundler
 ```
 
-###Step 4
+### Step 4
 
 We now need to initialize a backend database service for GeoNode to store its catalog and feature data.  We'll then configure the chef configuration files.  GeoNode uses PostGIS to store its catalog and to store non-versioned geospatial data.  By default, GeoNode stores its catalog in the `geonode` database and stores features data in the `geonode_imports` database.  Importantly, GeoGig uses an embedded Berkeley Database.  Make sure to have your `geoserver_data` directory on a large volume, if you will be uploading rasters or large datasets into GeoGig repositories.
 
 There are three different deployment paths enumerated below depending on how you set up your backend database: ([4a](#step-5a)) Amazon Web Sevices (AWS) Relational Databse Service (RDS), ([4b](#step-4b)) PostGIS on a separate instance as GeoNode, or ([4c](#step-4c)) PostGIS on the same instance than GeoNode.
 
-####Step 4a
+#### Step 4a
 In step 4a, you can install PostGIS on AWS RDS.  To install PostGIS ontop of a PostgreSQL AWS RDS instance take the following steps. 
 
 First, you need to lanuch a PostgreSQL RDS instance.  You can follow the instructions found on the AWS website at [http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.PostgreSQL.html](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.PostgreSQL.html).
@@ -186,7 +186,7 @@ cybergis-script-geoshape-configure.py
 
 **Important!!**  Before provisioning, we also need to slightly change `geoshape_external_db.json`.  Add `"recipe[rogue::database]"`, to `/opt/rogue-chef-repo/roles/geoshape_external_db.json` between geoshape_base and rogue.  This is a hotfix, until a RDS (database as a service) role is created.
 
-####Step 4b
+#### Step 4b
 
 **To Be Completed**
 
@@ -199,7 +199,7 @@ Assuming the DB security group has allowed access from the ROGUE GeoNode instanc
 psql --host=XXX.rds.amazonaws.com --port=5432 --username postgres --password
 ```
 
-####Step 4c
+#### Step 4c
 
 For basic installations where PostGIS and GeoNode are on the same instance also referred to as a standalone deployment, configure with the following command.
 
@@ -213,7 +213,7 @@ For example,
 cybergis-script-geoshape-configure.py --fqdn example.com
 ```
 
-###Step 5
+### Step 5
 
 Next, let's install GEM Dependencies.  The following command will run `bundle install` and `berks install` to download dependencies.  It will also download chef cookbooks to `/opt/chef-run/cookbooks`.
 
@@ -237,7 +237,7 @@ GZIP is currently broken in GeoGig.  The ROGUE cookbook disables it by default (
 
 After installation is complete, go to your GeoNode in a browser to confirm it installed properly.  The default user and password is admin and admin.  If installation was successful, continue to install baseline servers and remotes.
 
-###Step 6
+### Step 6
 
 If you add external servers to the baseline, they'll, by default, appear in MapLoom.  Therefore, users will not need to manually add server urls for each map they create.  Server information is stored at the end of `/var/lib/geonode/rogue_geonode/rogue_geonode/settings.py`.
 
@@ -246,7 +246,7 @@ To add a GeoNode server, include the protocol, domain, and port, for example `cy
 ```
 cybergis-script-rogue.sh prod server [geonode|wms|tms] <name> <url>
 ```
-###Step 7
+### Step 7
 
 **Adding remotes from this script is currently broken.  Use MapLoom instead.  DO NOT EXECUTE**
 
@@ -272,7 +272,7 @@ curl -u user:password 'http://example.com/geoserver/geogig/geonode:localRepoName
 
 **Adding remotes from this script is currently broken.  Use MapLoom instead.  DO NOT EXECUTE**
 
-###Step 8
+### Step 8
 
 To add Amazon Web Services (AWS) [Simple Notification Services](https://aws.amazon.com/sns/) (SNS) post-commit hooks to repositories, you need to first install the python bindings for the AWS api tools and configure GeoNode's AWS settings.  The python binds for the AWS api tools is called Boto (see: [https://github.com/boto/boto](https://github.com/boto/boto)).  To install the bindings run:
 
@@ -293,7 +293,7 @@ export DJANGO_SETTINGS_MODULE=rogue_geonode.settings
 /var/lib/geonode/bin/python /opt/cybergis-scripts.git/lib/rogue/post_commit_hook.py <commit_message>
 ```
 
-###Step 9
+### Step 9
 Cron jobs can be set up to sync local and remote GeoGig repos.  This can be very useful when syncing large datasets in primarily one direction.  For example, pushing a large amount of data to a field office at 6am before staff arrive at work.  The script will also help organizations receive updates to their layers from others without having to share their own propriety information.  The script will only sync when there are no conflicts.  Support for automated notifications when the sync fails using AWS SNS will be implemented soon.  You can sync at a standard hourly, daily, weekly, or monthly interval using the following command.  You need to add a remote via MapLoom or step 7 (once the script is fixed) before hand.
 
 You can execute a push, pull, or two-way (duplex) cron job.  The three options for direction are: `push, pull, and duplex`.
@@ -316,7 +316,7 @@ cybergis-script-rogue.sh prod cron2 pull admin admin 'geonode:incidents_repo' 'A
 
 The sync commands are added to the file in the cron.d directory at `/etc/cron.d/geogig_sync`.  The concurrent commands execute in order of when they were added.  You can double check that the commands executed properly, manually adds sync commands, remove commands, ior otherwise edit existing commands.  Be careful to not create duplicate cron jobs, as you'll remove a great benfit of GeoGig--it effectively uses network bandwith.
 
-###Step 10
+### Step 10
 
 **Still a work in progress**
 
@@ -329,7 +329,7 @@ git clone https://github.com/state-hiu/cybergis-osm-mappings.git cybergis-osm-ma
 #cp cybergis-osm-mappings.git/profile/cybergis-osm-mappings.sh /etc/profile.d/
 ```
 
-###Step 11
+### Step 11
 
 
 The first thing we need to do make sure we have a repo of the CyberGIS styles on the file filesystem.  You can clone directly from `cybergis-styles`, set up a fork, or work with your own folder of styles.

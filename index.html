@@ -9,233 +9,80 @@ tilelayers:
     description: "On the fly composite of MapBox satellite with LSIB boundaries"
     zIndex: 18
 
-layerswitcher:
-  
-
 ---
-<nav id='menu-ui' class='menu-ui'></nav>
-<div id="map" style="top:0px;left:0px;width:100%;height:100%;"></div>
-<script>
-    var layerswitcher = $('#menu-ui');
-    var map = L.map('map').setView([0, 30], 3);
 
-    var geojsonLayers = []; // ordered by options.zIndex
-    ///////////////////////////////
-    for(var i = 0; i < tilelayers.length; i++)
-    {
-        var tl = tilelayers[i];
-        try{ 
-            if(tl.type=="mapbox"||tl.type=="mb")
-            {
-                L.tileLayer(mb_url_tiles, {
-                    id: tl.id,
-                    attribution: tl.attribution
-                }).addTo(map);
-            }
-            else if(tl.type=="geonode"||tl.type=="gn")
-            {
-                L.tileLayer(site.geonodes[tl.geonode].tiles, {
-                    id: tl.id,
-                    attribution: tl.attribution
-                }).addTo(map);
-            }
-        }catch(err){console.log("Could not add tilelayer "+i)};
-    }
+<style type="text/css">
 
-    /* LSIB Countries UTFGrid
-    // Resolution is server dependent.  MapBox.com uses resolution=4.
-    var countries = new L.UtfGrid(mb_url_utfgrid, {
-        id: 'hiu.lp5bfbt9',
-        resolution: 4,
-        attribution: ''
-    });
-    countries.on('click', function (e) {
-        if (e.data) {
-            alert('click: ' + JSON.stringify(e.data));
-            console.log('click: ' + JSON.stringify(e.data));
-        } else {
-            console.log('click: nothing');
-        }
-    });
-    countries.addTo(map);
-    */
-    // Regions
-    var openRegionPopup = function (m,f,latlng) {
-        var popupContent = '<h4><a href="{{ site.baseurl }}/regions/'+f.properties.id+'">'+site.regions[f.properties.id]+'</a></h4>';
-        var popup = new L.Popup({maxWidth: 200}, undefined);
-        popup.setLatLng(latlng);
-        popup.setContent(popupContent);
-        m.openPopup(popup);
-    };
-    var highlightFeature = function(e) {
-        var layer = e.target;
-        layer.setStyle({
-            weight: 2,
-            color: '#0000FF',
-            fillOpacity: 0.3,
-            opacity: 0.8
-        });
-        if (!L.Browser.ie && !L.Browser.opera) {
-            layer.bringToFront();
-        }
-    };
-    var regions_style = {
-        "color": "#0000FF",
-        "fillOpacity": 0,
-        "opacity": 0.0
-    };
-    var regions = undefined;
-    $.ajax({
-        dataType: "json",
-        url: "{{ site.baseurl}}/localdata/Global_HIUWebsiteRegions_Version1.geojson",
-        success: function(response) {
-            regions = L.geoJson(response, {
-                zIndex: 98,
-                style: regions_style,
-                onEachFeature: function(feature, layer) {
-                    layer.on({
-                        mouseover: highlightFeature,
-                        mouseout: function(e){
-                            regions.resetStyle(e.target);
-                        },
-                        click: function(e){openRegionPopup(map, feature, e.latlng);}
-                    });
-                    //layer.on('click', function (e) {
-                    //    openRegionPopup(map, feature, e.latlng);
-                    //});
-                }
-            });
-            regions.addTo(map);
-            geojsonLayers.push(regions);
-            geojsonLayers = sortLayers(geojsonLayers)
-            updateRenderOrder(geojsonLayers);
-            //layerswitcher.children().filter(function(){return $(this).data("zIndex") < regions.options.zIndex;});
-            layerswitcher.append(createLink(map, regions, 'Regions', regions.options.zIndex));
-        }
-    });
-    // Products GeoJSON
-    var productIcon = L.icon({
-        iconUrl: "{{ site.baseurl }}/assets/img/mapgive_blue_pt.png",
-        iconSize: [30, 45],
-        iconAnchor: [15, 40],
-        popupAnchor: [0, 0]
-    });
-    $.ajax({
-        dataType: "json",
-        url: "{{ site.baseurl}}/products/products.json",
-        success: function(response) {
-            var products = L.geoJson(response, {
-                zIndex: 99,
-                onEachFeature: function(feature, layer) {
-                    var popupOptions = {maxWidth: 200};
-                    layer.setIcon(productIcon);
-                    var popupContent = '<h4><a href="'+feature.properties.url+'">'+feature.properties.title+"</a></h4><br>Date Published: "+feature.properties.date_published+'<br>Region: <a href="{{ site.baseurl }}/regions/'+feature.properties.region_id+'">'+feature.properties.region_title+'</a><br><a href="'+feature.properties.pdf+'">Download</a>';
-                    layer.bindPopup(popupContent, popupOptions);
-                }
-            });
-            products.addTo(map);
-            geojsonLayers.push(products);
-            geojsonLayers = sortLayers(geojsonLayers)
-            updateRenderOrder(geojsonLayers);
-            layerswitcher.append(createLink(map, products, 'Products', products.options.zIndex));
-        }
-    });
-    // Data GeoJSON
-    $.ajax({
-        dataType: "xml",
-        url: "{{ site.geonodes[0].csw.xml }}",
-        success: function(response) {
-            console.log("Response:", response);
-            var geonode_features = [];
-            var geonode_layers = $(response).find("SearchResults").find('MD_Metadata').each(function(){
-                var i = $(this).find("identificationInfo").find("MD_DataIdentification");
-                var distro = $(this).find("distributionInfo").find("MD_Distribution");
-                var b = i.find('EX_GeographicBoundingBox:first');
-                var u = distro.find('onLine').filter(function(){return $(this).find('protocol').find('CharacterString').text()=="WWW:LINK-1.0-http--link"}).find('URL').text();
-                if(u.startsWith("{{ site.geonodes[0].layers }}") && b.length > 0)
-                {
-                    var g = buildBoundingBox(b);
-                    var f =
-                    {
-                        "type": "Feature",
-                        "properties":
-                        {
-                            "name": $(this).find('Name').text(),
-                            "title": i.find('title').find('CharacterString').text(),
-                            "date": i.find('date').find('DateTime').text(),
-                            "abstract": ellipsis(i.find('abstract').find('CharacterString').text().replace('\n',''), 100),
-                            "url": u
-                        },
-                        "geometry":
-                        {
-                            "type": "Polygon",
-                            "coordinates":
-                            [
-                              [
-                                  [g[0], g[1]],
-                                  [g[2], g[1]],
-                                  [g[2], g[3]],
-                                  [g[0], g[3]]
-                              ]
-                            ]                        
-                        }
-                    };
-                    geonode_features.push(f);
-                }
-            });
-            var geonode_geojson =
-            {
-                "type": "FeatureCollection",
-                "features": geonode_features
-            };
-            var geonode_style = {
-               "color": "#0000FF",
-               "fillOpacity": 0,
-               "opacity": 1.0
-            };
-            var datasets = L.geoJson(geonode_geojson, {
-                zIndex: 97,
-                style: geonode_style,
-                onEachFeature: function(feature, layer) {
-                    var popupOptions = {maxWidth: 200};
-                    //layer.setIcon(productIcon);
-                    var popupContent = '<h4 style="word-wrap:break-word;"><a href="'+feature.properties.url+'">'+feature.properties.title+"</a></h4><hr>Abstract<br>"+feature.properties.abstract;
-                    layer.bindPopup(popupContent, popupOptions);
-                }
-            });
-            datasets.addTo(map);
-            geojsonLayers.push(datasets);
-            geojsonLayers = sortLayers(geojsonLayers)
-            updateRenderOrder(geojsonLayers);
-            layerswitcher.append(createLink(map, datasets, 'Datasets', datasets.options.zIndex));
-        }
-    });
-    //events
-    // Products GeoJSON
-    var eventIcon = L.icon({
-        iconUrl: "{{ site.baseurl }}/assets/img/mapgive_red_pt.png",
-        iconSize: [30, 45],
-        iconAnchor: [15, 40],
-        popupAnchor: [0, 0]
-    });
-    $.ajax({
-        dataType: "json",
-        url: "{{ site.baseurl}}/events/events.json",
-        success: function(response) {
-            var events = L.geoJson(response, {
-                zIndex: 100,
-                onEachFeature: function(feature, layer) {
-                    var popupOptions = {maxWidth: 200};
-                    layer.setIcon(eventIcon);
-                    var popupContent = '<h4><a href="'+feature.properties.url+'">'+feature.properties.title+'</a></h4>';
-                    layer.bindPopup(popupContent, popupOptions);
-                }
-            });
-            events.addTo(map);
-            geojsonLayers.push(events);
-            geojsonLayers = sortLayers(geojsonLayers)
-            updateRenderOrder(geojsonLayers);
-            layerswitcher.append(createLink(map, events, 'Events', events.options.zIndex));
-        }
-    });
-</script>
+.rightMenu {
+    position:relative;
+}
+.right-caret {
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #fff;
+    display: inline-block;
+    height: 0;
+    opacity: 1;
+    vertical-align: top;
+    width: 0;
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+</style>
+
+<div id="container">
+
+  <!-- Modals from Bootstrap, used to preview images when thumbnails clicked -->
+  <!-- getbootstrap.com/javascript/#modals -->
+  <!-- giving a z-index of 2050 to be on top of sidebar -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="z-index: 2050;">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel"></h4>
+        </div>
+        <div class="modal-body">
+          <!--http://stackoverflow.com/questions/16409266/change-bootstrap-drop-down-to-drop-horizontal-right-->
+          <button class="btn btn-primary dropdown-toggle" style="padding: 3px 10px;float:left;" type="button" data-toggle="dropdown" >Download HD
+            <span class="right-caret caret"></span>
+          </button>
+          <ul class="dropdown-menu rightMenu" id="modal-dropdownfill">
+          </ul>
+          <!--<img id="modal-img" style="max-width:1000px;">-->
+          <img id="modal-img" style="max-width:100%;">
+        </div>
+        <div class="modal-footer">
+          
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="map" class="sidebar-map" style="top:0px;left:0px;width:100%;height: 100%;"></div>
+
+  {% include main/sidebar.html %}
+
+</div>
+
+
+{% if site.debug.app == true %}
+<script src="{{ site.baseurl }}/lib/app.js"></script>
+{% else %}
+<script src="{{ site.baseurl }}/build/js/app.min.js"></script>
+{% endif %}
+
+
+

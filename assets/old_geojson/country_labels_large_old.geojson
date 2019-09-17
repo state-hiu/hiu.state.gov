@@ -1,0 +1,1200 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 89,
+            "COUNTRY_NA": "Somalia",
+            "Size": "Large",
+            "F3_CODE": "SOM",
+            "NUM_CODE": "706"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [44.086909205450176, 3.065516449086743]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 90,
+            "COUNTRY_NA": "Denmark",
+            "Size": "Large",
+            "F3_CODE": "DNK",
+            "NUM_CODE": "208"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [9.511714642733338, 55.936165160757902]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 91,
+            "COUNTRY_NA": "Sri Lanka",
+            "Size": "Large",
+            "F3_CODE": "LKA",
+            "NUM_CODE": "144"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [80.709333837905803, 7.556372175482187]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 92,
+            "COUNTRY_NA": "Tajikistan",
+            "Size": "Large",
+            "F3_CODE": "TJK",
+            "NUM_CODE": "762"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [69.423822718985832, 38.895149905063576]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 93,
+            "COUNTRY_NA": "Turkmenistan",
+            "Size": "Large",
+            "F3_CODE": "TKM",
+            "NUM_CODE": "795"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [59.744312986040605, 39.098452457976641]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 94,
+            "COUNTRY_NA": "Papua New Guinea",
+            "Size": "Large",
+            "F3_CODE": "PNG",
+            "NUM_CODE": "598"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [143.337173389802672, -5.719550832205442]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 95,
+            "COUNTRY_NA": "Finland",
+            "Size": "Large",
+            "F3_CODE": "FIN",
+            "NUM_CODE": "246"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [26.590904613434166, 63.7120438986002]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 96,
+            "COUNTRY_NA": "Nigeria",
+            "Size": "Large",
+            "F3_CODE": "NGA",
+            "NUM_CODE": "566"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [7.789413543134832, 9.517487189366593]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 97,
+            "COUNTRY_NA": "Ecuador",
+            "Size": "Large",
+            "F3_CODE": "ECU",
+            "NUM_CODE": "218"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-78.173608385979321, -1.10396144369217]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 98,
+            "COUNTRY_NA": "Burma",
+            "Size": "Large",
+            "F3_CODE": "MMR",
+            "NUM_CODE": "104"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [95.810540897160337, 20.657845612896196]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 99,
+            "COUNTRY_NA": "Indonesia",
+            "Size": "Large",
+            "F3_CODE": "IDN",
+            "NUM_CODE": "360"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [116.052017731477221, -2.747693651941073]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 100,
+            "COUNTRY_NA": "Chile",
+            "Size": "Large",
+            "F3_CODE": "CHL",
+            "NUM_CODE": "152"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-70.798564156531526, -27.366833744132293]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 101,
+            "COUNTRY_NA": "Russia",
+            "Size": "Large",
+            "F3_CODE": "RUS",
+            "NUM_CODE": "643"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [73.522721777438676, 61.24999672166085]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 102,
+            "COUNTRY_NA": "Mongolia",
+            "Size": "Large",
+            "F3_CODE": "MNG",
+            "NUM_CODE": "496"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [103.282575536131731, 46.258430995424355]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 103,
+            "COUNTRY_NA": "Mexico",
+            "Size": "Large",
+            "F3_CODE": "MEX",
+            "NUM_CODE": "484"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-101.629751343451218, 22.389468445163438]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 104,
+            "COUNTRY_NA": "Cambodia",
+            "Size": "Large",
+            "F3_CODE": "KHM",
+            "NUM_CODE": "116"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [104.618246671891043, 12.273168948206257]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 105,
+            "COUNTRY_NA": "Norway",
+            "Size": "Large",
+            "F3_CODE": "NOR",
+            "NUM_CODE": "578"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [9.032755136001372, 60.971454469239937]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 106,
+            "COUNTRY_NA": "Yemen",
+            "Size": "Large",
+            "F3_CODE": "YEM",
+            "NUM_CODE": "887"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [47.499995069322615, 15.41015396518652]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 107,
+            "COUNTRY_NA": "Mauritania",
+            "Size": "Large",
+            "F3_CODE": "MRT",
+            "NUM_CODE": "478"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-10.563746569626375, 19.946730571503416]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 108,
+            "COUNTRY_NA": "South Sudan",
+            "Size": "Large",
+            "F3_CODE": "SSD",
+            "NUM_CODE": "728"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [30.402161632996766, 6.823950315876258]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 109,
+            "COUNTRY_NA": "Brazil",
+            "Size": "Large",
+            "F3_CODE": "BRA",
+            "NUM_CODE": "076"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-51.732069541122733, -10.763939927684287]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 110,
+            "COUNTRY_NA": "Sudan",
+            "Size": "Large",
+            "F3_CODE": "SDN",
+            "NUM_CODE": "729"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.998219880482782, 16.383609200328909]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 111,
+            "COUNTRY_NA": "Cameroon",
+            "Size": "Large",
+            "F3_CODE": "CMR",
+            "NUM_CODE": "120"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [12.467591709320507, 5.039060439888742]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 112,
+            "COUNTRY_NA": "Mali",
+            "Size": "Large",
+            "F3_CODE": "MLI",
+            "NUM_CODE": "466"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-1.816188165785409, 17.871979195708178]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 113,
+            "COUNTRY_NA": "Libya",
+            "Size": "Large",
+            "F3_CODE": "LBY",
+            "NUM_CODE": "434"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [17.476469441571982, 26.824393774640736]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 114,
+            "COUNTRY_NA": "China",
+            "Size": "Large",
+            "F3_CODE": "CHN",
+            "NUM_CODE": "156"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [101.176751718312374, 34.328388640442519]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 115,
+            "COUNTRY_NA": "Kyrgyzstan",
+            "Size": "Large",
+            "F3_CODE": "KGZ",
+            "NUM_CODE": "417"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [74.701255132784624, 41.495025559403778]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 116,
+            "COUNTRY_NA": "Madagascar",
+            "Size": "Large",
+            "F3_CODE": "MDG",
+            "NUM_CODE": "450"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [46.502125772504833, -20.352451793960991]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 117,
+            "COUNTRY_NA": "Kazakhstan",
+            "Size": "Large",
+            "F3_CODE": "KAZ",
+            "NUM_CODE": "398"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [70.069241739392808, 48.255057372777316]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 118,
+            "COUNTRY_NA": "Federated States of Micronesia",
+            "Size": "Large",
+            "F3_CODE": "FSM",
+            "NUM_CODE": "583"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [158.219541674944935, 6.8856513096839]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 119,
+            "COUNTRY_NA": "Mozambique",
+            "Size": "Large",
+            "F3_CODE": "MOZ",
+            "NUM_CODE": "508"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [38.02245621173607, -14.678179899094136]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 120,
+            "COUNTRY_NA": "Bolivia",
+            "Size": "Large",
+            "F3_CODE": "BOL",
+            "NUM_CODE": "068"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-64.723013861785944, -17.016159252658227]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 121,
+            "COUNTRY_NA": "Angola",
+            "Size": "Large",
+            "F3_CODE": "AGO",
+            "NUM_CODE": "024"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [17.707293300151417, -12.811169996385999]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 122,
+            "COUNTRY_NA": "Tanzania",
+            "Size": "Large",
+            "F3_CODE": "TZA",
+            "NUM_CODE": "834"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [34.477090521616972, -5.874025260956894]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 123,
+            "COUNTRY_NA": "South Africa",
+            "Size": "Large",
+            "F3_CODE": "ZAF",
+            "NUM_CODE": "710"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [23.912903960757689, -30.249912516453289]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 124,
+            "COUNTRY_NA": "Colombia",
+            "Size": "Large",
+            "F3_CODE": "COL",
+            "NUM_CODE": "170"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-73.122338964129113, 3.711379361219252]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 125,
+            "COUNTRY_NA": "Greenland (Denmark)",
+            "Size": "Large",
+            "F3_CODE": "GRL",
+            "NUM_CODE": "304"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-40.237263327211096, 74.096232238792211]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 126,
+            "COUNTRY_NA": "Canada",
+            "Size": "Large",
+            "F3_CODE": "CAN",
+            "NUM_CODE": "124"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-99.488194216292626, 57.041012437855613]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 127,
+            "COUNTRY_NA": "Romania",
+            "Size": "Large",
+            "F3_CODE": "ROU",
+            "NUM_CODE": "642"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [24.716792437629934, 45.880678873159511]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 128,
+            "COUNTRY_NA": "United States",
+            "Size": "Large",
+            "F3_CODE": "USA",
+            "NUM_CODE": "840"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-99.747205219617683, 39.467326739372339]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 129,
+            "COUNTRY_NA": "Chad",
+            "Size": "Large",
+            "F3_CODE": "TCD",
+            "NUM_CODE": "148"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [18.905357904558134, 15.511805241988103]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 130,
+            "COUNTRY_NA": "Thailand",
+            "Size": "Large",
+            "F3_CODE": "THA",
+            "NUM_CODE": "764"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [100.904202008609317, 15.358662489172859]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 131,
+            "COUNTRY_NA": "Nepal",
+            "Size": "Large",
+            "F3_CODE": "NPL",
+            "NUM_CODE": "524"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [83.79749073163795, 28.306105390460885]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 132,
+            "COUNTRY_NA": "Philippines",
+            "Size": "Large",
+            "F3_CODE": "PHL",
+            "NUM_CODE": "608"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [121.094187365924711, 16.552288173578187]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 133,
+            "COUNTRY_NA": "Zambia",
+            "Size": "Large",
+            "F3_CODE": "ZMB",
+            "NUM_CODE": "894"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [25.801220681415039, -14.928535007761745]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 134,
+            "COUNTRY_NA": "Ireland",
+            "Size": "Large",
+            "F3_CODE": "IRL",
+            "NUM_CODE": "372"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-7.998050603316246, 52.78985841081122]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 135,
+            "COUNTRY_NA": "Iceland",
+            "Size": "Large",
+            "F3_CODE": "ISL",
+            "NUM_CODE": "352"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-18.276370693055089, 64.616473921601312]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 136,
+            "COUNTRY_NA": "Iraq",
+            "Size": "Large",
+            "F3_CODE": "IRQ",
+            "NUM_CODE": "368"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [43.551575410125281, 33.073505855144532]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 137,
+            "COUNTRY_NA": "Paraguay",
+            "Size": "Large",
+            "F3_CODE": "PRY",
+            "NUM_CODE": "600"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-58.801050211914209, -23.225764941503471]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 138,
+            "COUNTRY_NA": "Malaysia",
+            "Size": "Large",
+            "F3_CODE": "MYS",
+            "NUM_CODE": "458"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [102.338417175803073, 3.905360181063263]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 139,
+            "COUNTRY_NA": "Uruguay",
+            "Size": "Large",
+            "F3_CODE": "URY",
+            "NUM_CODE": "858"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-56.013408226771816, -32.982955781459729]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 140,
+            "COUNTRY_NA": "Bangladesh",
+            "Size": "Large",
+            "F3_CODE": "BGD",
+            "NUM_CODE": "050"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [90.146034627804454, 23.910242559508259]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 141,
+            "COUNTRY_NA": "Afghanistan",
+            "Size": "Large",
+            "F3_CODE": "AFG",
+            "NUM_CODE": "004"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [65.557523086882156, 33.555572606506821]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 142,
+            "COUNTRY_NA": "Iran",
+            "Size": "Large",
+            "F3_CODE": "IRN",
+            "NUM_CODE": "364"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [54.77405386019278, 32.469368794316701]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 143,
+            "COUNTRY_NA": "Democratic <br> Republic <br> of <br> the <br> Congo",
+            "Size": "Large",
+            "F3_CODE": "COD",
+            "NUM_CODE": "180"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [23.583536070743811, -2.348190820162422]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 144,
+            "COUNTRY_NA": "Niger",
+            "Size": "Large",
+            "F3_CODE": "NER",
+            "NUM_CODE": "562"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [9.950279974393588, 17.682437296397708]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 145,
+            "COUNTRY_NA": "Argentina",
+            "Size": "Large",
+            "F3_CODE": "ARG",
+            "NUM_CODE": "032"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-64.109998961037562, -32.411222839180589]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 146,
+            "COUNTRY_NA": "France",
+            "Size": "Large",
+            "F3_CODE": "FRA",
+            "NUM_CODE": "250"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [2.610081269052646, 46.516776160801243]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 147,
+            "COUNTRY_NA": "Laos",
+            "Size": "Large",
+            "F3_CODE": "LAO",
+            "NUM_CODE": "418"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [102.369933510229316, 19.803797335767893]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 148,
+            "COUNTRY_NA": "India",
+            "Size": "Large",
+            "F3_CODE": "IND",
+            "NUM_CODE": "356"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [78.747331039980722, 22.584337048519828]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 149,
+            "COUNTRY_NA": "Vietnam",
+            "Size": "Large",
+            "F3_CODE": "VNM",
+            "NUM_CODE": "704"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [108.637245164534463, 14.41761137355901]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 150,
+            "COUNTRY_NA": "Uzbekistan",
+            "Size": "Large",
+            "F3_CODE": "UZB",
+            "NUM_CODE": "860"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [64.098449965521709, 41.296605818916497]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 151,
+            "COUNTRY_NA": "Senegal",
+            "Size": "Large",
+            "F3_CODE": "SEN",
+            "NUM_CODE": "686"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-14.801361890523134, 15.043499144088324]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 152,
+            "COUNTRY_NA": "United Kingdom",
+            "Size": "Large",
+            "F3_CODE": "GBR",
+            "NUM_CODE": "826"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-1.647731138481662, 53.409087800802347]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 153,
+            "COUNTRY_NA": "Tunisia",
+            "Size": "Large",
+            "F3_CODE": "TUN",
+            "NUM_CODE": "788"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [9.594722453262778, 33.872511519812477]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 154,
+            "COUNTRY_NA": "Egypt",
+            "Size": "Large",
+            "F3_CODE": "EGY",
+            "NUM_CODE": "818"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [29.398521740253461, 26.189628163974799]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 155,
+            "COUNTRY_NA": "Belarus",
+            "Size": "Large",
+            "F3_CODE": "BLR",
+            "NUM_CODE": "112"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [28.449036675717156, 53.622377923988111]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 156,
+            "COUNTRY_NA": "Hungary",
+            "Size": "Large",
+            "F3_CODE": "HUN",
+            "NUM_CODE": "348"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [19.232062443366502, 47.175955833808075]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 157,
+            "COUNTRY_NA": "Ukraine",
+            "Size": "Large",
+            "F3_CODE": "UKR",
+            "NUM_CODE": "804"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [32.7898568937809, 48.941980298136386]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 158,
+            "COUNTRY_NA": "Spain",
+            "Size": "Large",
+            "F3_CODE": "ESP",
+            "NUM_CODE": "724"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-3.527835856070322, 40.088331697457832]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 159,
+            "COUNTRY_NA": "Zimbabwe",
+            "Size": "Large",
+            "F3_CODE": "ZWE",
+            "NUM_CODE": "716"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [30.01553167005591, -19.001688328922555]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 160,
+            "COUNTRY_NA": "Turkey",
+            "Size": "Large",
+            "F3_CODE": "TUR",
+            "NUM_CODE": "792"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [34.09401169511397, 39.091350184820243]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 161,
+            "COUNTRY_NA": "Saudi Arabia",
+            "Size": "Large",
+            "F3_CODE": "SAU",
+            "NUM_CODE": "682"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [44.488631498476529, 23.852980486729678]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 162,
+            "COUNTRY_NA": "Australia",
+            "Size": "Large",
+            "F3_CODE": "AUS",
+            "NUM_CODE": "036"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [135.534883075585043, -25.403943161360903]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 163,
+            "COUNTRY_NA": "Germany",
+            "Size": "Large",
+            "F3_CODE": "DEU",
+            "NUM_CODE": "276"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [10.191757241388254, 51.214707521483817]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 164,
+            "COUNTRY_NA": "Venezuela",
+            "Size": "Large",
+            "F3_CODE": "VEN",
+            "NUM_CODE": "862"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-66.273084850885624, 8.314983664755687]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 166,
+            "COUNTRY_NA": "Cuba",
+            "Size": "Large",
+            "F3_CODE": "CUB",
+            "NUM_CODE": "192"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-79.060726619239944, 21.924713483025734]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 167,
+            "COUNTRY_NA": "Algeria",
+            "Size": "Large",
+            "F3_CODE": "DZA",
+            "NUM_CODE": "012"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [3.059300010026456, 27.53462103224237]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 168,
+            "COUNTRY_NA": "Greece",
+            "Size": "Large",
+            "F3_CODE": "GRC",
+            "NUM_CODE": "300"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [22.072083688047798, 38.935100188769063]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 169,
+            "COUNTRY_NA": "Morocco",
+            "Size": "Large",
+            "F3_CODE": "MAR",
+            "NUM_CODE": "504"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-5.839181686584553, 32.284265815387009]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 170,
+            "COUNTRY_NA": "Peru",
+            "Size": "Large",
+            "F3_CODE": "PER",
+            "NUM_CODE": "604"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-75.075685868165962, -9.583631004622626]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 171,
+            "COUNTRY_NA": "Syria",
+            "Size": "Large",
+            "F3_CODE": "SYR",
+            "NUM_CODE": "760"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [38.589750234103384, 35.153140043179768]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 172,
+            "COUNTRY_NA": "Japan",
+            "Size": "Large",
+            "F3_CODE": "JPN",
+            "NUM_CODE": "392"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [138.167162848083848, 36.137692578673494]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 174,
+            "COUNTRY_NA": "Botswana",
+            "Size": "Large",
+            "F3_CODE": "BWA",
+            "NUM_CODE": "072"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [24.003901828496883, -22.10183030655487]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 175,
+            "COUNTRY_NA": "Pakistan",
+            "Size": "Large",
+            "F3_CODE": "PAK",
+            "NUM_CODE": "586"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [69.125527270782001, 29.491741018528867]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 176,
+            "COUNTRY_NA": "Sweden",
+            "Size": "Large",
+            "F3_CODE": "SWE",
+            "NUM_CODE": "752"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [17.741472986681476, 65.248354234660852]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 177,
+            "COUNTRY_NA": "Ethiopia",
+            "Size": "Large",
+            "F3_CODE": "ETH",
+            "NUM_CODE": "231"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [39.154824795186478, 8.511627836810527]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 178,
+            "COUNTRY_NA": "Namibia",
+            "Size": "Large",
+            "F3_CODE": "NAM",
+            "NUM_CODE": "516"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [17.148433226711695, -21.936702469232102]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 179,
+            "COUNTRY_NA": "Kenya",
+            "Size": "Large",
+            "F3_CODE": "KEN",
+            "NUM_CODE": "404"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [37.704629514471506, 0.451880141990445]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 181,
+            "COUNTRY_NA": "Poland",
+            "Size": "Large",
+            "F3_CODE": "POL",
+            "NUM_CODE": "616"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [19.379878491416502, 51.98397241982174]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 182,
+            "COUNTRY_NA": "Italy",
+            "Size": "Large",
+            "F3_CODE": "ITA",
+            "NUM_CODE": "380"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [13.600848076206665, 41.946907651523219]
+        }
+    }, {
+        "type": "Feature",
+        "properties": {
+            "OBJECTID": 183,
+            "COUNTRY_NA": "New Zealand",
+            "Size": "Large",
+            "F3_CODE": "NZL",
+            "NUM_CODE": "554"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [168.859633774356297, -45.305398696097932]
+        }
+    }]
+}

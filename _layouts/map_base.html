@@ -1,0 +1,188 @@
+---
+layout: default
+
+dns_prefetch: ['//www.google-analytics.com','//mapbox.com','//api.mapbox.com','//mapgive.state.gov','//geonode.state.gov','//secondarycities.state.gov']
+
+---
+
+{% capture v %}{{ site.time | date: '%Y-%m-%dT%H:%M' }}{% endcapture %}
+
+<!--putting DOCTYPE here hides the map for some reason-->
+
+<!DOCTYPE html class="svg">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Language" content="en_US" />
+    {% if site.twittercard.enabled == true %}
+      {% if page.categories contains "products" %}
+        {% include main/seo/twittercard_product.html %}
+      {% else %}
+        {% include main/seo/twittercard_default.html %}
+      {% endif %}
+    {% endif %}
+    {% if site.opengraph.enabled == true %}
+      {% if page.categories contains "products" %}
+        {% include main/seo/opengraph_product.html %}
+      {% else %}
+        {% include main/seo/opengraph_default.html %}
+      {% endif %}
+    {% endif %}
+    {% for dns in page.dns_prefetch %}
+        <link rel="dns-prefetch" href="{{ dns }}">
+    {% endfor %}
+    <title>{{ page.title }}</title>
+    <link rel="shortcut icon" type="image/ico" href="{{ site.baseurl }}/favicon.ico" />
+
+    <!-- CSS / External-->
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/font-awesome-4.6.3/css/font-awesome.min.css" type="text/css" media="all" />
+
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+
+    <!-- CSS / Internal: Not using LESS anymore
+    <link href='{{site.baseurl}}/build/css/main.css?v={{ v }}' rel='stylesheet' />
+    -->
+
+    <!-- JavaScript / Internal -->
+
+    {% if site.debug.jquery == true %}
+        <!--<script src="{{ site.baseurl }}/lib/jquery/{{ site.deps.jquery.version }}/jquery-{{ site.deps.jquery.version }}.js"></script>-->
+        <script src="{{ site.baseurl }}/lib/jquery/3.1.1/jquery-3.1.1.js"></script>
+    {% else %}
+        <script src="{{ site.baseurl }}/lib/jquery/3.1.1/jquery-3.1.1.min.js"></script>
+    {% endif %}
+
+    {% if site.debug.bootstrap == true %}
+        <script src="{{ site.baseurl }}/lib/bootstrap/3.3.7/bootstrap.js"></script>
+    {% else %}
+        <script src="{{ site.baseurl }}/lib/bootstrap/3.3.7/bootstrap.min.js"></script>
+    {% endif %}
+
+    <script type="text/javascript">
+
+      if (screen.width <= 800) {
+        window.location = "{{ site.baseurl }}/products/";
+      }
+
+    </script>
+
+
+{% comment %}
+
+<!--get rid of angular stuff as least for now. It is not being used and I don't want it to interfere with IE -->
+
+    <style type="text/css">[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate)     {display:none !important;}</style>
+    <!-- JavaScript / Polyfill -->	
+    {% if site.debug.polyfill == true %}
+        <script src="{{ site.baseurl }}/build/js/polyfill.js?v={{ v }}"></script>
+    {% else %}
+        <script src="{{ site.baseurl }}/build/js/polyfill.min.js?v={{ v }}"></script>
+    {% endif %}
+        {% if site.debug.angular == true %}
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular-route.js"></script>
+    {% else %}
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/{{ site.deps.angular.version }}/angular-route.min.js"></script>
+    {% endif %}
+
+
+    {% include main/const_snippet.html %}
+    <script type="text/javascript" language="Javascript">
+        var mb_access_token = '{{ site.mapbox.access_token }}';
+        var mb_url_tiles = '{{ site.mapbox.url_tiles }}' + mb_access_token;
+        var mb_url_utfgrid = '{{ site.mapbox.url_utfgrid }}'+ mb_access_token;
+        var gn_url_tiles = '{{ site.geonodes[0].tiles }}';
+    </script>
+    {% include main/site_snippet.html %}
+    {% include main/tilelayers_snippet.html %}
+    </script>
+    <script type="text/javascript" language="Javascript">
+        var createLink = function(map, layer, label, zIndex)
+        {
+            var link = document.createElement('a');
+            link.href = '#';
+            link.className = 'active';
+            link.innerHTML = label;
+            $(link).data('map', map)
+            $(link).data('layer', layer)
+            $(link).data('zIndex', zIndex)
+            $(link).click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                var map = $(this).data('map');
+                var layer = $(this).data('layer');
+                if(map.hasLayer(layer))
+                {
+                    map.removeLayer(layer);
+                    this.className = ''
+                }
+                else
+                {
+                    map.addLayer(layer);
+                    this.className = 'active';
+                }
+            });
+            return link;
+        };
+    </script>
+
+    <script type="text/javascript" language="Javascript">
+        $(function(){
+            init_main("mainApp","{{ site.geonodes[0].layers }}");
+        });
+    </script>
+
+{% endcomment %}
+
+    <!--Digital Analytics Program roll-up, see https://analytics.usa.gov for data-->
+    {% if site.dap.enabled == true %}
+      {% include main/analytics/analytics_dap_snippet.html %}
+    {% endif %}
+    <!-- Google Analytics -->
+    {% if site.ga.enabled == true %}
+      {% include main/analytics/analytics_ga_snippet.html %}
+    {% endif %}
+
+    <!--extra map_base files-->
+
+    <!--leaflet 1.0.3-->
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet/leaflet.css" />
+    <script src="{{ site.baseurl }}/lib/leaflet/leaflet-src.js"></script>
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.css" type="text/css" media="all" />
+    <script src="{{ site.baseurl }}/lib/leaflet-sidebar/leaflet-sidebar.js"></script>
+
+    <script src="{{ site.baseurl }}/lib/leaflet-ajax/leaflet.ajax.min.js"></script>
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.min.css" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/MarkerCluster.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/lib/leaflet-markercluster/MarkerCluster.Default.css"  />
+
+    {% if site.debug.leaflet == true %}
+        <script src="{{ site.baseurl }}/lib/leaflet-list-markers/dist/leaflet-list-markers.src.js"></script>
+        <script src="{{ site.baseurl }}/lib/leaflet-markercluster/leaflet.markercluster.js"></script>
+    {% else %}
+        <script src="{{ site.baseurl }}/build/js/leaflet-list-markers.src.min.js"></script>
+        <script src="{{ site.baseurl }}/build/js/leaflet.markercluster.min.js"></script>
+    {% endif %}
+
+    <!--https://github.com/ClaudioCas/leaflet-hash-->
+    <!--<script src="{{ site.baseurl }}/lib/leaflet-hash/leaflet-hash.js"></script>-->
+
+    <link href="{{ site.baseurl }}/css/main.css" rel="stylesheet"/>
+
+    <script src="{{ site.baseurl }}/lib/d3/d3.v3.min.js"></script>
+    <script src="{{ site.baseurl }}/lib/d3/topojson.v1.min.js"></script>
+    <script src="{{ site.baseurl }}/lib/queue/queue.v1.min.js"></script>
+
+  </head>
+
+  <body>
+    {{ content }}
+  </body>
+
+</html>
