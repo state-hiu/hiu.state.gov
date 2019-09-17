@@ -11,7 +11,7 @@ phases:
   build:
     commands:
       - echo "******** Jekyll Build command ********"
-      - jekyll build
+      - bundle exec jekyll build
       - echo "******** Uploading to S3 ********"
       - aws s3 sync _site/ s3://hiu.state.gov
       - echo "******** Deleting AWS CloudFront Cache ********"
