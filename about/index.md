@@ -2,7 +2,7 @@
 layout: wrapper_text
 ---
 
-## Mission Statement
+## Mission Statement (draft)
 
 The HIU identifies, creates, and disseminates multidisciplinary information and analysis to U.S. Government decision makers and humanitarian partners. Our subject matter experts produce written and visual analytics on a range of current and enduring humanitarian challenges and complex emergencies worldwide. The HIU employs geographic methods and technologies, serves as an information-sharing node, and manages projects that facilitate the creation of geospatial data.
 
