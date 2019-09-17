@@ -9,7 +9,6 @@ phases:
       - apt-get update --assume-yes --no-install-recommends
       - gem install bundler
       - bundle install
-      - ln -s /usr/bin/nodejs /usr/bin/node
   build:
     commands:
       - echo "******** Uploading to S3 ********"
