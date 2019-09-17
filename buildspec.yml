@@ -5,7 +5,6 @@ phases:
     runtime-versions:
         nodejs: 8
     commands:
-      - gem install jekyll
       - apt-get update --assume-yes --no-install-recommends
       - gem install bundler
       - bundle install
