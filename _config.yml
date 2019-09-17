@@ -9,8 +9,8 @@ permalink: none
 #url: http://localhost:8000
 #destination: /var/www
 # GitHub Pages
-baseurl:
-url: https://hiu.state.gov
+#baseurl:
+#url: https://hiu.state.gov
 destination: _site
 # Production
 #baseurl: 
