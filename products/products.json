@@ -14,25 +14,25 @@ layout: default
         "region_title": "{{ product.region_title }}",
         "url": "{{ site.url }}{{ product.url | remove: '.html' }}",
         "product_id": "{{ product.product_id }}",
-        "product_pdf": "https://hiu.state.gov/hiu-products/{{ product.product_pdf }}",
-        "product_jpg": "https://hiu.state.gov/hiu-products/jpg/{{ product.product_jpg }}",
+        "product_pdf": "https://products.hiu.state.gov{{ product.product_pdf }}",
+        "product_jpg": "https://products.hiu.state.gov{{ product.product_jpg }}",
         {% if product.product_jpg_pg2 %}
-        "product_jpg_pg2": "https://hiu.state.gov/hiu-products/jpg/{{ product.product_jpg_pg2 }}",
+        "product_jpg_pg2": "https://products.hiu.state.gov{{ product.product_jpg_pg2 }}",
         {% endif %}
         {% if product.product_jpg_pg3 %}
-        "product_jpg_pg3": "https://hiu.state.gov/hiu-products/jpg/{{ product.product_jpg_pg3 }}",
+        "product_jpg_pg3": "https://products.hiu.state.gov{{ product.product_jpg_pg3 }}",
         {% endif %}
         {% if product.product_jpg_pg4 %}
-        "product_jpg_pg4": "https://hiu.state.gov/hiu-products/jpg/{{ product.product_jpg_pg4 }}",
+        "product_jpg_pg4": "https://products.hiu.state.gov{{ product.product_jpg_pg4 }}",
         {% endif %}
         {% if product.product_jpg_pg5 %}
-        "product_jpg_pg5": "https://hiu.state.gov/hiu-products/jpg/{{ product.product_jpg_pg5 }}",
+        "product_jpg_pg5": "https://products.hiu.state.gov{{ product.product_jpg_pg5 }}",
         {% endif %}
         {% if product.product_jpg_pg6 %}
-        "product_jpg_pg6": "https://hiu.state.gov/hiu-products/jpg/{{ product.product_jpg_pg6 }}",
+        "product_jpg_pg6": "https://products.hiu.state.gov{{ product.product_jpg_pg6 }}",
         {% endif %}
         {% if product.product_jpg_pg7 %}
-        "product_jpg_pg7": "https://hiu.state.gov/hiu-products/jpg/{{ product.product_jpg_pg7 }}",
+        "product_jpg_pg7": "https://products.hiu.state.gov{{ product.product_jpg_pg7 }}",
         {% endif %}
         "thumbnail_150": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/small/{{ product.thumbnail }}",
         "thumbnail_300": "https://s3.amazonaws.com/hiu-thumbnails/products/resized/middle/{{ product.thumbnail }}",
