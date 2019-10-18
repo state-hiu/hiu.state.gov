@@ -9,8 +9,8 @@ product_id: "U2156"
 product_pdf: "World_DisasterDisplacement_2019Oct15_HIU_U2156.pdf"
 product_jpg: "World_DisasterDisplacement_2019Oct15_HIU_U2156.jpg"
 thumbnail: "World_DisasterDisplacement_2019Oct15_HIU_U2156_thumb.jpg"
-lat: ##.##
-lon: ##.##
+lat: 0
+lon: 0
 keywords:
   - Natural Disaster 
   - Natural Disasters 
