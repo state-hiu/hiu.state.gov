@@ -18,4 +18,4 @@ keywords:
   - Cyclone Idai
 tweet: "New HIU infographic on food insecurity in Zimbabwe!"
 ---
-Across Zimbabwe food insecurity is growing, with an estimated 3.6 million rural Zimbabweans in need of humanitarian assistance. The volatile economy and the impending lean season (peak lean season January to March 2020) threaten to increase the number of food insecure Zimbabweans.
+Across Zimbabwe food insecurity is growing, with an estimated 3.6 million rural Zimbabweans in need of humanitarian assistance. The volatile economy and the impending lean season threaten to increase the number of food insecure Zimbabweans.
