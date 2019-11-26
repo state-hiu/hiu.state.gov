@@ -6,7 +6,7 @@ region_id: "WHA"
 region_title: "Western Hemisphere" 
 date_published: 2019-11-22
 product_id: "U2044"
-product_pdf: "Venezuela_Crisis_2019Nov22_HIU_U2175.pdf"
+product_pdf: "Venezuela_Crisis_2019Nov26_HIU_U2175.pdf"
 product_jpg: "Venezuela_Crisis_2019Nov22_HIU_U2175.jpg"
 thumbnail: "Venezuela_Crisis_2019Nov22_HIU_U2175_thumb.jpg"
 lat: 10.00
