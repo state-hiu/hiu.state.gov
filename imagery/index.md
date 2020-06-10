@@ -5,7 +5,7 @@ layout: wrapper_text
 <hr>
 ## Commercial Satellite Imagery Request Process
 
-The U.S. State Department can share U.S. government (USG) commercial satellite imagery through the [NextView license]({{ site.baseurl }}/about/imagery/NextViewLicense.txt) with approved recipients under certain conditions and Departmental clearance on an individual case-by-case basis. The Department’s ability to facilitate commercial imagery requests is subject to Departmental determination that requested imagery aligns with USG interests, as well as staffing and resource constraints.
+The U.S. State Department can share U.S. government (USG) commercial satellite imagery through the [NextView license]({{ site.baseurl }}/imagery/NextViewLicense.txt) with approved recipients under certain conditions and Departmental clearance on an individual case-by-case basis. The Department’s ability to facilitate commercial imagery requests is subject to Departmental determination that requested imagery aligns with USG interests, as well as staffing and resource constraints.
 
 Imagery can be requested in two ways. First, in the native imagery format (NITF or GeoTiff) if the organization has the capacity to receive, process, and work with raw high-resolution imagery data. Second, the Humanitarian Information Unit can host imagery web services that can be used for crowdsourced mapping into the OpenStreetMap database. This option, is referred to as Imagery to the Crowd (IttC). Through MapGive, our humanitarian mapping initiative, we work in conjunction with the Humanitarian OpenStreetMap Team (HOT) to support some mapping projects with imagery services. See the MapGive [Imagery to the Crowd](http://mapgive.state.gov/ittc) webpage for more information.
 
