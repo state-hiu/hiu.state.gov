@@ -38,5 +38,5 @@ The request process is similar for either option, the key is a clear justificati
 
 ## Contact
 
-If you have general questions, please contact HIU at **[HIU_INFO@state.gov](mailto:HIU_INFO@state.gov)**.
+If you have general questions, please contact HIU at **[HIU_INFO@state.gov](mailto:HIU_INFO@state.gov)**
 
