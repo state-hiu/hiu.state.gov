@@ -1,0 +1,37 @@
+---
+layout: wrapper_text
+title: "Cartographic Guidance Bulletins"
+---
+
+<style>
+
+li { list-style-image: url({{site.baseurl}}/assets/img/download_pdf_small.png); } 
+
+</style>
+
+<div class="col-md-7">
+  <h2>Cartographic Guidance Bulletins</h2>
+  <br>
+  <p>The guidance bulletins linked below are issued by the Office of the Geographer and Global Issues at the U.S. Department of State to inform Federal cartographers of changes in mapping policy, mostly with regard to international boundary and sovereignty issues. These policies are intended only for the United States Federal Government. Users should take care to access the most recent bulletin for a particular country or area, as some of the bulletins are superseded by others.</p>
+  
+  
+  <div>
+
+	<ul>
+		{% for bulletin in site.data.bulletins %}
+			<li>
+				<a href="{{site.baseurl}}/cartographic_guidance_bulletins/{{ bulletin.name }}.pdf">{{ bulletin.name }}</a>
+				<br><i>{{ bulletin.subtitle }}</i></br>
+			
+			</li>
+		{% endfor %}
+	</ul>
+
+</div>
+
+
+</div>
+
+
+
+
