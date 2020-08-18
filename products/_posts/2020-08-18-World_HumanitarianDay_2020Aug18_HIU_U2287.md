@@ -24,6 +24,6 @@ keywords:
   - pandemic
   - attacks
   - assistance
-tweet: "84 characters"
+tweet: "For humanitarian workers in 2020, the COVID-19 pandemic is adding to existing threats to their health and safety and challenges accessing populations in need."
 ---
 World Humanitarian Day recognizes the dedication and sacrifices of aid workers who assist conflict and disaster-affected populations around the world. COVID-19 presents a new challenge for aid providers, as travel and physical presence is limited to mitigate the spread of the disease, supply chains have slowed, and personal protective equipment may not be available. Despite threats to their health and safety, humanitarian workers continue to implement aid programs and provide vital assistance and protection to people in need.
