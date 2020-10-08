@@ -1,3 +1,4 @@
+---
 layout: product
 category: products
 title: "International Day for Disaster Risk Reduction, October 13, 2020"
