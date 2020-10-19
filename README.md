@@ -82,7 +82,7 @@ For more information on how Google Analytics Events work, go [here](https://supp
 
 ## Contributing
 
-This website is currently in beta. HIU is currently accepting pull requests for this repository.
+HIU is currently accepting pull requests for this repository.
 
 ## License
 This project constitutes a work of the United States Government and is not subject to domestic copyright protection under 17 USC § 105.
