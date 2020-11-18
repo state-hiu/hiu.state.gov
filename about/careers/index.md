@@ -11,13 +11,13 @@ The HIU also typically has a State Department Foreign Service Officer on its sta
 The Humanitarian Information Unit also participates in a variety of other internship and fellowship programs that may interest you. See relevant links below:
 
 
-## [Student Internship](http://careers.state.gov/intern)
+## [Student Internship](https://careers.state.gov/interns-fellows/student-internships/)
 
 Find out more information about possible student internships with the HIU. For consideration for placement at HIU, list the Bureau of Intelligence and Research as one of your Bureau choices.
 
-## [Virtual Student Foreign Service](https://vsfs.state.gov/)
+## [Virtual Student Federal Service](https://vsfs.state.gov/)
 
-The Humanitarian Information Unit's [MapGive](http://mapgive.state.gov) team accepts a few Virtual Student Foreign Service (VSFS) interns each school year.  If interested, email MapGive at [mapgive@state.gov](mailto:mapgive@state.gov?subject=VSFS+Internship). U.S. students apply to the VSFS program once a year in July.
+The Humanitarian Information Unit's [MapGive](http://mapgive.state.gov) team accepts a few Virtual Student Federal Service (VSFS) interns each school year.  If interested, email MapGive at [mapgive@state.gov](mailto:mapgive@state.gov?subject=VSFS+Internship). U.S. students apply to the VSFS program once a year in July.
 
 ## [Jefferson Science Fellowship](http://sites.nationalacademies.org/PGA/Jefferson/)
 
