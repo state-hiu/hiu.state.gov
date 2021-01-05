@@ -9,8 +9,8 @@ product_id: "U2344"
 product_pdf: "CentralSahel_DisplacementAttacks_2021Jan05_HIU_U2344.pdf"
 product_jpg: "CentralSahel_DisplacementAttacks_2021Jan05_HIU_U2344.jpg"
 thumbnail: "CentralSahel_DisplacementAttacks_2021Jan05_HIU_U2344_thumb.jpg"
-lat: 0
-lon: 0
+lat: 14.91
+lon: 0.24
 keywords:
   - humanitarian
   - internal displacement
