@@ -9,8 +9,8 @@ product_id: "U2155"
 product_pdf: "Zimbabwe_FoodSecurity_22Oct2019_HIU_U2155.pdf"
 product_jpg: "Zimbabwe_FoodSecurity_22Oct2019_HIU_U2155.jpg"
 thumbnail: "Zimbabwe_FoodSecurity_22Oct2019_HIU_U2155_thumb.jpg"
-lat: -19
-lon: 29.75
+lat: -18.84
+lon: 29.91
 keywords:
   - Zimbabwe
   - Food Security
