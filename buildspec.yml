@@ -5,6 +5,7 @@ phases:
     runtime-versions:
         nodejs: 8
     commands:
+      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - apt-get update --assume-yes --no-install-recommends
       - gem install bundler
       - bundle install
