@@ -687,12 +687,26 @@ var map = L.map('map', {
   //scrollWheelZoom: false,
 });
 
+ 
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, ' +
+        '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Names and boundary representation are not necessarily authoritative. ',
+tileSize: 512,
+maxZoom: 18,
+zoomOffset: -1,
+id: 'mapbox/streets-v11',
+accessToken: 'pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ'
+}).addTo(map);
+
+//this way is out-of-date
+/*
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiaGl1IiwiYSI6InJWNGZJSzgifQ.xK1ndT3W8XL9lwVZrT6jvQ', {
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
         '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Names and boundary representation are not necessarily authoritative. ',
     id: 'mapbox.streets-basic'
 }).addTo(map);
+*/
 
 //https://www.mapbox.com/mapbox.js/example/v1.0.0/leaflet-draw/
 var featureGroup = L.featureGroup().addTo(map);
