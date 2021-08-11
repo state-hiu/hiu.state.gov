@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-        nodejs: 8
+        nodejs: latest
     commands:
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - apt-get update --assume-yes --no-install-recommends
