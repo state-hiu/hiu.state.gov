@@ -6,6 +6,7 @@ phases:
         nodejs: latest
     commands:
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+      - rm -f /etc/apt/sources.list.d/sbt.list
       - apt-get update --assume-yes --no-install-recommends
       - gem install bundler
       - bundle install
