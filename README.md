@@ -9,6 +9,8 @@ The U.S. Department of State Humanitarian Information Unit's new public-facing w
 
 Site is tested and built using Ubuntu 16.04. To install locally, the [jekyll](https://jekyllrb.com/) static site generator is required.
 
+### re-build
+
 ## Gulp.js
 
 [Gulp](https://gulpjs.com/) is a toolkit for automating painful or time-consuming tasks in your development workflow.
