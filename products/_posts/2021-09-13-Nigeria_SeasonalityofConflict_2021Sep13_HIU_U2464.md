@@ -36,6 +36,6 @@ keywords:
   - grazing
   - pastoralism
   - humanitarian
-tweet: "New HIU infographic on displacement and conflict in northwestern Nigeria:"
+tweet: "New #HIUinfographic on the continuing displacement and the seasonality of attacks coincident with the livestock migration period in northwestern Nigeria:"
 ---
 As of May 2021, over 658,000 people are displaced in northwestern Nigeria as attacks have continuously increased since 2018. In addition to banditry, resource competition continues to escalate regional conflict, compounded by rising temperatures, drought, desertification, and population growth, as well as long-standing social inequalities and ethnic grievances. These socio-economic and environmental stressors, coupled with traditional livestock migration patterns, place herders and farmers in competition for increasingly limited resources, especially during the February-July livestock migration season. The Nigerian Government approved a plan in 2019 to shift the livestock sector from open grazing to grazing reserves and ranches to reduce land use tensions, but political and logistical obstacles have hindered implementation.
