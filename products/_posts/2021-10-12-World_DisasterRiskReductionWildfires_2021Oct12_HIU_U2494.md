@@ -4,7 +4,7 @@ category: products
 title: "International Day for Disaster Risk Reduction, October 13, 2021: Disaster Risks of Wildfires Increasing"
 region_id: "global" 
 region_title: "Global & Transnational Products" 
-date_published: 2021-08-12
+date_published: 2021-10-12
 product_id: "U2494"
 product_pdf: "World_DisasterRiskReductionWildfires_2021Oct12_HIU_U2494.pdf"
 product_jpg: "World_DisasterRiskReductionWildfires_2021Oct12_HIU_U2494.jpg"
