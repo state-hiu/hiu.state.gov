@@ -2,8 +2,8 @@
 layout: product
 category: products
 title: "Southern Madagascar: Drought Drives Severe Food Insecurity"
-region_id: "Africa" 
-region_title: "Global & Transnational Products" 
+region_id: "AF" 
+region_title: "Africa" 
 date_published: 2021-10-25
 product_id: "U2486"
 product_pdf: "SouthernMadagascar_DroughtFoodSecurity_2021Oct25_HIU_U2486.pdf"
