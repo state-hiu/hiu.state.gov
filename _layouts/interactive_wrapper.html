@@ -1,0 +1,27 @@
+---
+layout: base
+---
+
+{% include main/header.html %}
+
+{{ content }}
+  
+<!--
+<script type='text/javascript'>
+    $(document).ready(function() {
+
+      console.log('doc ready firing');
+      $(".nav li").removeClass("active");//this will remove the active class from  
+                                         //previously active menu item 
+      console.log(this.location.pathname);
+
+      //$('a[href="' + '{{ site.baseurl }}' + this.location.pathname + '"]').parents('li,ul').addClass('active');
+      $('a[href="' + this.location.pathname + '"]').parents('li,ul').addClass('active');
+            
+    });
+</script>
+-->
+
+{% comment %}
+{% include main/footer.html %}
+{% endcomment %}
