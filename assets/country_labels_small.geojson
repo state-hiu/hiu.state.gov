@@ -97,7 +97,10 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "MACEDONIA",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "NAME": "NORTH MACEDONIA",
         "REGION": "Europe",
         "NUM_CODE": 807,
         "3_CODE": "MKD",
