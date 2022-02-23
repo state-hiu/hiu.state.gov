@@ -1400,7 +1400,10 @@
     {
       "type": "Feature",
       "properties": {
-        "NAME": "Western<br>Sahara",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "NAME": "",
         "REGION": "Africa",
         "NUM_CODE": 732,
         "3_CODE": "ESH",
