@@ -74,7 +74,34 @@ tilelayers:
   </defs>
 </svg>
 
-<div id="container">
+
+<button type="button" class="btn btn-default" id="test">Test Interactive</button>
+<button type="button" class="btn btn-default" id="main-menu">Go Back to Main Menue</button>
+<script>
+
+  //when button is pressed, replace main-container
+  
+  $( "button#test" ).click(function() {
+    console.log('test button clicked');
+    //$( this ).replaceWith( "<div>" + $( this ).text() + "</div>" );
+    $( "<h2 id='interactive' style='display:none'>New heading</h2>" ).insertBefore( "div#main-container" );
+    $( "div#main-container" ).hide();
+    $('h2#interactive').fadeIn("slow");
+    //$( "div#main-container" ).replaceWith( "<h2 id='interactive'>New heading</h2>" );
+  });
+
+  $( "button#main-menu" ).click(function() {
+    console.log('main-menu button clicked');
+    //$( this ).replaceWith( "<div>" + $( this ).text() + "</div>" );
+    $( "h2#interactive" ).remove();
+    $( "div#main-container" ).show();
+  });
+
+</script>
+
+
+
+<div id="main-container">
 
   <!-- Modals from Bootstrap, used to preview images when thumbnails clicked -->
   <!-- getbootstrap.com/javascript/#modals -->
