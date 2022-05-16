@@ -12,11 +12,11 @@ thumbnail: "Ukraine_HumanitarianUpdate_2022Apr27_HIU_U2594_thumb.jpg"
 lat: 49.362698
 lon: 31.611344
 keywords:
-  - refugee
+  - refugees
   - displacement
   - humanitarian
   - IDPs
-  - evacuation corridors
+  - people in need
   - civilian casualties
   - assistance
   - Ukraine
