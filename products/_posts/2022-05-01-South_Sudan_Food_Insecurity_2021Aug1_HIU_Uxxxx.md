@@ -1,12 +1,17 @@
 ---
 layout: interactive
 category: products
-title: "Africa: Social Protection and Informal Workers During the COVID-19 Pandemic"
+interactive: "true"
+title: "South Sudan A Perpetual and Worsening Acute Food Insecurity Situation 2016-2021"
 region_id: "AF" 
 region_title: "Africa" 
-date_published: 2021-10-01
+date_published: 2022-05-01
 product_id: "Uxxxx"
-product_url: "https://state-hiu.maps.arcgis.com/apps/dashboards/98503295588f419aaa4d60b313f8596d"
+product_pdf: "World_EarthDay_RenewableEnergy_2022Apr21_HIU_U2585.pdf"
+product_jpg: "World_EarthDay_RenewableEnergy_2022Apr21_HIU_U2585.jpg"
+thumbnail: "World_EarthDay_RenewableEnergy_2022Apr21_HIU_U2585_thumb.jpg"
+product_url: "https://state-hiu.maps.arcgis.com/apps/dashboards/2f64cad755ea4b5da8d36bb2c949500e"
+permalink: '/interactive/Uxxxx/'
 lat: -23.774536
 lon: 45.521988
 keywords:
