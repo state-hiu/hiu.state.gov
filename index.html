@@ -133,6 +133,10 @@ tilelayers:
 
 </div>
 
+<script>
+  var baseurl = "{{ site.baseurl }}";
+  console.log("baseurl is: " + baseurl);
+</script>
 
 {% if site.debug.app == true %}
 <script src="{{ site.baseurl }}/lib/app.js"></script>
