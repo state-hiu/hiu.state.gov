@@ -15,6 +15,7 @@ layout: default
         "date_published": "{{ product.date_published | date: '%B %d, %Y' }}",
         "region_id": "{{ product.region_id }}",
         "region_title": "{{ product.region_title }}",
+        "baseurl": "{{ site.url }}{{ site.baseurl }}{{ product.url | remove: '.html' }}",
         "url": "{{ site.url }}{{ product.url | remove: '.html' }}",
         "product_id": "{{ product.product_id }}",
         "product_pdf": "https://products.hiu.state.gov/{{ product.product_pdf }}",
