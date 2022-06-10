@@ -1,7 +1,7 @@
 ---
 layout: wrapper_text_news
 category: news
-date: 2022-05-27
+date: 2022-05-10
 title: "Secondary Cities' Principal Investigator, Melinda Laituri, interviewed for the World Wide Human Geography Data Working Group's “Through the Human Geography Lens” podcast"
 photo_url: '../assets/img/news/wwhgd_thumb.jpg'
 description: "In this episode of the World Wide Human Geography Data Working Group's “Through the Human Geography Lens” podcast, hosts Terri Ryan and Gwyneth Holt sat down with Dr. Melinda Laituri from Colorado State University who spoke about her research on Secondary Cities, participatory mapping, and water security."
