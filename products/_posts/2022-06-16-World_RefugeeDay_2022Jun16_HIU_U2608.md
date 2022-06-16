@@ -21,6 +21,6 @@ keywords:
   - human rights violations
   - population of concern
   - origin
-tweet: "World Refugee Day 2022"
+tweet: "New HIU infographic for #WorldRefugeeDay2022:"
 ---
 World Refugee Day is an international day designated by the United Nations to honor refugees around the globe. The UN Refugee Agency (UNHCR) reported that 2022 marked the first year in which the population forced to flee conflict, violence, human rights violations, and persecution exceeded 100 million people of concern. Since the beginning of 2022, the Russian invasion of Ukraine has driven over 5 million refugees into neighboring countries.
