@@ -7,8 +7,8 @@ region_title: "Europe"
 date_published: 2022-08-22
 product_id: "U2643"
 product_pdf: "Ukraine_HealthCareInfrastructureAttacks_2022Aug22_HIU_U2643.pdf"
-product_jpg: "Ukraine_HealthCareInfrastructureAttacks_2022Aug22_HIU_U2643"
-thumbnail: "Ukraine_HealthCareInfrastructureAttacks_2022Aug22_HIU_U2643"
+product_jpg: "Ukraine_HealthCareInfrastructureAttacks_2022Aug22_HIU_U2643.jpg"
+thumbnail: "Ukraine_HealthCareInfrastructureAttacks_2022Aug22_HIU_U2643_thumb.jpg"
 lat: 49.362698
 lon: 31.611344
 keywords:
