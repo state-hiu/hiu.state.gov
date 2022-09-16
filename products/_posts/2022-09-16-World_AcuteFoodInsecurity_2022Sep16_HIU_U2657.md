@@ -4,7 +4,7 @@ category: products
 title: "Global Acute Food Insecurity, September 2022 Snapshot: Conflict, Climate, and Economic Shocks Driving Severe Outcomes"
 region_id: "global" 
 region_title: "Global & Transnational Products" 
-date_published: 2021-09-16
+date_published: 2022-09-16
 product_id: "U2657"
 product_pdf: "World_AcuteFoodInsecurity_2022Sep16_HIU_U2657.pdf"
 product_jpg: "World_AcuteFoodInsecurity_2022Sep16_HIU_U2657.jpg"
