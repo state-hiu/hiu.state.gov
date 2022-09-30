@@ -1,7 +1,7 @@
 ---
 layout: product
 category: products
-title: Venezuelan Refugees and Migrants in the Western Hemisphere (as of August 2022)
+title: Venezuelan Refugees and Migrants in the Western Hemisphere (as of August 2022) - EN
 region_id: "WHA" 
 region_title: "Western Hemisphere" 
 date_published: 2022-09-29
