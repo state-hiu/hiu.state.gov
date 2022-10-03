@@ -21,6 +21,6 @@ keywords:
   - Venezuela
   - asilo
   - migración
-tweet: "Nueva infografía de HIU sobre refugiados y migrantes venezolanos en las Américas:"
+tweet: "Nueva infografía de la Unidad del Depto. de Estado de EE. UU. para Información Humanitaria (HIU) sobre los refugiados y migrantes venezolanos en las Américas proporcionada por @StateHIU:"
 ---
-A fecha de agosto de 2022, aproximadamente seis millones de venezolanos fueron desplazados en las Américas, un aumento de más de un millón de personas desde el mismo tiempo en 2021.
+Nueva infografía de la Unidad del Depto. de Estado de EE. UU. para Información Humanitaria (HIU) sobre los refugiados y migrantes venezolanos en las Américas.
