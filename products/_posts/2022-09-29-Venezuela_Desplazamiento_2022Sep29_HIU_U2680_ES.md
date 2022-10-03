@@ -1,14 +1,14 @@
 ---
 layout: product
 category: products
-title: Refugiados y migrantes venezolanos en las Américas (a fecha de agosto de 2022)
+title: Refugiados y migrantes venezolanos en las Américas (a fecha de agosto de 2022) - ES
 region_id: "WHA" 
 region_title: "Western Hemisphere" 
 date_published: 2022-09-29
 product_id: "U2680"
 product_pdf: "Venezuela_Desplazamiento_2022Sep29_HIU_U2680_ES.pdf"
-product_jpg: "Venezuela_Desplazamiento_2022Sep29_HIU_U2680_ES_draft.jpg"
-thumbnail: "Venezuela_Desplazamiento_2022Sep29_HIU_U2680_ES_draft_thumb.jpg"
+product_jpg: "Venezuela_Desplazamiento_2022Sep29_HIU_U2680_ES.jpg"
+thumbnail: "Venezuela_Desplazamiento_2022Sep29_HIU_U2680_ES_thumb.jpg"
 lat: 10.00
 lon: -65.00
 keywords:
