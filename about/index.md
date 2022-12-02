@@ -30,5 +30,5 @@ Learn more about our open source software, developer resources, APIs, and websit
 
 ## Contact
 
-If you have general questions, please contact HIU at **[HIU_INFO@state.gov](mailto:HIU_INFO@state.gov)**.
+If you have general questions, please contact HIU at **[INR-GGI-HIU@state.gov](mailto:INR-GGI-HIU@state.gov)**.
 

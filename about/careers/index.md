@@ -33,4 +33,4 @@ Bearing the Presidential moniker, the PMF Program is a flagship leadership devel
 
 ## Contact
 
-If you have any questions about opportunities at the HIU not answered from the above links, please contact us at **[HIU_INFO@state.gov](mailto:HIU_INFO@state.gov?subject=HIU+Careers)**.
+If you have any questions about opportunities at the HIU not answered from the above links, please contact us at **[INR-GGI-HIU@state.gov](mailto:INR-GGI-HIU@state.gov?subject=HIU+Careers)**.
