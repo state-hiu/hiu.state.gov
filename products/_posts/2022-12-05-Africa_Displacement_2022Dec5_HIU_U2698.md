@@ -1,7 +1,7 @@
 ---
 layout: product
 category: products
-title: Africa: Conflict Driving Increased Displacement, Humanitarian Appeals Up 14%
+title: "Africa: Conflict Driving Increased Displacement, Humanitarian Appeals Up 14%"
 region_id: "AF"
 region_title: "Africa"
 date_published: 2022-12-05
