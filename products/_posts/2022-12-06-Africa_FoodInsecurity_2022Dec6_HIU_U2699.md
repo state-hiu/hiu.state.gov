@@ -31,4 +31,4 @@ keywords:
   - Africa
 tweet: "New HIU infographic on food insecurity in Africa:"
 ---
-Food insecurity is worsening in Africa as chronic undernourishment increases and numerous countries face immediate acute food insecurity. An estimated 278 million people in Africa are facing chronic undernourishment. More than 134 million Africans are acutely food insecure, needing urgent food and livelihood assistance.
+Food insecurity is worsening in Africa as chronic undernourishment increases and numerous countries face acute food insecurity. An estimated 278 million people in Africa are facing chronic undernourishment. More than 134 million Africans are acutely food insecure, needing urgent food and livelihood assistance.
