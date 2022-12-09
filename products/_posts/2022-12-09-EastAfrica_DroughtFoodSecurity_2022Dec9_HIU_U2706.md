@@ -5,7 +5,7 @@ title: "Horn of Africa: Persistent Drought Increases Food Insecurity (December 2
 region_id: "AF"
 region_title: "Africa"
 date_published: 2022-12-09
-product_id: "U706"
+product_id: "U2706"
 product_pdf: "EastAfrica_DroughtFoodSecurity_2022Dec9_HIU_U2706.pdf"
 product_jpg: "EastAfrica_DroughtFoodSecurity_2022Dec9_HIU_U2706.jpg"
 thumbnail: "EastAfrica_DroughtFoodSecurity_2022Dec9_HIU_U2706_thumb.jpg"
