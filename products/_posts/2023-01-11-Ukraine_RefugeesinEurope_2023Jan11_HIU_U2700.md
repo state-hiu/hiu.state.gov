@@ -9,8 +9,8 @@ product_id: "U2700"
 product_pdf: "Ukraine_RefugeesinEurope_2023Jan11_HIU_U2700.pdf"
 product_jpg: "Ukraine_RefugeesinEurope_2023Jan11_HIU_U2700.jpg"
 thumbnail: "Ukraine_RefugeesinEurope_2023Jan11_HIU_U2700_thumb.jpg"
-lat: 3.665617
-lon: 21.057239
+lat: 49.362698
+lon: 31.611344
 keywords:
   - refugees
   - displaced
