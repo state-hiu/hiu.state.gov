@@ -4,7 +4,7 @@
     <div class="col-md-7">
       {% if showGuideTitle == false %}
       {% else %}
-      <a href="{{ site.baseurl }}{{ guide.url | remove: '.html' }}"><h4>{{ guide.title }}</h4></a>
+      <a href="{{ site.baseurl }}{{ guide.url }}"><h4>{{ guide.title }}</h4></a>
       {% endif %}
       {{ guide.date | date: '%B %d, %Y' }}
       <br>
