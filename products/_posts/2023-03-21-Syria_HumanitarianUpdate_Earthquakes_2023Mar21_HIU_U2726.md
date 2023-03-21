@@ -39,4 +39,4 @@ tweet: "New HIU infographic on impacts of the February 2023 earthquakes on the h
 ---
 The February earthquakes exacerbated the humanitarian crisis in Syria by damaging healthcare facilities,
 water and sanitation infrastructure, and causing additional displacement. Syria already faced a dire humanitarian crisis driven
-by 12 years of conflict. Prior to the earthquakes, over 15 million people (almost 70% of the population) needed humanitarian assistance. Only 59% of hospitals and 57% of primary healthcare facilities were fully functional, and more than half of the population relied on unsafe water sources. Of the 6.8 million internally displaced people (IDPs), 2.1 million live in settlements and camps, largely in northwest Syria.
+by 12 years of conflict. Prior to the earthquakes, over 15 million people (almost 70% of the population) needed humanitarian assistance. Only 59% of hospitals and 57% of primary healthcare facilities were fully functional, and more than half of the population relied on unsafe water sources. Of Syria’s 6.8 million internally displaced persons (IDPs), 2.1 million live in settlements and camps, largely in northwest Syria.
