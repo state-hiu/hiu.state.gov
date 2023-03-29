@@ -841,8 +841,17 @@ img.thumb150 {
     content: ""
 }
 
+.new-product-li {
+  line-height: 0px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #f15b0e;
+  font-style: italic;
+#text-shadow: 0 0 1px #05e03e;
+}
+
 .new-product {
-    line-height: 0px;
+    //line-height: 0px;
     font-size: 15px;
     font-weight: 600;
     color: #f15b0e;

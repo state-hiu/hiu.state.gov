@@ -20,15 +20,11 @@ Visit our careers page if you are interested in a career or internship with the 
 
 For information on commercial satellite imagery requests.
 
-## [Guides]({{ site.baseurl }}/guides)
-
-Browse through our open guide collection, including guides on GeoNode and our Imagery to the Crowd workflow.
-
 ## [Developer]({{ site.baseurl }}/developer)
 
 Learn more about our open source software, developer resources, APIs, and websites.
 
 ## Contact
 
-If you have general questions, please contact HIU at **[HIU_INFO@state.gov](mailto:HIU_INFO@state.gov)**.
+If you have general questions, please contact HIU at **[INR-GGI-HIU@state.gov](mailto:INR-GGI-HIU@state.gov)**.
 
