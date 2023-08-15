@@ -37,4 +37,4 @@ keywords:
 
 tweet: "New HIU infographic on West Africa acute food insecurity"
 ---
-Acute food insecurity has deteriorated over the past several years in West Africa. In the June–August 2023 lean season (i.e., the period between harvests), 44.8 million people are projected to face hunger levels posing an immediate danger to their lives or livelihoods (IPC Phases 3–5). Conflict, natural disasters, high food prices, and other economic shocks are driving these outcomes. Countries experiencing conflict and displacement in the region will continue to face worsening acute food insecurity.
+Acute food insecurity has deteriorated over the past several years in West Africa. In the June–August 2023 lean season (i.e., the period between harvests), 44.8 million people are projected to face hunger levels posing an immediate danger to their lives or livelihoods (IPC Phases 3–5). Conflict, natural disasters, high food prices, and other economic shocks are driving these outcomes. Countries experiencing conflict and displacement in the region will continue to face worsening acute food insecurity. 
