@@ -8,7 +8,7 @@ phases:
       - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
       - rm -f /etc/apt/sources.list.d/sbt.list
       - apt-get update --assume-yes --no-install-recommends
-      - gem install bundler
+      - gem install bundler -v 2.4.22
       - bundle install
   build:
     commands:
