@@ -9,8 +9,8 @@ product_id: "U2908"
 product_pdf: "DRC_Conflict_HumanitarianCrisis_2024Jun4_HIU_U2874.pdf"
 product_jpg: "DRC_Conflict_HumanitarianCrisis_2024Jun4_HIU_U2874.jpg"
 thumbnail: "DRC_Conflict_HumanitarianCrisis_2024Jun4_HIU_U2874_thumb.jpg"
-lat: 31.439437
-lon: 34.381814
+lat: -2.68
+lon: 27.83
 keywords:
   - DRC
   - Democratic Republic of the Congo
