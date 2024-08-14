@@ -3,7 +3,7 @@ layout: product
 category: products
 title: "DRC: Conflict in the East Exacerbates Longstanding Humanitarian Crisis"
 region_id: "AF"
-region_title: "Near East"
+region_title: "Africa"
 date_published: 2024-06-04
 product_id: "U2874"
 product_pdf: "DRC_Conflict_HumanitarianCrisis_2024Jun4_HIU_U2874.pdf"
