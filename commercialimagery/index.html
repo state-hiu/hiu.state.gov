@@ -29,7 +29,7 @@ title: Commercial Imagery
 
 </style>
 
-<!--<div><h1 class="page-title">{{ page.title }}</h1></div>-->
+<div><h1 class="page-title">{{ page.title }}</h1></div>
 
 <!--<div class="iframe-container">
     <iframe src="https://storymaps.arcgis.com/stories/8f4d039b1ac6409f842e10be904eec71" width="100%" height="500px" frameborder="0" allowfullscreen allow="geolocation"></iframe>
@@ -40,62 +40,53 @@ title: Commercial Imagery
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Commercial Imagery Products</title>
+    <title>Card Alignment Fix</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
 
         .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            display: flex; /* Allows flexible layout */
+            justify-content: center; /* Centers the card horizontally */
+            align-items: flex-start; /* Aligns the card at the top */
+            margin: 0; /* Removes unwanted margin */
+            padding: 20px; /* Optional padding */
+            min-height: 100vh; /* Ensures the container fills the viewport */
+            box-sizing: border-box; /* Ensures padding doesn't affect the width/height */
         }
 
         .card {
             width: 100%;
+            max-width: 800px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
             text-decoration: none;
             color: inherit;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .card-content {
-            padding: 16px;
+            padding: 20px;
         }
 
         .card-title {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .card-blurb {
             font-size: 14px;
             color: #555;
+            line-height: 1.6;
         }
 
         .card-link {
-            display: inline-block;
-            margin-top: 12px;
+            margin-top: 10px;
             font-size: 14px;
             color: #007BFF;
             text-decoration: none;
@@ -108,34 +99,18 @@ title: Commercial Imagery
 </head>
 <body>
     <div class="card-container">
-        <!-- Card 1 -->
-        <a href="https://storymaps.arcgis.com/stories/8f4d039b1ac6409f842e10be904eec71" class="card" target="_blank">
+        <div class="card">
             <div class="card-content">
                 <div class="card-title">Sudan: Destroyed Structures in West Darfur in 2023</div>
                 <div class="card-blurb">
                     The RSF and allied militias began their assault on El Geneina on April 24 and attained full control of the city on June 15, killing the governor. The image on the right shows the changes at El Geneina IDP Camp where approximately 1,350 structures were burned between mid-June 2023 and late August 2023.
-
-                    The image on the right shows the changes at El Geneina where approximately 800 structures along the Nyala-Geneina road were burned between mid-January 2023 and mid-October 2023.
-
-                    The image on the right shows the damage at the World Food Program site that occurred in late April.!</div>
-                <span class="card-link">Learn more</span>
+                </div>
+                <a href="https://storymaps.arcgis.com/stories/8f4d039b1ac6409f842e10be904eec71" class="card-link">Learn more</a>
             </div>
-        </a>
-
-        <!-- Card 2 -->
-     <!--   <a href="https://example.com/product2" class="card" target="_blank">
-            <div class="card-content">
-                <div class="card-title">Product Title 2</div>
-                <div class="card-blurb">This is a brief description of Product 2. You’ll love it!</div>
-                <span class="card-link">Learn more</span>
-            </div>
-        </a>-->
-
-        <!-- Add more cards as needed -->
+        </div>
     </div>
 </body>
 </html>
-</div>
 
 <!-- Modals from Bootstrap, used to preview images when thumbnails clicked -->
 <!-- http://getbootstrap.com/javascript/#modals -->
