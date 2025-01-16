@@ -107,118 +107,16 @@ title: Commercial Imagery
   <li><a href="#all" data-toggle="tab">All ({{ site.categories.commercialimagery | size }}) </a></li>
 </ul>
 
-<div class="tab-content" style="padding: 10px;">
-  <div id="featured" class="tab-pane active">
+<div id="featured" class="tab-pane active">
+  <div class="card-container">
     {% for product in site.categories.commercialimagery %}
       {% if product.featured == true %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-
-    <div id="AF" class="tab-pane ">
-    {% for product in site.categories.commercialimagery %}
-      {% if product.region_id == "AF" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <div id="EAP" class="tab-pane ">
-    {% for product in site.categories.commercialimagery %}
-      {% if product.region_id == "EAP" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <div id="EUR" class="tab-pane ">
-    {% for product in site.categories.commercialimagery %}
-      {% if product.region_id == "EUR" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-
-    <div id="NEA" class="tab-pane ">
-    {% for product in site.categories.commercialimagery %}
-      {% if product.region_id == "NEA" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <div id="SCA" class="tab-pane ">
-    {% for product in site.categories.commercialimagery %}
-      {% if product.region_id == "SCA" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <div id="WHA" class="tab-pane ">
-    {% for product in site.categories.commercialimagery %}
-      {% if product.region_id == "WHA" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <div id="global" class="tab-pane ">
-    {% for product in site.categories.commercialimagery %}
-      {% if product.region_id == "global" %}
-        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-        {% if thecycle == 'odd' %}
-          {% include main/listitem_product.html odd=true %}
-        {% else %}
-          {% include main/listitem_product.html odd=false %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <div id="all" class="tab-pane">
-    {% for product in site.categories.commercialimagery %}
-      {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
-      {% if thecycle == 'odd' %}
-        {% include main/listitem_product_150.html odd=true %}
-      {% else %}
-        {% include main/listitem_product_150.html odd=false %}
+        <a href="{{ product.product_url }}" target="_blank" class="card">
+          <div class="card-content">
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.region_title }}</p>
+          </div>
+        </a>
       {% endif %}
     {% endfor %}
   </div>
