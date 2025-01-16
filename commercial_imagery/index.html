@@ -1,62 +1,223 @@
 ---
-layout: wrapper
+layout: wrapper_text_wide
 title: Commercial Imagery
+permalink: /commercialimagery/
 ---
 
-<!--<script data-main="{{ site.baseurl }}/lib/elasticlunr/app.js" src="{{ site.baseurl }}/lib/elasticlunr/require.js"></script>-->
+<style type="text/css">
 
+.entry-tags {
+    display: block;
+    margin-top: .5em;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 2.18182;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
 
-<script data-main="{{ site.baseurl }}/lib/fuse_js/app.js" src="{{ site.baseurl }}/lib/fuse_js/require.js"></script>
+.entry-tags a {
+    padding: .2em .4em;
+    margin: 0 .2em;
+    background-color: #fff;
+    color: #101010;
+    border-radius: 5px;
+    border: 1px solid #101010;
+    text-decoration: none;
+    white-space: nowrap;
+}
 
-<!--<div><h1 class="page-title">{{ page.title }}</h1></div>-->
+</style>
 
+{% assign count_featured = 0 %}
+{% for product in site.categories.products %}
+  {% if product.featured == true %}
+    {% assign count_featured = count_featured | plus: 1 %}
+  {% endif %}
+{% endfor %}
 
-    <div class="container">
+{% assign count_AF = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "AF" %}
+    {% assign count_AF = count_AF | plus: 1 %}
+  {% endif %}
+{% endfor %}
 
-        <div class="row" style="margin-left: 0px; margin-right: 0px; border-top-style: solid; border-top-width: 0px; padding-top: 10px; padding-bottom: 20px;"> 
-            <div class="col-md-12" style="padding-left: 0px; padding-right: 10px; padding-top:15px;">
+{% assign count_EAP = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "EAP" %}
+    {% assign count_EAP = count_EAP | plus: 1 %}
+  {% endif %}
+{% endfor %}
 
-                <div class="input-group input-group-btn">
+{% assign count_EUR = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "EUR" %}
+    {% assign count_EUR = count_EUR | plus: 1 %}
+  {% endif %}
+{% endfor %}
 
-                  <input type="search" class="form-control" id="inputSuccess1" placeholder="search products" style="flex-grow: 10;float:left;">
+{% assign count_NEA = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "NEA" %}
+    {% assign count_NEA = count_NEA | plus: 1 %}
+  {% endif %}
+{% endfor %}
 
+{% assign count_SCA = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "SCA" %}
+    {% assign count_SCA = count_SCA | plus: 1 %}
+  {% endif %}
+{% endfor %}
 
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style='line-height:20px;flex-grow: 1;float:left;'>
-                      <span id="search_concept"> Filter </span><span id="filter-label"></span><span id="filtered-count"></span>
-                    </button>
+{% assign count_WHA = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "WHA" %}
+    {% assign count_WHA = count_WHA | plus: 1 %}
+  {% endif %}
+{% endfor %}
 
-                    <ul class="dropdown-menu dropdown-menu-right">
-                      <li><a href="#AF">Africa<span id="filtered-count"></span></a></li>
-                      <li><a href="#EAP">East Asia and the Pacific<span id="filtered-count"></span></a></li>
-                      <li><a href="#EUR">Europe<span id="filtered-count"></span></a></li>
-                      <li><a href="#NEA">Near East<span id="filtered-count"></span></a></li>
-                      <li><a href="#SCA">South and Central Asia<span id="filtered-count"></span></a></li>
-                      <li><a href="#WHA">Western Hemisphere<span id="filtered-count"></span></a></li>
-                      <li><a href="#global">Global<span id="filtered-count"></span></a></li>
-                      <li><a href="#all" selected="selected">All Products<span id="filtered-count"></span></a></li>
-                    </ul>
+{% assign count_global = 0 %}
+{% for product in site.categories.products %}
+  {% if product.region_id == "global" %}
+    {% assign count_global = count_global | plus: 1 %}
+  {% endif %}
+{% endfor %}
 
+<div><h1 class="page-title">{{ page.title }}</h1></div>
 
-                </div><!-- /input-group -->
+<ul class="nav nav-tabs" style="padding: 10px 10px 0px 10px;">
+  <li class="active">
+    <a href="#featured" data-toggle="tab">Featured ({{ count_featured }})</a>
+  </li>
+  <li><a href="#AF" data-toggle="tab">Africa ({{ count_AF }})</a></li>
+  <li><a href="#EAP" data-toggle="tab">East Asia and the Pacific ({{ count_EAP }})</a></li>
+  <li><a href="#EUR" data-toggle="tab">Europe and Eurasia ({{ count_EUR }})</a></li>
+  <li><a href="#NEA" data-toggle="tab">Near East ({{ count_NEA}})</a></li>
+  <li><a href="#SCA" data-toggle="tab">South and Central Asia ({{ count_SCA }})</a></li>
+  <li><a href="#WHA" data-toggle="tab">Western Hemisphere ({{ count_WHA }})</a></li>
+  <li><a href="#global" data-toggle="tab">Global ({{ count_global }})</a></li>
+  <li><a href="#all" data-toggle="tab">All ({{ site.categories.products | size }}) </a></li>
+</ul>
 
-                <input type="hidden" name="filter_param" value="all" id="filter_param"> 
+<div class="tab-content" style="padding: 10px;">
+  <div id="featured" class="tab-pane active">
+    {% for product in site.categories.products %}
+      {% if product.featured == true %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
 
-                <div id="product-count">total products </div>
+    <div id="AF" class="tab-pane ">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "AF" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
 
-            </div>
-        </div>
+  <div id="EAP" class="tab-pane ">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "EAP" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
 
-        <div class="row" style="margin-left: 0px; margin-right: 0px;">
-            <div class="col-md-12" style="margin-left: 0px; margin-right: 0px;">
-                <div id='result-list-container' style="margin-left: 0px; margin-right: 0px;"></div>
-            </div>
+  <div id="EUR" class="tab-pane ">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "EUR" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
 
-            <!--<div class="col-md-12" style="padding-bottom: 15px; border-bottom:1px solid rgba(7,94,115,0.3);"></div>-->
-        </div>
+    <div id="NEA" class="tab-pane ">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "NEA" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
 
-    </div>
+  <div id="SCA" class="tab-pane ">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "SCA" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
 
+  <div id="WHA" class="tab-pane ">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "WHA" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
 
+  <div id="global" class="tab-pane ">
+    {% for product in site.categories.products %}
+      {% if product.region_id == "global" %}
+        {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+        {% if thecycle == 'odd' %}
+          {% include main/listitem_product.html odd=true %}
+        {% else %}
+          {% include main/listitem_product.html odd=false %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div id="all" class="tab-pane">
+    {% for product in site.categories.products %}
+      {% capture thecycle %}{% cycle 'odd', 'even' %}{%endcapture%}
+      {% if thecycle == 'odd' %}
+        {% include main/listitem_product_150.html odd=true %}
+      {% else %}
+        {% include main/listitem_product_150.html odd=false %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
 
 <!-- Modals from Bootstrap, used to preview images when thumbnails clicked -->
 <!-- http://getbootstrap.com/javascript/#modals -->
@@ -79,187 +240,44 @@ title: Commercial Imagery
 
 
 <script>
-
-
-
-    $(document).ready(function(e){
-
-      
-  });
-
-  /*manages Prev and Next buttons on modals */
-  var addButtons = function( jpegDisplayNumber, dropdownCount, dropdown, modal) {
-
-      if (jpegDisplayNumber == dropdownCount) {
-          /*display prev button only*/
-          $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
-
-          $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
-
-          $('.btn-next').prop("disabled", true);
-
-          /*adding modal header text, ex. Page 1 of X*/
-          $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
-
-          /*adding modal header text, ex. Page 1 of X*/
-          $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
-
-          $( ".btn-prev" ).on( "click", function() {
-                //console.log( 'activate prev button only' );
-                //console.log( 'jpegDisplayNumber valx1' );
-                //console.log(jpegDisplayNumber);
-                jpegDisplayNumber--;
-                //console.log( 'jpegDisplayNumber valx2' );
-                //console.log(jpegDisplayNumber);
-                //console.log( 'dropdown val' );
-                //console.log($(dropdown).find("li"));
-                modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
-                $('.btn-prev,.btn-next').remove();
-                $('.modal-header-text,.modal-footer-text').remove();
-                  
-                addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
-              });
-
-          return 'final page';
-        } else {
-            if ((jpegDisplayNumber-1) == 1) {
-                /*display next button only*/
-                $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
-
-                $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
-
-                $('.btn-prev').prop("disabled", true);
-
-                /*adding modal header text, ex. Page 1 of X*/
-                $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
-
-                /*adding modal header text, ex. Page 1 of X*/
-                $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
-
-                $( ".btn-next" ).on( "click", function() {
-                  //console.log( 'jpegDisplayNumber val' );
-                  //console.log(jpegDisplayNumber);
-
-                  //console.log( $(dropdown).find("li").eq(2).find("a").attr("href"));
-
-                  jpegDisplayNumber++;
-                  /*however since it you are finding the right length in the array and the array starts at zero
-                  you need to subtract 1 again
-                  switch out img with next img*/
-                  modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
-                  $('.btn-prev,.btn-next').remove();
-                  $('.modal-header-text,.modal-footer-text').remove();
-                  
-                  addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
-                });
-                return 'next';
-            } else {
-                /*display next & prev button*/
-                $('.close').after('<button type="button" class="btn btn-default btn-next" style="float: right;margin-right: 5px;">Next Page</button><button type="button" class="btn btn-default btn-prev" style="float: right;margin-right: 5px;">Prev Page</button>');
-
-                $('.modal-footer').prepend('<button type="button" class="btn btn-default btn-prev">Prev Page</button><button type="button" class="btn btn-default btn-next">Next Page</button>');
-
-                /*adding modal header text, ex. Page 1 of X*/
-                $('.modal-header .btn-prev').after('<span class="modal-header-text" style="float: right;margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
-
-                /*adding modal header text, ex. Page 1 of X*/
-                $('.modal-footer .btn-prev').before('<span class="modal-footer-text" style="margin-right: 8px;margin-top: 8px;">Page '+(jpegDisplayNumber-1)+' of '+(dropdownCount-1)+'</span>');
-
-                $( ".btn-prev" ).on( "click", function() {
-                  //console.log( 'activate prev button only' );
-                  jpegDisplayNumber--;
-                  modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
-                  $('.btn-prev,.btn-next').remove();
-                  $('.modal-header-text,.modal-footer-text').remove();
-
-                  addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
-                });
-
-
-                $( ".btn-next" ).on( "click", function() {
-                  //console.log( 'activate next button only' );
-                  jpegDisplayNumber++;
-                  modal.find('#modal-img').attr("src",$(dropdown).find("li").eq(jpegDisplayNumber-1).find("a").attr("href"));
-                  $('.btn-prev,.btn-next').remove();
-                  $('.modal-header-text,.modal-footer-text').remove();
-                  /*$('.btn-prev').remove();*/
-                  
-                  addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
-                });
-
-                /*jpegDisplayNumber++;*/
-                return 'next';
-            }
-        }
-    }
-
-
 $('#myModal').on('show.bs.modal', function (event) {
-  /*alert('modal is called');*/
-  var jpegDisplayNumber = 2;
-  var button = $(event.relatedTarget)  /*Button that triggered the modal*/
-  var title = button.data('title')  /*Extract info from data-* attributes*/
-  //console.log('title-data: ');
-  //console.log(title);
-  var img = button.data('img') /*Extract info from data-* attributes*/
-  //console.log('img-data: ');
-  //console.log(img);
-   /*If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-   Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.*/
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var title = button.data('title') // Extract info from data-* attributes
+  console.log('title-data: ');
+  console.log(title);
+  var img = button.data('img') // Extract info from data-* attributes
+  console.log('img-data: ');
+  console.log(img);
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   var modal = $(this)
   modal.find('.modal-title').text(title);
   modal.find('#modal-img').attr("src",img);
-
-  /*need a list of all the pages in a product; actually I do not, just parse based on what is in the download button!
-  if list is 2, then just add a next button*/
-  //console.log('display modal parents id');
-  //console.log(button.closest(".item"));
-  var item = button.closest(".item")
-  var dropdown = item.find(".dropdown");
-  //console.log('display assoc dropdown');
-  //console.log(dropdown);
-
-  //console.log('dropdown li count');
-  //console.log($(dropdown).find("li").length);
-
-  var dropdownCount = $(dropdown).find("li").length
-
-
-  if (dropdownCount > 2) {
-      addButtons( jpegDisplayNumber, dropdownCount, dropdown, modal);
-  }
-
 })
-
-$('#myModal').on('hidden.bs.modal', function () {
-    /*console.log('modal is closing');*/
-    $('.btn-prev,.btn-next').remove();
-    $('.modal-header-text,.modal-footer-text').remove();
-})
-
-
 </script>
 
 
-<script type="text/javascript">
+<!-- http://stackoverflow.com/questions/7862233/twitter-bootstrap-tabs-go-to-specific-tab-on-page-reload-or-hyperlink -->
+<script type='text/javascript'>
+        
+  $(document).ready(function() {
+          
+  // Javascript to enable link to tab
+  var hash = document.location.hash;
+  var prefix = "tab_";
 
-/*adding the twitter pop-up*/
-$("body").on("click", ".tweet", function() {
-    console.log('tweet clicked');
-    /*var myWindow = window.open("", "", "width=200,height=100");
-    return false;*/
+  //console.log('hash! ');
+  //console.log(hash);
 
-    var w = 550;
-    var h = 420;
-    var url = $(this).attr('href');
-    var title = "Share a link on Twitter";
+  if (hash) {
+      $('.nav-tabs a[href='+hash.replace(prefix,"")+']').tab('show');
+  } 
 
-    var left = (screen.width/2)-(w/2);
-    var top = (screen.height/2)-(h/2);
-
-    window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
-    return false;
+  // Change hash for page-reload
+  $('.nav-tabs a').on('shown.bs.tab', function (e) {
+      window.location.hash = e.target.hash.replace("#", "#" + prefix);
   });
-
-
+        
+});
+        
 </script>
